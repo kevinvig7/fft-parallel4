@@ -1,0 +1,68 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.jou
+*.str
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Otros
+Makefile
+TAGS
+*dLiSST
+run/results/*.dat
+run/
+
+# Latex
+*.aux
+*.dvi
+*.log
+*.nav
+*.out
+*.ps
+*.snm
+*.toc
+auto
+*.bbl
+*.blg
+*converted-to.pdf
+*.gz
+*.zip
+
+# Python
+*.pyc
+# *.png
+*.debug
+
+# Data
+*.rpt
+
+*_region_.tex
+*.fdb_latexmk
+*.bk.*
+*.fls
+*shell*
+*.bk
