@@ -14,6 +14,8 @@ a=a1/max(a1);% normalizamos la amplitud maxima de la señal, para que no haya arm
 a_fx=fi(a,1,12,11);
 ay_fx=fi(a,1,12,11,'roundmode','floor','overflowmode','wrap'); 
 
+           
+%%%
 
 % a_flot=fft(a,1024);
 % aw_fx=fft(a_fx.double,1024);
