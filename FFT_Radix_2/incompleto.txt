@@ -1,0 +1,1 @@
+falta realizar version de punto fijo de la funcon FFT_DIF_R2_fix
