@@ -1,0 +1,1733 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Jul 25 16:23:51 2019
+# Process ID: 3840
+# Current directory: C:/fft/d
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6256 C:\fft\d\d.xpr
+# Log file: C:/fft/d/vivado.log
+# Journal file: C:/fft/d\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/fft/d/d.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: topD
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+ERROR: [Synth 8-2715] syntax error near genvar [C:/fft/d/d.srcs/sources_1/new/topD.v:46]
+ERROR: [Synth 8-2062] generate loop index i is not defined as a genvar [C:/fft/d/d.srcs/sources_1/new/topD.v:48]
+ERROR: [Synth 8-988] D is already declared [C:/fft/d/d.srcs/sources_1/new/topD.v:49]
+INFO: [Synth 8-2350] module topD ignored due to previous errors [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+Failed to read verilog 'C:/fft/d/d.srcs/sources_1/new/topD.v'
+2 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: topD
+ERROR: [Synth 8-988] D is already declared [C:/fft/d/d.srcs/sources_1/new/topD.v:49]
+INFO: [Synth 8-2350] module topD ignored due to previous errors [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+Failed to read verilog 'C:/fft/d/d.srcs/sources_1/new/topD.v'
+1 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: topD
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1178.402 ; gain = 19.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[0]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[1]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[2]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[3]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[4]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[5]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[6]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[7]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[8]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[9]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[10]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[11]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[12]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[13]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[14]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[15]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[16]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[17]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[18]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[19]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[20]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[21]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[22]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[23]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[24]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[25]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[26]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[27]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[28]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[29]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[30]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1202.027 ; gain = 43.441
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1202.027 ; gain = 43.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1202.027 ; gain = 43.441
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1336.664 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1350.992 ; gain = 192.406
+7 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1350.992 ; gain = 192.406
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1365.957 ; gain = 14.965
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[0]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[1]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[2]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[3]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[4]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[5]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[6]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[7]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[8]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[9]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[10]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[11]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[12]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[13]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[14]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[15]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[16]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[17]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[18]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[19]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[20]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[21]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[22]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[23]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[24]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[25]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[26]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[27]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[28]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[29]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[30]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1389.984 ; gain = 38.992
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1411.742 ; gain = 60.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1411.742 ; gain = 60.750
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1411.742 ; gain = 60.750
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1411.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-324] index -1 out of range [C:/fft/d/d.srcs/sources_1/new/topD.v:49]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[0]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[1]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[2]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[3]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[4]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[5]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[6]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[7]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[8]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[9]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[10]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[11]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[12]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[13]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[14]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[15]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[16]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[17]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[18]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[19]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[20]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[21]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[22]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[23]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[24]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[25]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[26]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[27]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[28]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[29]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[30]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1411.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1416.270 ; gain = 4.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1416.270 ; gain = 4.527
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1463.883 ; gain = 52.141
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1463.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[0]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[1]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[2]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[3]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[4]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[5]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[6]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[7]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[8]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[9]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[10]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[11]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[12]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[13]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[14]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[15]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[16]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[17]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[18]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[19]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[20]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[21]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[22]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[23]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[24]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[25]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[26]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[27]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[28]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[29]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[30]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1463.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1463.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1463.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1468.453 ; gain = 4.570
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1468.453 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[0]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[1]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[2]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[3]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[4]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[5]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[6]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[7]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[8]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[9]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[10]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[11]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[12]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[13]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[14]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[15]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[16]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[17]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[18]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[19]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[20]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[21]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[22]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[23]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[24]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[25]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[26]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[27]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[28]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[29]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[30]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1468.453 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1472.277 ; gain = 3.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1472.277 ; gain = 3.824
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1482.672 ; gain = 14.219
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1499.234 ; gain = 16.563
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1500.676 ; gain = 18.004
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1524.516 ; gain = 41.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1524.516 ; gain = 41.844
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1584.391 ; gain = 101.719
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1584.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[0]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[1]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[2]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[3]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[4]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[5]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[6]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[7]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[8]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[9]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[10]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[11]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[12]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[13]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[14]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[15]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[16]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[17]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[18]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[19]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[20]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[21]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[22]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[23]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[24]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[25]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[26]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[27]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[28]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[29]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[30]
+WARNING: [Synth 8-3331] design topD has unconnected port Q[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1584.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1584.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1584.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1584.391 ; gain = 0.000
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1584.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1584.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1584.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1584.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1590.082 ; gain = 5.691
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1590.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1590.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1590.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1590.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1590.082 ; gain = 0.000
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1590.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1590.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1590.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1590.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1609.434 ; gain = 19.352
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1609.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1609.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1609.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1609.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1609.434 ; gain = 0.000
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1609.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1609.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1609.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1609.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1612.898 ; gain = 3.465
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1612.898 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1612.898 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1612.898 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1612.898 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1628.563 ; gain = 15.664
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1628.563 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1628.563 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1628.563 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1628.563 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1645.672 ; gain = 17.109
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1645.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1645.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1645.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1645.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1651.969 ; gain = 6.297
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1651.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[16]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[17]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[18]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[19]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[20]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[21]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[22]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[23]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[25]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[26]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[27]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[28]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[29]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[30]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[31]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1651.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1651.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1651.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1670.289 ; gain = 18.320
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1670.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[8]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[9]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[10]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[11]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[12]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[13]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[14]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[15]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1670.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1670.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1670.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1688.910 ; gain = 18.621
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1688.910 ; gain = 0.000
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 1 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 1 - type: integer 
+ERROR: [Synth 8-523] part-select [0:-1] does not match declaration [C:/fft/d/d.srcs/sources_1/new/D_reg.v:39]
+ERROR: [Synth 8-6156] failed synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [C:/fft/d/d.srcs/sources_1/new/topD.v:48]
+ERROR: [Synth 8-6156] failed synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1688.910 ; gain = 0.000
+set_property top D_reg [current_fileset]
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1688.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1729.902 ; gain = 40.992
+set_property top topD [current_fileset]
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1749.555 ; gain = 19.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1749.555 ; gain = 19.652
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1757.070 ; gain = 27.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1757.070 ; gain = 27.168
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1757.070 ; gain = 27.168
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 1 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 1 - type: integer 
+ERROR: [Synth 8-523] part-select [0:-1] does not match declaration [C:/fft/d/d.srcs/sources_1/new/D_reg.v:39]
+ERROR: [Synth 8-6156] failed synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [C:/fft/d/d.srcs/sources_1/new/topD.v:48]
+ERROR: [Synth 8-6156] failed synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 1 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 1 - type: integer 
+ERROR: [Synth 8-523] part-select [0:-1] does not match declaration [C:/fft/d/d.srcs/sources_1/new/D_reg.v:40]
+ERROR: [Synth 8-6156] failed synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [C:/fft/d/d.srcs/sources_1/new/topD.v:48]
+ERROR: [Synth 8-6156] failed synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1757.070 ; gain = 0.000
+refresh_design
+ERROR: [Synth 8-2715] syntax error near assign [C:/fft/d/d.srcs/sources_1/new/D_reg.v:41]
+ERROR: [Synth 8-2715] syntax error near b [C:/fft/d/d.srcs/sources_1/new/D_reg.v:48]
+ERROR: [Synth 8-2715] syntax error near ' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:48]
+INFO: [Synth 8-2350] module D_reg ignored due to previous errors [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+Failed to read verilog 'C:/fft/d/d.srcs/sources_1/new/D_reg.v'
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1757.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1762.094 ; gain = 5.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1762.094 ; gain = 5.023
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1763.926 ; gain = 6.855
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1763.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1763.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1763.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1763.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1775.227 ; gain = 11.301
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1775.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1775.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1775.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1775.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1783.172 ; gain = 7.945
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1783.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+WARNING: [Synth 8-3331] design D_reg has unconnected port rst
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1783.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1783.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1783.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1801.844 ; gain = 18.672
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1815.406 ; gain = 0.043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+WARNING: [Synth 8-3331] design D_reg has unconnected port rst
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1815.406 ; gain = 0.043
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1818.391 ; gain = 3.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1818.391 ; gain = 3.027
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1818.391 ; gain = 3.027
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1825.555 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1825.555 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1829.438 ; gain = 3.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1829.438 ; gain = 3.883
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1834.832 ; gain = 9.277
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1836.395 ; gain = 0.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter cant bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/d/d.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/d/d.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/d/d.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[2]
+WARNING: [Synth 8-3331] design D_reg has unconnected port D[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1836.395 ; gain = 0.652
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1838.375 ; gain = 2.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1838.375 ; gain = 2.633
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1843.770 ; gain = 8.027
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 25 17:30:24 2019...
