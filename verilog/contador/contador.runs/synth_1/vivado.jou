@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Wed Jul 31 17:45:31 2019
+# Process ID: 14592
+# Current directory: C:/fft/contador/contador.runs/synth_1
+# Command line: vivado.exe -log contador.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source contador.tcl
+# Log file: C:/fft/contador/contador.runs/synth_1/contador.vds
+# Journal file: C:/fft/contador/contador.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source contador.tcl -notrace

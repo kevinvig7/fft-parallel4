@@ -24,7 +24,7 @@
 
 
 % GENERO SEÑAL
-a1=sin(2*pi*500/50e3*(0:999))+sin(2*pi*5e3/50e3*(0:999));    %señal compuesta formada por la suma de un tono de 500hz y otro de 5khz.
+a1=sin(2*pi*500/50e3*(0:127))+sin(2*pi*5e3/50e3*(0:127));    %señal compuesta formada por la suma de un tono de 500hz y otro de 5khz.
 a=a1/max(a1);% normalizamos la amplitud maxima de la señal, para que no haya armonicos
 %a=float(a2, n)
 %y=zeros(1,1000);    %señal de salida completada con ceros
