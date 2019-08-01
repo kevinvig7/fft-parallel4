@@ -1,0 +1,1 @@
+-wto "39faafb4512d4d25a23408fa40ab7206" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "cordic_tb_behav" "xil_defaultlib.cordic_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
