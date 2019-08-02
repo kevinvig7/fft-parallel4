@@ -21,8 +21,8 @@ sine= [];
 cosine= [];
 % Specify all the values of theta
 % Theta value must be within -0.9579 and 0.9579 radians
-theta_s= -0.9579;
-theta_e =0.9579;
+theta_s= -pi/4;
+theta_e =-pi/4;
 for theta_d= theta_s:.1:theta_e
 % CORDIC algorithm starts here
 theta(1) =theta_d;

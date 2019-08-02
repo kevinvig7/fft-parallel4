@@ -1,0 +1,3524 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="1200"
+   height="800"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Sine_cosine_plot.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview246"
+     showgrid="false"
+     inkscape:zoom="0.1475"
+     inkscape:cx="701.05161"
+     inkscape:cy="-1414.1285"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     width="2499.1589"
+     height="800"
+     style="fill:#ffffff;stroke:none"
+     id="rect6"
+     x="0"
+     y="0" />
+  <!-- background -->
+  <g
+     style="fill:none;stroke-width:1"
+     id="g8">
+    <g
+       style="stroke:#AAA"
+       id="g10">
+      <!-- grid -->
+      <!-- horizontal rules of grid, with fixed vertical steps, delta=80 -->
+      <path
+         d="M 170, 50L1130, 50"
+         id="path12" />
+      <!-- y = + 2   (top of graph) -->
+      <path
+         d="M 170,130L1130,130"
+         id="path14" />
+      <!-- y = + 1.5 -->
+      <path
+         d="M 170,210L1130,210"
+         id="path16" />
+      <!-- y = + 1   (top of sine bows) -->
+      <path
+         d="M 170,290L1130,290"
+         id="path18" />
+      <!-- y = + 0.5 -->
+      <path
+         d="M 170,370L1130,370"
+         id="path20" />
+      <!-- y =   0   (x axis) -->
+      <path
+         d="M 170,450L1130,450"
+         id="path22" />
+      <!-- y = - 0.5 -->
+      <path
+         d="M 170,530L1130,530"
+         id="path24" />
+      <!-- y = - 1   (bottom of sine bows) -->
+      <path
+         d="M 170,610L1130,610"
+         id="path26" />
+      <!-- y = - 1.5 -->
+      <path
+         d="M 170,690L1130,690"
+         id="path28" />
+      <!-- y = - 2   (bottom of graph) -->
+      <!-- vertical rules of grid, with fixed horizontal steps, delta=110 -->
+      <path
+         d="M 210, 50L 210,690"
+         id="path30" />
+      <!-- x = -2π   (partial bow starts 40 pixels before) -->
+      <path
+         d="M 320, 50L 320,690"
+         id="path32" />
+      <!-- x = -3π/2 -->
+      <path
+         d="M 430, 50L 430,690"
+         id="path34" />
+      <!-- x = - π   -->
+      <path
+         d="M 540, 50L 540,690"
+         id="path36" />
+      <!-- x = - π/2 -->
+      <path
+         d="M 650, 50L 650,690"
+         id="path38" />
+      <!-- x =   0   (y axis) -->
+      <path
+         d="M 760, 50L 760,690"
+         id="path40" />
+      <!-- x = + π/2 -->
+      <path
+         d="M 870, 50L 870,690"
+         id="path42" />
+      <!-- x = + π   -->
+      <path
+         d="M 980, 50L 980,690"
+         id="path44" />
+      <!-- x = +3π/2 -->
+      <path
+         d="M1090, 50L1090,690"
+         id="path46" />
+      <!-- x = +2π   (partial bow starts 40 pixels after) -->
+      <!-- partial bow starts with delta = -40 pixels -->
+    </g>
+    <g
+       style="stroke:#000;stroke-width:1.50"
+       id="g48">
+      <!-- two central axis -->
+      <path
+         d="M 170,370L1130,370"
+         id="path50" />
+      <!-- y =   0   (x axis) -->
+      <path
+         d="M 650, 50L 650,690"
+         id="path52" />
+      <!-- x =   0   (y axis) -->
+    </g>
+    <g
+       style="stroke:#000"
+       id="g54">
+      <!-- axis -->
+      <!-- horizontal ticks on y axis (left and right), with fixed vertical steps, delta=80 -->
+      <path
+         d="M170, 50L200, 50M1100, 50L1130, 50"
+         id="path56" />
+      <!-- y = + 2   (top of graph) -->
+      <path
+         d="M170,130L200,130M1100,130L1130,130"
+         id="path58" />
+      <!-- y = + 1.5 -->
+      <path
+         d="M170,210L200,210M1100,210L1130,210"
+         id="path60" />
+      <!-- y = + 1   (top of sine bows) -->
+      <path
+         d="M170,290L200,290M1100,290L1130,290"
+         id="path62" />
+      <!-- y = + 0.5 -->
+      <path
+         d="M170,370L200,370M1100,370L1130,370"
+         id="path64" />
+      <!-- y =   0   (x axis) -->
+      <path
+         d="M170,450L200,450M1100,450L1130,450"
+         id="path66" />
+      <!-- y = - 0.5 -->
+      <path
+         d="M170,530L200,530M1100,530L1130,530"
+         id="path68" />
+      <!-- y = - 1   (bottom of sine bows) -->
+      <path
+         d="M170,610L200,610M1100,610L1130,610"
+         id="path70" />
+      <!-- y = - 1.5 -->
+      <path
+         d="M170,690L200,690M1100,690L1130,690"
+         id="path72" />
+      <!-- y = - 2   (bottom of graph) -->
+      <!-- vertical ticks on x axis (top and bottom), with fixed horizontal steps, delta=110 -->
+      <path
+         d="M 210,50L 210,75M 210,665L 210,690"
+         id="path74" />
+      <!-- x = -2π   -->
+      <path
+         d="M 320,50L 320,75M 320,665L 320,690"
+         id="path76" />
+      <!-- x = -3π/2 -->
+      <path
+         d="M 430,50L 430,75M 430,665L 430,690"
+         id="path78" />
+      <!-- x =  -π   -->
+      <path
+         d="M 540,50L 540,75M 540,665L 540,690"
+         id="path80" />
+      <!-- x =  -π/2 -->
+      <path
+         d="M 650,50L 650,75M 650,665L 650,690"
+         id="path82" />
+      <!-- x =   0   (y axis) -->
+      <path
+         d="M 760,50L 760,75M 760,665L 760,690"
+         id="path84" />
+      <!-- x =   π/2 -->
+      <path
+         d="M 870,50L 870,75M 870,665L 870,690"
+         id="path86" />
+      <!-- x =   π   -->
+      <path
+         d="M 980,50L 980,75M 980,665L 980,690"
+         id="path88" />
+      <!-- x =  3π/2 -->
+      <path
+         d="M1090,50L1090,75M1090,665L1090,690"
+         id="path90" />
+      <!-- x =  2π   -->
+    </g>
+  </g>
+  <defs
+     id="defs92">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path5193"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <path
+       id="path-SineBow"
+       d=" M  0.0000,  0.0000 C 12.2222, 27.8033 , 24.4444, 55.9377 , 36.6667, 80.0000 C 48.8889,104.4091 , 61.1111,124.5594 , 73.3333,138.5641 C 85.5556,152.6784 , 97.7778,160.0000 ,110.0000,160.0000" />
+    <clipPath
+       id="clip-GraphArea">
+      <rect
+         x="-480"
+         y="-320"
+         width="960"
+         height="640"
+         id="rect96" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#clip-GraphArea)"
+     transform="translate(650,370)"
+     style="fill:none;color:#000;stroke:#000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g98">
+    <rect
+       x="140"
+       y="-280"
+       width="270"
+       height="80"
+       style="stroke:none;fill:white"
+       id="rect100" />
+    <!-- legend area -->
+    <g
+       style="stroke:none;fill:#000;font-family:Times,serif;font-size:36px;text-anchor:start"
+       id="g102">
+      <text
+         x="160"
+         y="-250"
+         id="text104">
+        <tspan
+           id="tspan106">sin </tspan>
+        <tspan
+           style="font-style:italic"
+           id="tspan108">x</tspan>
+      </text>
+      <text
+         x="160"
+         y="-210"
+         id="text110">
+        <tspan
+           id="tspan112">cos </tspan>
+        <tspan
+           style="font-style:italic"
+           id="tspan114">x</tspan>
+      </text>
+    </g>
+    <g
+       style="stroke:#0F0"
+       id="g116">
+      <!-- cosine -->
+      <path
+         d="M270,-220H380"
+         id="path118" />
+      <!-- in legend -->
+      <g
+         transform="translate(-110,0)"
+         id="g120">
+        <!-- curve -->
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(-440,0) scale(1,-1)"
+           id="use122" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(-220,0) scale(-1,-1)"
+           id="use124" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(-220,0)"
+           id="use126" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="scale(-1,1)"
+           id="use128" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="scale(1,-1)"
+           id="use130" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(220,0) scale(-1,-1)"
+           id="use132" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(220,0)"
+           id="use134" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(440,0) scale(-1,1)"
+           id="use136" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(440,0) scale(1,-1)"
+           id="use138" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(660,0) scale(-1,-1)"
+           id="use140" />
+      </g>
+    </g>
+    <g
+       style="stroke:#F00"
+       id="g142">
+      <!-- sine -->
+      <path
+         d="M270,-260H380"
+         id="path144" />
+      <!-- in legend -->
+      <g
+         style="stroke:#F00"
+         id="g146">
+        <!-- curve -->
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(-440,0) scale(-1,1)"
+           id="use148" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(-440,0) scale(1,-1)"
+           id="use150" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(-220,0) scale(-1,-1)"
+           id="use152" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(-220,0)"
+           id="use154" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="scale(-1,1)"
+           id="use156" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="scale(1,-1)"
+           id="use158" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(220,0) scale(-1,-1)"
+           id="use160" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(220,0)"
+           id="use162" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(440,0) scale(-1,1)"
+           id="use164" />
+        <use
+           xlink:href="#path-SineBow"
+           transform="translate(440,0) scale(1,-1)"
+           id="use166" />
+      </g>
+    </g>
+  </g>
+  <g
+     style="stroke:none;fill:#000;font-family:Times,serif;font-size:36px"
+     id="g168">
+    <g
+       style="text-anchor:middle"
+       id="g170">
+      <text
+         x="210"
+         y="740"
+         id="text172">
+        <tspan
+           id="tspan174">-2π</tspan>
+      </text>
+      <text
+         x="320"
+         y="740"
+         id="text176">
+        <tspan
+           id="tspan178">-3π/2</tspan>
+      </text>
+      <text
+         x="430"
+         y="740"
+         id="text180">
+        <tspan
+           id="tspan182">-π</tspan>
+      </text>
+      <text
+         x="540"
+         y="740"
+         id="text184">
+        <tspan
+           id="tspan186">-π/2</tspan>
+      </text>
+      <text
+         x="650"
+         y="740"
+         id="text188">
+        <tspan
+           id="tspan190">0</tspan>
+      </text>
+      <text
+         x="760"
+         y="740"
+         id="text192">
+        <tspan
+           id="tspan194">π/2</tspan>
+      </text>
+      <text
+         x="870"
+         y="740"
+         id="text196">
+        <tspan
+           id="tspan198">π</tspan>
+      </text>
+      <text
+         x="980"
+         y="740"
+         id="text200">
+        <tspan
+           id="tspan202">3π/2</tspan>
+      </text>
+      <text
+         x="1090"
+         y="740"
+         id="text204">
+        <tspan
+           id="tspan206">2π</tspan>
+      </text>
+    </g>
+    <g
+       style="text-anchor:end"
+       id="g208">
+      <text
+         x="150"
+         y="64"
+         id="text210">
+        <tspan
+           id="tspan212">2</tspan>
+      </text>
+      <text
+         x="150"
+         y="144"
+         id="text214">
+        <tspan
+           id="tspan216">1.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="224"
+         id="text218">
+        <tspan
+           id="tspan220">1</tspan>
+      </text>
+      <text
+         x="150"
+         y="304"
+         id="text222">
+        <tspan
+           id="tspan224">0.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="384"
+         id="text226">
+        <tspan
+           id="tspan228">0</tspan>
+      </text>
+      <text
+         x="150"
+         y="464"
+         id="text230">
+        <tspan
+           id="tspan232">-0.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="544"
+         id="text234">
+        <tspan
+           id="tspan236">-1</tspan>
+      </text>
+      <text
+         x="150"
+         y="624"
+         id="text238">
+        <tspan
+           id="tspan240">-1.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="704"
+         id="text242">
+        <tspan
+           id="tspan244">-2</tspan>
+      </text>
+    </g>
+  </g>
+  <rect
+     id="rect4374"
+     style="fill:#ffffff;stroke:none"
+     height="800"
+     width="1200"
+     x="0"
+     y="1660" />
+  <g
+     id="g4376"
+     style="fill:none;stroke-width:1"
+     transform="translate(0,1660)">
+    <g
+       id="g4378"
+       style="stroke:#aaaaaa">
+      <!-- grid -->
+      <!-- horizontal rules of grid, with fixed vertical steps, delta=80 -->
+      <path
+         id="path4380"
+         d="m 170,50 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = + 2   (top of graph) -->
+      <path
+         id="path4382"
+         d="m 170,130 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = + 1.5 -->
+      <path
+         id="path4384"
+         d="m 170,210 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = + 1   (top of sine bows) -->
+      <path
+         id="path4386"
+         d="m 170,290 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = + 0.5 -->
+      <path
+         id="path4388"
+         d="m 170,370 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y =   0   (x axis) -->
+      <path
+         id="path4390"
+         d="m 170,450 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = - 0.5 -->
+      <path
+         id="path4392"
+         d="m 170,530 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = - 1   (bottom of sine bows) -->
+      <path
+         id="path4394"
+         d="m 170,610 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = - 1.5 -->
+      <path
+         id="path4396"
+         d="m 170,690 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = - 2   (bottom of graph) -->
+      <!-- vertical rules of grid, with fixed horizontal steps, delta=110 -->
+      <path
+         id="path4398"
+         d="m 210,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x = -2π   (partial bow starts 40 pixels before) -->
+      <path
+         id="path4400"
+         d="m 320,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x = -3π/2 -->
+      <path
+         id="path4402"
+         d="m 430,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x = - π   -->
+      <path
+         id="path4404"
+         d="m 540,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x = - π/2 -->
+      <path
+         id="path4406"
+         d="m 650,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x =   0   (y axis) -->
+      <path
+         id="path4408"
+         d="m 760,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x = + π/2 -->
+      <path
+         id="path4410"
+         d="m 870,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x = + π   -->
+      <path
+         id="path4412"
+         d="m 980,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x = +3π/2 -->
+      <path
+         id="path4414"
+         d="m 1090,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x = +2π   (partial bow starts 40 pixels after) -->
+      <!-- partial bow starts with delta = -40 pixels -->
+    </g>
+    <g
+       id="g4416"
+       style="stroke:#000000;stroke-width:1.5">
+      <!-- two central axis -->
+      <path
+         id="path4418"
+         d="m 170,370 960,0"
+         inkscape:connector-curvature="0" />
+      <!-- y =   0   (x axis) -->
+      <path
+         id="path4420"
+         d="m 650,50 0,640"
+         inkscape:connector-curvature="0" />
+      <!-- x =   0   (y axis) -->
+    </g>
+    <g
+       id="g4422"
+       style="stroke:#000000">
+      <!-- axis -->
+      <!-- horizontal ticks on y axis (left and right), with fixed vertical steps, delta=80 -->
+      <path
+         id="path4424"
+         d="m 170,50 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = + 2   (top of graph) -->
+      <path
+         id="path4426"
+         d="m 170,130 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = + 1.5 -->
+      <path
+         id="path4428"
+         d="m 170,210 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = + 1   (top of sine bows) -->
+      <path
+         id="path4430"
+         d="m 170,290 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = + 0.5 -->
+      <path
+         id="path4432"
+         d="m 170,370 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y =   0   (x axis) -->
+      <path
+         id="path4434"
+         d="m 170,450 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = - 0.5 -->
+      <path
+         id="path4436"
+         d="m 170,530 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = - 1   (bottom of sine bows) -->
+      <path
+         id="path4438"
+         d="m 170,610 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = - 1.5 -->
+      <path
+         id="path4440"
+         d="m 170,690 30,0 m 900,0 30,0"
+         inkscape:connector-curvature="0" />
+      <!-- y = - 2   (bottom of graph) -->
+      <!-- vertical ticks on x axis (top and bottom), with fixed horizontal steps, delta=110 -->
+      <path
+         id="path4442"
+         d="m 210,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x = -2π   -->
+      <path
+         id="path4444"
+         d="m 320,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x = -3π/2 -->
+      <path
+         id="path4446"
+         d="m 430,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x =  -π   -->
+      <path
+         id="path4448"
+         d="m 540,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x =  -π/2 -->
+      <path
+         id="path4450"
+         d="m 650,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x =   0   (y axis) -->
+      <path
+         id="path4452"
+         d="m 760,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x =   π/2 -->
+      <path
+         id="path4454"
+         d="m 870,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x =   π   -->
+      <path
+         id="path4456"
+         d="m 980,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x =  3π/2 -->
+      <path
+         id="path4458"
+         d="m 1090,50 0,25 m 0,590 0,25"
+         inkscape:connector-curvature="0" />
+      <!-- x =  2π   -->
+    </g>
+  </g>
+  <g
+     id="g4460"
+     style="color:#000000;fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="translate(650,2030)"
+     clip-path="url(#clip-GraphArea)">
+    <rect
+       id="rect4462"
+       style="fill:#ffffff;stroke:none"
+       height="80"
+       width="270"
+       y="-280"
+       x="140" />
+    <!-- legend area -->
+    <g
+       id="g4464"
+       style="font-size:36px;font-family:Times, serif;text-anchor:start;fill:#000000;stroke:none">
+      <text
+         id="text4466"
+         y="-250"
+         x="160">
+        <tspan
+           id="tspan4468">sin</tspan>
+        <tspan
+           id="tspan4470"
+           style="font-style:italic">x</tspan>
+      </text>
+      <text
+         id="text4472"
+         y="-210"
+         x="160">
+        <tspan
+           id="tspan4474">cos</tspan>
+        <tspan
+           id="tspan4476"
+           style="font-style:italic">x</tspan>
+      </text>
+    </g>
+    <g
+       id="g4478"
+       style="stroke:#00ff00">
+      <!-- cosine -->
+      <path
+         id="path4480"
+         d="m 270,-220 110,0"
+         inkscape:connector-curvature="0" />
+      <!-- in legend -->
+      <g
+         id="g4482"
+         transform="translate(-110,0)">
+        <!-- curve -->
+        <use
+           id="use4484"
+           transform="matrix(1,0,0,-1,-440,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4486"
+           transform="matrix(-1,0,0,-1,-220,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4488"
+           transform="translate(-220,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4490"
+           transform="scale(-1,1)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4492"
+           transform="scale(1,-1)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4494"
+           transform="matrix(-1,0,0,-1,220,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4496"
+           transform="translate(220,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4498"
+           transform="matrix(-1,0,0,1,440,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4500"
+           transform="matrix(1,0,0,-1,440,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4502"
+           transform="matrix(-1,0,0,-1,660,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="g4504"
+       style="stroke:#ff0000">
+      <!-- sine -->
+      <path
+         id="path4506"
+         d="m 270,-260 110,0"
+         inkscape:connector-curvature="0" />
+      <!-- in legend -->
+      <g
+         id="g4508"
+         style="stroke:#ff0000">
+        <!-- curve -->
+        <use
+           id="use4510"
+           transform="matrix(-1,0,0,1,-440,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4512"
+           transform="matrix(1,0,0,-1,-440,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4514"
+           transform="matrix(-1,0,0,-1,-220,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4516"
+           transform="translate(-220,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4518"
+           transform="scale(-1,1)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4520"
+           transform="scale(1,-1)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4522"
+           transform="matrix(-1,0,0,-1,220,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4524"
+           transform="translate(220,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4526"
+           transform="matrix(-1,0,0,1,440,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="use4528"
+           transform="matrix(1,0,0,-1,440,0)"
+           xlink:href="#path-SineBow"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="g4530"
+     style="font-size:36px;font-family:Times, serif;fill:#000000;stroke:none"
+     transform="translate(0,1660)">
+    <g
+       id="g4532"
+       style="text-anchor:middle">
+      <text
+         id="text4534"
+         y="740"
+         x="210">
+        <tspan
+           id="tspan4536">-2π</tspan>
+      </text>
+      <text
+         id="text4538"
+         y="740"
+         x="320">
+        <tspan
+           id="tspan4540">-3π/2</tspan>
+      </text>
+      <text
+         id="text4542"
+         y="740"
+         x="430">
+        <tspan
+           id="tspan4544">-π</tspan>
+      </text>
+      <text
+         id="text4546"
+         y="740"
+         x="540">
+        <tspan
+           id="tspan4548">-π/2</tspan>
+      </text>
+      <text
+         id="text4550"
+         y="740"
+         x="650">
+        <tspan
+           id="tspan4552">0</tspan>
+      </text>
+      <text
+         id="text4554"
+         y="740"
+         x="760">
+        <tspan
+           id="tspan4556">π/2</tspan>
+      </text>
+      <text
+         id="text4558"
+         y="740"
+         x="870">
+        <tspan
+           id="tspan4560">π</tspan>
+      </text>
+      <text
+         id="text4562"
+         y="740"
+         x="980">
+        <tspan
+           id="tspan4564">3π/2</tspan>
+      </text>
+      <text
+         id="text4566"
+         y="740"
+         x="1090">
+        <tspan
+           id="tspan4568">2π</tspan>
+      </text>
+    </g>
+    <g
+       id="g4570"
+       style="text-anchor:end">
+      <text
+         id="text4572"
+         y="64"
+         x="150">
+        <tspan
+           id="tspan4574">2</tspan>
+      </text>
+      <text
+         id="text4576"
+         y="144"
+         x="150">
+        <tspan
+           id="tspan4578">1.5</tspan>
+      </text>
+      <text
+         id="text4580"
+         y="224"
+         x="150">
+        <tspan
+           id="tspan4582">1</tspan>
+      </text>
+      <text
+         id="text4584"
+         y="304"
+         x="150">
+        <tspan
+           id="tspan4586">0.5</tspan>
+      </text>
+      <text
+         id="text4588"
+         y="384"
+         x="150">
+        <tspan
+           id="tspan4590">0</tspan>
+      </text>
+      <text
+         id="text4592"
+         y="464"
+         x="150">
+        <tspan
+           id="tspan4594">-0.5</tspan>
+      </text>
+      <text
+         id="text4596"
+         y="544"
+         x="150">
+        <tspan
+           id="tspan4598">-1</tspan>
+      </text>
+      <text
+         id="text4600"
+         y="624"
+         x="150">
+        <tspan
+           id="tspan4602">-1.5</tspan>
+      </text>
+      <text
+         id="text4604"
+         y="704"
+         x="150">
+        <tspan
+           id="tspan4606">-2</tspan>
+      </text>
+    </g>
+  </g>
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path4608"
+     cx="650.77795"
+     cy="207.34863"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="367.34863"
+     cx="650.77795"
+     id="ellipse4610"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <g
+     style="color:#000000;fill:none;stroke:#00ff00;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g4638"
+     transform="translate(1420,370)">
+    <!-- curve -->
+    <use
+       id="use4640"
+       transform="matrix(1,0,0,-1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4642"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4644"
+       transform="translate(-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4646"
+       transform="scale(-1,1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4648"
+       transform="scale(1,-1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4650"
+       transform="matrix(-1,0,0,-1,220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4652"
+       transform="translate(220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4654"
+       transform="matrix(-1,0,0,1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4656"
+       transform="matrix(1,0,0,-1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4658"
+       transform="matrix(-1,0,0,-1,660,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+  <g
+     id="g4664"
+     style="color:#000000;fill:none;stroke:#ff0000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="translate(1530,370)">
+    <!-- curve -->
+    <use
+       id="use4666"
+       transform="matrix(-1,0,0,1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4668"
+       transform="matrix(1,0,0,-1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4670"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4672"
+       transform="translate(-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4674"
+       transform="scale(-1,1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4676"
+       transform="scale(1,-1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4678"
+       transform="matrix(-1,0,0,-1,220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4680"
+       transform="translate(220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4682"
+       transform="matrix(-1,0,0,1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use4684"
+       transform="matrix(1,0,0,-1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="207.34863"
+     cx="1090.7781"
+     id="ellipse4744"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse4746"
+     cx="1090.7781"
+     cy="367.34863"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse4748"
+     cx="1310.7781"
+     cy="367.34863"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="527.34863"
+     cx="1310.7781"
+     id="ellipse4750"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="367.34863"
+     cx="1750.7781"
+     id="ellipse4752"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse4754"
+     cx="1750.7781"
+     cy="527.34863"
+     rx="14.381833"
+     ry="14.981076" />
+  <g
+     transform="translate(1420,2030)"
+     id="g4756"
+     style="color:#000000;fill:none;stroke:#00ff00;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0">
+    <!-- curve -->
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(1,0,0,-1,-440,0)"
+       id="use4758" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       id="use4760" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="translate(-220,0)"
+       id="use4762" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="scale(-1,1)"
+       id="use4764" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="scale(1,-1)"
+       id="use4766" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,220,0)"
+       id="use4768" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="translate(220,0)"
+       id="use4770" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,1,440,0)"
+       id="use4772" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(1,0,0,-1,440,0)"
+       id="use4774" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,660,0)"
+       id="use4776" />
+  </g>
+  <g
+     transform="translate(1530,2030)"
+     style="color:#000000;fill:none;stroke:#ff0000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g4778">
+    <!-- curve -->
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,1,-440,0)"
+       id="use4780" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(1,0,0,-1,-440,0)"
+       id="use4782" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       id="use4784" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="translate(-220,0)"
+       id="use4786" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="scale(-1,1)"
+       id="use4788" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="scale(1,-1)"
+       id="use4790" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,220,0)"
+       id="use4792" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="translate(220,0)"
+       id="use4794" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,1,440,0)"
+       id="use4796" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(1,0,0,-1,440,0)"
+       id="use4798" />
+  </g>
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="1867.3486"
+     cx="650.77795"
+     id="ellipse4800"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse4802"
+     cx="650.77795"
+     cy="2027.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse4808"
+     cx="1090.7781"
+     cy="1869.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2029.3486"
+     cx="1090.7781"
+     id="ellipse4810"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2029.3486"
+     cx="1422.7781"
+     id="ellipse4812"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse4814"
+     cx="1422.7781"
+     cy="2189.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <rect
+     y="840"
+     x="0"
+     width="1200"
+     height="800"
+     style="fill:#ffffff;stroke:none"
+     id="rect4820" />
+  <g
+     transform="translate(0,840)"
+     style="fill:none;stroke-width:1"
+     id="g4822">
+    <g
+       style="stroke:#aaaaaa"
+       id="g4824">
+      <!-- grid -->
+      <!-- horizontal rules of grid, with fixed vertical steps, delta=80 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,50 960,0"
+         id="path4826" />
+      <!-- y = + 2   (top of graph) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,130 960,0"
+         id="path4828" />
+      <!-- y = + 1.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,210 960,0"
+         id="path4830" />
+      <!-- y = + 1   (top of sine bows) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,290 960,0"
+         id="path4832" />
+      <!-- y = + 0.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,370 960,0"
+         id="path4834" />
+      <!-- y =   0   (x axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,450 960,0"
+         id="path4836" />
+      <!-- y = - 0.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,530 960,0"
+         id="path4838" />
+      <!-- y = - 1   (bottom of sine bows) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,610 960,0"
+         id="path4840" />
+      <!-- y = - 1.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,690 960,0"
+         id="path4842" />
+      <!-- y = - 2   (bottom of graph) -->
+      <!-- vertical rules of grid, with fixed horizontal steps, delta=110 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 210,50 0,640"
+         id="path4844" />
+      <!-- x = -2π   (partial bow starts 40 pixels before) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 320,50 0,640"
+         id="path4846" />
+      <!-- x = -3π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 430,50 0,640"
+         id="path4848" />
+      <!-- x = - π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 540,50 0,640"
+         id="path4850" />
+      <!-- x = - π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 650,50 0,640"
+         id="path4852" />
+      <!-- x =   0   (y axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 760,50 0,640"
+         id="path4854" />
+      <!-- x = + π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 870,50 0,640"
+         id="path4856" />
+      <!-- x = + π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 980,50 0,640"
+         id="path4858" />
+      <!-- x = +3π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 1090,50 0,640"
+         id="path4860" />
+      <!-- x = +2π   (partial bow starts 40 pixels after) -->
+      <!-- partial bow starts with delta = -40 pixels -->
+    </g>
+    <g
+       style="stroke:#000000;stroke-width:1.5"
+       id="g4862">
+      <!-- two central axis -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,370 960,0"
+         id="path4864" />
+      <!-- y =   0   (x axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 650,50 0,640"
+         id="path4866" />
+      <!-- x =   0   (y axis) -->
+    </g>
+    <g
+       style="stroke:#000000"
+       id="g4868">
+      <!-- axis -->
+      <!-- horizontal ticks on y axis (left and right), with fixed vertical steps, delta=80 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,50 30,0 m 900,0 30,0"
+         id="path4870" />
+      <!-- y = + 2   (top of graph) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,130 30,0 m 900,0 30,0"
+         id="path4872" />
+      <!-- y = + 1.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,210 30,0 m 900,0 30,0"
+         id="path4874" />
+      <!-- y = + 1   (top of sine bows) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,290 30,0 m 900,0 30,0"
+         id="path4876" />
+      <!-- y = + 0.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,370 30,0 m 900,0 30,0"
+         id="path4878" />
+      <!-- y =   0   (x axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,450 30,0 m 900,0 30,0"
+         id="path4880" />
+      <!-- y = - 0.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,530 30,0 m 900,0 30,0"
+         id="path4882" />
+      <!-- y = - 1   (bottom of sine bows) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,610 30,0 m 900,0 30,0"
+         id="path4884" />
+      <!-- y = - 1.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,690 30,0 m 900,0 30,0"
+         id="path4886" />
+      <!-- y = - 2   (bottom of graph) -->
+      <!-- vertical ticks on x axis (top and bottom), with fixed horizontal steps, delta=110 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 210,50 0,25 m 0,590 0,25"
+         id="path4888" />
+      <!-- x = -2π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 320,50 0,25 m 0,590 0,25"
+         id="path4890" />
+      <!-- x = -3π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 430,50 0,25 m 0,590 0,25"
+         id="path4892" />
+      <!-- x =  -π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 540,50 0,25 m 0,590 0,25"
+         id="path4894" />
+      <!-- x =  -π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 650,50 0,25 m 0,590 0,25"
+         id="path4896" />
+      <!-- x =   0   (y axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 760,50 0,25 m 0,590 0,25"
+         id="path4898" />
+      <!-- x =   π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 870,50 0,25 m 0,590 0,25"
+         id="path4900" />
+      <!-- x =   π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 980,50 0,25 m 0,590 0,25"
+         id="path4902" />
+      <!-- x =  3π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 1090,50 0,25 m 0,590 0,25"
+         id="path4904" />
+      <!-- x =  2π   -->
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip-GraphArea)"
+     transform="translate(650,1210)"
+     style="color:#000000;fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g4906">
+    <rect
+       x="140"
+       y="-280"
+       width="270"
+       height="80"
+       style="fill:#ffffff;stroke:none"
+       id="rect4908" />
+    <!-- legend area -->
+    <g
+       style="font-size:36px;font-family:Times, serif;text-anchor:start;fill:#000000;stroke:none"
+       id="g4910">
+      <text
+         x="160"
+         y="-250"
+         id="text4912">
+        <tspan
+           id="tspan4914">sin</tspan>
+        <tspan
+           style="font-style:italic"
+           id="tspan4916">x</tspan>
+      </text>
+      <text
+         x="160"
+         y="-210"
+         id="text4918">
+        <tspan
+           id="tspan4920">cos</tspan>
+        <tspan
+           style="font-style:italic"
+           id="tspan4922">x</tspan>
+      </text>
+    </g>
+    <g
+       style="stroke:#00ff00"
+       id="g4924">
+      <!-- cosine -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 270,-220 110,0"
+         id="path4926" />
+      <!-- in legend -->
+      <g
+         transform="translate(-110,0)"
+         id="g4928">
+        <!-- curve -->
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(1,0,0,-1,-440,0)"
+           id="use4930" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,-220,0)"
+           id="use4932" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="translate(-220,0)"
+           id="use4934" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="scale(-1,1)"
+           id="use4936" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="scale(1,-1)"
+           id="use4938" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,220,0)"
+           id="use4940" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="translate(220,0)"
+           id="use4942" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,1,440,0)"
+           id="use4944" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(1,0,0,-1,440,0)"
+           id="use4946" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,660,0)"
+           id="use4948" />
+      </g>
+    </g>
+    <g
+       style="stroke:#ff0000"
+       id="g4950">
+      <!-- sine -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 270,-260 110,0"
+         id="path4952" />
+      <!-- in legend -->
+      <g
+         style="stroke:#ff0000"
+         id="g4954">
+        <!-- curve -->
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,1,-440,0)"
+           id="use4956" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(1,0,0,-1,-440,0)"
+           id="use4958" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,-220,0)"
+           id="use4960" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="translate(-220,0)"
+           id="use4962" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="scale(-1,1)"
+           id="use4964" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="scale(1,-1)"
+           id="use4966" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,220,0)"
+           id="use4968" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="translate(220,0)"
+           id="use4970" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,1,440,0)"
+           id="use4972" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(1,0,0,-1,440,0)"
+           id="use4974" />
+      </g>
+    </g>
+  </g>
+  <g
+     transform="translate(0,840)"
+     style="font-size:36px;font-family:Times, serif;fill:#000000;stroke:none"
+     id="g4976">
+    <g
+       style="text-anchor:middle"
+       id="g4978">
+      <text
+         x="210"
+         y="740"
+         id="text4980">
+        <tspan
+           id="tspan4982">-2π</tspan>
+      </text>
+      <text
+         x="320"
+         y="740"
+         id="text4984">
+        <tspan
+           id="tspan4986">-3π/2</tspan>
+      </text>
+      <text
+         x="430"
+         y="740"
+         id="text4988">
+        <tspan
+           id="tspan4990">-π</tspan>
+      </text>
+      <text
+         x="540"
+         y="740"
+         id="text4992">
+        <tspan
+           id="tspan4994">-π/2</tspan>
+      </text>
+      <text
+         x="650"
+         y="740"
+         id="text4996">
+        <tspan
+           id="tspan4998">0</tspan>
+      </text>
+      <text
+         x="760"
+         y="740"
+         id="text5000">
+        <tspan
+           id="tspan5002">π/2</tspan>
+      </text>
+      <text
+         x="870"
+         y="740"
+         id="text5004">
+        <tspan
+           id="tspan5006">π</tspan>
+      </text>
+      <text
+         x="980"
+         y="740"
+         id="text5008">
+        <tspan
+           id="tspan5010">3π/2</tspan>
+      </text>
+      <text
+         x="1090"
+         y="740"
+         id="text5012">
+        <tspan
+           id="tspan5014">2π</tspan>
+      </text>
+    </g>
+    <g
+       style="text-anchor:end"
+       id="g5016">
+      <text
+         x="150"
+         y="64"
+         id="text5018">
+        <tspan
+           id="tspan5020">2</tspan>
+      </text>
+      <text
+         x="150"
+         y="144"
+         id="text5022">
+        <tspan
+           id="tspan5024">1.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="224"
+         id="text5026">
+        <tspan
+           id="tspan5028">1</tspan>
+      </text>
+      <text
+         x="150"
+         y="304"
+         id="text5030">
+        <tspan
+           id="tspan5032">0.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="384"
+         id="text5034">
+        <tspan
+           id="tspan5036">0</tspan>
+      </text>
+      <text
+         x="150"
+         y="464"
+         id="text5038">
+        <tspan
+           id="tspan5040">-0.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="544"
+         id="text5042">
+        <tspan
+           id="tspan5044">-1</tspan>
+      </text>
+      <text
+         x="150"
+         y="624"
+         id="text5046">
+        <tspan
+           id="tspan5048">-1.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="704"
+         id="text5050">
+        <tspan
+           id="tspan5052">-2</tspan>
+      </text>
+    </g>
+  </g>
+  <g
+     style="color:#000000;fill:none;stroke:#00ff00;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g5054"
+     transform="translate(1420,1210)">
+    <!-- curve -->
+    <use
+       id="use5056"
+       transform="matrix(1,0,0,-1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5058"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5060"
+       transform="translate(-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5062"
+       transform="scale(-1,1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5064"
+       transform="scale(1,-1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5066"
+       transform="matrix(-1,0,0,-1,220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5068"
+       transform="translate(220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5070"
+       transform="matrix(-1,0,0,1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5072"
+       transform="matrix(1,0,0,-1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5074"
+       transform="matrix(-1,0,0,-1,660,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+  <g
+     id="g5076"
+     style="color:#000000;fill:none;stroke:#ff0000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="translate(1530,1210)">
+    <!-- curve -->
+    <use
+       id="use5078"
+       transform="matrix(-1,0,0,1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5080"
+       transform="matrix(1,0,0,-1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5082"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5084"
+       transform="translate(-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5086"
+       transform="scale(-1,1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5088"
+       transform="scale(1,-1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5090"
+       transform="matrix(-1,0,0,-1,220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5092"
+       transform="translate(220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5094"
+       transform="matrix(-1,0,0,1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5096"
+       transform="matrix(1,0,0,-1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5098"
+     cx="650.77795"
+     cy="1047.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="1207.3486"
+     cx="650.77795"
+     id="ellipse5100"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="1087.3486"
+     cx="600.77795"
+     id="ellipse5116"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5118"
+     cx="604.77795"
+     cy="1311.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="1047.3486"
+     cx="1090.7781"
+     id="ellipse5122"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5124"
+     cx="1090.7781"
+     cy="1207.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5126"
+     cx="1530.7781"
+     cy="1047.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="1207.3486"
+     cx="1530.7781"
+     id="ellipse5128"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5130"
+     cx="812.77802"
+     cy="1911.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2135.3486"
+     cx="816.77802"
+     id="ellipse5132"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <text
+     sodipodi:linespacing="125%"
+     id="text16395"
+     y="343.08072"
+     x="2207.6143"
+     style="font-style:normal;font-weight:normal;font-size:104.4140625px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-size:75.9375px"
+       y="343.08072"
+       x="2207.6143"
+       id="tspan16397"
+       sodipodi:role="line">1 1 -J -J 1 1 -J -J</tspan></text>
+  <text
+     sodipodi:linespacing="125%"
+     id="text16405"
+     y="1159.3806"
+     x="2220.1289"
+     style="font-style:normal;font-weight:normal;font-size:104.4140625px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-size:75.9375px"
+       y="1159.3806"
+       x="2220.1289"
+       id="tspan16407"
+       sodipodi:role="line">1 (W^N/8) 1 1 1 (W^N/8) 1 1  </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:104.4140625px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="2230.6094"
+     y="2005.3135"
+     id="text16409"
+     sodipodi:linespacing="125%"><tspan
+       style="font-size:75.9375px"
+       sodipodi:role="line"
+       id="tspan16411"
+       x="2230.6094"
+       y="2005.3135">1 (W^3N/8) 1 -J  1 (W^3N/8) 1 -J  </tspan></text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 2288.1356,1054.2373 562.7119,0 0,145.7627 -562.7119,0 z"
+     id="path5458"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 2188.0151,250.84746 313.6798,0 0,142.37288 -315.2542,0 1.1985,-142.74885"
+     id="path5462"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 2213.5593,1928.8136 0,118.644 633.8983,0 0,-135.5932 -637.2881,0 0,16.9492 z"
+     id="path5464"
+     inkscape:connector-curvature="0" />
+  <rect
+     y="2580"
+     x="0"
+     width="1200"
+     height="800"
+     style="fill:#ffffff;stroke:none"
+     id="rect5466" />
+  <g
+     transform="translate(0,2580)"
+     style="fill:none;stroke-width:1"
+     id="g5468">
+    <g
+       style="stroke:#aaaaaa"
+       id="g5470">
+      <!-- grid -->
+      <!-- horizontal rules of grid, with fixed vertical steps, delta=80 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,50 960,0"
+         id="path5472" />
+      <!-- y = + 2   (top of graph) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,130 960,0"
+         id="path5474" />
+      <!-- y = + 1.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,210 960,0"
+         id="path5476" />
+      <!-- y = + 1   (top of sine bows) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,290 960,0"
+         id="path5478" />
+      <!-- y = + 0.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,370 960,0"
+         id="path5480" />
+      <!-- y =   0   (x axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,450 960,0"
+         id="path5482" />
+      <!-- y = - 0.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,530 960,0"
+         id="path5484" />
+      <!-- y = - 1   (bottom of sine bows) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,610 960,0"
+         id="path5486" />
+      <!-- y = - 1.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,690 960,0"
+         id="path5488" />
+      <!-- y = - 2   (bottom of graph) -->
+      <!-- vertical rules of grid, with fixed horizontal steps, delta=110 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 210,50 0,640"
+         id="path5490" />
+      <!-- x = -2π   (partial bow starts 40 pixels before) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 320,50 0,640"
+         id="path5492" />
+      <!-- x = -3π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 430,50 0,640"
+         id="path5494" />
+      <!-- x = - π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 540,50 0,640"
+         id="path5496" />
+      <!-- x = - π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 650,50 0,640"
+         id="path5498" />
+      <!-- x =   0   (y axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 760,50 0,640"
+         id="path5500" />
+      <!-- x = + π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 870,50 0,640"
+         id="path5502" />
+      <!-- x = + π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 980,50 0,640"
+         id="path5504" />
+      <!-- x = +3π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 1090,50 0,640"
+         id="path5506" />
+      <!-- x = +2π   (partial bow starts 40 pixels after) -->
+      <!-- partial bow starts with delta = -40 pixels -->
+    </g>
+    <g
+       style="stroke:#000000;stroke-width:1.5"
+       id="g5508">
+      <!-- two central axis -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,370 960,0"
+         id="path5510" />
+      <!-- y =   0   (x axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 650,50 0,640"
+         id="path5512" />
+      <!-- x =   0   (y axis) -->
+    </g>
+    <g
+       style="stroke:#000000"
+       id="g5514">
+      <!-- axis -->
+      <!-- horizontal ticks on y axis (left and right), with fixed vertical steps, delta=80 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,50 30,0 m 900,0 30,0"
+         id="path5516" />
+      <!-- y = + 2   (top of graph) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,130 30,0 m 900,0 30,0"
+         id="path5518" />
+      <!-- y = + 1.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,210 30,0 m 900,0 30,0"
+         id="path5520" />
+      <!-- y = + 1   (top of sine bows) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,290 30,0 m 900,0 30,0"
+         id="path5522" />
+      <!-- y = + 0.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,370 30,0 m 900,0 30,0"
+         id="path5524" />
+      <!-- y =   0   (x axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,450 30,0 m 900,0 30,0"
+         id="path5526" />
+      <!-- y = - 0.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,530 30,0 m 900,0 30,0"
+         id="path5528" />
+      <!-- y = - 1   (bottom of sine bows) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,610 30,0 m 900,0 30,0"
+         id="path5530" />
+      <!-- y = - 1.5 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 170,690 30,0 m 900,0 30,0"
+         id="path5532" />
+      <!-- y = - 2   (bottom of graph) -->
+      <!-- vertical ticks on x axis (top and bottom), with fixed horizontal steps, delta=110 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 210,50 0,25 m 0,590 0,25"
+         id="path5534" />
+      <!-- x = -2π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 320,50 0,25 m 0,590 0,25"
+         id="path5536" />
+      <!-- x = -3π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 430,50 0,25 m 0,590 0,25"
+         id="path5538" />
+      <!-- x =  -π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 540,50 0,25 m 0,590 0,25"
+         id="path5540" />
+      <!-- x =  -π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 650,50 0,25 m 0,590 0,25"
+         id="path5542" />
+      <!-- x =   0   (y axis) -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 760,50 0,25 m 0,590 0,25"
+         id="path5544" />
+      <!-- x =   π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 870,50 0,25 m 0,590 0,25"
+         id="path5546" />
+      <!-- x =   π   -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 980,50 0,25 m 0,590 0,25"
+         id="path5548" />
+      <!-- x =  3π/2 -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 1090,50 0,25 m 0,590 0,25"
+         id="path5550" />
+      <!-- x =  2π   -->
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip-GraphArea)"
+     transform="translate(650,2950)"
+     style="color:#000000;fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g5552">
+    <rect
+       x="140"
+       y="-280"
+       width="270"
+       height="80"
+       style="fill:#ffffff;stroke:none"
+       id="rect5554" />
+    <!-- legend area -->
+    <g
+       style="font-size:36px;font-family:Times, serif;text-anchor:start;fill:#000000;stroke:none"
+       id="g5556">
+      <text
+         x="160"
+         y="-250"
+         id="text5558">
+        <tspan
+           id="tspan5560">sin</tspan>
+        <tspan
+           style="font-style:italic"
+           id="tspan5562">x</tspan>
+      </text>
+      <text
+         x="160"
+         y="-210"
+         id="text5564">
+        <tspan
+           id="tspan5566">cos</tspan>
+        <tspan
+           style="font-style:italic"
+           id="tspan5568">x</tspan>
+      </text>
+    </g>
+    <g
+       style="stroke:#00ff00"
+       id="g5570">
+      <!-- cosine -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 270,-220 110,0"
+         id="path5572" />
+      <!-- in legend -->
+      <g
+         transform="translate(-110,0)"
+         id="g5574">
+        <!-- curve -->
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(1,0,0,-1,-440,0)"
+           id="use5576" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,-220,0)"
+           id="use5578" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="translate(-220,0)"
+           id="use5580" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="scale(-1,1)"
+           id="use5582" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="scale(1,-1)"
+           id="use5584" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,220,0)"
+           id="use5586" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="translate(220,0)"
+           id="use5588" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,1,440,0)"
+           id="use5590" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(1,0,0,-1,440,0)"
+           id="use5592" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,660,0)"
+           id="use5594" />
+      </g>
+    </g>
+    <g
+       style="stroke:#ff0000"
+       id="g5596">
+      <!-- sine -->
+      <path
+         inkscape:connector-curvature="0"
+         d="m 270,-260 110,0"
+         id="path5598" />
+      <!-- in legend -->
+      <g
+         style="stroke:#ff0000"
+         id="g5600">
+        <!-- curve -->
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,1,-440,0)"
+           id="use5602" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(1,0,0,-1,-440,0)"
+           id="use5604" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,-220,0)"
+           id="use5606" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="translate(-220,0)"
+           id="use5608" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="scale(-1,1)"
+           id="use5610" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="scale(1,-1)"
+           id="use5612" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,-1,220,0)"
+           id="use5614" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="translate(220,0)"
+           id="use5616" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(-1,0,0,1,440,0)"
+           id="use5618" />
+        <use
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#path-SineBow"
+           transform="matrix(1,0,0,-1,440,0)"
+           id="use5620" />
+      </g>
+    </g>
+  </g>
+  <g
+     transform="translate(0,2580)"
+     style="font-size:36px;font-family:Times, serif;fill:#000000;stroke:none"
+     id="g5622">
+    <g
+       style="text-anchor:middle"
+       id="g5624">
+      <text
+         x="210"
+         y="740"
+         id="text5626">
+        <tspan
+           id="tspan5628">-2π</tspan>
+      </text>
+      <text
+         x="320"
+         y="740"
+         id="text5630">
+        <tspan
+           id="tspan5632">-3π/2</tspan>
+      </text>
+      <text
+         x="430"
+         y="740"
+         id="text5634">
+        <tspan
+           id="tspan5636">-π</tspan>
+      </text>
+      <text
+         x="540"
+         y="740"
+         id="text5638">
+        <tspan
+           id="tspan5640">-π/2</tspan>
+      </text>
+      <text
+         x="650"
+         y="740"
+         id="text5642">
+        <tspan
+           id="tspan5644">0</tspan>
+      </text>
+      <text
+         x="760"
+         y="740"
+         id="text5646">
+        <tspan
+           id="tspan5648">π/2</tspan>
+      </text>
+      <text
+         x="870"
+         y="740"
+         id="text5650">
+        <tspan
+           id="tspan5652">π</tspan>
+      </text>
+      <text
+         x="980"
+         y="740"
+         id="text5654">
+        <tspan
+           id="tspan5656">3π/2</tspan>
+      </text>
+      <text
+         x="1090"
+         y="740"
+         id="text5658">
+        <tspan
+           id="tspan5660">2π</tspan>
+      </text>
+    </g>
+    <g
+       style="text-anchor:end"
+       id="g5662">
+      <text
+         x="150"
+         y="64"
+         id="text5664">
+        <tspan
+           id="tspan5666">2</tspan>
+      </text>
+      <text
+         x="150"
+         y="144"
+         id="text5668">
+        <tspan
+           id="tspan5670">1.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="224"
+         id="text5672">
+        <tspan
+           id="tspan5674">1</tspan>
+      </text>
+      <text
+         x="150"
+         y="304"
+         id="text5676">
+        <tspan
+           id="tspan5678">0.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="384"
+         id="text5680">
+        <tspan
+           id="tspan5682">0</tspan>
+      </text>
+      <text
+         x="150"
+         y="464"
+         id="text5684">
+        <tspan
+           id="tspan5686">-0.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="544"
+         id="text5688">
+        <tspan
+           id="tspan5690">-1</tspan>
+      </text>
+      <text
+         x="150"
+         y="624"
+         id="text5692">
+        <tspan
+           id="tspan5694">-1.5</tspan>
+      </text>
+      <text
+         x="150"
+         y="704"
+         id="text5696">
+        <tspan
+           id="tspan5698">-2</tspan>
+      </text>
+    </g>
+  </g>
+  <g
+     style="color:#000000;fill:none;stroke:#00ff00;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g5700"
+     transform="translate(1420,2950)">
+    <!-- curve -->
+    <use
+       id="use5702"
+       transform="matrix(1,0,0,-1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5704"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5706"
+       transform="translate(-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5708"
+       transform="scale(-1,1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5710"
+       transform="scale(1,-1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5712"
+       transform="matrix(-1,0,0,-1,220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5714"
+       transform="translate(220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5716"
+       transform="matrix(-1,0,0,1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5718"
+       transform="matrix(1,0,0,-1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5720"
+       transform="matrix(-1,0,0,-1,660,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+  <g
+     id="g5722"
+     style="color:#000000;fill:none;stroke:#ff0000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="translate(1530,2950)">
+    <!-- curve -->
+    <use
+       id="use5724"
+       transform="matrix(-1,0,0,1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5726"
+       transform="matrix(1,0,0,-1,-440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5728"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5730"
+       transform="translate(-220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5732"
+       transform="scale(-1,1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5734"
+       transform="scale(1,-1)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5736"
+       transform="matrix(-1,0,0,-1,220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5738"
+       transform="translate(220,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5740"
+       transform="matrix(-1,0,0,1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5742"
+       transform="matrix(1,0,0,-1,440,0)"
+       xlink:href="#path-SineBow"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5744"
+     cx="650.77795"
+     cy="2787.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2947.3486"
+     cx="650.77795"
+     id="ellipse5746"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2789.3486"
+     cx="1090.7781"
+     id="ellipse5748"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5750"
+     cx="1090.7781"
+     cy="2949.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5752"
+     cx="1534.7781"
+     cy="2789.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2949.3486"
+     cx="1534.7781"
+     id="ellipse5754"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2787.3486"
+     cx="1970.7781"
+     id="ellipse5766"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5768"
+     cx="1970.7781"
+     cy="2947.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <g
+     transform="translate(2300,2950)"
+     id="g5774"
+     style="color:#000000;fill:none;stroke:#00ff00;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0">
+    <!-- curve -->
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(1,0,0,-1,-440,0)"
+       id="use5776" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       id="use5778" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="translate(-220,0)"
+       id="use5780" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="scale(-1,1)"
+       id="use5782" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="scale(1,-1)"
+       id="use5784" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,220,0)"
+       id="use5786" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="translate(220,0)"
+       id="use5788" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,1,440,0)"
+       id="use5790" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(1,0,0,-1,440,0)"
+       id="use5792" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,660,0)"
+       id="use5794" />
+  </g>
+  <g
+     transform="translate(2410,2950)"
+     style="color:#000000;fill:none;stroke:#ff0000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g5796">
+    <!-- curve -->
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,1,-440,0)"
+       id="use5798" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(1,0,0,-1,-440,0)"
+       id="use5800" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,-220,0)"
+       id="use5802" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="translate(-220,0)"
+       id="use5804" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="scale(-1,1)"
+       id="use5806" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="scale(1,-1)"
+       id="use5808" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,-1,220,0)"
+       id="use5810" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="translate(220,0)"
+       id="use5812" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(-1,0,0,1,440,0)"
+       id="use5814" />
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       xlink:href="#path-SineBow"
+       transform="matrix(1,0,0,-1,440,0)"
+       id="use5816" />
+  </g>
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5818"
+     cx="1970.7781"
+     cy="2789.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2949.3486"
+     cx="1970.7781"
+     id="ellipse5820"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2949.3486"
+     cx="2304.7781"
+     id="ellipse5822"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5824"
+     cx="2304.7781"
+     cy="3109.3486"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="3059.3486"
+     cx="2686.7781"
+     id="ellipse5828"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <text
+     sodipodi:linespacing="125%"
+     id="text16421"
+     y="2911.9402"
+     x="3352.2092"
+     style="font-style:normal;font-weight:normal;font-size:104.4140625px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       y="2911.9402"
+       x="3352.2092"
+       id="tspan16423"
+       sodipodi:role="line"
+       style="font-size:75.9375px">1 1 1 1 (W^4) (W^6) (W^5) (W^7)</tspan></text>
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5838"
+     cx="2740.3713"
+     cy="2946.9758"
+     rx="14.381833"
+     ry="14.981076" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="3106.9758"
+     cx="2740.3713"
+     id="ellipse5840"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     ry="14.981076"
+     rx="14.381833"
+     cy="2997.8232"
+     cx="455.62552"
+     id="ellipse5842"
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <ellipse
+     style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="ellipse5844"
+     cx="462.40518"
+     cy="3096.8064"
+     rx="14.381833"
+     ry="14.981076" />
+</svg>
