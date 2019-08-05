@@ -1,0 +1,36 @@
+%% Teoria desde la web de Matlab
+
+% Fixed-point data types can be either signed or unsigned. Signed binary fixed-point numbers are 
+% typically represented in one of three ways:
+% Sign/magnitude
+% One's complement
+% Two's complement
+% Two's complement is the most common representation of signed fixed-point numbers and is 
+% the only representation used by Fixed-Point Designer™ documentation.
+
+%% OPeraciones a nivel de Bits BitWise
+clc;
+clear;
+% Create a fixed-point vector.
+a = fi([1,2,5,7],0,4,0)
+disp(bin(a))
+
+% Concatenate the bits of the elements of a.
+y = bitconcat(a)
+disp(bin(y))
+
+%% Glorario Punto fijo
+% https://la.mathworks.com/help/fixedpoint/ref/glossary.html#f6935
+
+%% Ejemplos
+% https://la.mathworks.com/products/fixed-point-designer/code-examples.html
+
+
+%% Data Quantizing
+% https://la.mathworks.com/help/fixedpoint/fixed-point-functions.html 
+% https://la.mathworks.com/help/dsp/fixed-point-design.html
+ 
+%% Fixed-Point Designer
+% https://la.mathworks.com/help/fixedpoint/index.html
+
+%%
