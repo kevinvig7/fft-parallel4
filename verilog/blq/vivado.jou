@@ -2,54 +2,13 @@
 # Vivado v2019.1.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
-# Start of session at: Fri Jul 26 14:10:16 2019
-# Process ID: 5564
+# Start of session at: Tue Aug  6 15:00:19 2019
+# Process ID: 2180
 # Current directory: C:/fft/blq
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7964 C:\fft\blq\blq.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent316 C:\fft\blq\blq.xpr
 # Log file: C:/fft/blq/vivado.log
 # Journal file: C:/fft/blq\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/fft/blq/blq.xpr
 update_compile_order -fileset sources_1
-add_files -norecurse {C:/fft/blq/blq.srcs/sources_1/new/switch.v C:/fft/blq/blq.srcs/sources_1/new/BF.v C:/fft/blq/blq.srcs/sources_1/new/topD.v C:/fft/blq/blq.srcs/sources_1/new/def.v C:/fft/blq/blq.srcs/sources_1/new/BFj.v C:/fft/blq/blq.srcs/sources_1/new/D_reg.v}
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/fft/blq/blq.srcs/sources_1/new/topD.v] -no_script -reset -force -quiet
-remove_files  C:/fft/blq/blq.srcs/sources_1/new/topD.v
-synth_design -rtl -name rtl_1
-add_files -norecurse C:/fft/blq/blq.srcs/sources_1/new/topD.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-refresh_design
-set_msg_config -suppress -id {Project 1-19} -string {{CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/fft/blq/blq.srcs/sources_1/new/a.v'.} } 
-refresh_design
-refresh_design
-close_project
-create_project topfft C:/fft/topfft -part xc7k70tfbv676-1
-file mkdir C:/fft/topfft/topfft.srcs/sources_1/new
-close [ open C:/fft/topfft/topfft.srcs/sources_1/new/a.v w ]
-add_files C:/fft/topfft/topfft.srcs/sources_1/new/a.v
-update_compile_order -fileset sources_1
-add_files -norecurse {C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v C:/fft/topfft/topfft.srcs/sources_1/new/def.v C:/fft/topfft/topfft.srcs/sources_1/new/BFj.v C:/fft/topfft/topfft.srcs/sources_1/new/topD.v C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v C:/fft/topfft/topfft.srcs/sources_1/new/switch.v C:/fft/topfft/topfft.srcs/sources_1/new/BF.v}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-close [ open C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v w ]
-add_files C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-synth_design -rtl -name rtl_1
-add_files -norecurse C:/fft/topfft/topfft.srcs/sources_1/new/Blqj.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-refresh_design

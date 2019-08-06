@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "def.v"
+//`include "def.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -25,16 +25,17 @@ module BF(
     BFIn_up,
     BFIn_down,
     BFOut_up,
-    BFOut_down,
+    BFOut_down
+  //  alter
     );
     
-    parameter Nbits = `Nbitsg;
+    parameter Nbits = 2;
     
     input [Nbits*2-1:0] BFIn_up;
     input  [Nbits*2-1:0] BFIn_down;
     output [Nbits*2-1:0] BFOut_up;
     output [Nbits*2-1:0] BFOut_down;
-    
+   // input alter;
     
     //Separacion parte real e imaginaria 
     wire [Nbits-1:0] q_up [0:1];
@@ -42,6 +43,9 @@ module BF(
     
     wire [Nbits-1:0] sumOut_up [0:1];    //Salida de sumador
     wire [Nbits-1:0] sumOut_down [0:1]; //Salida de sumador
+    
+  //  wire [Nbits-1:0] sumOut_downAlter[1:0];    //Salida alternativa de sumador - cuando a la salida esta multiplicado por (-J) 
+
     
     
 assign q_up[0] = BFIn_up[Nbits*2-1:Nbits]; //Real
@@ -58,12 +62,17 @@ assign sumOut_up[1] = q_up[1] + q_down[1];
 
 assign sumOut_down[0] = q_up[0] - q_down[0];
 assign sumOut_down[1] = q_up[1] - q_down[1];  
-    
+
+//assign sumOut_downAlter[0] =   q_up[1] - q_down[0];
+//assign sumOut_downAlter[1] =   q_down[0] - q_up[0];    
+   
+   
    
     assign BFOut_up = {sumOut_up[0],sumOut_up[1]};    
-    assign BFOut_down = {sumOut_down[0],sumOut_down[1]}; 
+    assign BFOut_down = {sumOut_down[0],sumOut_down[1]} ; 
 
-    
+ // assign BFOut_down  = alter ? {sumOut_down[0],sumOut_down[1]}  :{sumOut_downAlter[0],sumOut_downAlter[1]} ; //Con Salida Alternativa cuando se multiplica por -j  
+
 
       
     

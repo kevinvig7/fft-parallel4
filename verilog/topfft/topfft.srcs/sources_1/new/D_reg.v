@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "def.v"
+//`include "def.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -28,7 +28,7 @@ module D_reg(
     clk
     );
     
-parameter Nbits = `Nbitsg;
+parameter Nbits = 2;
 
     input [Nbits*2-1:0] D;
     output reg [Nbits*2-1:0] Q;

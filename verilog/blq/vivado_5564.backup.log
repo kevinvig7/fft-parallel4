@@ -1,0 +1,1113 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Fri Jul 26 14:10:16 2019
+# Process ID: 5564
+# Current directory: C:/fft/blq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7964 C:\fft\blq\blq.xpr
+# Log file: C:/fft/blq/vivado.log
+# Journal file: C:/fft/blq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/fft/blq/blq.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/fft/blq/blq.srcs/sources_1/new/a.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/fft/blq/blq.srcs/sources_1/new/switch.v C:/fft/blq/blq.srcs/sources_1/new/BF.v C:/fft/blq/blq.srcs/sources_1/new/topD.v C:/fft/blq/blq.srcs/sources_1/new/def.v C:/fft/blq/blq.srcs/sources_1/new/BFj.v C:/fft/blq/blq.srcs/sources_1/new/D_reg.v}
+WARNING: [filemgmt 56-12] File 'C:/fft/blq/blq.srcs/sources_1/new/switch.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/fft/blq/blq.srcs/sources_1/new/BF.v' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/fft/blq/blq.srcs/sources_1/new/topD.v] -no_script -reset -force -quiet
+remove_files  C:/fft/blq/blq.srcs/sources_1/new/topD.v
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: Blq
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1165.488 ; gain = 173.453
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+	Parameter ND0 bound to: 2 - type: integer 
+	Parameter ND1 bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_up' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_down' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1200.484 ; gain = 208.449
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1200.484 ; gain = 208.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1200.484 ; gain = 208.449
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1333.031 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 1362.406 ; gain = 370.371
+12 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1362.406 ; gain = 600.297
+add_files -norecurse C:/fft/blq/blq.srcs/sources_1/new/topD.v
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1375.691 ; gain = 9.141
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+	Parameter ND0 bound to: 2 - type: integer 
+	Parameter ND1 bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 2 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:70]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_up' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_down' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:75]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[0]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1405.688 ; gain = 39.137
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1405.688 ; gain = 39.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1405.688 ; gain = 39.137
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1463.438 ; gain = 96.887
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1503.547 ; gain = 21.320
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+	Parameter ND0 bound to: 2 - type: integer 
+	Parameter ND1 bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 2 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:70]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_up' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_down' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 4 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-3848] Net Q in module/entity topD__parameterized0 does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD__parameterized0' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:75]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[0]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1520.176 ; gain = 37.949
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1543.020 ; gain = 60.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1543.020 ; gain = 60.793
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1598.297 ; gain = 116.070
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/fft/blq/blq.srcs/sources_1/new/def.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1620.574 ; gain = 0.266
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter ND1 bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:70]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_up' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_down' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:75]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[0]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1620.574 ; gain = 0.266
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1620.574 ; gain = 0.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1620.574 ; gain = 0.266
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1620.574 ; gain = 0.266
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1634.879 ; gain = 1.102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter ND1 bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:70]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_up' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_down' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:75]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[0]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1634.879 ; gain = 1.102
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1637.855 ; gain = 4.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1637.855 ; gain = 4.078
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1637.855 ; gain = 4.078
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1657.012 ; gain = 0.598
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter ND1 bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:72]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_up' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:75]
+WARNING: [Synth 8-689] width (1) of port connection 'swOut_down' does not match port width (16) of module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:75]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (16) of module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:77]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_up[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1658.012 ; gain = 1.598
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1660.004 ; gain = 3.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1660.004 ; gain = 3.590
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1660.004 ; gain = 3.590
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1675.352 ; gain = 0.320
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter ND1 bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1675.352 ; gain = 0.320
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1682.297 ; gain = 7.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1682.297 ; gain = 7.266
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1682.297 ; gain = 7.266
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter ND1 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[15]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[14]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[13]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[12]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[11]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[10]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[9]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[8]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[7]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[6]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[5]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[4]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[3]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[2]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[1]
+WARNING: [Synth 8-3331] design Blq has unconnected port BlqIn_down[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1736.012 ; gain = 0.000
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter ND1 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1736.012 ; gain = 0.000
+set_msg_config -suppress -id {Project 1-19} -string {{CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/fft/blq/blq.srcs/sources_1/new/a.v'.} } 
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 1 - type: integer 
+	Parameter ND1 bound to: 1 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 1 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1736.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1736.012 ; gain = 0.000
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/blq/blq.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1737.078 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 128 - type: integer 
+	Parameter ND1 bound to: 128 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 128 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/blq/blq.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/blq/blq.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/blq/blq.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/blq/blq.srcs/sources_1/new/switch.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/blq/blq.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/blq/blq.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/blq/blq.srcs/sources_1/new/Blq.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1737.078 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1740.309 ; gain = 3.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1740.309 ; gain = 3.230
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1740.309 ; gain = 3.230
+close_project
+create_project topfft C:/fft/topfft -part xc7k70tfbv676-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+file mkdir C:/fft/topfft/topfft.srcs/sources_1/new
+close [ open C:/fft/topfft/topfft.srcs/sources_1/new/a.v w ]
+add_files C:/fft/topfft/topfft.srcs/sources_1/new/a.v
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v C:/fft/topfft/topfft.srcs/sources_1/new/def.v C:/fft/topfft/topfft.srcs/sources_1/new/BFj.v C:/fft/topfft/topfft.srcs/sources_1/new/topD.v C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v C:/fft/topfft/topfft.srcs/sources_1/new/switch.v C:/fft/topfft/topfft.srcs/sources_1/new/BF.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v w ]
+add_files C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: topfft
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/topfft/topfft.srcs/sources_1/new/BF.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1740.309 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topfft' [C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter ND1 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/topfft/topfft.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/topfft/topfft.srcs/sources_1/new/switch.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/topfft/topfft.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/topfft/topfft.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/topfft/topfft.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized0' [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 16 - type: integer 
+	Parameter ND1 bound to: 16 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 16 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-3848] Net Q in module/entity topD__parameterized0 does not have driver. [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (5#1) [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized0' (5#1) [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+WARNING: [Synth 8-3848] Net fftOut_up in module/entity topfft does not have driver. [C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v:38]
+WARNING: [Synth 8-3848] Net fftOut_down in module/entity topfft does not have driver. [C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'topfft' (6#1) [C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1740.309 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1740.309 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1740.309 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1789.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1789.883 ; gain = 49.574
+19 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1789.883 ; gain = 49.574
+add_files -norecurse C:/fft/topfft/topfft.srcs/sources_1/new/Blqj.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/topfft/topfft.srcs/sources_1/new/BF.v:28]
+WARNING: [Synth 8-1935] empty port in module declaration [C:/fft/topfft/topfft.srcs/sources_1/new/BFj.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1789.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topfft' [C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter ND1 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 32 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (1#1) [C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v:24]
+WARNING: [Synth 8-3848] Net Q in module/entity topD does not have driver. [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (2#1) [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft/topfft/topfft.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'switch' (3#1) [C:/fft/topfft/topfft.srcs/sources_1/new/switch.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft/topfft/topfft.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/topfft/topfft.srcs/sources_1/new/BF.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BF' (4#1) [C:/fft/topfft/topfft.srcs/sources_1/new/BF.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BF' has 5 connections declared, but only 4 given [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (5#1) [C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Blqj' [C:/fft/topfft/topfft.srcs/sources_1/new/Blqj.v:24]
+	Parameter ND0 bound to: 16 - type: integer 
+	Parameter ND1 bound to: 16 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:24]
+	Parameter ND0 bound to: 16 - type: integer 
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-3848] Net Q in module/entity topD__parameterized0 does not have driver. [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (5#1) [C:/fft/topfft/topfft.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BFj' [C:/fft/topfft/topfft.srcs/sources_1/new/BFj.v:24]
+	Parameter Nbits bound to: 8 - type: integer 
+WARNING: [Synth 8-308] ignoring empty port [C:/fft/topfft/topfft.srcs/sources_1/new/BFj.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'BFj' (6#1) [C:/fft/topfft/topfft.srcs/sources_1/new/BFj.v:24]
+WARNING: [Synth 8-7023] instance 'I' of module 'BFj' has 5 connections declared, but only 4 given [C:/fft/topfft/topfft.srcs/sources_1/new/Blqj.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Blqj' (7#1) [C:/fft/topfft/topfft.srcs/sources_1/new/Blqj.v:24]
+WARNING: [Synth 8-3848] Net fftOut_up in module/entity topfft does not have driver. [C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v:38]
+WARNING: [Synth 8-3848] Net fftOut_down in module/entity topfft does not have driver. [C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'topfft' (8#1) [C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1789.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1789.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1789.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1795.105 ; gain = 5.223
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 26 15:44:18 2019...

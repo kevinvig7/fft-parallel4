@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "def.v"
+//`include "def.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -33,7 +33,7 @@ module Blq(
 
   parameter ND0 = 128;
   parameter ND1 = 128;
-  parameter Nbits = `Nbitsg;
+  parameter Nbits = 2;
 
 
   
@@ -52,13 +52,13 @@ module Blq(
     assign connect_blq_down[0] = BlqIn_down;
       
    
-   topD#(ND0,`Nbitsg) DA(connect_blq_down[0],connect_blq_down[1],rst,clk);
+   topD#(ND0,Nbits) DA(connect_blq_down[0],connect_blq_down[1],rst,clk);
   
-   switch sw0(connect_blq_up[0],connect_blq_down[1],connect_blq_up[1],connect_blq_down[2],ctrl);
+   switch#(Nbits) sw0(connect_blq_up[0],connect_blq_down[1],connect_blq_up[1],connect_blq_down[2],ctrl);
 
-   topD#(ND1,`Nbitsg) DB(connect_blq_up[1],connect_blq_up[2],rst,clk);
+   topD#(ND1,Nbits) DB(connect_blq_up[1],connect_blq_up[2],rst,clk);
 
-   BF I(connect_blq_up[2],connect_blq_down[2],BlqOut_up,BlqOut_down);
+   BF#(Nbits) I(connect_blq_up[2],connect_blq_down[2],BlqOut_up,BlqOut_down);
 
 
 endmodule

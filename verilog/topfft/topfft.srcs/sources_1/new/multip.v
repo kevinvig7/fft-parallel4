@@ -1,12 +1,11 @@
 `timescale 1ns / 1ps
-//`include "def.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
 // 
-// Create Date: 23.07.2019 16:20:32
+// Create Date: 06.08.2019 15:42:22
 // Design Name: 
-// Module Name: switch
+// Module Name: multip
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -21,28 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module switch(
-   swIn_up,
-   swIn_down,
-   swOut_up,
-   swOut_down,
-   ctrl
+module multip(
+    muestra,
+    coeff,
+    result
     );
     
     parameter Nbits=2;
+    input [Nbits*2-1:0] muestra;
+    input [Nbits*2-1:0] coeff;
+    output[Nbits*2-1:0] result;
+     
+    assign result[0] = muestra[0]*coeff[0]-muestra[1]*coeff[1]; 
+    assign result[1] = muestra[0]*coeff[1]+muestra[1]*coeff[0];
     
-    input [Nbits*2-1:0] swIn_up;
-    input [Nbits*2-1:0] swIn_down;
-    output [Nbits*2-1:0] swOut_up;
-    output [Nbits*2-1:0] swOut_down;
-    input ctrl;
-            
-       
-       
-
-    
-     assign swOut_up = ctrl? swIn_up : swIn_down;
-     assign swOut_down = ctrl? swIn_down : swIn_up;
     
     
     

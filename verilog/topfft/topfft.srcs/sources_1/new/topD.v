@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "def.v"
+//`include "def.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -28,7 +28,7 @@ module topD(
     clk
     );
   parameter   ND0 = 1;
-  parameter Nbits = 1;
+  parameter Nbits = 2;
   
     input [Nbits*2-1:0] D;
     output [Nbits*2-1:0] Q;
@@ -44,7 +44,7 @@ module topD(
    genvar i;
    generate
       for (i=1; i <= ND0; i=i+1) begin:
-      Dgen D_reg nD(connect_wire[i-1],connect_wire[i],rst,clk);
+      Dgen D_reg#(Nbits) nD(connect_wire[i-1],connect_wire[i],rst,clk);
      end
    endgenerate
     

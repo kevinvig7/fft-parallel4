@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "def.v"
+//`include "def.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -30,13 +30,19 @@ module topfft(
     rst
     );
 
-  parameter Nbits = `Nbitsg;
+  parameter Nbits = 2;
+  parameter N = 8;
+//  parameter [Nbits*2-1:0] w0 ={{16'h1},{16'h0},{16'h1},{16'h0},{16'h0},{16'h1},{16'h0},{16'h1}};
+//  parameter [Nbits*2-1:0] w1 ={{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1}};
+//  parameter [Nbits*2-1:0] w2 ={{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1}};
+//  parameter [Nbits*2-1:0] w3 ={{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1}};
+//  parameter [Nbits*2-1:0] w4 ={{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1}};
   
-  parameter [Nbits*2-1:0] w0 ={{16'h1},{16'h0},{16'h1},{16'h0},{16'h0},{16'h1},{16'h0},{16'h1}};
-  parameter [Nbits*2-1:0] w1 ={{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1}};
-  parameter [Nbits*2-1:0] w2 ={{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1}};
-  parameter [Nbits*2-1:0] w3 ={{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1}};
-  parameter [Nbits*2-1:0] w4 ={{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1},{16'h1}};
+  wire [Nbits*2-1:0] coefficientes0;
+  wire [Nbits*2-1:0] coefficientes1;
+  wire [Nbits*2-1:0] coefficientes2;
+  wire [Nbits*2-1:0] coefficientes3;
+  wire [Nbits*2-1:0] coefficientes4;
 
     input [Nbits*2-1:0] fftIn_up;
     input  [Nbits*2-1:0] fftIn_down;
@@ -60,28 +66,35 @@ module topfft(
  contador#(1) control_1(clk,rst,ctrl_1); 
 
   
-  Blq#(4,4) BFI(blq_connect_up[0],blq_connect_down[0],blq_connect_up[1],blq_connect_down[1],rst,clk,ctrl_4);
+  Blq#(4,4,Nbits) Blq_BFI(blq_connect_up[0],blq_connect_down[0],blq_connect_up[1],blq_connect_down[1],rst,clk,ctrl_4);
   
   
  //producto 0 
  assign blq_connect_up[2] = blq_connect_up[1]; 
- assign blq_connect_down[2] =  blq_connect_down[1]*w0;   
+ //ssign blq_connect_down[2] =  blq_connect_down[1]*w0;   
+ multip#(Nbits) M0(blq_connect_down[1],coefficientes0,blq_connect_down[2]);
  
-   Blq#(2,2) BFII(blq_connect_up[2],blq_connect_down[2],blq_connect_up[3],blq_connect_down[3],rst,clk,ctrl_2);
+ 
+Blq#(2,2,Nbits) Blq_BFII(blq_connect_up[2],blq_connect_down[2],blq_connect_up[3],blq_connect_down[3],rst,clk,ctrl_2);
   
      //producto 1 2
- assign blq_connect_up[4] = blq_connect_up[3]*w1; 
- assign blq_connect_down[4] =  blq_connect_down[3]*w2;   
+     
+// assign blq_connect_up[4] = blq_connect_up[3]*w1; 
+  multip#(Nbits) M1(blq_connect_up[3],coefficientes1,blq_connect_up[4]);
+ //assign blq_connect_down[4] =  blq_connect_down[3]*w2;   
+  multip#(Nbits) M2(blq_connect_down[3],coefficientes2,blq_connect_down[4]);
     
         
- Blq#(1,1) BFIII(blq_connect_up[4],blq_connect_down[4],blq_connect_up[5],blq_connect_down[5],rst,clk,ctrl_1);   
+ Blq#(1,1,Nbits) Blq_BFIII(blq_connect_up[4],blq_connect_down[4],blq_connect_up[5],blq_connect_down[5],rst,clk,ctrl_1);   
     
      //producto 3 4
- assign blq_connect_up[6] = blq_connect_up[5]*w3; 
- assign blq_connect_down[6] =  blq_connect_down[5]*w4;   
+ //assign blq_connect_up[6] = blq_connect_up[5]*w3; 
+  multip#(Nbits) M3(blq_connect_up[5],coefficientes3,blq_connect_up[6]);
+ //assign blq_connect_down[6] =  blq_connect_down[5]*w4;   
+  multip#(Nbits) M4(blq_connect_down[5],coefficientes4,blq_connect_down[6]);
     
      
- Blq#(4,4) BFIV(blq_connect_up[6],blq_connect_down[6],blq_connect_up[7],blq_connect_down[7],rst,clk,ctrl_4);   
+ Blq#(4,4,Nbits) Blq_BFIV(blq_connect_up[6],blq_connect_down[6],blq_connect_up[7],blq_connect_down[7],rst,clk,ctrl_4);   
  
   
     
