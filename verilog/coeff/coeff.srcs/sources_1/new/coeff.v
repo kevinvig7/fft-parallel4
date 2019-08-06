@@ -23,31 +23,60 @@
 module coeff(
 clk,
 coeff_out,
+coeff_s,
 rst
     );
     
-parameter Nbits=16; 
+parameter Nbits=2; 
 parameter N=8;
 input rst;
+output [Nbits*N*2-1:0] coeff_s;
 input clk;
 output reg [Nbits*2-1:0] coeff_out;
-integer index=0;
+
+reg [22:0] index;
+
 wire [Nbits*N*2-1:0] coeff;
+
+assign coeff_s = coeff;
 
 coeff_data coefficientes(coeff);
 
-
-always @(posedge clk_in) begin
-    if(rst) begin
-    coeff_out<= ; 
-    end
-    else if 
+initial begin
+index=0;
+end
 
 
+//always @(posedge clk) begin
+//    if(rst) begin
+//    coeff_out = {Nbits*2{1'b0}} ; 
+//    index =0;
+//    end else begin
+//    //coeff_out<=coeff[Nbits*N*2-index*N*2-1:Nbits*N*2-index*N*2-1-Nbits*2+1];
+//    coeff_out =coeff[Nbits*N*2-index*Nbits*2-1-:4];
+//    index=index+1;
+//    end
+//end
 
 
 
 
+always @(posedge clk) begin
+        if (rst) begin 
+            coeff_out = {Nbits*2{1'b0}}; 
+            index<=0;
+            end
+        else if (clk) begin 
+             if (index==(N)) begin
+                index<=0;
+                coeff_out <=coeff[N*Nbits*2-1-:4];
+            end
+        else begin
+        coeff_out <=coeff[N*Nbits*2-1-index*Nbits*2-:4];
+        index = index + 1;
+            end
+       end
+end
 
 
 

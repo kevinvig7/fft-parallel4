@@ -21,19 +21,27 @@
 
 module coeff_tb();
     
-parameter Nbits=16;
+parameter Nbits=2;
+parameter N=8;
+//integer index=2;
 //-- Registro para generar la señal de reloj
 reg clk = 0;
 reg rst;
 wire [Nbits*2-1:0] coeff_out;
+wire [Nbits*N*2-1:0] coeff_s;
+//wire [Nbits*2-1:0] coeff_index;
     
 //-- Instanciar el componente y establecer el valor del divisor
 coeff 
   dut(
 .clk(clk),
 .coeff_out(coeff_out),
+.coeff_s(coeff_s),
 .rst(rst)
   );
+    
+//assign coeff_index= coeff_s[Nbits*N*2-index*Nbits*2-1-:4];  
+    
     
 //-- Generador de reloj. Periodo 2 unidades
 always #1 clk = ~clk;

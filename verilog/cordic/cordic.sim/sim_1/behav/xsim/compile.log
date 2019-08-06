@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft/cordic/cordic.srcs/sources_1/new/cordic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic
+WARNING: [VRFC 10-3380] identifier 'cos' is used before its declaration [C:/fft/cordic/cordic.srcs/sources_1/new/cordic.v:77]
+WARNING: [VRFC 10-3380] identifier 'sin' is used before its declaration [C:/fft/cordic/cordic.srcs/sources_1/new/cordic.v:78]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft/cordic/cordic.srcs/sim_1/new/cordic_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cordic_tb
