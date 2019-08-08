@@ -94,16 +94,16 @@ w5f=fxw5;
 fprintf(fid,[w5f.bin '\n']);
 
 w6f=fxw6;
-fprintf(fid,[w6f.bin '\n']);
+fprintf(fid,[w1f.bin '\n']);
 
 w7f=fxw7;
-fprintf(fid,[w7f.bin '\n']);
+fprintf(fid,[w1f.bin '\n']);
     
 w3n8f=fxw3n8;
-fprintf(fid,[w3n8f.bin '\n']);
+fprintf(fid,[w1f.bin '\n']);
     
-wn8f=fxwn8;
-fprintf(fid,[wn8f.bin '\n']);
+wn8=fxwn8;
+fprintf(fid,[w1f.bin '\n']);
     
 fclose(fid);
 

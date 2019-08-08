@@ -3,8 +3,8 @@ out=DFT16pR8( xn );
 
 out=real( fftshift(out) );
 
-xn_fx=fi(xn,0,4,0);
-out_fx=fi(out,0,4,0);
+xn_fx=fi(xn,1,4,2);
+out_fx=fi(out,1,4,2);
 
 fid=fopen ('EntradaFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 for i=1:length(xn_fx)

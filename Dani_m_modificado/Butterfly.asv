@@ -1,0 +1,28 @@
+function [ output_butterfly ] = Butterfly( input_a, input_b, N )
+%BUTTERFLY_CLASICO 
+N = N;
+twiddle_butterfly = -1;
+
+fxtwiddle_butterfly =fi(twiddle_butterfly,0,4,0);
+fxinput_b=fi(input_b,0,4,0);
+
+fxinput_a=
+% Calculo las 2 salidas
+output_a = input_a + fxinput_b;
+output_b = input_a + fxtwiddle_butterfly*fxinput_b;
+% Asigno vector de salida
+
+fxoutput_a=fx();
+fxoutput_b=fx();
+
+output_butterfly = [output_a, output_b];
+
+end
+
+%% Uso del Butterfly
+% 
+% input_a = 1;
+% input_b = 1;
+% N = 16;
+% % Llamo al butterfly
+% output_butterfly = Butterfly( input_a, input_b, N );
