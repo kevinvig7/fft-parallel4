@@ -43,13 +43,21 @@ assign q[1] = D[Nbits-1:0];
 
 
 
-   always @(posedge clk)  begin
+   always @(posedge clk) begin
      if (rst) begin
        Q <= {Nbits*2{1'b0}};
-      end 
-      else begin
+      end else begin
          Q <= {q[0],q[1]};
      end
-   end
+ end
+   
+   
+
+				
+   
+   
+   
+   
+   
 	
 	endmodule

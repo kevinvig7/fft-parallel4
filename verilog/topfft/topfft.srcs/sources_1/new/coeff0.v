@@ -21,8 +21,9 @@
 
 
 module coeff1(
-clk,
+
 coeff_out,
+clk,
 rst
     );
     

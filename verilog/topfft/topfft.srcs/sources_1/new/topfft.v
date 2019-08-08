@@ -58,8 +58,8 @@ module topfft(
   assign blq_connect_up[0] = fftIn_up;
   assign blq_connect_down[0] = fftIn_down;
   
-  assign blq_connect_up[7] = fftOut_up;
-  assign blq_connect_down[7] = fftOut_down;
+  assign fftOut_up =blq_connect_up[7];
+  assign fftOut_down = blq_connect_down[7] ;
   
  contador#(4) control_4(clk,rst,ctrl_4);
  contador#(2) control_2(clk,rst,ctrl_2); 
@@ -69,6 +69,9 @@ module topfft(
   Blq#(4,4,Nbits) Blq_BFI(blq_connect_up[0],blq_connect_down[0],blq_connect_up[1],blq_connect_down[1],rst,clk,ctrl_4);
   
   
+  coeff0#(Nbits,N)  Mcoeff0(coefficientes0,clk,rst);
+   
+  
  //producto 0 
  assign blq_connect_up[2] = blq_connect_up[1]; 
  //ssign blq_connect_down[2] =  blq_connect_down[1]*w0;   
@@ -77,9 +80,12 @@ module topfft(
  
 Blq#(2,2,Nbits) Blq_BFII(blq_connect_up[2],blq_connect_down[2],blq_connect_up[3],blq_connect_down[3],rst,clk,ctrl_2);
   
-     //producto 1 2
-     
-// assign blq_connect_up[4] = blq_connect_up[3]*w1; 
+  
+    coeff1#(Nbits,N)  Mcoeff1(coefficientes1,clk,rst);
+    coeff2#(Nbits,N)  Mcoeff2(coefficientes2,clk,rst);
+  
+ //producto 1 2
+ // assign blq_connect_up[4] = blq_connect_up[3]*w1; 
   multip#(Nbits) M1(blq_connect_up[3],coefficientes1,blq_connect_up[4]);
  //assign blq_connect_down[4] =  blq_connect_down[3]*w2;   
   multip#(Nbits) M2(blq_connect_down[3],coefficientes2,blq_connect_down[4]);
@@ -87,7 +93,10 @@ Blq#(2,2,Nbits) Blq_BFII(blq_connect_up[2],blq_connect_down[2],blq_connect_up[3]
         
  Blq#(1,1,Nbits) Blq_BFIII(blq_connect_up[4],blq_connect_down[4],blq_connect_up[5],blq_connect_down[5],rst,clk,ctrl_1);   
     
-     //producto 3 4
+     coeff3#(Nbits,N)  Mcoeff3(coefficientes3,clk,rst);
+     coeff4#(Nbits,N)  Mcoeff4(coefficientes4,clk,rst);
+     
+  //producto 3 4
  //assign blq_connect_up[6] = blq_connect_up[5]*w3; 
   multip#(Nbits) M3(blq_connect_up[5],coefficientes3,blq_connect_up[6]);
  //assign blq_connect_down[6] =  blq_connect_down[5]*w4;   

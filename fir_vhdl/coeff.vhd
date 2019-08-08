@@ -1,25 +1,3 @@
-----------------------------------------------------------------------------------
--- Universidad Tecnológica Nacional
--- Carrera: Ingenieria en Electrónica
--- Materia: Tecnicas Digitales IV 
--- Año: 2014
--- Grupo Numero: 2
-
--- Integrantes del grupo: 
--- Donda, Lucio               leg:51490
--- Kunst, James	            leg:53255
--- Mattausch, Mariano         leg:47882
-
--- Nombre del Modulo:    fir.vhd
---Trabajo práctico 16.  
-
-----coeficientes del filtro obtenidos con matlab.
-
-----------------------------------------------------------------------------------
-
-
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;

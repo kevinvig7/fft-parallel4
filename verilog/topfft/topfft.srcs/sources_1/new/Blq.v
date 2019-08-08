@@ -31,8 +31,8 @@ module Blq(
     ctrl
     );
 
-  parameter ND0 = 128;
-  parameter ND1 = 128;
+  parameter ND0 = 4;
+  parameter ND1 = 4;
   parameter Nbits = 2;
 
 

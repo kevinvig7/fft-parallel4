@@ -21,8 +21,8 @@
 
 
 module coeff3(
-clk,
 coeff_out,
+clk,
 rst
     );
     
