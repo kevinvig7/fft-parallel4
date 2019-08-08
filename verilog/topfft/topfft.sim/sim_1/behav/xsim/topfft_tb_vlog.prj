@@ -3,6 +3,7 @@ verilog xil_defaultlib  \
 "../../../../topfft.srcs/sources_1/new/BF.v" \
 "../../../../topfft.srcs/sources_1/new/Blq.v" \
 "../../../../topfft.srcs/sources_1/new/D_reg.v" \
+"../../../../topfft.srcs/sources_1/new/D_reg_1.v" \
 "../../../../topfft.srcs/sources_1/new/coeff0.v" \
 "../../../../topfft.srcs/sources_1/new/coeff1.v" \
 "../../../../topfft.srcs/sources_1/new/coeff2.v" \
@@ -17,6 +18,7 @@ verilog xil_defaultlib  \
 "../../../../topfft.srcs/sources_1/new/multip.v" \
 "../../../../topfft.srcs/sources_1/new/switch.v" \
 "../../../../topfft.srcs/sources_1/new/topD.v" \
+"../../../../topfft.srcs/sources_1/new/topD_1.v" \
 "../../../../topfft.srcs/sources_1/new/topfft.v" \
 "../../../../topfft.srcs/sim_1/new/topfft_tb.v" \
 

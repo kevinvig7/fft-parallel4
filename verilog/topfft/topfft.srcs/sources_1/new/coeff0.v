@@ -44,7 +44,7 @@ index=0;
 end
 
 always @(posedge clk) begin
-        if (rst) begin 
+        if(!rst) begin 
             coeff_out = {Nbits*2{1'b0}}; 
             index<=0;
             end
