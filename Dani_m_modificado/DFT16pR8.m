@@ -10,7 +10,7 @@ N = 16;
 z = 1;
 
 %% Stage 1
-bf1_stage1 = Butterfly(x(z+0), x(z+8), N,Nbits,Nbitsf);
+bf1_stage1  = Butterfly(x(z+0), x(z+8), N,Nbits,Nbitsf);
 bf2_stage1 = Butterfly(x(z+1), x(z+9), N,Nbits,Nbitsf);
 bf3_stage1 = Butterfly(x(z+2), x(z+10), N,Nbits,Nbitsf);
 bf4_stage1 = Butterfly(x(z+3), x(z+11), N,Nbits,Nbitsf);
@@ -207,7 +207,7 @@ DFT16pRadix8 = [bf1_stage4(z+0), bf5_stage4(z+0), bf3_stage4(z+0), bf7_stage4(z+
                 bf2_stage4(z+1), bf6_stage4(z+1), bf4_stage4(z+1), bf8_stage4(z+1) ];
 
 % Plot
-on = false;
+on = true;
 if(on)
     figure();
     out_dft = real( fftshift(DFT16pRadix8) );

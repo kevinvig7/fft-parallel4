@@ -3,9 +3,9 @@
 May 24 2019
 15:06:07
 C:/fft/topfft/topfft.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-C:/fft/topfft/topfft.srcs/sim_1/new/topfft_tb.v,1565287195,verilog,,,,topfft_tb,,,,,,,,
+C:/fft/topfft/topfft.srcs/sim_1/new/topfft_tb.v,1565383048,verilog,,,,topfft_tb,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/BF.v,1565118475,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v,,BF,,,,,,,,
-C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v,1565121427,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v,,Blq,,,,,,,,
+C:/fft/topfft/topfft.srcs/sources_1/new/Blq.v,1565385049,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v,,Blq,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/D_reg.v,1565122858,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/D_reg_1.v,,D_reg,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/D_reg_1.v,1565290841,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/coeff0.v,,D_reg_1,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/coeff0.v,1565291190,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/coeff1.v,,coeff1,,,,,,,,
@@ -20,7 +20,7 @@ C:/fft/topfft/topfft.srcs/sources_1/new/coeff_data3.v,1565372664,verilog,,C:/fft
 C:/fft/topfft/topfft.srcs/sources_1/new/coeff_data4.v,1565372721,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/contador.v,,coeff_data4,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/contador.v,1564675058,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/multip.v,,contador,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/multip.v,1565145824,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/switch.v,,multip,,,,,,,,
-C:/fft/topfft/topfft.srcs/sources_1/new/switch.v,1565118158,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/topD.v,,switch,,,,,,,,
+C:/fft/topfft/topfft.srcs/sources_1/new/switch.v,1565385037,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/topD.v,,switch,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/topD.v,1565144205,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/topD_1.v,,topD,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/topD_1.v,1565290368,verilog,,C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v,,topD_1,,,,,,,,
 C:/fft/topfft/topfft.srcs/sources_1/new/topfft.v,1565374733,verilog,,C:/fft/topfft/topfft.srcs/sim_1/new/topfft_tb.v,,topfft,,,,,,,,

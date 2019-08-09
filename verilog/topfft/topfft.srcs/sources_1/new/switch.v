@@ -26,7 +26,8 @@ module switch(
    swIn_down,
    swOut_up,
    swOut_down,
-   ctrl
+   ctrl,
+   rst
     );
     
     parameter Nbits=2;
@@ -36,13 +37,42 @@ module switch(
     output [Nbits*2-1:0] swOut_up;
     output [Nbits*2-1:0] swOut_down;
     input ctrl;
-            
+    input rst;
+    
+    reg [Nbits*2-1:0] out_up;
+   reg [Nbits*2-1:0] out_down;
+    
+    assign swOut_up=out_up;
+    assign swOut_down=out_down;        
        
        
 
+     //assign out_up = ctrl? swIn_down : swIn_up;
+     //assign out_down = ctrl? swIn_up : swIn_down;
     
-     assign swOut_up = ctrl? swIn_up : swIn_down;
-     assign swOut_down = ctrl? swIn_down : swIn_up;
+    
+always @*
+if (rst) out_up<={Nbits*2{1'b0}};
+else
+  case (ctrl)
+     0 : out_up <= swIn_up;
+     1 : out_up <= swIn_down;
+     default : out_up ={Nbits*2{1'b0}};
+  endcase
+  
+  
+  
+always @*
+if (rst) out_down<={Nbits*2{1'b0}};
+else
+  case (ctrl)
+     0 : out_down  <=swIn_down;
+     1 : out_down  <= swIn_up ;
+     default : out_down  <={Nbits*2{1'b0}};
+  endcase
+    
+    
+    
     
     
     

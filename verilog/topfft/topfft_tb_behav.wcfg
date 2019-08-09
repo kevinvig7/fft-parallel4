@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="41103334fs"></ZoomStartTime>
-      <ZoomEndTime time="120403335fs"></ZoomEndTime>
-      <Cursor1Time time="54320000fs"></Cursor1Time>
+      <ZoomStartTime time="2900000fs"></ZoomStartTime>
+      <ZoomEndTime time="79200001fs"></ZoomEndTime>
+      <Cursor1Time time="27000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+      <ValueColumnWidth column_width="93"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
+   <WVObjectSize size="21" />
    <wvobject fp_name="/topfft_tb/Nbits" type="array">
       <obj_property name="ElementShortName">Nbits[31:0]</obj_property>
       <obj_property name="ObjectShortName">Nbits[31:0]</obj_property>
@@ -102,72 +102,44 @@
          <obj_property name="label">w4 coeff_out[3:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group876" type="group">
-      <obj_property name="label">BF_I</obj_property>
+   <wvobject type="divider" fp_name="divider357">
+      <obj_property name="label">sw</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/I/BFOut_up" type="array">
-         <obj_property name="ElementShortName">BFOut_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_up[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/I/BFOut_down" type="array">
-         <obj_property name="ElementShortName">BFOut_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_down[3:0]</obj_property>
-      </wvobject>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/M0/result" type="array">
-      <obj_property name="ElementShortName">result[3:0]</obj_property>
-      <obj_property name="ObjectShortName">result[3:0]</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/control_4/clk_out" type="logic">
+      <obj_property name="ElementShortName">clk_out</obj_property>
+      <obj_property name="ObjectShortName">clk_out</obj_property>
    </wvobject>
-   <wvobject fp_name="group877" type="group">
-      <obj_property name="label">BF_II</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/I/BFOut_up" type="array">
-         <obj_property name="ElementShortName">BFOut_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_up[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/I/BFOut_down" type="array">
-         <obj_property name="ElementShortName">BFOut_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_down[3:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/ctrl" type="logic">
+      <obj_property name="ElementShortName">ctrl</obj_property>
+      <obj_property name="ObjectShortName">ctrl</obj_property>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/M1/result" type="array">
-      <obj_property name="ElementShortName">result[3:0]</obj_property>
-      <obj_property name="ObjectShortName">result[3:0]</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/swIn_up" type="array">
+      <obj_property name="ElementShortName">swIn_up[3:0]</obj_property>
+      <obj_property name="ObjectShortName">swIn_up[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/M2/result" type="array">
-      <obj_property name="ElementShortName">result[3:0]</obj_property>
-      <obj_property name="ObjectShortName">result[3:0]</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/swIn_down" type="array">
+      <obj_property name="ElementShortName">swIn_down[3:0]</obj_property>
+      <obj_property name="ObjectShortName">swIn_down[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="group879" type="group">
-      <obj_property name="label">BF_III</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/I/BFOut_up" type="array">
-         <obj_property name="ElementShortName">BFOut_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_up[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/I/BFOut_down" type="array">
-         <obj_property name="ElementShortName">BFOut_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_down[3:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/swOut_up" type="array">
+      <obj_property name="ElementShortName">swOut_up[3:0]</obj_property>
+      <obj_property name="ObjectShortName">swOut_up[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/M3/result" type="array">
-      <obj_property name="ElementShortName">result[3:0]</obj_property>
-      <obj_property name="ObjectShortName">result[3:0]</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/swOut_down" type="array">
+      <obj_property name="ElementShortName">swOut_down[3:0]</obj_property>
+      <obj_property name="ObjectShortName">swOut_down[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/M4/result" type="array">
-      <obj_property name="ElementShortName">result[3:0]</obj_property>
-      <obj_property name="ObjectShortName">result[3:0]</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DA/Q" type="array">
+      <obj_property name="ElementShortName">Q[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="group884" type="group">
-      <obj_property name="label">BF_IV</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/I/BFOut_up" type="array">
-         <obj_property name="ElementShortName">BFOut_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_up[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/I/BFOut_down" type="array">
-         <obj_property name="ElementShortName">BFOut_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_down[3:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DA/connect_wire" type="array">
+      <obj_property name="ElementShortName">connect_wire[4:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">connect_wire[4:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DA/D" type="array">
+      <obj_property name="ElementShortName">D[3:0]</obj_property>
+      <obj_property name="ObjectShortName">D[3:0]</obj_property>
    </wvobject>
 </wave_config>

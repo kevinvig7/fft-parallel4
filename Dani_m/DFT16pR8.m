@@ -91,7 +91,7 @@ DFT16pRadix8 = [bf1_stage4(i+0), bf5_stage4(i+0), bf3_stage4(i+0), bf7_stage4(i+
                 bf2_stage4(i+1), bf6_stage4(i+1), bf4_stage4(i+1), bf8_stage4(i+1) ];
 
 % Plot
-on = false;
+on = true;
 if(on)
     figure();
     out_dft = real( fftshift(DFT16pRadix8) );

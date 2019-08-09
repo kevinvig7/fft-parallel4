@@ -94,6 +94,7 @@ always @(posedge clk) begin
         scan_par = $fscanf(data_par, "%b\n", fftIn_up);
         scan_impar = $fscanf(data_impar, "%b\n", fftIn_down);
           if ($feof(data_par)) begin
+        
           # 1000
            $finish;
          

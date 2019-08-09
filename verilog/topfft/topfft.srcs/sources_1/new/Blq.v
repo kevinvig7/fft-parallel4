@@ -45,20 +45,22 @@ module Blq(
     input rst;
     input ctrl;
   
-    wire [Nbits*2-1:0] connect_blq_up[0:2];
-    wire [Nbits*2-1:0] connect_blq_down[0:2];
+    wire [Nbits*2-1:0] connect_blq_up[0:3];
+    wire [Nbits*2-1:0] connect_blq_down[0:3];
     
     assign connect_blq_up[0] = BlqIn_up;
     assign connect_blq_down[0] = BlqIn_down;
       
+   assign BlqOut_up=connect_blq_up[3] ;
+    assign BlqOut_down=connect_blq_down[3] ;
    
    topD#(ND0,Nbits) DA(connect_blq_down[0],connect_blq_down[1],rst,clk);
   
-   switch#(Nbits) sw0(connect_blq_up[0],connect_blq_down[1],connect_blq_up[1],connect_blq_down[2],ctrl);
+   switch#(Nbits) sw0(connect_blq_up[0],connect_blq_down[1],connect_blq_up[1],connect_blq_down[2],ctrl,rst);
 
    topD#(ND1,Nbits) DB(connect_blq_up[1],connect_blq_up[2],rst,clk);
 
-   BF#(Nbits) I(connect_blq_up[2],connect_blq_down[2],BlqOut_up,BlqOut_down);
+   BF#(Nbits) I(connect_blq_up[2],connect_blq_down[2],connect_blq_up[3] ,connect_blq_down[3]);
 
 
 endmodule
