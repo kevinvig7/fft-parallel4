@@ -1,22 +1,38 @@
-xn= [1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0];
-out=DFT16pR8( xn );
+xn= [1+1i,0,1+2i,1,2,4,2+9i,6,1,7i,1i,6i,1,0,1,1i];
+Nbits=2;
+Nbitsf=1;
+z=0;
+out=DFT16pR8( xn, Nbits,Nbitsf);
 
 out=real( fftshift(out) );
 
-xn_fx=fi(xn,1,4,2);
-out_fx=fi(out,1,4,2);
+xn_fx=fi(xn,1,Nbits,Nbitsf);
+out_fx=fi(out,1,Nbits,Nbitsf);
 
-fid=fopen ('EntradaFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-for i=1:length(xn_fx)
-    fft_in=xn_fx(i);
-    fprintf(fid,[fft_in.bin '\n']);
+fid=fopen ('Entrada_parFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+for z=1:(length(xn_fx)/2)
+    fft_inParr=real(xn_fx(2*z-1));
+    fft_inPari=imag(xn_fx(2*z-1));
+    fprintf(fid,[fft_inParr.bin fft_inPari.bin '\n']);
+end
+fclose(fid);
+
+fid=fopen ('Entrada_imparFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+for z=1:(length(xn_fx)/2)
+    fft_inImparr=real(xn_fx(2*z+1-1));
+    fft_inImpari=imag(xn_fx(2*z+1-1));
+    fprintf(fid,[fft_inImparr.bin fft_inImpari.bin '\n']);
 end
 fclose(fid);
 
 
+
+
+
 fid=fopen ('SalidaFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 for i=1:length(out_fx)
-    fft_out=out_fx(i);
-    fprintf(fid,[fft_out.bin '\n']);
+    fft_outr=real(out_fx(i));
+    fft_outi=imag(out_fx(i));
+    fprintf(fid,[fft_outr.bin fft_outr.bin '\n']);
 end
 fclose(fid);
