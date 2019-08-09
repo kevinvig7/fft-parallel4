@@ -1,0 +1,1 @@
+`define Nbitsg 8

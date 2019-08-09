@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Aug  8 15:37:21 2019
+# Process ID: 5612
+# Current directory: C:/fft/topfft
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14228 C:\fft\topfft\topfft.xpr
+# Log file: C:/fft/topfft/vivado.log
+# Journal file: C:/fft/topfft\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/fft/topfft/topfft.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+add_files -norecurse {C:/fft/topfft/topfft.srcs/sources_1/new/topD_1.v C:/fft/topfft/topfft.srcs/sources_1/new/D_reg_1.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+close_sim

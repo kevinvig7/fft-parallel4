@@ -1,0 +1,4 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+FIN de la simulacion
+$finish called at time : 220 ns : File "C:/fft/contador/contador.srcs/sim_1/new/contador_tb.v" Line 51
