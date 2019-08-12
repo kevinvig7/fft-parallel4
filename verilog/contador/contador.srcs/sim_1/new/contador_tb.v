@@ -27,7 +27,7 @@ wire clk_out;
 reg rst;
     
 //-- Instanciar el componente y establecer el valor del divisor
-contador #(4)
+contador #(1)
   dut(
     .clk_in(clk),
     .rst(rst),
@@ -42,7 +42,7 @@ always #1 clk = ~clk;
 //-- Proceso al inicio
 initial begin
     rst  = 1'd1;
-    #20 rst  = 1'd0;
+    #19 rst  = 1'b0;
   //-- Fichero donde almacenar los resultados
   $dumpfile("contador_tb.vcd");
   $dumpvars(0, contador_tb);

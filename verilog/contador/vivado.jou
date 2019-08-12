@@ -1,0 +1,210 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Mon Aug 12 13:18:11 2019
+# Process ID: 11656
+# Current directory: C:/fft/contador
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15200 C:\fft\contador\contador.xpr
+# Log file: C:/fft/contador/vivado.log
+# Journal file: C:/fft/contador\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/fft/contador/contador.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source contador_tb.tcl
+save_wave_config {C:/fft/contador/contador_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/fft/contador/contador_tb_behav.wcfg
+set_property xsim.view C:/fft/contador/contador_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+save_wave_config {C:/fft/contador/contador_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+synth_design -rtl -name rtl_1
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/fft/contador/contador_tb_behav.wcfg
+source contador_tb.tcl
+open_project C:/fft/topfft/topfft.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+current_project contador
+current_sim simulation_12
+close_sim
+close_project
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft/topfft/topfft_tb_behav.wcfg}
+close_sim

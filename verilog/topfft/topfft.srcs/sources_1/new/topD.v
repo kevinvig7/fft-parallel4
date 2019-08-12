@@ -36,15 +36,15 @@ module topD(
     input clk;
     
     
-    wire [Nbits*2-1:0] connect_wire[ND:0];
+    wire [Nbits*2-1:0] connect_wire[0:ND];
     
     assign connect_wire[0] = D;
     assign  Q = connect_wire[ND];
     
    genvar i;
    generate
-      for (i=1; i <= ND; i=i+1) begin:
-      Dgen D_reg#(Nbits) nD(connect_wire[i-1],connect_wire[i],rst,clk);
+      for (i=0; i < ND; i=i+1) begin:
+      Dgen D_reg#(Nbits) nD(connect_wire[i],connect_wire[i+1],rst,clk);
      end
    endgenerate
     

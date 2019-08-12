@@ -29,14 +29,16 @@ parameter N=1;
 
 reg [22:0] count;
 
-initial begin
-count =0;
-clk_out=0;
-end
+//initial begin
+//count =0;
+//clk_out=0;
+//end
 
 always @(posedge clk_in) begin
- if (rst)
-     clk_out=0;
+ if (rst) begin
+     count=N-1;
+     clk_out=1;
+     end
   else if (clk_in) begin
   if (count==(N-1)) begin
       clk_out=~clk_out;
