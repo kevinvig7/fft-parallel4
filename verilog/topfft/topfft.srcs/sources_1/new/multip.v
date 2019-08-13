@@ -31,6 +31,8 @@ module multip(
     input [Nbits*2-1:0] coeff;
     output[Nbits*2-1:0] result;
      
+    
+     
     assign result[Nbits*2-1:Nbits] = muestra[0]*coeff[0]-muestra[1]*coeff[1]; 
     assign result[Nbits-1:0] = muestra[0]*coeff[1]+muestra[1]*coeff[0];
     

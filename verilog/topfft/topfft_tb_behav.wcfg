@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="33752000fs"></ZoomStartTime>
-      <ZoomEndTime time="111202001fs"></ZoomEndTime>
-      <Cursor1Time time="63000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="135804472fs"></ZoomEndTime>
+      <Cursor1Time time="62000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="181"></NameColumnWidth>
-      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+      <ValueColumnWidth column_width="106"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="35" />
+   <WVObjectSize size="23" />
    <wvobject fp_name="/topfft_tb/Nbits" type="array">
       <obj_property name="ElementShortName">Nbits[31:0]</obj_property>
       <obj_property name="ObjectShortName">Nbits[31:0]</obj_property>
@@ -70,70 +70,6 @@
       <obj_property name="label">Blq_BFI</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="group723" type="group">
-      <obj_property name="label">Registro1_Down</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DA/D" type="array">
-         <obj_property name="ElementShortName">D[3:0]</obj_property>
-         <obj_property name="ObjectShortName">D[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DA/connect_wire" type="array">
-         <obj_property name="ElementShortName">connect_wire[0:4][3:0]</obj_property>
-         <obj_property name="ObjectShortName">connect_wire[0:4][3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DA/Q" type="array">
-         <obj_property name="ElementShortName">Q[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group725" type="group">
-      <obj_property name="label">sw1</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/ctrl" type="logic">
-         <obj_property name="ElementShortName">ctrl</obj_property>
-         <obj_property name="ObjectShortName">ctrl</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/swIn_up" type="array">
-         <obj_property name="ElementShortName">swIn_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swIn_up[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/swIn_down" type="array">
-         <obj_property name="ElementShortName">swIn_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swIn_down[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/swOut_up" type="array">
-         <obj_property name="ElementShortName">swOut_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swOut_up[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/sw0/swOut_down" type="array">
-         <obj_property name="ElementShortName">swOut_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swOut_down[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group724" type="group">
-      <obj_property name="label">Registro1_up</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DB/D" type="array">
-         <obj_property name="ElementShortName">D[3:0]</obj_property>
-         <obj_property name="ObjectShortName">D[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DB/connect_wire" type="array">
-         <obj_property name="ElementShortName">connect_wire[0:4][3:0]</obj_property>
-         <obj_property name="ObjectShortName">connect_wire[0:4][3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFI/DB/Q" type="array">
-         <obj_property name="ElementShortName">Q[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
-      </wvobject>
-   </wvobject>
    <wvobject fp_name="group737" type="group">
       <obj_property name="label">BFI</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -159,10 +95,9 @@
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group1203" type="group">
-      <obj_property name="label">mult_w0</obj_property>
+   <wvobject fp_name="group2945" type="group">
+      <obj_property name="label">Mult_w0</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/M0/muestra" type="array">
          <obj_property name="ElementShortName">muestra[3:0]</obj_property>
          <obj_property name="ObjectShortName">muestra[3:0]</obj_property>
@@ -179,72 +114,6 @@
    <wvobject type="divider" fp_name="divider577">
       <obj_property name="label">Blq_BFII</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject fp_name="group601" type="group">
-      <obj_property name="label">Registro2_Down</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/DA/D" type="array">
-         <obj_property name="ElementShortName">D[3:0]</obj_property>
-         <obj_property name="ObjectShortName">D[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/DA/connect_wire" type="array">
-         <obj_property name="ElementShortName">connect_wire[0:2][3:0]</obj_property>
-         <obj_property name="ObjectShortName">connect_wire[0:2][3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/DA/Q" type="array">
-         <obj_property name="ElementShortName">Q[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group611" type="group">
-      <obj_property name="label">sw2</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/sw0/ctrl" type="logic">
-         <obj_property name="ElementShortName">ctrl</obj_property>
-         <obj_property name="ObjectShortName">ctrl</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/sw0/swIn_up" type="array">
-         <obj_property name="ElementShortName">swIn_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swIn_up[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/sw0/swIn_down" type="array">
-         <obj_property name="ElementShortName">swIn_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swIn_down[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/sw0/swOut_up" type="array">
-         <obj_property name="ElementShortName">swOut_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swOut_up[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/sw0/swOut_down" type="array">
-         <obj_property name="ElementShortName">swOut_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swOut_down[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group620" type="group">
-      <obj_property name="label">Registro2_Up</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/DB/D" type="array">
-         <obj_property name="ElementShortName">D[3:0]</obj_property>
-         <obj_property name="ObjectShortName">D[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/DB/connect_wire" type="array">
-         <obj_property name="ElementShortName">connect_wire[0:2][3:0]</obj_property>
-         <obj_property name="ObjectShortName">connect_wire[0:2][3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII/DB/Q" type="array">
-         <obj_property name="ElementShortName">Q[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject fp_name="group718" type="group">
       <obj_property name="label">BFII</obj_property>
@@ -274,6 +143,10 @@
    <wvobject fp_name="group659" type="group">
       <obj_property name="label">Mult_w1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Mcoeff1/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M1/muestra" type="array">
          <obj_property name="ElementShortName">muestra[3:0]</obj_property>
          <obj_property name="ObjectShortName">muestra[3:0]</obj_property>
@@ -307,65 +180,10 @@
       <obj_property name="label">Blq_BFIII</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="group669" type="group">
-      <obj_property name="label">Registro3_Down</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/DA/D" type="array">
-         <obj_property name="ElementShortName">D[3:0]</obj_property>
-         <obj_property name="ObjectShortName">D[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/DA/connect_wire" type="array">
-         <obj_property name="ElementShortName">connect_wire[0:1][3:0]</obj_property>
-         <obj_property name="ObjectShortName">connect_wire[0:1][3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/DA/Q" type="array">
-         <obj_property name="ElementShortName">Q[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group672" type="group">
-      <obj_property name="label">sw3</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/sw0/swIn_up" type="array">
-         <obj_property name="ElementShortName">swIn_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swIn_up[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/sw0/swIn_down" type="array">
-         <obj_property name="ElementShortName">swIn_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swIn_down[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/sw0/swOut_up" type="array">
-         <obj_property name="ElementShortName">swOut_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swOut_up[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/sw0/swOut_down" type="array">
-         <obj_property name="ElementShortName">swOut_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swOut_down[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/sw0/ctrl" type="logic">
-         <obj_property name="ElementShortName">ctrl</obj_property>
-         <obj_property name="ObjectShortName">ctrl</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group669" type="group">
-      <obj_property name="label">Registro3_Up</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/DB/D" type="array">
-         <obj_property name="ElementShortName">D[3:0]</obj_property>
-         <obj_property name="ObjectShortName">D[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/DB/connect_wire" type="array">
-         <obj_property name="ElementShortName">connect_wire[0:1][3:0]</obj_property>
-         <obj_property name="ObjectShortName">connect_wire[0:1][3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/DB/Q" type="array">
-         <obj_property name="ElementShortName">Q[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
-      </wvobject>
-   </wvobject>
    <wvobject fp_name="group713" type="group">
       <obj_property name="label">BFIII</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/I/BFIn_up" type="array">
          <obj_property name="ElementShortName">BFIn_up[3:0]</obj_property>
          <obj_property name="ObjectShortName">BFIn_up[3:0]</obj_property>
@@ -419,65 +237,10 @@
       <obj_property name="label">Blq_BFIV</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="group694" type="group">
-      <obj_property name="label">Registro4_Down</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/DA/D" type="array">
-         <obj_property name="ElementShortName">D[3:0]</obj_property>
-         <obj_property name="ObjectShortName">D[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/DA/connect_wire" type="array">
-         <obj_property name="ElementShortName">connect_wire[0:4][3:0]</obj_property>
-         <obj_property name="ObjectShortName">connect_wire[0:4][3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/DA/Q" type="array">
-         <obj_property name="ElementShortName">Q[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group696" type="group">
-      <obj_property name="label">sw4</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/sw0/ctrl" type="logic">
-         <obj_property name="ElementShortName">ctrl</obj_property>
-         <obj_property name="ObjectShortName">ctrl</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/sw0/swIn_up" type="array">
-         <obj_property name="ElementShortName">swIn_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swIn_up[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/sw0/swIn_down" type="array">
-         <obj_property name="ElementShortName">swIn_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swIn_down[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/sw0/swOut_up" type="array">
-         <obj_property name="ElementShortName">swOut_up[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swOut_up[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/sw0/swOut_down" type="array">
-         <obj_property name="ElementShortName">swOut_down[3:0]</obj_property>
-         <obj_property name="ObjectShortName">swOut_down[3:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group695" type="group">
-      <obj_property name="label">Registro4_Up</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/DB/D" type="array">
-         <obj_property name="ElementShortName">D[3:0]</obj_property>
-         <obj_property name="ObjectShortName">D[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/DB/connect_wire" type="array">
-         <obj_property name="ElementShortName">connect_wire[0:4][3:0]</obj_property>
-         <obj_property name="ObjectShortName">connect_wire[0:4][3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/DB/Q" type="array">
-         <obj_property name="ElementShortName">Q[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
-      </wvobject>
-   </wvobject>
    <wvobject fp_name="group708" type="group">
       <obj_property name="label">BFIV</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/I/BFIn_up" type="array">
          <obj_property name="ElementShortName">BFIn_up[3:0]</obj_property>
          <obj_property name="ObjectShortName">BFIn_up[3:0]</obj_property>

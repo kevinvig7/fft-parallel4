@@ -89,12 +89,14 @@ end
 always @(posedge clk) begin
    if(rst_tb) begin
   rst  = 1'd1;
-  #50 rst  = 1'd0;
+  #20 rst  = 1'd0;
          end else if(!$feof(data_par))  begin
              scan_par = $fscanf(data_par, "%b\n", fftIn_up);
              end
              else begin
              fftIn_up={Nbits*2{1'bz}};
+              #25;
+              $finish;
              end
            //if ($feof(data_par)) begin
          // fftIn_up={Nbits*2{1'bz}};
@@ -109,13 +111,14 @@ always @(posedge clk) begin
 always @(posedge clk) begin
 
   if(rst_tb) begin
-  #50;
+  #20;
    end else if(!$feof(data_impar)) begin
         
     scan_impar = $fscanf(data_impar, "%b\n", fftIn_down);
     end
     else begin
     fftIn_down={Nbits*2{1'bz}};
+     #25;
     end
       end
 

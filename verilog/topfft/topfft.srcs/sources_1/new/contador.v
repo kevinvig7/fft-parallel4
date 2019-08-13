@@ -30,21 +30,18 @@ parameter N=1;
 reg [22:0] count;
 
 always @(posedge clk_in) begin
- if (rst) begin
+ if (!rst) begin
      count=N-1;
      clk_out=1;
-     end
-  else if (clk_in) begin
-  if (count==(N-1)) begin
+     end else if (count==(N-1)) begin
       clk_out=~clk_out;
       count=0;
       end
-  else  begin
-    count = count + 1;
-        end
-    end
-    
+      else  begin
+      count = count + 1;
+      end
 end
+    
 
 endmodule
 
