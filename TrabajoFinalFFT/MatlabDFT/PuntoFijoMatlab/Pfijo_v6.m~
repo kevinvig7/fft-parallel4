@@ -1,0 +1,73 @@
+%% Set Fixed-Point Math Attributes
+clear; clc; close all;
+
+%% PROGRAMA
+y = sum(5, 1);
+
+%% FP
+round(3.56); % 4
+round(-1.9); % -2
+round(-1.5); % -2
+
+format short g
+fi(3.613,1,7,4);  % 3.625   % 011.1010
+fi(3.613,1,10,7); % 3.6094  % 011.1001110 
+fi(3.613,1,15,12) % 3.613   % 011.100111001111 = 14799 = 14799*2^(-12) = 3.623
+% Valor en Binario: bin(variable_fixed)
+% Valor en Decimal: dec(variable_fixed)
+
+%% Diferentes metodos de trabajo
+%% In both methods: real_value = Integer_Value*2^(-Fractional_length)
+
+%%% A = 3.013, (W,f) = (8,3)
+%%% Method 1:
+fi(3.013,1,8,3);  % 3 = 00011.000   
+%%% Method 2:
+a = 3.013*2^(+3); % 24.104
+b = round(b);     % 24
+c = dec2bin(b);   % 11000 --> 00011.000 
+
+%%% A = -9.0514, (W,f) = (14,3)
+%%% Method 1:
+fi(3.013,1,8,3);  % 3 = 00011.000   
+%%% Method 2:
+a = 3.013*2^(+3); % 24.104
+b = round(b);     % 24
+c = dec2bin(b);   % 11000 --> 00011.000 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% Funciones
+function y = sum(a, b)
+% Si no usas los argumentos d ela funcion, agregas
+% y = sum(~, ~)
+
+% Fuerza a los argumentos a tomar nuevos valores
+% a = 1; 
+% b = 1;
+
+% suma
+y = a+b;
+
+end

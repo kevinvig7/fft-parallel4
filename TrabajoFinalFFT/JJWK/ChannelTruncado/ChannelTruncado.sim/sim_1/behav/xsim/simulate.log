@@ -1,0 +1,3 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 580 ns : File "/home/dani6rg/Documentos/ProyectosXILINX/ChannelModelHardware/ChannelTruncado/tb_ChannelTruncado.v" Line 53
