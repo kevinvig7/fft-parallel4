@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Aug 15 15:59:01 2019
+# Process ID: 13776
+# Current directory: C:/fft-parallel4/verilog/topfft/topfft.runs/synth_1
+# Command line: vivado.exe -log topfft.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source topfft.tcl
+# Log file: C:/fft-parallel4/verilog/topfft/topfft.runs/synth_1/topfft.vds
+# Journal file: C:/fft-parallel4/verilog/topfft/topfft.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source topfft.tcl -notrace

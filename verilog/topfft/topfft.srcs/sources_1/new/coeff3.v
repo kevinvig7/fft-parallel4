@@ -36,28 +36,28 @@ reg [22:0] index;
 
 wire [Nbits*N*2-1:0] coeff;
 
-coeff_data4 coefficientes(coeff);
+coeff_data4 
+   coefficientes
+        (.coeff_data(coeff));
 
-initial begin
-index=0;
-end
+//initial begin
+//index=0;
+//end
 
 always @(posedge clk) begin
         if (!rst) begin 
             coeff_out = {Nbits*2{1'b0}}; 
-            index<=0;
+            index=0;
             end
-        else if (clk) begin 
-             if (index==(N)) begin
-                index<=0;
-                coeff_out <=coeff[N*Nbits*2-1-:4];
+        else if (index>=(N)) begin
+                index=0;
+                  coeff_out =coeff[N*Nbits*2-1-:4];
             end
         else begin
-        coeff_out <=coeff[N*Nbits*2-1-index*Nbits*2-:4];
+        coeff_out=coeff[N*Nbits*2-1-index*Nbits*2-:4];
         index = index + 1;
             end
        end
-end
 
 
 

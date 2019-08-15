@@ -1,0 +1,558 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Aug 15 15:59:01 2019
+# Process ID: 13776
+# Current directory: C:/fft-parallel4/verilog/topfft/topfft.runs/synth_1
+# Command line: vivado.exe -log topfft.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source topfft.tcl
+# Log file: C:/fft-parallel4/verilog/topfft/topfft.runs/synth_1/topfft.vds
+# Journal file: C:/fft-parallel4/verilog/topfft/topfft.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source topfft.tcl -notrace
+Command: synth_design -top topfft -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5480 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 470.504 ; gain = 176.672
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'topfft' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'contador' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'contador' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22]
+INFO: [Synth 8-6157] synthesizing module 'contador__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized0' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22]
+INFO: [Synth 8-6157] synthesizing module 'contador__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized1' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22]
+INFO: [Synth 8-6157] synthesizing module 'topD_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24]
+	Parameter ND bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'D_reg_1' (2#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'topD_1' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24]
+	Parameter ND bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized0' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24]
+	Parameter ND bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized1' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24]
+INFO: [Synth 8-6157] synthesizing module 'coeff0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'coeff_data0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'coeff_data0' (4#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'coeff0' (5#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23]
+INFO: [Synth 8-6157] synthesizing module 'coeff1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'coeff_data1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'coeff_data1' (6#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'coeff1' (7#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23]
+INFO: [Synth 8-6157] synthesizing module 'coeff2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'coeff_data2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'coeff_data2' (8#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'coeff2' (9#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'coeff3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'coeff_data3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'coeff_data3' (10#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'coeff3' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23]
+INFO: [Synth 8-6157] synthesizing module 'coeff4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'coeff_data4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'coeff_data4' (12#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'coeff4' (13#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23]
+INFO: [Synth 8-6157] synthesizing module 'multip' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'multip' (14#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 4 - type: integer 
+	Parameter ND1 bound to: 4 - type: integer 
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24]
+	Parameter ND bound to: 4 - type: integer 
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'D_reg' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'topD' (16#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:44]
+INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'switch' (17#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24]
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BF' (18#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Blq' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 2 - type: integer 
+	Parameter ND1 bound to: 2 - type: integer 
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24]
+	Parameter ND bound to: 2 - type: integer 
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized0' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+	Parameter ND0 bound to: 1 - type: integer 
+	Parameter ND1 bound to: 1 - type: integer 
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'topD__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24]
+	Parameter ND bound to: 1 - type: integer 
+	Parameter Nbits bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized1' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized1' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'topfft' (20#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 534.461 ; gain = 240.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 534.461 ; gain = 240.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 534.461 ; gain = 240.629
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 534.461 ; gain = 240.629
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 9     
+	   2 Input      2 Bit       Adders := 8     
+	   3 Input      2 Bit       Adders := 8     
++---Registers : 
+	               23 Bit    Registers := 13    
+	                4 Bit    Registers := 27    
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 20    
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module contador 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module contador__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module contador__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+Module D_reg_1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module coeff0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module coeff1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module coeff2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module coeff3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module coeff4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module D_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module switch 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
+Module BF 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 2     
+	   3 Input      2 Bit       Adders := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'En_coeffw12/Dgen[0].nD/Q_reg' into 'En_coeffw0/Dgen[0].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw12/Dgen[1].nD/Q_reg' into 'En_coeffw0/Dgen[1].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw12/Dgen[2].nD/Q_reg' into 'En_coeffw0/Dgen[2].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw12/Dgen[3].nD/Q_reg' into 'En_coeffw0/Dgen[3].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw34/Dgen[0].nD/Q_reg' into 'En_coeffw0/Dgen[0].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw34/Dgen[1].nD/Q_reg' into 'En_coeffw0/Dgen[1].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw34/Dgen[2].nD/Q_reg' into 'En_coeffw0/Dgen[2].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw34/Dgen[3].nD/Q_reg' into 'En_coeffw0/Dgen[3].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw34/Dgen[4].nD/Q_reg' into 'En_coeffw12/Dgen[4].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'En_coeffw34/Dgen[5].nD/Q_reg' into 'En_coeffw12/Dgen[5].nD/Q_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:33]
+INFO: [Synth 8-4471] merging register 'Mcoeff1/index_reg[22:0]' into 'Mcoeff1/index_reg[22:0]' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:45]
+INFO: [Synth 8-4471] merging register 'Mcoeff2/index_reg[22:0]' into 'Mcoeff2/index_reg[22:0]' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:45]
+INFO: [Synth 8-4471] merging register 'Mcoeff3/index_reg[22:0]' into 'Mcoeff3/index_reg[22:0]' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:44]
+INFO: [Synth 8-4471] merging register 'Mcoeff4/index_reg[22:0]' into 'Mcoeff4/index_reg[22:0]' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:50]
+INFO: [Synth 8-4471] merging register 'Mcoeff0/index_reg[22:0]' into 'Mcoeff0/index_reg[22:0]' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:44]
+INFO: [Synth 8-3886] merging instance 'Mcoeff4/coeff_out_reg[2]' (FDRE) to 'Mcoeff4/coeff_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff4/coeff_out_reg[3]' (FDRE) to 'Mcoeff4/coeff_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff4/coeff_out_reg[0]' (FDRE) to 'Mcoeff4/coeff_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff0/coeff_out_reg[1]' (FDRE) to 'Mcoeff0/coeff_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff0/coeff_out_reg[3]' (FDRE) to 'Mcoeff0/coeff_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff0/coeff_out_reg[0]' (FDRE) to 'Mcoeff0/coeff_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff2/coeff_out_reg[1]' (FDRE) to 'Mcoeff2/coeff_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff2/coeff_out_reg[3]' (FDRE) to 'Mcoeff2/coeff_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff2/coeff_out_reg[0]' (FDRE) to 'Mcoeff2/coeff_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff3/coeff_out_reg[2]' (FDRE) to 'Mcoeff3/coeff_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff3/coeff_out_reg[3]' (FDRE) to 'Mcoeff3/coeff_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff1/coeff_out_reg[1]' (FDRE) to 'Mcoeff1/coeff_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff1/coeff_out_reg[3]' (FDRE) to 'Mcoeff1/coeff_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff3/coeff_out_reg[0]' (FDRE) to 'Mcoeff3/coeff_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Mcoeff1/coeff_out_reg[0]' (FDRE) to 'Mcoeff1/coeff_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DA/Dgen[0].nD/Q_reg[0]' (FDR) to 'Blq_BFIV/DA/Dgen[0].nD/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DA/Dgen[1].nD/Q_reg[0]' (FDR) to 'Blq_BFIV/DA/Dgen[1].nD/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DA/Dgen[2].nD/Q_reg[0]' (FDR) to 'Blq_BFIV/DA/Dgen[2].nD/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFII/DA/Dgen[0].nD/Q_reg[2]' (FDR) to 'Blq_BFII/DA/Dgen[0].nD/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DA/Dgen[3].nD/Q_reg[0]' (FDR) to 'Blq_BFIV/DA/Dgen[3].nD/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIII/DA/Dgen[0].nD/Q_reg[2]' (FDR) to 'Blq_BFIII/DA/Dgen[0].nD/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFII/DA/Dgen[1].nD/Q_reg[2]' (FDR) to 'Blq_BFII/DA/Dgen[1].nD/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DB/Dgen[0].nD/Q_reg[0]' (FDR) to 'Blq_BFIV/DB/Dgen[0].nD/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DB/Dgen[1].nD/Q_reg[0]' (FDR) to 'Blq_BFIV/DB/Dgen[1].nD/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DB/Dgen[2].nD/Q_reg[0]' (FDR) to 'Blq_BFIV/DB/Dgen[2].nD/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DB/Dgen[3].nD/Q_reg[0]' (FDR) to 'Blq_BFIV/DB/Dgen[3].nD/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Blq_BFIII/DB/Dgen[0].nD/Q_reg[2]' (FDR) to 'Blq_BFIII/DB/Dgen[0].nD/Q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Blq_BFIV/DA/Dgen[0].nD/Q_reg[2] )
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DA/Dgen[1].nD/Q_reg[2]' (FDR) to 'Blq_BFIV/DA/Dgen[0].nD/Q_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Blq_BFIV/DA/Dgen[0].nD/Q_reg[2] )
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DA/Dgen[2].nD/Q_reg[2]' (FDR) to 'Blq_BFIV/DA/Dgen[0].nD/Q_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Blq_BFIV/DA/Dgen[0].nD/Q_reg[2] )
+INFO: [Synth 8-3886] merging instance 'Blq_BFIV/DA/Dgen[3].nD/Q_reg[2]' (FDR) to 'Blq_BFIV/DA/Dgen[0].nD/Q_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Blq_BFIV/DA/Dgen[0].nD/Q_reg[2] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 676.121 ; gain = 382.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.914 ; gain = 387.082
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 681.094 ; gain = 387.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|topfft      | En_coeffw0/Dgen[3].nD/Q_reg     | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|topfft      | Blq_BFI/DA/Dgen[3].nD/Q_reg[3]  | 4      | 4     | YES          | NO                 | YES               | 4      | 0       | 
+|topfft      | Blq_BFI/DB/Dgen[3].nD/Q_reg[3]  | 4      | 4     | YES          | NO                 | YES               | 4      | 0       | 
+|topfft      | Blq_BFIV/DA/Dgen[3].nD/Q_reg[3] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|topfft      | Blq_BFIV/DB/Dgen[3].nD/Q_reg[3] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    48|
+|3     |LUT1   |     9|
+|4     |LUT2   |    94|
+|5     |LUT3   |   101|
+|6     |LUT4   |    23|
+|7     |LUT5   |    20|
+|8     |LUT6   |    37|
+|9     |SRL16E |    13|
+|10    |FDRE   |   237|
+|11    |FDSE   |     8|
+|12    |IBUF   |    10|
+|13    |OBUF   |     8|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+-------------------------+------+
+|      |Instance           |Module                   |Cells |
++------+-------------------+-------------------------+------+
+|1     |top                |                         |   609|
+|2     |  Blq_BFI          |Blq                      |    51|
+|3     |    DA             |topD_21                  |    21|
+|4     |      \Dgen[1].nD  |D_reg_26                 |     4|
+|5     |      \Dgen[2].nD  |D_reg_27                 |     4|
+|6     |      \Dgen[3].nD  |D_reg_28                 |     9|
+|7     |    DB             |topD_22                  |    30|
+|8     |      \Dgen[1].nD  |D_reg_23                 |     4|
+|9     |      \Dgen[2].nD  |D_reg_24                 |     4|
+|10    |      \Dgen[3].nD  |D_reg_25                 |    18|
+|11    |  Blq_BFII         |Blq__parameterized0      |    37|
+|12    |    DA             |topD__parameterized0     |    15|
+|13    |      \Dgen[0].nD  |D_reg_19                 |     3|
+|14    |      \Dgen[1].nD  |D_reg_20                 |    12|
+|15    |    DB             |topD__parameterized0_16  |    22|
+|16    |      \Dgen[0].nD  |D_reg_17                 |     4|
+|17    |      \Dgen[1].nD  |D_reg_18                 |    18|
+|18    |  Blq_BFIII        |Blq__parameterized1      |     8|
+|19    |    DA             |topD__parameterized1     |     3|
+|20    |      \Dgen[0].nD  |D_reg_15                 |     3|
+|21    |    DB             |topD__parameterized1_13  |     5|
+|22    |      \Dgen[0].nD  |D_reg_14                 |     5|
+|23    |  Blq_BFIV         |Blq_0                    |    19|
+|24    |    DA             |topD                     |     9|
+|25    |      \Dgen[1].nD  |D_reg_10                 |     2|
+|26    |      \Dgen[2].nD  |D_reg_11                 |     2|
+|27    |      \Dgen[3].nD  |D_reg_12                 |     3|
+|28    |    DB             |topD_7                   |    10|
+|29    |      \Dgen[1].nD  |D_reg                    |     2|
+|30    |      \Dgen[2].nD  |D_reg_8                  |     2|
+|31    |      \Dgen[3].nD  |D_reg_9                  |     4|
+|32    |  En_coeffw0       |topD_1                   |     8|
+|33    |    \Dgen[1].nD    |D_reg_1_4                |     1|
+|34    |    \Dgen[2].nD    |D_reg_1_5                |     1|
+|35    |    \Dgen[3].nD    |D_reg_1_6                |     2|
+|36    |  En_coeffw12      |topD_1__parameterized0   |     3|
+|37    |    \Dgen[4].nD    |D_reg_1_2                |     1|
+|38    |    \Dgen[5].nD    |D_reg_1_3                |     2|
+|39    |  En_coeffw34      |topD_1__parameterized1   |     2|
+|40    |    \Dgen[6].nD    |D_reg_1                  |     2|
+|41    |  Mcoeff0          |coeff0                   |    37|
+|42    |  Mcoeff1          |coeff1                   |    59|
+|43    |  Mcoeff2          |coeff2                   |    59|
+|44    |  Mcoeff3          |coeff3                   |    60|
+|45    |  Mcoeff4          |coeff4                   |    61|
+|46    |  control_1        |contador                 |    64|
+|47    |  control_2        |contador__parameterized0 |    60|
+|48    |  control_3        |contador__parameterized1 |     2|
+|49    |  control_4        |contador_1               |    60|
++------+-------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 681.094 ; gain = 387.262
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 791.156 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+116 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 791.156 ; gain = 497.324
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 791.156 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/fft-parallel4/verilog/topfft/topfft.runs/synth_1/topfft.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file topfft_utilization_synth.rpt -pb topfft_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 15 15:59:24 2019...

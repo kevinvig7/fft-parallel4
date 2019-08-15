@@ -21,20 +21,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module topD_1(
-    D,
-    Q,
-    rst,
-    clk
-    );
-  parameter   ND = 4;
-
-  
-    input D;
-    output Q;
-    input rst;
-    input clk;
-    
+module topD_1
+    #(parameter ND = 4)
+    (output Q,
+     input D,
+     input clk,
+     input rst);
     
     wire [0:ND] connect_wire;
     
@@ -44,8 +36,8 @@ module topD_1(
    genvar i;
    generate
       for (i=0; i < ND; i=i+1) begin:
-      Dgen D_reg_1 nD(connect_wire[i],connect_wire[i+1],rst,clk);
-     end
+      Dgen D_reg_1 nD(connect_wire[i+1],connect_wire[i],clk,rst);
+      end
    endgenerate
     
 endmodule

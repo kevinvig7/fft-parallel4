@@ -21,22 +21,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module D_reg(
-    D,
-    Q,
-    rst,
-    clk
-    );
-    
-parameter Nbits = 2;
+module D_reg
+    #(parameter Nbits = 2)
+    (output reg [Nbits*2-1:0] Q,
+     input [Nbits*2-1:0] D,
+     input clk,
+     input rst);
 
-    input [Nbits*2-1:0] D;
-    output reg [Nbits*2-1:0] Q;
-    input rst;
-    input clk;
+
     
 wire [Nbits-1:0] q[0:1];
-
 
 assign q[0] = D[Nbits*2-1:Nbits];
 assign q[1] = D[Nbits-1:0];

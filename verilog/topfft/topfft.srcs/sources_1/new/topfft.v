@@ -54,43 +54,162 @@ module topfft
 
   assign rstcont1 = !rst;
 
- contador#(4) control_1(clk,rstcont1,ctrl_1);
- contador#(2) control_2(clk,coeffw0_en,ctrl_2); 
- contador#(1) control_3(clk,coeffw12_en,ctrl_3); 
- contador#(4) control_4(clk,coeffw34_en,ctrl_4); 
+ contador#(4) 
+   control_1
+        (.clk_out(ctrl_1),
+         .clk(clk),
+         .rst(rstcont1));
+        
+contador#(2) 
+   control_2
+        (.clk_out(ctrl_2),
+         .clk(clk),
+         .rst(coeffw0_en));
+               
+contador#(1) 
+   control_3
+        (.clk_out(ctrl_3),
+         .clk(clk),
+         .rst(coeffw12_en));
+
+contador#(4) 
+   control_4
+        (.clk_out(ctrl_4),
+         .clk(clk),
+         .rst(coeffw34_en));
+
+ topD_1#(4)
+     En_coeffw0
+     (.Q(coeffw0_en),
+      .D(clk),
+      .clk(clk),
+      .rst(rst));
+      
+ topD_1#(6)
+     En_coeffw12
+     (.Q(coeffw12_en),
+      .D(clk),
+      .clk(clk),
+      .rst(rst));      
+      
+ topD_1#(7)
+     En_coeffw34
+     (.Q(coeffw34_en),
+      .D(clk),
+      .clk(clk),
+      .rst(rst));      
  
  
- topD_1#(4) Dcoeffw0(clk,coeffw0_en,rst,clk);
- topD_1#(6) Dcoeffw12(clk,coeffw12_en,rst,clk);
- topD_1#(7) Dcoeffw34(clk,coeffw34_en,rst,clk);
+ coeff0#(Nbits,N)
+      Mcoeff0
+     (.coeff_out(coefficientes0),
+      .clk(clk),
+      .rst(coeffw0_en));
+
+ coeff1#(Nbits,N)
+      Mcoeff1
+     (.coeff_out(coefficientes1),
+      .clk(clk),
+      .rst(coeffw12_en));
+      
+ coeff2#(Nbits,N)
+      Mcoeff2
+      (.coeff_out(coefficientes2),
+      .clk(clk),
+      .rst(coeffw12_en));
+      
+ coeff3#(Nbits,N) 
+      Mcoeff3
+      (.coeff_out(coefficientes3),
+      .clk(clk),
+      .rst(coeffw34_en));
+      
+ coeff4#(Nbits,N) 
+      Mcoeff4
+      (.coeff_out(coefficientes4),
+      .clk(clk),
+      .rst(coeffw34_en));
  
- coeff0#(Nbits,N)  Mcoeff0(coefficientes0,clk,coeffw0_en);
- coeff1#(Nbits,N)  Mcoeff1(coefficientes1,clk,coeffw12_en);
- coeff2#(Nbits,N)  Mcoeff2(coefficientes2,clk,coeffw12_en);
- coeff3#(Nbits,N)  Mcoeff3(coefficientes3,clk,coeffw34_en);
- coeff4#(Nbits,N)  Mcoeff4(coefficientes4,clk,coeffw34_en);
- 
-  assign blq_connect_up[2] = blq_connect_up[1]; 
- 
- 
- //producto 0
- multip#(Nbits) M0(blq_connect_down[1],coefficientes0,blq_connect_down[2]);
   
-  
- //producto 1 2
- multip#(Nbits) M1(blq_connect_up[3],coefficientes1,blq_connect_up[4]);
- multip#(Nbits) M2(blq_connect_down[3],coefficientes2,blq_connect_down[4]);
-  
-  
- //producto 3 4
- multip#(Nbits) M3(blq_connect_up[5],coefficientes3,blq_connect_up[6]);
- multip#(Nbits) M4(blq_connect_down[5],coefficientes4,blq_connect_down[6]);
+ //puente salida del primer BF
+ assign blq_connect_up[2] = blq_connect_up[1]; 
+
+//producto 0
+ multip#(Nbits)
+       M0
+       (.result(blq_connect_down[2]),
+        .muestra(blq_connect_down[1]),
+        .coeff(coefficientes0));
+      
+//producto 1 2
+ multip#(Nbits) 
+        M1
+        (.result(blq_connect_up[4]),
+         .muestra(blq_connect_up[3]),
+         .coeff(coefficientes1));
+        
+ multip#(Nbits) 
+        M2
+        (.result(blq_connect_down[4]),
+         .muestra(blq_connect_down[3]),
+         .coeff(coefficientes2));
+        
+//producto 3 4
+ multip#(Nbits) 
+        M3
+       (.result(blq_connect_up[6]),
+        .muestra(blq_connect_up[5]),
+        .coeff(coefficientes3));
+        
+ multip#(Nbits) 
+        M4
+        (.result(blq_connect_down[6]),
+        .muestra(blq_connect_down[5]),
+        .coeff(coefficientes4));
     
-  
-  Blq#(4,4,Nbits) Blq_BFI(blq_connect_up[0],blq_connect_down[0],blq_connect_up[1],blq_connect_down[1],rst,clk,ctrl_1);
-  Blq#(2,2,Nbits) Blq_BFII(blq_connect_up[2],blq_connect_down[2],blq_connect_up[3],blq_connect_down[3],rst,clk,ctrl_2);
-  Blq#(1,1,Nbits) Blq_BFIII(blq_connect_up[4],blq_connect_down[4],blq_connect_up[5],blq_connect_down[5],rst,clk,ctrl_3);   
-  Blq#(4,4,Nbits) Blq_BFIV(blq_connect_up[6],blq_connect_down[6],blq_connect_up[7],blq_connect_down[7],rst,clk,ctrl_4);   
+//Blq I
+Blq#(4,4,Nbits) 
+    Blq_BFI
+       (.BlqOut_up(blq_connect_up[1]),
+        .BlqOut_down(blq_connect_down[1]),
+        .BlqIn_up(blq_connect_up[0]),
+        .BlqIn_down(blq_connect_down[0]),
+        .clk(clk),
+        .rst(rst),
+        .ctrl(ctrl_1));  
+
+//Blq II
+Blq#(2,2,Nbits)
+     Blq_BFII
+      (.BlqOut_up(blq_connect_up[3]),
+       .BlqOut_down(blq_connect_down[3]),
+       .BlqIn_up(blq_connect_up[2]),
+       .BlqIn_down(blq_connect_down[2]),
+       .clk(clk),
+       .rst(rst),
+       .ctrl(ctrl_2)); 
+       
+//Blq III   
+Blq#(1,1,Nbits) 
+    Blq_BFIII
+    (.BlqOut_up(blq_connect_up[5]),
+     .BlqOut_down(blq_connect_down[5]),
+     .BlqIn_up(blq_connect_up[4]),
+     .BlqIn_down(blq_connect_down[4]),
+     .clk(clk),
+     .rst(rst),
+     .ctrl(ctrl_3));
+    
+//BlqIV
+Blq#(4,4,Nbits) 
+    Blq_BFIV
+   (.BlqOut_up(blq_connect_up[7]),
+    .BlqOut_down(blq_connect_down[7]),
+    .BlqIn_up(blq_connect_up[6]),
+    .BlqIn_down(blq_connect_down[6]),
+    .clk(clk),
+    .rst(rst),
+    .ctrl(ctrl_4));  
 
     
 endmodule

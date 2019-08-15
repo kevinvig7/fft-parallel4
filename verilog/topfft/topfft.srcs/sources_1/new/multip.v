@@ -20,25 +20,32 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module multip(
-    muestra,
-    coeff,
-    result
-    );
+module multip
+#(parameter Nbits=2)
+ (output[Nbits*2-1:0] result,
+  input [Nbits*2-1:0] muestra,
+  input [Nbits*2-1:0] coeff);
+
+
+    wire [Nbits-1:0] m_r;
+    wire [Nbits-1:0] m_i;
     
-    parameter Nbits=2;
-    input [Nbits*2-1:0] muestra;
-    input [Nbits*2-1:0] coeff;
-    output[Nbits*2-1:0] result;
-     
-    
-     
-    assign result[Nbits*2-1:Nbits] = muestra[0]*coeff[0]-muestra[1]*coeff[1]; 
-    assign result[Nbits-1:0] = muestra[0]*coeff[1]+muestra[1]*coeff[0];
+    wire [Nbits-1:0] c_r;
+    wire [Nbits-1:0] c_i;
     
     
+assign m_r = muestra[Nbits*2-1:Nbits]; //Real
+assign m_i = muestra[Nbits-1:0];        //Img
+    
+assign c_r = coeff[Nbits*2-1:Nbits]; //Real
+assign c_i = coeff[Nbits-1:0];        //Img
+        
     
     
+
+  assign result[Nbits*2-1:Nbits] = m_r*c_r-m_i*c_i;   //Real
+  assign result[Nbits-1:0] = m_r*c_i+m_i*c_r;         //Img
+ 
     
     
     

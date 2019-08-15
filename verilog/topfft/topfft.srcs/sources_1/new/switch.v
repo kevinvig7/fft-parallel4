@@ -21,44 +21,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module switch(
-   swIn_up,
-   swIn_down,
-   swOut_up,
-   swOut_down,
-   ctrl,
-   rst
-    );
-    
-    parameter Nbits=2;
-    
-    input [Nbits*2-1:0] swIn_up;
-    input [Nbits*2-1:0] swIn_down;
-    output [Nbits*2-1:0] swOut_up;
-    output [Nbits*2-1:0] swOut_down;
-    input ctrl;
-    input rst;
-    
-   reg [Nbits*2-1:0] out_up;
-   reg [Nbits*2-1:0] out_down;
-    
-    assign swOut_up=out_up;
-    assign swOut_down=out_down;        
-       
-       
+module switch
+    #(parameter Nbits=2)
+    (output reg [Nbits*2-1:0] swOut_up,
+     output reg [Nbits*2-1:0] swOut_down,
+     input [Nbits*2-1:0] swIn_up,
+     input [Nbits*2-1:0] swIn_down,
+     input ctrl,
+     input rst);
 
-     //assign out_up = ctrl? swIn_down : swIn_up;
-     //assign out_down = ctrl? swIn_up : swIn_down;
-    
     
 always @(*) begin
 if (rst) 
-out_up<={Nbits*2{1'b0}};
+swOut_up ={Nbits*2{1'b0}};
 else begin
    case (ctrl)
-     0 : out_up <= swIn_up;
-     1 : out_up <= swIn_down;
-     default : out_up ={Nbits*2{1'b0}};
+     0 : swOut_up = swIn_up;
+     1 : swOut_up = swIn_down;
+     default : swOut_up ={Nbits*2{1'b0}};
   endcase
   end
 end 
@@ -66,12 +46,12 @@ end
   
 always @(*) begin
 if (rst)
-out_down<={Nbits*2{1'b0}};
+swOut_down ={Nbits*2{1'b0}};
 else begin
   case (ctrl)
-     0 : out_down  <=swIn_down;
-     1 : out_down  <= swIn_up ;
-     default : out_down  <={Nbits*2{1'b0}};
+     0 : swOut_down  =swIn_down;
+     1 : swOut_down  = swIn_up ;
+     default : swOut_down ={Nbits*2{1'b0}};
   endcase
   end
 end

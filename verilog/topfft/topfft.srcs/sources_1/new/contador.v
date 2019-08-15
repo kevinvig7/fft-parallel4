@@ -19,17 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module contador(
-input clk_in,
-input rst,
-output reg clk_out
-);
+module contador
+    #( parameter N=1)
+     (output reg clk_out,
+      input clk,
+      input rst);
     
-parameter N=1;
-
 reg [22:0] count;
 
-always @(posedge clk_in) begin
+always @(posedge clk) begin
  if (!rst) begin
      count=N-1;
      clk_out=1;
@@ -46,29 +44,6 @@ end
 endmodule
 
 
-    
-//parameter frec_in=50_000_000;
-//parameter freq_out=1_000_000;
-//parameter max_count=frec_in/(2*freq_out);
-
-//reg [22:0] count;
-
-//initial begin
-//count =0;
-//clk_out=0;
-//end
-
-//always @(posedge clk_in) begin
-//  if (count==(max_count)) begin
-//      clk_out=~clk_out;
-//      count=0;
-//      end
-//  else  begin
-//    count = count + 1;
-//        end
-    
-    
-//end
     
 
     

@@ -22,23 +22,17 @@
 
 
 module D_reg_1(
-    D,
-    Q,
-    rst,
-    clk
+    output reg Q,
+    input D,
+    input clk,
+    input rst
     );
     
-    input D;
-    output reg Q;
-    input rst;
-    input clk;
-    
-
    always @(posedge clk) begin
      if (rst) begin
        Q <= 1'b0;
       end else begin
-         Q <= D;
+       Q <= D;
      end
  end
    
