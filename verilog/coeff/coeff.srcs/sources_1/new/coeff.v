@@ -64,15 +64,15 @@ end
 always @(posedge clk) begin
         if (rst) begin 
             coeff_out = {Nbits*2{1'b0}}; 
-            index<=0;
+            index=0;
             end
         else if (clk) begin 
              if (index==(N)) begin
-                index<=0;
-                coeff_out <=coeff[N*Nbits*2-1-:4];
+             coeff_out =coeff[N*Nbits*2-1-:4];
+             index=0;
             end
         else begin
-        coeff_out <=coeff[N*Nbits*2-1-index*Nbits*2-:4];
+        coeff_out =coeff[N*Nbits*2-1-index*Nbits*2-:4];
         index = index + 1;
             end
        end

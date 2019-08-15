@@ -51,7 +51,7 @@ always #1 clk = ~clk;
 //-- Proceso al inicio
 initial begin
     rst  = 1'd1;
-    #20 rst  = 1'd0;
+    #19 rst  = 1'd0;
   //-- Fichero donde almacenar los resultados
   $dumpfile("coeff_tb.vcd");
   $dumpvars(0, coeff_tb);
