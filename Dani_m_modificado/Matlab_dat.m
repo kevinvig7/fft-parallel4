@@ -24,6 +24,8 @@ for z=1:(length(xn_fx)/2)
 end
 fclose(fid);
 
+
+
 fid=fopen ('Entrada_imparFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 for z=1:(length(xn_fx)/2)
     fft_inImparr=real(xn_fx(2*z+1-1));
@@ -34,7 +36,7 @@ fclose(fid);
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%Salida%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 fid=fopen ('SalidaFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 for i=1:length(out_fx)
