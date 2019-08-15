@@ -1,0 +1,1084 @@
+/*
+
+Xilinx Vivado v2019.1.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2579722 on Sat Jun 29 11:35:40 MDT 2019
+
+Process ID (PID): 13972
+License: Customer
+
+Current time: 	Thu Aug 15 11:14:04 ART 2019
+Time zone: 	Argentina Standard Time (America/Buenos_Aires)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Available disk space: 87 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	SiliconPhotonic
+User home directory: C:/Users/Silicon Photonic
+User working directory: C:/fft-parallel4/verilog/topfft
+User country: 	AR
+User language: 	es
+User locale: 	es_AR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Silicon Photonic/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Silicon Photonic/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Silicon Photonic/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/fft-parallel4/verilog/topfft/vivado.log
+Vivado journal file location: 	C:/fft-parallel4/verilog/topfft/vivado.jou
+Engine tmp dir: 	C:/fft-parallel4/verilog/topfft/.Xil/Vivado-13972-Cacuy
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	461 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 771 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\fft-parallel4\verilog\topfft\topfft.xpr. Version: Vivado v2019.1.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/fft-parallel4/verilog/topfft/topfft.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/fft-parallel4/verilog/topfft/topfft.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 97 MB (+99540kb) [00:00:08]
+// [Engine Memory]: 760 MB (+645786kb) [00:00:08]
+// [GUI Memory]: 112 MB (+10075kb) [00:00:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  2465 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 771 MB. GUI used memory: 52 MB. Current time: 8/15/19, 11:14:05 AM ART
+// Project name: topfft; location: C:/fft-parallel4/verilog/topfft; part: xc7k70tfbv676-1
+dismissDialog("Open Project"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 4); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, topfft_tb (topfft_tb.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, topfft_tb (topfft_tb.v)]", 5, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, topfft_tb (topfft_tb.v)]", 5, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cl):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/fft-parallel4/verilog/topfft/topfft.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj topfft_tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/fft-parallel4/verilog/topfft/topfft.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto edd69ef434ce40f1b5d3062577901c53 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot topfft_tb_behav xil_defaultlib.topfft_tb xil_defaultlib.glbl -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Vivado Simulator 2019.1 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto edd69ef434ce40f1b5d3062577901c53 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot topfft_tb_behav xil_defaultlib.topfft_tb xil_defaultlib.glbl -log elaborate.log  Using 2 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/fft-parallel4/verilog/topfft/topfft.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "topfft_tb_behav -key {Behavioral:sim_1:Functional:topfft_tb} -tclbatch {topfft_tb.tcl} -view {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.1 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 771 MB. GUI used memory: 63 MB. Current time: 8/15/19, 11:14:25 AM ART
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// Tcl Message: source topfft_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: $finish called at time : 62 ns : File "C:/fft-parallel4/verilog/topfft/topfft.srcs/sim_1/new/topfft_tb.v" Line 99 
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 999.297 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'topfft_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 999.297 ; gain = 0.000 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e (cl)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft_tb_behav.wcfg", 1); // k (j, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 771 MB. GUI used memory: 63 MB. Current time: 8/15/19, 11:14:31 AM ART
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aH, cl)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 771 MB. GUI used memory: 63 MB. Current time: 8/15/19, 11:14:34 AM ART
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "topfft_tb_behav.wcfg"); // w
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // az
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// [GUI Memory]: 119 MB (+1251kb) [00:00:48]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, topfft (topfft.v)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, topfft (topfft.v)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aH, cl)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aH, cl)
+selectCodeEditor("topfft.v", 828, 288); // cl (w, cl)
+selectCodeEditor("topfft.v", 690, 503); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 101 seconds
+selectCodeEditor("topfft.v", 299, 425); // cl (w, cl)
+selectCodeEditor("topfft.v", 93, 248); // cl (w, cl)
+selectCodeEditor("topfft.v", 159, 249); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("topfft.v", 140, 254); // cl (w, cl)
+selectCodeEditor("topfft.v", 162, 492); // cl (w, cl)
+selectCodeEditor("topfft.v", 38, 264); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 4, 287); // cl (w, cl)
+selectCodeEditor("topfft.v", 71, 299); // cl (w, cl)
+selectCodeEditor("topfft.v", 151, 260); // cl (w, cl)
+selectCodeEditor("topfft.v", 121, 277); // cl (w, cl)
+selectCodeEditor("topfft.v", 183, 314); // cl (w, cl)
+selectCodeEditor("topfft.v", 2, 211); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("topfft.v", 178, 217); // cl (w, cl)
+selectCodeEditor("topfft.v", 174, 227); // cl (w, cl)
+selectCodeEditor("topfft.v", 163, 257); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 30 seconds
+selectCodeEditor("topfft.v", 249, 585); // cl (w, cl)
+selectCodeEditor("topfft.v", 109, 248); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 263, 608); // cl (w, cl)
+selectCodeEditor("topfft.v", 124, 263); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 255, 615); // cl (w, cl)
+selectCodeEditor("topfft.v", 339, 255); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 282, 657); // cl (w, cl)
+selectCodeEditor("topfft.v", 293, 279); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 110, 693); // cl (w, cl)
+selectCodeEditor("topfft.v", 112, 318); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 106, 701); // cl (w, cl)
+selectCodeEditor("topfft.v", 137, 332); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 62, 357); // cl (w, cl)
+selectCodeEditor("topfft.v", 77, 346); // cl (w, cl)
+selectCodeEditor("topfft.v", 120, 329); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("topfft.v", 43, 286); // cl (w, cl)
+selectCodeEditor("topfft.v", 40, 295); // cl (w, cl)
+selectCodeEditor("topfft.v", 41, 313); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("topfft.v", 162, 196); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft_tb.v", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft.v", 1); // k (j, cl)
+selectCodeEditor("topfft.v", 178, 333); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("topfft.v", 97, 198); // cl (w, cl)
+selectCodeEditor("topfft.v", 180, 209); // cl (w, cl)
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("topfft.v", 146, 323); // cl (w, cl)
+selectCodeEditor("topfft.v", 119, 397); // cl (w, cl)
+selectCodeEditor("topfft.v", 158, 287); // cl (w, cl)
+selectCodeEditor("topfft.v", 156, 281); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("topfft.v", 53, 300); // cl (w, cl)
+selectCodeEditor("topfft.v", 288, 196); // cl (w, cl)
+selectCodeEditor("topfft.v", 215, 132); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 42, 189); // cl (w, cl)
+selectCodeEditor("topfft.v", 40, 155); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 40 seconds
+selectCodeEditor("topfft.v", 247, 554); // cl (w, cl)
+selectCodeEditor("topfft.v", 84, 454); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+// [GUI Memory]: 125 MB (+264kb) [00:07:08]
+// by (cl):  Open Elaborated Design : addNotify
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7k70tfbv676-1 Top: topfft 
+// HMemoryUtils.trashcanNow. Engine heap size: 883 MB. GUI used memory: 60 MB. Current time: 8/15/19, 11:21:05 AM ART
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,239 MB. GUI used memory: 60 MB. Current time: 8/15/19, 11:21:17 AM ART
+// [Engine Memory]: 1,263 MB (+487159kb) [00:07:23]
+// [Engine Memory]: 1,345 MB (+19311kb) [00:07:24]
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: C:/Xilinx/Vivado/2019.1/data/parts/xilinx/kintex7/devint/kintex7/xc7k70t/xc7k70t.xgd; ZipEntry: xc7k70t_detail.xgd elapsed time: 0.6s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// [GUI Memory]: 143 MB (+12210kb) [00:07:27]
+// WARNING: HEventQueue.dispatchEvent() is taking  2763 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7k70tfbv676-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1198.270 ; gain = 174.504 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topfft' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'contador' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized0' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized1' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 4 - type: integer  	Parameter ND1 bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'D_reg' (2#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:58] INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:71] INFO: [Synth 8-6155] done synthesizing module 'switch' (4#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'BF' (5#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq' (6#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'D_reg_1' (7#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD_1' (8#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data0' (9#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff0' (10#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] INFO: [Synth 8-6157] synthesizing module 'multip' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'multip' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 2 - type: integer  	Parameter ND1 bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data1' (12#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff1' (13#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data2' (14#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff2' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 1 - type: integer  	Parameter ND1 bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data3' (16#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff3' (17#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data4' (18#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff4' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] INFO: [Synth 8-6155] done synthesizing module 'topfft' (20#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1263.172 ; gain = 239.406 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1263.172 ; gain = 239.406 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1263.172 ; gain = 239.406 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1380.059 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 1398.426 ; gain = 374.660 
+// Tcl Message: 63 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1398.426 ; gain = 399.129 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 19 seconds
+dismissDialog("Open Elaborated Design"); // by (cl)
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectCodeEditor("topfft.v", 252, 210); // cl (w, cl)
+selectCodeEditor("topfft.v", 145, 30); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cS, cl)
+// by (cl):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1398.426 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,405 MB. GUI used memory: 88 MB. Current time: 8/15/19, 11:21:50 AM ART
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,405 MB. GUI used memory: 65 MB. Current time: 8/15/19, 11:21:51 AM ART
+// Engine heap size: 1,405 MB. GUI used memory: 66 MB. Current time: 8/15/19, 11:21:51 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  1031 ms.
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topfft' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'contador' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized0' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized1' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 4 - type: integer  	Parameter ND1 bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'D_reg' (2#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:58] INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:71] INFO: [Synth 8-6155] done synthesizing module 'switch' (4#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'BF' (5#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq' (6#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'D_reg_1' (7#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD_1' (8#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data0' (9#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff0' (10#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] INFO: [Synth 8-6157] synthesizing module 'multip' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'multip' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 2 - type: integer  	Parameter ND1 bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data1' (12#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff1' (13#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data2' (14#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff2' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 1 - type: integer  	Parameter ND1 bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data3' (16#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff3' (17#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data4' (18#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff4' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] INFO: [Synth 8-6155] done synthesizing module 'topfft' (20#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1430.328 ; gain = 31.902 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1430.328 ; gain = 31.902 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1430.328 ; gain = 31.902 
+// Tcl Message: --------------------------------------------------------------------------------- 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,405 MB. GUI used memory: 64 MB. Current time: 8/15/19, 11:21:52 AM ART
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 1,413 MB (+1475kb) [00:07:59]
+// WARNING: HEventQueue.dispatchEvent() is taking  1695 ms.
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1464.309 ; gain = 65.883 
+dismissDialog("Reloading"); // by (cl)
+selectCodeEditor("topfft.v", 301, 216); // cl (w, cl)
+selectCodeEditor("topfft.v", 88, 342); // cl (w, cl)
+selectCodeEditor("topfft.v", 47, 327); // cl (w, cl)
+selectCodeEditor("topfft.v", 25, 351); // cl (w, cl)
+selectCodeEditor("topfft.v", 83, 363); // cl (w, cl)
+selectCodeEditor("topfft.v", 82, 256); // cl (w, cl)
+selectCodeEditor("topfft.v", 24, 258); // cl (w, cl)
+selectCodeEditor("topfft.v", 76, 249); // cl (w, cl)
+selectCodeEditor("topfft.v", 217, 312); // cl (w, cl)
+selectCodeEditor("topfft.v", 0, 309); // cl (w, cl)
+selectCodeEditor("topfft.v", 82, 184); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cS, cl)
+// by (cl):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,516 MB. GUI used memory: 89 MB. Current time: 8/15/19, 11:22:25 AM ART
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1559.945 ; gain = 46.398 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// [Engine Memory]: 1,516 MB (+33335kb) [00:08:31]
+// Engine heap size: 1,516 MB. GUI used memory: 66 MB. Current time: 8/15/19, 11:22:26 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,516 MB. GUI used memory: 66 MB. Current time: 8/15/19, 11:22:26 AM ART
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topfft' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'contador' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized0' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized1' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 4 - type: integer  	Parameter ND1 bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'D_reg' (2#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:58] INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:71] INFO: [Synth 8-6155] done synthesizing module 'switch' (4#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'BF' (5#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq' (6#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'D_reg_1' (7#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD_1' (8#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data0' (9#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff0' (10#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] INFO: [Synth 8-6157] synthesizing module 'multip' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'multip' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 2 - type: integer  	Parameter ND1 bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data1' (12#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff1' (13#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data2' (14#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff2' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 1 - type: integer  	Parameter ND1 bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data3' (16#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff3' (17#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data4' (18#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff4' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] INFO: [Synth 8-6155] done synthesizing module 'topfft' (20#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1566.918 ; gain = 53.371 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1566.918 ; gain = 53.371 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1566.918 ; gain = 53.371 
+// Tcl Message: --------------------------------------------------------------------------------- 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,516 MB. GUI used memory: 65 MB. Current time: 8/15/19, 11:22:28 AM ART
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  1774 ms.
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1566.918 ; gain = 53.445 
+dismissDialog("Reloading"); // by (cl)
+selectCodeEditor("topfft.v", 254, 336); // cl (w, cl)
+// Elapsed time: 25 seconds
+selectCodeEditor("topfft.v", 36, 284); // cl (w, cl)
+selectCodeEditor("topfft.v", 2, 265); // cl (w, cl)
+selectCodeEditor("topfft.v", 93, 330); // cl (w, cl)
+selectCodeEditor("topfft.v", 73, 233); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cS, cl)
+// by (cl):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1566.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 1,516 MB. GUI used memory: 68 MB. Current time: 8/15/19, 11:23:11 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,516 MB. GUI used memory: 67 MB. Current time: 8/15/19, 11:23:11 AM ART
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topfft' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'contador' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized0' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized1' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 4 - type: integer  	Parameter ND1 bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'D_reg' (2#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:58] INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:71] INFO: [Synth 8-6155] done synthesizing module 'switch' (4#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'BF' (5#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq' (6#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'D_reg_1' (7#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD_1' (8#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data0' (9#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff0' (10#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] INFO: [Synth 8-6157] synthesizing module 'multip' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'multip' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 2 - type: integer  	Parameter ND1 bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized0' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data1' (12#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff1' (13#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data2' (14#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff2' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 1 - type: integer  	Parameter ND1 bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized1' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data3' (16#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff3' (17#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data4' (18#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff4' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] INFO: [Synth 8-6155] done synthesizing module 'topfft' (20#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1566.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1566.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1566.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,516 MB. GUI used memory: 66 MB. Current time: 8/15/19, 11:23:12 AM ART
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  1658 ms.
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1566.918 ; gain = 0.000 
+dismissDialog("Reloading"); // by (cl)
+// Elapsed time: 32 seconds
+selectCodeEditor("topfft.v", 292, 238); // cl (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("topfft.v", 11, 251); // cl (w, cl)
+selectCodeEditor("topfft.v", 514, 190); // cl (w, cl)
+selectCodeEditor("topfft.v", 347, 332); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'c'); // cl (w, cl)
+selectCodeEditor("topfft.v", 200, 265); // cl (w, cl)
+selectCodeEditor("topfft.v", 343, 368); // cl (w, cl)
+selectCodeEditor("topfft.v", 227, 372); // cl (w, cl)
+selectCodeEditor("topfft.v", 368, 369); // cl (w, cl)
+selectCodeEditor("topfft.v", 29, 245); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 370, 353); // cl (w, cl)
+selectCodeEditor("topfft.v", 45, 267); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 17, 265); // cl (w, cl)
+selectCodeEditor("topfft.v", 385, 327); // cl (w, cl)
+selectCodeEditor("topfft.v", 15, 179); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 17, 180); // cl (w, cl)
+selectCodeEditor("topfft.v", 373, 178); // cl (w, cl)
+selectCodeEditor("topfft.v", 481, 370); // cl (w, cl)
+selectCodeEditor("topfft.v", 37, 205); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 499, 271); // cl (w, cl)
+selectCodeEditor("topfft.v", 16, 124); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 6, 140); // cl (w, cl)
+selectCodeEditor("topfft.v", 489, 420); // cl (w, cl)
+selectCodeEditor("topfft.v", 12, 106); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("topfft.v", 31, 128); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("topfft.v", 260, 282); // cl (w, cl)
+// [GUI Memory]: 150 MB (+216kb) [00:11:34]
+selectCodeEditor("topfft.v", 577, 102); // cl (w, cl)
+selectCodeEditor("topfft.v", 578, 127); // cl (w, cl)
+selectCodeEditor("topfft.v", 338, 312); // cl (w, cl)
+selectCodeEditor("topfft.v", 33, 108); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 538, 343); // cl (w, cl)
+selectCodeEditor("topfft.v", 404, 127); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 408, 158); // cl (w, cl)
+selectCodeEditor("topfft.v", 557, 264); // cl (w, cl)
+selectCodeEditor("topfft.v", 686, 190); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 434, 281); // cl (w, cl)
+selectCodeEditor("topfft.v", 419, 244); // cl (w, cl)
+selectCodeEditor("topfft.v", 72, 163); // cl (w, cl)
+selectCodeEditor("topfft.v", 160, 228); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'c'); // cl (w, cl)
+selectCodeEditor("topfft.v", 63, 160); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 138, 164); // cl (w, cl)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("topfft.v", 161, 205); // cl (w, cl)
+selectCodeEditor("topfft.v", 554, 259); // cl (w, cl)
+selectCodeEditor("topfft.v", 175, 260); // cl (w, cl)
+typeControlKey((HResource) null, "topfft.v", 'v'); // cl (w, cl)
+selectCodeEditor("topfft.v", 397, 289); // cl (w, cl)
+selectCodeEditor("topfft.v", 417, 318); // cl (w, cl)
+selectCodeEditor("topfft.v", 5, 279); // cl (w, cl)
+selectCodeEditor("topfft.v", 5, 346); // cl (w, cl)
+selectCodeEditor("topfft.v", 5, 358); // cl (w, cl)
+selectCodeEditor("topfft.v", 6, 349); // cl (w, cl)
+selectCodeEditor("topfft.v", 6, 383); // cl (w, cl)
+selectCodeEditor("topfft.v", 10, 281); // cl (w, cl)
+selectCodeEditor("topfft.v", 6, 295); // cl (w, cl)
+selectCodeEditor("topfft.v", 2, 314); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,519 MB. GUI used memory: 91 MB. Current time: 8/15/19, 11:26:40 AM ART
+selectCodeEditor("topfft.v", 113, 235); // cl (w, cl)
+selectCodeEditor("topfft.v", 27, 271); // cl (w, cl)
+selectCodeEditor("topfft.v", 13, 285); // cl (w, cl)
+selectCodeEditor("topfft.v", 20, 278); // cl (w, cl)
+selectCodeEditor("topfft.v", 30, 308); // cl (w, cl)
+selectCodeEditor("topfft.v", 30, 320); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cS, cl)
+// by (cl):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1566.918 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 1,557 MB. GUI used memory: 69 MB. Current time: 8/15/19, 11:27:14 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 68 MB. Current time: 8/15/19, 11:27:14 AM ART
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topfft' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'contador' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized0' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'contador__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] 
+// Tcl Message: 	Parameter N bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'contador__parameterized1' (1#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v:22] INFO: [Synth 8-6157] synthesizing module 'topD_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg_1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'D_reg_1' (2#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD_1' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized0' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'topD_1__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] 
+// Tcl Message: 	Parameter ND bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD_1__parameterized1' (3#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v:24] INFO: [Synth 8-6157] synthesizing module 'coeff0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data0' (4#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff0' (5#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data1' (6#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff1' (7#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data2' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data2' (8#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data2.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff2' (9#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data3' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data3' (10#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff3' (11#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v:23] INFO: [Synth 8-6157] synthesizing module 'coeff4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'coeff_data4' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  	Parameter N bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'coeff_data4' (12#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v:23] INFO: [Synth 8-6155] done synthesizing module 'coeff4' (13#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v:23] INFO: [Synth 8-6157] synthesizing module 'multip' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'multip' (14#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v:23] INFO: [Synth 8-6157] synthesizing module 'Blq' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 4 - type: integer  	Parameter ND1 bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 4 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'D_reg' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'D_reg' (15#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg.v:24] INFO: [Synth 8-6155] done synthesizing module 'topD' (16#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6157] synthesizing module 'switch' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:58] INFO: [Synth 8-226] default block is never used [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:71] INFO: [Synth 8-6155] done synthesizing module 'switch' (17#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v:24] INFO: [Synth 8-6157] synthesizing module 'BF' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] 
+// Tcl Message: 	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'BF' (18#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/BF.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 2 - type: integer  	Parameter ND1 bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized0' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 2 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized0' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized0' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6157] synthesizing module 'Blq__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] 
+// Tcl Message: 	Parameter ND0 bound to: 1 - type: integer  	Parameter ND1 bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'topD__parameterized1' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] 
+// Tcl Message: 	Parameter ND bound to: 1 - type: integer  	Parameter Nbits bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'topD__parameterized1' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v:24] INFO: [Synth 8-6155] done synthesizing module 'Blq__parameterized1' (19#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:24] INFO: [Synth 8-6155] done synthesizing module 'topfft' (20#1) [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:24] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.855 ; gain = 2.938 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1592.684 ; gain = 25.766 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1592.684 ; gain = 25.766 
+// Tcl Message: --------------------------------------------------------------------------------- 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 67 MB. Current time: 8/15/19, 11:27:16 AM ART
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  1944 ms.
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1609.648 ; gain = 42.730 
+dismissDialog("Reloading"); // by (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, topfft_tb (topfft_tb.v)]", 26, true); // B (F, cl) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, topfft_tb (topfft_tb.v), dut : topfft (topfft.v)]", 27); // B (F, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft_tb.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft.v", 1); // k (j, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, topfft (topfft.v)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, topfft_tb (topfft_tb.v)]", 26, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cl)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// by (cl):  Close : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (A, G)
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1609.648 ; gain = 0.000 
+// e (cl):  Run Simulation : addNotify
+dismissDialog("Close"); // by (cl)
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: "xvlog --incr --relax -prj topfft_tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/fft-parallel4/verilog/topfft/topfft.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto edd69ef434ce40f1b5d3062577901c53 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot topfft_tb_behav xil_defaultlib.topfft_tb xil_defaultlib.glbl -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Built simulation snapshot topfft_tb_behav 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/fft-parallel4/verilog/topfft/topfft.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "topfft_tb_behav -key {Behavioral:sim_1:Functional:topfft_tb} -tclbatch {topfft_tb.tcl} -view {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.1 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 97 MB. Current time: 8/15/19, 11:28:14 AM ART
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source topfft_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: $finish called at time : 62 ns : File "C:/fft-parallel4/verilog/topfft/topfft.srcs/sim_1/new/topfft_tb.v" Line 99 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'topfft_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1609.648 ; gain = 0.000 
+// 'd' command handler elapsed time: 19 seconds
+// Elapsed time: 11 seconds
+dismissDialog("Run Simulation"); // e (cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft_tb_behav.wcfg", 2); // k (j, cl)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aH, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 99 MB. Current time: 8/15/19, 11:28:18 AM ART
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 347, 752); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 99 MB. Current time: 8/15/19, 11:28:24 AM ART
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 99 MB. Current time: 8/15/19, 11:28:24 AM ART
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 99 MB. Current time: 8/15/19, 11:28:25 AM ART
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 98 MB. Current time: 8/15/19, 11:28:28 AM ART
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 12 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 439, 206); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 98 MB. Current time: 8/15/19, 11:28:36 AM ART
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 607, 199, true, false, false, false, false); // n (o, cl) - Shift Key
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 640, 200); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 98 MB. Current time: 8/15/19, 11:28:39 AM ART
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 598, 202); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 437, 207, true, false, false, false, false); // n (o, cl) - Shift Key
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 98 MB. Current time: 8/15/19, 11:28:41 AM ART
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 715, 282); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 855, 376); // n (o, cl)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 98 MB. Current time: 8/15/19, 11:28:43 AM ART
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 98 MB. Current time: 8/15/19, 11:28:45 AM ART
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft_tb.v", 0); // k (j, cl)
+selectCodeEditor("topfft_tb.v", 489, 276); // cl (w, cl)
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "topfft.v", 1); // k (j, cl)
