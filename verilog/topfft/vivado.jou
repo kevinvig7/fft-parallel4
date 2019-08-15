@@ -55,3 +55,51 @@ close_sim
 launch_simulation
 open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
 source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg}
+save_wave_config {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg}
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+save_wave_config {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
+source topfft_tb.tcl
+close_sim

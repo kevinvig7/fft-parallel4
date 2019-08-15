@@ -2,3 +2,6 @@ Running: xsim.dir/topfft_tb_behav/xsimk.exe -simmode gui -wdb topfft_tb_behav.wd
 Design successfully loaded
 Design Loading Memory Usage: 5352 KB (Peak: 5352 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 6208 KB (Peak: 6208 KB)
+Simulation CPU Usage: 30 ms
