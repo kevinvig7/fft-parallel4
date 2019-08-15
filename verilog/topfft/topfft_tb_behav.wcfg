@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="267600001fs"></ZoomEndTime>
-      <Cursor1Time time="12000000fs"></Cursor1Time>
+      <ZoomEndTime time="73795885fs"></ZoomEndTime>
+      <Cursor1Time time="31000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="181"></NameColumnWidth>
-      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="26" />
    <wvobject fp_name="/topfft_tb/Nbits" type="array">
       <obj_property name="ElementShortName">Nbits[31:0]</obj_property>
       <obj_property name="ObjectShortName">Nbits[31:0]</obj_property>
@@ -101,6 +101,11 @@
    <wvobject fp_name="group2945" type="group">
       <obj_property name="label">Mult_w0</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Mcoeff0/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M0/muestra" type="array">
          <obj_property name="ElementShortName">muestra[3:0]</obj_property>
          <obj_property name="ObjectShortName">muestra[3:0]</obj_property>
@@ -117,6 +122,14 @@
    <wvobject type="divider" fp_name="divider577">
       <obj_property name="label">Blq_BFII</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/control_1/count" type="array">
+      <obj_property name="ElementShortName">count[22:0]</obj_property>
+      <obj_property name="ObjectShortName">count[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/control_1/clk_out" type="logic">
+      <obj_property name="ElementShortName">clk_out</obj_property>
+      <obj_property name="ObjectShortName">clk_out</obj_property>
    </wvobject>
    <wvobject fp_name="group718" type="group">
       <obj_property name="label">BFII</obj_property>
@@ -164,6 +177,10 @@
       <obj_property name="label">Mult_w2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Mcoeff2/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M2/muestra" type="array">
          <obj_property name="ElementShortName">muestra[3:0]</obj_property>
          <obj_property name="ObjectShortName">muestra[3:0]</obj_property>
@@ -205,6 +222,11 @@
    <wvobject fp_name="group684" type="group">
       <obj_property name="label">Mult_w3</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Mcoeff3/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M3/muestra" type="array">
          <obj_property name="ElementShortName">muestra[3:0]</obj_property>
          <obj_property name="ObjectShortName">muestra[3:0]</obj_property>
@@ -221,6 +243,11 @@
    <wvobject fp_name="group685" type="group">
       <obj_property name="label">Mult_w4</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Mcoeff4/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M4/muestra" type="array">
          <obj_property name="ElementShortName">muestra[3:0]</obj_property>
          <obj_property name="ObjectShortName">muestra[3:0]</obj_property>
@@ -245,18 +272,22 @@
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/Butterfly/BFIn_up" type="array">
          <obj_property name="ElementShortName">BFIn_up[3:0]</obj_property>
          <obj_property name="ObjectShortName">BFIn_up[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/Butterfly/BFIn_down" type="array">
          <obj_property name="ElementShortName">BFIn_down[3:0]</obj_property>
          <obj_property name="ObjectShortName">BFIn_down[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/Butterfly/BFOut_up" type="array">
          <obj_property name="ElementShortName">BFOut_up[3:0]</obj_property>
          <obj_property name="ObjectShortName">BFOut_up[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/Butterfly/BFOut_down" type="array">
          <obj_property name="ElementShortName">BFOut_down[3:0]</obj_property>
          <obj_property name="ObjectShortName">BFOut_down[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

@@ -31,7 +31,7 @@ always @(posedge clk) begin
  if (!rst) begin
      count=N-1;
      clk_out=1;
-     end else if (count==(N-1)) begin
+     end else if (count >=(N-1)) begin
       clk_out=~clk_out;
       count=0;
       end

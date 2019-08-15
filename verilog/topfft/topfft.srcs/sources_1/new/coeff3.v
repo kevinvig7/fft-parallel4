@@ -51,14 +51,13 @@ always @(posedge clk) begin
             end
         else if (index>=(N)) begin
                 index=0;
-                  coeff_out =coeff[N*Nbits*2-1-:4];
+                coeff_out =coeff[N*Nbits*2-1-:4];
             end
         else begin
         coeff_out=coeff[N*Nbits*2-1-index*Nbits*2-:4];
         index = index + 1;
             end
        end
-
 
 
 
