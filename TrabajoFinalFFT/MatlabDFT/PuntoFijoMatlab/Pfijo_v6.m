@@ -66,23 +66,29 @@ e = fi(2.3,  1,7,2); % 2.25
 
 add = d+e;                  % 5.875 = '000101.111' S(9,3)
 adD = fi((2.3+3.613),1,9,3);% 5.875
+% Al realizar la suma y luego FixedPoint funciono directamente.
 
+%% Addition.3
+% a = -9.613;   (W,f) = (10,5); 
+% b = -3.421;   (W,f) = (8,5);
+d = fi(-9.613,1,10,5); % -9.625 
+e = fi(-3.421,1,8,5);  % -3.4063  
 
+add = d+e;             % -13.0313 = 110010.11111 S(11,5)
 
+%%% Norm Calculation
+b = fi(3.25+4.26i, 1, 8, 4); % 3.2500 + 4.2500i
+c = abs(b);                  % 5.3750 '0101.0110'
 
+%% Test
 
-
-
-
-
-
-
+    
 
 
 
 %% Funciones
 function y = sum(a, b)
-% Si no usas los argumentos d ela funcion, agregas
+% Si no usas los argumentos de la funcion, agregas
 % y = sum(~, ~)
 
 % Fuerza a los argumentos a tomar nuevos valores

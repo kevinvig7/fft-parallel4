@@ -44,6 +44,8 @@ FF.ff2 = struct('d',3, 'q',4)
 % Forma 2
 Z = struct( 'ff1',struct('d',5, 'q',5),  'ff2',struct('d',5, 'q',5) ) 
 
+% Repetir copias de array
+% devuelve una matriz que contiene n copias de A en las cotas de fila y columna.
 % Replicacion
 D.ff = struct('d',1, 'q',2)
 % Sigo utilizando un unico Campo 'ff', pero de 3 Columnas de datos, donde cada
