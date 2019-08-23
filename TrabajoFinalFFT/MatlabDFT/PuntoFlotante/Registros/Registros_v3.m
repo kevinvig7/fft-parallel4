@@ -1,7 +1,5 @@
 %% Registros v3
 clc; close all; clear;
-addpath('MisFunciones')
-
 
 % Numero de Latencia 
 numreg = 3;
