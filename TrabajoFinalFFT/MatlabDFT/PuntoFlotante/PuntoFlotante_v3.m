@@ -3,8 +3,7 @@ clc; close all; clear;
 addpath('MisFunciones')
 onPlot = 1;
 %% Muestras
-xn = ones(4,4);
-xn = [1,0,0,0; 0,0,0,0; 0,0,0,0; 0,0,0,0];
+%xn = ones(4,4);
 xn = [1,1,1,0;... 
       0,0,0,0;...
       1,1,1,0;... 
@@ -53,19 +52,19 @@ w7 = (exp(-2i*pi/N))^7;   % -0.9239 - 0.3827i
 
 %% Multiplicadores Line1
 % Stage1
-twiddle1_l1 = [1,1,1,1; w0,w2,w4,w6];
+twiddle1_l1 = [1,1,1,1;   1,1,-1i,-1i];
 % Stage2
-twiddle2_l1 = [1,1,1,1; w0,w4,w0,w4];
+twiddle2_l1 = [1,1,1,wn8; 1,-1i,1,w3n8];
 % Stage3
-twiddle3_l1 = [1,1,1,1; 1,1,1,1];
+twiddle3_l1 = [1,1,1,1;   1,1,1,1];
 
 %% Multiplicadores Line2
 % Stage1
-twiddle1_l2 = [1,1,1,1; w1,w3,w5,w7];
+twiddle1_l2 = [1,1,1,1;   1,1,-1i,-1i];
 % Stage2
-twiddle2_l2 = [1,1,1,1; w2,w6,w2,w6];
+twiddle2_l2 = [1,1,1,wn8; 1,-1i,1,w3n8];
 % Stage3
-twiddle3_l2 = [1,1,1,1; w4,w4,w4,w4];
+twiddle3_l2 = [1,w2,w1,w3;w4,w6,w5,w7];
 
 %% Delays Line1
 % Esta delcaracion es empleada para generar los parametros necesarios para las
