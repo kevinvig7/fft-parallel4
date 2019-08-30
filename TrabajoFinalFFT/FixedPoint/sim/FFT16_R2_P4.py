@@ -87,15 +87,11 @@ NB_tw = NBI_tw + NBF_tw
 
 N = 16 # cantidad de muestras totales a procesar
 
-in_vect = np.ones((N,2)) # Vector de entrada
-#in_vect[:8,0] = 1.
+in_vect = np.zeros((N*4,2)) # Vector de entrada
+in_vect[:N,0] = 1.
 
-out1=[]
-out2=[]
-out3=[]
-out4=[]
 
-out_vect = np.zeros((N,2)) # Vector de salida
+out_vect = np.zeros((N,2)) # Vector de salida ordenado
 
 
 # Twiddle factors
@@ -105,8 +101,8 @@ W_3 = [np.cos((3*2*np.pi)/16),-np.sin((3*2*np.pi)/16)]
 W_5 = [np.cos((5*2*np.pi)/16),-np.sin((5*2*np.pi)/16)]
 W_6 = [np.cos((6*2*np.pi)/16),-np.sin((6*2*np.pi)/16)]
 W_7 = [np.cos((7*2*np.pi)/16),-np.sin((7*2*np.pi)/16)]
-print W_3
-print W_2
+
+
 # Multiplicadores
 
 # Rama superior
@@ -181,7 +177,7 @@ stage30_ii_reg1 = {'d':np.zeros(2), 'q':np.zeros(2)}
 
 out_M_is_1_fx = 0
 
-for i in range(N//4):
+for i in range(len(in_vect)//4):
 
     ## Variables de control
 
@@ -293,9 +289,9 @@ for i in range(N//4):
     out1_bf4_i_fx = fx_to_flt_v(out1_bf4_i, NB_bf, NBF_bf, 'S', 'trunc', 'saturate')
     out2_bf4_i_fx = fx_to_flt_v(out2_bf4_i, NB_bf, NBF_bf, 'S', 'trunc', 'saturate')
 
+
     out3 = out1_bf4_i_fx
     out4 = out2_bf4_i_fx
-
 
     ## Actualizo registros
 
@@ -332,9 +328,36 @@ for i in range(N//4):
     stage30_ii_reg0['q'] = stage30_ii_reg0['d']
     stage30_ii_reg1['q'] = stage30_ii_reg1['d']
 
+    ## Ordeno muestas
+   # if i < 2:
+   #     out_vect[i*2]=out1
+   #     out_vect[i*2+8]=out2
+   #     out_vect[i*2+4]=out3
+   #     out_vect[i*2+12]=out4
+   # else:
+   #     out_vect[(i%2)*2+1]=out1
+   #    out_vect[(i%2)*2+9]=out2
+   #     out_vect[(i%2)*2+5]=out3
+   #     out_vect[(i%2)*2+13]=out4
+
     print out1
     print out2
     print out3
     print out4
 
-## Ordeno muestas
+
+plt.figure()
+plt.plot(out_vect[:,0],'o')
+plt.xlim(0,16)
+plt.grid(True)
+plt.legend()
+
+
+plt.figure()
+plt.plot(out_vect[:,1],'o')
+plt.xlim(0,16)
+plt.grid(True)
+plt.legend()
+plt.show()
+
+plt.show()
