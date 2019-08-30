@@ -12,7 +12,7 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="125500000001fs"></ZoomEndTime>
+      <ZoomEndTime time="35856574fs"></ZoomEndTime>
       <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
@@ -34,18 +34,18 @@
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fixtop/salida" type="array">
-      <obj_property name="ElementShortName">salida[1:0]</obj_property>
-      <obj_property name="ObjectShortName">salida[1:0]</obj_property>
+      <obj_property name="ElementShortName">salida[3:0]</obj_property>
+      <obj_property name="ObjectShortName">salida[3:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fixtop/dut/max_pos" type="array">
-      <obj_property name="ElementShortName">max_pos[1:0]</obj_property>
-      <obj_property name="ObjectShortName">max_pos[1:0]</obj_property>
+      <obj_property name="ElementShortName">max_pos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">max_pos[3:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fixtop/dut/max_neg" type="array">
-      <obj_property name="ElementShortName">max_neg[1:0]</obj_property>
-      <obj_property name="ObjectShortName">max_neg[1:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">max_neg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">max_neg[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>

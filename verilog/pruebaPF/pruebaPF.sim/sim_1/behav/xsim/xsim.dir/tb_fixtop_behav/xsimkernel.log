@@ -1,4 +1,4 @@
-Running: xsim.dir/tb_fixtop_behav/xsimk.exe -simmode gui -wdb tb_fixtop_behav.wdb -simrunnum 0 -socket 53685
+Running: xsim.dir/tb_fixtop_behav/xsimk.exe -simmode gui -wdb tb_fixtop_behav.wdb -simrunnum 0 -socket 53903
 Design successfully loaded
-Design Loading Memory Usage: 5228 KB (Peak: 5228 KB)
-Design Loading CPU Usage: 62 ms
+Design Loading Memory Usage: 5224 KB (Peak: 5224 KB)
+Design Loading CPU Usage: 0 ms

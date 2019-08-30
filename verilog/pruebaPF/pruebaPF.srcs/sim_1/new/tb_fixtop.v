@@ -22,8 +22,8 @@
 
 module tb_fixtop();
     
-  parameter NBITS=4;
-  parameter NBITS_OUT=3;
+  parameter NBITS=8;
+  parameter NBITS_OUT=4;
  // parameter  NB_FFE_OUT=2;
  // parameter  NBI_FFE_OUT=2;
     
@@ -49,23 +49,23 @@ module tb_fixtop();
          
   
     initial begin
-    #10 sum=4'b1000; 
-    #10 sum=4'b1001; 
-    #10 sum=4'b1010;
-    #10 sum=4'b1011;
-    #10 sum=4'b1100;
-    #10 sum=4'b1101;
-    #10 sum=4'b1110;
-    #10 sum=4'b1111;
+    #10 sum=8'b11111000; 
+    #10 sum=8'b0001001; 
+    #10 sum=8'b0001010;
+    #10 sum=8'b0001011;
+    #10 sum=8'b0001100;
+    #10 sum=8'b0001101;
+    #10 sum=8'b0001110;
+    #10 sum=8'b0001111;
     
-    #10 sum=4'b0000;
-    #10 sum=4'b0001;
-    #10 sum=4'b0010;
-    #10 sum=4'b0011;
-    #10 sum=4'b0100;
-    #10 sum=4'b0101;
-    #10 sum=4'b0110;
-    #10 sum=4'b0111;
+    #10 sum=8'b0000000;
+    #10 sum=8'b0000001;
+    #10 sum=8'b0000010;
+    #10 sum=8'b0000011;
+    #10 sum=8'b0000100;
+    #10 sum=8'b0000101;
+    #10 sum=8'b0000110;
+    #10 sum=8'b0000111;
    
     
     
