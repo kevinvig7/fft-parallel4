@@ -23,18 +23,18 @@
 
 module BF
     #(parameter Nbits = 2)
-    (output [Nbits*2-1:0] BFOut_up,
-     output [Nbits*2-1:0] BFOut_down,
+    (output [Nbits*2-1+1:0] BFOut_up,
+     output [Nbits*2-1+1:0] BFOut_down,
      input  [Nbits*2-1:0] BFIn_up,
      input  [Nbits*2-1:0] BFIn_down);
     
     
     //Separacion parte real e imaginaria 
-    wire [Nbits-1:0] q_up [0:1];
-    wire [Nbits-1:0] q_down [0:1];
+    wire signed [Nbits-1:0] q_up [0:1];
+    wire signed [Nbits-1:0] q_down [0:1];
     
-    wire [Nbits-1:0] sumOut_up [0:1];    //Salida de sumador
-    wire [Nbits-1:0] sumOut_down [0:1]; //Salida de sumador
+    wire signed [Nbits-1:0] sumOut_up [0:1];    //Salida de sumador
+    wire signed [Nbits-1:0] sumOut_down [0:1]; //Salida de sumador
     
     
 assign q_up[0] = BFIn_up[Nbits*2-1:Nbits]; //Real

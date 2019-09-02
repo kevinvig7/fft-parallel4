@@ -25,7 +25,7 @@ module topfft
      #(parameter NBITS = 8,
        parameter NBITSI = 6,
        parameter NBITSF = 2,
-       parameter N = 8) // Cantidad de  
+       parameter N = 8) // Cantidad de coeficientes en los multiplicadores
      (output [NBITS*2-1:0] fftOut_up,
       output [NBITS*2-1:0] fftOut_down,
       input  [NBITS*2-1:0] fftIn_up,
@@ -155,6 +155,11 @@ contador
        (.result(blq_connect_down[2]),
         .muestra(blq_connect_down[1]),
         .coeff(coefficientes0));
+        
+ /////Bloque de saturacion 0        
+ 
+ ///////////////////////////////
+        
       
 //producto 1 2
  multip
@@ -163,13 +168,26 @@ contador
         (.result(blq_connect_up[4]),
          .muestra(blq_connect_up[3]),
          .coeff(coefficientes1));
-        
+         
+ /////Bloque de saturacion 1        
+ 
+ ///////////////////////////////         
+         
  multip
  #(NBITS) 
         M2
         (.result(blq_connect_down[4]),
          .muestra(blq_connect_down[3]),
          .coeff(coefficientes2));
+        
+  /////Bloque de saturacion 0        
+ 
+ 
+ ///////////////////////////////       
+        
+        
+        
+        
         
 //producto 3 4
  multip
