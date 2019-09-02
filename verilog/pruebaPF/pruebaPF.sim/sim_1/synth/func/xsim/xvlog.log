@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/pruebaPF/pruebaPF.sim/sim_1/synth/func/xsim/tb_sum_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sat
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/pruebaPF/pruebaPF.srcs/sim_1/new/tb_sum.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sum
