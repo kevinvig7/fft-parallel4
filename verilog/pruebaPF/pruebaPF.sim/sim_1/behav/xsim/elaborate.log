@@ -1,13 +1,14 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 144fff327ad645088bda81066f1e568f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fixtop_behav xil_defaultlib.tb_fixtop xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 144fff327ad645088bda81066f1e568f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_mult_behav xil_defaultlib.tb_mult xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 16 for port 'mult_out' [C:/fft-parallel4/verilog/pruebaPF/pruebaPF.srcs/sim_1/new/tb_mult.v:44]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.sat(NBITS_IN=8,NBITS_OUT=4)
-Compiling module xil_defaultlib.tb_fixtop
+Compiling module xil_defaultlib.mult
+Compiling module xil_defaultlib.tb_mult
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_fixtop_behav
+Built simulation snapshot tb_mult_behav

@@ -32,20 +32,7 @@ module fixtop
         );
     
         
-    
-    //Saturacion y truncado
-    always@(*)
-    begin
-        if(|out_sum[NB_SUM-2:NBF_SUM+NB_FFE_OUT-1]==1'b1 && out_sum[NB_SUM-1]==1'b0) //|out ---bitwise -- hace un or de cada uno de los vectores con 1'b1
-            sum_sat = {1'b0,{NB_FFE_OUT-2{1'b1}}}; //Satura para arriba -- maximo positivo
-        
-        else if (&out_sum[NB_SUM-2:NBF_SUM+NB_FFE_OUT-1]==1'b0 && out_sum[NB_SUM-1]==1'b1) 
-            sum_sat = {1'b1,{NB_FFE_OUT-2{1'b0}}}; //Satura para abajo -- maximo negativo
-            else 
-            sum_sat = out_sum[NBF_SUM+NBI_FFE_OUT-1-:NB_FFE_OUT];
-    end
-        
-            
+
             
 
     

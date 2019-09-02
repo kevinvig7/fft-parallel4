@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"tb_sum_func_synth.v" \
+"../../../../../pruebaPF.srcs/sim_1/new/tb_sum.v" \
+
+# Do not sort compile order
+nosort

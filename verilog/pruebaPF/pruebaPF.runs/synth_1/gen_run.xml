@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1567187181">
-  <File Type="PA-TCL" Name="sat.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="sat_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="sat_reports.tcl"/>
-  <File Type="RDS-RDS" Name="sat.vds"/>
-  <File Type="RDS-UTIL" Name="sat_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="sat_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="sat.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="sat_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="sat_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1567434341">
+  <File Type="PA-TCL" Name="sum.tcl"/>
+  <File Type="REPORTS-TCL" Name="sum_reports.tcl"/>
+  <File Type="RDS-RDS" Name="sum.vds"/>
+  <File Type="RDS-DCP" Name="sum.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/sum.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/sat.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,7 +31,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="sat"/>
+      <Option Name="TopModule" Val="sum"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -44,9 +47,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
