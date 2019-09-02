@@ -21,17 +21,36 @@
 
 
 module fixtop
-#(parameter NBITS=5,
-  parameter NBITSF=4,  
-  parameter  NB_SUM=5,
-  parameter  NBF_SUM=4,
-  parameter  NB_FFE_OUT=7,
-  parameter  NBI_FFE_OUT=2)
-  (input  [NBITS+NBITSF-1:0] out_sum,
-   output reg [NB_FFE_OUT+NBI_FFE_OUT-1:0] sum_sat    
-        );
-    
-        
+#(parameter NBITS=8,
+  parameter NBITSI=6,
+  parameter NBITSF=2)
+ (output [(NBITS+1)-1:0] sat_out,
+  input signed [NBITS-1:0] inA,
+  input signed [NBITS-1:0] inB);
+  
+  
+  wire signed [(NBITS*2)-1:0] mult_out;
+  
+ mult
+ #(.NBITS(NBITS),
+  .NBITSI(NBITSI),
+  .NBITSF(NBITSF))
+   Multiplicador
+      (.mult_out(mult_out),
+       .mult_inA(inA),
+       .mult_inB(inB)); 
+       
+       
+       
+
+       
+
+
+
+
+
+
+
 
             
 
