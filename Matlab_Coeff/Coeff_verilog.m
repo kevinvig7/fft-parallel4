@@ -1,5 +1,5 @@
 NBITSverilog=8;
-NBITScoeff=1+1;
+NBITScoeff=NBITSverilog+1;
 NBITSF=2;
 N=8;
 
@@ -69,77 +69,98 @@ w3n8fi=imag(fxw3n8);
 %%%%%%%%%%%%%%%%%%%
 
 
+w0bin   =      [w0fr.bin w0fi.bin];
+wn1ibin =    [wn1ir.bin wn1ii.bin];
+w8bin   =    [wn8fr.bin wn8fi.bin];
+w3n8bin =  [w3n8fr.bin w3n8fi.bin];
+w2bin   =      [w2fr.bin w2fi.bin];
+w1bin   =      [w1fr.bin w1fi.bin];
+w3bin   =      [w3fr.bin w3fi.bin];
+w4bin   =      [w4fr.bin w4fi.bin];
+w6bin   =      [w6fr.bin w6fi.bin];
+w5bin   =      [w5fr.bin w5fi.bin];
+w7bin   =      [w7fr.bin w7fi.bin];
 
 
 
+
+
+
+coeff0=[w0bin;    w0bin; wn1ibin;  wn1ibin;  w0bin;    w0bin; wn1ibin;  wn1ibin];
+coeff1=[w0bin;    w8bin;   w0bin;    w0bin;  w0bin;    w8bin;   w0bin;    w0bin];
+coeff2=[w0bin; w3n8bin ;   w0bin;  wn1ibin;  w0bin;  w3n8bin;   w0bin;  wn1ibin];
+coeff3=[w0bin;    w0bin;   w0bin;    w0bin;  w0bin;    w2bin;   w1bin;    w3bin];
+coeff4=[w0bin;    w0bin;   w0bin;    w0bin;  w4bin;    w6bin;   w5bin;    w7bin];
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fid=fopen ('coeff_data0.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-index=0;
-fprintf( fid , ['coeff_data(' num2str(N*NBITScoeff*2-1-index*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-index*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' w0fr.bin w0fi.bin ';','\n']); 
-index=1;
-fprintf( fid , ['coeff_data(' num2str(N*NBITScoeff*2-1-index*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-index*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' w0fr.bin w0fi.bin ';','\n']);
-index=2;
-fprintf( fid , ['coeff_data(' num2str(N*NBITScoeff*2-1-index*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-index*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' wn1ir.bin wn1ii.bin ';','\n']);
-index=3;
-fprintf( fid , ['coeff_data(' num2str(N*NBITScoeff*2-1-index*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-index*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' wn1ir.bin wn1ii.bin  ';','\n']);
-index=4;
-fprintf( fid , ['coeff_data(' num2str(N*NBITScoeff*2-1-index*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-index*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' wn1ir.bin wn1ii.bin  ';','\n']);
-index=5;
-fprintf( fid , ['coeff_data(' num2str(N*NBITScoeff*2-1-index*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-index*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' w0fr.bin w0fi.bin   ';','\n']);
-index=6;
-fprintf( fid , ['coeff_data(' num2str(N*NBITScoeff*2-1-index*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-index*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' w0fr.bin w0fi.bin  ';','\n']);
-index=7;
-fprintf( fid , ['coeff_data(' num2str(N*NBITScoeff*2-1-index*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-index*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' wn1ir.bin wn1ii.bin ';','\n']);
+fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
+fprintf(fid,['module coeff_data0', '\n']);
+fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
+fprintf(fid,['  parameter N=',num2str(N),')\n']);
+fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
+fprintf(fid,['initial begin' , '\n']);
+for index=1 : N
+    fprintf( fid , ['coeff_data0(' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) '''b =' num2str(coeff0(index,:)) ';','\n']); 
+end
+fprintf(fid,['end ' , '\n']);
+fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
-
-
-
-
+%%%%%%%%%%%%%%%%%
 fid=fopen ('coeff_data1.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[wn8fr.bin wn8fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[wn8fr.bin wn8fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
+fprintf(fid,['module coeff_data1', '\n']);
+fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
+fprintf(fid,['  parameter N=',num2str(N),')\n']);
+fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
+fprintf(fid,['initial begin' , '\n']);
+for index=1 : N
+    fprintf( fid , ['coeff_data1(' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' num2str(coeff1(index,:)) ';','\n']); 
+end
+fprintf(fid,['end ' , '\n']);
+fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
-
+%%%%%%%%%%%%%%%%%
 fid=fopen ('coeff_data2.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w3n8fr.bin w3n8fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[wn1ir.bin wn1ii.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w3n8fr.bin w3n8fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[wn1ir.bin wn1ii.bin '\n']);
+fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
+fprintf(fid,['module coeff_data2', '\n']);
+fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
+fprintf(fid,['  parameter N=',num2str(N),')\n']);
+fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
+fprintf(fid,['initial begin' , '\n']);
+for index=1 : N
+    fprintf( fid , ['coeff_data1(' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' num2str(coeff2(index,:)) ';','\n']); 
+end
+fprintf(fid,['end ' , '\n']);
+fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
-
+%%%%%%%%%%%%%%%%%
 fid=fopen ('coeff_data3.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w2fr.bin w2fi.bin '\n']);
-fprintf(fid,[w1fr.bin w1fi.bin '\n']);
-fprintf(fid,[w3fr.bin w3fi.bin '\n']);
+fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
+fprintf(fid,['module coeff_data3', '\n']);
+fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
+fprintf(fid,['  parameter N=',num2str(N),')\n']);
+fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
+fprintf(fid,['initial begin' , '\n']);
+for index=1 : N
+    fprintf( fid , ['coeff_data1(' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' num2str(coeff3(index,:)) ';','\n']); 
+end
+fprintf(fid,['end ' , '\n']);
+fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
-
+%%%%%%%%%%%%%%%%%
 fid=fopen ('coeff_data4.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w4fr.bin w4fi.bin '\n']);
-fprintf(fid,[w6fr.bin w6fi.bin '\n']);
-fprintf(fid,[w5fr.bin w5fi.bin '\n']);
-fprintf(fid,[w7fr.bin w7fi.bin '\n']);
+fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
+fprintf(fid,['module coeff_data4', '\n']);
+fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
+fprintf(fid,['  parameter N=',num2str(N),')\n']);
+fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
+fprintf(fid,['initial begin' , '\n']);
+for index=1 : N
+    fprintf( fid , ['coeff_data1(' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) ') = ' num2str(NBITScoeff*2) ''' b =' num2str(coeff4(index,:)) ';','\n']); 
+end
+fprintf(fid,['end ' , '\n']);
+fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
