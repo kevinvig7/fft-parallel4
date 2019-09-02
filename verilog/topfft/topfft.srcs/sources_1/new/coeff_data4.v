@@ -1,57 +1,16 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 02.08.2019 16:50:35
-// Design Name: 
-// Module Name: coeff_data
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module coeff_data4
-#(parameter Nbits=2,
-  parameter N=8) 
- (output reg [Nbits*N*2-1:0] coeff_data);
- 
+#(parameter NBITS=9,
+  parameter N=8)
+(output reg [NBITS*N*2-1:0] coeff_data);
 initial begin
-coeff_data[31:28] =4'b1111; 
-coeff_data[27:24] =4'b0000;  
-coeff_data[23:20] =4'b1111; 
-coeff_data[19:16] =4'b0000;  
-coeff_data[15:12] =4'b1111; 
-coeff_data[11:8]  =4'b0000; 
-coeff_data[7:4]   =4'b1111; 
-coeff_data[3:0]   =4'b0000; 
-
+coeff_data4[143 : 126] = 18'b000000100000000000;
+coeff_data4[125 : 108] = 18'b000000100000000000;
+coeff_data4[107 : 90] = 18'b000000100000000000;
+coeff_data4[89 : 72] = 18'b000000100000000000;
+coeff_data4[71 : 54] = 18'b111111100000000000;
+coeff_data4[53 : 36] = 18'b000000000000000100;
+coeff_data4[35 : 18] = 18'b111111101000000011;
+coeff_data4[17 : 0] = 18'b000000011000000011;
 end 
-endmodule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+endmodule 
