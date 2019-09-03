@@ -7,10 +7,11 @@
 % Funcion valida para N = 64,128
 clc
 clear
-N = 128;
+N = 16;
 radix = 8;
 
 in = (1:N);
+%in =[1,9, 5,13, 3,11, 7,15,   2,10, 6,14, 4,12, 8,16]
 in_intermedio = (1:N);
 out = (1:N);
 
@@ -184,12 +185,4 @@ out32 = Dec( out2(end*1/4+1:end*1/2) );
 out33 = Dec( out2(end*1/2+1:end*3/4) );
 out34 = Dec( out2(end*3/4+1:end) );
 out3 = [out31, out32, out33, out34];
-
-
-
-
-
-
-
-
 

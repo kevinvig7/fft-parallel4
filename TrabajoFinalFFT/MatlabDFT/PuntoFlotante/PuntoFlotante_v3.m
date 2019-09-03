@@ -1,23 +1,21 @@
-%% Punto Flotante Paralelo4 - Radix8 - 16puntos
+%% Punto Flotante Paralelo4 - Radix8 - N:16puntos - Version Garrido
 clc; close all; clear;
 addpath('MisFunciones')
 onPlot = 1;
-%% Muestras
-%xn = ones(4,4);
-xn = [1,1,1,0;... 
-      0,0,0,0;...
-      1,1,1,0;... 
-      0,0,0,0];
 
-Line1 =  xn(1:2, 1:4); 
-Line2 =  xn(3:4, 1:4);
+%% Muestras
+xnIn = [ones(1,6), zeros(1,10)];
+xn = VecOrdMat(xnIn);
+
+Line1 =  xn(1:2, 1:end); 
+Line2 =  xn(3:4, 1:end);
 
 %% Completo muestras
-% datos_line1 en paralelo por cada LINE    
-paralelo = 2;  
 N = 16;
 % numero total de delays que existen en un LINE
 delay_line = 3;
+% datos_line1 en paralelo por cada LINE    
+paralelo = 2;  
 
 % Salida DFT Paralelo 4
 Xsalida = zeros(2*paralelo, 2*paralelo);
@@ -66,7 +64,7 @@ twiddle2_l2 = [1,1,1,wn8; 1,-1i,1,w3n8];
 % Stage3
 twiddle3_l2 = [1,w2,w1,w3;w4,w6,w5,w7];
 
-%% Delays Line1
+%% Latencias
 % Esta delcaracion es empleada para generar los parametros necesarios para las
 % funciones 'RegIn & RegUp' las cuales trabajan en conjunto para la simulacion
 % de registros:
@@ -87,6 +85,7 @@ D1.ff = struct('d',0, 'q',0);
 % replico FlipFlops
 Lat1D = repmat(D1, 1,numreg1D);
 
+%% Delays Line1
 % 2D1 Stage1
 InReg2D1 = InReg2D;
 Lat2D1   = Lat2D;
@@ -342,14 +341,14 @@ for clk = (0:length(datos_line1)-1)
 end
 
 %% Muestras de salida
-Xsalida = Xsalida( :,4:end);
+Xsalida = Xsalida( :,delay_line+1:end);
 % Convierto las muestras de DFT de Matriz a Vector
 Xvector = zeros(1,length(Xsalida)^2);
 for index = (1:length(Xsalida)^2)
     Xvector(index) = Xsalida(index);
 end
 
-% Alineo muestras del vector.
+% Ordenamiento de las muestras del vector.
 Xvector = Alineacion(Xvector);
 
 % Plot

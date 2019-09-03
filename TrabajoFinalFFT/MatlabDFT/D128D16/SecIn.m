@@ -4,7 +4,7 @@ clc;
 clear;
 close;
 
-N = 128;
+N = 16;
 in = (1:N);
 out = zeros(1, N);
 
@@ -19,3 +19,14 @@ end
 
 % salida
 out
+
+%% Ceacion de una Matriz 4xn
+datos = out-1;
+filas = 4;
+matriz = zeros(filas,floor(N/filas));
+
+for columnas = (1:length(matriz))
+    n1 = 1+4*(columnas-1);
+    n2 = 4+4*(columnas-1);
+    matriz(:,columnas) = datos(n1:n2);
+end
