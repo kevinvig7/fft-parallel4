@@ -3923,8 +3923,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35355339"
-     inkscape:cx="-533.45284"
-     inkscape:cy="1016.0233"
+     inkscape:cx="-792.58048"
+     inkscape:cy="967.61701"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -4079,12 +4079,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.24247022;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.24931113;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect22645"
-       width="822.46436"
-       height="149.69347"
-       x="-597.94666"
-       y="-84.67215"
+       width="826.77087"
+       height="157.43498"
+       x="-599.6463"
+       y="-87.656998"
        inkscape:export-xdpi="167"
        inkscape:export-ydpi="167" />
     <text
@@ -4098,16 +4098,6 @@
          x="-500.90445"
          y="125.89977"
          style="stroke-width:0.26458332" /></text>
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16159-0"
-       cx="-535.00262"
-       cy="-18.766045"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
     <rect
        y="-58.739765"
        x="-579.50562"
@@ -4257,16 +4247,6 @@
        d="m -546.96709,-18.761479 h 7.31245"
        id="path26527"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16159-0-7"
-       cx="-535.15576"
-       cy="48.682697"
-       rx="4.3339186"
-       ry="4.4614472"
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
@@ -4441,16 +4421,6 @@
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16159-0-9-5"
-       cx="-380.33752"
-       cy="-18.766052"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
     <rect
        y="-58.739769"
        x="-424.84055"
@@ -4506,26 +4476,6 @@
        height="50.353004"
        x="-424.95853"
        y="8.180625"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16291-1-1-7"
-       cx="-380.57941"
-       cy="48.918129"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       ry="4.4614472"
-       rx="4.3339186"
-       cy="18.55101"
-       cx="-380.57941"
-       id="ellipse16295-5-9-4"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
@@ -4796,26 +4746,6 @@
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16291-1-1-7-5"
-       cx="-261.41821"
-       cy="48.762535"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       ry="4.4614472"
-       rx="4.3339186"
-       cy="18.395414"
-       cx="-261.41821"
-       id="ellipse16295-5-9-4-8"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker24909-7-1-0-9)"
        d="m -317.52376,48.748091 h 11.00813"
@@ -4855,26 +4785,6 @@
        height="50.353008"
        x="-305.30545"
        y="-59.454132"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16291-1-1-7-2"
-       cx="-260.92633"
-       cy="-18.716627"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       ry="4.4614472"
-       rx="4.3339186"
-       cy="-49.083744"
-       cx="-260.92633"
-       id="ellipse16295-5-9-4-83"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
@@ -5298,132 +5208,6 @@
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-531.85333"
-       y="-24.333023"
-       id="text95986-1"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-5"
-         x="-531.85333"
-         y="-24.333023"
-         style="stroke-width:0.26458332">M1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-531.4505"
-       y="44.161594"
-       id="text95990-99"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95988-16"
-         x="-531.4505"
-         y="44.161594"
-         style="stroke-width:0.26458332">M2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-377.25107"
-       y="-24.335434"
-       id="text95986-4-2"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-1"
-         x="-377.25107"
-         y="-24.335434"
-         style="stroke-width:0.26458332">M3</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-377.31015"
-       y="12.916595"
-       id="text95986-4-0"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-5"
-         x="-377.31015"
-         y="12.916595"
-         style="stroke-width:0.26458332">M4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-377.23297"
-       y="44.09407"
-       id="text95986-4-3"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-2"
-         x="-377.23297"
-         y="44.09407"
-         style="stroke-width:0.26458332">M5</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-258.65811"
-       y="-24.333023"
-       id="text95986-4-2-3"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-1-3"
-         x="-258.65811"
-         y="-24.333023"
-         style="stroke-width:0.26458332">M7</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-258.71719"
-       y="12.914184"
-       id="text95986-4-0-1"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-5-5"
-         x="-258.71719"
-         y="12.914184"
-         style="stroke-width:0.26458332">M8</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-258.64001"
-       y="44.126625"
-       id="text95986-4-3-2"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-2-6"
-         x="-258.64001"
-         y="44.126625"
-         style="stroke-width:0.26458332">M9</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-257.22202"
-       y="-53.530693"
-       id="text95986-4-2-3-9"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-1-3-4"
-         x="-257.22202"
-         y="-53.530693"
-         style="stroke-width:0.26458332">M6</tspan></text>
     <flowRoot
        transform="matrix(0.26497177,0,0,0.26497177,-463.22842,198.70473)"
        style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -5514,17 +5298,7 @@
            width="42.201645"
            id="rect16251-3-9-3-1-1-2-02" /></flowRegion><flowPara
          id="flowPara16253-9-1-7-0-0-8-3"
-         style="font-size:13.75px;line-height:1.25">8D</flowPara></flowRoot>    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16159-0-9-5-2"
-       cx="-141.24954"
-       cy="-18.301666"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <rect
+         style="font-size:13.75px;line-height:1.25">8D</flowPara></flowRoot>    <rect
        y="-58.275383"
        x="-185.75256"
        height="50.353008"
@@ -5565,16 +5339,6 @@
        height="50.353008"
        x="-185.87054"
        y="8.6450157"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16291-1-1-7-0"
-       cx="-141.49142"
-       cy="49.382511"
-       rx="4.3339186"
-       ry="4.4614472"
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
@@ -5821,26 +5585,6 @@
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16291-1-1-7-5-8"
-       cx="-22.330223"
-       cy="49.226917"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       ry="4.4614472"
-       rx="4.3339186"
-       cy="18.8598"
-       cx="-22.330223"
-       id="ellipse16295-5-9-4-8-1"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker24909-7-1-0-9-4)"
        d="m -78.435783,49.212479 h 11.00813"
@@ -5880,26 +5624,6 @@
        height="50.353008"
        x="-66.217476"
        y="-58.989746"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16291-1-1-7-2-4"
-       cx="-21.838356"
-       cy="-18.252243"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       ry="4.4614472"
-       rx="4.3339186"
-       cy="-48.619358"
-       cx="-21.838356"
-       id="ellipse16295-5-9-4-83-4"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
@@ -6321,91 +6045,7 @@
            width="35.355339"
            id="rect16195-2-59-0-4" /></flowRegion><flowPara
          id="flowPara16197-2-3-2-7"
-         style="font-size:13.75px;line-height:1.25">BFVI</flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-139.22142"
-       y="-23.871048"
-       id="text95986-4-2-2"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-1-4"
-         x="-139.22142"
-         y="-23.871048"
-         style="stroke-width:0.26458332">M10</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-140.26164"
-       y="44.558445"
-       id="text95986-4-3-29"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-2-9"
-         x="-140.26164"
-         y="44.558445"
-         style="stroke-width:0.26458332">M11</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-19.570122"
-       y="-23.868637"
-       id="text95986-4-2-3-0"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-1-3-8"
-         x="-19.570122"
-         y="-23.868637"
-         style="stroke-width:0.26458332">M13</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-19.629219"
-       y="13.378568"
-       id="text95986-4-0-1-1"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-5-5-3"
-         x="-19.629219"
-         y="13.378568"
-         style="stroke-width:0.26458332">M14</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-19.55204"
-       y="44.591007"
-       id="text95986-4-3-2-1"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-2-6-1"
-         x="-19.55204"
-         y="44.591007"
-         style="stroke-width:0.26458332">M15</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-18.134041"
-       y="-53.066307"
-       id="text95986-4-2-3-9-0"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-1-3-4-3"
-         x="-18.134041"
-         y="-53.066307"
-         style="stroke-width:0.26458332">M12</tspan></text>
-    <flowRoot
+         style="font-size:13.75px;line-height:1.25">BFVI</flowPara></flowRoot>    <flowRoot
        transform="matrix(0.26497177,0,0,0.26497177,-103.68084,199.04789)"
        style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot16247-5-9-0-2-3-8-3-4"
@@ -6480,27 +6120,7 @@
            width="35.355339"
            id="rect16195-2-1-6-6" /></flowRegion><flowPara
          id="flowPara16197-2-5-8-4"
-         style="font-size:13.75px;line-height:1.25">BFIV</flowPara></flowRoot>    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16291-1-1-7-5-8-8"
-       cx="97.09153"
-       cy="48.918129"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       ry="4.4614472"
-       rx="4.3339186"
-       cy="18.551008"
-       cx="97.09153"
-       id="ellipse16295-5-9-4-8-1-0"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <path
+         style="font-size:13.75px;line-height:1.25">BFIV</flowPara></flowRoot>    <path
        style="fill:none;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker26549-4-9-2-2-2-0)"
        d="m 85.36895,48.717682 h 6.65841"
        id="path26527-9-5-1-4-0-4"
@@ -6513,26 +6133,6 @@
        d="m 85.12095,18.431551 h 6.65841"
        id="path26527-9-5-1-8-8-4-2"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse16291-1-1-7-2-4-9"
-       cx="97.583397"
-       cy="-18.561033"
-       rx="4.3339186"
-       ry="4.4614472"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604" />
-    <ellipse
-       ry="4.4614472"
-       rx="4.3339186"
-       cy="-48.928154"
-       cx="97.583397"
-       id="ellipse16295-5-9-4-83-4-6"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.62172222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
@@ -6907,63 +6507,7 @@
            width="35.355339"
            id="rect16195-2-59-0-4-8" /></flowRegion><flowPara
          id="flowPara16197-2-3-2-7-0"
-         style="font-size:13.75px;line-height:1.25">BFVII</flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="99.851631"
-       y="-24.177427"
-       id="text95986-4-2-3-0-4"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-1-3-8-7"
-         x="99.851631"
-         y="-24.177427"
-         style="stroke-width:0.26458332">M17</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="99.792542"
-       y="13.069777"
-       id="text95986-4-0-1-1-6"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-5-5-3-8"
-         x="99.792542"
-         y="13.069777"
-         style="stroke-width:0.26458332">M18</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="99.869705"
-       y="44.282219"
-       id="text95986-4-3-2-1-9"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-2-6-1-0"
-         x="99.869705"
-         y="44.282219"
-         style="stroke-width:0.26458332">M19</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="101.28771"
-       y="-53.375103"
-       id="text95986-4-2-3-9-0-6"
-       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
-       inkscape:export-xdpi="167.72604"
-       inkscape:export-ydpi="167.72604"><tspan
-         sodipodi:role="line"
-         id="tspan95984-9-1-3-4-3-8"
-         x="101.28771"
-         y="-53.375103"
-         style="stroke-width:0.26458332">M16</tspan></text>
-    <flowRoot
+         style="font-size:13.75px;line-height:1.25">BFVII</flowPara></flowRoot>    <flowRoot
        transform="matrix(0.26497177,0,0,0.26497177,134.00528,199.01593)"
        style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot16247-5-9-0-2-3-1-6-9-3-7"
@@ -6979,7 +6523,7 @@
            id="rect16251-3-9-3-1-1-3-9-5-4-0" /></flowRegion><flowPara
          id="flowPara16253-9-1-7-0-0-1-0-4-6-3"
          style="font-size:13.75px;line-height:1.25">16D</flowPara></flowRoot>    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M -137.18732,18.895938 H -153.462"
        id="path13175"
        inkscape:connector-curvature="0"
@@ -7100,7 +6644,7 @@
        inkscape:export-xdpi="167.72604"
        inkscape:export-ydpi="167.72604" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker96103);marker-end:url(#marker21047)"
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker96103);marker-end:url(#marker21047)"
        d="m 172.61866,-71.024397 h 32.4086"
        id="path21007"
        inkscape:connector-curvature="0"
@@ -7120,5 +6664,805 @@
          x="181.03165"
          y="-75.410042"
          style="font-size:3.98632693px;stroke-width:0.33219391px">Stage 7</tspan></text>
+    <g
+       id="g8454"
+       transform="translate(-32.193793,-98.742535)"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <rect
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         transform="matrix(0.71769058,-0.69636214,0.71769058,0.69636214,0,0)"
+         y="-295.67935"
+         x="-410.78928"
+         height="5.9553976"
+         width="6.212038"
+         id="rect8078-6"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.50011379;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61"
+         d="m -503.71874,79.041217 2.11817,2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-5"
+         d="m -503.71874,81.096437 2.11817,-2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g8454-5"
+       transform="translate(-32.102923,-31.261789)"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <rect
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         transform="matrix(0.71769058,-0.69636214,0.71769058,0.69636214,0,0)"
+         y="-295.67935"
+         x="-410.78928"
+         height="5.9553976"
+         width="6.212038"
+         id="rect8078-6-6"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.50011379;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-2"
+         d="m -503.71874,79.041217 2.11817,2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-5-9"
+         d="m -503.71874,81.096437 2.11817,-2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g8561"
+       transform="translate(-0.37417734,-8.8867118)"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-6-3-74-9"
+         d="m -381.87953,58.877569 2.86952,-2.88919"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g8555">
+        <ellipse
+           inkscape:export-ydpi="167.72604"
+           inkscape:export-xdpi="167.72604"
+           inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+           ry="4.5886478"
+           rx="4.4271264"
+           cy="57.432957"
+           cx="-380.44482"
+           id="ellipse16159-0-7-3-56-0"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -381.87953,55.988379 2.86952,2.88919"
+           id="path8101-6-3-74-7-3"
+           inkscape:connector-curvature="0"
+           inkscape:export-xdpi="167"
+           inkscape:export-ydpi="167" />
+      </g>
+    </g>
+    <ellipse
+       inkscape:export-ydpi="167.72604"
+       inkscape:export-xdpi="167.72604"
+       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+       ry="4.5886478"
+       rx="4.4271264"
+       cy="18.307585"
+       cx="-380.81354"
+       id="ellipse16159-0-7-3-56-0-6"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -382.24821,19.752198 2.86952,-2.88919"
+       id="path8101-6-3-74-9-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -382.24821,16.863008 2.86952,2.88919"
+       id="path8101-6-3-74-7-3-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <g
+       id="g8829"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-6-3-74-9-7"
+         d="m -262.18159,-47.894973 2.86952,-2.88919"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g8790">
+        <ellipse
+           inkscape:export-ydpi="167.72604"
+           inkscape:export-xdpi="167.72604"
+           inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+           ry="4.5886478"
+           rx="4.4271264"
+           cy="-49.339584"
+           cx="-260.74689"
+           id="ellipse16159-0-7-3-56-0-8"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -262.18159,-50.784163 2.86952,2.88919"
+           id="path8101-6-3-74-7-3-9"
+           inkscape:connector-curvature="0"
+           inkscape:export-xdpi="167"
+           inkscape:export-ydpi="167" />
+      </g>
+    </g>
+    <ellipse
+       inkscape:export-ydpi="167.72604"
+       inkscape:export-xdpi="167.72604"
+       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+       ry="4.5886478"
+       rx="4.4271264"
+       cy="-19.04479"
+       cx="-261.27603"
+       id="ellipse16159-0-7-3-56-0-20"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -262.71075,-17.600179 2.86952,-2.88919"
+       id="path8101-6-3-74-9-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -262.71075,-20.489369 2.86952,2.88919"
+       id="path8101-6-3-74-7-3-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <ellipse
+       inkscape:export-ydpi="167.72604"
+       inkscape:export-xdpi="167.72604"
+       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+       ry="4.5886478"
+       rx="4.4271264"
+       cy="18.261454"
+       cx="-261.40836"
+       id="ellipse16159-0-7-3-56-0-7"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -262.84304,19.706068 2.86952,-2.88919"
+       id="path8101-6-3-74-9-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -262.84304,16.816878 2.86952,2.88919"
+       id="path8101-6-3-74-7-3-92"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <ellipse
+       inkscape:export-ydpi="167.72604"
+       inkscape:export-xdpi="167.72604"
+       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+       ry="4.5886478"
+       rx="4.4271264"
+       cy="48.820831"
+       cx="-261.27603"
+       id="ellipse16159-0-7-3-56-0-28"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -262.71075,50.265444 2.86952,-2.88919"
+       id="path8101-6-3-74-9-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -262.71075,47.376254 2.86952,2.88919"
+       id="path8101-6-3-74-7-3-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-260.74481"
+       y="57.825897"
+       id="text8732-2-8-8"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-0-9-4"
+         x="-260.74481"
+         y="57.825897"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Full</tspan><tspan
+         sodipodi:role="line"
+         x="-260.74481"
+         y="63.117565"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-6-2-5"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-260.74481"
+       y="27.704624"
+       id="text8732-2-8-0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-0-9-3"
+         x="-260.74481"
+         y="27.704624"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Full</tspan><tspan
+         sodipodi:role="line"
+         x="-260.74481"
+         y="32.996292"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-6-2-6"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-260.74481"
+       y="-9.526022"
+       id="text8732-2-8-1"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-0-9-0"
+         x="-260.74481"
+         y="-9.526022"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Full</tspan><tspan
+         sodipodi:role="line"
+         x="-260.74481"
+         y="-4.2343554"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-6-2-63"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-260.74481"
+       y="-39.179577"
+       id="text8732-2-8-2"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-0-9-06"
+         x="-260.74481"
+         y="-39.179577"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Full</tspan><tspan
+         sodipodi:role="line"
+         x="-260.74481"
+         y="-33.887909"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-6-2-1"> Multiplier</tspan></text>
+    <g
+       id="g8454-55"
+       transform="translate(361.51725,-98.369773)"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <rect
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         transform="matrix(0.71769058,-0.69636214,0.71769058,0.69636214,0,0)"
+         y="-295.67935"
+         x="-410.78928"
+         height="5.9553976"
+         width="6.212038"
+         id="rect8078-6-4"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.50011379;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-7"
+         d="m -503.71874,79.041217 2.11817,2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-5-6"
+         d="m -503.71874,81.096437 2.11817,-2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g8454-5-5"
+       transform="translate(361.07897,-30.89061)"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <rect
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         transform="matrix(0.71769058,-0.69636214,0.71769058,0.69636214,0,0)"
+         y="-295.67935"
+         x="-410.78928"
+         height="5.9553976"
+         width="6.212038"
+         id="rect8078-6-6-6"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.50011379;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-2-9"
+         d="m -503.71874,79.041217 2.11817,2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-5-9-3"
+         d="m -503.71874,81.096437 2.11817,-2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(238.87825,0.59691897)"
+       id="g8829-2"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-6-3-74-9-7-5"
+         d="m -262.18159,-47.894973 2.86952,-2.88919"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g8790-4">
+        <ellipse
+           inkscape:export-ydpi="167.72604"
+           inkscape:export-xdpi="167.72604"
+           inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+           ry="4.5886478"
+           rx="4.4271264"
+           cy="-49.339584"
+           cx="-260.74689"
+           id="ellipse16159-0-7-3-56-0-8-7"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -262.18159,-50.784163 2.86952,2.88919"
+           id="path8101-6-3-74-7-3-9-4"
+           inkscape:connector-curvature="0"
+           inkscape:export-xdpi="167"
+           inkscape:export-ydpi="167" />
+      </g>
+    </g>
+    <g
+       transform="translate(238.87825,30.883053)"
+       id="g8829-4"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-6-3-74-9-7-3"
+         d="m -262.18159,-47.894973 2.86952,-2.88919"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g8790-0">
+        <ellipse
+           inkscape:export-ydpi="167.72604"
+           inkscape:export-xdpi="167.72604"
+           inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+           ry="4.5886478"
+           rx="4.4271264"
+           cy="-49.339584"
+           cx="-260.74689"
+           id="ellipse16159-0-7-3-56-0-8-78"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -262.18159,-50.784163 2.86952,2.88919"
+           id="path8101-6-3-74-7-3-9-6"
+           inkscape:connector-curvature="0"
+           inkscape:export-xdpi="167"
+           inkscape:export-ydpi="167" />
+      </g>
+    </g>
+    <g
+       transform="translate(238.34908,68.231679)"
+       id="g8829-8"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-6-3-74-9-7-8"
+         d="m -262.18159,-47.894973 2.86952,-2.88919"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g8790-43">
+        <ellipse
+           inkscape:export-ydpi="167.72604"
+           inkscape:export-xdpi="167.72604"
+           inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+           ry="4.5886478"
+           rx="4.4271264"
+           cy="-49.339584"
+           cx="-260.74689"
+           id="ellipse16159-0-7-3-56-0-8-1"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -262.18159,-50.784163 2.86952,2.88919"
+           id="path8101-6-3-74-7-3-9-49"
+           inkscape:connector-curvature="0"
+           inkscape:export-xdpi="167"
+           inkscape:export-ydpi="167" />
+      </g>
+    </g>
+    <g
+       transform="translate(238.34908,98.51781)"
+       id="g8829-20"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-6-3-74-9-7-6"
+         d="m -262.18159,-47.894973 2.86952,-2.88919"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g8790-8">
+        <ellipse
+           inkscape:export-ydpi="167.72604"
+           inkscape:export-xdpi="167.72604"
+           inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+           ry="4.5886478"
+           rx="4.4271264"
+           cy="-49.339584"
+           cx="-260.74689"
+           id="ellipse16159-0-7-3-56-0-8-9"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -262.18159,-50.784163 2.86952,2.88919"
+           id="path8101-6-3-74-7-3-9-2"
+           inkscape:connector-curvature="0"
+           inkscape:export-xdpi="167"
+           inkscape:export-ydpi="167" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-21.419584"
+       y="-39.497417"
+       id="text8732-6"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-6"
+         x="-21.419584"
+         y="-39.497417"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">CSD</tspan><tspan
+         sodipodi:role="line"
+         x="-21.419584"
+         y="-34.20575"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-4"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-21.419584"
+       y="-9.1248522"
+       id="text8732-9"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-5"
+         x="-21.419584"
+         y="-9.1248522"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">CSD</tspan><tspan
+         sodipodi:role="line"
+         x="-21.419584"
+         y="-3.8331857"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-0"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-21.419584"
+       y="27.822407"
+       id="text8732-4"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-8"
+         x="-21.419584"
+         y="27.822407"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">CSD</tspan><tspan
+         sodipodi:role="line"
+         x="-21.419584"
+         y="33.114075"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-7"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-21.419584"
+       y="58.630592"
+       id="text8732-1"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-7"
+         x="-21.419584"
+         y="58.630592"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">CSD</tspan><tspan
+         sodipodi:role="line"
+         x="-21.419584"
+         y="63.92226"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-2"> Multiplier</tspan></text>
+    <g
+       id="g8454-7"
+       transform="translate(122.4534,-98.834163)"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <rect
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         transform="matrix(0.71769058,-0.69636214,0.71769058,0.69636214,0,0)"
+         y="-295.67935"
+         x="-410.78928"
+         height="5.9553976"
+         width="6.212038"
+         id="rect8078-6-2"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.50011379;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-26"
+         d="m -503.71874,79.041217 2.11817,2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-61-5-1"
+         d="m -503.71874,81.096437 2.11817,-2.05522"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-380.81146"
+       y="27.858805"
+       id="text8732-6-0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-6-6"
+         x="-380.81146"
+         y="27.858805"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">CSD</tspan><tspan
+         sodipodi:role="line"
+         x="-380.81146"
+         y="33.150471"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-4-1"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-380.81146"
+       y="57.756721"
+       id="text8732-6-5"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-6-9"
+         x="-380.81146"
+         y="57.756721"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">CSD</tspan><tspan
+         sodipodi:role="line"
+         x="-380.81146"
+         y="63.048389"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-4-4"> Multiplier</tspan></text>
+    <g
+       transform="translate(358.1979,0.30257134)"
+       id="g8829-9"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167">
+      <path
+         inkscape:export-ydpi="167"
+         inkscape:export-xdpi="167"
+         inkscape:connector-curvature="0"
+         id="path8101-6-3-74-9-7-0"
+         d="m -262.18159,-47.894973 2.86952,-2.88919"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g8790-9">
+        <ellipse
+           inkscape:export-ydpi="167.72604"
+           inkscape:export-xdpi="167.72604"
+           inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+           ry="4.5886478"
+           rx="4.4271264"
+           cy="-49.339584"
+           cx="-260.74689"
+           id="ellipse16159-0-7-3-56-0-8-17"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -262.18159,-50.784163 2.86952,2.88919"
+           id="path8101-6-3-74-7-3-9-7"
+           inkscape:connector-curvature="0"
+           inkscape:export-xdpi="167"
+           inkscape:export-ydpi="167" />
+      </g>
+    </g>
+    <ellipse
+       inkscape:export-ydpi="167.72604"
+       inkscape:export-xdpi="167.72604"
+       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+       ry="4.5886478"
+       rx="4.4271264"
+       cy="-18.742216"
+       cx="97.451035"
+       id="ellipse16159-0-7-3-56-0-20-1"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 96.016301,-17.297602 2.86952,-2.889189"
+       id="path8101-6-3-74-9-2-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 96.016301,-20.186791 2.86952,2.889189"
+       id="path8101-6-3-74-7-3-3-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <ellipse
+       inkscape:export-ydpi="167.72604"
+       inkscape:export-xdpi="167.72604"
+       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+       ry="4.5886478"
+       rx="4.4271264"
+       cy="18.564035"
+       cx="97.31871"
+       id="ellipse16159-0-7-3-56-0-7-9"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.884011,20.008652 2.86952,-2.88919"
+       id="path8101-6-3-74-9-5-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.884011,17.119462 2.86952,2.88919"
+       id="path8101-6-3-74-7-3-92-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <ellipse
+       inkscape:export-ydpi="167.72604"
+       inkscape:export-xdpi="167.72604"
+       inkscape:export-filename="/media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/TrabajoFinalFFT/Imagenes/Parhi-16/folding-16.png"
+       ry="4.5886478"
+       rx="4.4271264"
+       cy="48.594238"
+       cx="96.921867"
+       id="ellipse16159-0-7-3-56-0-28-6"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.487134,50.038865 2.86952,-2.88919"
+       id="path8101-6-3-74-9-9-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.487134,47.149675 2.86952,2.88919"
+       id="path8101-6-3-74-7-3-7-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="97.453087"
+       y="57.599304"
+       id="text8732-2-8-8-6"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-0-9-4-5"
+         x="97.453087"
+         y="57.599304"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Full</tspan><tspan
+         sodipodi:role="line"
+         x="97.453087"
+         y="62.890972"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-6-2-5-6"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="97.453087"
+       y="28.007196"
+       id="text8732-2-8-0-3"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-0-9-3-9"
+         x="97.453087"
+         y="28.007196"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Full</tspan><tspan
+         sodipodi:role="line"
+         x="97.453087"
+         y="33.298862"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-6-2-6-4"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="97.453087"
+       y="-9.223443"
+       id="text8732-2-8-1-8"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-0-9-0-1"
+         x="97.453087"
+         y="-9.223443"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Full</tspan><tspan
+         sodipodi:role="line"
+         x="97.453087"
+         y="-3.9317765"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-6-2-63-2"> Multiplier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="97.453087"
+       y="-39.406166"
+       id="text8732-2-8-2-9"
+       inkscape:export-xdpi="167"
+       inkscape:export-ydpi="167"><tspan
+         sodipodi:role="line"
+         id="tspan8730-0-9-06-3"
+         x="97.453087"
+         y="-39.406166"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Full</tspan><tspan
+         sodipodi:role="line"
+         x="97.453087"
+         y="-34.114498"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan8734-6-2-1-9"> Multiplier</tspan></text>
   </g>
 </svg>
