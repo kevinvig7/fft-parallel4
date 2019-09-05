@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1565895538">
   <File Type="PA-TCL" Name="topfft.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="topfft_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="topfft_reports.tcl"/>
   <File Type="RDS-RDS" Name="topfft.vds"/>
   <File Type="RDS-UTIL" Name="topfft_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="topfft_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="topfft.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="topfft_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="topfft_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/BF.v">

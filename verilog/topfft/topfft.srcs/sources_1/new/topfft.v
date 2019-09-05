@@ -22,9 +22,7 @@
 
 
 module topfft 
-     #(parameter NBITS = 8,
-       parameter NBITSI = 6,
-       parameter NBITSF = 2,
+     #(parameter NBITS = 2,
        parameter N = 8) // Cantidad de coeficientes en los multiplicadores
      (output [NBITS*2-1:0] fftOut_up,
       output [NBITS*2-1:0] fftOut_down,
@@ -33,18 +31,29 @@ module topfft
       input clk,
       input rst);
       
-  wire [NBITS*2-1:0] coefficientes0;
-  wire [NBITS*2-1:0] coefficientes1;
-  wire [NBITS*2-1:0] coefficientes2;
-  wire [NBITS*2-1:0] coefficientes3;
-  wire [NBITS*2-1:0] coefficientes4;
+  wire [(NBITS+1)*2-1:0] coefficientes0;
+  wire [(NBITS+1)*2-1:0] coefficientes1;
+  wire [(NBITS+1)*2-1:0] coefficientes2;
+  wire [(NBITS+1)*2-1:0] coefficientes3;
+  wire [(NBITS+1)*2-1:0] coefficientes4;
   
+   
   wire coeffw0_en;
   wire coeffw12_en;
   wire coeffw34_en;
 
-  wire [NBITS*2-1:0] blq_connect_up[0:7];
-  wire [NBITS*2-1:0] blq_connect_down[0:7];
+
+  wire [(NBITS+1)-1:0] sat0_up;
+  wire [(NBITS+1)*2-1:0] sat1_up;
+  wire [(NBITS+1)*2+1-1:0] sat2_up;
+
+ 
+  wire [(NBITS+1)*2-1:0] sat0_down;
+  wire [(NBITS+1)*2-1:0] sat1_down;
+  wire [(NBITS+1)*2-1:0] sat2_down;
+
+  wire [(NBITS)*2-1:0] blq_connect_up[0:7];
+  wire [(NBITS)*2-1:0] blq_connect_down[0:7];
   wire ctrl_1,ctrl_2,ctrl_3,ctrl_4;
   wire rstcont1;
     
@@ -110,35 +119,35 @@ contador
  
  
  coeff0
- #(NBITS,N)
+ #(NBITS+1,N)
       Mcoeff0
      (.coeff_out(coefficientes0),
       .clk(clk),
       .rst(coeffw0_en));
 
  coeff1
- #(NBITS,N)
+ #(NBITS+1,N)
       Mcoeff1
      (.coeff_out(coefficientes1),
       .clk(clk),
       .rst(coeffw12_en));
       
  coeff2
- #(NBITS,N)
+ #(NBITS+1,N)
       Mcoeff2
       (.coeff_out(coefficientes2),
       .clk(clk),
       .rst(coeffw12_en));
       
  coeff3
- #(NBITS,N) 
+ #(NBITS+1,N) 
       Mcoeff3
       (.coeff_out(coefficientes3),
       .clk(clk),
       .rst(coeffw34_en));
       
  coeff4
- #(NBITS,N) 
+ #(NBITS+1,N) 
       Mcoeff4
       (.coeff_out(coefficientes4),
       .clk(clk),
@@ -146,48 +155,34 @@ contador
  
   
  //puente salida del primer BF
- assign blq_connect_up[2] = blq_connect_up[1]; 
-
+ //assign blq_connect_up[2] = blq_connect_up[1]; 
+   assign sat0_up = blq_connect_up[1]; 
+ 
 //producto 0
  multip
  #(NBITS)
        M0
-       (.result(blq_connect_down[2]),
+       (//.result(blq_connect_down[2]),
+        .result(sat0_down),
         .muestra(blq_connect_down[1]),
         .coeff(coefficientes0));
         
- /////Bloque de saturacion 0        
- 
- ///////////////////////////////
-        
-      
+             
 //producto 1 2
  multip
  #(NBITS) 
         M1
-        (.result(blq_connect_up[4]),
+        (.result(sat1_up),
          .muestra(blq_connect_up[3]),
          .coeff(coefficientes1));
-         
- /////Bloque de saturacion 1        
- 
- ///////////////////////////////         
-         
+
  multip
  #(NBITS) 
         M2
-        (.result(blq_connect_down[4]),
+        (.result(sat1_down),
          .muestra(blq_connect_down[3]),
          .coeff(coefficientes2));
-        
-  /////Bloque de saturacion 0        
- 
- 
- ///////////////////////////////       
-        
-        
-        
-        
+
         
 //producto 3 4
  multip
@@ -244,13 +239,71 @@ Blq
 Blq
 #(4,4,NBITS) 
     Blq_BFIV
-   (.BlqOut_up(blq_connect_up[7]),
-    .BlqOut_down(blq_connect_down[7]),
+   (.BlqOut_up(sat2_up),
+    .BlqOut_down(sat2_down),
     .BlqIn_up(blq_connect_up[6]),
     .BlqIn_down(blq_connect_down[6]),
     .clk(clk),
     .rst(rst),
     .ctrl(ctrl_4));  
 
+
+
+
+/////Bloque de saturacion 0        
+       fixtop_sat
+         #(.NBITS_IN((NBITS+1)*2),
+           .NBITS_OUT(NBITS))
+        saturacion0_up
+          (.sat_in(sat0_up),
+           .sat_out(blq_connect_up[2]));
+           
+           
+          fixtop_sat
+         #(.NBITS_IN((NBITS+1)*2),
+           .NBITS_OUT(NBITS))
+        saturacion0_down
+          (.sat_in(sat0_down),
+           .sat_out(blq_connect_down[2]));
+
+           
+ ///////////////////////////////
+                
+        
+/////Bloque de saturacion 1 2
+        fixtop_sat
+         #(.NBITS_IN((NBITS+1)*2),
+           .NBITS_OUT(NBITS))
+        saturacion1_up
+          (.sat_in(sat1_up),
+           .sat_out(blq_connect_up[4]));
+           
+           fixtop_sat
+         #(.NBITS_IN((NBITS+1)*2),
+           .NBITS_OUT(NBITS))
+        saturacion1_down
+          (.sat_in(sat1_down),
+           .sat_out(blq_connect_down[4]));
+///////////////////////////////        
+     
+             
+
+  /////Bloque de saturacion final
+       fixtop_sat
+         #(.NBITS_IN((NBITS+1)*2+1),
+           .NBITS_OUT(NBITS))
+        saturacion2_up
+          (.sat_in(sat2_up),
+           .sat_out(blq_connect_up[7]));
+           
+           
+       fixtop_sat
+         #(.NBITS_IN((NBITS+1)*2+1),
+           .NBITS_OUT(NBITS))
+        saturacion2_down
+          (.sat_in(sat2_down),
+           .sat_out(blq_connect_down[7]));
+ 
+ ///////////////////////////////      
     
 endmodule

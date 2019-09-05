@@ -20,17 +20,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module coeff0
-    #(parameter Nbits=2, 
-      parameter N=8)
-    (output reg [Nbits*2-1:0] coeff_out,   
-     input clk,
-     input rst);
+module coeff4(
+coeff_out,
+clk,
+rst
+    );
     
+parameter Nbits=2; 
+parameter N=8;
+input rst;
+input clk;
+output reg [Nbits*2-1:0] coeff_out;
+
 reg [22:0] index;
+
 wire [Nbits*N*2-1:0] coeff;
 
-coeff_data0 
+coeff_data4 
    coefficientes
         (.coeff_data(coeff));
 

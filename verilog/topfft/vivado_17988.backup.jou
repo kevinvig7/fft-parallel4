@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Sep  5 14:07:38 2019
+# Process ID: 17988
+# Current directory: C:/fft-parallel4/verilog/topfft
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14520 C:\fft-parallel4\verilog\topfft\topfft.xpr
+# Log file: C:/fft-parallel4/verilog/topfft/vivado.log
+# Journal file: C:/fft-parallel4/verilog/topfft\vivado.jou
+#-----------------------------------------------------------sstart_guioopen_project C:/fft-parallel4/verilog/topfft/topfft.xpruupdate_compile_order -fileset sources_1
+add_files -norecurse C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/sat.v
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+refresh_design

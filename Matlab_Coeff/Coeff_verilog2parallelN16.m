@@ -1,4 +1,4 @@
-NBITSverilog=8;
+NBITSverilog=2;
 NBITScoeff=NBITSverilog+1;
 NBITSF=2;
 N=8;

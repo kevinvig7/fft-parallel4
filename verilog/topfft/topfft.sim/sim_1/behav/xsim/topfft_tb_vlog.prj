@@ -15,7 +15,9 @@ verilog xil_defaultlib  \
 "../../../../topfft.srcs/sources_1/new/coeff_data3.v" \
 "../../../../topfft.srcs/sources_1/new/coeff_data4.v" \
 "../../../../topfft.srcs/sources_1/new/contador.v" \
+"../../../../../pruebaPF/pruebaPF.srcs/sources_1/new/fixtop_sat.v" \
 "../../../../topfft.srcs/sources_1/new/multip.v" \
+"../../../../topfft.srcs/sources_1/new/sat.v" \
 "../../../../topfft.srcs/sources_1/new/switch.v" \
 "../../../../topfft.srcs/sources_1/new/topD.v" \
 "../../../../topfft.srcs/sources_1/new/topD_1.v" \

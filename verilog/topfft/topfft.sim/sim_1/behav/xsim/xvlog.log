@@ -7,15 +7,15 @@ INFO: [VRFC 10-311] analyzing module D_reg
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/D_reg_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module D_reg_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module coeff1
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module coeff2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module coeff3
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module coeff4
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module coeff0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coeff1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coeff2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coeff3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coeff4
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module coeff_data0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data1.v" into library xil_defaultlib
@@ -28,8 +28,12 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/top
 INFO: [VRFC 10-311] analyzing module coeff_data4
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module contador
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/pruebaPF/pruebaPF.srcs/sources_1/new/fixtop_sat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixtop_sat
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module multip
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/sat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sat
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module switch
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v" into library xil_defaultlib

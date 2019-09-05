@@ -20,18 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module coeff1
+module coeff0
     #(parameter Nbits=2, 
       parameter N=8)
-    (output reg [Nbits*2-1:0] coeff_out,
+    (output reg [Nbits*2-1:0] coeff_out,   
      input clk,
      input rst);
-
+    
 reg [22:0] index;
-
 wire [Nbits*N*2-1:0] coeff;
 
-coeff_data1
+coeff_data0 
    coefficientes
         (.coeff_data(coeff));
 
@@ -49,21 +48,10 @@ always @(posedge clk) begin
                 coeff_out =coeff[N*Nbits*2-1-:4];
             end
         else begin
-        coeff_out=coeff[N*Nbits*2-1-index*Nbits*2-:4];
+        coeff_out=coeff[N*(Nbits+1)*2-1-index*Nbits*2-:4];
         index = index + 1;
             end
        end
-
-
-
-
-
-
-
-
-
-
-
 
 
 

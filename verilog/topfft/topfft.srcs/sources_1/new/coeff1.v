@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module coeff2
+module coeff1
     #(parameter Nbits=2, 
       parameter N=8)
     (output reg [Nbits*2-1:0] coeff_out,
@@ -31,7 +31,7 @@ reg [22:0] index;
 
 wire [Nbits*N*2-1:0] coeff;
 
-coeff_data2 
+coeff_data1
    coefficientes
         (.coeff_data(coeff));
 
