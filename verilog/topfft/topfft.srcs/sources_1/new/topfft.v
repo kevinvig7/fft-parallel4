@@ -93,29 +93,6 @@ contador
          .clk(clk),
          .rst(coeffw34_en));
 
- topD_1
- #(4)
-     En_coeffw0
-     (.Q(coeffw0_en),
-      .D(clk),
-      .clk(clk),
-      .rst(rst));
-      
- topD_1
- #(6)
-     En_coeffw12
-     (.Q(coeffw12_en),
-      .D(clk),
-      .clk(clk),
-      .rst(rst));      
-      
- topD_1
- #(7)
-     En_coeffw34
-     (.Q(coeffw34_en),
-      .D(clk),
-      .clk(clk),
-      .rst(rst));      
  
  
  coeff0
@@ -152,6 +129,39 @@ contador
       (.coeff_out(coefficientes4),
       .clk(clk),
       .rst(coeffw34_en));
+      
+      
+///////////////////////////////
+   topD_1
+ #(4)
+     Enable_0
+     (.Q(coeffw0_en),
+      .D(clk),
+      .clk(clk),
+      .rst(rst));
+      
+ topD_1
+ #(6)
+     Enable_12
+     (.Q(coeffw12_en),
+      .D(clk),
+      .clk(clk),
+      .rst(rst));      
+      
+ topD_1
+ #(7)
+     Enable_34
+     (.Q(coeffw34_en),
+      .D(clk),
+      .clk(clk),
+      .rst(rst));         
+      
+/////////////////////////////////      
+      
+      
+      
+      
+      
  
   
  //puente salida del primer BF
