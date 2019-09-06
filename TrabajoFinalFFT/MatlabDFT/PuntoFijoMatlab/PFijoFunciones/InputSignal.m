@@ -1,4 +1,4 @@
-function [out] = Entrada()
+function [xFi,xFlot,t,xEq,fs] = InputSignal(S,W,F)
 
 % Señal de entrada en Punto flotante:
 % Puntos fft: 128.
@@ -30,27 +30,32 @@ fase2 = degtorad(0);
 % señal compuesta formada por la suma de dos tonos
 x = cos(w1+fase1) + cos(w2+fase2);    
 % normalizamos la amplitud maxima de la señal, para que no haya armonicos
-x = x/max(x);
+xn = x/max(x);
 
-%% Cuantizo la señal de entrada
-% Paramertros de la operacion en punto fijo
-Pmath = fimath('RoundingMethod', 'Floor', ...
-               'OverflowAction', 'Saturate', ...
-               'ProductMode',    'FullPrecision', ...
-               'SumMode',        'FullPrecision');
+%% Señal de entrada en Punto Fijo:
+% The property values
+Fmath = fimath('RoundingMethod','Floor',  'OverflowAction','Saturate');
+% S: Signo:
+% W: Cantidad Total de bits
+% F: Cantidad Fraccional
 
-% La clase de la variable es: 'embedded.fi' 
-% Signado:
-S = 1;
-% Cantidad entera
-I = 6;
-% Cantidad Fraccional
-F = 3;
-% Cantidad Total de bits
-W = S+I+F;
-xfi = fi(x, S,W,F, Pmath);
-% Tranformo la clase: 'double' 
-out = xfi.double;
+% La clase: 'embedded.fi' 
+xfi = fi(xn, S,W,F, Fmath);
 
+% Version flotante del numero "Cuantizado"
+%xFi = xfi.double;
+% Version 'Embedded.fi'  del numero "Cuantizado"
+xFi   = xfi;
+
+% Version flotante del numero "No Cuantizado"
+xFlot = xn; 
+
+% "Entero equivalente" de la representacion binaria
+EntEq = zeros(1,length(xfi));
+for index = (1:length(xfi))
+    Decimal = xfi(index);
+    EntEq(index) = str2double(Decimal.dec);
+end
+xEq = EntEq;
 
 end
