@@ -1,16 +1,16 @@
 `timescale 1ns / 1ps
 module coeff_data2
-#(parameter NBITS=3,
+#(parameter NBITS=11,
   parameter N=8)
 (output reg [NBITS*N*2-1:0] coeff_data);
 initial begin
-coeff_data[47 : 42] = 6'b011000;
-coeff_data[41 : 36] = 6'b101101;
-coeff_data[35 : 30] = 6'b011000;
-coeff_data[29 : 24] = 6'b000100;
-coeff_data[23 : 18] = 6'b011000;
-coeff_data[17 : 12] = 6'b101101;
-coeff_data[11 : 6] = 6'b011000;
-coeff_data[5 : 0] = 6'b000100;
+coeff_data[175 : 154] = 22'b0100000000000000000000;
+coeff_data[153 : 132] = 22'b1101001011011010010110;
+coeff_data[131 : 110] = 22'b0100000000000000000000;
+coeff_data[109 : 88] = 22'b0000000000011000000000;
+coeff_data[87 : 66] = 22'b0100000000000000000000;
+coeff_data[65 : 44] = 22'b1101001011011010010110;
+coeff_data[43 : 22] = 22'b0100000000000000000000;
+coeff_data[21 : 0] = 22'b0000000000011000000000;
 end 
 endmodule 

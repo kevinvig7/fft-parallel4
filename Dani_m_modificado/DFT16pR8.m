@@ -107,65 +107,65 @@ w7fr=real(fxw7);
 w7fi=imag(fxw7);
 
 
-fid=fopen ('coefficientes0.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w4fr.bin w4fi.bin '\n']);
-fprintf(fid,[w4fr.bin w4fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w4fr.bin w4fi.bin '\n']);
-fprintf(fid,[w4fr.bin w4fi.bin '\n']);
-fclose(fid);
-
-fid=fopen ('coefficientes1.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[wn8fr.bin wn8fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[wn8fr.bin wn8fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fclose(fid);
-
-
-
-fid=fopen ('coefficientes2.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w3n8fr.bin w3n8fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w4fr.bin w4fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w3n8fr.bin w3n8fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w4fr.bin w4fi.bin '\n']);
-fclose(fid);
-
-
-fid=fopen ('coefficientes3.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w2fr.bin w2fi.bin '\n']);
-fprintf(fid,[w1fr.bin w1fi.bin '\n']);
-fprintf(fid,[w3fr.bin w3fi.bin '\n']);
-fclose(fid);
-
-
-fid=fopen ('coefficientes4.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w0fr.bin w0fi.bin '\n']);
-fprintf(fid,[w4fr.bin w4fi.bin '\n']);
-fprintf(fid,[w6fr.bin w6fi.bin '\n']);
-fprintf(fid,[w5fr.bin w5fi.bin '\n']);
-fprintf(fid,[w7fr.bin w7fi.bin '\n']);
-fclose(fid);
-
+% fid=fopen ('coefficientes0.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w4fr.bin w4fi.bin '\n']);
+% fprintf(fid,[w4fr.bin w4fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w4fr.bin w4fi.bin '\n']);
+% fprintf(fid,[w4fr.bin w4fi.bin '\n']);
+% fclose(fid);
+% 
+% fid=fopen ('coefficientes1.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[wn8fr.bin wn8fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[wn8fr.bin wn8fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fclose(fid);
+% 
+% 
+% 
+% fid=fopen ('coefficientes2.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w3n8fr.bin w3n8fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w4fr.bin w4fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w3n8fr.bin w3n8fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w4fr.bin w4fi.bin '\n']);
+% fclose(fid);
+% 
+% 
+% fid=fopen ('coefficientes3.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w2fr.bin w2fi.bin '\n']);
+% fprintf(fid,[w1fr.bin w1fi.bin '\n']);
+% fprintf(fid,[w3fr.bin w3fi.bin '\n']);
+% fclose(fid);
+% 
+% 
+% fid=fopen ('coefficientes4.txt','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w0fr.bin w0fi.bin '\n']);
+% fprintf(fid,[w4fr.bin w4fi.bin '\n']);
+% fprintf(fid,[w6fr.bin w6fi.bin '\n']);
+% fprintf(fid,[w5fr.bin w5fi.bin '\n']);
+% fprintf(fid,[w7fr.bin w7fi.bin '\n']);
+% fclose(fid);
+% 
 
 
 bf1_stage4 = Butterfly(bf1_stage3(z+0), bf2_stage3(z+0), N,Nbits,Nbitsf);

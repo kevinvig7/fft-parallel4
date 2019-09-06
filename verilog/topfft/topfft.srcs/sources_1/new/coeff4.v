@@ -20,21 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module coeff4(
-coeff_out,
-clk,
-rst
-    );
-    
-parameter Nbits=2; 
-parameter N=8;
-input rst;
-input clk;
-output reg [Nbits*2-1:0] coeff_out;
-
+module coeff4
+    #(parameter NBITS=2, 
+      parameter N=8)
+    (output reg [NBITS*2-1:0] coeff_out,
+     input clk,
+     input rst);
 reg [22:0] index;
 
-wire [Nbits*N*2-1:0] coeff;
+wire [NBITS*N*2-1:0] coeff;
 
 coeff_data4 
    coefficientes
@@ -46,15 +40,15 @@ coeff_data4
 
 always @(posedge clk) begin
         if (!rst) begin 
-            coeff_out = {Nbits*2{1'b0}}; 
+            coeff_out = {NBITS*2{1'b0}}; 
             index=0;
             end
         else if (index>=(N)) begin
                 index=0;
-                coeff_out =coeff[N*Nbits*2-1-:4];
+                coeff_out =coeff[N*NBITS*2-1-:4];
             end
         else begin
-        coeff_out=coeff[N*Nbits*2-1-index*Nbits*2-:4];
+        coeff_out=coeff[N*NBITS*2-1-index*NBITS*2-:4];
         index = index + 1;
             end
        end

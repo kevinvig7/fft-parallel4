@@ -22,21 +22,24 @@
 
 module topfft_tb();
     
- parameter Nbits=2;
+ parameter NBITS=10;
+  parameter NBITScoeff=NBITS+1;
  parameter N=8;   
 reg clk = 0;
 reg rst;  
 reg rst_tb;
  
- reg [Nbits*2-1:0] fftIn_up;
- reg [Nbits*2-1:0] fftIn_down;
-wire [Nbits*2-1:0] fftOut_up;
-wire [Nbits*2-1:0] fftOut_down;
+ reg [NBITS*2-1:0] fftIn_up;
+ reg [NBITS*2-1:0] fftIn_down;
+wire [NBITS*2-1:0] fftOut_up;
+wire [NBITS*2-1:0] fftOut_down;
     
        //-- Generador de reloj. Periodo 2 unidades
 always #1 clk = ~clk;
         
-topfft
+topfft#(
+.NBITS(NBITS),
+.NBITScoeff(NBITScoeff))
   dut(
     .fftIn_up(fftIn_up),
     .fftIn_down(fftIn_down),
@@ -69,16 +72,12 @@ integer data_impar;
 integer scan_par; // file handler
 integer scan_impar; // file handler
 
-reg [Nbits*2-1:0] captured_data;
+reg [NBITS*2-1:0] captured_data;
 
-wire [3:0] aaa;
-
-wire [3:0] sdas;
-
-
-assign sdas = 4'b0111;
-
-assign aaa = $signed(sdas);
+//wire [3:0] aaa;
+//wire [3:0] sdas;
+//assign sdas = 4'b0111;
+//assign aaa = $signed(sdas);
 
 `define NULL 0
 
@@ -100,10 +99,10 @@ always @(posedge clk) begin
   rst  = 1'd1;
   #20 rst  = 1'd0;
          end else if(!$feof(data_par))  begin
-             scan_par = $fscanf(data_par, "%b\n", fftIn_up);
+             scan_par = $fscanf(data_par, "%d\n", fftIn_up);
              end
              else begin
-             fftIn_up={Nbits*2{1'bz}};
+             fftIn_up={NBITS*2{1'bz}};
               #25;
               $finish;
              end
@@ -126,10 +125,20 @@ always @(posedge clk) begin
     scan_impar = $fscanf(data_impar, "%b\n", fftIn_down);
     end
     else begin
-    fftIn_down={Nbits*2{1'bz}};
+    fftIn_down={NBITS*2{1'bz}};
      #25;
     end
       end
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -22,7 +22,8 @@
 
 
 module topfft 
-     #(parameter NBITS = 2,
+     #(parameter NBITS = 3,
+     parameter NBITScoeff=3,
        parameter N = 8) // Cantidad de coeficientes en los multiplicadores
      (output [NBITS*2-1:0] fftOut_up,
       output [NBITS*2-1:0] fftOut_down,
@@ -178,7 +179,7 @@ contador
  
 //producto 0
  multip
- #(NBITS+1)
+ #(NBITS+1,NBITScoeff)
        M0
        (
         .result(m_to_blq_down[0]),
@@ -188,14 +189,14 @@ contador
              
 //producto 1 2
  multip
- #((NBITS+1)*2+1) 
+ #((NBITS+1)*2+1,NBITScoeff) 
         M1
         (.result(mm_to_sat_up),
          .muestra(blq_to_mm_up),
          .coeff(coefficientes1));
 
  multip
- #((NBITS+1)*2+1) 
+ #((NBITS+1)*2+1,NBITScoeff) 
         M2
         (.result(mm_to_sat_down),
          .muestra(blq_to_mm_down),
@@ -204,14 +205,14 @@ contador
         
 //producto 3 4
  multip
- #(NBITS+1) 
+ #(NBITS+1,NBITScoeff) 
         M3
        (.result(m_to_blq_up[1]),
         .muestra(blq_to_m_up[1]),
         .coeff(coefficientes3));
         
  multip
- #(NBITS+1) 
+ #(NBITS+1,NBITScoeff) 
         M4
        (.result(m_to_blq_down[1]),
         .muestra(blq_to_m_down[1]),
