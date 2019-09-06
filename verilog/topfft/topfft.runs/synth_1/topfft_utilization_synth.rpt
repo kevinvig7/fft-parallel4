@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Aug 15 15:59:24 2019
+| Date         : Fri Sep  6 18:52:39 2019
 | Host         : Cacuy running 64-bit major release  (build 9200)
 | Command      : report_utilization -file topfft_utilization_synth.rpt -pb topfft_utilization_synth.pb
 | Design       : topfft
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  202 |     0 |     41000 |  0.49 |
-|   LUT as Logic             |  189 |     0 |     41000 |  0.46 |
-|   LUT as Memory            |   13 |     0 |     13400 |  0.10 |
+| Slice LUTs*                |  854 |     0 |     41000 |  2.08 |
+|   LUT as Logic             |  809 |     0 |     41000 |  1.97 |
+|   LUT as Memory            |   45 |     0 |     13400 |  0.34 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |   13 |     0 |           |       |
-| Slice Registers            |  245 |     0 |     82000 |  0.30 |
-|   Register as Flip Flop    |  245 |     0 |     82000 |  0.30 |
+|     LUT as Shift Register  |   45 |     0 |           |       |
+| Slice Registers            |  390 |     0 |     82000 |  0.48 |
+|   Register as Flip Flop    |  390 |     0 |     82000 |  0.48 |
 |   Register as Latch        |    0 |     0 |     82000 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     20500 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     10250 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 8     |          Yes |         Set |            - |
-| 237   |          Yes |       Reset |            - |
+| 9     |          Yes |         Set |            - |
+| 381   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   18 |     0 |       300 |  6.00 |
+| Bonded IOB                  |   26 |     0 |       300 |  8.67 |
 | Bonded IPADs                |    0 |     0 |        26 |  0.00 |
 | Bonded OPADs                |    0 |     0 |        16 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
@@ -153,18 +153,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  237 |        Flop & Latch |
-| LUT3     |  101 |                 LUT |
-| LUT2     |   94 |                 LUT |
-| CARRY4   |   48 |          CarryLogic |
-| LUT6     |   37 |                 LUT |
-| LUT4     |   23 |                 LUT |
-| LUT5     |   20 |                 LUT |
-| SRL16E   |   13 |  Distributed Memory |
-| IBUF     |   10 |                  IO |
-| LUT1     |    9 |                 LUT |
-| OBUF     |    8 |                  IO |
-| FDSE     |    8 |        Flop & Latch |
+| FDRE     |  381 |        Flop & Latch |
+| LUT6     |  257 |                 LUT |
+| LUT2     |  224 |                 LUT |
+| LUT5     |  212 |                 LUT |
+| CARRY4   |  180 |          CarryLogic |
+| LUT4     |  141 |                 LUT |
+| LUT3     |  127 |                 LUT |
+| LUT1     |   51 |                 LUT |
+| SRL16E   |   45 |  Distributed Memory |
+| IBUF     |   14 |                  IO |
+| OBUF     |   12 |                  IO |
+| FDSE     |    9 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

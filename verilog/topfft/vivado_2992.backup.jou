@@ -2,16 +2,17 @@
 # Vivado v2019.1.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
-# Start of session at: Fri Sep  6 18:19:16 2019
-# Process ID: 6488
+# Start of session at: Fri Sep  6 17:50:11 2019
+# Process ID: 2992
 # Current directory: C:/fft-parallel4/verilog/topfft
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6612 C:\fft-parallel4\verilog\topfft\topfft.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9360 C:\fft-parallel4\verilog\topfft\topfft.xpr
 # Log file: C:/fft-parallel4/verilog/topfft/vivado.log
 # Journal file: C:/fft-parallel4/verilog/topfft\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/fft-parallel4/verilog/topfft/topfft.xpr
 update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
@@ -22,6 +23,13 @@ close_sim
 launch_simulation
 open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
 source topfft_tb.tcl
+save_wave_config {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+refresh_design
 close_sim
 launch_simulation
 open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
@@ -30,24 +38,4 @@ close_sim
 launch_simulation
 open_wave_config C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg
 source topfft_tb.tcl
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-save_wave_config {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg}
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-save_wave_config {C:/fft-parallel4/verilog/topfft/topfft_tb_behav.wcfg}
-relaunch_sim
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-relaunch_sim
-relaunch_sim
 close_sim

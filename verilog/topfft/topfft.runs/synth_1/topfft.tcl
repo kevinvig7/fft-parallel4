@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/fft-parallel4/verilog/topfft/.Xil/Vivado-4216-Cacuy/incrSyn
+set_param synth.incrementalSynthesisCache {C:/Users/Silicon Photonic/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4368-Cacuy/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7k70tfbv676-1
@@ -47,7 +47,9 @@ read_verilog -library xil_defaultlib {
   C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data3.v
   C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/coeff_data4.v
   C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/contador.v
+  C:/fft-parallel4/verilog/pruebaPF/pruebaPF.srcs/sources_1/new/fixtop_sat.v
   C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/multip.v
+  C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/sat.v
   C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/switch.v
   C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD.v
   C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topD_1.v

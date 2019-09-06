@@ -1,11 +1,11 @@
 %xn= [1+1i,0,1+2i,1,2,4,2+9i,6,1,7i,1i,6i,1,0,1,1i];
 
 
-Nbits=10;
-Nbitsf=9;
+Nbits=4;
+Nbitsf=15;
 z=0;
 
-xn=[1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0];
+xn=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
 
 xn_fx=fi(xn,1,Nbits,Nbitsf);
@@ -42,6 +42,6 @@ fid=fopen ('SalidaFFT.dat','wt'); %guardo un archivo con los coef. cuantizados d
 for i=1:length(out_fx)
     fft_outr=real(out_fx(i));
     fft_outi=imag(out_fx(i));
-    fprintf(fid,[fft_outr.dec fft_outi.dec '\n']);
+    fprintf(fid,[fft_outr.hex fft_outi.hex '\n']);
 end
 fclose(fid);

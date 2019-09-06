@@ -23,7 +23,7 @@
 
 module topfft 
      #(parameter NBITS = 3,
-     parameter NBITScoeff=3,
+     parameter NBITScoeff=4,
        parameter N = 8) // Cantidad de coeficientes en los multiplicadores
      (output [NBITS*2-1:0] fftOut_up,
       output [NBITS*2-1:0] fftOut_down,
@@ -49,23 +49,33 @@ module topfft
  wire [NBITS*2-1:0]   in_up;
  wire [NBITS*2-1:0] in_down;
  
- wire [(NBITS+1)*2-1:0] blq_to_m_up  [0:1];
- wire [(NBITS+1)*2-1:0] blq_to_m_down[0:1];
+ wire [(NBITS+1)*2-1:0] blqI_to_m_up  ;
+ wire [(NBITS+1)*2-1:0] blqI_to_m_down;
+
+ wire [(NBITS+1)*2*2-1:0] m_to_blqII_up  ;
+ wire [(NBITS+1)*2*2-1:0] m_to_blqII_down;
  
- wire [(NBITS+1)*2*2-1:0] m_to_blq_up  [0:1];
- wire [(NBITS+1)*2*2-1:0] m_to_blq_down[0:1];
+ wire [((NBITS+1)*2+1)*2-1:0] blqII_to_m_up;
+ wire [((NBITS+1)*2+1)*2-1:0] blqII_to_m_down;
+ 
+ wire [((NBITS+1)*2+1)*2*2-1:0] m_to_satm_up  ;
+ wire [((NBITS+1)*2+1)*2*2-1:0] m_to_satm_down;
+ 
+ wire [(NBITS*2)-1:0] satm_to_blqIII_up;
+ wire [(NBITS*2)-1:0] satm_to_blqIII_down;
+
+ wire [(NBITS+1)*2-1:0] blqIII_to_m_up  ;
+ wire [(NBITS+1)*2-1:0] blqIII_to_m_down;
+ 
+
+   
+ wire [(NBITS+1)*2*2-1:0] m_to_blqIV_up  ;
+ wire [(NBITS+1)*2*2-1:0] m_to_blqIV_down; 
+   
+ wire [((NBITS+1)*2+1)*2-1:0]   blqIV_to_satout_up;
+ wire [((NBITS+1)*2+1)*2-1:0] blqIV_to_satout_down;
   
- wire [((NBITS+1)*2+1)*2-1:0]   blq_to_mm_up;
- wire [((NBITS+1)*2+1)*2-1:0] blq_to_mm_down;
- 
- wire [((NBITS+1)*2+1)*2*2-1:0] mm_to_sat_up  ;
- wire [((NBITS+1)*2+1)*2*2-1:0] mm_to_sat_down;
-  
- wire [(NBITS*2)-1:0] sat_to_blq_up;
- wire [(NBITS*2)-1:0] sat_to_blq_down;
- 
- wire [((NBITS+1)*2+1)*2-1:0]   blq_to_satout_up;
- wire [((NBITS+1)*2+1)*2-1:0] blq_to_satout_down;
+
  
  wire [NBITS*2-1:0]   satout_up;
  wire [NBITS*2-1:0] satout_down;
@@ -112,35 +122,35 @@ contador
  
  
  coeff0
- #(NBITS+1,N)
+ #(NBITScoeff,N)
       Mcoeff0
      (.coeff_out(coefficientes0),
       .clk(clk),
       .rst(coeffw0_en));
 
  coeff1
- #(NBITS+1,N)
+ #(NBITScoeff,N)
       Mcoeff1
      (.coeff_out(coefficientes1),
       .clk(clk),
       .rst(coeffw12_en));
       
  coeff2
- #(NBITS+1,N)
+ #(NBITScoeff,N)
       Mcoeff2
       (.coeff_out(coefficientes2),
       .clk(clk),
       .rst(coeffw12_en));
       
  coeff3
- #(NBITS+1,N) 
+ #(NBITScoeff,N) 
       Mcoeff3
       (.coeff_out(coefficientes3),
       .clk(clk),
       .rst(coeffw34_en));
       
  coeff4
- #(NBITS+1,N) 
+ #(NBITScoeff,N) 
       Mcoeff4
       (.coeff_out(coefficientes4),
       .clk(clk),
@@ -175,15 +185,13 @@ contador
 /////////////////////////////////      
        
       
-   assign m_to_blq_up[0] = $signed(blq_to_m_up[0]); ////expandir signo aqui
- 
+
 //producto 0
  multip
  #(NBITS+1,NBITScoeff)
        M0
-       (
-        .result(m_to_blq_down[0]),
-        .muestra(blq_to_m_down[0]),
+       (.result(m_to_blqII_down),
+        .muestra(blqI_to_m_down),
         .coeff(coefficientes0));
         
              
@@ -191,15 +199,15 @@ contador
  multip
  #((NBITS+1)*2+1,NBITScoeff) 
         M1
-        (.result(mm_to_sat_up),
-         .muestra(blq_to_mm_up),
+        (.result(m_to_satm_up),
+         .muestra(blqII_to_m_up),
          .coeff(coefficientes1));
 
  multip
  #((NBITS+1)*2+1,NBITScoeff) 
         M2
-        (.result(mm_to_sat_down),
-         .muestra(blq_to_mm_down),
+        (.result(m_to_satm_down),
+         .muestra(blqII_to_m_down),
          .coeff(coefficientes2));
 
         
@@ -207,37 +215,41 @@ contador
  multip
  #(NBITS+1,NBITScoeff) 
         M3
-       (.result(m_to_blq_up[1]),
-        .muestra(blq_to_m_up[1]),
+       (.result(m_to_blqIV_up),
+        .muestra(blqIII_to_m_up),
         .coeff(coefficientes3));
         
  multip
  #(NBITS+1,NBITScoeff) 
         M4
-       (.result(m_to_blq_down[1]),
-        .muestra(blq_to_m_down[1]),
+       (.result(m_to_blqIV_down),
+        .muestra(blqIII_to_m_down),
         .coeff(coefficientes4));
     
 //Blq I
 Blq
 #(4,4,NBITS) 
     Blq_BFI
-       (.BlqOut_up(blq_to_m_up[0]),
-        .BlqOut_down(blq_to_m_down[0]),
-        .BlqIn_up(in_up),
-        .BlqIn_down(in_down),
+       (.BlqOut_up    (blqI_to_m_up),
+        .BlqOut_down(blqI_to_m_down),
+        .BlqIn_up            (in_up),
+        .BlqIn_down        (in_down),
         .clk(clk),
         .rst(rst),
         .ctrl(ctrl_1));  
 
 //Blq II
+assign m_to_blqII_up[(NBITS+1)*2*2-1:NBITS-1] = $signed(blqI_to_m_up[(NBITS+1)*2-1:NBITS-1]); ////expandir signo aqui
+assign                 m_to_blqII_up[NBITS:0] = $signed(blqI_to_m_up[NBITS:0]);//expandir signo aqui
+
+
 Blq
 #(2,2,(NBITS+1)*2)
      Blq_BFII
-      (.BlqOut_up(blq_to_mm_up),
-       .BlqOut_down(blq_to_mm_down),
-       .BlqIn_up(m_to_blq_up[0]),
-       .BlqIn_down(m_to_blq_down[0]),
+      (.BlqOut_up      (blqII_to_m_up),
+       .BlqOut_down  (blqII_to_m_down),
+       .BlqIn_up       (m_to_blqII_up),
+       .BlqIn_down   (m_to_blqII_down),
        .clk(clk),
        .rst(rst),
        .ctrl(ctrl_2)); 
@@ -246,10 +258,10 @@ Blq
 Blq
 #(1,1,NBITS) 
     Blq_BFIII
-    (.BlqOut_up(blq_to_m_up[1]),
-     .BlqOut_down(blq_to_m_down[1]),
-     .BlqIn_up(sat_to_blq_up),
-     .BlqIn_down(sat_to_blq_down),
+    (.BlqOut_up    (blqIII_to_m_up),
+     .BlqOut_down(blqIII_to_m_down),
+     .BlqIn_up      (satm_to_blqIII_up),
+     .BlqIn_down  (satm_to_blqIII_down),
      .clk(clk),
      .rst(rst),
      .ctrl(ctrl_3));
@@ -258,10 +270,10 @@ Blq
 Blq
 #(4,4,(NBITS+1)*2) 
     Blq_BFIV
-   (.BlqOut_up(blq_to_satout_up),
-    .BlqOut_down(blq_to_satout_down),
-    .BlqIn_up(m_to_blq_up[1]),
-    .BlqIn_down(m_to_blq_up[1]),
+   (.BlqOut_up    (blqIV_to_satout_up),
+    .BlqOut_down(blqIV_to_satout_down),
+    .BlqIn_up          (m_to_blqIV_up),
+    .BlqIn_down      (m_to_blqIV_down),
     .clk(clk),
     .rst(rst),
     .ctrl(ctrl_4));  
@@ -273,37 +285,36 @@ Blq
          #(.NBITS_IN(((NBITS+1)*2+1)*2),
            .NBITS_OUT(NBITS))
         saturacion_m_up
-          (.sat_in(mm_to_sat_up),
-           .sat_out(sat_to_blq_up));
+          (.sat_out(satm_to_blqIII_up),
+           .sat_in  (m_to_satm_up));
            
            
           fixtop_sat
          #(.NBITS_IN(((NBITS+1)*2+1)*2),
            .NBITS_OUT(NBITS))
         saturacion_m_down
-          (.sat_in(mm_to_sat_down),
-           .sat_out(sat_to_blq_down));
-
-          
+          (.sat_out(satm_to_blqIII_down),
+           .sat_in (m_to_satm_down));
+    
  ///////////////////////////////
    
                   
 
-  /////Bloque de saturacion final
+/////Bloque de saturacion final
        fixtop_sat
          #(.NBITS_IN((NBITS+1)*2+1),
           .NBITS_OUT(NBITS))
        saturacion_out_up
-         (.sat_in(blq_to_satout_up),
-          .sat_out(satout_up));
+         (.sat_out(satout_up),
+          .sat_in(blqIV_to_satout_up));
        
        
        fixtop_sat
         #(.NBITS_IN((NBITS+1)*2+1),
            .NBITS_OUT(NBITS))
         saturacion_out_down
-          (.sat_in(blq_to_satout_down),
-          .sat_out(satout_down));
+         (.sat_out(satout_down),
+          .sat_in(blqIV_to_satout_down));
 
 ///////////////////////////////      
     

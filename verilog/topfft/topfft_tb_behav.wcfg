@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="45812501fs"></ZoomEndTime>
-      <Cursor1Time time="31188000fs"></Cursor1Time>
+      <ZoomStartTime time="23750000fs"></ZoomStartTime>
+      <ZoomEndTime time="89700001fs"></ZoomEndTime>
+      <Cursor1Time time="47400000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="181"></NameColumnWidth>
-      <ValueColumnWidth column_width="117"></ValueColumnWidth>
+      <ValueColumnWidth column_width="101"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="28" />
    <wvobject fp_name="/topfft_tb/N" type="array">
@@ -48,16 +48,16 @@
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/fftIn_up" type="array">
-      <obj_property name="ElementShortName">fftIn_up[19:0]</obj_property>
-      <obj_property name="ObjectShortName">fftIn_up[19:0]</obj_property>
+      <obj_property name="ElementShortName">fftIn_up[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fftIn_up[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/fftIn_down" type="array">
-      <obj_property name="ElementShortName">fftIn_down[19:0]</obj_property>
-      <obj_property name="ObjectShortName">fftIn_down[19:0]</obj_property>
+      <obj_property name="ElementShortName">fftIn_down[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fftIn_down[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
@@ -72,17 +72,17 @@
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/fftOut_up" type="array">
-      <obj_property name="ElementShortName">fftOut_up[19:0]</obj_property>
-      <obj_property name="ObjectShortName">fftOut_up[19:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">fftOut_up[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut_up[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/fftOut_down" type="array">
-      <obj_property name="ElementShortName">fftOut_down[19:0]</obj_property>
-      <obj_property name="ObjectShortName">fftOut_down[19:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">fftOut_down[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut_down[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
@@ -102,43 +102,216 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_up" type="array">
-         <obj_property name="ElementShortName">BFIn_up[19:0]</obj_property>
-         <obj_property name="ObjectShortName">BFIn_up[19:0]</obj_property>
-         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="ElementShortName">BFIn_up[7:0]</obj_property>
+         <obj_property name="ObjectShortName">BFIn_up[7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="vbus97" type="vbus">
+         <obj_property name="label">BFI_in_up_div</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="vbus87" type="vbus">
+            <obj_property name="label">real</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_up[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_up[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_up[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus98" type="vbus">
+            <obj_property name="label">imag</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_up[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_up[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_up[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_down" type="array">
-         <obj_property name="ElementShortName">BFIn_down[19:0]</obj_property>
-         <obj_property name="ObjectShortName">BFIn_down[19:0]</obj_property>
-         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="ElementShortName">BFIn_down[7:0]</obj_property>
+         <obj_property name="ObjectShortName">BFIn_down[7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="vbus110" type="vbus">
+         <obj_property name="label">BFII_in_down_div</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="vbus109" type="vbus">
+            <obj_property name="label">real</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_down[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_down[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_down[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus108" type="vbus">
+            <obj_property name="label">imag</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_down[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_down[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFIn_down[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up" type="array">
-         <obj_property name="ElementShortName">BFOut_up[21:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_up[21:0]</obj_property>
-         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="ElementShortName">BFOut_up[9:0]</obj_property>
+         <obj_property name="ObjectShortName">BFOut_up[9:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
+      <wvobject fp_name="vbus117" type="vbus">
+         <obj_property name="label">BFI_out_up_div</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="vbus119" type="vbus">
+            <obj_property name="label">real</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up[7]" type="logic">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up[6]" type="logic">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus120" type="vbus">
+            <obj_property name="label">imag</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_up[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down" type="array">
-         <obj_property name="ElementShortName">BFOut_down[21:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_down[21:0]</obj_property>
-         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="ElementShortName">BFOut_down[9:0]</obj_property>
+         <obj_property name="ObjectShortName">BFOut_down[9:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="vbus118" type="vbus">
+         <obj_property name="label">BFI_out_down_div</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="vbus119" type="vbus">
+            <obj_property name="label">real</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down[7]" type="logic">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down[6]" type="logic">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus120" type="vbus">
+            <obj_property name="label">imag</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/topfft_tb/dut/Blq_BFI/Butterfly/BFOut_down[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
       </wvobject>
    </wvobject>
    <wvobject fp_name="/topfft_tb/dut/Mcoeff0/coeff_out" type="array">
-      <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
-      <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="ElementShortName">coeff_out[9:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_out[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
@@ -157,21 +330,25 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/Mcoeff0/rst" type="logic">
          <obj_property name="ElementShortName">rst</obj_property>
          <obj_property name="ObjectShortName">rst</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M0/muestra" type="array">
-         <obj_property name="ElementShortName">muestra[21:0]</obj_property>
-         <obj_property name="ObjectShortName">muestra[21:0]</obj_property>
+         <obj_property name="ElementShortName">muestra[9:0]</obj_property>
+         <obj_property name="ObjectShortName">muestra[9:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M0/coeff" type="array">
-         <obj_property name="ElementShortName">coeff[21:0]</obj_property>
-         <obj_property name="ObjectShortName">coeff[21:0]</obj_property>
+         <obj_property name="ElementShortName">coeff[9:0]</obj_property>
+         <obj_property name="ObjectShortName">coeff[9:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M0/result" type="array">
-         <obj_property name="ElementShortName">result[43:0]</obj_property>
-         <obj_property name="ObjectShortName">result[43:0]</obj_property>
+         <obj_property name="ElementShortName">result[19:0]</obj_property>
+         <obj_property name="ObjectShortName">result[19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="divider" fp_name="divider577">
@@ -204,34 +381,35 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFII/Butterfly/BFIn_up" type="array">
-         <obj_property name="ElementShortName">BFIn_up[43:0]</obj_property>
-         <obj_property name="ObjectShortName">BFIn_up[43:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="ElementShortName">BFIn_up[19:0]</obj_property>
+         <obj_property name="ObjectShortName">BFIn_up[19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFII/Butterfly/BFIn_down" type="array">
-         <obj_property name="ElementShortName">BFIn_down[43:0]</obj_property>
-         <obj_property name="ObjectShortName">BFIn_down[43:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="ElementShortName">BFIn_down[19:0]</obj_property>
+         <obj_property name="ObjectShortName">BFIn_down[19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFII/Butterfly/BFOut_up" type="array">
-         <obj_property name="ElementShortName">BFOut_up[45:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_up[45:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="ElementShortName">BFOut_up[21:0]</obj_property>
+         <obj_property name="ObjectShortName">BFOut_up[21:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFII/Butterfly/BFOut_down" type="array">
-         <obj_property name="ElementShortName">BFOut_down[45:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_down[45:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="ElementShortName">BFOut_down[21:0]</obj_property>
+         <obj_property name="ObjectShortName">BFOut_down[21:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
@@ -249,16 +427,16 @@
          <obj_property name="ObjectShortName">rst</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M1/muestra" type="array">
-         <obj_property name="ElementShortName">muestra[45:0]</obj_property>
-         <obj_property name="ObjectShortName">muestra[45:0]</obj_property>
+         <obj_property name="ElementShortName">muestra[21:0]</obj_property>
+         <obj_property name="ObjectShortName">muestra[21:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M1/coeff" type="array">
-         <obj_property name="ElementShortName">coeff[21:0]</obj_property>
-         <obj_property name="ObjectShortName">coeff[21:0]</obj_property>
+         <obj_property name="ElementShortName">coeff[9:0]</obj_property>
+         <obj_property name="ObjectShortName">coeff[9:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M1/result" type="array">
-         <obj_property name="ElementShortName">result[91:0]</obj_property>
-         <obj_property name="ObjectShortName">result[91:0]</obj_property>
+         <obj_property name="ElementShortName">result[43:0]</obj_property>
+         <obj_property name="ObjectShortName">result[43:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group660" type="group">
@@ -273,16 +451,16 @@
          <obj_property name="ObjectShortName">rst</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M2/muestra" type="array">
-         <obj_property name="ElementShortName">muestra[45:0]</obj_property>
-         <obj_property name="ObjectShortName">muestra[45:0]</obj_property>
+         <obj_property name="ElementShortName">muestra[21:0]</obj_property>
+         <obj_property name="ObjectShortName">muestra[21:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M2/coeff" type="array">
-         <obj_property name="ElementShortName">coeff[21:0]</obj_property>
-         <obj_property name="ObjectShortName">coeff[21:0]</obj_property>
+         <obj_property name="ElementShortName">coeff[9:0]</obj_property>
+         <obj_property name="ObjectShortName">coeff[9:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M2/result" type="array">
-         <obj_property name="ElementShortName">result[91:0]</obj_property>
-         <obj_property name="ObjectShortName">result[91:0]</obj_property>
+         <obj_property name="ElementShortName">result[43:0]</obj_property>
+         <obj_property name="ObjectShortName">result[43:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
    </wvobject>
@@ -293,33 +471,34 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/saturacion_m_up/sat_out" type="array">
-         <obj_property name="ElementShortName">sat_out[19:0]</obj_property>
-         <obj_property name="ObjectShortName">sat_out[19:0]</obj_property>
+         <obj_property name="ElementShortName">sat_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_out[7:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/saturacion_m_up/sat_in" type="array">
-         <obj_property name="ElementShortName">sat_in[91:0]</obj_property>
-         <obj_property name="ObjectShortName">sat_in[91:0]</obj_property>
+         <obj_property name="ElementShortName">sat_in[43:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_in[43:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/saturacion_m_down/sat_out" type="array">
-         <obj_property name="ElementShortName">sat_out[19:0]</obj_property>
-         <obj_property name="ObjectShortName">sat_out[19:0]</obj_property>
+         <obj_property name="ElementShortName">sat_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_out[7:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/saturacion_m_down/sat_in" type="array">
-         <obj_property name="ElementShortName">sat_in[91:0]</obj_property>
-         <obj_property name="ObjectShortName">sat_in[91:0]</obj_property>
+         <obj_property name="ElementShortName">sat_in[43:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_in[43:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
@@ -343,20 +522,20 @@
       <obj_property name="radix_otherWidth">0</obj_property>
       <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/Butterfly/BFIn_up" type="array">
-         <obj_property name="ElementShortName">BFIn_up[19:0]</obj_property>
-         <obj_property name="ObjectShortName">BFIn_up[19:0]</obj_property>
+         <obj_property name="ElementShortName">BFIn_up[7:0]</obj_property>
+         <obj_property name="ObjectShortName">BFIn_up[7:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/Butterfly/BFIn_down" type="array">
-         <obj_property name="ElementShortName">BFIn_down[19:0]</obj_property>
-         <obj_property name="ObjectShortName">BFIn_down[19:0]</obj_property>
+         <obj_property name="ElementShortName">BFIn_down[7:0]</obj_property>
+         <obj_property name="ObjectShortName">BFIn_down[7:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/Butterfly/BFOut_up" type="array">
-         <obj_property name="ElementShortName">BFOut_up[21:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_up[21:0]</obj_property>
+         <obj_property name="ElementShortName">BFOut_up[9:0]</obj_property>
+         <obj_property name="ObjectShortName">BFOut_up[9:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIII/Butterfly/BFOut_down" type="array">
-         <obj_property name="ElementShortName">BFOut_down[21:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_down[21:0]</obj_property>
+         <obj_property name="ElementShortName">BFOut_down[9:0]</obj_property>
+         <obj_property name="ObjectShortName">BFOut_down[9:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group684" type="group">
@@ -372,16 +551,16 @@
          <obj_property name="ObjectShortName">rst</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M3/muestra" type="array">
-         <obj_property name="ElementShortName">muestra[21:0]</obj_property>
-         <obj_property name="ObjectShortName">muestra[21:0]</obj_property>
+         <obj_property name="ElementShortName">muestra[9:0]</obj_property>
+         <obj_property name="ObjectShortName">muestra[9:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M3/coeff" type="array">
-         <obj_property name="ElementShortName">coeff[21:0]</obj_property>
-         <obj_property name="ObjectShortName">coeff[21:0]</obj_property>
+         <obj_property name="ElementShortName">coeff[9:0]</obj_property>
+         <obj_property name="ObjectShortName">coeff[9:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M3/result" type="array">
-         <obj_property name="ElementShortName">result[43:0]</obj_property>
-         <obj_property name="ObjectShortName">result[43:0]</obj_property>
+         <obj_property name="ElementShortName">result[19:0]</obj_property>
+         <obj_property name="ObjectShortName">result[19:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group685" type="group">
@@ -397,16 +576,16 @@
          <obj_property name="ObjectShortName">rst</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M4/muestra" type="array">
-         <obj_property name="ElementShortName">muestra[21:0]</obj_property>
-         <obj_property name="ObjectShortName">muestra[21:0]</obj_property>
+         <obj_property name="ElementShortName">muestra[9:0]</obj_property>
+         <obj_property name="ObjectShortName">muestra[9:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M4/coeff" type="array">
-         <obj_property name="ElementShortName">coeff[21:0]</obj_property>
-         <obj_property name="ObjectShortName">coeff[21:0]</obj_property>
+         <obj_property name="ElementShortName">coeff[9:0]</obj_property>
+         <obj_property name="ObjectShortName">coeff[9:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/M4/result" type="array">
-         <obj_property name="ElementShortName">result[43:0]</obj_property>
-         <obj_property name="ObjectShortName">result[43:0]</obj_property>
+         <obj_property name="ElementShortName">result[19:0]</obj_property>
+         <obj_property name="ObjectShortName">result[19:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="divider" fp_name="divider693">
@@ -426,32 +605,32 @@
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/Butterfly/BFIn_up" type="array">
-         <obj_property name="ElementShortName">BFIn_up[43:0]</obj_property>
-         <obj_property name="ObjectShortName">BFIn_up[43:0]</obj_property>
+         <obj_property name="ElementShortName">BFIn_up[19:0]</obj_property>
+         <obj_property name="ObjectShortName">BFIn_up[19:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/Butterfly/BFIn_down" type="array">
-         <obj_property name="ElementShortName">BFIn_down[43:0]</obj_property>
-         <obj_property name="ObjectShortName">BFIn_down[43:0]</obj_property>
+         <obj_property name="ElementShortName">BFIn_down[19:0]</obj_property>
+         <obj_property name="ObjectShortName">BFIn_down[19:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/Butterfly/BFOut_up" type="array">
-         <obj_property name="ElementShortName">BFOut_up[45:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_up[45:0]</obj_property>
+         <obj_property name="ElementShortName">BFOut_up[21:0]</obj_property>
+         <obj_property name="ObjectShortName">BFOut_up[21:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/Blq_BFIV/Butterfly/BFOut_down" type="array">
-         <obj_property name="ElementShortName">BFOut_down[45:0]</obj_property>
-         <obj_property name="ObjectShortName">BFOut_down[45:0]</obj_property>
+         <obj_property name="ElementShortName">BFOut_down[21:0]</obj_property>
+         <obj_property name="ObjectShortName">BFOut_down[21:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
@@ -467,35 +646,64 @@
       <obj_property name="radix_fractionWidth">10</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
       <wvobject fp_name="/topfft_tb/dut/saturacion_out_up/sat_in" type="array">
-         <obj_property name="ElementShortName">sat_in[45:0]</obj_property>
-         <obj_property name="ObjectShortName">sat_in[45:0]</obj_property>
+         <obj_property name="ElementShortName">sat_in[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_in[21:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/saturacion_out_down/sat_in" type="array">
-         <obj_property name="ElementShortName">sat_in[45:0]</obj_property>
-         <obj_property name="ObjectShortName">sat_in[45:0]</obj_property>
+         <obj_property name="ElementShortName">sat_in[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_in[21:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/saturacion_out_up/sat_out" type="array">
-         <obj_property name="ElementShortName">sat_out[19:0]</obj_property>
-         <obj_property name="ObjectShortName">sat_out[19:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">sat_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_out[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/saturacion_out_down/sat_out" type="array">
-         <obj_property name="ElementShortName">sat_out[19:0]</obj_property>
-         <obj_property name="ObjectShortName">sat_out[19:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">sat_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_out[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">10</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider450">
+         <obj_property name="label">prueba redondeo</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/saturacion_m_up/sat_real/sat_in" type="array">
+         <obj_property name="ElementShortName">sat_in[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_in[21:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">0</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/saturacion_m_up/sat_real/redondeo" type="array">
+         <obj_property name="ElementShortName">redondeo[22:0]</obj_property>
+         <obj_property name="ObjectShortName">redondeo[22:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">0</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/saturacion_m_up/sat_real/sat_out" type="array">
+         <obj_property name="ElementShortName">sat_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">sat_out[3:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">0</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
    </wvobject>
