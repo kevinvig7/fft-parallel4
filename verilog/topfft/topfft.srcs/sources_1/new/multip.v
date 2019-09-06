@@ -21,29 +21,31 @@
 
 
 module multip
-#(parameter Nbits=2)
- (output[Nbits*2*2-1:0] result,
-  input [Nbits*2-1:0] muestra,
-  input [Nbits*2-1:0] coeff);
+#(parameter NBITS=2,
+parameter NBITScoeff=3)
+ (output[NBITS*2*2-1:0] result,
+  input [NBITS*2-1:0] muestra,
+  input [NBITScoeff*2-1:0] coeff);
 
 
-    wire signed [Nbits-1:0] m_r;
-    wire signed [Nbits-1:0] m_i;
+
+    wire signed [NBITS-1:0] m_r;
+    wire signed [NBITS-1:0] m_i;
     
-    wire signed [Nbits-1:0] c_r;
-    wire signed [Nbits-1:0] c_i;
+    wire signed [NBITS-1:0] c_r;
+    wire signed [NBITS-1:0] c_i;
     
     
-assign m_r = muestra[Nbits*2-1:Nbits]; //Real
-assign m_i = muestra[Nbits-1:0];        //Img
+assign m_r = muestra[NBITS*2-1:NBITS]; //Real
+assign m_i = muestra[NBITS-1:0];        //Img
     
-assign c_r = coeff[Nbits*2-1:Nbits]; //Real
-assign c_i = coeff[Nbits-1:0];        //Img
+assign c_r = $signed(coeff[NBITScoeff*2-1:NBITScoeff]); //Real
+assign c_i = $signed(coeff[NBITScoeff-1:0]);        //Img
         
     
     
-  assign result[Nbits*2*2-1:Nbits*2] = m_r*c_r-m_i*c_i;   //Real
-  assign result[Nbits*2-1:0] = m_r*c_i+m_i*c_r;         //Img
+  assign result[NBITS*2*2-1:NBITS*2] = m_r*c_r-m_i*c_i;   //Real
+  assign result[NBITS*2-1:0] = m_r*c_i+m_i*c_r;         //Img
  
     
     

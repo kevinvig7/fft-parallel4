@@ -71,6 +71,15 @@ integer scan_impar; // file handler
 
 reg [Nbits*2-1:0] captured_data;
 
+wire [3:0] aaa;
+
+wire [3:0] sdas;
+
+
+assign sdas = 4'b0111;
+
+assign aaa = $signed(sdas);
+
 `define NULL 0
 
 initial begin

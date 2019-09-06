@@ -172,12 +172,6 @@ contador
       .rst(rst));         
       
 /////////////////////////////////      
-      
-            
-// always@(*)
-//  begin 
-//    extended <= $signed(unextended);
-//  end
        
       
    assign m_to_blq_up[0] = $signed(blq_to_m_up[0]); ////expandir signo aqui
@@ -201,7 +195,7 @@ contador
          .coeff(coefficientes1));
 
  multip
- #((NBITS+1)*2) 
+ #((NBITS+1)*2+1) 
         M2
         (.result(mm_to_sat_down),
          .muestra(blq_to_mm_down),
@@ -273,10 +267,9 @@ Blq
 
 
 
-
 /////Bloque de saturacion intermedio  
        fixtop_sat
-         #(.NBITS_IN((NBITS+1)*2),
+         #(.NBITS_IN(((NBITS+1)*2+1)*2),
            .NBITS_OUT(NBITS))
         saturacion_m_up
           (.sat_in(mm_to_sat_up),
@@ -284,33 +277,16 @@ Blq
            
            
           fixtop_sat
-         #(.NBITS_IN((NBITS+1)*2),
+         #(.NBITS_IN(((NBITS+1)*2+1)*2),
            .NBITS_OUT(NBITS))
         saturacion_m_down
           (.sat_in(mm_to_sat_down),
            .sat_out(sat_to_blq_down));
 
-           
+          
  ///////////////////////////////
-                
-        
-///////Bloque de saturacion 1 2
-//        fixtop_sat
-//         #(.NBITS_IN((NBITS+1)*2),
-//           .NBITS_OUT(NBITS))
-//        saturacion1_up
-//          (.sat_in(sat1_up),
-//           .sat_out(blq_connect_up[4]));
-           
-//           fixtop_sat
-//         #(.NBITS_IN((NBITS+1)*2),
-//           .NBITS_OUT(NBITS))
-//        saturacion1_down
-//          (.sat_in(sat1_down),
-//           .sat_out(blq_connect_down[4]));
-/////////////////////////////////        
-     
-             
+   
+                  
 
   /////Bloque de saturacion final
        fixtop_sat
