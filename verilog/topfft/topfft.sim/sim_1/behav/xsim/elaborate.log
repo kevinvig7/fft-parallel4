@@ -3,25 +3,41 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto edd69ef434ce40f1b5d3062577901c53 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot topfft_tb_behav xil_defaultlib.topfft_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:167]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:176]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:183]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 6 for port 'result' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:191]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:192]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 6 for port 'result' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:198]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:199]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'BFOut_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:70]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'BFOut_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:71]
-WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 4 for port 'BlqOut_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:242]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'BlqOut_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:243]
-WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 14 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:258]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 8 for port 'result' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:190]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:191]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 8 for port 'coeff' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:192]
+WARNING: [VRFC 10-3091] actual bit length 28 differs from formal bit length 16 for port 'result' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:199]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 15 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:200]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 16 for port 'coeff' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:201]
+WARNING: [VRFC 10-3091] actual bit length 28 differs from formal bit length 14 for port 'result' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:206]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 13 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:207]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 14 for port 'coeff' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:208]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 8 for port 'result' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:215]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:216]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 8 for port 'coeff' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:217]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 8 for port 'result' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:222]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'muestra' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:223]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 8 for port 'coeff' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:224]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'BlqOut_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:230]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'BlqOut_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:231]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 6 for port 'BFOut_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:70]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 6 for port 'BFOut_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/Blq.v:71]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 4 for port 'BlqOut_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:242]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 4 for port 'BlqOut_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:243]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 4 for port 'BlqIn_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:244]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 4 for port 'BlqIn_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:245]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'BlqOut_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:254]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'BlqOut_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:255]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 4 for port 'BlqOut_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:266]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 4 for port 'BlqOut_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:267]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 4 for port 'BlqIn_up' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:268]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 4 for port 'BlqIn_down' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:269]
+WARNING: [VRFC 10-3091] actual bit length 28 differs from formal bit length 14 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:282]
 WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'sat_in' [C:/fft-parallel4/verilog/pruebaPF/pruebaPF.srcs/sources_1/new/fixtop_sat.v:45]
 WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'sat_in' [C:/fft-parallel4/verilog/pruebaPF/pruebaPF.srcs/sources_1/new/fixtop_sat.v:54]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 14 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:266]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 14 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:278]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 14 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:285]
-WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 16 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:296]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 16 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:304]
+WARNING: [VRFC 10-3091] actual bit length 28 differs from formal bit length 14 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:290]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 16 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:320]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 16 for port 'sat_in' [C:/fft-parallel4/verilog/topfft/topfft.srcs/sources_1/new/topfft.v:328]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -29,10 +45,6 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.contador(N=4)
 Compiling module xil_defaultlib.contador(N=2)
 Compiling module xil_defaultlib.contador
-Compiling module xil_defaultlib.D_reg_1
-Compiling module xil_defaultlib.topD_1_default
-Compiling module xil_defaultlib.topD_1(ND=6)
-Compiling module xil_defaultlib.topD_1(ND=7)
 Compiling module xil_defaultlib.coeff_data0
 Compiling module xil_defaultlib.coeff0(Nbits=3)
 Compiling module xil_defaultlib.coeff_data1
@@ -43,7 +55,13 @@ Compiling module xil_defaultlib.coeff_data3
 Compiling module xil_defaultlib.coeff3(Nbits=3)
 Compiling module xil_defaultlib.coeff_data4
 Compiling module xil_defaultlib.coeff4(Nbits=3)
-Compiling module xil_defaultlib.multip
+Compiling module xil_defaultlib.D_reg_1
+Compiling module xil_defaultlib.topD_1_default
+Compiling module xil_defaultlib.topD_1(ND=6)
+Compiling module xil_defaultlib.topD_1(ND=7)
+Compiling module xil_defaultlib.multip(Nbits=3)
+Compiling module xil_defaultlib.multip(Nbits=7)
+Compiling module xil_defaultlib.multip(Nbits=6)
 Compiling module xil_defaultlib.D_reg
 Compiling module xil_defaultlib.topD_default
 Compiling module xil_defaultlib.switch
