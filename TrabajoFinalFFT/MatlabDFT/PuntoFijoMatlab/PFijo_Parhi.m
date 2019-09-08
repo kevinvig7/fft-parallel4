@@ -21,12 +21,12 @@ clc; close all; clear;
 % Directorio a las funciones en PFijo, PFlotante
 addpath('PFijoFunciones');
 R = Rutas();
-addpath(R.R2);
+addpath(R.R1);
 
 % Preferencia de visualizacion de la funcion 'fi()'
 fipref('NumericTypeDisplay','short',  'FimathDisplay','none');
 Fmath = fimath('RoundingMethod','Floor',  'OverflowAction','Saturate');
-onPlot = 0;
+onPlot = 1;
 
 %% Muestras de entrada en Punto Fijo:
 N = 128;
@@ -59,13 +59,6 @@ paralelo = 4;
 % Salida DFT Paralelo 4
 Xsalida = zeros(paralelo, length(xn));
 Xsalida = [Xsalida, zeros(paralelo,delay_line)];
-X1 = Xsalida;
-X2 = Xsalida;
-X3 = Xsalida;
-X4 = Xsalida;
-X5 = Xsalida;
-X6 = Xsalida;
-X7 = Xsalida;
 
 % LINE 1
 datos_line1 = Line1;
@@ -664,7 +657,7 @@ for clk = (0:length(datos_line1)-1)
     end  
     % Llave 6
     control6 = o_frec6;
-   [out_switch6(1).line1, out_switch6(2).line1] = llave(out_reg6(1).line1, out_reg6(2).line1, control6);
+    [out_switch6(1).line1, out_switch6(2).line1] = llave(out_reg6(1).line1, out_reg6(2).line1, control6);
 
     % Delay 16D2
     InReg16D2p(1) = out_switch6(1).line1;
@@ -675,7 +668,9 @@ for clk = (0:length(datos_line1)-1)
     out_reg6(2).line1 = out_switch6(2).line1; 
 
     %## STAGE_7  
-   [bf7(1).line1, bf7(2).line1] = BF(out_reg6(1).line1, out_reg6(2).line1);
+    [bf7(1).line1, bf7(2).line1] = BF(out_reg6(1).line1, out_reg6(2).line1);
+    % Bloque de Cuantizacion 7A/B 
+    [c7A, c7B] = Cuantificacion(bf7(1).line1,S,Wm7A,Fm7A,  bf7(2).line1,S,Wm7B,Fm7B, en7);  
     
     %% LINE2    
     %## STAGE 1
@@ -870,7 +865,7 @@ for clk = (0:length(datos_line1)-1)
     out_reg6(2).line2 = fi(OutReg16D1p_l2,S,get(c6Bl2,'WordLength'),get(c6Bl2,'FractionLength'),Fmath);     
  
     % Llave 6
-   [out_switch6(1).line2, out_switch6(2).line2] = llave(out_reg6(1).line2, out_reg6(2).line2, control6);
+    [out_switch6(1).line2, out_switch6(2).line2] = llave(out_reg6(1).line2, out_reg6(2).line2, control6);
 
     % Delay 16D2
     InReg16D2p_l2(1) = out_switch6(1).line2;
@@ -881,24 +876,10 @@ for clk = (0:length(datos_line1)-1)
     out_reg6(2).line2 = out_switch6(2).line2; 
 
     %## STAGE_7  
-   [bf7(1).line2, bf7(2).line2] = BF(out_reg6(1).line2, out_reg6(2).line2);
-     
-    %% Salida DFT Paralelo 4
-    % Bloque de Cuantizacion 7A/B 
-    [c7A,   c7B]   = Cuantificacion(bf7(1).line1,S,Wm7A,Fm7A,  bf7(2).line1,S,Wm7B,Fm7B, en7);
+    [bf7(1).line2, bf7(2).line2] = BF(out_reg6(1).line2, out_reg6(2).line2);
+    % Bloque de Cuantizacion 7A/B
     [c7Al2, c7Bl2] = Cuantificacion(bf7(1).line2,S,Wm7A,Fm7A,  bf7(2).line2,S,Wm7B,Fm7B, en7);
         
-    % Datos de salidas de las distintas etapas  
-    X1(:,clk+1) = [c1A.double;c1B.double;  c1Al2.double;c1Bl2.double];
-    X2(:,clk+1) = [c2A.double;c2B.double;  c3Al2.double;c2Bl2.double];
-    X3(:,clk+1) = [c3A.double;c3B.double;  c3Al2.double;c3Bl2.double];
-    X4(:,clk+1) = [c4A.double;c4B.double;  c4Al2.double;c4Bl2.double];
-    X5(:,clk+1) = [c5A.double;c5B.double;  c5Al2.double;c5Bl2.double];
-    X6(:,clk+1) = [c6A.double;c6B.double;  c6Al2.double;c6Bl2.double];
-    X7(:,clk+1) = [c7A.double;c7B.double;  c7Al2.double;c7Bl2.double];
-
-    Xsalida(:,clk+1) = [c7A.double;c7B.double;  c7Al2.double;c7Bl2.double];
-    
     %% Actualizo Todos los Registros del LINE 1 A/B
     [Lat16D1,  InReg16D1]  = RegUp(OutLat16D1,  InReg16D1);
     [Lat16D2,  InReg16D2]  = RegUp(OutLat16D2,  InReg16D2);
@@ -925,9 +906,50 @@ for clk = (0:length(datos_line1)-1)
     [Lat1D1_l2,   InReg1D1_l2]   = RegUp(OutLat1D1_l2,   InReg1D1_l2);
     [Lat1D2_l2,   InReg1D2_l2]   = RegUp(OutLat1D2_l2,   InReg1D2_l2);
     [Lat16D1p_l2, InReg16D1p_l2] = RegUp(OutLat16D1p_l2, InReg16D1p_l2);
-    [Lat16D2p_l2, InReg16D2p_l2] = RegUp(OutLat16D2p_l2, InReg16D2p_l2);    
-end
+    [Lat16D2p_l2, InReg16D2p_l2] = RegUp(OutLat16D2p_l2, InReg16D2p_l2);   
+    
+    %% Salida DFT Paralelo 4  
+    % Salida representada en su forma Flotante del ultimo Stage 7
+    Xsalida(:,clk+1) = [c7A.double;c7B.double;  c7Al2.double;c7Bl2.double];
+    
+    % Estructuras que van almacenando las salidas de los cuantizadores por cada 
+    % etapa a medida que avanza el reloj.
+    Xs1(1).ck(clk+1) = c1A;
+    Xs1(2).ck(clk+1) = c1B; 
+    Xs1(3).ck(clk+1) = c1Al2;
+    Xs1(4).ck(clk+1) = c1Bl2;  
+    
+    Xs2(1).ck(clk+1) = c2A;
+    Xs2(2).ck(clk+1) = c2B;
+    Xs2(3).ck(clk+1) = c2Al2;
+    Xs2(4).ck(clk+1) = c2Bl2; 
+    
+    Xs3(1).ck(clk+1) = c3A;
+    Xs3(2).ck(clk+1) = c3B;
+    Xs3(3).ck(clk+1) = c3Al2;
+    Xs3(4).ck(clk+1) = c3Bl2;  
+    
+    Xs4(1).ck(clk+1) = c4A;
+    Xs4(2).ck(clk+1) = c4B;
+    Xs4(3).ck(clk+1) = c4Al2;
+    Xs4(4).ck(clk+1) = c4Bl2;     
 
+    Xs5(1).ck(clk+1) = c5A;
+    Xs5(2).ck(clk+1) = c5B;
+    Xs5(3).ck(clk+1) = c5Al2;
+    Xs5(4).ck(clk+1) = c5Bl2;  
+    
+    Xs6(1).ck(clk+1) = c6A;
+    Xs6(2).ck(clk+1) = c6B;
+    Xs6(3).ck(clk+1) = c6Al2;
+    Xs6(4).ck(clk+1) = c6Bl2; 
+
+    Xs7(1).ck(clk+1) = c7A;
+    Xs7(2).ck(clk+1) = c7B;
+    Xs7(3).ck(clk+1) = c7Al2;
+    Xs7(4).ck(clk+1) = c7Bl2; 
+        
+end
 
 %% Muestras de salida
 Xsalida = Xsalida( :,delay_line+1:end);
@@ -942,22 +964,23 @@ end
 % Ordenamiento de las muestras del vector.
 Xvector = OrdSalidaParhi(Xvector);
 
-% Plot
+%% Plot
 if(onPlot)
     figure();
     NFFT = N;
     out_dft = real( fftshift(Xvector) );
     frec = fs*(-NFFT/2:NFFT/2-1)/NFFT;  
     stem(frec,out_dft, 'm')
-    title('Double Sided FFT');       
-    xlabel('Normalized Frequency')       
+    title('DFT 128 points Parallel 4 Radix2^3');       
+    xlabel('Frequency')       
     ylabel('DFT Values');
     grid minor;
 end
 
 %% Escritura de Muestras
 % Muestras de Entrada
-Input128 = fopen ('Input128.dat','wt');
+% 79(clk)*4(etapas) = 316 valores almacenados
+Input128 = fopen ('ArchivosDatos/Input128.dat','wt');
 
 in128 = [datos_line1;datos_line2];
 [row, column] = size(in128);
@@ -972,6 +995,63 @@ for columna = (1:column)
 end
 fclose(Input128);
 
-% Muestras de Rotadores
+% Muestras de Rotadores.
+% 32(factores)*4(etapas) = 128 valores almacenados
+RotadorStage1 = fopen ('ArchivosDatos/RotadorStage1.dat','wt');
+RotadorStage2 = fopen ('ArchivosDatos/RotadorStage2.dat','wt');
+RotadorStage3 = fopen ('ArchivosDatos/RotadorStage3.dat','wt');
+RotadorStage4 = fopen ('ArchivosDatos/RotadorStage4.dat','wt');
+RotadorStage5 = fopen ('ArchivosDatos/RotadorStage5.dat','wt');
+RotadorStage6 = fopen ('ArchivosDatos/RotadorStage6.dat','wt');
 
-% Muestras de los diferentes STAGES
+[row, column] = size(twiddleFi);
+% Factor seis: seis stages de rotadores
+rotforstage = 6;
+n = row/rotforstage;
+
+for columna = (1:column)
+    for fila = (1:row)
+        Re = real(twiddleFi(fila,columna));
+        Im = imag(twiddleFi(fila,columna));
+        % Escribe en Archivo
+        if(fila<=n)
+            fprintf(RotadorStage1,[Re.bin Im.bin '\n']);
+        elseif(n<fila && fila<=n*2)
+            fprintf(RotadorStage2,[Re.bin Im.bin '\n']);         
+        elseif(n*2<fila && fila<=n*3)
+            fprintf(RotadorStage3,[Re.bin Im.bin '\n']);
+        elseif(n*3<fila && fila<=n*4)
+            fprintf(RotadorStage4,[Re.bin Im.bin '\n']);            
+        elseif(n*4<fila && fila<=n*5)
+            fprintf(RotadorStage5,[Re.bin Im.bin '\n']);
+        elseif(n*5<fila && fila<=n*6)
+            fprintf(RotadorStage6,[Re.bin Im.bin '\n']);            
+        end
+    end
+end
+fclose(RotadorStage1);
+fclose(RotadorStage2);
+fclose(RotadorStage3);
+fclose(RotadorStage4);
+fclose(RotadorStage5);
+fclose(RotadorStage6);
+
+% Muestras de las Etapas
+% 79(clk)*4(etapas) = 316 valores almacenados
+
+% Especificar que "Etapa" se desea almacenar.
+Etapa = Xs7;
+% Este almacenamiento contendra los "Instantes" de la señal
+Output128 = fopen ('ArchivosDatos/Output128.dat','wt');
+
+[row, column] = size(Etapa(1).ck);
+
+for columna = (1:column)
+    for fila = (1:row*paralelo)
+        Re = real(Etapa(fila).ck(columna)); 
+        Im = imag(Etapa(fila).ck(columna));
+        % Escribe en Archivo
+        fprintf(Output128,[Re.bin Im.bin '\n']);
+    end
+end
+fclose(Output128);
