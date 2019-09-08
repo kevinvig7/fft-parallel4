@@ -20,7 +20,7 @@ W = S+I+F;
 
 %% Error cuadratico
 %  Error: 1.1342e-05
-xError = max((xFlot-xFi.double).^2)
+xError = var((xFlot-xFi.double).^1)
 
 % Error: Con una Snr aproximadamente de 50dB, se tiene una buena aproximación.
 % Para F=3, la varianza=0.0014

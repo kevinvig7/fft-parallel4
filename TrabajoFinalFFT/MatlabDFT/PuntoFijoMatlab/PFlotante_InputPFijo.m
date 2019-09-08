@@ -3,7 +3,7 @@ clc; close all; clear;
 % Directorio a las funciones en PFijo, PFlotante
 addpath('PFijoFunciones');
 R = Rutas();
-addpath(R.R2);
+addpath(R.R1);
 
 % Preferencia de visualizacion de la funcion 'fi()'
 fipref('NumericTypeDisplay','short',  'FimathDisplay','none');
@@ -788,3 +788,24 @@ if(onPlot)
     grid minor;
 end
 
+%% Almaceno vector flotante
+% Parte Real
+XflotReal = fopen('XflotReal.txt','wt');
+for k = (1:length(Xvector))
+    % Escribe en Archivo
+    fprintf(XflotReal,'%f \n',real(Xvector(k)));
+end
+fclose(XflotReal);
+
+% Parte Imaginaria
+XflotImag = fopen('XflotImag.txt','wt');
+for k = (1:length(Xvector))
+    % Escribe en Archivo
+    fprintf(XflotImag,'%f \n',imag(Xvector(k)));
+end
+fclose(XflotImag);
+
+%% Lectura
+Xflt = fopen('XflotReal.txt', 'r');
+Xflotante = fscanf(Xflt,'%f')';
+fclose(Xflt);

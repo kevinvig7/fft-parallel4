@@ -26,7 +26,9 @@ addpath(R.R1);
 % Preferencia de visualizacion de la funcion 'fi()'
 fipref('NumericTypeDisplay','short',  'FimathDisplay','none');
 Fmath = fimath('RoundingMethod','Floor',  'OverflowAction','Saturate');
+
 onPlot = 1;
+onEscritura = 1;
 
 %% Muestras de entrada en Punto Fijo:
 N = 128;
@@ -87,15 +89,15 @@ Wm1B = Sm1B+Im1B+Fm1B;
 
 % Stage 2
 % A
-en2 = 'false';
+en2 = 'true';
 Sm2A = S;
-Im2A = 0;
-Fm2A = 9;
+Im2A = 2;
+Fm2A = 12;
 Wm2A = Sm2A+Im2A+Fm2A;
 % B
 Sm2B = S;
-Im2B = 0;
-Fm2B = 9;
+Im2B = 2;
+Fm2B = 12;
 Wm2B = Sm2B+Im2B+Fm2B;
 
 % Stage 3
@@ -113,15 +115,15 @@ Wm3B = Sm3B+Im3B+Fm3B;
 
 % Stage 4
 % A
-en4 = 'false';
+en4 = 'true';
 Sm4A = S;
-Im4A = 0;
-Fm4A = 9;
+Im4A = 4;
+Fm4A = 14;
 Wm4A = Sm4A+Im4A+Fm4A;
 % B
 Sm4B = S;
-Im4B = 0;
-Fm4B = 9;
+Im4B = 4;
+Fm4B = 14;
 Wm4B = Sm4B+Im4B+Fm4B;
 
 % Stage 5
@@ -139,20 +141,20 @@ Wm5B = Sm5B+Im5B+Fm5B;
 
 % Stage 6
 % A
-en6 = 'false';
+en6 = 'true';
 Sm6A = S;
-Im6A = 0;
-Fm6A = 9;
+Im6A = 5;
+Fm6A = 15;
 Wm6A = Sm6A+Im6A+Fm6A;
 % B
 Sm6B = S;
-Im6B = 0;
-Fm6B = 9;
+Im6B = 5;
+Fm6B = 15;
 Wm6B = Sm6B+Im6B+Fm6B;
 
 % Stage 7
 % A
-en7 = 'true';
+en7 = 'false';
 Sm7A = S;
 Im7A = 5;
 Fm7A = 6;
@@ -927,12 +929,12 @@ for clk = (0:length(datos_line1)-1)
     Xs3(1).ck(clk+1) = c3A;
     Xs3(2).ck(clk+1) = c3B;
     Xs3(3).ck(clk+1) = c3Al2;
-    Xs3(4).ck(clk+1) = c3Bl2;  
+    Xs3(4).ck(clk+1) = c3Bl2; 
     
     Xs4(1).ck(clk+1) = c4A;
     Xs4(2).ck(clk+1) = c4B;
     Xs4(3).ck(clk+1) = c4Al2;
-    Xs4(4).ck(clk+1) = c4Bl2;     
+    Xs4(4).ck(clk+1) = c4Bl2;   
 
     Xs5(1).ck(clk+1) = c5A;
     Xs5(2).ck(clk+1) = c5B;
@@ -951,6 +953,17 @@ for clk = (0:length(datos_line1)-1)
         
 end
 
+%% Analisis a la Salida de los Cuantizadores
+[Vm2,~] = max(real(Xs7(1).ck));
+[Vm2,~] = max(imag(Xs7(1).ck));
+[Vm2,~] = max(real(Xs7(2).ck));
+[Vm2,~] = max(imag(Xs7(2).ck));
+[Vm2,~] = max(real(Xs7(3).ck));
+[Vm2,~] = max(imag(Xs7(3).ck));
+[Vm2,~] = max(real(Xs7(4).ck));
+[Vm2,~] = max(imag(Xs7(4).ck));
+
+%return;
 %% Muestras de salida
 Xsalida = Xsalida( :,delay_line+1:end);
 % Convierto las muestras de DFT de Matriz a Vector
@@ -963,6 +976,29 @@ end
 
 % Ordenamiento de las muestras del vector.
 Xvector = OrdSalidaParhi(Xvector);
+
+%% Error de la salida
+% Lectura de Archivos Salida flotante
+XfltReal = fopen('XflotReal.txt', 'r');
+XfltImag = fopen('XflotImag.txt', 'r');
+
+XflotReal = fscanf(XfltReal,'%f')';
+XflotImag = fscanf(XfltImag,'%f')';
+
+fclose(XfltReal);
+fclose(XfltImag);
+
+% Calculo Potencia
+XfixedReal = real(Xvector);
+XfixedImag = imag(Xvector);
+% Parte Real
+PsignalR = var(XflotReal);
+PerrorR  = var(XflotReal-XfixedReal);
+SNRreal  = 10*log10(PsignalR/PerrorR);
+% Parte Imaginaria
+PsignalI = var(XflotImag);
+PerrorI  = var(XflotImag-XfixedImag);
+SNRimag  = 10*log10(PsignalI/PerrorI);
 
 %% Plot
 if(onPlot)
@@ -978,80 +1014,81 @@ if(onPlot)
 end
 
 %% Escritura de Muestras
-% Muestras de Entrada
-% 79(clk)*4(etapas) = 316 valores almacenados
-Input128 = fopen ('ArchivosDatos/Input128.dat','wt');
+if (onEscritura)
+    % Muestras de Entrada
+    % 79(clk)*4(etapas) = 316 valores almacenados
+    Input128 = fopen ('ArchivosDatos/Input128.dat','wt');
 
-in128 = [datos_line1;datos_line2];
-[row, column] = size(in128);
+    in128 = [datos_line1;datos_line2];
+    [row, column] = size(in128);
 
-for columna = (1:column)
-    for fila = (1:row)
-        Re = real(in128(fila,columna));
-        Im = imag(in128(fila,columna));
-        % Escribe en Archivo
-        fprintf(Input128,[Re.bin Im.bin '\n']);
-    end
-end
-fclose(Input128);
-
-% Muestras de Rotadores.
-% 32(factores)*4(etapas) = 128 valores almacenados
-RotadorStage1 = fopen ('ArchivosDatos/RotadorStage1.dat','wt');
-RotadorStage2 = fopen ('ArchivosDatos/RotadorStage2.dat','wt');
-RotadorStage3 = fopen ('ArchivosDatos/RotadorStage3.dat','wt');
-RotadorStage4 = fopen ('ArchivosDatos/RotadorStage4.dat','wt');
-RotadorStage5 = fopen ('ArchivosDatos/RotadorStage5.dat','wt');
-RotadorStage6 = fopen ('ArchivosDatos/RotadorStage6.dat','wt');
-
-[row, column] = size(twiddleFi);
-% Factor seis: seis stages de rotadores
-rotforstage = 6;
-n = row/rotforstage;
-
-for columna = (1:column)
-    for fila = (1:row)
-        Re = real(twiddleFi(fila,columna));
-        Im = imag(twiddleFi(fila,columna));
-        % Escribe en Archivo
-        if(fila<=n)
-            fprintf(RotadorStage1,[Re.bin Im.bin '\n']);
-        elseif(n<fila && fila<=n*2)
-            fprintf(RotadorStage2,[Re.bin Im.bin '\n']);         
-        elseif(n*2<fila && fila<=n*3)
-            fprintf(RotadorStage3,[Re.bin Im.bin '\n']);
-        elseif(n*3<fila && fila<=n*4)
-            fprintf(RotadorStage4,[Re.bin Im.bin '\n']);            
-        elseif(n*4<fila && fila<=n*5)
-            fprintf(RotadorStage5,[Re.bin Im.bin '\n']);
-        elseif(n*5<fila && fila<=n*6)
-            fprintf(RotadorStage6,[Re.bin Im.bin '\n']);            
+    for columna = (1:column)
+        for fila = (1:row)
+            Re = real(in128(fila,columna));
+            Im = imag(in128(fila,columna));
+            % Escribe en Archivo
+            fprintf(Input128,[Re.bin Im.bin '\n']);
         end
     end
-end
-fclose(RotadorStage1);
-fclose(RotadorStage2);
-fclose(RotadorStage3);
-fclose(RotadorStage4);
-fclose(RotadorStage5);
-fclose(RotadorStage6);
+    fclose(Input128);
 
-% Muestras de las Etapas
-% 79(clk)*4(etapas) = 316 valores almacenados
+    % Muestras de Rotadores.
+    % 32(factores)*4(etapas) = 128 valores almacenados
+    RotadorStage1 = fopen ('ArchivosDatos/RotadorStage1.dat','wt');
+    RotadorStage2 = fopen ('ArchivosDatos/RotadorStage2.dat','wt');
+    RotadorStage3 = fopen ('ArchivosDatos/RotadorStage3.dat','wt');
+    RotadorStage4 = fopen ('ArchivosDatos/RotadorStage4.dat','wt');
+    RotadorStage5 = fopen ('ArchivosDatos/RotadorStage5.dat','wt');
+    RotadorStage6 = fopen ('ArchivosDatos/RotadorStage6.dat','wt');
 
-% Especificar que "Etapa" se desea almacenar.
-Etapa = Xs7;
-% Este almacenamiento contendra los "Instantes" de la señal
-Output128 = fopen ('ArchivosDatos/Output128.dat','wt');
+    [row, column] = size(twiddleFi);
+    % Factor seis: seis stages de rotadores
+    rotforstage = 6;
+    n = row/rotforstage;
 
-[row, column] = size(Etapa(1).ck);
-
-for columna = (1:column)
-    for fila = (1:row*paralelo)
-        Re = real(Etapa(fila).ck(columna)); 
-        Im = imag(Etapa(fila).ck(columna));
-        % Escribe en Archivo
-        fprintf(Output128,[Re.bin Im.bin '\n']);
+    for columna = (1:column)
+        for fila = (1:row)
+            Re = real(twiddleFi(fila,columna));
+            Im = imag(twiddleFi(fila,columna));
+            % Escribe en Archivo
+            if(fila<=n)
+                fprintf(RotadorStage1,[Re.bin Im.bin '\n']);
+            elseif(n<fila && fila<=n*2)
+                fprintf(RotadorStage2,[Re.bin Im.bin '\n']);         
+            elseif(n*2<fila && fila<=n*3)
+                fprintf(RotadorStage3,[Re.bin Im.bin '\n']);
+            elseif(n*3<fila && fila<=n*4)
+                fprintf(RotadorStage4,[Re.bin Im.bin '\n']);            
+            elseif(n*4<fila && fila<=n*5)
+                fprintf(RotadorStage5,[Re.bin Im.bin '\n']);
+            elseif(n*5<fila && fila<=n*6)
+                fprintf(RotadorStage6,[Re.bin Im.bin '\n']);            
+            end
+        end
     end
+    fclose(RotadorStage1);
+    fclose(RotadorStage2);
+    fclose(RotadorStage3);
+    fclose(RotadorStage4);
+    fclose(RotadorStage5);
+    fclose(RotadorStage6);
+
+    % Muestras de las Etapas
+    % 79(clk)*4(etapas) = 316 valores almacenados
+    % Especificar que "Etapa" se desea almacenar.
+    Etapa = Xs7;
+    % Este almacenamiento contendra los "Instantes" de la señal
+    Output128 = fopen ('ArchivosDatos/Output128.dat','wt');
+
+    [row, column] = size(Etapa(1).ck);
+
+    for columna = (1:column)
+        for fila = (1:row*paralelo)
+            Re = real(Etapa(fila).ck(columna)); 
+            Im = imag(Etapa(fila).ck(columna));
+            % Escribe en Archivo
+            fprintf(Output128,[Re.bin Im.bin '\n']);
+        end
+    end
+    fclose(Output128);
 end
-fclose(Output128);
