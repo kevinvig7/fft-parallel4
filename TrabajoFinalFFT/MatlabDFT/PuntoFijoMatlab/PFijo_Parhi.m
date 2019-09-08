@@ -1011,6 +1011,15 @@ if(onPlot)
     xlabel('Frequency')       
     ylabel('DFT Values');
     grid minor;
+    
+    % Plot
+    figure();
+    plot(t,xFi.double, 'm');
+    hold on;
+    plot(t,xFlot);
+    xlabel('Time(s)');
+    ylabel('Amplitude');
+    grid minor;
 end
 
 %% Escritura de Muestras
