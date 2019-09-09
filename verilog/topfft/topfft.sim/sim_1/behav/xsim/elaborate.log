@@ -11,7 +11,7 @@ Compiling module xil_defaultlib.contador(N=4)
 Compiling module xil_defaultlib.contador(N=2)
 Compiling module xil_defaultlib.contador
 Compiling module xil_defaultlib.coeff_data0
-Compiling module xil_defaultlib.coeff0(NBITS=5)
+Compiling module xil_defaultlib.coeff0
 Compiling module xil_defaultlib.coeff_data1
 Compiling module xil_defaultlib.coeff1(NBITS=5)
 Compiling module xil_defaultlib.coeff_data2
