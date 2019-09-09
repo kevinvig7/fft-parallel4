@@ -20,18 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module coeff0
-    #(parameter NBITS=5, 
+module coeff1
+    #(parameter NBITS=2, 
       parameter N=8)
-    (output reg [NBITS*2-1:0] coeff_out,   
+    (output reg [NBITS*2-1:0] coeff_out,
      input clk,
      input rst);
-    
+
 reg [22:0] index;
+
 wire [NBITS*N*2-1:0] coeff;
 
-coeff_data0
-#(.NBITS(NBITS)) 
+coeff_data1
+#(.NBITS(NBITS),
+.N(N))
    coefficientes
         (.coeff_data(coeff));
 
@@ -53,6 +55,7 @@ always @(posedge clk) begin
         index = index + 1;
             end
        end
+
 
 
 

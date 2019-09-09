@@ -23,7 +23,7 @@
 
 module topfft 
      #(parameter NBITS = 3,
-     parameter NBITScoeff=4,
+     parameter NBITScoeff=NBITS+1,
        parameter N = 8) // Cantidad de coeficientes en los multiplicadores
      (output [NBITS*2-1:0] fftOut_up,
       output [NBITS*2-1:0] fftOut_down,
@@ -32,11 +32,11 @@ module topfft
       input clk,
       input rst);
       
-  wire [(NBITS+1)*2-1:0] coefficientes0;
-  wire [(NBITS+1)*2-1:0] coefficientes1;
-  wire [(NBITS+1)*2-1:0] coefficientes2;
-  wire [(NBITS+1)*2-1:0] coefficientes3;
-  wire [(NBITS+1)*2-1:0] coefficientes4;
+  wire [NBITScoeff*2-1:0] coefficientes0;
+  wire [NBITScoeff*2-1:0] coefficientes1;
+  wire [NBITScoeff*2-1:0] coefficientes2;
+  wire [NBITScoeff*2-1:0] coefficientes3;
+  wire [NBITScoeff*2-1:0] coefficientes4;
   
    
   wire coeffw0_en;
