@@ -1,8 +1,8 @@
 %xn= [1+1i,0,1+2i,1,2,4,2+9i,6,1,7i,1i,6i,1,0,1,1i];
 
 
-Nbits=4;
-Nbitsf=15;
+Nbits=10;
+Nbitsf=9;
 z=0;
 
 xn=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
@@ -16,7 +16,7 @@ out=DFT16pR8( xn_fx, Nbits,Nbitsf);
 
 out_fx=fi(out,1,Nbits,Nbitsf);
 
-fid=fopen ('C:\fft-parallel4\verilog\topfft\topfft.srcs\sources_1\new\Entrada_parFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+fid=fopen ('C:\fft-parallel4\verilog\topfftsrc\v\Entrada_parFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 for z=1:(length(xn_fx)/2)
     fft_inParr=real(xn_fx(2*z-1));
     fft_inPari=imag(xn_fx(2*z-1));
@@ -26,7 +26,7 @@ fclose(fid);
 
 
 
-fid=fopen ('C:\fft-parallel4\verilog\topfft\topfft.srcs\sources_1\new\Entrada_imparFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+fid=fopen ('C:\fft-parallel4\verilog\topfftsrc\v\Entrada_imparFFT.dat','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 for z=1:(length(xn_fx)/2)
     fft_inImparr=real(xn_fx(2*z+1-1));
     fft_inImpari=imag(xn_fx(2*z+1-1));

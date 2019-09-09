@@ -22,7 +22,7 @@
 
 module topfft_tb();
     
- parameter NBITS=4;
+ parameter NBITS=10;
   parameter NBITScoeff=NBITS+1;
  parameter N=8;   
 reg clk = 0;

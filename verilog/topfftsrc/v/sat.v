@@ -29,7 +29,7 @@ module sat
   
   wire signed [NBITS_OUT-1:0] max_pos={1'b0,{(NBITS_OUT-1){1'b1}}}; //max positive number
   wire signed [NBITS_OUT-1:0] max_neg={1'b1,{(NBITS_OUT-1){1'b0}}}; //max negative number
-  reg signed [NBITS_IN+1-1:0] redondeo; 
+ // reg signed [NBITS_IN+1-1:0] redondeo; 
     
     always @(*) 
     begin

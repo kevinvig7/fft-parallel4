@@ -32,8 +32,8 @@ reg [22:0] index;
 wire [NBITS*N*2-1:0] coeff;
 
 coeff_data1
-#(.NBITS(NBITS),
-.N(N))
+//#(.NBITS(NBITS),
+//.N(N))
    coefficientes
         (.coeff_data(coeff));
 

@@ -1,6 +1,6 @@
-NBITSverilog=4;
+NBITSverilog=10;
 NBITScoeff=NBITSverilog+1;
-NBITSF=2;
+NBITSF=9;
 N=8;
 
 
@@ -93,7 +93,7 @@ coeff3=[w0bin;    w0bin;   w0bin;    w0bin;  w0bin;    w2bin;   w1bin;    w3bin]
 coeff4=[w0bin;    w0bin;   w0bin;    w0bin;  w4bin;    w6bin;   w5bin;    w7bin];
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-fid=fopen ('C:\fft-parallel4\verilog\topfft\topfft.srcs\sources_1\new\coeff_data0.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+fid=fopen ('C:\fft-parallel4\verilog\topfftsrc\v\coeff_data0.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
 fprintf(fid,['module coeff_data0', '\n']);
 fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
@@ -107,7 +107,7 @@ fprintf(fid,['end ' , '\n']);
 fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
 %%%%%%%%%%%%%%%%%
-fid=fopen ('C:\fft-parallel4\verilog\topfft\topfft.srcs\sources_1\new\coeff_data1.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+fid=fopen ('C:\fft-parallel4\verilog\topfftsrc\v\coeff_data1.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
 fprintf(fid,['module coeff_data1', '\n']);
 fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
@@ -121,7 +121,7 @@ fprintf(fid,['end ' , '\n']);
 fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
 %%%%%%%%%%%%%%%%%
-fid=fopen ('C:\fft-parallel4\verilog\topfft\topfft.srcs\sources_1\new\coeff_data2.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+fid=fopen ('C:\fft-parallel4\verilog\topfftsrc\v\coeff_data2.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
 fprintf(fid,['module coeff_data2', '\n']);
 fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
@@ -135,7 +135,7 @@ fprintf(fid,['end ' , '\n']);
 fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
 %%%%%%%%%%%%%%%%%
-fid=fopen ('C:\fft-parallel4\verilog\topfft\topfft.srcs\sources_1\new\coeff_data3.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+fid=fopen ('C:\fft-parallel4\verilog\topfftsrc\v\coeff_data3.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
 fprintf(fid,['module coeff_data3', '\n']);
 fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
@@ -149,7 +149,7 @@ fprintf(fid,['end ' , '\n']);
 fprintf(fid,['endmodule ' , '\n']);
 fclose(fid);
 %%%%%%%%%%%%%%%%%
-fid=fopen ('C:\fft-parallel4\verilog\topfft\topfft.srcs\sources_1\new\coeff_data4.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
+fid=fopen ('C:\fft-parallel4\verilog\topfftsrc\v\coeff_data4.v','wt'); %guardo un archivo con los coef. cuantizados de la señal filtrada de salida
 fprintf(fid,['`timescale 1ns / 1ps' , '\n']);
 fprintf(fid,['module coeff_data4', '\n']);
 fprintf(fid,['#(parameter NBITS=',num2str(NBITScoeff),',','\n']);
