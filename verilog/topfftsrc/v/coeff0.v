@@ -22,7 +22,7 @@
 
 
 module coeff0
-    #(parameter NBITS=2, 
+    #(parameter NBITS=5, 
       parameter N=8)
     (output reg [NBITS*2-1:0] coeff_out,
      input clk,

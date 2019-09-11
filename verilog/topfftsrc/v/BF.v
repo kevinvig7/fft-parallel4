@@ -37,11 +37,11 @@ wire signed [NBITS+1-1:0]   sumOut_up [0:1]; //Salida de sumador
 wire signed [NBITS+1-1:0] sumOut_down [0:1]; //Salida de sumador
     
     
-assign q_up[0] = BFIn_up[NBITS*2-1:NBITS]; //Real
-assign q_up[1] =       BFIn_up[NBITS-1:0]; //Img
+assign q_up[0] = $signed(BFIn_up[NBITS*2-1:NBITS]); //Real
+assign q_up[1] =       $signed(BFIn_up[NBITS-1:0]); //Img
   
-assign q_down[0] = BFIn_down[NBITS*2-1:NBITS]; //Real
-assign q_down[1] =       BFIn_down[NBITS-1:0]; //Img
+assign q_down[0] = $signed(BFIn_down[NBITS*2-1:NBITS]); //Real
+assign q_down[1] =       $signed(BFIn_down[NBITS-1:0]); //Img
 
 
 //conectar los wire de salida del sumador 

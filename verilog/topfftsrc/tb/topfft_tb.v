@@ -99,7 +99,7 @@ always @(posedge clk) begin
   rst  = 1'd1;
   #20 rst  = 1'd0;
          end else if(!$feof(data_par))  begin
-             scan_par = $fscanf(data_par, "%d\n", fftIn_up);
+             scan_par = $fscanf(data_par, "%b\n", fftIn_up);
              end
              else begin
              fftIn_up={NBITS*2{1'bz}};
@@ -121,8 +121,7 @@ always @(posedge clk) begin
   if(rst_tb) begin
   #20;
    end else if(!$feof(data_impar)) begin
-        
-    scan_impar = $fscanf(data_impar, "%b\n", fftIn_down);
+      scan_impar = $fscanf(data_impar, "%b\n", fftIn_down);
     end
     else begin
     fftIn_down={NBITS*2{1'bz}};
