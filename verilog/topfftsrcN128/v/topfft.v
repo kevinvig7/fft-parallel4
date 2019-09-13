@@ -25,10 +25,10 @@ module topfft
      #(parameter NBITS = 10,
      parameter NBITScoeff=NBITS+1,
        parameter N = 32) // Cantidad de coeficientes en los multiplicadores
-     (output [(NBITS+1)*2*2-1:0] fftOut0_up,
-      output [(NBITS+1)*2*2-1:0] fftOut0_down,
-      output [(NBITS+1)*2*2-1:0] fftOut1_up,
-      output [(NBITS+1)*2*2-1:0] fftOut1_down,
+     (output [((NBITS+1)*2+1)*2-1:0] fftOut0_up,
+      output [((NBITS+1)*2+1)*2-1:0] fftOut0_down,
+      output [((NBITS+1)*2+1)*2-1:0] fftOut1_up,
+      output [((NBITS+1)*2+1)*2-1:0] fftOut1_down,
       input  [NBITS*2-1:0] fftIn0_up,
       input  [NBITS*2-1:0] fftIn0_down,
       input  [NBITS*2-1:0] fftIn1_up,
@@ -38,10 +38,24 @@ module topfft
       
   wire [NBITScoeff*2-1:0] coefficientes0_0;
   wire [NBITScoeff*2-1:0] coefficientes0_1;
+  wire [NBITScoeff*2-1:0] coefficientes1_0;
+  wire [NBITScoeff*2-1:0] coefficientes1_1;
+  wire [NBITScoeff*2-1:0] coefficientes1_2;
+  
 
+   
+   
+   
    
   wire coeffw0_0en;
   wire coeffw0_1en;
+  wire coeffw1_0en;
+  wire coeffw1_1en;
+  wire coeffw1_2en;
+  
+  wire ctrl_Blq_BFII;
+ 
+  
   
  assign coeffw0_0en=rst;
  assign coeffw0_1en=rst;
@@ -52,10 +66,10 @@ module topfft
  wire [NBITS*2-1:0]   in1_up;
  wire [NBITS*2-1:0] in1_down;
  
- wire [(NBITS+1)*2*2-1:0]   out0_up;
- wire [(NBITS+1)*2*2-1:0] out0_down;
- wire [(NBITS+1)*2*2-1:0]   out1_up;
- wire [(NBITS+1)*2*2-1:0] out1_down;
+ wire [((NBITS+1)*2+1)*2-1:0]   out0_up;
+ wire [((NBITS+1)*2+1)*2-1:0] out0_down;
+ wire [((NBITS+1)*2+1)*2-1:0]   out1_up;
+ wire [((NBITS+1)*2+1)*2-1:0] out1_down;
  
  
  wire [(NBITS+1)*2-1:0] blqI0_to_m_up  ;
@@ -144,19 +158,78 @@ assign             m_to_blqII1_up[(NBITS+1)*2-1:0] = $signed(blqI1_to_m_up[NBITS
 
     
     
+////////////////////////////////////////////////////////////////////////////////    
+contador
+ #(16) 
+   control_Blq_BFII_0
+        (.clk_out(ctrl_Blq_BFII),
+         .clk(clk),
+         .rst(rst));  
+   
+Blq
+#(16,16,(NBITS+1)*2)
+     Blq_BFII_0
+      (.BlqOut_up      (out0_up),
+       .BlqOut_down  (out0_down),
+       .BlqIn_up       (m_to_blqII0_up),
+       .BlqIn_down   (m_to_blqII0_down),
+       .clk(clk),
+       .rst(rst),
+       .ctrl(ctrl_Blq_BFII)); 
+    
 
     
-    
-  assign out0_up =m_to_blqII0_up ;
-  assign out0_down = m_to_blqII0_down;
-  assign out1_up= m_to_blqII1_up;
-  assign out1_down =  m_to_blqII1_down;
-    
-    
-    
-    
-    
- ///////////////////////////////
+Blq
+#(16,16,(NBITS+1)*2)
+     Blq_BFII_1
+      (.BlqOut_up       (out1_up),
+       .BlqOut_down   (out1_down),
+       .BlqIn_up       (m_to_blqII1_up),
+       .BlqIn_down   (m_to_blqII1_down),
+       .clk(clk),
+       .rst(rst),
+       .ctrl(ctrl_Blq_BFII)); 
+   
+ /////////////////////////////////////////////////////////////////////
+   
+  assign coeffw1_0en=ctrl_Blq_BFII;
+  assign coeffw1_1en=ctrl_Blq_BFII;
+  assign coeffw1_2en=ctrl_Blq_BFII;
+   
+   
+      
+   
+coeff1_0
+ #(NBITScoeff,N)
+      Mcoeff1_0
+     (.coeff_out(coefficientes1_0),
+      .clk(clk),
+      .rst(coeffw1_0en));
+
+ coeff1_1
+ #(NBITScoeff,N)
+      Mcoeff1_1
+     (.coeff_out(coefficientes1_1),
+      .clk(clk),
+      .rst(coeffw1_1en));
+   
+   
+coeff1_2
+ #(NBITScoeff,N)
+      Mcoeff1_2
+     (.coeff_out(coefficientes1_2),
+      .clk(clk),
+      .rst(coeffw1_2en));
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
                   
 

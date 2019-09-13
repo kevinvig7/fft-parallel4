@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="22106000fs"></ZoomStartTime>
-      <ZoomEndTime time="292706001fs"></ZoomEndTime>
-      <Cursor1Time time="53106000fs"></Cursor1Time>
+      <ZoomStartTime time="52028000fs"></ZoomStartTime>
+      <ZoomEndTime time="58813001fs"></ZoomEndTime>
+      <Cursor1Time time="54108000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="107"></NameColumnWidth>
-      <ValueColumnWidth column_width="416"></ValueColumnWidth>
+      <ValueColumnWidth column_width="412"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="28" />
    <wvobject fp_name="/topfft_tb/N" type="array">
@@ -271,23 +271,23 @@
       <obj_property name="ObjectShortName">coefficientes0_0[21:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/fftOut0_up" type="array">
-      <obj_property name="ElementShortName">fftOut0_up[43:0]</obj_property>
-      <obj_property name="ObjectShortName">fftOut0_up[43:0]</obj_property>
+      <obj_property name="ElementShortName">fftOut0_up[45:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut0_up[45:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/fftOut0_down" type="array">
-      <obj_property name="ElementShortName">fftOut0_down[43:0]</obj_property>
-      <obj_property name="ObjectShortName">fftOut0_down[43:0]</obj_property>
+      <obj_property name="ElementShortName">fftOut0_down[45:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut0_down[45:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/fftOut1_up" type="array">
-      <obj_property name="ElementShortName">fftOut1_up[43:0]</obj_property>
-      <obj_property name="ObjectShortName">fftOut1_up[43:0]</obj_property>
+      <obj_property name="ElementShortName">fftOut1_up[45:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut1_up[45:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/fftOut1_down" type="array">
-      <obj_property name="ElementShortName">fftOut1_down[43:0]</obj_property>
-      <obj_property name="ObjectShortName">fftOut1_down[43:0]</obj_property>
+      <obj_property name="ElementShortName">fftOut1_down[45:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut1_down[45:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/dut/Butterfly0_0/BFOut_up" type="array">

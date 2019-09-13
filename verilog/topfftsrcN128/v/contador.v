@@ -28,7 +28,7 @@ module contador
 reg [22:0] count;
 
 always @(posedge clk) begin
- if (!rst) begin
+ if (rst) begin
      count=N-1;
      clk_out=1;
      end else if (count >=(N-1)) begin
