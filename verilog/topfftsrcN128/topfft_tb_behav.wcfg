@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="topfft_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="topfft_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="22106000fs"></ZoomStartTime>
+      <ZoomEndTime time="292706001fs"></ZoomEndTime>
+      <Cursor1Time time="53106000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="107"></NameColumnWidth>
+      <ValueColumnWidth column_width="416"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="28" />
+   <wvobject fp_name="/topfft_tb/N" type="array">
+      <obj_property name="ElementShortName">N[31:0]</obj_property>
+      <obj_property name="ObjectShortName">N[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/NBITS" type="array">
+      <obj_property name="ElementShortName">NBITS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NBITS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/NBITScoeff" type="array">
+      <obj_property name="ElementShortName">NBITScoeff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NBITScoeff[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/rst_tb" type="logic">
+      <obj_property name="ElementShortName">rst_tb</obj_property>
+      <obj_property name="ObjectShortName">rst_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftIn0_up" type="array">
+      <obj_property name="ElementShortName">fftIn0_up[19:0]</obj_property>
+      <obj_property name="ObjectShortName">fftIn0_up[19:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus104" type="vbus">
+      <obj_property name="label">real_in0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">9</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[19]" type="logic">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[18]" type="logic">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[17]" type="logic">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[16]" type="logic">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[15]" type="logic">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[14]" type="logic">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[13]" type="logic">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[12]" type="logic">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[11]" type="logic">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[10]" type="logic">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">[10]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus115" type="vbus">
+      <obj_property name="label">img_in0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">9</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[9]" type="logic">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[8]" type="logic">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[7]" type="logic">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[6]" type="logic">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[5]" type="logic">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[4]" type="logic">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[3]" type="logic">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[2]" type="logic">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_up[0]" type="logic">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftIn0_down" type="array">
+      <obj_property name="ElementShortName">fftIn0_down[19:0]</obj_property>
+      <obj_property name="ObjectShortName">fftIn0_down[19:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus146" type="vbus">
+      <obj_property name="label">real</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">9</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[19]" type="logic">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[18]" type="logic">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[17]" type="logic">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[16]" type="logic">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[15]" type="logic">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[14]" type="logic">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[13]" type="logic">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[12]" type="logic">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[11]" type="logic">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[10]" type="logic">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">[10]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus157" type="vbus">
+      <obj_property name="label">img</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">9</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[9]" type="logic">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[8]" type="logic">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[7]" type="logic">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[6]" type="logic">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[5]" type="logic">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[4]" type="logic">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[3]" type="logic">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[2]" type="logic">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/fftIn0_down[0]" type="logic">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftIn1_up" type="array">
+      <obj_property name="ElementShortName">fftIn1_up[19:0]</obj_property>
+      <obj_property name="ObjectShortName">fftIn1_up[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftIn1_down" type="array">
+      <obj_property name="ElementShortName">fftIn1_down[19:0]</obj_property>
+      <obj_property name="ObjectShortName">fftIn1_down[19:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider103">
+      <obj_property name="label">Salida</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/coeffw0_0en" type="logic">
+      <obj_property name="ElementShortName">coeffw0_0en</obj_property>
+      <obj_property name="ObjectShortName">coeffw0_0en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/coefficientes0_0" type="array">
+      <obj_property name="ElementShortName">coefficientes0_0[21:0]</obj_property>
+      <obj_property name="ObjectShortName">coefficientes0_0[21:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut0_up" type="array">
+      <obj_property name="ElementShortName">fftOut0_up[43:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut0_up[43:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut0_down" type="array">
+      <obj_property name="ElementShortName">fftOut0_down[43:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut0_down[43:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut1_up" type="array">
+      <obj_property name="ElementShortName">fftOut1_up[43:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut1_up[43:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut1_down" type="array">
+      <obj_property name="ElementShortName">fftOut1_down[43:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut1_down[43:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Butterfly0_0/BFOut_up" type="array">
+      <obj_property name="ElementShortName">BFOut_up[21:0]</obj_property>
+      <obj_property name="ObjectShortName">BFOut_up[21:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Butterfly0_0/sumOut_up_r" type="array">
+      <obj_property name="ElementShortName">sumOut_up_r[10:0]</obj_property>
+      <obj_property name="ObjectShortName">sumOut_up_r[10:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">9</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus283" type="vbus">
+      <obj_property name="label">New Virtual Bus 6</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">9</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[21]" type="logic">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[20]" type="logic">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[19]" type="logic">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[18]" type="logic">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[17]" type="logic">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[16]" type="logic">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[15]" type="logic">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[14]" type="logic">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[13]" type="logic">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[12]" type="logic">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[11]" type="logic">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[10]" type="logic">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">[10]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up" type="array">
+      <obj_property name="ElementShortName">blqI0_to_m_up[21:0]</obj_property>
+      <obj_property name="ObjectShortName">blqI0_to_m_up[21:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus296" type="vbus">
+      <obj_property name="label">New Virtual Bus 7</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">9</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[21]" type="logic">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[20]" type="logic">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[19]" type="logic">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[18]" type="logic">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[17]" type="logic">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[16]" type="logic">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[15]" type="logic">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[14]" type="logic">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[13]" type="logic">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[12]" type="logic">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up[11]" type="logic">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">[11]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Butterfly0_0/sumOut_up_i" type="array">
+      <obj_property name="ElementShortName">sumOut_up_i[10:0]</obj_property>
+      <obj_property name="ObjectShortName">sumOut_up_i[10:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">9</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+</wave_config>
