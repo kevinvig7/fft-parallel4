@@ -34,10 +34,10 @@ reg rst_tb;
  reg [NBITS*2-1:0] fftIn1_up;
  reg [NBITS*2-1:0] fftIn1_down;
  
-wire [((NBITS+1)*2+1)*2-1:0] fftOut0_up;
-wire [((NBITS+1)*2+1)*2-1:0] fftOut0_down;
-wire [((NBITS+1)*2+1)*2-1:0] fftOut1_up;
-wire [((NBITS+1)*2+1)*2-1:0] fftOut1_down;
+wire [15*2-1:0] fftOut0_up;
+wire [15*2-1:0] fftOut0_down;
+wire [15*2-1:0] fftOut1_up;
+wire [15*2-1:0] fftOut1_down;
     
        //-- Generador de reloj. Periodo 2 unidades
 always #1 clk = ~clk;
