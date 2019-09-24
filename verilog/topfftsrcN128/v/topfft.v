@@ -136,6 +136,8 @@ module topfft
 assign m_to_blqII0_up[(NBITS+1)*2*2-1:(NBITS+1)*2] = $signed(blqI0_to_m_up[(NBITS+1)*2-1:NBITS+1]); ////expandir signo aqui
 assign                 m_to_blqII0_up[(NBITS+1)*2-1:0] = $signed(blqI0_to_m_up[NBITS:0]);//expandir signo aqui
       
+//assign m_to_blqII0_up= blqI0_to_m_up; ////expandir signo aqui
+  
 
 //producto 0_0
  multip

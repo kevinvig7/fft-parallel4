@@ -22,8 +22,8 @@
 
 
 module BF
-    #(parameter NBITS = 10)
-    (output [(NBITS+1)*2-1:0]   BFOut_up,
+    #(parameter NBITS = 10 )
+         (output [(NBITS+1)*2-1:0]   BFOut_up,
      output [(NBITS+1)*2-1:0] BFOut_down,
      input  [NBITS*2-1:0]        BFIn_up,
      input  [NBITS*2-1:0]      BFIn_down);
