@@ -25,10 +25,10 @@ module topfft
      #(parameter NBITS = 10,
      parameter NBITScoeff=NBITS+1,
        parameter N = 32) // Cantidad de coeficientes en los multiplicadores
-     (output [15*2-1:0] fftOut0_up,
-      output [15*2-1:0] fftOut0_down,
-      output [15*2-1:0] fftOut1_up,
-      output [15*2-1:0] fftOut1_down,
+     (output [((NBITS+1)*2+1)*2-1:0] fftOut0_up,
+      output [((NBITS+1)*2+1)*2-1:0] fftOut0_down,
+      output [((NBITS+1)*2+1)*2-1:0] fftOut1_up,
+      output [((NBITS+1)*2+1)*2-1:0] fftOut1_down,
       input  [NBITS*2-1:0] fftIn0_up,
       input  [NBITS*2-1:0] fftIn0_down,
       input  [NBITS*2-1:0] fftIn1_up,
@@ -42,7 +42,10 @@ module topfft
   wire [NBITScoeff*2-1:0] coefficientes1_1;
   wire [NBITScoeff*2-1:0] coefficientes1_2;
   
-    
+
+   
+   
+   
    
   wire coeffw0_0en;
   wire coeffw0_1en;
@@ -65,43 +68,43 @@ module topfft
  
  //[((NBITS+1)*2+1)*2-1:0]
  
- wire [15*2-1:0]   out0_up;
- wire [15*2-1:0] out0_down;
- wire [15*2-1:0]   out1_up;
- wire [15*2-1:0] out1_down;
+ wire [14:0]   out0_up;
+ wire [14:0] out0_down;
+ wire [14:0]   out1_up;
+ wire [14:0] out1_down;
  
  
- wire [11*2-1:0] blqI0_to_m_up  ;
- wire [11*2-1:0] blqI0_to_m_down;
- wire [11*2-1:0] blqI1_to_m_up  ;
- wire [11*2-1:0] blqI1_to_m_down;
+ wire [(NBITS+1)*2-1:0] blqI0_to_m_up  ;
+ wire [(NBITS+1)*2-1:0] blqI0_to_m_down;
+ wire [(NBITS+1)*2-1:0] blqI1_to_m_up  ;
+ wire [(NBITS+1)*2-1:0] blqI1_to_m_down;
  
  
  //////////////////////
- wire [22*2-1:0] m_to_blqII0_up  ;
- wire [22*2-1:0] m_to_blqII0_down;
+ wire [(NBITS+1)*2*2-1:0] m_to_blqII0_up  ;
+ wire [(NBITS+1)*2*2-1:0] m_to_blqII0_down;
 
- wire [22*2-1:0] m_to_blqII1_up  ;
- wire [22*2-1:0] m_to_blqII1_down;
+ wire [(NBITS+1)*2*2-1:0] m_to_blqII1_up  ;
+ wire [(NBITS+1)*2*2-1:0] m_to_blqII1_down;
 
 /////////////////////////////////
- wire [23*2-1:0] blqII0_to_m_up;
- wire [23*2-1:0] blqII0_to_m_down;
- wire [23*2-1:0] blqII1_to_m_up;
- wire [23*2-1:0] blqII1_to_m_down;
+ wire [(NBITS+1)*2-1:0] blqII0_to_m_up;
+ wire [(NBITS+1)*2-1:0] blqII0_to_m_down;
+ wire [(NBITS+1)*2-1:0] blqII1_to_m_up;
+ wire [(NBITS+1)*2-1:0] blqII1_to_m_down;
 
 
 
- wire [23*2*2-1:0] m_to_sat0_0_up  ;
- wire [23*2*2-1:0] m_to_sat0_1_down;
- wire [23*2*2-1:0] m_to_sat1_0_up  ;
- wire [23*2*2-1:0] m_to_sat1_1_down;
+ wire [(NBITS+1)*2-1:0] m_to_sat0_0_up  ;
+ wire [(NBITS+1)*2-1:0] m_to_sat0_1_down;
+ wire [(NBITS+1)*2-1:0] m_to_sat1_0_up  ;
+ wire [(NBITS+1)*2-1:0] m_to_sat1_1_down;
  
 
- wire [15*2-1:0] satout0_0_up;
- wire [15*2-1:0] satout0_1_down;
- wire [15*2-1:0] satout1_0_up;
- wire [15*2-1:0] satout1_1_down;
+ wire [14:0] satout0_0_up;
+ wire [14:0] satout0_1_down;
+ wire [14:0] satout1_0_up;
+ wire [14:0] satout1_1_down;
 
 
   assign in0_up   =   fftIn0_up;
@@ -175,7 +178,7 @@ assign             m_to_blqII1_up[(NBITS+1)*2-1:0] = $signed(blqI1_to_m_up[NBITS
              .BFIn_down(in1_down));
 
     
- /// 22 bits termina etapa anterior   
+    
 ////////////////////////////////////////////////////////////////////////////////    
 contador
  #(16) 
@@ -185,12 +188,12 @@ contador
          .rst(rst));  
    
 Blq
-#(16,16,22)
+#(16,16,(NBITS+1)*2)
      Blq_BFII_0
-      (.BlqOut_up      (blqII0_to_m_up),
-       .BlqOut_down  (blqII0_to_m_down),
+      (.BlqOut_up      (m_to_blqII0_up),
+       .BlqOut_down  (m_to_blqII0_down),
        .BlqIn_up       (m_to_blqII0_up),
-       .BlqIn_down   (m_to_blqII1_up),
+       .BlqIn_down   (m_to_blqII0_down),
        .clk(clk),
        .rst(rst),
        .ctrl(ctrl_Blq_BFII)); 
@@ -198,11 +201,11 @@ Blq
 
     
 Blq
-#(16,16,22)
+#(16,16,(NBITS+1)*2)
      Blq_BFII_1
-      (.BlqOut_up       (blqII1_to_m_up),
-       .BlqOut_down   (blqII1_to_m_down),
-       .BlqIn_up       (m_to_blqII0_down),
+      (.BlqOut_up       (m_to_blqII1_up),
+       .BlqOut_down   (m_to_blqII1_down),
+       .BlqIn_up       (m_to_blqII1_up),
        .BlqIn_down   (m_to_blqII1_down),
        .clk(clk),
        .rst(rst),
@@ -224,8 +227,13 @@ assign coeffw1_0en=coeffCMStage2_en;
  assign coeffw1_1en=coeffCMStage2_en;
  assign coeffw1_2en=coeffCMStage2_en;
    
+<<<<<<< HEAD
 
          
+=======
+   
+      
+>>>>>>> parent of 9cba4b2... segunda etapa sinconizada... ver error en el sincronismo de coefficients
    
 coeff1_0
  #(NBITScoeff,N)
@@ -254,45 +262,45 @@ coeff1_2
    
    ///////////////////
    
-assign   m_to_sat0_0_up[23*2*2-1:23*2] = $signed(blqII0_to_m_up[23*2-1:23]); ////expandir signo aqui
-assign   m_to_sat0_0_up[23*2-1:0]      = $signed(blqII0_to_m_up[23-1:0]);//expandir signo aqui
+assign   m_to_sat0_0_up[(NBITS+1)*2*2-1:(NBITS+1)*2] = $signed(m_to_blqII0_up[(NBITS+1)*2-1:NBITS+1]); ////expandir signo aqui
+assign   m_to_sat0_0_up[(NBITS+1)*2-1:0]             = $signed(m_to_blqII0_up[NBITS:0]);//expandir signo aqui
       
 
 //producto 1_0
  multip
- #(23,NBITScoeff)
+ #(NBITS+1,NBITScoeff)
        M1_0
        (.result(m_to_sat0_1_down),
-        .muestra(blqII0_to_m_down),
+        .muestra(m_to_blqII0_down),
         .coeff(coefficientes1_0));
         
 
   //producto 1_1
  multip
- #(23,NBITScoeff)
+ #(NBITS+1,NBITScoeff)
        M1_1
        (.result(m_to_sat1_0_up),
-        .muestra(blqII1_to_m_up),
+        .muestra(m_to_blqII1_up),
         .coeff(coefficientes1_1));      
         
    
    
      //producto 1_2
  multip
- #(23,NBITScoeff)
+ #(NBITS+1,NBITScoeff)
        M1_2
        (.result(m_to_sat1_1_down),
-        .muestra(blqII1_to_m_down),
+        .muestra(m_to_blqII1_down),
         .coeff(coefficientes1_2));      
         
    
    
    
    
-   /////////////////////////////////////////////
+   ////////////////////////////
    
    fixtop_sat
-  #(.NBITS_IN(23*2),
+  #(.NBITS_IN((NBITS+1)*2+1),
     .NBITS_OUT(15))
        sat0_out0_up
          (.sat_out(satout0_0_up),
@@ -300,21 +308,21 @@ assign   m_to_sat0_0_up[23*2-1:0]      = $signed(blqII0_to_m_up[23-1:0]);//expan
        
        
        fixtop_sat
-        #(.NBITS_IN(23*2),
+        #(.NBITS_IN((NBITS+1)*2+1),
            .NBITS_OUT(15))
         sat0_out0_down
          (.sat_out(satout0_1_down),
           .sat_in(m_to_sat0_1_down)); 
    
      fixtop_sat
-        #(.NBITS_IN(23*2),
+        #(.NBITS_IN((NBITS+1)*2+1),
            .NBITS_OUT(15))
         sat0_out1_up
          (.sat_out(satout1_0_up),
           .sat_in(m_to_sat1_0_up)); 
           
             fixtop_sat
-        #(.NBITS_IN(23*2),
+        #(.NBITS_IN((NBITS+1)*2+1),
            .NBITS_OUT(15))
         sat0_out1_down
          (.sat_out(satout1_1_down),
@@ -323,15 +331,11 @@ assign   m_to_sat0_0_up[23*2-1:0]      = $signed(blqII0_to_m_up[23-1:0]);//expan
                   
 
 
-/*assign out0_down =m_to_sat0_1_down;
-assign out1_up   =m_to_sat1_0_up;
-assign out1_down =m_to_sat1_1_down;*/
-
-
 assign out0_up   =satout0_0_up;
 assign out0_down =satout0_1_down;
 assign out1_up   =satout1_0_up;
 assign out1_down =satout1_1_down;
+
 
 
 ///////////////////////////////      
