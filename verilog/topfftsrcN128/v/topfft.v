@@ -185,7 +185,7 @@ contador
    control_Blq_BFII_0
         (.clk_out(ctrl_Blq_BFII),
          .clk(clk),
-         .rst(coeffCMStage2_en));  
+         .rst(!coeffCMStage2_en));  
    
 Blq
 #(16,16,(NBITS+1)*2)
@@ -219,11 +219,11 @@ Blq
  #(16)
      EnableCM_stage2
      (.Q(coeffCMStage2_en),
-      .D(clk),
+   //   .D(clk),
       .clk(clk),
       .rst(rst));
      
-<<<<<<< HEAD
+
      
      
      
@@ -232,15 +232,7 @@ assign coeffw1_0en=coeffCMStage2_en;
  assign coeffw1_2en=coeffCMStage2_en;
    
 
-
-=======
-  assign coeffw1_0en=coeffCMStage2_en;
-  assign coeffw1_1en=coeffCMStage2_en;
-  assign coeffw1_2en=coeffCMStage2_en;
-   
-         
-   
->>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
+            
 coeff1_0
  #(NBITScoeff,N)
       Mcoeff1_0
