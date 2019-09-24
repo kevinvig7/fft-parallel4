@@ -12,6 +12,7 @@
    </db_ref_list>
    <zoom_setting>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <ZoomStartTime time="41333333fs"></ZoomStartTime>
       <ZoomEndTime time="236533334fs"></ZoomEndTime>
       <Cursor1Time time="204000000fs"></Cursor1Time>
@@ -28,6 +29,15 @@
       <NameColumnWidth column_width="107"></NameColumnWidth>
       <ValueColumnWidth column_width="412"></ValueColumnWidth>
 >>>>>>> parent of 9cba4b2... segunda etapa sinconizada... ver error en el sincronismo de coefficients
+=======
+      <ZoomStartTime time="26599000fs"></ZoomStartTime>
+      <ZoomEndTime time="134599001fs"></ZoomEndTime>
+      <Cursor1Time time="52999000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="346"></NameColumnWidth>
+      <ValueColumnWidth column_width="448"></ValueColumnWidth>
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
    </column_width_setting>
    <WVObjectSize size="28" />
    <wvobject fp_name="/topfft_tb/N" type="array">
@@ -268,27 +278,11 @@
       <obj_property name="ElementShortName">fftIn1_down[19:0]</obj_property>
       <obj_property name="ObjectShortName">fftIn1_down[19:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="group37" type="group">
-      <obj_property name="label">BlqI_to_m</obj_property>
+   <wvobject type="divider" fp_name="divider103">
+      <obj_property name="label">Salida</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up" type="array">
-         <obj_property name="ElementShortName">blqI0_to_m_up[21:0]</obj_property>
-         <obj_property name="ObjectShortName">blqI0_to_m_up[21:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_down" type="array">
-         <obj_property name="ElementShortName">blqI0_to_m_down[21:0]</obj_property>
-         <obj_property name="ObjectShortName">blqI0_to_m_down[21:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqI1_to_m_up" type="array">
-         <obj_property name="ElementShortName">blqI1_to_m_up[21:0]</obj_property>
-         <obj_property name="ObjectShortName">blqI1_to_m_up[21:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqI1_to_m_down" type="array">
-         <obj_property name="ElementShortName">blqI1_to_m_down[21:0]</obj_property>
-         <obj_property name="ObjectShortName">blqI1_to_m_down[21:0]</obj_property>
-      </wvobject>
    </wvobject>
+<<<<<<< HEAD
 <<<<<<< HEAD
    <wvobject fp_name="group25" type="group">
       <obj_property name="label">CoeffM0</obj_property>
@@ -316,131 +310,43 @@
          <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
          <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
+=======
+   <wvobject fp_name="/topfft_tb/fftOut0_up" type="array">
+      <obj_property name="ElementShortName">fftOut0_up[29:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut0_up[29:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
    </wvobject>
-   <wvobject fp_name="group32" type="group">
-      <obj_property name="label">m_to_BlqII</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/m_to_blqII0_up" type="array">
-         <obj_property name="ElementShortName">m_to_blqII0_up[43:0]</obj_property>
-         <obj_property name="ObjectShortName">m_to_blqII0_up[43:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/m_to_blqII0_down" type="array">
-         <obj_property name="ElementShortName">m_to_blqII0_down[43:0]</obj_property>
-         <obj_property name="ObjectShortName">m_to_blqII0_down[43:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/m_to_blqII1_up" type="array">
-         <obj_property name="ElementShortName">m_to_blqII1_up[43:0]</obj_property>
-         <obj_property name="ObjectShortName">m_to_blqII1_up[43:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/m_to_blqII1_down" type="array">
-         <obj_property name="ElementShortName">m_to_blqII1_down[43:0]</obj_property>
-         <obj_property name="ObjectShortName">m_to_blqII1_down[43:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut0_down" type="array">
+      <obj_property name="ElementShortName">fftOut0_down[29:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut0_down[29:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="group43" type="group">
-      <obj_property name="label">BlqII_to_m</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/blqII0_to_m_up" type="array">
-         <obj_property name="ElementShortName">blqII0_to_m_up[45:0]</obj_property>
-         <obj_property name="ObjectShortName">blqII0_to_m_up[45:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqII0_to_m_down" type="array">
-         <obj_property name="ElementShortName">blqII0_to_m_down[45:0]</obj_property>
-         <obj_property name="ObjectShortName">blqII0_to_m_down[45:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqII1_to_m_up" type="array">
-         <obj_property name="ElementShortName">blqII1_to_m_up[45:0]</obj_property>
-         <obj_property name="ObjectShortName">blqII1_to_m_up[45:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqII1_to_m_down" type="array">
-         <obj_property name="ElementShortName">blqII1_to_m_down[45:0]</obj_property>
-         <obj_property name="ObjectShortName">blqII1_to_m_down[45:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut1_up" type="array">
+      <obj_property name="ElementShortName">fftOut1_up[29:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut1_up[29:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="group23" type="group">
-      <obj_property name="label">CoeffM1</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/EnableCM_stage2/Q" type="logic">
-         <obj_property name="ElementShortName">Q</obj_property>
-         <obj_property name="ObjectShortName">Q</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Mcoeff1_0/rst" type="logic">
-         <obj_property name="ElementShortName">rst</obj_property>
-         <obj_property name="ObjectShortName">rst</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Mcoeff1_0/coeff_out" type="array">
-         <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
-         <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Mcoeff1_1/coeff_out" type="array">
-         <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
-         <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Mcoeff1_2/coeff_out" type="array">
-         <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
-         <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut1_down" type="array">
+      <obj_property name="ElementShortName">fftOut1_down[29:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut1_down[29:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/ctrl_Blq_BFII" type="logic">
-      <obj_property name="ElementShortName">ctrl_Blq_BFII</obj_property>
-      <obj_property name="ObjectShortName">ctrl_Blq_BFII</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/Mcoeff1_0/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="group48" type="group">
-      <obj_property name="label">m_to_sat</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/m_to_sat0_0_up" type="array">
-         <obj_property name="ElementShortName">m_to_sat0_0_up[91:0]</obj_property>
-         <obj_property name="ObjectShortName">m_to_sat0_0_up[91:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/m_to_sat0_1_down" type="array">
-         <obj_property name="ElementShortName">m_to_sat0_1_down[91:0]</obj_property>
-         <obj_property name="ObjectShortName">m_to_sat0_1_down[91:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/m_to_sat1_0_up" type="array">
-         <obj_property name="ElementShortName">m_to_sat1_0_up[91:0]</obj_property>
-         <obj_property name="ObjectShortName">m_to_sat1_0_up[91:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/m_to_sat1_1_down" type="array">
-         <obj_property name="ElementShortName">m_to_sat1_1_down[91:0]</obj_property>
-         <obj_property name="ObjectShortName">m_to_sat1_1_down[91:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Mcoeff1_0/coeff_out" type="array">
+      <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="group53" type="group">
-      <obj_property name="label">Sat_out</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/satout0_0_up" type="array">
-         <obj_property name="ElementShortName">satout0_0_up[29:0]</obj_property>
-         <obj_property name="ObjectShortName">satout0_0_up[29:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/satout0_1_down" type="array">
-         <obj_property name="ElementShortName">satout0_1_down[29:0]</obj_property>
-         <obj_property name="ObjectShortName">satout0_1_down[29:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/satout1_0_up" type="array">
-         <obj_property name="ElementShortName">satout1_0_up[29:0]</obj_property>
-         <obj_property name="ObjectShortName">satout1_0_up[29:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/satout1_1_down" type="array">
-         <obj_property name="ElementShortName">satout1_1_down[29:0]</obj_property>
-         <obj_property name="ObjectShortName">satout1_1_down[29:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Mcoeff1_1/coeff_out" type="array">
+      <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
+<<<<<<< HEAD
    <wvobject fp_name="group54" type="group">
       <obj_property name="label">Salida</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -625,5 +531,11 @@
       <obj_property name="radix_fractionWidth">9</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
 >>>>>>> parent of 9cba4b2... segunda etapa sinconizada... ver error en el sincronismo de coefficients
+=======
+   <wvobject fp_name="/topfft_tb/dut/Mcoeff1_2/coeff_out" type="array">
+      <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
    </wvobject>
 </wave_config>

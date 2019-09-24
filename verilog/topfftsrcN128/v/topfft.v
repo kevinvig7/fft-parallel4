@@ -217,12 +217,13 @@ Blq
    
  topD_1
  #(16)
-    EnableCM_stage2
-    (.Q(coeffCMStage2_en),
-     .D(clk),
-    .clk(clk),
-    .rst(rst));
+     EnableCM_stage2
+     (.Q(coeffCMStage2_en),
+      .D(clk),
+      .clk(clk),
+      .rst(rst));
      
+<<<<<<< HEAD
      
      
      
@@ -232,19 +233,27 @@ assign coeffw1_0en=coeffCMStage2_en;
    
 
 
+=======
+  assign coeffw1_0en=coeffCMStage2_en;
+  assign coeffw1_1en=coeffCMStage2_en;
+  assign coeffw1_2en=coeffCMStage2_en;
+   
+         
+   
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
 coeff1_0
  #(NBITScoeff,N)
       Mcoeff1_0
      (.coeff_out(coefficientes1_0),
       .clk(clk),
-      .rst(coeffw1_0en));
+      .rst(!coeffw1_0en));
 
  coeff1_1
  #(NBITScoeff,N)
       Mcoeff1_1
      (.coeff_out(coefficientes1_1),
       .clk(clk),
-      .rst(coeffw1_1en));
+      .rst(!coeffw1_1en));
    
    
 coeff1_2
@@ -252,7 +261,7 @@ coeff1_2
       Mcoeff1_2
      (.coeff_out(coefficientes1_2),
       .clk(clk),
-      .rst(coeffw1_2en));
+      .rst(!coeffw1_2en));
    
    
    
