@@ -182,7 +182,7 @@ contador
    control_Blq_BFII_0
         (.clk_out(ctrl_Blq_BFII),
          .clk(clk),
-         .rst(rst));  
+         .rst(coeffCMStage2_en));  
    
 Blq
 #(16,16,22)
@@ -216,7 +216,7 @@ Blq
  #(16)
     EnableCM_stage2
     (.Q(coeffCMStage2_en),
-     .D(clk),
+//     .D(clk),
     .clk(clk),
     .rst(rst));
      
@@ -232,14 +232,14 @@ coeff1_0
       Mcoeff1_0
      (.coeff_out(coefficientes1_0),
       .clk(clk),
-      .rst(coeffw1_0en));
+      .rst(!coeffw1_0en));
 
  coeff1_1
  #(NBITScoeff,N)
       Mcoeff1_1
      (.coeff_out(coefficientes1_1),
       .clk(clk),
-      .rst(coeffw1_1en));
+      .rst(!coeffw1_1en));
    
    
 coeff1_2
@@ -247,7 +247,7 @@ coeff1_2
       Mcoeff1_2
      (.coeff_out(coefficientes1_2),
       .clk(clk),
-      .rst(coeffw1_2en));
+      .rst(!coeffw1_2en));
    
    
    
