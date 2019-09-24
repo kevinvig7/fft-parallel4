@@ -22,43 +22,29 @@
 
 
 module topD_1
-    #(parameter N = 4)
+    #(parameter ND = 4)
     (output Q,
-  //   input D,
+    input D,
      input clk,
      input rst);
     
 
     reg [22:0] count;
 
-
-always @(posedge clk) begin
- if (rst) begin
- count = 23'b00000000000000000000000;
- end
-  else  begin
-  count = count + 1;
-  end
-end
-    
-
-//logic for accu enable signal, resets also the frequency divider counter
-assign Q = (count >= N) ? 1'b1 : 1'b0;
+  
     
     
+      wire [0:ND] connect_wire;
     
+    assign connect_wire[0] = D;
+    assign  Q = connect_wire[ND];
     
-    //    wire [0:ND] connect_wire;
-    
-//    assign connect_wire[0] = D;
-//    assign  Q = connect_wire[ND];
-    
-//   genvar i;
-//   generate
-//      for (i=0; i < ND; i=i+1) begin:
-//      Dgen D_reg_1 nD(connect_wire[i+1],connect_wire[i],clk,rst);
-//      end
-//   endgenerate
+  genvar i;
+   generate
+      for (i=0; i < ND; i=i+1) begin:
+      Dgen D_reg_1 nD(connect_wire[i+1],connect_wire[i],clk,rst);
+      end
+   endgenerate
     
     
     

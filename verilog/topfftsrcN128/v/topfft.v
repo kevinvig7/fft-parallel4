@@ -185,7 +185,7 @@ contador
    control_Blq_BFII_0
         (.clk_out(ctrl_Blq_BFII),
          .clk(clk),
-         .rst(rst));  
+         .rst(coeffCMStage2_en));  
    
 Blq
 #(16,16,(NBITS+1)*2)
@@ -223,18 +223,15 @@ Blq
     .clk(clk),
     .rst(rst));
      
+     
+     
+     
 assign coeffw1_0en=coeffCMStage2_en;
  assign coeffw1_1en=coeffCMStage2_en;
  assign coeffw1_2en=coeffCMStage2_en;
    
-<<<<<<< HEAD
 
-         
-=======
-   
-      
->>>>>>> parent of 9cba4b2... segunda etapa sinconizada... ver error en el sincronismo de coefficients
-   
+
 coeff1_0
  #(NBITScoeff,N)
       Mcoeff1_0
