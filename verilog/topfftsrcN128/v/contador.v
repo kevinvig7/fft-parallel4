@@ -29,6 +29,7 @@ reg [22:0] count;
 
 always @(posedge clk) begin
  if (rst) begin
+<<<<<<< HEAD
  count = 23'b00000000000000000000000;
    end else if (clk_out==1'b1) begin
     count = 23'b00000000000000000000000;
@@ -46,6 +47,20 @@ assign clk_out = (count == N) ? 1'b1 : 1'b0;
 //endmodule
 
 
+=======
+     count=N-1;
+     clk_out=1;
+     end else if (count >=(N-1)) begin
+      clk_out=~clk_out;
+      count=0;
+      end
+      else  begin
+      count = count + 1;
+      end
+end
+    
+
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
 endmodule
 
 

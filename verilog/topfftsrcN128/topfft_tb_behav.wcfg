@@ -11,6 +11,7 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
+<<<<<<< HEAD
       <ZoomStartTime time="0fs"></ZoomStartTime>
       <ZoomEndTime time="251200001fs"></ZoomEndTime>
       <Cursor1Time time="75800000fs"></Cursor1Time>
@@ -18,6 +19,15 @@
    <column_width_setting>
       <NameColumnWidth column_width="212"></NameColumnWidth>
       <ValueColumnWidth column_width="408"></ValueColumnWidth>
+=======
+      <ZoomStartTime time="26599000fs"></ZoomStartTime>
+      <ZoomEndTime time="134599001fs"></ZoomEndTime>
+      <Cursor1Time time="52999000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="346"></NameColumnWidth>
+      <ValueColumnWidth column_width="448"></ValueColumnWidth>
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
    </column_width_setting>
    <WVObjectSize size="13" />
    <wvobject fp_name="/topfft_tb/clk" type="logic">
@@ -48,27 +58,16 @@
       <obj_property name="ElementShortName">fftIn1_down[19:0]</obj_property>
       <obj_property name="ObjectShortName">fftIn1_down[19:0]</obj_property>
    </wvobject>
+<<<<<<< HEAD
    <wvobject fp_name="group69" type="group">
       <obj_property name="label">BlqI_to_m</obj_property>
+=======
+   <wvobject type="divider" fp_name="divider103">
+      <obj_property name="label">Salida</obj_property>
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_up" type="array">
-         <obj_property name="ElementShortName">blqI0_to_m_up[21:0]</obj_property>
-         <obj_property name="ObjectShortName">blqI0_to_m_up[21:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqI0_to_m_down" type="array">
-         <obj_property name="ElementShortName">blqI0_to_m_down[21:0]</obj_property>
-         <obj_property name="ObjectShortName">blqI0_to_m_down[21:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqI1_to_m_up" type="array">
-         <obj_property name="ElementShortName">blqI1_to_m_up[21:0]</obj_property>
-         <obj_property name="ObjectShortName">blqI1_to_m_up[21:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/blqI1_to_m_down" type="array">
-         <obj_property name="ElementShortName">blqI1_to_m_down[21:0]</obj_property>
-         <obj_property name="ObjectShortName">blqI1_to_m_down[21:0]</obj_property>
-      </wvobject>
    </wvobject>
+<<<<<<< HEAD
    <wvobject fp_name="group47" type="group">
       <obj_property name="label">Coeff0</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -164,5 +163,45 @@
    <wvobject fp_name="/topfft_tb/dut/EnableCM_stage2/Q" type="logic">
       <obj_property name="ElementShortName">Q</obj_property>
       <obj_property name="ObjectShortName">Q</obj_property>
+=======
+   <wvobject fp_name="/topfft_tb/fftOut0_up" type="array">
+      <obj_property name="ElementShortName">fftOut0_up[29:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut0_up[29:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut0_down" type="array">
+      <obj_property name="ElementShortName">fftOut0_down[29:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut0_down[29:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut1_up" type="array">
+      <obj_property name="ElementShortName">fftOut1_up[29:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut1_up[29:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/fftOut1_down" type="array">
+      <obj_property name="ElementShortName">fftOut1_down[29:0]</obj_property>
+      <obj_property name="ObjectShortName">fftOut1_down[29:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Mcoeff1_0/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Mcoeff1_0/coeff_out" type="array">
+      <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Mcoeff1_1/coeff_out" type="array">
+      <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Mcoeff1_2/coeff_out" type="array">
+      <obj_property name="ElementShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_out[21:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
    </wvobject>
 </wave_config>

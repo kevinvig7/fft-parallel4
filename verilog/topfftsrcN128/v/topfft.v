@@ -219,6 +219,7 @@ Blq
  #(16)
      EnableCM_stage2
      (.Q(coeffCMStage2_en),
+<<<<<<< HEAD
    //   .D(clk),
       .clk(clk),
       .rst(rst));
@@ -226,13 +227,23 @@ Blq
 
      
      
+=======
+      .D(clk),
+      .clk(clk),
+      .rst(rst));
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
      
-assign coeffw1_0en=coeffCMStage2_en;
- assign coeffw1_1en=coeffCMStage2_en;
- assign coeffw1_2en=coeffCMStage2_en;
+  assign coeffw1_0en=coeffCMStage2_en;
+  assign coeffw1_1en=coeffCMStage2_en;
+  assign coeffw1_2en=coeffCMStage2_en;
    
+<<<<<<< HEAD
 
             
+=======
+         
+   
+>>>>>>> parent of 3ddfc87... mal camino me perdi. volvi al anterior
 coeff1_0
  #(NBITScoeff,N)
       Mcoeff1_0
