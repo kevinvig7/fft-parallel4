@@ -481,8 +481,10 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 24,...,55
         idx3 = clk-numreg16D-numreg8D+1;
         % Line1 
-        mult3(1).line1 = bf3(1).line1 * twiddle3_l1(1,idx3);
-        mult3(2).line1 = bf3(2).line1 * twiddle3_l1(2,idx3);
+        mult31Aux = bf3(1).line1 * twiddle3_l1(1,idx3);
+        mult32Aux = bf3(2).line1 * twiddle3_l1(2,idx3);
+        mult3(1).line1 = fi(mult31Aux.double,1,27,21, Fmath);
+        mult3(2).line1 = fi(mult32Aux.double,1,27,21, Fmath);
     else
         mult3(1).line1 = bf3(1).line1 * fi(1, St,Wt,Ft,Fmath);
         mult3(2).line1 = bf3(2).line1 * fi(1, St,Wt,Ft,Fmath);           
@@ -531,7 +533,9 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 28,...,59
         idx4 = clk-numreg16D-numreg8D-numreg4D+1;
         mult4(1).line1 = bf4(1).line1; 
-        mult4(2).line1 = bf4(2).line1 * twiddle4_l1(2,idx4); 
+        
+        mult42Aux = bf4(2).line1 * twiddle4_l1(2,idx4); 
+        mult4(2).line1 = fi(mult42Aux.double,1,39,30, Fmath); 
     else
         mult4(1).line1 = bf4(1).line1; 
         mult4(2).line1 = bf4(2).line1 * fi(1, St,Wt,Ft,Fmath);         
@@ -579,8 +583,12 @@ for clk = (0:length(datos_line1)-1)
     activo_max = numreg16D+numreg8D+numreg4D+numreg2D+length(twiddle5_l1);
     if(activo_min<clk && clk<activo_max) % clk: 30,...,61
         idx5 = clk-numreg16D-numreg8D-numreg4D-numreg2D+1;
-        mult5(1).line1 = bf5(1).line1 * twiddle5_l1(1,idx5);
-        mult5(2).line1 = bf5(2).line1 * twiddle5_l1(2,idx5);
+        
+        fi(mult33Aux.double,1,27,21, Fmath);
+        mult51Aux = bf5(1).line1 * twiddle5_l1(1,idx5);
+        mult52Aux = bf5(2).line1 * twiddle5_l1(2,idx5);
+        mult5(1).line1 = fi(mult51Aux.double,1,31,23, Fmath);
+        mult5(2).line1 = fi(mult52Aux.double,1,31,23, Fmath);
     else
         mult5(1).line1 = bf5(1).line1 * fi(1, St,Wt,Ft,Fmath);
         mult5(2).line1 = bf5(2).line1 * fi(1, St,Wt,Ft,Fmath);      
@@ -628,8 +636,11 @@ for clk = (0:length(datos_line1)-1)
     activo_max = numreg16D+numreg8D+numreg4D+numreg2D+numreg1D+length(twiddle6_l1);
     if(activo_min<clk && clk<activo_max) % clk: 31,...,62
         idx6 = clk-numreg16D-numreg8D-numreg4D-numreg2D-numreg1D+1;
-        mult6(1).line1 = bf6(1).line1 * twiddle6_l1(1,idx6);
-        mult6(2).line1 = bf6(2).line1 * twiddle6_l1(2,idx6); 
+
+        mult61Aux = bf6(1).line1 * twiddle6_l1(1,idx6);
+        mult62Aux = bf6(2).line1 * twiddle6_l1(2,idx6);
+        mult6(1).line1 = fi(mult61Aux.double,1,43,32, Fmath);
+        mult6(2).line1 = fi(mult62Aux.double,1,43,32, Fmath); 
     else
         mult6(1).line1 = bf6(1).line1 * fi(1, St,Wt,Ft,Fmath);
         mult6(2).line1 = bf6(2).line1 * fi(1, St,Wt,Ft,Fmath);
@@ -704,8 +715,14 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 16,...,47
         idx2 = clk-numreg16D+1;
         % Line1 
-        mult2(1).line2 = bf2(1).line2 * twiddle2_l2(1,idx2);
-        mult2(2).line2 = bf2(2).line2 * twiddle2_l2(2,idx2);  
+        mult21Aux = bf2(1).line2 * twiddle2_l2(1,idx2);
+        mult22Aux = bf2(2).line2 * twiddle2_l2(2,idx2); 
+        % Realice un HardCodeo porque me surgio un problema en el simulador:
+        % exitian instantes en los cuales el numero de bits se incrementaba, y
+        % lo observado fue: s(34,27) y luego s(35,27), cuando lo correcto es
+        % obtener s(34,27)
+        mult2(1).line2 = fi(mult21Aux.double,1,34,27, Fmath);
+        mult2(2).line2 = fi(mult22Aux.double,1,34,27, Fmath); 
     else
         mult2(1).line2 = bf2(1).line2 * fi(1, St,Wt,Ft,Fmath);
         mult2(2).line2 = bf2(2).line2 * fi(1, St,Wt,Ft,Fmath);        
@@ -741,8 +758,11 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 24,...,55
         idx3 = clk-numreg16D-numreg8D+1;
         % Line1 
-        mult3(1).line2 = bf3(1).line2 * twiddle3_l2(1,idx3);
-        mult3(2).line2 = bf3(2).line2 * twiddle3_l2(2,idx3);
+        fi(mult21Aux.double,1,34,27, Fmath);
+        mult33Aux = bf3(1).line2 * twiddle3_l2(1,idx3);
+        mult34Aux = bf3(2).line2 * twiddle3_l2(2,idx3);
+        mult3(1).line2 = fi(mult33Aux.double,1,27,21, Fmath);
+        mult3(2).line2 = fi(mult34Aux.double,1,27,21, Fmath);
     else
         mult3(1).line2 = bf3(1).line2 * fi(1, St,Wt,Ft,Fmath);
         mult3(2).line2 = bf3(2).line2 * fi(1, St,Wt,Ft,Fmath);           
@@ -778,7 +798,8 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 28,...,59
         idx4 = clk-numreg16D-numreg8D-numreg4D+1;
         mult4(1).line2 = bf4(1).line2; 
-        mult4(2).line2 = bf4(2).line2 * twiddle4_l2(2,idx4); 
+        mult44Aux = bf4(2).line2 * twiddle4_l2(2,idx4); 
+        mult4(2).line2 = fi(mult44Aux.double,1,39,30, Fmath); 
     else
         mult4(1).line2 = bf4(1).line2; 
         mult4(2).line2 = bf4(2).line2 * fi(1, St,Wt,Ft,Fmath);         
@@ -813,8 +834,11 @@ for clk = (0:length(datos_line1)-1)
     activo_max = numreg16D+numreg8D+numreg4D+numreg2D+length(twiddle5_l2);
     if(activo_min<clk && clk<activo_max) % clk: 30,...,61
         idx5 = clk-numreg16D-numreg8D-numreg4D-numreg2D+1;
-        mult5(1).line2 = bf5(1).line2 * twiddle5_l2(1,idx5);
-        mult5(2).line2 = bf5(2).line2 * twiddle5_l2(2,idx5);
+        
+        mult53Aux = bf5(1).line2 * twiddle5_l2(1,idx5);
+        mult54Aux = bf5(2).line2 * twiddle5_l2(2,idx5);
+        mult5(1).line2 = fi(mult53Aux.double,1,31,23, Fmath);
+        mult5(2).line2 = fi(mult54Aux.double,1,31,23, Fmath);
     else
         mult5(1).line2 = bf5(1).line2 * fi(1, St,Wt,Ft,Fmath);
         mult5(2).line2 = bf5(2).line2 * fi(1, St,Wt,Ft,Fmath);      
@@ -849,8 +873,11 @@ for clk = (0:length(datos_line1)-1)
     activo_max = numreg16D+numreg8D+numreg4D+numreg2D+numreg1D+length(twiddle6_l2);
     if(activo_min<clk && clk<activo_max) % clk: 31,...,62
         idx6 = clk-numreg16D-numreg8D-numreg4D-numreg2D-numreg1D+1;
-        mult6(1).line2 = bf6(1).line2 * twiddle6_l2(1,idx6);
-        mult6(2).line2 = bf6(2).line2 * twiddle6_l2(2,idx6); 
+        
+        mult63Aux = bf6(1).line2 * twiddle6_l2(1,idx6);
+        mult64Aux = bf6(2).line2 * twiddle6_l2(2,idx6); 
+        mult6(1).line2 = fi(mult63Aux.double,1,43,32, Fmath);
+        mult6(2).line2 = fi(mult64Aux.double,1,43,32, Fmath);
     else
         mult6(1).line2 = bf6(1).line2 * fi(1, St,Wt,Ft,Fmath);
         mult6(2).line2 = bf6(2).line2 * fi(1, St,Wt,Ft,Fmath);
@@ -950,18 +977,19 @@ for clk = (0:length(datos_line1)-1)
     Xs7(2).ck(clk+1) = c7B;
     Xs7(3).ck(clk+1) = c7Al2;
     Xs7(4).ck(clk+1) = c7Bl2; 
-        
+    
+    % Salida de los Butterflys y Multiplicadores por etapa
+    bf7(1).line1;
+    bf7(2).line1;
+    bf7(1).line2;
+    bf7(2).line2;
+    
+    mult6(1).line1;
+    mult6(2).line1;
+    mult6(1).line2;
+    mult4(2).line2;
+    
 end
-
-%% Analisis a la Salida de los Cuantizadores
-[Vm2,~] = max(real(Xs7(1).ck));
-[Vm2,~] = max(imag(Xs7(1).ck));
-[Vm2,~] = max(real(Xs7(2).ck));
-[Vm2,~] = max(imag(Xs7(2).ck));
-[Vm2,~] = max(real(Xs7(3).ck));
-[Vm2,~] = max(imag(Xs7(3).ck));
-[Vm2,~] = max(real(Xs7(4).ck));
-[Vm2,~] = max(imag(Xs7(4).ck));
 
 %return;
 %% Muestras de salida
@@ -1085,7 +1113,7 @@ if (onEscritura)
     % Muestras de las Etapas
     % 79(clk)*4(etapas) = 316 valores almacenados
     % Especificar que "Etapa" se desea almacenar.
-    Etapa = Xs7;
+    Etapa = Xs1;
     % Este almacenamiento contendra los "Instantes" de la señal
     Output128 = fopen ('ArchivosDatos/Output128.dat','wt');
 
