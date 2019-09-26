@@ -483,11 +483,14 @@ for clk = (0:length(datos_line1)-1)
         % Line1 
         mult31Aux = bf3(1).line1 * twiddle3_l1(1,idx3);
         mult32Aux = bf3(2).line1 * twiddle3_l1(2,idx3);
-        mult3(1).line1 = fi(mult31Aux.double,1,27,21, Fmath);
-        mult3(2).line1 = fi(mult32Aux.double,1,27,21, Fmath);
+        mult3(1).line1 = fi(mult31Aux.double,1,28,21, Fmath);
+        mult3(2).line1 = fi(mult32Aux.double,1,28,21, Fmath);  
+
     else
-        mult3(1).line1 = bf3(1).line1 * fi(1, St,Wt,Ft,Fmath);
-        mult3(2).line1 = bf3(2).line1 * fi(1, St,Wt,Ft,Fmath);           
+        mult31Aux = bf3(1).line1 * fi(1, St,Wt,Ft,Fmath);
+        mult32Aux = bf3(2).line1 * fi(1, St,Wt,Ft,Fmath); 
+        mult3(1).line1 = fi(mult31Aux.double,1,28,21, Fmath);
+        mult3(2).line1 = fi(mult32Aux.double,1,28,21, Fmath);         
     end    
     % Bloque de Cuantizacion A/B 
     [c3A, c3B] = Cuantificacion(mult3(1).line1,S,Wm3A,Fm3A,  mult3(2).line1,S,Wm3B,Fm3B, en3);
@@ -532,10 +535,9 @@ for clk = (0:length(datos_line1)-1)
     activo_max = numreg16D+numreg8D+numreg4D+length(twiddle4_l1);
     if(activo_min<clk && clk<activo_max) % clk: 28,...,59
         idx4 = clk-numreg16D-numreg8D-numreg4D+1;
-        mult4(1).line1 = bf4(1).line1; 
-        
+        mult4(1).line1 = bf4(1).line1;
         mult42Aux = bf4(2).line1 * twiddle4_l1(2,idx4); 
-        mult4(2).line1 = fi(mult42Aux.double,1,39,30, Fmath); 
+        mult4(2).line1 = fi(mult42Aux.double,1,40,30, Fmath);
     else
         mult4(1).line1 = bf4(1).line1; 
         mult4(2).line1 = bf4(2).line1 * fi(1, St,Wt,Ft,Fmath);         
@@ -584,14 +586,13 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 30,...,61
         idx5 = clk-numreg16D-numreg8D-numreg4D-numreg2D+1;
         
-        fi(mult33Aux.double,1,27,21, Fmath);
-        mult51Aux = bf5(1).line1 * twiddle5_l1(1,idx5);
-        mult52Aux = bf5(2).line1 * twiddle5_l1(2,idx5);
-        mult5(1).line1 = fi(mult51Aux.double,1,31,23, Fmath);
-        mult5(2).line1 = fi(mult52Aux.double,1,31,23, Fmath);
+        mult5(1).line1 = bf5(1).line1 * twiddle5_l1(1,idx5);
+        mult5(2).line1 = bf5(2).line1 * twiddle5_l1(2,idx5);
     else
-        mult5(1).line1 = bf5(1).line1 * fi(1, St,Wt,Ft,Fmath);
-        mult5(2).line1 = bf5(2).line1 * fi(1, St,Wt,Ft,Fmath);      
+        mult51Aux = bf5(1).line1 * fi(1, St,Wt,Ft,Fmath);
+        mult52Aux = bf5(2).line1 * fi(1, St,Wt,Ft,Fmath);         
+        mult5(1).line1 = fi(mult51Aux.double,1,32,23, Fmath);
+        mult5(2).line1 = fi(mult52Aux.double,1,32,23, Fmath);     
     end
     % Bloque de Cuantizacion A/B 
     [c5A, c5B] = Cuantificacion(mult5(1).line1,S,Wm5A,Fm5A,  mult5(2).line1,S,Wm5B,Fm5B, en5);   
@@ -637,13 +638,13 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 31,...,62
         idx6 = clk-numreg16D-numreg8D-numreg4D-numreg2D-numreg1D+1;
 
-        mult61Aux = bf6(1).line1 * twiddle6_l1(1,idx6);
-        mult62Aux = bf6(2).line1 * twiddle6_l1(2,idx6);
-        mult6(1).line1 = fi(mult61Aux.double,1,43,32, Fmath);
-        mult6(2).line1 = fi(mult62Aux.double,1,43,32, Fmath); 
+        mult6(1).line1 = bf6(1).line1 * twiddle6_l1(1,idx6);
+        mult6(2).line1 = bf6(2).line1 * twiddle6_l1(2,idx6);
     else
-        mult6(1).line1 = bf6(1).line1 * fi(1, St,Wt,Ft,Fmath);
-        mult6(2).line1 = bf6(2).line1 * fi(1, St,Wt,Ft,Fmath);
+        mult61Aux = bf6(1).line1 * fi(1, St,Wt,Ft,Fmath);
+        mult62Aux = bf6(2).line1 * fi(1, St,Wt,Ft,Fmath);
+        mult6(1).line1 = fi(mult61Aux.double,1,45,32, Fmath);
+        mult6(2).line1 = fi(mult62Aux.double,1,45,32, Fmath); 
     end
     % Bloque de Cuantizacion A/B 
     [c6A, c6B] = Cuantificacion(mult6(1).line1,S,Wm6A,Fm6A,  mult6(2).line1,S,Wm6B,Fm6B, en6);
@@ -715,17 +716,17 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 16,...,47
         idx2 = clk-numreg16D+1;
         % Line1 
-        mult21Aux = bf2(1).line2 * twiddle2_l2(1,idx2);
-        mult22Aux = bf2(2).line2 * twiddle2_l2(2,idx2); 
-        % Realice un HardCodeo porque me surgio un problema en el simulador:
-        % exitian instantes en los cuales el numero de bits se incrementaba, y
-        % lo observado fue: s(34,27) y luego s(35,27), cuando lo correcto es
-        % obtener s(34,27)
-        mult2(1).line2 = fi(mult21Aux.double,1,34,27, Fmath);
-        mult2(2).line2 = fi(mult22Aux.double,1,34,27, Fmath); 
+        mult2(1).line2 = bf2(1).line2 * twiddle2_l2(1,idx2);
+        mult2(2).line2 = bf2(2).line2 * twiddle2_l2(2,idx2); 
     else
-        mult2(1).line2 = bf2(1).line2 * fi(1, St,Wt,Ft,Fmath);
-        mult2(2).line2 = bf2(2).line2 * fi(1, St,Wt,Ft,Fmath);        
+        % En esta parte de multiplicacion tuve que  extender en Un Bit la
+        % longitud de bits, porque el multiplicador internamente esta realizando
+        % la siguiente operacion: (a+jb)*(c+jd) = (ac-bd)+j(ad+bc)
+        % obtener s(35,27)
+        mult23Aux = bf2(1).line2 * fi(1, St,Wt,Ft,Fmath);
+        mult24Aux = bf2(2).line2 * fi(1, St,Wt,Ft,Fmath);  
+        mult2(1).line2 = fi(mult23Aux.double,1,35,27, Fmath);
+        mult2(2).line2 = fi(mult24Aux.double,1,35,27, Fmath);       
     end
     % Bloque de Cuantizacion A/B 
     [c2Al2, c2Bl2] = Cuantificacion(mult2(1).line2,S,Wm2A,Fm2A,  mult2(2).line2,S,Wm2B,Fm2B, en2);
@@ -758,14 +759,15 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 24,...,55
         idx3 = clk-numreg16D-numreg8D+1;
         % Line1 
-        fi(mult21Aux.double,1,34,27, Fmath);
         mult33Aux = bf3(1).line2 * twiddle3_l2(1,idx3);
         mult34Aux = bf3(2).line2 * twiddle3_l2(2,idx3);
-        mult3(1).line2 = fi(mult33Aux.double,1,27,21, Fmath);
-        mult3(2).line2 = fi(mult34Aux.double,1,27,21, Fmath);
+        mult3(1).line2 = fi(mult33Aux.double,1,28,21, Fmath);
+        mult3(2).line2 = fi(mult34Aux.double,1,28,21, Fmath); 
     else
-        mult3(1).line2 = bf3(1).line2 * fi(1, St,Wt,Ft,Fmath);
-        mult3(2).line2 = bf3(2).line2 * fi(1, St,Wt,Ft,Fmath);           
+        mult33Aux = bf3(1).line2 * fi(1, St,Wt,Ft,Fmath);
+        mult34Aux = bf3(2).line2 * fi(1, St,Wt,Ft,Fmath); 
+        mult3(1).line2 = fi(mult33Aux.double,1,28,21, Fmath);
+        mult3(2).line2 = fi(mult34Aux.double,1,28,21, Fmath);         
     end    
     % Bloque de Cuantizacion A/B 
     [c3Al2, c3Bl2] = Cuantificacion(mult3(1).line2,S,Wm3A,Fm3A,  mult3(2).line2,S,Wm3B,Fm3B, en3);
@@ -798,8 +800,8 @@ for clk = (0:length(datos_line1)-1)
     if(activo_min<clk && clk<activo_max) % clk: 28,...,59
         idx4 = clk-numreg16D-numreg8D-numreg4D+1;
         mult4(1).line2 = bf4(1).line2; 
-        mult44Aux = bf4(2).line2 * twiddle4_l2(2,idx4); 
-        mult4(2).line2 = fi(mult44Aux.double,1,39,30, Fmath); 
+        mult44Aux = bf4(2).line2 * twiddle4_l2(2,idx4);
+        mult4(2).line2 = fi(mult42Aux.double,1,40,30, Fmath);
     else
         mult4(1).line2 = bf4(1).line2; 
         mult4(2).line2 = bf4(2).line2 * fi(1, St,Wt,Ft,Fmath);         
@@ -834,14 +836,14 @@ for clk = (0:length(datos_line1)-1)
     activo_max = numreg16D+numreg8D+numreg4D+numreg2D+length(twiddle5_l2);
     if(activo_min<clk && clk<activo_max) % clk: 30,...,61
         idx5 = clk-numreg16D-numreg8D-numreg4D-numreg2D+1;
-        
-        mult53Aux = bf5(1).line2 * twiddle5_l2(1,idx5);
-        mult54Aux = bf5(2).line2 * twiddle5_l2(2,idx5);
-        mult5(1).line2 = fi(mult53Aux.double,1,31,23, Fmath);
-        mult5(2).line2 = fi(mult54Aux.double,1,31,23, Fmath);
+
+        mult5(1).line2 = bf5(1).line2 * twiddle5_l2(1,idx5);
+        mult5(2).line2 = bf5(2).line2 * twiddle5_l2(2,idx5);
     else
-        mult5(1).line2 = bf5(1).line2 * fi(1, St,Wt,Ft,Fmath);
-        mult5(2).line2 = bf5(2).line2 * fi(1, St,Wt,Ft,Fmath);      
+        mult53Aux = bf5(1).line2 * fi(1, St,Wt,Ft,Fmath);
+        mult54Aux = bf5(2).line2 * fi(1, St,Wt,Ft,Fmath);
+        mult5(1).line2 = fi(mult53Aux.double,1,32,23, Fmath);
+        mult5(2).line2 = fi(mult54Aux.double,1,32,23, Fmath);      
     end
     % Bloque de Cuantizacion A/B 
     [c5Al2, c5Bl2] = Cuantificacion(mult5(1).line2,S,Wm5A,Fm5A,  mult5(2).line2,S,Wm5B,Fm5B, en5);   
@@ -873,14 +875,14 @@ for clk = (0:length(datos_line1)-1)
     activo_max = numreg16D+numreg8D+numreg4D+numreg2D+numreg1D+length(twiddle6_l2);
     if(activo_min<clk && clk<activo_max) % clk: 31,...,62
         idx6 = clk-numreg16D-numreg8D-numreg4D-numreg2D-numreg1D+1;
-        
-        mult63Aux = bf6(1).line2 * twiddle6_l2(1,idx6);
-        mult64Aux = bf6(2).line2 * twiddle6_l2(2,idx6); 
-        mult6(1).line2 = fi(mult63Aux.double,1,43,32, Fmath);
-        mult6(2).line2 = fi(mult64Aux.double,1,43,32, Fmath);
+ 
+        mult6(1).line2 = bf6(1).line2 * twiddle6_l2(1,idx6);
+        mult6(2).line2 = bf6(2).line2 * twiddle6_l2(2,idx6); 
     else
-        mult6(1).line2 = bf6(1).line2 * fi(1, St,Wt,Ft,Fmath);
-        mult6(2).line2 = bf6(2).line2 * fi(1, St,Wt,Ft,Fmath);
+        mult63Aux = bf6(1).line2 * fi(1, St,Wt,Ft,Fmath);
+        mult64Aux = bf6(2).line2 * fi(1, St,Wt,Ft,Fmath); 
+        mult6(1).line2 = fi(mult63Aux.double,1,45,32, Fmath);
+        mult6(2).line2 = fi(mult64Aux.double,1,45,32, Fmath);
     end
     % Bloque de Cuantizacion A/B 
     [c6Al2, c6Bl2] = Cuantificacion(mult6(1).line2,S,Wm6A,Fm6A,  mult6(2).line2,S,Wm6B,Fm6B, en6);
@@ -979,15 +981,15 @@ for clk = (0:length(datos_line1)-1)
     Xs7(4).ck(clk+1) = c7Bl2; 
     
     % Salida de los Butterflys y Multiplicadores por etapa
-    bf7(1).line1;
-    bf7(2).line1;
-    bf7(1).line2;
-    bf7(2).line2;
+    bf6(1).line1;
+    bf6(2).line1;
+    bf6(1).line2;
+    bf6(2).line2;
     
     mult6(1).line1;
     mult6(2).line1;
     mult6(1).line2;
-    mult4(2).line2;
+    mult6(2).line2;
     
 end
 
