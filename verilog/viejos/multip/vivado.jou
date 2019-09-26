@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Sep 26 14:43:46 2019
+# Process ID: 6980
+# Current directory: C:/fft-parallel4/verilog/viejos/multip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8336 C:\fft-parallel4\verilog\viejos\multip\multip.xpr
+# Log file: C:/fft-parallel4/verilog/viejos/multip/vivado.log
+# Journal file: C:/fft-parallel4/verilog/viejos/multip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/fft-parallel4/verilog/viejos/multip/multip.xpr
+update_compile_order -fileset sources_1

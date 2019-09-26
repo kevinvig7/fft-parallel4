@@ -29,15 +29,19 @@ reg clk = 0;
 reg rst;  
 reg rst_tb;
  
- reg [NBITS*2-1:0] fftIn0_up;
- reg [NBITS*2-1:0] fftIn0_down;
- reg [NBITS*2-1:0] fftIn1_up;
- reg [NBITS*2-1:0] fftIn1_down;
+reg [NBITS*2-1:0] fftIn0_up;
+reg [NBITS*2-1:0] fftIn0_down;
+reg [NBITS*2-1:0] fftIn1_up;
+reg [NBITS*2-1:0] fftIn1_down;
  
 wire [((NBITS+1)*2+1)*2-1:0] fftOut0_up;
 wire [((NBITS+1)*2+1)*2-1:0] fftOut0_down;
 wire [((NBITS+1)*2+1)*2-1:0] fftOut1_up;
 wire [((NBITS+1)*2+1)*2-1:0] fftOut1_down;
+    
+
+    
+    
     
        //-- Generador de reloj. Periodo 2 unidades
 always #1 clk = ~clk;
@@ -63,6 +67,8 @@ integer scan_in0; // file handler
 integer scan_in1; // file handler
 integer scan_in2; // file handler
 integer scan_in3; // file handler
+
+
 
 `define NULL 0
 

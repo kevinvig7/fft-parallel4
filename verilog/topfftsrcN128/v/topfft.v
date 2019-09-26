@@ -78,24 +78,26 @@ module topfft
  
  
  //////////////////////
- wire [22*2-1:0] m_to_blqII0_up  ;
- wire [22*2-1:0] m_to_blqII0_down;
+ wire [11*2-1:0] m_to_blqII0_up  ;
+ 
+ wire [22*2-1:0] m_to_blqII1_up;
 
- wire [22*2-1:0] m_to_blqII1_up  ;
+ wire [11*2-1:0] m_to_blqII0_down  ;
+ 
  wire [22*2-1:0] m_to_blqII1_down;
 
 /////////////////////////////////
- wire [23*2-1:0] blqII0_to_m_up;
- wire [23*2-1:0] blqII0_to_m_down;
+ wire [12*2-1:0] blqII0_to_m_up;
+ wire [12*2-1:0] blqII0_to_m_down;
  wire [23*2-1:0] blqII1_to_m_up;
  wire [23*2-1:0] blqII1_to_m_down;
 
 
 
- wire [23*2*2-1:0] m_to_sat0_0_up  ;
- wire [23*2*2-1:0] m_to_sat0_1_down;
- wire [23*2*2-1:0] m_to_sat1_0_up  ;
- wire [23*2*2-1:0] m_to_sat1_1_down;
+ wire [12*2-1:0] m_to_sat0_0_up  ;
+ wire [23*2-1:0] m_to_sat0_1_down;
+ wire [34*2-1:0] m_to_sat1_0_up  ;
+ wire [34*2-1:0] m_to_sat1_1_down;
  
 
  wire [15*2-1:0] satout0_0_up;
@@ -132,32 +134,7 @@ module topfft
       .rst(coeffw0_1en));
  /////////////////////////////////      
  
- 
-assign m_to_blqII0_up[(NBITS+1)*2*2-1:(NBITS+1)*2] = $signed(blqI0_to_m_up[(NBITS+1)*2-1:NBITS+1]); ////expandir signo aqui
-assign                 m_to_blqII0_up[(NBITS+1)*2-1:0] = $signed(blqI0_to_m_up[NBITS:0]);//expandir signo aqui
-      
-//assign m_to_blqII0_up= blqI0_to_m_up; ////expandir signo aqui
-  
-
-//producto 0_0
- multip
- #(NBITS+1,NBITScoeff)
-       M0_0
-       (.result(m_to_blqII0_down),
-        .muestra(blqI0_to_m_down),
-        .coeff(coefficientes0_0));
-        
-assign m_to_blqII1_up[(NBITS+1)*2*2-1:(NBITS+1)*2] = $signed(blqI1_to_m_up[(NBITS+1)*2-1:NBITS+1]); ////expandir signo aqui
-assign             m_to_blqII1_up[(NBITS+1)*2-1:0] = $signed(blqI1_to_m_up[NBITS:0]);//expandir signo aqui
-        
-  //producto 0_1
- multip
- #(NBITS+1,NBITScoeff)
-       M0_1
-       (.result(m_to_blqII1_down),
-        .muestra(blqI1_to_m_down),
-        .coeff(coefficientes0_1));      
-        
+       
         
 
 //BFI I
@@ -177,22 +154,46 @@ assign             m_to_blqII1_up[(NBITS+1)*2-1:0] = $signed(blqI1_to_m_up[NBITS
              .BFIn_down(in1_down));
 
     
+   
+assign m_to_blqII0_up=  blqI0_to_m_up;  // Cable
+
+//producto 0_0
+ multip_tdw
+ #(NBITS+1,NBITScoeff)
+       M0_0_tdw
+       (.result(m_to_blqII1_up),
+        .muestra(blqI0_to_m_down),
+        .coeff(coefficientes0_0));
+        
+assign m_to_blqII0_down= blqI1_to_m_up; // Cable
+
+        
+  //producto 0_1
+ multip_tdw
+ #(NBITS+1,NBITScoeff)
+       M0_1_tdw
+       (.result(m_to_blqII1_down),
+        .muestra(blqI1_to_m_down),
+        .coeff(coefficientes0_1));       
+    
+   
+    
  /// 22 bits termina etapa anterior   
 ////////////////////////////////////////////////////////////////////////////////    
 contador
- #(16) 
+ #(32) 
    control_Blq_BFII_0
         (.clk_out(ctrl_Blq_BFII),
          .clk(clk),
-         .rst(coeffCMStage2_en));  
+         .rst(!coeffCMStage2_en));  
    
 Blq
-#(16,16,22)
+#(16,16,11)
      Blq_BFII_0
       (.BlqOut_up      (blqII0_to_m_up),
        .BlqOut_down  (blqII0_to_m_down),
        .BlqIn_up       (m_to_blqII0_up),
-       .BlqIn_down   (m_to_blqII1_up),
+       .BlqIn_down   (m_to_blqII0_down),
        .clk(clk),
        .rst(rst),
        .ctrl(ctrl_Blq_BFII)); 
@@ -204,7 +205,7 @@ Blq
      Blq_BFII_1
       (.BlqOut_up       (blqII1_to_m_up),
        .BlqOut_down   (blqII1_to_m_down),
-       .BlqIn_up       (m_to_blqII0_down),
+       .BlqIn_up       (m_to_blqII1_up),
        .BlqIn_down   (m_to_blqII1_down),
        .clk(clk),
        .rst(rst),
@@ -223,8 +224,8 @@ Blq
     .rst(rst));
      
 assign coeffw1_0en=coeffCMStage2_en;
- assign coeffw1_1en=coeffCMStage2_en;
- assign coeffw1_2en=coeffCMStage2_en;
+assign coeffw1_1en=coeffCMStage2_en;
+assign coeffw1_2en=coeffCMStage2_en;
    
 
          
@@ -256,14 +257,14 @@ coeff1_2
    
    ///////////////////
    
-assign   m_to_sat0_0_up[23*2*2-1:23*2] = $signed(blqII0_to_m_up[23*2-1:23]); ////expandir signo aqui
-assign   m_to_sat0_0_up[23*2-1:0]      = $signed(blqII0_to_m_up[23-1:0]);//expandir signo aqui
+assign   m_to_sat0_0_up = blqII0_to_m_up; ////expandir signo aqui
+
       
 
 //producto 1_0
- multip
- #(23,NBITScoeff)
-       M1_0
+ multip_tdw
+ #(12,NBITScoeff)
+       M1_0_tdw
        (.result(m_to_sat0_1_down),
         .muestra(blqII0_to_m_down),
         .coeff(coefficientes1_0));
@@ -287,7 +288,6 @@ assign   m_to_sat0_0_up[23*2-1:0]      = $signed(blqII0_to_m_up[23-1:0]);//expan
         .muestra(blqII1_to_m_down),
         .coeff(coefficientes1_2));      
         
-   
    
    
    

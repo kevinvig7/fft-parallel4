@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/fft-parallel4/verilog/pruebaPF/pruebaPF.runs/synth_1'
+HD_PWD='C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log sum.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sum.tcl
+EAStep vivado -log multip.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source multip.tcl

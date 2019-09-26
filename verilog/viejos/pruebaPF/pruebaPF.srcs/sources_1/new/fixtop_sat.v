@@ -1,11 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: as
+// Engineer: 
 // 
-// Create Date: 30.08.2019 10:39:47
+// Create Date: 06.08.2019 15:42:22
 // Design Name: 
-// Module Name: fixtop
+// Module Name: multip
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,45 +20,36 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fixtop_sat
-#(parameter NBITS_IN=8,
-  parameter NBITS_OUT=6)
- (output [NBITS_OUT*2-1:0] sat_out,
-    input [NBITS_IN*2-1:0] sat_in);
-  
- 
-    wire [NBITS_IN-1:0] m_r;
-    wire [NBITS_IN-1:0] m_i;
-    
-    wire [NBITS_OUT-1:0] s_r;
-    wire [NBITS_OUT-1:0] s_i;
-    
-    
-assign m_r = sat_in[NBITS_IN*2-1:NBITS_IN]; //Real
-assign m_i = sat_in[NBITS_IN-1:0];        //Img
-    
-     
-        sat
-          #(.NBITS_IN(NBITS_IN),
-           .NBITS_OUT(NBITS_OUT))
-        sat_real
-          (.sat_in(m_r),
-           .sat_out(s_r));
-           
-         
-       
-         sat
-          #(.NBITS_IN(NBITS_IN),
-           .NBITS_OUT(NBITS_OUT))
-        sat_img
-          (.sat_in(m_i),
-           .sat_out(s_i));
-             
+module multip
+#(parameter NBITS=12,
+parameter NBITScoeff=11,
+parameter NBITS_out=NBITS+NBITScoeff+1)
+ (output signed [NBITS_out*2-1:0] result,
+  input signed [NBITS*2-1:0] muestra,
+  input signed [NBITScoeff*2-1:0] coeff);
 
-assign sat_out = {s_r,s_i};
 
-          
 
+  wire [NBITS-1:0] m_r;
+  wire [NBITS-1:0] m_i;
     
+  wire [NBITScoeff-1:0] c_r;
+  wire [NBITScoeff-1:0] c_i;
+    
+    
+assign m_r = muestra[NBITS*2-1:NBITS]; //Real
+assign m_i = muestra[NBITS-1:0];        //Img
+    
+assign c_r = coeff[NBITScoeff*2-1:NBITScoeff]; //Real
+assign c_i = coeff[NBITScoeff-1:0];        //Img
+        
+    
+    
+  assign result[NBITS_out*2-1:NBITS_out] = m_r*c_r-m_i*c_i;   //Real
+  assign result[NBITS_out-1:0] = m_r*c_i+m_i*c_r;         //Img
+
+
+   
     
 endmodule
+
