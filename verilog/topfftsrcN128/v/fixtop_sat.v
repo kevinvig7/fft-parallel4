@@ -21,42 +21,55 @@
 
 
 module fixtop_sat
-#(parameter NBITS_IN=8,
-  parameter NBITS_OUT=6)
+ #(parameter NBITS_IN  =21,
+   parameter NBI_IN    =2,
+   parameter NBF_IN    =19,
+   parameter NBITS_OUT =20,
+   parameter NBI_OUT   =1,
+   parameter NBF_OUT   =19)
+ 
  (output [NBITS_OUT*2-1:0] sat_out,
-    input [NBITS_IN*2-1:0] sat_in);
+  input  [NBITS_IN*2-1:0] sat_in);
   
   
 
-    wire [NBITS_IN-1:0] m_r;
-    wire [NBITS_IN-1:0] m_i;
+    wire [NBITS_IN-1:0] m_real;
+    wire [NBITS_IN-1:0] m_imag;
     
-    wire [NBITS_OUT-1:0] s_r;
-    wire [NBITS_OUT-1:0] s_i;
+    wire [NBITS_OUT-1:0] s_real;
+    wire [NBITS_OUT-1:0] s_imag;
     
     
-assign m_r = sat_in[NBITS_IN*2-1:NBITS_IN]; //Real
-assign m_i = sat_in[NBITS_IN-1:0];        //Img
+assign m_real = sat_in[NBITS_IN*2-1:NBITS_IN]; //Real
+assign m_imag = sat_in[NBITS_IN-1:0];        //Img
     
      
-        sat
-          #(.NBITS_IN(NBITS_IN),
-           .NBITS_OUT(NBITS_OUT))
+        sat_fxnum
+        #(.NBITS_IN(NBITS_IN),
+          .NBI_IN(NBI_IN),
+          .NBF_IN(NBF_IN),
+          .NBITS_OUT(NBITS_OUT),
+          .NBI_OUT(NBI_OUT),
+          .NBF_OUT(NBF_OUT))
         sat_real
-          (.sat_in(m_r),
-           .sat_out(s_r));
+          (.sat_in(m_real),
+           .sat_out(s_real));
            
          
        
-         sat
-          #(.NBITS_IN(NBITS_IN),
-           .NBITS_OUT(NBITS_OUT))
+         sat_fxnum
+       #(.NBITS_IN(NBITS_IN),
+          .NBI_IN(NBI_IN),
+          .NBF_IN(NBF_IN),
+          .NBITS_OUT(NBITS_OUT),
+          .NBI_OUT(NBI_OUT),
+          .NBF_OUT(NBF_OUT))
         sat_img
-          (.sat_in(m_i),
-           .sat_out(s_i));
+          (.sat_in(m_imag),
+           .sat_out(s_imag));
              
 
-assign sat_out = {s_r,s_i};
+assign sat_out = {s_real,s_imag};
 
           
 

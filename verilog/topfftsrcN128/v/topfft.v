@@ -96,8 +96,8 @@ module topfft
 
  wire [12*2-1:0] m_to_sat0_0_up  ;
  wire [23*2-1:0] m_to_sat0_1_down;
- wire [34*2-1:0] m_to_sat1_0_up  ;
- wire [34*2-1:0] m_to_sat1_1_down;
+ wire [35*2-1:0] m_to_sat1_0_up  ;
+ wire [35*2-1:0] m_to_sat1_1_down;
  
 
  wire [15*2-1:0] satout0_0_up;
@@ -293,42 +293,57 @@ assign   m_to_sat0_0_up = blqII0_to_m_up; ////expandir signo aqui
    
    /////////////////////////////////////////////
    
-   fixtop_sat
-  #(.NBITS_IN(23*2),
+/*   fixtop_sat
+  #(.NBITS_IN(15),
     .NBITS_OUT(15))
        sat0_out0_up
          (.sat_out(satout0_0_up),
           .sat_in(m_to_sat0_0_up));
+          */
+          
+     assign satout0_0_up[15*2-1:15] ={m_to_sat0_0_up[12*2-1:12],3'b0 };
+     assign satout0_0_up[14:0]      ={m_to_sat0_0_up[11:0],3'b0};
+     
+    
+     
        
+//assign m_to_blqII_up[(NBITS+1)*2*2-1:NBITS-1] = $signed(blqI_to_m_up[(NBITS+1)*2-1:NBITS-1]); ////expandir signo aqui
+//assign                 m_to_blqII_up[NBITS:0] = $signed(blqI_to_m_up[NBITS:0]);//expandir signo aqui
        
        fixtop_sat
-        #(.NBITS_IN(23*2),
-           .NBITS_OUT(15))
+        #(.NBITS_IN(23),
+          .NBI_IN(5),
+          .NBF_IN(18),
+          .NBITS_OUT(15),
+          .NBI_OUT(3),
+          .NBF_OUT(12))
         sat0_out0_down
          (.sat_out(satout0_1_down),
           .sat_in(m_to_sat0_1_down)); 
    
      fixtop_sat
-        #(.NBITS_IN(23*2),
-           .NBITS_OUT(15))
+        #(.NBITS_IN(35),
+          .NBI_IN(8),
+          .NBF_IN(27),
+          .NBITS_OUT(15),
+          .NBI_OUT(3),
+          .NBF_OUT(12))
         sat0_out1_up
          (.sat_out(satout1_0_up),
           .sat_in(m_to_sat1_0_up)); 
           
             fixtop_sat
-        #(.NBITS_IN(23*2),
-           .NBITS_OUT(15))
+        #(.NBITS_IN(35),
+           .NBI_IN(8),
+          .NBF_IN(27),
+          .NBITS_OUT(15),
+          .NBI_OUT(3),
+          .NBF_OUT(12))
         sat0_out1_down
          (.sat_out(satout1_1_down),
           .sat_in(m_to_sat1_1_down)); 
    
                   
-
-
-/*assign out0_down =m_to_sat0_1_down;
-assign out1_up   =m_to_sat1_0_up;
-assign out1_down =m_to_sat1_1_down;*/
-
 
 assign out0_up   =satout0_0_up;
 assign out0_down =satout0_1_down;

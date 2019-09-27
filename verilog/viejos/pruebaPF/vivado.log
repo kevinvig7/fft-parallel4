@@ -2,21 +2,398 @@
 # Vivado v2019.1.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
-# Start of session at: Thu Sep 26 14:45:01 2019
-# Process ID: 11068
+# Start of session at: Fri Sep 27 15:42:03 2019
+# Process ID: 5412
 # Current directory: C:/fft-parallel4/verilog/viejos/pruebaPF
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18256 C:\fft-parallel4\verilog\viejos\pruebaPF\pruebaPF.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18484 C:\fft-parallel4\verilog\viejos\pruebaPF\pruebaPF.xpr
 # Log file: C:/fft-parallel4/verilog/viejos/pruebaPF/vivado.log
 # Journal file: C:/fft-parallel4/verilog/viejos/pruebaPF\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.xpr
-INFO: [Project 1-313] Project file moved from 'C:/fft-parallel4/verilog/pruebaPF' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
 update_compile_order -fileset sources_1
+set_property top sat_fxnum [current_fileset]
+update_compile_order -fileset sources_1
+set_property top sat [current_fileset]
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1176.020 ; gain = 169.484
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-523] part-select [7:12] does not match declaration [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:36]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1215.223 ; gain = 208.688
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1215.223 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-524] part-select [8:-3] out of range of prefix 'sat_in' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:36]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1223.832 ; gain = 8.609
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1247.563 ; gain = 22.020
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-523] part-select [6:11] does not match declaration [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:36]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1247.563 ; gain = 22.020
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1249.055 ; gain = 1.492
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-523] part-select [7:11] does not match declaration [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:36]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1249.055 ; gain = 1.492
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1253.609 ; gain = 4.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-524] part-select [6:12] out of range of prefix 'sat_in' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:36]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1253.609 ; gain = 4.555
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1255.875 ; gain = 2.266
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-524] part-select [7:12] out of range of prefix 'sat_in' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:36]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1255.875 ; gain = 2.266
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.398 ; gain = 14.523
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-523] part-select [6:7] does not match declaration [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:36]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.398 ; gain = 14.523
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.441 ; gain = 0.043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-523] part-select [6:12] does not match declaration [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:38]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.445 ; gain = 0.047
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Top: sat
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.941 ; gain = 0.496
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sat' (1#1) [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.941 ; gain = 0.496
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.949 ; gain = 0.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.949 ; gain = 0.504
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1343.156 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 1399.633 ; gain = 129.188
+5 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 1399.633 ; gain = 129.188
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1475.613 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+ERROR: [Synth 8-524] part-select [6:-6] out of range of prefix 'sat_in' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:38]
+ERROR: [Synth 8-6156] failed synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1475.613 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1490.379 ; gain = 14.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sat' [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+	Parameter NBITS_IN bound to: 8 - type: integer 
+	Parameter NBI_IN bound to: 1 - type: integer 
+	Parameter NBF_IN bound to: 7 - type: integer 
+	Parameter NBITS_OUT bound to: 6 - type: integer 
+	Parameter NBI_OUT bound to: 1 - type: integer 
+	Parameter NBF_OUT bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sat' (1#1) [C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v:25]
+WARNING: [Synth 8-3331] design sat has unconnected port sat_in[1]
+WARNING: [Synth 8-3331] design sat has unconnected port sat_in[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1490.379 ; gain = 14.766
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1490.379 ; gain = 14.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1490.379 ; gain = 14.766
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1535.492 ; gain = 59.879
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixtop_sat' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fixtop_sat_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sources_1/new/sat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sat
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.srcs/sim_1/new/tb_fixtop_sat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fixtop_sat
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.sim/sim_1/behav/xsim'
+"xelab -wto 144fff327ad645088bda81066f1e568f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fixtop_sat_behav xil_defaultlib.tb_fixtop_sat xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 144fff327ad645088bda81066f1e568f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fixtop_sat_behav xil_defaultlib.tb_fixtop_sat xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sat
+Compiling module xil_defaultlib.tb_fixtop_sat
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fixtop_sat_behav
+
+****** Webtalk v2019.1.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.sim/sim_1/behav/xsim/xsim.dir/tb_fixtop_sat_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.sim/sim_1/behav/xsim/xsim.dir/tb_fixtop_sat_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Sep 27 16:11:54 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 27 16:11:54 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1608.074 ; gain = 7.203
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fixtop_sat_behav -key {Behavioral:sim_1:Functional:tb_fixtop_sat} -tclbatch {tb_fixtop_sat.tcl} -view {C:/fft-parallel4/verilog/viejos/pruebaPF/tb_fixtop_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/fft-parallel4/verilog/viejos/pruebaPF/tb_fixtop_behav.wcfg
+WARNING: Simulation object /tb_fixtop/NBITS was not found in the design.
+WARNING: Simulation object /tb_fixtop/NBITS_OUT was not found in the design.
+WARNING: Simulation object /tb_fixtop/sum was not found in the design.
+WARNING: Simulation object /tb_fixtop/salida was not found in the design.
+WARNING: Simulation object /tb_fixtop/dut/max_pos was not found in the design.
+WARNING: Simulation object /tb_fixtop/dut/max_neg was not found in the design.
+source tb_fixtop_sat.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fixtop_sat_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1626.188 ; gain = 25.316
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1626.188 ; gain = 0.000
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 14:45:42 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 27 17:35:01 2019...

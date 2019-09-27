@@ -23,7 +23,7 @@
 
 module BF
     #(parameter NBITS = 10 )
-         (output [(NBITS+1)*2-1:0]   BFOut_up,
+    (output [(NBITS+1)*2-1:0]   BFOut_up,
      output [(NBITS+1)*2-1:0] BFOut_down,
      input  [NBITS*2-1:0]        BFIn_up,
      input  [NBITS*2-1:0]      BFIn_down);
@@ -63,6 +63,9 @@ assign sumOut_down_i = q_up_i - q_down_i;
       
 assign BFOut_up   =     {sumOut_up_r,sumOut_up_i};    
 assign BFOut_down = {sumOut_down_r,sumOut_down_i}; 
+      
+      
+      
       
     
     

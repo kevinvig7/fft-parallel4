@@ -25,27 +25,21 @@ module tb_fixtop_sat();
 
 
     
-  parameter NBITS=12;
-  parameter NBITScoeff=11;
- parameter NBITS_out=NBITS+NBITScoeff+1;
+  parameter NBITS=8;
+  parameter NBITS_OUT=6;
 
-wire [NBITS_out*2-1:0] result;
-reg  [NBITS*2-1:0] muestra;    
-reg  [NBITScoeff*2-1:0] coeff;     
+wire [NBITS-1:0] sat_in;
+wire [NBITS_OUT-1:0] sat_out;
+  
+   
     
-multip
-#(NBITS,NBITScoeff)
-as
- (.result(result),
-  .muestra(muestra),
-  .coeff(coeff));
-
+sat
+#()
+satur
+(.sat_out(sat_out),
+  .sat_in(sat_in));
  
 initial begin
-   
-#10   
-coeff = 22'b0011100110100111001101;
-muestra=24'b000111001101000111001101;
 
     
     end

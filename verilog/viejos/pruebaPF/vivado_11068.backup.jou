@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Sep 26 14:45:01 2019
+# Process ID: 11068
+# Current directory: C:/fft-parallel4/verilog/viejos/pruebaPF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18256 C:\fft-parallel4\verilog\viejos\pruebaPF\pruebaPF.xpr
+# Log file: C:/fft-parallel4/verilog/viejos/pruebaPF/vivado.log
+# Journal file: C:/fft-parallel4/verilog/viejos/pruebaPF\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/fft-parallel4/verilog/viejos/pruebaPF/pruebaPF.xpr
+update_compile_order -fileset sources_1
