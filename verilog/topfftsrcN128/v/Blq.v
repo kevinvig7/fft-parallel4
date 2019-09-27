@@ -37,13 +37,13 @@ module Blq
     wire [Nbits*2-1:0] connect_blq_down[0:2];
     
     wire [(Nbits+1)*2-1:0] bf_to_blq_out_up ;
-     wire [(Nbits+1)*2-1:0] bf_to_blq_out_down;
+    wire [(Nbits+1)*2-1:0] bf_to_blq_out_down;
      
+    //Conecto entrada
     assign connect_blq_up[0] = BlqIn_up;
     assign connect_blq_down[0] = BlqIn_down;
-      
-           
-      
+        
+    // Conecto Salida  
     assign BlqOut_up=bf_to_blq_out_up ;
     assign BlqOut_down=bf_to_blq_out_down ;
    
@@ -72,7 +72,7 @@ module Blq
 
    BF#(Nbits) 
         Butterfly
-            (.BFOut_up(bf_to_blq_out_up ),
+            (.BFOut_up(bf_to_blq_out_up),
              .BFOut_down(bf_to_blq_out_down),
              .BFIn_up(connect_blq_up[2]),
              .BFIn_down(connect_blq_down[2]));

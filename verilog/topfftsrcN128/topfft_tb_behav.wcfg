@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="36148800fs"></ZoomStartTime>
-      <ZoomEndTime time="227348801fs"></ZoomEndTime>
-      <Cursor1Time time="175767000fs"></Cursor1Time>
+      <ZoomStartTime time="51540000fs"></ZoomStartTime>
+      <ZoomEndTime time="68700001fs"></ZoomEndTime>
+      <Cursor1Time time="54260000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="241"></NameColumnWidth>
-      <ValueColumnWidth column_width="404"></ValueColumnWidth>
+      <NameColumnWidth column_width="255"></NameColumnWidth>
+      <ValueColumnWidth column_width="488"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="group69" type="group">
       <obj_property name="label">BlqI_to_m</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -85,14 +85,664 @@
          <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject type="divider" fp_name="divider1229">
+      <obj_property name="label">BlqII</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="group492" type="group">
+      <obj_property name="label">In_BFII_0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][21:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][21:0]</obj_property>
+         <obj_property name="label">inBFII_0 up</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">9</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="vbus1266" type="vbus">
+         <obj_property name="label">real</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">9</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][21]" type="logic">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][20]" type="logic">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][19]" type="logic">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][18]" type="logic">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][17]" type="logic">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][16]" type="logic">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][15]" type="logic">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][14]" type="logic">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][13]" type="logic">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][12]" type="logic">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][11]" type="logic">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus1254" type="vbus">
+         <obj_property name="label">imag</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">9</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][10]" type="logic">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][9]" type="logic">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][0]" type="logic">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][21:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][21:0]</obj_property>
+         <obj_property name="label">inBFII_0 down</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">9</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="vbus1312" type="vbus">
+         <obj_property name="label">real</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">9</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][21]" type="logic">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][20]" type="logic">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][19]" type="logic">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][18]" type="logic">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][17]" type="logic">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][16]" type="logic">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][15]" type="logic">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][14]" type="logic">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][13]" type="logic">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][12]" type="logic">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][11]" type="logic">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus1300" type="vbus">
+         <obj_property name="label">imag</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">9</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][10]" type="logic">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][9]" type="logic">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][0]" type="logic">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[2][43:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][43:0]</obj_property>
+      <obj_property name="label">inBFII_1 up</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus990" type="vbus">
+      <obj_property name="label">real</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][43]" type="logic">
+         <obj_property name="ElementShortName">[43]</obj_property>
+         <obj_property name="ObjectShortName">[43]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][42]" type="logic">
+         <obj_property name="ElementShortName">[42]</obj_property>
+         <obj_property name="ObjectShortName">[42]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][41]" type="logic">
+         <obj_property name="ElementShortName">[41]</obj_property>
+         <obj_property name="ObjectShortName">[41]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][40]" type="logic">
+         <obj_property name="ElementShortName">[40]</obj_property>
+         <obj_property name="ObjectShortName">[40]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][39]" type="logic">
+         <obj_property name="ElementShortName">[39]</obj_property>
+         <obj_property name="ObjectShortName">[39]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][38]" type="logic">
+         <obj_property name="ElementShortName">[38]</obj_property>
+         <obj_property name="ObjectShortName">[38]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][37]" type="logic">
+         <obj_property name="ElementShortName">[37]</obj_property>
+         <obj_property name="ObjectShortName">[37]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][36]" type="logic">
+         <obj_property name="ElementShortName">[36]</obj_property>
+         <obj_property name="ObjectShortName">[36]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][35]" type="logic">
+         <obj_property name="ElementShortName">[35]</obj_property>
+         <obj_property name="ObjectShortName">[35]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][34]" type="logic">
+         <obj_property name="ElementShortName">[34]</obj_property>
+         <obj_property name="ObjectShortName">[34]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][33]" type="logic">
+         <obj_property name="ElementShortName">[33]</obj_property>
+         <obj_property name="ObjectShortName">[33]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][32]" type="logic">
+         <obj_property name="ElementShortName">[32]</obj_property>
+         <obj_property name="ObjectShortName">[32]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][31]" type="logic">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">[31]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][30]" type="logic">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">[30]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][29]" type="logic">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">[29]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][28]" type="logic">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">[28]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][27]" type="logic">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">[27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][26]" type="logic">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">[26]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][25]" type="logic">
+         <obj_property name="ElementShortName">[25]</obj_property>
+         <obj_property name="ObjectShortName">[25]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][24]" type="logic">
+         <obj_property name="ElementShortName">[24]</obj_property>
+         <obj_property name="ObjectShortName">[24]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][23]" type="logic">
+         <obj_property name="ElementShortName">[23]</obj_property>
+         <obj_property name="ObjectShortName">[23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][22]" type="logic">
+         <obj_property name="ElementShortName">[22]</obj_property>
+         <obj_property name="ObjectShortName">[22]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus967" type="vbus">
+      <obj_property name="label">imag</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][21]" type="logic">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][20]" type="logic">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][19]" type="logic">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][18]" type="logic">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][17]" type="logic">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][16]" type="logic">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][15]" type="logic">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][14]" type="logic">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][13]" type="logic">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][12]" type="logic">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][11]" type="logic">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][10]" type="logic">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">[10]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][9]" type="logic">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][8]" type="logic">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][7]" type="logic">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][6]" type="logic">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][5]" type="logic">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][4]" type="logic">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][3]" type="logic">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][2]" type="logic">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_up[2][0]" type="logic">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[2][43:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][43:0]</obj_property>
+      <obj_property name="label">inBFII_1 down</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus1080" type="vbus">
+      <obj_property name="label">real</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][43]" type="logic">
+         <obj_property name="ElementShortName">[43]</obj_property>
+         <obj_property name="ObjectShortName">[43]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][42]" type="logic">
+         <obj_property name="ElementShortName">[42]</obj_property>
+         <obj_property name="ObjectShortName">[42]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][41]" type="logic">
+         <obj_property name="ElementShortName">[41]</obj_property>
+         <obj_property name="ObjectShortName">[41]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][40]" type="logic">
+         <obj_property name="ElementShortName">[40]</obj_property>
+         <obj_property name="ObjectShortName">[40]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][39]" type="logic">
+         <obj_property name="ElementShortName">[39]</obj_property>
+         <obj_property name="ObjectShortName">[39]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][38]" type="logic">
+         <obj_property name="ElementShortName">[38]</obj_property>
+         <obj_property name="ObjectShortName">[38]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][37]" type="logic">
+         <obj_property name="ElementShortName">[37]</obj_property>
+         <obj_property name="ObjectShortName">[37]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][36]" type="logic">
+         <obj_property name="ElementShortName">[36]</obj_property>
+         <obj_property name="ObjectShortName">[36]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][35]" type="logic">
+         <obj_property name="ElementShortName">[35]</obj_property>
+         <obj_property name="ObjectShortName">[35]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][34]" type="logic">
+         <obj_property name="ElementShortName">[34]</obj_property>
+         <obj_property name="ObjectShortName">[34]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][33]" type="logic">
+         <obj_property name="ElementShortName">[33]</obj_property>
+         <obj_property name="ObjectShortName">[33]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][32]" type="logic">
+         <obj_property name="ElementShortName">[32]</obj_property>
+         <obj_property name="ObjectShortName">[32]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][31]" type="logic">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">[31]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][30]" type="logic">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">[30]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][29]" type="logic">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">[29]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][28]" type="logic">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">[28]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][27]" type="logic">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">[27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][26]" type="logic">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">[26]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][25]" type="logic">
+         <obj_property name="ElementShortName">[25]</obj_property>
+         <obj_property name="ObjectShortName">[25]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][24]" type="logic">
+         <obj_property name="ElementShortName">[24]</obj_property>
+         <obj_property name="ObjectShortName">[24]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][23]" type="logic">
+         <obj_property name="ElementShortName">[23]</obj_property>
+         <obj_property name="ObjectShortName">[23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][22]" type="logic">
+         <obj_property name="ElementShortName">[22]</obj_property>
+         <obj_property name="ObjectShortName">[22]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus1057" type="vbus">
+      <obj_property name="label">imag</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][21]" type="logic">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][20]" type="logic">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][19]" type="logic">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][18]" type="logic">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][17]" type="logic">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][16]" type="logic">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][15]" type="logic">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][14]" type="logic">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][13]" type="logic">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][12]" type="logic">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][11]" type="logic">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][10]" type="logic">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">[10]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][9]" type="logic">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][8]" type="logic">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][7]" type="logic">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][6]" type="logic">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][5]" type="logic">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][4]" type="logic">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][3]" type="logic">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][2]" type="logic">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/connect_blq_down[2][0]" type="logic">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/ctrl" type="logic">
+      <obj_property name="ElementShortName">ctrl</obj_property>
+      <obj_property name="ObjectShortName">ctrl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/Blq_BFII_1/ctrl" type="logic">
+      <obj_property name="ElementShortName">ctrl</obj_property>
+      <obj_property name="ObjectShortName">ctrl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/control_Blq_BFII_0/clk_out" type="logic">
+      <obj_property name="ElementShortName">clk_out</obj_property>
+      <obj_property name="ObjectShortName">clk_out</obj_property>
+   </wvobject>
    <wvobject fp_name="group74" type="group">
       <obj_property name="label">BlqII_to_m</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/blqII0_to_m_up" type="array">
          <obj_property name="ElementShortName">blqII0_to_m_up[23:0]</obj_property>
          <obj_property name="ObjectShortName">blqII0_to_m_up[23:0]</obj_property>
-         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">9</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
@@ -105,274 +755,32 @@
       <wvobject fp_name="/topfft_tb/dut/blqII1_to_m_up" type="array">
          <obj_property name="ElementShortName">blqII1_to_m_up[45:0]</obj_property>
          <obj_property name="ObjectShortName">blqII1_to_m_up[45:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/blqII1_to_m_down" type="array">
          <obj_property name="ElementShortName">blqII1_to_m_down[45:0]</obj_property>
          <obj_property name="ObjectShortName">blqII1_to_m_down[45:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="divider" fp_name="divider1229">
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2]" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">[2][21:0]</obj_property>
-      <obj_property name="ObjectShortName">[2][21:0]</obj_property>
-      <obj_property name="label">inBF up</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/m_to_sat0_0_up" type="array">
+      <obj_property name="ElementShortName">m_to_sat0_0_up[23:0]</obj_property>
+      <obj_property name="ObjectShortName">m_to_sat0_0_up[23:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">9</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
-   <wvobject fp_name="vbus1266" type="vbus">
-      <obj_property name="label">real</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/m_to_sat0_1_down" type="array">
+      <obj_property name="ElementShortName">m_to_sat0_1_down[45:0]</obj_property>
+      <obj_property name="ObjectShortName">m_to_sat0_1_down[45:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">9</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][21]" type="logic">
-         <obj_property name="ElementShortName">[21]</obj_property>
-         <obj_property name="ObjectShortName">[21]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][20]" type="logic">
-         <obj_property name="ElementShortName">[20]</obj_property>
-         <obj_property name="ObjectShortName">[20]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][19]" type="logic">
-         <obj_property name="ElementShortName">[19]</obj_property>
-         <obj_property name="ObjectShortName">[19]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][18]" type="logic">
-         <obj_property name="ElementShortName">[18]</obj_property>
-         <obj_property name="ObjectShortName">[18]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][17]" type="logic">
-         <obj_property name="ElementShortName">[17]</obj_property>
-         <obj_property name="ObjectShortName">[17]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][16]" type="logic">
-         <obj_property name="ElementShortName">[16]</obj_property>
-         <obj_property name="ObjectShortName">[16]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][15]" type="logic">
-         <obj_property name="ElementShortName">[15]</obj_property>
-         <obj_property name="ObjectShortName">[15]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][14]" type="logic">
-         <obj_property name="ElementShortName">[14]</obj_property>
-         <obj_property name="ObjectShortName">[14]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][13]" type="logic">
-         <obj_property name="ElementShortName">[13]</obj_property>
-         <obj_property name="ObjectShortName">[13]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][12]" type="logic">
-         <obj_property name="ElementShortName">[12]</obj_property>
-         <obj_property name="ObjectShortName">[12]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][11]" type="logic">
-         <obj_property name="ElementShortName">[11]</obj_property>
-         <obj_property name="ObjectShortName">[11]</obj_property>
-      </wvobject>
    </wvobject>
-   <wvobject fp_name="vbus1254" type="vbus">
-      <obj_property name="label">imag</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/m_to_sat1_0_up" type="array">
+      <obj_property name="ElementShortName">m_to_sat1_0_up[67:0]</obj_property>
+      <obj_property name="ObjectShortName">m_to_sat1_0_up[67:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">9</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][10]" type="logic">
-         <obj_property name="ElementShortName">[10]</obj_property>
-         <obj_property name="ObjectShortName">[10]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][9]" type="logic">
-         <obj_property name="ElementShortName">[9]</obj_property>
-         <obj_property name="ObjectShortName">[9]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][8]" type="logic">
-         <obj_property name="ElementShortName">[8]</obj_property>
-         <obj_property name="ObjectShortName">[8]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][7]" type="logic">
-         <obj_property name="ElementShortName">[7]</obj_property>
-         <obj_property name="ObjectShortName">[7]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][6]" type="logic">
-         <obj_property name="ElementShortName">[6]</obj_property>
-         <obj_property name="ObjectShortName">[6]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][5]" type="logic">
-         <obj_property name="ElementShortName">[5]</obj_property>
-         <obj_property name="ObjectShortName">[5]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][4]" type="logic">
-         <obj_property name="ElementShortName">[4]</obj_property>
-         <obj_property name="ObjectShortName">[4]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][3]" type="logic">
-         <obj_property name="ElementShortName">[3]</obj_property>
-         <obj_property name="ObjectShortName">[3]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][2]" type="logic">
-         <obj_property name="ElementShortName">[2]</obj_property>
-         <obj_property name="ObjectShortName">[2]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][1]" type="logic">
-         <obj_property name="ElementShortName">[1]</obj_property>
-         <obj_property name="ObjectShortName">[1]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_up[2][0]" type="logic">
-         <obj_property name="ElementShortName">[0]</obj_property>
-         <obj_property name="ObjectShortName">[0]</obj_property>
-      </wvobject>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2]" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">[2][21:0]</obj_property>
-      <obj_property name="ObjectShortName">[2][21:0]</obj_property>
-      <obj_property name="label">inBF down</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/m_to_sat1_1_down" type="array">
+      <obj_property name="ElementShortName">m_to_sat1_1_down[67:0]</obj_property>
+      <obj_property name="ObjectShortName">m_to_sat1_1_down[67:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">9</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-   </wvobject>
-   <wvobject fp_name="vbus1312" type="vbus">
-      <obj_property name="label">real</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">9</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][21]" type="logic">
-         <obj_property name="ElementShortName">[21]</obj_property>
-         <obj_property name="ObjectShortName">[21]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][20]" type="logic">
-         <obj_property name="ElementShortName">[20]</obj_property>
-         <obj_property name="ObjectShortName">[20]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][19]" type="logic">
-         <obj_property name="ElementShortName">[19]</obj_property>
-         <obj_property name="ObjectShortName">[19]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][18]" type="logic">
-         <obj_property name="ElementShortName">[18]</obj_property>
-         <obj_property name="ObjectShortName">[18]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][17]" type="logic">
-         <obj_property name="ElementShortName">[17]</obj_property>
-         <obj_property name="ObjectShortName">[17]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][16]" type="logic">
-         <obj_property name="ElementShortName">[16]</obj_property>
-         <obj_property name="ObjectShortName">[16]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][15]" type="logic">
-         <obj_property name="ElementShortName">[15]</obj_property>
-         <obj_property name="ObjectShortName">[15]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][14]" type="logic">
-         <obj_property name="ElementShortName">[14]</obj_property>
-         <obj_property name="ObjectShortName">[14]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][13]" type="logic">
-         <obj_property name="ElementShortName">[13]</obj_property>
-         <obj_property name="ObjectShortName">[13]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][12]" type="logic">
-         <obj_property name="ElementShortName">[12]</obj_property>
-         <obj_property name="ObjectShortName">[12]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][11]" type="logic">
-         <obj_property name="ElementShortName">[11]</obj_property>
-         <obj_property name="ObjectShortName">[11]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="vbus1300" type="vbus">
-      <obj_property name="label">imag</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">9</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][10]" type="logic">
-         <obj_property name="ElementShortName">[10]</obj_property>
-         <obj_property name="ObjectShortName">[10]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][9]" type="logic">
-         <obj_property name="ElementShortName">[9]</obj_property>
-         <obj_property name="ObjectShortName">[9]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][8]" type="logic">
-         <obj_property name="ElementShortName">[8]</obj_property>
-         <obj_property name="ObjectShortName">[8]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][7]" type="logic">
-         <obj_property name="ElementShortName">[7]</obj_property>
-         <obj_property name="ObjectShortName">[7]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][6]" type="logic">
-         <obj_property name="ElementShortName">[6]</obj_property>
-         <obj_property name="ObjectShortName">[6]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][5]" type="logic">
-         <obj_property name="ElementShortName">[5]</obj_property>
-         <obj_property name="ObjectShortName">[5]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][4]" type="logic">
-         <obj_property name="ElementShortName">[4]</obj_property>
-         <obj_property name="ObjectShortName">[4]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][3]" type="logic">
-         <obj_property name="ElementShortName">[3]</obj_property>
-         <obj_property name="ObjectShortName">[3]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][2]" type="logic">
-         <obj_property name="ElementShortName">[2]</obj_property>
-         <obj_property name="ObjectShortName">[2]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][1]" type="logic">
-         <obj_property name="ElementShortName">[1]</obj_property>
-         <obj_property name="ObjectShortName">[1]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/topfft_tb/dut/Blq_BFII_0/connect_blq_down[2][0]" type="logic">
-         <obj_property name="ElementShortName">[0]</obj_property>
-         <obj_property name="ObjectShortName">[0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/control_Blq_BFII_0/clk_out" type="logic">
-      <obj_property name="ElementShortName">clk_out</obj_property>
-      <obj_property name="ObjectShortName">clk_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/ctrl_Blq_BFII" type="logic">
-      <obj_property name="ElementShortName">ctrl_Blq_BFII</obj_property>
-      <obj_property name="ObjectShortName">ctrl_Blq_BFII</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/coeffw0_0en" type="logic">
-      <obj_property name="ElementShortName">coeffw0_0en</obj_property>
-      <obj_property name="ObjectShortName">coeffw0_0en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/coeffw0_1en" type="logic">
-      <obj_property name="ElementShortName">coeffw0_1en</obj_property>
-      <obj_property name="ObjectShortName">coeffw0_1en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/coeffw1_0en" type="logic">
-      <obj_property name="ElementShortName">coeffw1_0en</obj_property>
-      <obj_property name="ObjectShortName">coeffw1_0en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/coeffw1_1en" type="logic">
-      <obj_property name="ElementShortName">coeffw1_1en</obj_property>
-      <obj_property name="ObjectShortName">coeffw1_1en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/coeffw1_2en" type="logic">
-      <obj_property name="ElementShortName">coeffw1_2en</obj_property>
-      <obj_property name="ObjectShortName">coeffw1_2en</obj_property>
    </wvobject>
 </wave_config>

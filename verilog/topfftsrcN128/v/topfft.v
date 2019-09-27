@@ -181,7 +181,7 @@ assign m_to_blqII0_down= blqI1_to_m_up; // Cable
  /// 22 bits termina etapa anterior   
 ////////////////////////////////////////////////////////////////////////////////    
 contador
- #(32) 
+ #(16) 
    control_Blq_BFII_0
         (.clk_out(ctrl_Blq_BFII),
          .clk(clk),

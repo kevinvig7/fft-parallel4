@@ -2,3 +2,6 @@ Running: xsim.dir/tb_fixtop_sat_behav/xsimk.exe -simmode gui -wdb tb_fixtop_sat_
 Design successfully loaded
 Design Loading Memory Usage: 5212 KB (Peak: 5212 KB)
 Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 5728 KB (Peak: 5728 KB)
+Simulation CPU Usage: 77 ms
