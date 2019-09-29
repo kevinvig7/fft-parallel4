@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "def.v"
+//`include "def.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -21,51 +21,55 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module BF(
-    BFIn_up,
-    BFIn_down,
-    BFOut_up,
-    BFOut_down,
-    );
-    
-    parameter Nbits = `Nbitsg;
-    
-    input [Nbits*2-1:0] BFIn_up;
-    input  [Nbits*2-1:0] BFIn_down;
-    output [Nbits*2-1:0] BFOut_up;
-    output [Nbits*2-1:0] BFOut_down;
+module BF
+    #(parameter NBITS = 10 )
+    (output [(NBITS+1)*2-1:0]   BFOut_up,
+     output [(NBITS+1)*2-1:0] BFOut_down,
+     input  [NBITS*2-1:0]        BFIn_up,
+     input  [NBITS*2-1:0]      BFIn_down);
     
     
     //Separacion parte real e imaginaria 
-    wire [Nbits-1:0] q_up [0:1];
-    wire [Nbits-1:0] q_down [0:1];
-    
-    wire [Nbits-1:0] sumOut_up [0:1];    //Salida de sumador
-    wire [Nbits-1:0] sumOut_down [0:1]; //Salida de sumador
-    
-    
-assign q_up[0] = BFIn_up[Nbits*2-1:Nbits]; //Real
-assign q_up[1] = BFIn_up[Nbits-1:0];        //Img
-  
-assign q_down[0] =  BFIn_down[Nbits*2-1:Nbits]; //Real
-assign q_down[1] =  BFIn_down[Nbits-1:0];       //Img
+wire [NBITS-1:0]   q_up_r ;
+wire [NBITS-1:0]   q_up_i ;
 
+wire  [NBITS-1:0] q_down_r;
+wire [NBITS-1:0] q_down_i;
+    
+wire signed [NBITS+1-1:0]   sumOut_up_r; //Salida de sumador
+wire signed [NBITS+1-1:0]   sumOut_up_i; //Salida de sumador
+wire signed [NBITS+1-1:0] sumOut_down_r; //Salida de sumador
+wire signed [NBITS+1-1:0] sumOut_down_i; //Salida de sumador   
+    
+assign q_up_r   = BFIn_up[NBITS*2-1:NBITS]; //Real
+assign q_up_i   = BFIn_up[NBITS-1:0];       //Img
+  
+assign q_down_r = BFIn_down[NBITS*2-1:NBITS]; //Real
+assign q_down_i = BFIn_down[NBITS-1:0]; //Img
 
 //conectar los wire de salida del sumador 
 
-assign sumOut_up[0] = q_up[0] + q_down[0];
-assign sumOut_up[1] = q_up[1] + q_down[1];
+assign sumOut_up_r = $signed(q_up_r) + $signed(q_down_r);
+assign sumOut_up_i = $signed(q_up_i) + $signed(q_down_i);
 
-assign sumOut_down[0] = q_up[0] - q_down[0];
-assign sumOut_down[1] = q_up[1] - q_down[1];  
-    
-   
-    assign BFOut_up = {sumOut_up[0],sumOut_up[1]};    
-    assign BFOut_down = {sumOut_down[0],sumOut_down[1]}; 
+assign sumOut_down_r = $signed(q_up_r) - $signed(q_down_r);
+assign sumOut_down_i = $signed(q_up_i) - $signed(q_down_i);  
 
-    
 
+//assign sumOut_down_r = q_up_r + (~q_down_r+1'b1);
+//assign sumOut_down_i = q_up_i + (~q_down_i+1'b1);  
+
+
+
+
+      
+assign BFOut_up   =     {sumOut_up_r,sumOut_up_i};    
+assign BFOut_down = {sumOut_down_r,sumOut_down_i}; 
+      
+      
+      
       
     
     
 endmodule
+
