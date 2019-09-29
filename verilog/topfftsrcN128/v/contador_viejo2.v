@@ -27,7 +27,7 @@ module contador
     
 reg [22:0] count;
 
-always @(posedge clk) begin
+/*always @(posedge clk) begin
  if (rst) begin
  count = 23'b00000000000000000000000;
    end else if (clk_out==1'b1) begin
@@ -36,11 +36,21 @@ always @(posedge clk) begin
     else  begin
    count = count + 1;
     end
-end
+end*/
     
+    always @(posedge clk) begin
+ if (rst) begin
+ count = 23'b00000000000000000000000;
+   end else if (count==N*2) begin
+    count = 23'b00000000000000000000000;
+   end
+    else  begin
+   count = count + 1;
+    end
+end
 
 ////logic for accu enable signal, resets also the frequency divider counter
-assign clk_out = (count >= N  ) ? 1'b1 : 1'b0;
+assign clk_out = (count == N  ) ? 1'b1 : 1'b0;
     
 
 //endmodule

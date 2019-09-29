@@ -21,7 +21,7 @@
 
 module contador
     #( parameter N=1)
-     (output clk_out,
+     (output  clk_out,
       input clk,
       input rst);
     
@@ -46,12 +46,7 @@ end
 
     
     assign clk_out =pulso ;
-   
-
-
-
-
-
+    
 
 endmodule
 

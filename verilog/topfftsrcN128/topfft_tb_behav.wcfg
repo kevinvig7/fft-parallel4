@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="44833334fs"></ZoomStartTime>
-      <ZoomEndTime time="85333335fs"></ZoomEndTime>
-      <Cursor1Time time="53000000fs"></Cursor1Time>
+      <ZoomStartTime time="46178600fs"></ZoomStartTime>
+      <ZoomEndTime time="59638601fs"></ZoomEndTime>
+      <Cursor1Time time="54159000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="255"></NameColumnWidth>
-      <ValueColumnWidth column_width="366"></ValueColumnWidth>
+      <ValueColumnWidth column_width="362"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="21" />
    <wvobject fp_name="group69" type="group">
@@ -334,6 +334,7 @@
    <wvobject fp_name="group2207" type="group">
       <obj_property name="label">in_upBFII1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="vbus990" type="vbus">
          <obj_property name="label">real</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -530,6 +531,7 @@
    <wvobject fp_name="group2208" type="group">
       <obj_property name="label">in_downBFII1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="vbus1080" type="vbus">
          <obj_property name="label">real</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -742,6 +744,7 @@
    <wvobject fp_name="group74" type="group">
       <obj_property name="label">BlqII_to_m</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/topfft_tb/dut/blqII0_to_m_up" type="array">
          <obj_property name="ElementShortName">blqII0_to_m_up[23:0]</obj_property>
          <obj_property name="ObjectShortName">blqII0_to_m_up[23:0]</obj_property>
@@ -758,12 +761,12 @@
       <wvobject fp_name="/topfft_tb/dut/blqII1_to_m_up" type="array">
          <obj_property name="ElementShortName">blqII1_to_m_up[45:0]</obj_property>
          <obj_property name="ObjectShortName">blqII1_to_m_up[45:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/topfft_tb/dut/blqII1_to_m_down" type="array">
          <obj_property name="ElementShortName">blqII1_to_m_down[45:0]</obj_property>
          <obj_property name="ObjectShortName">blqII1_to_m_down[45:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group1630" type="group">

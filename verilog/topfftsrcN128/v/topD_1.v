@@ -42,7 +42,7 @@ always @(posedge clk) begin
 end
     
 
-////logic for accu enable signal, resets also the frequency divider counter
+
 assign Q = (count >= N) ? 1'b1 : 1'b0;
     
 
