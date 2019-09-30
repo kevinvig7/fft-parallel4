@@ -32,13 +32,13 @@ module sat_fxnum
   input  [NBITS_IN-1:0] sat_in);
 
 always @(*) begin
-     if (&sat_in[NBITS_IN-2:NBI_IN+NBITS_OUT-1]==1'b1 && sat_in[NBITS_IN-1]==1'b0)
-	sat_out = {2'b01,{NBITS_OUT-2{1'b1}}};
-else if (&sat_in[NBITS_IN-2:NBI_IN+NBITS_OUT-1]==1'b0 && sat_in[NBITS_IN-1]==1'b1)
-	sat_out = {2'b10,{NBITS_OUT-2{1'b0}}};
+if (&sat_in[NBITS_IN-2:NBI_IN+NBITS_OUT-1]==1'b1 && sat_in[NBITS_IN-1]==1'b0)
+	sat_out = {1'b0,{NBITS_OUT-1{1'b1}}};
+else if (|sat_in[NBITS_IN-2:NBI_IN+NBITS_OUT-1]==1'b0 && sat_in[NBITS_IN-1]==1'b1)
+	sat_out = {1'b1,{NBITS_OUT-1{1'b0}}};
 else
 	sat_out = sat_in[NBF_IN+NBI_OUT-1 -: NBITS_OUT]; 
-	end
+end
  
 
 

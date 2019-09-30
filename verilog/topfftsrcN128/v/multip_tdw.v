@@ -8,11 +8,11 @@ parameter NBITS_out=NBITS+NBITScoeff)
 
 
 
-  wire [NBITS-1:0] m_r;
-  wire [NBITS-1:0] m_i;
+  wire signed [NBITS-1:0] m_r;
+  wire signed [NBITS-1:0] m_i;
     
-  wire [NBITScoeff-1:0] c_r;
-  wire [NBITScoeff-1:0] c_i;
+  wire signed [NBITScoeff-1:0] c_r;
+  wire signed [NBITScoeff-1:0] c_i;
     
     
 assign m_r = muestra[NBITS*2-1:NBITS]; //Real

@@ -30,3 +30,4 @@ save_wave_config {C:/fft-parallel4/verilog/viejos/BF/tb_BF_behav.wcfg}
 add_files -fileset sim_1 -norecurse C:/fft-parallel4/verilog/viejos/BF/tb_BF_behav.wcfg
 set_property xsim.view C:/fft-parallel4/verilog/viejos/BF/tb_BF_behav.wcfg [get_filesets sim_1]
 relaunch_sim
+close_sim

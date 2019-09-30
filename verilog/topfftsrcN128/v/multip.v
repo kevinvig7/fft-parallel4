@@ -2,17 +2,17 @@ module multip
 #(parameter NBITS=10,
 parameter NBITScoeff=11,
 parameter NBITS_out=NBITS+NBITScoeff+1)
- (output signed [NBITS_out*2-1:0] result,
+ (output signed  [NBITS_out*2-1:0] result,
   input signed [NBITS*2-1:0] muestra,
   input signed [NBITScoeff*2-1:0] coeff);
 
 
 
-  wire [NBITS-1:0] m_r;
-  wire [NBITS-1:0] m_i;
+  wire signed [NBITS-1:0] m_r;
+  wire signed [NBITS-1:0] m_i;
     
-  wire [NBITScoeff-1:0] c_r;
-  wire [NBITScoeff-1:0] c_i;
+  wire signed [NBITScoeff-1:0] c_r;
+  wire signed [NBITScoeff-1:0] c_i;
     
     
 assign m_r = muestra[NBITS*2-1:NBITS]; //Real
