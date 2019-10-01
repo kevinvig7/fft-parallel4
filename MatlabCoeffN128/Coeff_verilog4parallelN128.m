@@ -148,7 +148,7 @@ fprintf(fid,['  parameter N=',num2str(N),')\n']);
 fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
 fprintf(fid,['initial begin' , '\n']);
 for index=1 : N
-    fprintf( fid , ['coeff_data[' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) '] = ' num2str(NBITScoeff*2) '''b' coeff1_0(index,:) ';','\n']); 
+    fprintf( fid , ['coeff_data[' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) '] = ' num2str(NBITScoeff*2) '''b' coeff2_0(index,:) ';','\n']); 
 end
 fprintf(fid,['end ' , '\n']);
 fprintf(fid,['endmodule ' , '\n']);
@@ -162,7 +162,7 @@ fprintf(fid,['  parameter N=',num2str(N),')\n']);
 fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
 fprintf(fid,['initial begin' , '\n']);
 for index=1 : N
-    fprintf( fid , ['coeff_data[' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) '] = ' num2str(NBITScoeff*2) '''b' coeff1_1(index,:) ';','\n']); 
+    fprintf( fid , ['coeff_data[' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) '] = ' num2str(NBITScoeff*2) '''b' coeff2_1(index,:) ';','\n']); 
 end
 fprintf(fid,['end ' , '\n']);
 fprintf(fid,['endmodule ' , '\n']);
@@ -176,7 +176,7 @@ fprintf(fid,['  parameter N=',num2str(N),')\n']);
 fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
 fprintf(fid,['initial begin' , '\n']);
 for index=1 : N
-    fprintf( fid , ['coeff_data[' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) '] = ' num2str(NBITScoeff*2) '''b' coeff1_2(index,:) ';','\n']); 
+    fprintf( fid , ['coeff_data[' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) '] = ' num2str(NBITScoeff*2) '''b' coeff2_2(index,:) ';','\n']); 
 end
 fprintf(fid,['end ' , '\n']);
 fprintf(fid,['endmodule ' , '\n']);
@@ -190,7 +190,7 @@ fprintf(fid,['  parameter N=',num2str(N),')\n']);
 fprintf(fid,['(output reg [NBITS*N*2-1:0] coeff_data);','\n']);
 fprintf(fid,['initial begin' , '\n']);
 for index=1 : N
-    fprintf( fid , ['coeff_data[' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) '] = ' num2str(NBITScoeff*2) '''b' coeff1_2(index,:) ';','\n']); 
+    fprintf( fid , ['coeff_data[' num2str(N*NBITScoeff*2-1-(index-1)*NBITScoeff*2) ' : ' num2str(N*NBITScoeff*2-(index-1)*NBITScoeff*2-NBITScoeff*2) '] = ' num2str(NBITScoeff*2) '''b' coeff2_3(index,:) ';','\n']); 
 end
 fprintf(fid,['end ' , '\n']);
 fprintf(fid,['endmodule ' , '\n']);
