@@ -21,6 +21,25 @@
 
 
 module topfft_tb();
+
+
+`define NULL 0
+    //Para escaneo de entrada obtenia de Matlab
+integer data_in; // file handler
+integer scan_in0; // file handler
+integer scan_in1; // file handler
+integer scan_in2; // file handler
+integer scan_in3; // file handler
+
+    //Para escaneo de archivo de salida de Matlab
+integer data_out; // file handler
+integer scan_out0; // file handler
+integer scan_out1; // file handler
+integer scan_out2; // file handler
+integer scan_out3; // file handler
+
+  
+    
     
 parameter NBITS=10;
 parameter NBITScoeff=NBITS+1;
@@ -34,16 +53,23 @@ reg [NBITS*2-1:0] fftIn0_down;
 reg [NBITS*2-1:0] fftIn1_up;
 reg [NBITS*2-1:0] fftIn1_down;
  
-wire [((NBITS+1)*2+1)*2-1:0] fftOut0_up;
-wire [((NBITS+1)*2+1)*2-1:0] fftOut0_down;
-wire [((NBITS+1)*2+1)*2-1:0] fftOut1_up;
-wire [((NBITS+1)*2+1)*2-1:0] fftOut1_down;
+wire [15*2-1:0] fftOut0_up;
+wire [15*2-1:0] fftOut0_down;
+wire [15*2-1:0] fftOut1_up;
+wire [15*2-1:0] fftOut1_down;
+
+reg [15*2-1:0] file_fftOut0_up;
+reg [15*2-1:0] file_fftOut0_down;
+reg [15*2-1:0] file_fftOut1_up;
+reg [15*2-1:0] file_fftOut1_down;
     
+reg comp_fftOut0_up;
+reg comp_fftOut0_down;
+reg comp_fftOut1_up;
+reg comp_fftOut1_down;
 
     
-    
-    
-       //-- Generador de reloj. Periodo 2 unidades
+//-- Generador de reloj. Periodo 2 unidades
 always #1 clk = ~clk;
         
 topfft#(
@@ -62,53 +88,132 @@ topfft#(
     .rst(rst)
   );
     
-integer data_in; // file handler
-integer scan_in0; // file handler
-integer scan_in1; // file handler
-integer scan_in2; // file handler
-integer scan_in3; // file handler
 
-
-
-`define NULL 0
 
 initial begin
-    data_in = $fopen("Input128.dat","r");
-     rst_tb  = 1'd1;
- #20 rst_tb  = 1'd0;
- 
-     if (data_in == `NULL) begin
-        $display("data_file handle was NULL");
+
+data_in = $fopen("Input128.dat","r");  //lectura de entrada obtenida de Matlab
+if (data_in == `NULL) begin
+        $display("Input128.dat NULL");
          $finish;
     end
+    
+data_out = $fopen("Output128.dat","r"); //lectura de salida desde Matlab para comparar con la salida de verilog   
+if (data_out == `NULL) begin
+        $display("Output128.dat NULL");
+         $finish;
+    end    
+        
+   
+    
+       
+ rst_tb  = 1'd1;
+ #5 rst_tb  = 1'd0;
  
+ fftIn0_up   ={NBITS*2{1'b0}} ;
+ fftIn0_down ={NBITS*2{1'b0}};
+ fftIn1_up   ={NBITS*2{1'b0}};
+ fftIn1_down ={NBITS*2{1'b0}};
+
+
+
 end
+
+
 
 always @(posedge clk) begin
    if(rst_tb) begin
       rst  = 1'd1;
-  #20 rst  = 1'd0;
-         end 
-         else if(!$feof(data_in))  begin
+   #5 rst  = 1'd0;
+    fftIn0_up   ={NBITS*2{1'b0}} ;
+    fftIn0_down ={NBITS*2{1'b0}};
+    fftIn1_up   ={NBITS*2{1'b0}};
+    fftIn1_down ={NBITS*2{1'b0}};
+             end 
+        else if(!$feof(data_in))  begin
              scan_in0 = $fscanf(data_in, "%b\n", fftIn0_up);
              scan_in1 = $fscanf(data_in, "%b\n", fftIn0_down);
              scan_in2 = $fscanf(data_in, "%b\n", fftIn1_up);
              scan_in3 = $fscanf(data_in, "%b\n", fftIn1_down);
-             end
+        end
              else begin
              fftIn0_up  ={NBITS*2{1'bz}};
              fftIn0_down={NBITS*2{1'bz}};
              fftIn1_up  ={NBITS*2{1'bz}};
              fftIn1_down={NBITS*2{1'bz}};
-              #25;
+             
+             #1;
+              
               $finish;
+        end
  end
 
-   end
 
 
-//if(!$feof(data_in)) 
+always @(posedge clk) begin
+   if(rst) begin
+    file_fftOut0_up   ={15*2{1'b0}} ;
+    file_fftOut0_down ={15*2{1'b0}};
+    file_fftOut1_up   ={15*2{1'b0}};
+    file_fftOut1_down ={15*2{1'b0}};
+             end 
+        //else if(!$feof(data_out))  begin
+        else begin
+             scan_out0 = $fscanf(data_out, "%b\n", file_fftOut0_up);
+             scan_out1 = $fscanf(data_out, "%b\n", file_fftOut0_down);
+             scan_out2 = $fscanf(data_out, "%b\n", file_fftOut1_up);
+             scan_out3 = $fscanf(data_out, "%b\n", file_fftOut1_down);
+             
+             
+        end
+ end
 
+/////////Comparador de salidas 
+
+initial begin
+comp_fftOut0_up=0;
+comp_fftOut0_down=0;
+comp_fftOut1_up=0;
+comp_fftOut1_down=0;
+end
+
+always @(clk) begin
+if (fftOut0_up=== file_fftOut0_up) begin
+comp_fftOut0_up=1;
+end
+else begin
+comp_fftOut0_up=0;
+end
+end
+
+always @(clk) begin
+if (fftOut0_down=== file_fftOut0_down) begin
+comp_fftOut0_down=1;
+end
+else begin
+comp_fftOut0_down=0;
+end
+end
+
+always @(clk) begin
+if (fftOut1_up=== file_fftOut1_up) begin
+comp_fftOut1_up=1; 
+end
+else begin
+comp_fftOut1_up=0;
+end
+end
+
+
+always @(clk) begin
+if (fftOut1_down=== file_fftOut1_down) begin
+comp_fftOut1_down=1;
+end
+else begin
+comp_fftOut1_down=0;
+end
+end
+/////////////// Fin de comparador de salidas 
 
 
 
