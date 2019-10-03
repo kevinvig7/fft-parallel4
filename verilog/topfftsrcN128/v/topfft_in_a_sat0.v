@@ -56,7 +56,7 @@ module topfft_in_a_sat0
   
   wire ctrl_Blq_BFII,coeffCMStage2_en;
  
-  
+  ///estos no van negados a la entrada de coeff porque el rst es negado
   
  assign coeffw0_0en=rst;
  assign coeffw0_1en=rst;
