@@ -23,12 +23,15 @@
 
 module topfft 
      #(parameter NBITS = 10,
-     parameter NBITScoeff=NBITS+1,
+       parameter NBITScoeff=NBITS+1,
+       parameter NBITS_out=28,
        parameter N = 32) // Cantidad de coeficientes en los multiplicadores
-     (output [15*2-1:0] fftOut0_up,
-      output [15*2-1:0] fftOut0_down,
-      output [15*2-1:0] fftOut1_up,
-      output [15*2-1:0] fftOut1_down,
+     (
+      output [NBITS_out*2-1:0] fftOut0_up,
+      output [NBITS_out*2-1:0] fftOut0_down,
+      output [NBITS_out*2-1:0] fftOut1_up,
+      output [NBITS_out*2-1:0] fftOut1_down,
+      
       input  [NBITS*2-1:0] fftIn0_up,
       input  [NBITS*2-1:0] fftIn0_down,
       input  [NBITS*2-1:0] fftIn1_up,
@@ -62,10 +65,10 @@ module topfft
      wire [28*2-1:0] m_a_blqIV_1_down;                   
                  
                         
-     wire coefficientes2_0;
-     wire coefficientes2_1;               
-     wire coefficientes2_2;
-     wire coefficientes2_3;
+     wire [NBITScoeff*2-1:0] coefficientes2_0;
+     wire [NBITScoeff*2-1:0] coefficientes2_1;               
+     wire [NBITScoeff*2-1:0] coefficientes2_2;
+     wire [NBITScoeff*2-1:0] coefficientes2_3;
      
      wire coeffw2_0en;
      wire coeffw2_1en;
@@ -99,18 +102,12 @@ topfft_in_a_sat0
       .rst(rst));
  /////////////////////
  
-      
-
-    assign fftOut0_up = sat0_a_blqIII_0_up;
-    assign fftOut0_down = sat0_a_blqIII_0_down;
-    assign fftOut1_up = sat0_a_blqIII_1_up;
-    assign fftOut1_down = sat0_a_blqIII_1_down;
-      
-   
-   
-   //////////Sat 0 a Sat 1
-   
-   
+//    assign fftOut0_up = sat0_a_blqIII_0_up;
+//    assign fftOut0_down = sat0_a_blqIII_0_down;
+//    assign fftOut1_up = sat0_a_blqIII_1_up;
+//    assign fftOut1_down = sat0_a_blqIII_1_down;
+    
+ //////////Sat 0 a Sat 1
    
    Blq
 #(8+16,8+16,15)
@@ -123,8 +120,6 @@ topfft_in_a_sat0
        .rst(rst),
        .ctrl(ctrl_Blq_BFIII)); 
     
-
-    
 Blq
 #(8+16,8+16,15)
      Blq_BFIII_1
@@ -135,9 +130,18 @@ Blq
        .clk(clk),
        .rst(rst),
        .ctrl(ctrl_Blq_BFIII)); 
-   
-      
-   
+
+/////////////////////////////////////
+
+ topD_1
+ #(8+16)
+    EnableCM_stage3
+    (.Q(coeffCMStage3_en),
+//     .D(clk),
+    .clk(clk),
+    .rst(rst));
+
+
 ////////////////Control sw
 
 contador
@@ -168,10 +172,6 @@ assign coeffw2_3en=coeffCMStage3_en;
      (.coeff_out(coefficientes2_0),
       .clk(clk),
       .rst(!coeffw2_0en));      
-        
-        
-
-   
    
      //producto 2_1
  multip
@@ -187,10 +187,6 @@ assign coeffw2_3en=coeffCMStage3_en;
       .clk(clk),
       .rst(!coeffw2_1en));
    
-   
-   
-   
-   
      //producto 2_2
  multip
  #(16,NBITScoeff)
@@ -205,9 +201,7 @@ coeff2_2
       .clk(clk),
       .rst(!coeffw2_2en));  
              
-        
-   
-   
+
      //producto 2_3
  multip
  #(16,NBITScoeff)
@@ -223,15 +217,13 @@ coeff2_3
       .clk(clk),
       .rst(!coeffw2_3en));     
    
+      
+      
+   assign fftOut0_up   = m_a_blqIV_0_up;
+   assign fftOut0_down = m_a_blqIV_0_down;
+   assign fftOut1_up   = m_a_blqIV_1_up;
+   assign fftOut1_down = m_a_blqIV_1_down;
     
-
-
-
-
-   
-      
-      
- 
 
 ///////////////////////////////      
     

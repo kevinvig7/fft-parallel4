@@ -21,12 +21,12 @@
 
 
 module fixtop_sat
- #(parameter NBITS_IN  =21,
-   parameter NBI_IN    =2,
-   parameter NBF_IN    =19,
-   parameter NBITS_OUT =20,
-   parameter NBI_OUT   =1,
-   parameter NBF_OUT   =19)
+ #(parameter NBITS_IN  =15,
+   parameter NBI_IN    =3,
+   parameter NBF_IN    =12,
+   parameter NBITS_OUT =15,
+   parameter NBI_OUT   =3,
+   parameter NBF_OUT   =12)
  
  (output [NBITS_OUT*2-1:0] sat_out,
   input  [NBITS_IN*2-1:0] sat_in);

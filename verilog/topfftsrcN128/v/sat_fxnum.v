@@ -22,12 +22,12 @@
 
 
 module sat_fxnum
-#(parameter NBITS_IN =8,
- parameter NBI_IN =1,
- parameter NBF_IN =7 ,
-  parameter NBITS_OUT =6,
-  parameter NBI_OUT =1,
-  parameter NBF_OUT=5  )
+#(parameter NBITS_IN =15,
+ parameter NBI_IN =3,
+ parameter NBF_IN =12 ,
+  parameter NBITS_OUT =15,
+  parameter NBI_OUT =3,
+  parameter NBF_OUT=12  )
  (output reg  [NBITS_OUT-1:0] sat_out,
   input  [NBITS_IN-1:0] sat_in);
 

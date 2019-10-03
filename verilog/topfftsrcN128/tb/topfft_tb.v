@@ -43,7 +43,10 @@ integer scan_out3; // file handler
     
 parameter NBITS=10;
 parameter NBITScoeff=NBITS+1;
+parameter NBITS_out = 28;
 parameter N=32;   
+
+
 reg clk = 0;
 reg rst;  
 reg rst_tb;
@@ -53,28 +56,33 @@ reg [NBITS*2-1:0] fftIn0_down;
 reg [NBITS*2-1:0] fftIn1_up;
 reg [NBITS*2-1:0] fftIn1_down;
  
-wire [15*2-1:0] fftOut0_up;
-wire [15*2-1:0] fftOut0_down;
-wire [15*2-1:0] fftOut1_up;
-wire [15*2-1:0] fftOut1_down;
+wire [NBITS_out*2-1:0] fftOut0_up;
+wire [NBITS_out*2-1:0] fftOut0_down;
+wire [NBITS_out*2-1:0] fftOut1_up;
+wire [NBITS_out*2-1:0] fftOut1_down;
 
-reg [15*2-1:0] file_fftOut0_up;
-reg [15*2-1:0] file_fftOut0_down;
-reg [15*2-1:0] file_fftOut1_up;
-reg [15*2-1:0] file_fftOut1_down;
+reg [NBITS_out*2-1:0] file_fftOut0_up;
+reg [NBITS_out*2-1:0] file_fftOut0_down;
+reg [NBITS_out*2-1:0] file_fftOut1_up;
+reg [NBITS_out*2-1:0] file_fftOut1_down;
     
-reg comp_fftOut0_up;
+/*reg comp_fftOut0_up;
 reg comp_fftOut0_down;
 reg comp_fftOut1_up;
-reg comp_fftOut1_down;
+reg comp_fftOut1_down;*/
 
+wire comp_fftOut0_up;
+wire comp_fftOut0_down;
+wire comp_fftOut1_up;
+wire comp_fftOut1_down;
     
 //-- Generador de reloj. Periodo 2 unidades
 always #1 clk = ~clk;
         
 topfft#(
 .NBITS(NBITS),
-.NBITScoeff(NBITScoeff))
+.NBITScoeff(NBITScoeff),
+.NBITS_out(NBITS_out))
   dut(
     .fftIn0_up(fftIn0_up),
     .fftIn0_down(fftIn0_down),
@@ -103,10 +111,7 @@ if (data_out == `NULL) begin
         $display("Output128.dat NULL");
          $finish;
     end    
-        
-   
-    
-       
+
  rst_tb  = 1'd1;
  #5 rst_tb  = 1'd0;
  
@@ -114,8 +119,6 @@ if (data_out == `NULL) begin
  fftIn0_down ={NBITS*2{1'b0}};
  fftIn1_up   ={NBITS*2{1'b0}};
  fftIn1_down ={NBITS*2{1'b0}};
-
-
 
 end
 
@@ -152,10 +155,10 @@ always @(posedge clk) begin
 
 always @(posedge clk) begin
    if(rst) begin
-    file_fftOut0_up   ={15*2{1'b0}} ;
-    file_fftOut0_down ={15*2{1'b0}};
-    file_fftOut1_up   ={15*2{1'b0}};
-    file_fftOut1_down ={15*2{1'b0}};
+    file_fftOut0_up   ={NBITS_out*2{1'b0}};
+    file_fftOut0_down ={NBITS_out*2{1'b0}};
+    file_fftOut1_up   ={NBITS_out*2{1'b0}};
+    file_fftOut1_down ={NBITS_out*2{1'b0}};
              end 
         //else if(!$feof(data_out))  begin
         else begin
@@ -169,8 +172,15 @@ always @(posedge clk) begin
  end
 
 /////////Comparador de salidas 
+assign comp_fftOut0_up  = (fftOut0_up   === file_fftOut0_up)   ? 1'b1 : 1'b0;
+assign comp_fftOut0_down= (fftOut0_down === file_fftOut0_down) ? 1'b1 : 1'b0;
+assign comp_fftOut1_up  = (fftOut1_up   === file_fftOut1_up)   ? 1'b1 : 1'b0;
+assign comp_fftOut1_down= (fftOut1_down === file_fftOut1_down) ? 1'b1 : 1'b0;
 
-initial begin
+
+
+
+/*initial begin
 comp_fftOut0_up=0;
 comp_fftOut0_down=0;
 comp_fftOut1_up=0;
@@ -213,6 +223,8 @@ else begin
 comp_fftOut1_down=0;
 end
 end
+*/
+
 /////////////// Fin de comparador de salidas 
 
 

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="22566667fs"></ZoomStartTime>
-      <ZoomEndTime time="117566668fs"></ZoomEndTime>
-      <Cursor1Time time="38400000fs"></Cursor1Time>
+      <ZoomStartTime time="84550000fs"></ZoomStartTime>
+      <ZoomEndTime time="108500001fs"></ZoomEndTime>
+      <Cursor1Time time="89000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="231"></NameColumnWidth>
-      <ValueColumnWidth column_width="325"></ValueColumnWidth>
+      <ValueColumnWidth column_width="321"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="27" />
+   <WVObjectSize size="33" />
    <wvobject type="divider" fp_name="divider2769">
       <obj_property name="label">-----------------------</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -72,7 +72,7 @@
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider1074">
-      <obj_property name="label">Salida</obj_property>
+      <obj_property name="label">Salida cuantizador sat0</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/dut/u_topfft_in_a_sat0/fftOut0_up" type="array">
@@ -99,24 +99,52 @@
       <obj_property name="label">-----------------------</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject type="divider" fp_name="divider2769">
+      <obj_property name="label">Salida BlqIII</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
    <wvobject fp_name="/topfft_tb/file_fftOut0_up" type="array">
-      <obj_property name="ElementShortName">file_fftOut0_up[29:0]</obj_property>
-      <obj_property name="ObjectShortName">file_fftOut0_up[29:0]</obj_property>
+      <obj_property name="ElementShortName">file_fftOut0_up[55:0]</obj_property>
+      <obj_property name="ObjectShortName">file_fftOut0_up[55:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/file_fftOut0_down" type="array">
-      <obj_property name="ElementShortName">file_fftOut0_down[29:0]</obj_property>
-      <obj_property name="ObjectShortName">file_fftOut0_down[29:0]</obj_property>
+      <obj_property name="ElementShortName">file_fftOut0_down[55:0]</obj_property>
+      <obj_property name="ObjectShortName">file_fftOut0_down[55:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/file_fftOut1_up" type="array">
-      <obj_property name="ElementShortName">file_fftOut1_up[29:0]</obj_property>
-      <obj_property name="ObjectShortName">file_fftOut1_up[29:0]</obj_property>
+      <obj_property name="ElementShortName">file_fftOut1_up[55:0]</obj_property>
+      <obj_property name="ObjectShortName">file_fftOut1_up[55:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/file_fftOut1_down" type="array">
-      <obj_property name="ElementShortName">file_fftOut1_down[29:0]</obj_property>
-      <obj_property name="ObjectShortName">file_fftOut1_down[29:0]</obj_property>
+      <obj_property name="ElementShortName">file_fftOut1_down[55:0]</obj_property>
+      <obj_property name="ObjectShortName">file_fftOut1_down[55:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider2769">
+      <obj_property name="label">-----------------------</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/file_fftOut0_up" type="array">
+      <obj_property name="ElementShortName">file_fftOut0_up[55:0]</obj_property>
+      <obj_property name="ObjectShortName">file_fftOut0_up[55:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/file_fftOut0_down" type="array">
+      <obj_property name="ElementShortName">file_fftOut0_down[55:0]</obj_property>
+      <obj_property name="ObjectShortName">file_fftOut0_down[55:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/file_fftOut1_up" type="array">
+      <obj_property name="ElementShortName">file_fftOut1_up[55:0]</obj_property>
+      <obj_property name="ObjectShortName">file_fftOut1_up[55:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/file_fftOut1_down" type="array">
+      <obj_property name="ElementShortName">file_fftOut1_down[55:0]</obj_property>
+      <obj_property name="ObjectShortName">file_fftOut1_down[55:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider2769">
