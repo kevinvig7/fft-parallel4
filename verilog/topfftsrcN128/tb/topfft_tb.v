@@ -172,9 +172,10 @@ always @(posedge clk) begin
  end
 
 /////////Comparador de salidas 
-assign comp_fftOut0_up  = (fftOut0_up   === file_fftOut0_up)   ? 1'b1 : 1'b0;
+//assign comp_fftOut0_up  = (fftOut0_up[NBITS_out*2-1:NBITS_out] === file_fftOut0_up[NBITS_out*2-1:NBITS_out] && fftOut0_up[NBITS_out-1:0]   === file_fftOut0_up[NBITS_out-1:0])   ? 1'b1 : 1'b0;
+assign comp_fftOut0_up  = (fftOut0_up   === file_fftOut0_up  ) ? 1'b1 : 1'b0;
 assign comp_fftOut0_down= (fftOut0_down === file_fftOut0_down) ? 1'b1 : 1'b0;
-assign comp_fftOut1_up  = (fftOut1_up   === file_fftOut1_up)   ? 1'b1 : 1'b0;
+assign comp_fftOut1_up  = (fftOut1_up   === file_fftOut1_up  ) ? 1'b1 : 1'b0;
 assign comp_fftOut1_down= (fftOut1_down === file_fftOut1_down) ? 1'b1 : 1'b0;
 
 

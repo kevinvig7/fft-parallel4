@@ -309,8 +309,7 @@ assign   m_to_sat0_0_up = blqII0_to_m_up; ////expandir signo aqui
      assign satout0_0_up[14:0]      ={m_to_sat0_0_up[11:0],3'b0};
      
     
-     
-       
+           
 //assign m_to_blqII_up[(NBITS+1)*2*2-1:NBITS-1] = $signed(blqI_to_m_up[(NBITS+1)*2-1:NBITS-1]); ////expandir signo aqui
 //assign                 m_to_blqII_up[NBITS:0] = $signed(blqI_to_m_up[NBITS:0]);//expandir signo aqui
        

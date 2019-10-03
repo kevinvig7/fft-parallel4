@@ -75,7 +75,34 @@ module topfft
      wire coeffw2_2en;
      wire coeffw2_3en;
                     
+     
+     wire [NBITScoeff*2-1:0] coefficientes3_0;
+     wire [NBITScoeff*2-1:0] coefficientes3_1;
+     
+     
+     
+     
+     wire [29*2-1:0] blqIV_a_m_0_up;
+     wire [29*2-1:0] blqIV_a_m_0_down;
+     wire [29*2-1:0] blqIV_a_m_1_up;
+     wire [29*2-1:0] blqIV_a_m_1_down;
+     
+     
+     wire [29*2-1:0] m_to_sat1_0_up;
+     wire [40*2-1:0] m_to_sat1_0_down;
+     wire [29*2-1:0] m_to_sat1_1_up;
+     wire [40*2-1:0]  m_to_sat1_1_down;
+     
+
+
+    wire coeffw3_0en;
+    wire coeffw3_1en;
                         
+                        
+   wire [19*2-1:0] sat1out_0_up;
+   wire [19*2-1:0] sat1out_0_down;
+   wire [19*2-1:0] sat1out_1_up;
+   wire [19*2-1:0] sat1out_1_down;
             
       assign in_a_sat0_0_up   = fftIn0_up;
       assign in_a_sat0_0_down = fftIn0_down;
@@ -107,10 +134,26 @@ topfft_in_a_sat0
 //    assign fftOut1_up = sat0_a_blqIII_1_up;
 //    assign fftOut1_down = sat0_a_blqIII_1_down;
     
- //////////Sat 0 a Sat 1
+ //////////////////////////////////Sat 0 a Sat 1///////////////////////////////////
+ ///Enable de etapa
+ topD_1
+ #(8+16)
+    EnableCM_stage3
+    (.Q(coeffCMStage3_en),
+    .clk(clk),
+    .rst(rst));
    
+///Control sw
+contador
+ #(8) 
+   control_Blq_BFIII_0
+        (.clk_out(ctrl_Blq_BFIII),
+         .clk(clk),
+         .rst(!coeffCMStage3_en));  
+   
+//Blq IV 0    
    Blq
-#(8+16,8+16,15)
+#(8,8,15)
      Blq_BFIII_0
       (.BlqOut_up      (blqIII_0_a_m_up),
        .BlqOut_down  (blqIII_0_a_m_down),
@@ -119,9 +162,10 @@ topfft_in_a_sat0
        .clk(clk),
        .rst(rst),
        .ctrl(ctrl_Blq_BFIII)); 
-    
+
+//Blq IV 1         
 Blq
-#(8+16,8+16,15)
+#(8,8,15)
      Blq_BFIII_1
       (.BlqOut_up       (blqIII_1_a_m_up),
        .BlqOut_down   (blqIII_1_a_m_down),
@@ -131,32 +175,45 @@ Blq
        .rst(rst),
        .ctrl(ctrl_Blq_BFIII)); 
 
-/////////////////////////////////////
 
- topD_1
- #(8+16)
-    EnableCM_stage3
-    (.Q(coeffCMStage3_en),
-//     .D(clk),
-    .clk(clk),
-    .rst(rst));
-
-
-////////////////Control sw
-
-contador
- #(8+16) 
-   control_Blq_BFII_0
-        (.clk_out(ctrl_Blq_BFIII),
-         .clk(clk),
-         .rst(!coeffCMStage3_en));  
-
-/////////////////Productos full
+/////////////////Coeficientes
 
 assign coeffw2_0en=coeffCMStage3_en;
 assign coeffw2_1en=coeffCMStage3_en;
 assign coeffw2_2en=coeffCMStage3_en;
 assign coeffw2_3en=coeffCMStage3_en;
+   
+          
+  coeff2_0
+ #(NBITScoeff,N)
+      Mcoeff2_0
+     (.coeff_out(coefficientes2_0),
+      .clk(clk),
+      .rst(!coeffw2_0en));     
+   
+    coeff2_1
+ #(NBITScoeff,N)
+      Mcoeff2_1
+     (.coeff_out(coefficientes2_1),
+      .clk(clk),
+      .rst(!coeffw2_1en));
+   
+   coeff2_2
+ #(NBITScoeff,N)
+      Mcoeff2_2
+     (.coeff_out(coefficientes2_2),
+      .clk(clk),
+      .rst(!coeffw2_2en));  
+      
+      coeff2_3
+ #(NBITScoeff,N)
+      Mcoeff2_3
+     (.coeff_out(coefficientes2_3),
+      .clk(clk),
+      .rst(!coeffw2_3en));     
+   
+   
+/////////////////Productos full   
    
   //producto 2_0
  multip
@@ -165,13 +222,7 @@ assign coeffw2_3en=coeffCMStage3_en;
        (.result(m_a_blqIV_0_up),
         .muestra(blqIII_0_a_m_up),
         .coeff(coefficientes2_0));      
-        
-  coeff2_0
- #(NBITScoeff,N)
-      Mcoeff2_0
-     (.coeff_out(coefficientes2_0),
-      .clk(clk),
-      .rst(!coeffw2_0en));      
+ 
    
      //producto 2_1
  multip
@@ -180,12 +231,7 @@ assign coeffw2_3en=coeffCMStage3_en;
        (.result(m_a_blqIV_0_down),
         .muestra(blqIII_0_a_m_down),
         .coeff(coefficientes2_1));      
- coeff2_1
- #(NBITScoeff,N)
-      Mcoeff2_1
-     (.coeff_out(coefficientes2_1),
-      .clk(clk),
-      .rst(!coeffw2_1en));
+
    
      //producto 2_2
  multip
@@ -194,12 +240,7 @@ assign coeffw2_3en=coeffCMStage3_en;
        (.result(m_a_blqIV_1_up),
         .muestra(blqIII_1_a_m_up),
         .coeff(coefficientes2_2));      
-coeff2_2
- #(NBITScoeff,N)
-      Mcoeff2_2
-     (.coeff_out(coefficientes2_2),
-      .clk(clk),
-      .rst(!coeffw2_2en));  
+
              
 
      //producto 2_3
@@ -210,13 +251,7 @@ coeff2_2
         .muestra(blqIII_1_a_m_down),
         .coeff(coefficientes2_3));      
    
-coeff2_3
- #(NBITScoeff,N)
-      Mcoeff2_3
-     (.coeff_out(coefficientes2_3),
-      .clk(clk),
-      .rst(!coeffw2_3en));     
-   
+
       
       
    assign fftOut0_up   = m_a_blqIV_0_up;
@@ -224,6 +259,134 @@ coeff2_3
    assign fftOut1_up   = m_a_blqIV_1_up;
    assign fftOut1_down = m_a_blqIV_1_down;
     
+///////////////////////Stag4 
+/////////////////////////////////  
+ /*    
+             
+
+//BFI I
+   BF#(NBITS) 
+        Butterfly0_0
+            (.BFOut_up(blqIV_a_m_0_up),
+             .BFOut_down(blqIV_a_m_0_down),
+             .BFIn_up(m_a_blqIV_0_up),
+             .BFIn_down(m_a_blqIV_0_down));
+
+
+   BF#(NBITS) 
+        Butterfly0_1
+            (.BFOut_up(blqIV_a_m_1_up),
+             .BFOut_down(blqIV_a_m_1_down),
+             .BFIn_up(m_a_blqIV_1_up),
+             .BFIn_down(m_a_blqIV_1_down));
+
+    /////////
+    
+     coeff3_0
+ #(NBITScoeff,N)
+      Mcoeff3_0
+     (.coeff_out(coefficientes3_0),
+      .clk(clk),
+      .rst(coeffw3_0en));
+
+ coeff3_1
+ #(NBITScoeff,N)
+      Mcoeff3_1
+     (.coeff_out(coefficientes3_1),
+      .clk(clk),
+      .rst(coeffw3_1en));
+ ///////////////////////////////// 
+   
+  //cable 3_0 
+assign m_to_sat1_0_up= blqIV_a_m_0_up;  // Cable
+
+//producto 3_1
+ multip_tdw
+ #(NBITS+1,NBITScoeff)
+       M0_0_tdw
+       (.result(m_to_sat1_0_down),
+        .muestra(blqIV_a_m_0_down),
+        .coeff(coefficientes3_1));
+      
+    //cable 3_2      
+assign m_to_sat1_1_up= blqIV_a_m_1_up; // Cable
+
+        
+  //producto 3_3
+ multip_tdw
+ #(NBITS+1,NBITScoeff)
+       M0_1_tdw
+       (.result(m_to_sat1_1_down),
+        .muestra(blqIV_a_m_1_down),
+        .coeff(coefficientes3_1));       
+    
+
+
+///////////Saturador Sat1
+       
+    fixtop_sat
+        #(.NBITS_IN(29),
+          .NBI_IN(8),
+          .NBF_IN(21),
+          .NBITS_OUT(19),
+          .NBI_OUT(5),
+          .NBF_OUT(14))
+        sat1_out0_up
+         (.sat_out(sat1out_0_up),
+          .sat_in(m_to_sat1_0_up)); 
+       
+       
+       
+       fixtop_sat
+        #(.NBITS_IN(40),
+          .NBI_IN(10),
+          .NBF_IN(30),
+          .NBITS_OUT(19),
+          .NBI_OUT(5),
+          .NBF_OUT(14))
+        sat1_out0_down
+         (.sat_out(sat1out_0_down),
+          .sat_in(m_to_sat1_0_down)); 
+   
+     fixtop_sat
+        #(.NBITS_IN(29),
+          .NBI_IN(8),
+          .NBF_IN(21),
+          .NBITS_OUT(19),
+          .NBI_OUT(5),
+          .NBF_OUT(14))
+        sat1_out1_up
+         (.sat_out(sat1out_1_up),
+          .sat_in(m_to_sat1_1_up)); 
+          
+            fixtop_sat
+        #(.NBITS_IN(40),
+           .NBI_IN(10),
+          .NBF_IN(30),
+          .NBITS_OUT(19),
+          .NBI_OUT(5),
+          .NBF_OUT(14))
+        sat1_out1_down
+         (.sat_out(sat1out_1_down),
+          .sat_in(m_to_sat1_1_down)); 
+   */
+                  
+/*      
+   assign fftOut0_up   = sat1out_0_up;
+   assign fftOut0_down = sat1out_0_down;
+   assign fftOut1_up   = sat1out_1_up;
+   assign fftOut1_down = sat1out_1_down;
+*/
+
+
+
+
+
+
+
+
+
+
 
 ///////////////////////////////      
     
