@@ -23,6 +23,7 @@
 module topfft_in_a_sat0
     #(parameter NBITS = 10,
       parameter NBITScoeff=NBITS+1,
+       parameter NBITS_out=15,
       parameter N = 32) // Cantidad de coeficientes en los multiplicadores
      (output [15*2-1:0] fftOut0_up,
       output [15*2-1:0] fftOut0_down,
@@ -104,10 +105,10 @@ module topfft_in_a_sat0
  wire [35*2-1:0] m_to_sat1_1_down;
  
 
- wire [15*2-1:0] satout0_0_up;
- wire [15*2-1:0] satout0_1_down;
- wire [15*2-1:0] satout1_0_up;
- wire [15*2-1:0] satout1_1_down;
+ wire [NBITS_out*2-1:0] satout0_0_up;
+ wire [NBITS_out*2-1:0] satout0_1_down;
+ wire [NBITS_out*2-1:0] satout1_0_up;
+ wire [NBITS_out*2-1:0] satout1_1_down;
 
 
   assign in0_up   =   fftIn0_up;

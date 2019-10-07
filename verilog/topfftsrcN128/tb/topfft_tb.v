@@ -179,52 +179,6 @@ assign comp_fftOut1_down= (fftOut1_down === file_fftOut1_down) ? 1'b1 : 1'b0;
 
 
 
-
-/*initial begin
-comp_fftOut0_up=0;
-comp_fftOut0_down=0;
-comp_fftOut1_up=0;
-comp_fftOut1_down=0;
-end
-
-always @(clk) begin
-if (fftOut0_up=== file_fftOut0_up) begin
-comp_fftOut0_up=1;
-end
-else begin
-comp_fftOut0_up=0;
-end
-end
-
-always @(clk) begin
-if (fftOut0_down=== file_fftOut0_down) begin
-comp_fftOut0_down=1;
-end
-else begin
-comp_fftOut0_down=0;
-end
-end
-
-always @(clk) begin
-if (fftOut1_up=== file_fftOut1_up) begin
-comp_fftOut1_up=1; 
-end
-else begin
-comp_fftOut1_up=0;
-end
-end
-
-
-always @(clk) begin
-if (fftOut1_down=== file_fftOut1_down) begin
-comp_fftOut1_down=1;
-end
-else begin
-comp_fftOut1_down=0;
-end
-end
-*/
-
 /////////////// Fin de comparador de salidas 
 
 
