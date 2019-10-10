@@ -43,7 +43,7 @@ integer scan_out3; // file handler
     
 parameter NBITS=10;
 parameter NBITScoeff=NBITS+1;
-parameter NBITS_out = 21;
+parameter NBITS_out = 10;
 parameter N=32;   
 
 
@@ -145,7 +145,7 @@ always @(posedge clk) begin
              fftIn1_up  ={NBITS*2{1'bz}};
              fftIn1_down={NBITS*2{1'bz}};
              
-             #1;
+             #100;
               
               $finish;
         end
@@ -160,13 +160,18 @@ always @(posedge clk) begin
     file_fftOut1_up   ={NBITS_out*2{1'b0}};
     file_fftOut1_down ={NBITS_out*2{1'b0}};
              end 
-        //else if(!$feof(data_out))  begin
-        else begin
+        else if(!$feof(data_out))  begin
              scan_out0 = $fscanf(data_out, "%b\n", file_fftOut0_up);
              scan_out1 = $fscanf(data_out, "%b\n", file_fftOut0_down);
              scan_out2 = $fscanf(data_out, "%b\n", file_fftOut1_up);
              scan_out3 = $fscanf(data_out, "%b\n", file_fftOut1_down);
+             end
              
+              else begin
+    file_fftOut0_up   ={NBITS_out*2{1'b0}};
+    file_fftOut0_down ={NBITS_out*2{1'b0}};
+    file_fftOut1_up   ={NBITS_out*2{1'b0}};
+    file_fftOut1_down ={NBITS_out*2{1'b0}};
              
         end
  end

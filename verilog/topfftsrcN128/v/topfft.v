@@ -24,7 +24,7 @@
 module topfft 
      #(parameter NBITS = 10,
        parameter NBITScoeff=NBITS+1,
-       parameter NBITS_out=21,
+       parameter NBITS_out=10,
        parameter N = 32) // Cantidad de coeficientes en los multiplicadores
      (
       output [NBITS_out*2-1:0] fftOut0_up,
@@ -58,23 +58,26 @@ module topfft
    wire [19*2-1:0] sat1out_1_up;
    wire [19*2-1:0] sat1out_1_down;
    
-  wire [NBITS_out*2-1:0] sat2out_0_up;
-  wire [NBITS_out*2-1:0] sat2out_0_down;
-  wire [NBITS_out*2-1:0] sat2out_1_up;
-  wire [NBITS_out*2-1:0] sat2out_1_down;
+  wire [21*2-1:0] sat2out_0_up;
+  wire [21*2-1:0] sat2out_0_down;
+  wire [21*2-1:0] sat2out_1_up;
+  wire [21*2-1:0] sat2out_1_down;
+
+  wire [NBITS_out*2-1:0] sat3out_0_up;
+  wire [NBITS_out*2-1:0] sat3out_0_down;
+  wire [NBITS_out*2-1:0] sat3out_1_up;
+  wire [NBITS_out*2-1:0] sat3out_1_down;
 
    
-/////////////////////////////////////////////   
-            
+///////////////////////////////////////////////////////                  
+////Desde entrada "in" hasta primer cuantizador "sat0" 
+
       assign in_a_sat0_0_up   = fftIn0_up;
       assign in_a_sat0_0_down = fftIn0_down;
       assign in_a_sat0_1_up   = fftIn1_up;
       assign in_a_sat0_1_down = fftIn1_down;
       
-      
-      
-                
-////Desde la entrada al primer cuantizador sat0      
+
 topfft_in_a_sat0
    #(.NBITS(NBITS),
      .NBITScoeff(NBITScoeff),
@@ -93,7 +96,7 @@ topfft_in_a_sat0
       .clk(clk),
       .rst(rst));
       
- /////////////////////
+ ////Desde "sat0" hasta el segundo cuantizador "sat1"
 
                   
        topfft_sat0_a_sat1
@@ -113,7 +116,7 @@ topfft_in_a_sat0
       .clk(clk),
       .rst(rst));           
                   
-                                   
+  ////Desde "sat1" hasta el tercer cuantizador "sat2"                                 
                   
     topfft_sat1_a_sat2
    #(.NBITS(19),
@@ -131,13 +134,36 @@ topfft_in_a_sat0
       .fftIn1_down(sat1out_1_down),
       .clk(clk),
       .rst(rst));           
+      
+
+  ////Desde "sat2" hasta el cuarto cuantizador "sat3"   
+
+    topfft_sat2_a_sat3
+   #(.NBITS(21),
+     .NBITScoeff(NBITScoeff),
+     .N(32)) 
+    u_topfft_sat2_a_sat3
+     (.fftOut0_up  (sat3out_0_up),
+      .fftOut0_down(sat3out_0_down),
+      .fftOut1_up  (sat3out_1_up),
+      .fftOut1_down(sat3out_1_down),
+      
+      .fftIn0_up  (sat2out_0_up),
+      .fftIn0_down(sat2out_0_down),
+      .fftIn1_up  (sat2out_1_up),
+      .fftIn1_down(sat2out_1_down),
+      .clk(clk),
+      .rst(rst));         
 
 
 
-   assign fftOut0_up   = sat2out_0_up;
-   assign fftOut0_down = sat2out_0_down;
-   assign fftOut1_up   = sat2out_1_up;
-   assign fftOut1_down = sat2out_1_down;
+   assign fftOut0_up   = sat3out_0_up;
+   assign fftOut0_down = sat3out_0_down;
+   assign fftOut1_up   = sat3out_1_up;
+   assign fftOut1_down = sat3out_1_down;
+
+
+
 
 
 
