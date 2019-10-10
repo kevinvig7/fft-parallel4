@@ -145,7 +145,7 @@ always @(posedge clk) begin
              fftIn1_up  ={NBITS*2{1'bz}};
              fftIn1_down={NBITS*2{1'bz}};
              
-             #100;
+             #50;
               
               $finish;
         end
