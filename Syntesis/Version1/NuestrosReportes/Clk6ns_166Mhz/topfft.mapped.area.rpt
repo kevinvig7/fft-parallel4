@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Tue Oct 22 11:46:59 2019
+****************************************
+
+Library(s) Used:
+
+    gscl45nm (File: /home/tools/synopsys/tech_kits/FreePDK45/osu_soc/lib/files/gscl45nm.db)
+
+Number of ports:                          162
+Number of nets:                        128120
+Number of cells:                       106309
+Number of combinational cells:          98384
+Number of sequential cells:              7925
+Number of macros/black boxes:               0
+Number of buf/inv:                      26593
+Number of references:                      42
+
+Combinational area:             311565.452304
+Buf/Inv area:                    47490.812322
+Noncombinational area:           63074.857201
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                374640.309505
+Total area:                 undefined
+1

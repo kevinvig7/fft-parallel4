@@ -1,0 +1,1188 @@
+ 
+****************************************
+Report : resources
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Tue Oct 22 12:18:29 2019
+****************************************
+
+
+Resource Report for this hierarchy in file
+        /home/digital8/vlsi/dc/rtl/coeff0_0.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_1        | DW01_inc       | width=23   | u_topfft_in_a_sat0/Mcoeff0_0/add_54 (coeff0_0.v:54) |
+| add_x_5        | DW01_inc       | width=23   | u_topfft_in_a_sat0/Mcoeff0_1/add_55 (coeff0_1.v:55) |
+| add_x_9        | DW01_add       | width=11   | u_topfft_in_a_sat0/Butterfly0_0/add_52 (BF.v:52) |
+| add_x_10       | DW01_add       | width=11   | u_topfft_in_a_sat0/Butterfly0_0/add_53 (BF.v:53) |
+| gte_x_11       | DW_cmp         | width=23   | u_topfft_in_a_sat0/control_Blq_BFII_0/gte_37 (contador.v:37) |
+| add_x_12       | DW01_inc       | width=23   | u_topfft_in_a_sat0/control_Blq_BFII_0/add_42 (contador.v:42) |
+| add_x_16       | DW01_inc       | width=23   | u_topfft_in_a_sat0/EnableCM_stage2/add_40 (topD_1.v:40) |
+| add_x_18       | DW01_inc       | width=23   | u_topfft_in_a_sat0/Mcoeff1_0/add_54 (coeff1_0.v:54) |
+| add_x_22       | DW01_inc       | width=23   | u_topfft_in_a_sat0/Mcoeff1_1/add_55 (coeff1_1.v:55) |
+| add_x_26       | DW01_inc       | width=23   | u_topfft_in_a_sat0/Mcoeff1_2/add_55 (coeff1_2.v:55) |
+| add_x_30       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/EnableCM_stage3/add_40 (topD_1.v:40) |
+| gte_x_32       | DW_cmp         | width=23   | u_topfft_sat0_a_sat1/EnableCM_stage3/gte_46 (topD_1.v:46) |
+| gte_x_33       | DW_cmp         | width=23   | u_topfft_sat0_a_sat1/control_Blq_BFIII_0/gte_37 (contador.v:37) |
+| add_x_34       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/control_Blq_BFIII_0/add_42 (contador.v:42) |
+| add_x_38       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/Mcoeff2_0/add_54 (coeff2_0.v:54) |
+| add_x_42       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/Mcoeff2_1/add_55 (coeff2_1.v:55) |
+| add_x_46       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/Mcoeff2_2/add_54 (coeff2_2.v:54) |
+| add_x_50       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/Mcoeff2_3/add_55 (coeff2_3.v:55) |
+| add_x_54       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/EnableCM_stage4/add_40 (topD_1.v:40) |
+| gte_x_56       | DW_cmp         | width=23   | u_topfft_sat0_a_sat1/EnableCM_stage4/gte_46 (topD_1.v:46) |
+| gte_x_57       | DW_cmp         | width=23   | u_topfft_sat0_a_sat1/control_Blq_BFIV_0/gte_37 (contador.v:37) |
+| add_x_58       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/control_Blq_BFIV_0/add_42 (contador.v:42) |
+| add_x_62       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/Mcoeff3_0/add_54 (coeff3_0.v:54) |
+| add_x_66       | DW01_inc       | width=23   | u_topfft_sat0_a_sat1/Mcoeff3_1/add_55 (coeff3_1.v:55) |
+| add_x_70       | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/EnableCM_stage5/add_40 (topD_1.v:40) |
+| gte_x_72       | DW_cmp         | width=23   | u_topfft_sat1_a_sat2/EnableCM_stage5/gte_46 (topD_1.v:46) |
+| add_x_73       | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/control_Blq_BFV_0/add_42 (contador.v:42) |
+| add_x_77       | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/Mcoeff4_0/add_54 (coeff4_0.v:54) |
+| add_x_81       | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/Mcoeff4_1/add_55 (coeff4_1.v:55) |
+| add_x_85       | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/Mcoeff4_2/add_54 (coeff4_2.v:54) |
+| add_x_89       | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/Mcoeff4_3/add_55 (coeff4_3.v:55) |
+| add_x_93       | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/EnableCM_stage6/add_40 (topD_1.v:40) |
+| gte_x_95       | DW_cmp         | width=23   | u_topfft_sat1_a_sat2/EnableCM_stage6/gte_46 (topD_1.v:46) |
+| add_x_97       | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/control_Blq_BFVI_0/add_42 (contador.v:42) |
+| add_x_101      | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/Mcoeff5_0/add_54 (coeff5_0.v:54) |
+| add_x_105      | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/Mcoeff5_1/add_55 (coeff5_1.v:55) |
+| add_x_109      | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/Mcoeff5_2/add_54 (coeff5_2.v:54) |
+| add_x_113      | DW01_inc       | width=23   | u_topfft_sat1_a_sat2/Mcoeff5_3/add_55 (coeff5_3.v:55) |
+| add_x_117      | DW01_inc       | width=23   | u_topfft_sat2_a_sat3/EnableCM_stage7/add_40 (topD_1.v:40) |
+| gte_x_119      | DW_cmp         | width=23   | u_topfft_sat2_a_sat3/EnableCM_stage7/gte_46 (topD_1.v:46) |
+| add_x_120      | DW01_add       | width=11   | u_topfft_in_a_sat0/Butterfly0_1/add_52 (BF.v:52) |
+| add_x_121      | DW01_add       | width=11   | u_topfft_in_a_sat0/Butterfly0_1/add_53 (BF.v:53) |
+| gte_x_122      | DW_cmp         | width=23   | u_topfft_sat2_a_sat3/control_Blq_BFVII_0/gte_37 (contador.v:37) |
+| add_x_123      | DW01_inc       | width=23   | u_topfft_sat2_a_sat3/control_Blq_BFVII_0/add_42 (contador.v:42) |
+| add_x_131      | DW01_add       | width=12   | u_topfft_in_a_sat0/Blq_BFII_0/Butterfly/add_52 (BF.v:52) |
+| add_x_132      | DW01_add       | width=12   | u_topfft_in_a_sat0/Blq_BFII_0/Butterfly/add_53 (BF.v:53) |
+| add_x_137      | DW01_add       | width=23   | u_topfft_in_a_sat0/Blq_BFII_1/Butterfly/add_52 (BF.v:52) |
+| add_x_138      | DW01_add       | width=23   | u_topfft_in_a_sat0/Blq_BFII_1/Butterfly/add_53 (BF.v:53) |
+| sub_x_139      | DW01_sub       | width=23   | u_topfft_in_a_sat0/Blq_BFII_1/Butterfly/sub_55 (BF.v:55) |
+| sub_x_140      | DW01_sub       | width=23   | u_topfft_in_a_sat0/Blq_BFII_1/Butterfly/sub_56 (BF.v:56) |
+| add_x_151      | DW01_add       | width=29   | u_topfft_sat0_a_sat1/Blq_BFIV_0/Butterfly/add_52 (BF.v:52) |
+| add_x_152      | DW01_add       | width=29   | u_topfft_sat0_a_sat1/Blq_BFIV_0/Butterfly/add_53 (BF.v:53) |
+| sub_x_153      | DW01_sub       | width=29   | u_topfft_sat0_a_sat1/Blq_BFIV_0/Butterfly/sub_55 (BF.v:55) |
+| sub_x_154      | DW01_sub       | width=29   | u_topfft_sat0_a_sat1/Blq_BFIV_0/Butterfly/sub_56 (BF.v:56) |
+| add_x_161      | DW01_add       | width=20   | u_topfft_sat1_a_sat2/Blq_BFV_0/Butterfly/add_52 (BF.v:52) |
+| add_x_162      | DW01_add       | width=20   | u_topfft_sat1_a_sat2/Blq_BFV_0/Butterfly/add_53 (BF.v:53) |
+| sub_x_163      | DW01_sub       | width=20   | u_topfft_sat1_a_sat2/Blq_BFV_0/Butterfly/sub_55 (BF.v:55) |
+| sub_x_164      | DW01_sub       | width=20   | u_topfft_sat1_a_sat2/Blq_BFV_0/Butterfly/sub_56 (BF.v:56) |
+| add_x_169      | DW01_add       | width=33   | u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly/add_52 (BF.v:52) |
+| add_x_170      | DW01_add       | width=33   | u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly/add_53 (BF.v:53) |
+| sub_x_171      | DW01_sub       | width=33   | u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly/sub_55 (BF.v:55) |
+| sub_x_172      | DW01_sub       | width=33   | u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly/sub_56 (BF.v:56) |
+| add_x_178      | DW01_add       | width=22   | u_topfft_sat2_a_sat3/Blq_BFVII_0/Butterfly/add_52 (BF.v:52) |
+| add_x_179      | DW01_add       | width=22   | u_topfft_sat2_a_sat3/Blq_BFVII_0/Butterfly/add_53 (BF.v:53) |
+| sub_x_180      | DW01_sub       | width=22   | u_topfft_sat2_a_sat3/Blq_BFVII_0/Butterfly/sub_55 (BF.v:55) |
+| sub_x_181      | DW01_sub       | width=22   | u_topfft_sat2_a_sat3/Blq_BFVII_0/Butterfly/sub_56 (BF.v:56) |
+| add_x_195      | DW01_add       | width=29   | u_topfft_sat0_a_sat1/Blq_BFIV_1/Butterfly/add_52 (BF.v:52) |
+| add_x_196      | DW01_add       | width=29   | u_topfft_sat0_a_sat1/Blq_BFIV_1/Butterfly/add_53 (BF.v:53) |
+| sub_x_197      | DW01_sub       | width=29   | u_topfft_sat0_a_sat1/Blq_BFIV_1/Butterfly/sub_55 (BF.v:55) |
+| sub_x_198      | DW01_sub       | width=29   | u_topfft_sat0_a_sat1/Blq_BFIV_1/Butterfly/sub_56 (BF.v:56) |
+| add_x_209      | DW01_add       | width=20   | u_topfft_sat1_a_sat2/Blq_BFV_1/Butterfly/add_52 (BF.v:52) |
+| add_x_210      | DW01_add       | width=20   | u_topfft_sat1_a_sat2/Blq_BFV_1/Butterfly/add_53 (BF.v:53) |
+| sub_x_211      | DW01_sub       | width=20   | u_topfft_sat1_a_sat2/Blq_BFV_1/Butterfly/sub_55 (BF.v:55) |
+| sub_x_212      | DW01_sub       | width=20   | u_topfft_sat1_a_sat2/Blq_BFV_1/Butterfly/sub_56 (BF.v:56) |
+| add_x_217      | DW01_add       | width=33   | u_topfft_sat1_a_sat2/Blq_BFVI_1/Butterfly/add_52 (BF.v:52) |
+| add_x_218      | DW01_add       | width=33   | u_topfft_sat1_a_sat2/Blq_BFVI_1/Butterfly/add_53 (BF.v:53) |
+| sub_x_219      | DW01_sub       | width=33   | u_topfft_sat1_a_sat2/Blq_BFVI_1/Butterfly/sub_55 (BF.v:55) |
+| sub_x_220      | DW01_sub       | width=33   | u_topfft_sat1_a_sat2/Blq_BFVI_1/Butterfly/sub_56 (BF.v:56) |
+| add_x_232      | DW01_add       | width=22   | u_topfft_sat2_a_sat3/Blq_BFV_1/Butterfly/add_52 (BF.v:52) |
+| add_x_233      | DW01_add       | width=22   | u_topfft_sat2_a_sat3/Blq_BFV_1/Butterfly/add_53 (BF.v:53) |
+| sub_x_234      | DW01_sub       | width=22   | u_topfft_sat2_a_sat3/Blq_BFV_1/Butterfly/sub_55 (BF.v:55) |
+| sub_x_235      | DW01_sub       | width=22   | u_topfft_sat2_a_sat3/Blq_BFV_1/Butterfly/sub_56 (BF.v:56) |
+| DP_OP_1397J1_122_2778           |            |                            |
+|                | DP_OP_1397J1_122_2778 |     |                            |
+| DP_OP_1398J1_123_4006           |            |                            |
+|                | DP_OP_1398J1_123_4006 |     |                            |
+| DP_OP_1399J1_124_5104           |            |                            |
+|                | DP_OP_1399J1_124_5104 |     |                            |
+| DP_OP_1400J1_125_5104           |            |                            |
+|                | DP_OP_1400J1_125_5104 |     |                            |
+| DP_OP_1401J1_126_4006           |            |                            |
+|                | DP_OP_1401J1_126_4006 |     |                            |
+| DP_OP_1402J1_127_5104           |            |                            |
+|                | DP_OP_1402J1_127_5104 |     |                            |
+| DP_OP_1403J1_128_5104           |            |                            |
+|                | DP_OP_1403J1_128_5104 |     |                            |
+=============================================================================
+
+Datapath Report for DP_OP_1397J1_122_2778
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1397J1_122_2778 | u_topfft_in_a_sat0/Blq_BFII_0/Butterfly/sub_55 (BF.v:55) |
+                 | u_topfft_in_a_sat0/M1_0_tdw/mult_26 (multip_tdw.v:26) |
+                     | u_topfft_in_a_sat0/M1_0_tdw/sub_26 (multip_tdw.v:26) |
+                      | u_topfft_in_a_sat0/M1_0_tdw/mult_26_2 (multip_tdw.v:26) |
+                   | u_topfft_in_a_sat0/Blq_BFII_0/Butterfly/sub_56 (BF.v:56) |
+                  | u_topfft_in_a_sat0/M1_0_tdw/mult_27_2 (multip_tdw.v:27) |
+                   | u_topfft_in_a_sat0/M1_0_tdw/add_27 (multip_tdw.v:27) |
+                      | u_topfft_in_a_sat0/M1_0_tdw/mult_27 (multip_tdw.v:27) |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 11    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 11    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| I5    | PI   | Signed   | 11    |                                          |
+| I6    | PI   | Signed   | 11    |                                          |
+| T178  | IFO  | Signed   | 12    | I1 - I2 (BF.v:55)                        |
+| T37   | IFO  | Signed   | 23    | T178 * I3 (multip_tdw.v:26)              |
+| T179  | IFO  | Signed   | 12    | I5 - I6 (BF.v:56)                        |
+| T38   | IFO  | Signed   | 23    | T179 * I4 (multip_tdw.v:26)              |
+| T40   | IFO  | Signed   | 23    | T178 * I4 (multip_tdw.v:27)              |
+| T41   | IFO  | Signed   | 23    | T179 * I3 (multip_tdw.v:27)              |
+| O1    | PO   | Signed   | 23    | T37 - T38 (multip_tdw.v:26)              |
+| O2    | PO   | Unsigned | 23    | T40 + T41 (multip_tdw.v:27)              |
+==============================================================================
+
+Datapath Report for DP_OP_1398J1_123_4006
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1398J1_123_4006 | u_topfft_in_a_sat0/Butterfly0_0/sub_55 (BF.v:55)   |
+|                      | u_topfft_in_a_sat0/M0_0_tdw/mult_26 (multip_tdw.v:26) |
+                     | u_topfft_in_a_sat0/M0_0_tdw/sub_26 (multip_tdw.v:26) |
+                      | u_topfft_in_a_sat0/M0_0_tdw/mult_26_2 (multip_tdw.v:26) |
+                   | u_topfft_in_a_sat0/Butterfly0_0/sub_56 (BF.v:56)    |
+|                      | u_topfft_in_a_sat0/M0_0_tdw/mult_27_2 (multip_tdw.v:27) |
+                   | u_topfft_in_a_sat0/M0_0_tdw/add_27 (multip_tdw.v:27) |
+                      | u_topfft_in_a_sat0/M0_0_tdw/mult_27 (multip_tdw.v:27) |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 10    |                                          |
+| I2    | PI   | Signed   | 10    |                                          |
+| I3    | PI   | Signed   | 11    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| I5    | PI   | Signed   | 10    |                                          |
+| I6    | PI   | Signed   | 10    |                                          |
+| T10   | IFO  | Signed   | 11    | I1 - I2 (BF.v:55)                        |
+| T12   | IFO  | Signed   | 22    | T10 * I3 (multip_tdw.v:26)               |
+| T11   | IFO  | Signed   | 11    | I5 - I6 (BF.v:56)                        |
+| T13   | IFO  | Signed   | 22    | T11 * I4 (multip_tdw.v:26)               |
+| T15   | IFO  | Signed   | 22    | T10 * I4 (multip_tdw.v:27)               |
+| T16   | IFO  | Signed   | 22    | T11 * I3 (multip_tdw.v:27)               |
+| O1    | PO   | Signed   | 22    | T12 - T13 (multip_tdw.v:26)              |
+| O2    | PO   | Unsigned | 22    | T15 + T16 (multip_tdw.v:27)              |
+==============================================================================
+
+Datapath Report for DP_OP_1399J1_124_5104
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1399J1_124_5104 | u_topfft_sat0_a_sat1/Blq_BFIII_0/Butterfly/add_52 (BF.v:52) |
+              | u_topfft_sat0_a_sat1/M2_0/mult_26 (multip.v:26)     |
+|                      | u_topfft_sat0_a_sat1/M2_0/sub_26 (multip.v:26)      |
+|                      | u_topfft_sat0_a_sat1/M2_0/mult_26_2 (multip.v:26)   |
+|                      | u_topfft_sat0_a_sat1/Blq_BFIII_0/Butterfly/add_53 (BF.v:53) |
+               | u_topfft_sat0_a_sat1/M2_0/mult_27_2 (multip.v:27)   |
+|                      | u_topfft_sat0_a_sat1/M2_0/add_27 (multip.v:27)      |
+|                      | u_topfft_sat0_a_sat1/M2_0/mult_27 (multip.v:27)     |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 15    |                                          |
+| I2    | PI   | Signed   | 15    |                                          |
+| I3    | PI   | Signed   | 11    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| I5    | PI   | Signed   | 15    |                                          |
+| I6    | PI   | Signed   | 15    |                                          |
+| T194  | IFO  | Signed   | 16    | I1 + I2 (BF.v:52)                        |
+| T67   | IFO  | Signed   | 27    | T194 * I3 (multip.v:26)                  |
+| T195  | IFO  | Signed   | 16    | I5 + I6 (BF.v:53)                        |
+| T68   | IFO  | Signed   | 27    | T195 * I4 (multip.v:26)                  |
+| T70   | IFO  | Signed   | 27    | T194 * I4 (multip.v:27)                  |
+| T71   | IFO  | Signed   | 27    | T195 * I3 (multip.v:27)                  |
+| O1    | PO   | Signed   | 28    | T67 - T68 (multip.v:26)                  |
+| O2    | PO   | Signed   | 28    | T70 + T71 (multip.v:27)                  |
+==============================================================================
+
+Datapath Report for DP_OP_1400J1_125_5104
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1400J1_125_5104 | u_topfft_sat0_a_sat1/Blq_BFIII_1/Butterfly/add_52 (BF.v:52) |
+              | u_topfft_sat0_a_sat1/M2_2/mult_26 (multip.v:26)     |
+|                      | u_topfft_sat0_a_sat1/M2_2/sub_26 (multip.v:26)      |
+|                      | u_topfft_sat0_a_sat1/M2_2/mult_26_2 (multip.v:26)   |
+|                      | u_topfft_sat0_a_sat1/Blq_BFIII_1/Butterfly/add_53 (BF.v:53) |
+               | u_topfft_sat0_a_sat1/M2_2/mult_27_2 (multip.v:27)   |
+|                      | u_topfft_sat0_a_sat1/M2_2/add_27 (multip.v:27)      |
+|                      | u_topfft_sat0_a_sat1/M2_2/mult_27 (multip.v:27)     |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 15    |                                          |
+| I2    | PI   | Signed   | 15    |                                          |
+| I3    | PI   | Signed   | 11    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| I5    | PI   | Signed   | 15    |                                          |
+| I6    | PI   | Signed   | 15    |                                          |
+| T242  | IFO  | Signed   | 16    | I1 + I2 (BF.v:52)                        |
+| T160  | IFO  | Signed   | 27    | T242 * I3 (multip.v:26)                  |
+| T243  | IFO  | Signed   | 16    | I5 + I6 (BF.v:53)                        |
+| T161  | IFO  | Signed   | 27    | T243 * I4 (multip.v:26)                  |
+| T163  | IFO  | Signed   | 27    | T242 * I4 (multip.v:27)                  |
+| T164  | IFO  | Signed   | 27    | T243 * I3 (multip.v:27)                  |
+| O1    | PO   | Signed   | 28    | T160 - T161 (multip.v:26)                |
+| O2    | PO   | Signed   | 28    | T163 + T164 (multip.v:27)                |
+==============================================================================
+
+Datapath Report for DP_OP_1401J1_126_4006
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1401J1_126_4006 | u_topfft_in_a_sat0/Butterfly0_1/sub_55 (BF.v:55)   |
+|                      | u_topfft_in_a_sat0/M0_1_tdw/mult_26 (multip_tdw.v:26) |
+                     | u_topfft_in_a_sat0/M0_1_tdw/sub_26 (multip_tdw.v:26) |
+                      | u_topfft_in_a_sat0/M0_1_tdw/mult_26_2 (multip_tdw.v:26) |
+                   | u_topfft_in_a_sat0/Butterfly0_1/sub_56 (BF.v:56)    |
+|                      | u_topfft_in_a_sat0/M0_1_tdw/mult_27_2 (multip_tdw.v:27) |
+                   | u_topfft_in_a_sat0/M0_1_tdw/add_27 (multip_tdw.v:27) |
+                      | u_topfft_in_a_sat0/M0_1_tdw/mult_27 (multip_tdw.v:27) |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 10    |                                          |
+| I2    | PI   | Signed   | 10    |                                          |
+| I3    | PI   | Signed   | 11    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| I5    | PI   | Signed   | 10    |                                          |
+| I6    | PI   | Signed   | 10    |                                          |
+| T141  | IFO  | Signed   | 11    | I1 - I2 (BF.v:55)                        |
+| T143  | IFO  | Signed   | 22    | T141 * I3 (multip_tdw.v:26)              |
+| T142  | IFO  | Signed   | 11    | I5 - I6 (BF.v:56)                        |
+| T144  | IFO  | Signed   | 22    | T142 * I4 (multip_tdw.v:26)              |
+| T146  | IFO  | Signed   | 22    | T141 * I4 (multip_tdw.v:27)              |
+| T147  | IFO  | Signed   | 22    | T142 * I3 (multip_tdw.v:27)              |
+| O1    | PO   | Signed   | 22    | T143 - T144 (multip_tdw.v:26)            |
+| O2    | PO   | Unsigned | 22    | T146 + T147 (multip_tdw.v:27)            |
+==============================================================================
+
+Datapath Report for DP_OP_1402J1_127_5104
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1402J1_127_5104 | u_topfft_sat0_a_sat1/Blq_BFIII_0/Butterfly/sub_55 (BF.v:55) |
+              | u_topfft_sat0_a_sat1/M2_1/mult_26 (multip.v:26)     |
+|                      | u_topfft_sat0_a_sat1/M2_1/sub_26 (multip.v:26)      |
+|                      | u_topfft_sat0_a_sat1/M2_1/mult_26_2 (multip.v:26)   |
+|                      | u_topfft_sat0_a_sat1/Blq_BFIII_0/Butterfly/sub_56 (BF.v:56) |
+               | u_topfft_sat0_a_sat1/M2_1/mult_27_2 (multip.v:27)   |
+|                      | u_topfft_sat0_a_sat1/M2_1/add_27 (multip.v:27)      |
+|                      | u_topfft_sat0_a_sat1/M2_1/mult_27 (multip.v:27)     |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 15    |                                          |
+| I2    | PI   | Signed   | 15    |                                          |
+| I3    | PI   | Signed   | 11    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| I5    | PI   | Signed   | 15    |                                          |
+| I6    | PI   | Signed   | 15    |                                          |
+| T196  | IFO  | Signed   | 16    | I1 - I2 (BF.v:55)                        |
+| T166  | IFO  | Signed   | 27    | T196 * I3 (multip.v:26)                  |
+| T197  | IFO  | Signed   | 16    | I5 - I6 (BF.v:56)                        |
+| T167  | IFO  | Signed   | 27    | T197 * I4 (multip.v:26)                  |
+| T169  | IFO  | Signed   | 27    | T196 * I4 (multip.v:27)                  |
+| T170  | IFO  | Signed   | 27    | T197 * I3 (multip.v:27)                  |
+| O1    | PO   | Signed   | 28    | T166 - T167 (multip.v:26)                |
+| O2    | PO   | Signed   | 28    | T169 + T170 (multip.v:27)                |
+==============================================================================
+
+Datapath Report for DP_OP_1403J1_128_5104
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_1403J1_128_5104 | u_topfft_sat0_a_sat1/Blq_BFIII_1/Butterfly/sub_55 (BF.v:55) |
+              | u_topfft_sat0_a_sat1/M2_3/mult_26 (multip.v:26)     |
+|                      | u_topfft_sat0_a_sat1/M2_3/sub_26 (multip.v:26)      |
+|                      | u_topfft_sat0_a_sat1/M2_3/mult_26_2 (multip.v:26)   |
+|                      | u_topfft_sat0_a_sat1/Blq_BFIII_1/Butterfly/sub_56 (BF.v:56) |
+               | u_topfft_sat0_a_sat1/M2_3/mult_27_2 (multip.v:27)   |
+|                      | u_topfft_sat0_a_sat1/M2_3/add_27 (multip.v:27)      |
+|                      | u_topfft_sat0_a_sat1/M2_3/mult_27 (multip.v:27)     |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 15    |                                          |
+| I2    | PI   | Signed   | 15    |                                          |
+| I3    | PI   | Signed   | 11    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| I5    | PI   | Signed   | 15    |                                          |
+| I6    | PI   | Signed   | 15    |                                          |
+| T244  | IFO  | Signed   | 16    | I1 - I2 (BF.v:55)                        |
+| T154  | IFO  | Signed   | 27    | T244 * I3 (multip.v:26)                  |
+| T245  | IFO  | Signed   | 16    | I5 - I6 (BF.v:56)                        |
+| T155  | IFO  | Signed   | 27    | T245 * I4 (multip.v:26)                  |
+| T157  | IFO  | Signed   | 27    | T244 * I4 (multip.v:27)                  |
+| T158  | IFO  | Signed   | 27    | T245 * I3 (multip.v:27)                  |
+| O1    | PO   | Signed   | 28    | T154 - T155 (multip.v:26)                |
+| O2    | PO   | Signed   | 28    | T157 + T158 (multip.v:27)                |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_in_a_sat0/M1_2 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_133_5420             |            |                            |
+|                | DP_OP_11J1_133_5420 |       |                            |
+| DP_OP_12J1_134_5420             |            |                            |
+|                | DP_OP_12J1_134_5420 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_133_5420
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_133_5420  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 23    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 23    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 34    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 34    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 35    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_134_5420
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_134_5420  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 23    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 23    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 34    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 34    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 35    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat0_a_sat1/M0_1_tdw in file
+        /home/digital8/vlsi/dc/rtl/multip_tdw.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_131_4572             |            |                            |
+|                | DP_OP_11J1_131_4572 |       |                            |
+| DP_OP_12J1_132_4572             |            |                            |
+|                | DP_OP_12J1_132_4572 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_131_4572
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_131_4572  | mult_26 (multip_tdw.v:26) sub_26 (multip_tdw.v:26)  |
+|                      | mult_26_2 (multip_tdw.v:26)                         |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 29    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 29    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 40    | I1 * I2 (multip_tdw.v:26)                |
+| T1    | IFO  | Signed   | 40    | I3 * I4 (multip_tdw.v:26)                |
+| O1    | PO   | Signed   | 40    | T0 - T1 (multip_tdw.v:26)                |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_132_4572
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_132_4572  | mult_27 (multip_tdw.v:27) add_27 (multip_tdw.v:27)  |
+|                      | mult_27_2 (multip_tdw.v:27)                         |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 29    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 29    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 40    | I1 * I2 (multip_tdw.v:27)                |
+| T4    | IFO  | Signed   | 40    | I3 * I4 (multip_tdw.v:27)                |
+| O1    | PO   | Unsigned | 40    | T3 + T4 (multip_tdw.v:27)                |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat1_a_sat2/M5_3 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_129_5388             |            |                            |
+|                | DP_OP_11J1_129_5388 |       |                            |
+| DP_OP_12J1_130_5388             |            |                            |
+|                | DP_OP_12J1_130_5388 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_129_5388
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_129_5388  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 33    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 33    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 44    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 44    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 45    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_130_5388
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_130_5388  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 33    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 33    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 44    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 44    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 45    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat1_a_sat2/M4_3 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_135_5013             |            |                            |
+|                | DP_OP_11J1_135_5013 |       |                            |
+| DP_OP_12J1_136_5013             |            |                            |
+|                | DP_OP_12J1_136_5013 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_135_5013
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_135_5013  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 20    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 20    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 31    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 31    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 32    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_136_5013
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_136_5013  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 20    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 20    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 31    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 31    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 32    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat1_a_sat2/M5_0 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_129_5388             |            |                            |
+|                | DP_OP_11J1_129_5388 |       |                            |
+| DP_OP_12J1_130_5388             |            |                            |
+|                | DP_OP_12J1_130_5388 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_129_5388
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_129_5388  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 33    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 33    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 44    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 44    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 45    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_130_5388
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_130_5388  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 33    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 33    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 44    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 44    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 45    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat1_a_sat2/M5_1 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_129_5388             |            |                            |
+|                | DP_OP_11J1_129_5388 |       |                            |
+| DP_OP_12J1_130_5388             |            |                            |
+|                | DP_OP_12J1_130_5388 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_129_5388
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_129_5388  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 33    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 33    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 44    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 44    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 45    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_130_5388
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_130_5388  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 33    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 33    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 44    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 44    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 45    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat1_a_sat2/M5_2 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_129_5388             |            |                            |
+|                | DP_OP_11J1_129_5388 |       |                            |
+| DP_OP_12J1_130_5388             |            |                            |
+|                | DP_OP_12J1_130_5388 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_129_5388
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_129_5388  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 33    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 33    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 44    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 44    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 45    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_130_5388
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_130_5388  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 33    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 33    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 44    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 44    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 45    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat0_a_sat1/M0_0_tdw in file
+        /home/digital8/vlsi/dc/rtl/multip_tdw.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_131_4572             |            |                            |
+|                | DP_OP_11J1_131_4572 |       |                            |
+| DP_OP_12J1_132_4572             |            |                            |
+|                | DP_OP_12J1_132_4572 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_131_4572
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_131_4572  | mult_26 (multip_tdw.v:26) sub_26 (multip_tdw.v:26)  |
+|                      | mult_26_2 (multip_tdw.v:26)                         |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 29    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 29    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 40    | I1 * I2 (multip_tdw.v:26)                |
+| T1    | IFO  | Signed   | 40    | I3 * I4 (multip_tdw.v:26)                |
+| O1    | PO   | Signed   | 40    | T0 - T1 (multip_tdw.v:26)                |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_132_4572
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_132_4572  | mult_27 (multip_tdw.v:27) add_27 (multip_tdw.v:27)  |
+|                      | mult_27_2 (multip_tdw.v:27)                         |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 29    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 29    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 40    | I1 * I2 (multip_tdw.v:27)                |
+| T4    | IFO  | Signed   | 40    | I3 * I4 (multip_tdw.v:27)                |
+| O1    | PO   | Unsigned | 40    | T3 + T4 (multip_tdw.v:27)                |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_in_a_sat0/M1_1 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_133_5420             |            |                            |
+|                | DP_OP_11J1_133_5420 |       |                            |
+| DP_OP_12J1_134_5420             |            |                            |
+|                | DP_OP_12J1_134_5420 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_133_5420
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_133_5420  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 23    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 23    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 34    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 34    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 35    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_134_5420
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_134_5420  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 23    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 23    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 34    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 34    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 35    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat1_a_sat2/M4_0 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_135_5013             |            |                            |
+|                | DP_OP_11J1_135_5013 |       |                            |
+| DP_OP_12J1_136_5013             |            |                            |
+|                | DP_OP_12J1_136_5013 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_135_5013
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_135_5013  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 20    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 20    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 31    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 31    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 32    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_136_5013
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_136_5013  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 20    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 20    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 31    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 31    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 32    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat1_a_sat2/M4_1 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_135_5013             |            |                            |
+|                | DP_OP_11J1_135_5013 |       |                            |
+| DP_OP_12J1_136_5013             |            |                            |
+|                | DP_OP_12J1_136_5013 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_135_5013
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_135_5013  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 20    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 20    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 31    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 31    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 32    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_136_5013
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_136_5013  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 20    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 20    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 31    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 31    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 32    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Resource Report for Ungrouped Hierarchy u_topfft_sat1_a_sat2/M4_2 in file
+        /home/digital8/vlsi/dc/rtl/multip.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_135_5013             |            |                            |
+|                | DP_OP_11J1_135_5013 |       |                            |
+| DP_OP_12J1_136_5013             |            |                            |
+|                | DP_OP_12J1_136_5013 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_135_5013
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_135_5013  | mult_26 (multip.v:26) sub_26 (multip.v:26)          |
+|                      | mult_26_2 (multip.v:26)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 20    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 20    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T0    | IFO  | Signed   | 31    | I1 * I2 (multip.v:26)                    |
+| T1    | IFO  | Signed   | 31    | I3 * I4 (multip.v:26)                    |
+| O1    | PO   | Signed   | 32    | T0 - T1 (multip.v:26)                    |
+==============================================================================
+
+Datapath Report for DP_OP_12J1_136_5013
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_12J1_136_5013  | mult_27 (multip.v:27) add_27 (multip.v:27)          |
+|                      | mult_27_2 (multip.v:27)                             |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 20    |                                          |
+| I2    | PI   | Signed   | 11    |                                          |
+| I3    | PI   | Signed   | 20    |                                          |
+| I4    | PI   | Signed   | 11    |                                          |
+| T3    | IFO  | Signed   | 31    | I1 * I2 (multip.v:27)                    |
+| T4    | IFO  | Signed   | 31    | I3 * I4 (multip.v:27)                    |
+| O1    | PO   | Signed   | 32    | T3 + T4 (multip.v:27)                    |
+==============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_1            | DW01_inc         | apparch (area)     |                |
+| add_x_5            | DW01_inc         | apparch (area)     |                |
+| add_x_9            | DW01_add         | apparch (area)     |                |
+| add_x_10           | DW01_add         | apparch (area)     |                |
+| gte_x_11           | DW_cmp           | apparch (area)     |                |
+| add_x_12           | DW01_inc         | apparch (area)     |                |
+| add_x_16           | DW01_inc         | apparch (area)     |                |
+| add_x_18           | DW01_inc         | apparch (area)     |                |
+| add_x_22           | DW01_inc         | apparch (area)     |                |
+| add_x_26           | DW01_inc         | apparch (area)     |                |
+| add_x_30           | DW01_inc         | apparch (area)     |                |
+| gte_x_32           | DW_cmp           | apparch (area)     |                |
+| gte_x_33           | DW_cmp           | apparch (area)     |                |
+| add_x_34           | DW01_inc         | apparch (area)     |                |
+| add_x_38           | DW01_inc         | apparch (area)     |                |
+| add_x_42           | DW01_inc         | apparch (area)     |                |
+| add_x_46           | DW01_inc         | apparch (area)     |                |
+| add_x_50           | DW01_inc         | apparch (area)     |                |
+| add_x_54           | DW01_inc         | apparch (area)     |                |
+| gte_x_56           | DW_cmp           | apparch (area)     |                |
+| gte_x_57           | DW_cmp           | apparch (area)     |                |
+| add_x_58           | DW01_inc         | apparch (area)     |                |
+| add_x_62           | DW01_inc         | apparch (area)     |                |
+| add_x_66           | DW01_inc         | apparch (area)     |                |
+| add_x_70           | DW01_inc         | apparch (area)     |                |
+| gte_x_72           | DW_cmp           | apparch (area)     |                |
+| add_x_73           | DW01_inc         | apparch (area)     |                |
+| add_x_77           | DW01_inc         | apparch (area)     |                |
+| add_x_81           | DW01_inc         | apparch (area)     |                |
+| add_x_85           | DW01_inc         | apparch (area)     |                |
+| add_x_89           | DW01_inc         | apparch (area)     |                |
+| add_x_93           | DW01_inc         | apparch (area)     |                |
+| gte_x_95           | DW_cmp           | apparch (area)     |                |
+| add_x_101          | DW01_inc         | apparch (area)     |                |
+| add_x_105          | DW01_inc         | apparch (area)     |                |
+| add_x_109          | DW01_inc         | apparch (area)     |                |
+| add_x_113          | DW01_inc         | apparch (area)     |                |
+| add_x_117          | DW01_inc         | apparch (area)     |                |
+| gte_x_119          | DW_cmp           | apparch (area)     |                |
+| add_x_120          | DW01_add         | apparch (area)     |                |
+| add_x_121          | DW01_add         | apparch (area)     |                |
+| gte_x_122          | DW_cmp           | apparch (area)     |                |
+| add_x_123          | DW01_inc         | apparch (area)     |                |
+| add_x_131          | DW01_add         | apparch (area)     |                |
+| add_x_132          | DW01_add         | apparch (area)     |                |
+| add_x_137          | DW01_add         | pparch (area,speed)                 |
+| add_x_138          | DW01_add         | pparch (area,speed)                 |
+| sub_x_139          | DW01_sub         | apparch (area)     |                |
+| sub_x_140          | DW01_sub         | apparch (area)     |                |
+| add_x_151          | DW01_add         | apparch (area)     |                |
+| add_x_152          | DW01_add         | apparch (area)     |                |
+| sub_x_153          | DW01_sub         | apparch (area)     |                |
+| sub_x_154          | DW01_sub         | apparch (area)     |                |
+| add_x_161          | DW01_add         | pparch (area,speed)                 |
+| add_x_162          | DW01_add         | pparch (area,speed)                 |
+| sub_x_163          | DW01_sub         | pparch (speed)     |                |
+| sub_x_164          | DW01_sub         | pparch (area,speed)                 |
+| add_x_169          | DW01_add         | pparch (area,speed)                 |
+| add_x_170          | DW01_add         | pparch (area,speed)                 |
+| sub_x_171          | DW01_sub         | pparch (area,speed)                 |
+| sub_x_172          | DW01_sub         | pparch (area,speed)                 |
+| add_x_178          | DW01_add         | apparch (area)     |                |
+| add_x_179          | DW01_add         | apparch (area)     |                |
+| sub_x_180          | DW01_sub         | apparch (area)     |                |
+| sub_x_181          | DW01_sub         | apparch (area)     |                |
+| add_x_195          | DW01_add         | pparch (area,speed)                 |
+| add_x_196          | DW01_add         | pparch (area,speed)                 |
+| sub_x_197          | DW01_sub         | pparch (area,speed)                 |
+| sub_x_198          | DW01_sub         | pparch (speed)     |                |
+| add_x_209          | DW01_add         | pparch (area,speed)                 |
+| add_x_210          | DW01_add         | pparch (area,speed)                 |
+| sub_x_211          | DW01_sub         | pparch (speed)     |                |
+| sub_x_212          | DW01_sub         | pparch (area,speed)                 |
+| add_x_217          | DW01_add         | pparch (area,speed)                 |
+| add_x_218          | DW01_add         | pparch (area,speed)                 |
+| sub_x_219          | DW01_sub         | pparch (area,speed)                 |
+| sub_x_220          | DW01_sub         | pparch (area,speed)                 |
+| add_x_232          | DW01_add         | apparch (area)     |                |
+| add_x_233          | DW01_add         | apparch (area)     |                |
+| sub_x_234          | DW01_sub         | apparch (area)     |                |
+| sub_x_235          | DW01_sub         | apparch (area)     |                |
+| DP_OP_1397J1_122_2778                 |                    |                |
+|                    | DP_OP_1397J1_122_2778 | str (area)    |                |
+|                    |                  | mult_arch: benc_radix4_mux          |
+|                    |                  | mult_arch: benc_radix4_mux          |
+| DP_OP_1398J1_123_4006                 |                    |                |
+|                    | DP_OP_1398J1_123_4006 | str (area,speed)               |
+|                    |                  | mult_arch: benc_radix4              |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_1399J1_124_5104                 |                    |                |
+|                    | DP_OP_1399J1_124_5104 | str (area)    |                |
+|                    |                  | mult_arch: benc_radix4_mux          |
+|                    |                  | mult_arch: benc_radix4_mux          |
+| DP_OP_1400J1_125_5104                 |                    |                |
+|                    | DP_OP_1400J1_125_5104 | str (area,speed)               |
+|                    |                  | mult_arch: benc_radix4              |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_1401J1_126_4006                 |                    |                |
+|                    | DP_OP_1401J1_126_4006 | str (area)    |                |
+|                    |                  | mult_arch: benc_radix4_mux          |
+|                    |                  | mult_arch: benc_radix4_mux          |
+| DP_OP_1402J1_127_5104                 |                    |                |
+|                    | DP_OP_1402J1_127_5104 | str (area)    |                |
+|                    |                  | mult_arch: benc_radix4_mux          |
+|                    |                  | mult_arch: benc_radix4_mux          |
+| DP_OP_1403J1_128_5104                 |                    |                |
+|                    | DP_OP_1403J1_128_5104 | str (area)    |                |
+|                    |                  | mult_arch: benc_radix4_mux          |
+|                    |                  | mult_arch: benc_radix4_mux          |
+| DP_OP_11J1_133_5420                   |                    |                |
+|                    | DP_OP_11J1_133_5420 | str (area)      |                |
+|                    |                  | mult_arch: benc_radix8              |
+| DP_OP_12J1_134_5420                   |                    |                |
+|                    | DP_OP_12J1_134_5420 | str (area)      |                |
+|                    |                  | mult_arch: benc_radix8              |
+| DP_OP_11J1_131_4572                   |                    |                |
+|                    | DP_OP_11J1_131_4572 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_12J1_132_4572                   |                    |                |
+|                    | DP_OP_12J1_132_4572 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_129_5388                   |                    |                |
+|                    | DP_OP_11J1_129_5388 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4_mux          |
+| DP_OP_12J1_130_5388                   |                    |                |
+|                    | DP_OP_12J1_130_5388 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_135_5013                   |                    |                |
+|                    | DP_OP_11J1_135_5013 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_12J1_136_5013                   |                    |                |
+|                    | DP_OP_12J1_136_5013 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_129_5388                   |                    |                |
+|                    | DP_OP_11J1_129_5388 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_12J1_130_5388                   |                    |                |
+|                    | DP_OP_12J1_130_5388 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_129_5388                   |                    |                |
+|                    | DP_OP_11J1_129_5388 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_12J1_130_5388                   |                    |                |
+|                    | DP_OP_12J1_130_5388 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_129_5388                   |                    |                |
+|                    | DP_OP_11J1_129_5388 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4_mux          |
+| DP_OP_12J1_130_5388                   |                    |                |
+|                    | DP_OP_12J1_130_5388 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_131_4572                   |                    |                |
+|                    | DP_OP_11J1_131_4572 | str (area)      |                |
+|                    |                  | mult_arch: benc_radix8              |
+| DP_OP_12J1_132_4572                   |                    |                |
+|                    | DP_OP_12J1_132_4572 | str (area)      |                |
+|                    |                  | mult_arch: benc_radix8              |
+| DP_OP_11J1_133_5420                   |                    |                |
+|                    | DP_OP_11J1_133_5420 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_12J1_134_5420                   |                    |                |
+|                    | DP_OP_12J1_134_5420 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_135_5013                   |                    |                |
+|                    | DP_OP_11J1_135_5013 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_12J1_136_5013                   |                    |                |
+|                    | DP_OP_12J1_136_5013 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_135_5013                   |                    |                |
+|                    | DP_OP_11J1_135_5013 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_12J1_136_5013                   |                    |                |
+|                    | DP_OP_12J1_136_5013 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_11J1_135_5013                   |                    |                |
+|                    | DP_OP_11J1_135_5013 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| DP_OP_12J1_136_5013                   |                    |                |
+|                    | DP_OP_12J1_136_5013 | str (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+===============================================================================
+
+1
