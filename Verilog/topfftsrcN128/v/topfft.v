@@ -40,23 +40,20 @@ module topfft
       input rst);
       
       
-     wire [NBITS*2-1:0] in_a_sat0_0_up;
-     wire [NBITS*2-1:0] in_a_sat0_0_down;
-     wire [NBITS*2-1:0] in_a_sat0_1_up;
-     wire [NBITS*2-1:0] in_a_sat0_1_down;
-                 
-      
-     wire [15*2-1:0] sat0_a_blqIII_0_up;
-     wire [15*2-1:0] sat0_a_blqIII_0_down;
-     wire [15*2-1:0] sat0_a_blqIII_1_up;
-     wire [15*2-1:0] sat0_a_blqIII_1_down;
+  wire [NBITS*2-1:0] in_a_sat0_0_up;
+  wire [NBITS*2-1:0] in_a_sat0_0_down;
+  wire [NBITS*2-1:0] in_a_sat0_1_up;
+  wire [NBITS*2-1:0] in_a_sat0_1_down;
 
-                       
-                        
-   wire [19*2-1:0] sat1out_0_up;
-   wire [19*2-1:0] sat1out_0_down;
-   wire [19*2-1:0] sat1out_1_up;
-   wire [19*2-1:0] sat1out_1_down;
+  wire [15*2-1:0] sat0_a_blqIII_0_up;
+  wire [15*2-1:0] sat0_a_blqIII_0_down;
+  wire [15*2-1:0] sat0_a_blqIII_1_up;
+  wire [15*2-1:0] sat0_a_blqIII_1_down;
+          
+  wire [19*2-1:0] sat1out_0_up;
+  wire [19*2-1:0] sat1out_0_down;
+  wire [19*2-1:0] sat1out_1_up;
+  wire [19*2-1:0] sat1out_1_down;
    
   wire [21*2-1:0] sat2out_0_up;
   wire [21*2-1:0] sat2out_0_down;

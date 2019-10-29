@@ -224,7 +224,6 @@ Blq
  #(16)
     EnableCM_stage2
     (.Q(coeffCMStage2_en),
-//     .D(clk),
     .clk(clk),
     .rst(rst));
      
@@ -282,8 +281,7 @@ assign   m_to_sat0_0_up = blqII0_to_m_up; ////expandir signo aqui
        (.result(m_to_sat1_0_up),
         .muestra(blqII1_to_m_up),
         .coeff(coefficientes1_1));      
-        
-   
+  
    
      //producto 1_2
  multip
@@ -297,22 +295,10 @@ assign   m_to_sat0_0_up = blqII0_to_m_up; ////expandir signo aqui
    
    
    /////////////////////////////////////////////
-   
-/*   fixtop_sat
-  #(.NBITS_IN(15),
-    .NBITS_OUT(15))
-       sat0_out0_up
-         (.sat_out(satout0_0_up),
-          .sat_in(m_to_sat0_0_up));
-          */
           
      assign satout0_0_up[15*2-1:15] ={m_to_sat0_0_up[12*2-1:12],3'b0 };
      assign satout0_0_up[14:0]      ={m_to_sat0_0_up[11:0],3'b0};
      
-    
-           
-//assign m_to_blqII_up[(NBITS+1)*2*2-1:NBITS-1] = $signed(blqI_to_m_up[(NBITS+1)*2-1:NBITS-1]); ////expandir signo aqui
-//assign                 m_to_blqII_up[NBITS:0] = $signed(blqI_to_m_up[NBITS:0]);//expandir signo aqui
        
        fixtop_sat
         #(.NBITS_IN(23),

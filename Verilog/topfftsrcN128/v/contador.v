@@ -32,7 +32,7 @@ reg pulso;
 
 always @(posedge clk) begin
  if (rst) begin
-    count=N-1;
+   count=N-1;
      pulso=0;
      end else if (count>=N-1) begin
       pulso=~pulso;
