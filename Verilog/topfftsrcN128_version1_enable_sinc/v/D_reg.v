@@ -29,12 +29,19 @@ module D_reg
      input rst);
 
 
+    
+wire [Nbits-1:0] q[0:1];
+
+assign q[0] = D[Nbits*2-1:Nbits];
+assign q[1] = D[Nbits-1:0];
+
+
 
    always @(posedge clk) begin
      if (rst) begin
        Q <= {Nbits*2{1'b0}};
       end else begin
-         Q <= D;
+         Q <= {q[0],q[1]};
      end
  end
    

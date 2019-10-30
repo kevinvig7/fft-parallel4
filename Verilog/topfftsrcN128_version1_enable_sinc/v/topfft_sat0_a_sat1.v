@@ -175,39 +175,33 @@ assign coeffw2_2en=coeffCMStage3_en;
 assign coeffw2_3en=coeffCMStage3_en;
    
           
-   
- coeff_mem_2_0
-      Mcoeff_2_0
+  coeff2_0
+ #(NBITScoeff,N)
+      Mcoeff2_0
      (.coeff_out(coefficientes2_0),
       .clk(clk),
       .rst(!coeffw2_0en));     
    
- coeff_mem_2_1
-      Mcoeff_2_1
+    coeff2_1
+ #(NBITScoeff,N)
+      Mcoeff2_1
      (.coeff_out(coefficientes2_1),
       .clk(clk),
-      .rst(!coeffw2_0en));     
+      .rst(!coeffw2_1en));
    
-   
-   coeff_mem_2_2
-      Mcoeff_2_2
+   coeff2_2
+ #(NBITScoeff,N)
+      Mcoeff2_2
      (.coeff_out(coefficientes2_2),
       .clk(clk),
-      .rst(!coeffw2_0en));     
-   
-   coeff_mem_2_3
-      Mcoeff_2_3
+      .rst(!coeffw2_2en));  
+      
+      coeff2_3
+ #(NBITScoeff,N)
+      Mcoeff2_3
      (.coeff_out(coefficientes2_3),
       .clk(clk),
-      .rst(!coeffw2_0en));
-   
-
-  
-   
-   
-   
-   
-   
+      .rst(!coeffw2_3en));     
    
    
 /////////////////Productos full   
@@ -305,14 +299,16 @@ Blq
 assign coeffw3_0en=coeffCMStage4_en;
 assign coeffw3_1en=coeffCMStage4_en;
 
-     coeff_mem_3_0
-      Mcoeff_3_0
+     coeff3_0
+ #(NBITScoeff,N)
+      Mcoeff3_0
      (.coeff_out(coefficientes3_0),
       .clk(clk),
       .rst(!coeffw3_0en));
 
- coeff_mem_3_1
-      Mcoeff_3_1
+ coeff3_1
+ #(NBITScoeff,N)
+      Mcoeff3_1
      (.coeff_out(coefficientes3_1),
       .clk(clk),
       .rst(!coeffw3_1en));
