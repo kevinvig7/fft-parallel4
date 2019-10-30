@@ -35,6 +35,8 @@ module topfft_sat0_a_sat1
       input  [NBITS*2-1:0] fftIn0_down,
       input  [NBITS*2-1:0] fftIn1_up,
       input  [NBITS*2-1:0] fftIn1_down,
+      input in_enable,
+      output o_enable,
       input clk,
       input rst);
 
@@ -53,6 +55,9 @@ module topfft_sat0_a_sat1
        
      wire ctrl_Blq_BFIII,ctrl_Blq_BFIV;  
      wire coeffCMStage3_en,coeffCMStage4_en;
+     
+     
+     assign o_enable = coeffCMStage4_en;
                         
      wire [28*2-1:0] m_a_blqIV_0_up;
      wire [28*2-1:0] m_a_blqIV_0_down;
@@ -123,11 +128,11 @@ module topfft_sat0_a_sat1
      
  ///Enable de etapa
  topD_1
- #(16+8)
+ #(8)
     EnableCM_stage3
     (.Q(coeffCMStage3_en),
     .clk(clk),
-    .rst(rst));
+    .rst(!in_enable));
    
 ///Control sw
 contador
@@ -249,11 +254,11 @@ assign coeffw2_3en=coeffCMStage3_en;
 /////////////////////////////////  
     ///Enable de etapa
  topD_1
- #(16+8+4)
+ #(4)
     EnableCM_stage4
     (.Q(coeffCMStage4_en),
     .clk(clk),
-    .rst(rst));
+    .rst(!coeffCMStage3_en));
    
 ///Control sw
 contador

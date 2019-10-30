@@ -65,6 +65,7 @@ module topfft
   wire [NBITS_out*2-1:0] sat3out_1_up;
   wire [NBITS_out*2-1:0] sat3out_1_down;
 
+wire enable_sat0_a_sat1,enable_sat1_a_sat2,enable_sat2_a_sat3;
    
 ///////////////////////////////////////////////////////                  
 ////Desde entrada "in" hasta primer cuantizador "sat0" 
@@ -85,7 +86,7 @@ topfft_in_a_sat0
       .fftOut0_down(sat0_a_blqIII_0_down),
       .fftOut1_up(sat0_a_blqIII_1_up),
       .fftOut1_down(sat0_a_blqIII_1_down),
-      
+      .o_enable(enable_sat0_a_sat1),
       .fftIn0_up(in_a_sat0_0_up),
       .fftIn0_down(in_a_sat0_0_down),
       .fftIn1_up(in_a_sat0_1_up),
@@ -105,7 +106,8 @@ topfft_in_a_sat0
       .fftOut0_down(sat1out_0_down),
       .fftOut1_up(sat1out_1_up),
       .fftOut1_down(sat1out_1_down),
-      
+      .in_enable(enable_sat0_a_sat1),
+      .o_enable(enable_sat1_a_sat2),
       .fftIn0_up(sat0_a_blqIII_0_up),
       .fftIn0_down(sat0_a_blqIII_0_down),
       .fftIn1_up(sat0_a_blqIII_1_up),
@@ -124,7 +126,8 @@ topfft_in_a_sat0
       .fftOut0_down(sat2out_0_down),
       .fftOut1_up  (sat2out_1_up),
       .fftOut1_down(sat2out_1_down),
-      
+       .in_enable(enable_sat1_a_sat2),
+      .o_enable(enable_sat2_a_sat3),
       .fftIn0_up  (sat1out_0_up),
       .fftIn0_down(sat1out_0_down),
       .fftIn1_up  (sat1out_1_up),
@@ -144,7 +147,7 @@ topfft_in_a_sat0
       .fftOut0_down(sat3out_0_down),
       .fftOut1_up  (sat3out_1_up),
       .fftOut1_down(sat3out_1_down),
-      
+     .in_enable(enable_sat2_a_sat3),
       .fftIn0_up  (sat2out_0_up),
       .fftIn0_down(sat2out_0_down),
       .fftIn1_up  (sat2out_1_up),

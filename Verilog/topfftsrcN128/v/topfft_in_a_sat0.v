@@ -29,6 +29,7 @@ module topfft_in_a_sat0
       output [15*2-1:0] fftOut0_down,
       output [15*2-1:0] fftOut1_up,
       output [15*2-1:0] fftOut1_down,
+      output o_enable,
       input  [NBITS*2-1:0] fftIn0_up,
       input  [NBITS*2-1:0] fftIn0_down,
       input  [NBITS*2-1:0] fftIn1_up,
@@ -56,11 +57,14 @@ module topfft_in_a_sat0
   wire coeffw1_2en;
   
   wire ctrl_Blq_BFII,coeffCMStage2_en;
+  
+  assign o_enable = coeffCMStage2_en;
  
   ///estos no van negados a la entrada de coeff porque el rst es negado
   
  assign coeffw0_0en=rst;
  assign coeffw0_1en=rst;
+
  /////////
  
  wire [NBITS*2-1:0]   in0_up;

@@ -35,6 +35,7 @@ module topfft_sat2_a_sat3
       input  [NBITS*2-1:0] fftIn0_down,
       input  [NBITS*2-1:0] fftIn1_up,
       input  [NBITS*2-1:0] fftIn1_down,
+      input in_enable,
       input clk,
       input rst);
 
@@ -72,11 +73,11 @@ assign sat2_a_blqVII_1_down = fftIn1_down;
 
 
  topD_1
- #(16+8+4+2+1+16)
+ #(16)
     EnableCM_stage7
     (.Q(coeffCMStage7_en),
     .clk(clk),
-    .rst(rst));
+    .rst(!in_enable));
    
 ///Control sw
 contador
