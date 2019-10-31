@@ -109,7 +109,7 @@ wire ctrl_Blq_BFV,ctrl_Blq_BFVI;
      
  ///Enable de etapa
  topD_1
- #(3)
+ #(2)
     EnableCM_stage5
     (.Q(coeffCMStage5_en),
     .clk(clk),
@@ -233,7 +233,7 @@ assign coeffw4_3en=coeffCMStage5_en;
    
         
  topD_1
- #(2)
+ #(1)
     EnableCM_stage6
     (.Q(coeffCMStage6_en),
     .clk(clk),

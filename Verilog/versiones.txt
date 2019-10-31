@@ -1,0 +1,3 @@
+version_1 -- primer  --diseño con muchas oartes sin optimizaar
+Version_1_enable_sinc -- version_1 con ahorro de un par de ciclos de clock sincronizando los pulsos de control entre etapas.
+Version_2 --

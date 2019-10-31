@@ -118,7 +118,12 @@ module topfft_sat0_a_sat1
       assign sat0_a_blqIII_1_down = fftIn1_down;
      
      
-        
+     
+     
+     
+     
+     
+     
      
      
  ///Enable de etapa
@@ -128,8 +133,6 @@ module topfft_sat0_a_sat1
     (.Q(coeffCMStage3_en),
     .clk(clk),
     .rst(!in_enable));
-   
-   
    
 ///Control sw
 contador
@@ -165,7 +168,6 @@ Blq
 
 
 /////////////////Coeficientes
-
 
 assign coeffw2_0en=coeffCMStage3_en;
 assign coeffw2_1en=coeffCMStage3_en;

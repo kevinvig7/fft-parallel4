@@ -37,12 +37,17 @@ module topfft_in_a_sat0
       input clk,
       input rst);
 
+
+
+
+     
       
   wire [NBITScoeff*2-1:0] coefficientes0_0;
   wire [NBITScoeff*2-1:0] coefficientes0_1;
   wire [NBITScoeff*2-1:0] coefficientes1_0;
   wire [NBITScoeff*2-1:0] coefficientes1_1;
   wire [NBITScoeff*2-1:0] coefficientes1_1p;
+  
   wire [NBITScoeff*2-1:0] coefficientes1_2;
   
     
@@ -53,13 +58,14 @@ module topfft_in_a_sat0
   wire coeffw1_1en;
   wire coeffw1_2en;
   
-  wire ctrl_Blq_BFII,coeffCMStage2_en,coeffCMStage1_en;
+  wire ctrl_Blq_BFII,coeffCMStage2_en;
   
   assign o_enable = coeffCMStage2_en;
  
   ///estos no van negados a la entrada de coeff porque el rst es negado
   
-
+ assign coeffw0_0en=rst;
+ assign coeffw0_1en=rst;
 
  /////////
  
@@ -97,11 +103,14 @@ module topfft_in_a_sat0
  wire [23*2-1:0] blqII1_to_m_up;
  wire [23*2-1:0] blqII1_to_m_down;
 
+
+
  wire [12*2-1:0] m_to_sat0_0_up  ;
  wire [23*2-1:0] m_to_sat0_1_down;
  wire [35*2-1:0] m_to_sat1_0_up  ;
  wire [35*2-1:0] m_to_sat1_1_down;
  
+
  wire [NBITS_out*2-1:0] satout0_0_up;
  wire [NBITS_out*2-1:0] satout0_1_down;
  wire [NBITS_out*2-1:0] satout1_0_up;
@@ -119,32 +128,23 @@ module topfft_in_a_sat0
   assign fftOut1_up   =   out1_up;
   assign fftOut1_down = out1_down;
     
-    
-    
- topD_1
- #(1)
-    EnableCM_stage1
-    (.Q(coeffCMStage1_en),
-    .clk(clk),
-    .rst(rst));
   
-  
- assign coeffw0_0en=coeffCMStage1_en;
- assign coeffw0_1en=coeffCMStage1_en;
 /////////////////////////////////  
  coeff_mem_0_0
       Mcoeff_0_0
      (.coeff_out(coefficientes0_0),
       .clk(clk),
-      .rst(!coeffw0_0en));
+      .rst(coeffw0_0en));
 
  coeff_mem_0_1
       Mcoeff_0_1
      (.coeff_out(coefficientes0_1),
       .clk(clk),
-      .rst(!coeffw0_1en));
+      .rst(coeffw0_1en));
  /////////////////////////////////      
-     
+ 
+       
+        
 
 //BFI I
    BF#(NBITS) 
@@ -152,9 +152,7 @@ module topfft_in_a_sat0
             (.BFOut_up(blqI0_to_m_up),
              .BFOut_down(blqI0_to_m_down),
              .BFIn_up(in0_up),
-             .BFIn_down(in0_down),
-             .clk(clk),
-             .rst(rst));
+             .BFIn_down(in0_down));
 
 
    BF#(NBITS) 
@@ -162,9 +160,7 @@ module topfft_in_a_sat0
             (.BFOut_up(blqI1_to_m_up),
              .BFOut_down(blqI1_to_m_down),
              .BFIn_up(in1_up),
-             .BFIn_down(in1_down),
-             .clk(clk),
-             .rst(rst));
+             .BFIn_down(in1_down));
 
     
    
@@ -193,14 +189,6 @@ assign m_to_blqII0_down= blqI1_to_m_up; // Cable
     
  /// 22 bits termina etapa anterior   
 ////////////////////////////////////////////////////////////////////////////////    
-
- topD_1
- #(16)
-    EnableCM_stage2
-    (.Q(coeffCMStage2_en),
-    .clk(clk),
-    .rst(!coeffCMStage1_en));
-    
 contador
  #(16) 
    control_Blq_BFII_0
@@ -236,7 +224,12 @@ Blq
    
 
    
-
+ topD_1
+ #(16)
+    EnableCM_stage2
+    (.Q(coeffCMStage2_en),
+    .clk(clk),
+    .rst(rst));
      
 assign coeffw1_0en=coeffCMStage2_en;
 assign coeffw1_1en=coeffCMStage2_en;
