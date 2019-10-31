@@ -46,8 +46,6 @@ module topfft_in_a_sat0
   wire [NBITScoeff*2-1:0] coefficientes0_1;
   wire [NBITScoeff*2-1:0] coefficientes1_0;
   wire [NBITScoeff*2-1:0] coefficientes1_1;
-  wire [NBITScoeff*2-1:0] coefficientes1_1p;
-  
   wire [NBITScoeff*2-1:0] coefficientes1_2;
   
     
@@ -130,14 +128,16 @@ module topfft_in_a_sat0
     
   
 /////////////////////////////////  
- coeff_mem_0_0
-      Mcoeff_0_0
+ coeff0_0
+ #(NBITScoeff,N)
+      Mcoeff0_0
      (.coeff_out(coefficientes0_0),
       .clk(clk),
       .rst(coeffw0_0en));
 
- coeff_mem_0_1
-      Mcoeff_0_1
+ coeff0_1
+ #(NBITScoeff,N)
+      Mcoeff0_1
      (.coeff_out(coefficientes0_1),
       .clk(clk),
       .rst(coeffw0_1en));
@@ -238,27 +238,27 @@ assign coeffw1_2en=coeffCMStage2_en;
 
          
    
- coeff_mem_1_0   
-      Mcoeff_1_0
+coeff1_0
+ #(NBITScoeff,N)
+      Mcoeff1_0
      (.coeff_out(coefficientes1_0),
       .clk(clk),
       .rst(!coeffw1_0en));
 
-
-      
- coeff_mem_1_1     
-      Mcoeff_1_1
+ coeff1_1
+ #(NBITScoeff,N)
+      Mcoeff1_1
      (.coeff_out(coefficientes1_1),
       .clk(clk),
       .rst(!coeffw1_1en));
    
-
- coeff_mem_1_2     
-      Mcoeff_1_2
+   
+coeff1_2
+ #(NBITScoeff,N)
+      Mcoeff1_2
      (.coeff_out(coefficientes1_2),
       .clk(clk),
-      .rst(!coeffw1_1en));
-   
+      .rst(!coeffw1_2en));
    
    
    
