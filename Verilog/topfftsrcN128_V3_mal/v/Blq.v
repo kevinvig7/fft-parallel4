@@ -75,7 +75,9 @@ module Blq
             (.BFOut_up(bf_to_blq_out_up),
              .BFOut_down(bf_to_blq_out_down),
              .BFIn_up(connect_blq_up[2]),
-             .BFIn_down(connect_blq_down[2]));
+             .BFIn_down(connect_blq_down[2]),
+             .clk(clk),
+             .rst(rst));
 
 
 endmodule

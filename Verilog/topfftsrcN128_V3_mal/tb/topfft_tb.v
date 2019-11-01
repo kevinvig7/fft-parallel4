@@ -43,7 +43,7 @@ integer scan_out3; // file handler
     
 parameter NBITS=10;
 parameter NBITScoeff=NBITS+1;
-parameter NBITS_out = 10;
+parameter NBITS_out = 19;
 parameter N=32;   
 
 
