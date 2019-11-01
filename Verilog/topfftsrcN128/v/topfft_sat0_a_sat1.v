@@ -118,12 +118,6 @@ module topfft_sat0_a_sat1
       assign sat0_a_blqIII_1_down = fftIn1_down;
      
 //     wire coeffCMStage31_en;
-// topD_1
-// #(1)
-//    EnableCM_stage31
-//    (.Q(coeffCMStage31_en),
-//    .clk(clk),
-//    .rst(!in_enable));
      
      
  ///Enable de etapa
