@@ -25,10 +25,10 @@ module topfft_in_a_sat0
       parameter NBITScoeff=NBITS+1,
        parameter NBITS_out=15,
       parameter N = 32) // Cantidad de coeficientes en los multiplicadores
-     (output [15*2-1:0] fftOut0_up,
-      output [15*2-1:0] fftOut0_down,
-      output [15*2-1:0] fftOut1_up,
-      output [15*2-1:0] fftOut1_down,
+     (output reg [NBITS_out*2-1:0] fftOut0_up,
+      output reg [NBITS_out*2-1:0] fftOut0_down,
+      output reg [NBITS_out*2-1:0] fftOut1_up,
+      output reg [NBITS_out*2-1:0] fftOut1_down,
       output o_enable,
       input  [NBITS*2-1:0] fftIn0_up,
       input  [NBITS*2-1:0] fftIn0_down,
@@ -42,7 +42,6 @@ module topfft_in_a_sat0
   wire [NBITScoeff*2-1:0] coefficientes0_1;
   wire [NBITScoeff*2-1:0] coefficientes1_0;
   wire [NBITScoeff*2-1:0] coefficientes1_1;
-  wire [NBITScoeff*2-1:0] coefficientes1_1p;
   wire [NBITScoeff*2-1:0] coefficientes1_2;
   
     
@@ -53,9 +52,12 @@ module topfft_in_a_sat0
   wire coeffw1_1en;
   wire coeffw1_2en;
   
-  wire ctrl_Blq_BFII,coeffCMStage2_en,coeffCMStage1_en;
   
-  assign o_enable = coeffCMStage2_en;
+  
+  wire ctrl_Blq_BFII;
+  wire coeffCMStage2_en;
+  wire coeffCMStage1_en;
+  
  
   ///estos no van negados a la entrada de coeff porque el rst es negado
   
@@ -69,13 +71,7 @@ module topfft_in_a_sat0
  wire [NBITS*2-1:0] in1_down;
  
  //[((NBITS+1)*2+1)*2-1:0]
- 
- wire [15*2-1:0]   out0_up;
- wire [15*2-1:0] out0_down;
- wire [15*2-1:0]   out1_up;
- wire [15*2-1:0] out1_down;
- 
- 
+
  wire [11*2-1:0] blqI0_to_m_up  ;
  wire [11*2-1:0] blqI0_to_m_down;
  wire [11*2-1:0] blqI1_to_m_up  ;
@@ -114,12 +110,7 @@ module topfft_in_a_sat0
   assign in1_down = fftIn1_down;
   
   
-  assign fftOut0_up   =   out0_up;
-  assign fftOut0_down = out0_down;
-  assign fftOut1_up   =   out1_up;
-  assign fftOut1_down = out1_down;
-    
-    
+
     
  topD_1
  #(1)
@@ -344,14 +335,26 @@ assign   m_to_sat0_0_up = blqII0_to_m_up; ////expandir signo aqui
          (.sat_out(satout1_1_down),
           .sat_in(m_to_sat1_1_down)); 
    
-                  
+          assign o_enable = coeffCMStage2_en;
+ 
+always@ (posedge clk) begin             
+ if (rst) begin      
+ fftOut0_up   = {NBITS_out*2{1'b0}};    
+ fftOut0_down = {NBITS_out*2{1'b0}};      
+ fftOut1_up   = {NBITS_out*2{1'b0}};       
+ fftOut1_down = {NBITS_out*2{1'b0}};       
+ //o_enable = 0;
+      end else begin
+ fftOut0_up   =  satout0_0_up;
+ fftOut0_down = satout0_1_down;
+ fftOut1_up   =   satout1_0_up;
+ fftOut1_down = satout1_1_down;
+// o_enable = coeffCMStage2_en;
+         end
+  end  
+    
 
-assign out0_up   =satout0_0_up;
-assign out0_down =satout0_1_down;
-assign out1_up   =satout1_0_up;
-assign out1_down =satout1_1_down;
-
-
-
+    
+    
 
 endmodule

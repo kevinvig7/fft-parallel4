@@ -26,10 +26,10 @@ module topfft_sat1_a_sat2
        parameter NBITS_out=21,
        parameter N = 32) // Cantidad de coeficientes en los multiplicadores
      (
-      output [NBITS_out*2-1:0] fftOut0_up,
-      output [NBITS_out*2-1:0] fftOut0_down,
-      output [NBITS_out*2-1:0] fftOut1_up,
-      output [NBITS_out*2-1:0] fftOut1_down,
+      output reg [NBITS_out*2-1:0] fftOut0_up,
+      output reg [NBITS_out*2-1:0] fftOut0_down,
+      output reg [NBITS_out*2-1:0] fftOut1_up,
+      output reg [NBITS_out*2-1:0] fftOut1_down,
       
       input  [NBITS*2-1:0] fftIn0_up,
       input  [NBITS*2-1:0] fftIn0_down,
@@ -403,14 +403,20 @@ assign coeffw5_3en=coeffCMStage6_en;
     
     
     
-             
-   
-   assign fftOut0_up   = sat2out_0_up;
-   assign fftOut0_down = sat2out_0_down;
-   assign fftOut1_up   = sat2out_1_up;
-   assign fftOut1_down = sat2out_1_down;
-      
-      
+always@ (posedge clk) begin             
+ if (rst) begin      
+ fftOut0_up   = {NBITS_out*2{1'b0}};    
+ fftOut0_down = {NBITS_out*2{1'b0}};      
+ fftOut1_up   = {NBITS_out*2{1'b0}};       
+ fftOut1_down = {NBITS_out*2{1'b0}};       
+      end else begin
+ fftOut0_up   =  sat2out_0_up;
+ fftOut0_down = sat2out_0_down;
+ fftOut1_up   =   sat2out_1_up;
+ fftOut1_down = sat2out_1_down;
+         end
+  end  
+    
       
       
       
