@@ -1,0 +1,33 @@
+Warning: Design 'topfft' has '19' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Thu Oct 31 12:08:34 2019
+****************************************
+
+Library(s) Used:
+
+    gscl45nm (File: /home/tools/synopsys/tech_kits/FreePDK45/osu_soc/lib/files/gscl45nm.db)
+
+Number of ports:                         1228
+Number of nets:                        112376
+Number of cells:                       102726
+Number of combinational cells:          95310
+Number of sequential cells:              7404
+Number of macros/black boxes:               0
+Number of buf/inv:                      27817
+Number of references:                      54
+
+Combinational area:             291201.116637
+Buf/Inv area:                    44892.767764
+Noncombinational area:           58830.508095
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                350031.624731
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
