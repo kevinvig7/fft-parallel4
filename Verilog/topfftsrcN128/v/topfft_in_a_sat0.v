@@ -127,13 +127,13 @@ module topfft_in_a_sat0
       Mcoeff_0_0
      (.coeff_out(coefficientes0_0),
       .clk(clk),
-      .rst(!coeffw0_0en));
+      .rst(rst));
 
  coeff_mem_0_1
       Mcoeff_0_1
      (.coeff_out(coefficientes0_1),
       .clk(clk),
-      .rst(!coeffw0_1en));
+      .rst(rst));
  /////////////////////////////////      
      
 
@@ -145,7 +145,7 @@ module topfft_in_a_sat0
              .BFIn_up(in0_up),
              .BFIn_down(in0_down),
              .clk(clk),
-             .rst(rst));
+             .rst(!coeffCMStage1_en));  
 
 
    BF#(NBITS) 
@@ -155,7 +155,7 @@ module topfft_in_a_sat0
              .BFIn_up(in1_up),
              .BFIn_down(in1_down),
              .clk(clk),
-             .rst(rst));
+             .rst(!coeffCMStage1_en));  
 
     
    
@@ -190,7 +190,7 @@ assign m_to_blqII0_down= blqI1_to_m_up; // Cable
     EnableCM_stage2
     (.Q(coeffCMStage2_en),
     .clk(clk),
-    .rst(!coeffCMStage1_en));
+    .rst(!coeffw0_0en));
     
 contador
  #(16) 
@@ -207,7 +207,7 @@ Blq
        .BlqIn_up       (m_to_blqII0_up),
        .BlqIn_down   (m_to_blqII0_down),
        .clk(clk),
-       .rst(rst),
+       .rst(!coeffCMStage1_en),
        .ctrl(ctrl_Blq_BFII)); 
     
 
@@ -220,7 +220,7 @@ Blq
        .BlqIn_up       (m_to_blqII1_up),
        .BlqIn_down   (m_to_blqII1_down),
        .clk(clk),
-       .rst(rst),
+       .rst(!coeffCMStage1_en),
        .ctrl(ctrl_Blq_BFII)); 
    
  /////////////////////////////////////////////////////////////////////
@@ -229,9 +229,9 @@ Blq
    
 
      
-assign coeffw1_0en=coeffCMStage2_en;
-assign coeffw1_1en=coeffCMStage2_en;
-assign coeffw1_2en=coeffCMStage2_en;
+assign coeffw1_0en=coeffCMStage1_en;
+assign coeffw1_1en=coeffCMStage1_en;
+assign coeffw1_2en=coeffCMStage1_en;
    
 
          
