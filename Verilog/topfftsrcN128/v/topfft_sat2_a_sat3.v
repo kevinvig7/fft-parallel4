@@ -73,7 +73,7 @@ assign sat2_a_blqVII_1_down = fftIn1_down;
 
 
  topD_1
- #(17)
+ #(18)
     EnableCM_stage7
     (.Q(coeffCMStage7_en),
     .clk(clk),

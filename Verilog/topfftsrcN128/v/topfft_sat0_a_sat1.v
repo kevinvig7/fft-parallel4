@@ -122,7 +122,7 @@ module topfft_sat0_a_sat1
      
  ///Enable de etapa
  topD_1
- #(8)
+ #(10)
     EnableCM_stage3
     (.Q(coeffCMStage3_en),
     .clk(clk),
@@ -257,7 +257,7 @@ assign coeffw2_3en=coeffCMStage3_en;
 /////////////////////////////////  
     ///Enable de etapa
  topD_1
- #(4)
+ #(5)
     EnableCM_stage4
     (.Q(coeffCMStage4_en),
     .clk(clk),
