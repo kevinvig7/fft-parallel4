@@ -1,0 +1,29 @@
+ 
+****************************************
+Report : multibit banking
+Design : top_tx
+Version: O-2018.06-SP2
+Date   : Thu Oct 17 18:32:32 2019
+****************************************
+
+Total number of sequential cells:                                   67
+    Number of single-bit flip-flops:                                67
+    Number of single-bit latches:                                    0
+    Number of multi-bit flip-flops:                                  0
+    Number of multi-bit latches:                                     0
+
+Total number of single-bit equivalent sequential cells:             67
+    (A) Single-bit flip-flops:                                      67
+    (B) Single-bit latches:                                          0
+    (C) Multi-bit flip-flops:                                        0
+    (D) Multi-bit latches:                                           0
+
+Sequential cells banking ratio ((C + D) / (A + B + C + D)):       0.00%
+Flip-Flop cells banking ratio  ((C) / (A + C)):                   0.00%
+
+Multi-bit Register Decomposition:
+--------------------------------------------------------------------------------
+Bit-Width Reference                 Number of instances    Single-bit Equivalent
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+1

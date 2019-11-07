@@ -1,0 +1,108 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : top_tx
+Version: O-2018.06-SP2
+Date   : Thu Oct 17 18:32:31 2019
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: u_rrc_I_shiftReg_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_rrc_I_samples_add_reg_8_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_rrc_I_shiftReg_reg_2_/CLK (DFFPOSX1)                  0.00      0.00       0.00 r
+  u_rrc_I_shiftReg_reg_2_/Q (DFFPOSX1)                    0.12      0.18       0.18 f
+  u_rrc_I_samples_add_w_7__9_ (net)            22                   0.00       0.18 f
+  U793/Y (INVX1)                                          0.61      0.44       0.61 r
+  DP_OP_257J1_128_7510_n57 (net)               24                   0.00       0.61 r
+  U911/Y (AOI22X1)                                        0.20      0.15       0.76 f
+  n951 (net)                                    1                   0.00       0.76 f
+  U657/Y (BUFX2)                                          0.05      0.08       0.84 f
+  n459 (net)                                    4                   0.00       0.84 f
+  U912/Y (AOI22X1)                                        0.04      0.06       0.90 r
+  intadd_1_B_0_ (net)                           1                   0.00       0.90 r
+  U643/Y (BUFX2)                                          0.04      0.05       0.95 r
+  n447 (net)                                    2                   0.00       0.95 r
+  U642/Y (INVX1)                                          0.04      0.04       0.99 f
+  n446 (net)                                    1                   0.00       0.99 f
+  U1027/YS (FAX1)                                         0.02      0.09       1.09 f
+  n817 (net)                                    3                   0.00       1.09 f
+  U977/Y (INVX1)                                          0.00      0.01       1.10 r
+  n813 (net)                                    2                   0.00       1.10 r
+  U457/Y (AND2X1)                                         0.03      0.03       1.13 r
+  n814 (net)                                    1                   0.00       1.13 r
+  U456/Y (INVX1)                                          0.01      0.02       1.15 f
+  n307 (net)                                    1                   0.00       1.15 f
+  U1029/Y (AOI22X1)                                       0.04      0.03       1.18 r
+  n878 (net)                                    1                   0.00       1.18 r
+  U637/Y (BUFX2)                                          0.03      0.05       1.23 r
+  n441 (net)                                    3                   0.00       1.23 r
+  U300/Y (OR2X1)                                          0.02      0.04       1.27 r
+  n875 (net)                                    1                   0.00       1.27 r
+  U1064/Y (AOI22X1)                                       0.03      0.02       1.28 f
+  n898 (net)                                    1                   0.00       1.28 f
+  U768/Y (BUFX2)                                          0.02      0.04       1.33 f
+  n560 (net)                                    4                   0.00       1.33 f
+  U1077/Y (OR2X1)                                         0.01      0.05       1.38 f
+  n896 (net)                                    1                   0.00       1.38 f
+  U1078/Y (AOI22X1)                                       0.04      0.03       1.41 r
+  n900 (net)                                    1                   0.00       1.41 r
+  U489/Y (BUFX2)                                          0.01      0.04       1.44 r
+  n325 (net)                                    1                   0.00       1.44 r
+  U1079/Y (MUX2X1)                                        0.02      0.03       1.48 f
+  n909 (net)                                    1                   0.00       1.48 f
+  U1082/Y (AOI22X1)                                       0.04      0.05       1.52 r
+  n910 (net)                                    1                   0.00       1.52 r
+  U364/Y (BUFX2)                                          0.01      0.04       1.56 r
+  n234 (net)                                    1                   0.00       1.56 r
+  U1083/Y (OAI21X1)                                       0.01      0.01       1.57 f
+  n911 (net)                                    1                   0.00       1.57 f
+  U1084/Y (AOI22X1)                                       0.04      0.02       1.60 r
+  n923 (net)                                    1                   0.00       1.60 r
+  U305/Y (BUFX2)                                          0.01      0.04       1.63 r
+  n195 (net)                                    1                   0.00       1.63 r
+  U279/Y (AND2X1)                                         0.03      0.04       1.68 r
+  n1435 (net)                                   1                   0.00       1.68 r
+  U274/Y (AND2X1)                                         0.03      0.04       1.72 r
+  n1433 (net)                                   1                   0.00       1.72 r
+  U272/Y (INVX1)                                          0.01      0.02       1.73 f
+  n505 (net)                                    1                   0.00       1.73 f
+  u_rrc_I_samples_add_reg_8_/D (DFFPOSX1)                 0.01      0.00       1.73 f
+  data arrival time                                                            1.73
+
+  clock CLK (rise edge)                                             2.00       2.00
+  clock network delay (ideal)                                       0.00       2.00
+  u_rrc_I_samples_add_reg_8_/CLK (DFFPOSX1)                         0.00       2.00 r
+  library setup time                                               -0.06       1.94
+  data required time                                                           1.94
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           1.94
+  data arrival time                                                           -1.73
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.21
+
+
+1

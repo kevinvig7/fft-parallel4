@@ -1,0 +1,86 @@
+Warning: Design 'topfft' has '19' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+Warning: Design 'topfft' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : qor
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Thu Nov  7 13:51:54 2019
+****************************************
+
+
+  Timing Path Group 'CLK'
+  -----------------------------------
+  Levels of Logic:              76.00
+  Critical Path Length:          2.71
+  Critical Path Slack:          -0.76
+  Critical Path Clk Period:      2.00
+  Total Negative Slack:       -290.77
+  No. of Violating Paths:      605.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         15
+  Hierarchical Port Count:       1664
+  Leaf Cell Count:             104181
+  Buf/Inv Cell Count:           26770
+  Buf Cell Count:                2919
+  Inv Cell Count:               23851
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     96290
+  Sequential Cell Count:         7891
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   294733.068172
+  Noncombinational Area: 62955.185703
+  Buf/Inv Area:          41738.133324
+  Total Buffer Area:          6993.51
+  Total Inverter Area:       34744.62
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:            357688.253875
+  Design Area:          357688.253875
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:        112749
+  Nets With Violations:          7079
+  Max Trans Violations:             0
+  Max Cap Violations:            7079
+  -----------------------------------
+
+
+  Hostname: nina.localdomain
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    7.36
+  Logic Optimization:                173.39
+  Mapping Optimization:             1288.18
+  -----------------------------------------
+  Overall Compile Time:             1902.36
+  Overall Compile Wall Clock Time:   751.27
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.76  TNS: 290.77  Number of Violating Paths: 605
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
