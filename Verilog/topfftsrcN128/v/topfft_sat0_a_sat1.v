@@ -26,17 +26,17 @@ module topfft_sat0_a_sat1
        parameter NBITS_out=19,
        parameter N = 32) // Cantidad de coeficientes en los multiplicadores
      (
-      output [NBITS_out*2-1:0] fftOut0_up,
-      output [NBITS_out*2-1:0] fftOut0_down,
-      output [NBITS_out*2-1:0] fftOut1_up,
-      output [NBITS_out*2-1:0] fftOut1_down,
+      output reg [NBITS_out*2-1:0] fftOut0_up,
+      output reg [NBITS_out*2-1:0] fftOut0_down,
+      output reg [NBITS_out*2-1:0] fftOut1_up,
+      output reg [NBITS_out*2-1:0] fftOut1_down,
       
       input  [NBITS*2-1:0] fftIn0_up,
       input  [NBITS*2-1:0] fftIn0_down,
       input  [NBITS*2-1:0] fftIn1_up,
       input  [NBITS*2-1:0] fftIn1_down,
       input in_enable,
-      output o_enable,
+      output reg o_enable,
       input clk,
       input rst);
 
@@ -57,7 +57,7 @@ module topfft_sat0_a_sat1
      wire coeffCMStage3_en,coeffCMStage4_en;
      
      
-     assign o_enable = coeffCMStage4_en;
+     //assign o_enable = coeffCMStage4_en;
                         
      wire [28*2-1:0] m_a_blqIV_0_up;
      wire [28*2-1:0] m_a_blqIV_0_down;
@@ -397,15 +397,26 @@ assign m_to_sat1_1_up= blqIV_a_m_1_up; // Cable
     
              
    
-   assign fftOut0_up   = sat1out_0_up;
-   assign fftOut0_down = sat1out_0_down;
-   assign fftOut1_up   = sat1out_1_up;
-   assign fftOut1_down = sat1out_1_down;
 
 
 
     
-    
+    always @(posedge clk) begin         
+if (rst) begin
+ fftOut0_up   =   {NBITS_out*2{1'b0}};
+ fftOut0_down = {NBITS_out*2{1'b0}};
+ fftOut1_up   =   {NBITS_out*2{1'b0}};
+ fftOut1_down = {NBITS_out*2{1'b0}};
+   o_enable =0;
+end else begin
+   fftOut0_up   = sat1out_0_up;
+   fftOut0_down = sat1out_0_down;
+   fftOut1_up   = sat1out_1_up;
+   fftOut1_down = sat1out_1_down;
+  o_enable = coeffCMStage4_en;
+
+end
+end
     
     
     

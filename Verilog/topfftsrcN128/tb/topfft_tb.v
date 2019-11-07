@@ -50,6 +50,7 @@ parameter N=32;
 reg clk = 0;
 reg rst;  
 reg rst_tb;
+reg rst_file;
  
 reg [NBITS*2-1:0] fftIn0_up;
 reg [NBITS*2-1:0] fftIn0_down;
@@ -112,9 +113,12 @@ if (data_out == `NULL) begin
          $finish;
     end    
 
- rst_tb  = 1'd1;
- #5 rst_tb  = 1'd0;
+ rst_tb  = 1'b1;
+ #5 rst_tb  = 1'b0;
+    rst_file=1'b1;
  
+#14 rst_file=1'b0; //para alinear archivo con salida y poder comparar
+
  fftIn0_up   ={NBITS*2{1'b0}} ;
  fftIn0_down ={NBITS*2{1'b0}};
  fftIn1_up   ={NBITS*2{1'b0}};
@@ -153,8 +157,11 @@ always @(posedge clk) begin
 
 
 
+
+
+
 always @(posedge clk) begin
-   if(rst) begin
+   if(rst_file) begin
     file_fftOut0_up   ={NBITS_out*2{1'b0}};
     file_fftOut0_down ={NBITS_out*2{1'b0}};
     file_fftOut1_up   ={NBITS_out*2{1'b0}};
