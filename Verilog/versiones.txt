@@ -1,3 +1,6 @@
 version_1 -- primer  --diseño con muchas oartes sin optimizaar
 Version_1_enable_sinc -- version_1 con ahorro de un par de ciclos de clock sincronizando los pulsos de control entre etapas.
-Version_2 --
+Version_2 - optimizacion de memorias de coeficeints
+Version 3 -- cuantizadores regitrados cierra a 500MhZ
+
+Faltaria optimizar los multiplicadores Tdw y agregar el CSD .. se puede llegar a mas frecuencia si se agrega registro a la salida del BF
