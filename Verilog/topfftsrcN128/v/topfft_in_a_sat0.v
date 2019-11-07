@@ -76,11 +76,7 @@ module topfft_in_a_sat0
  
  //[((NBITS+1)*2+1)*2-1:0]
  
- wire [15*2-1:0]   out0_up;
- wire [15*2-1:0] out0_down;
- wire [15*2-1:0]   out1_up;
- wire [15*2-1:0] out1_down;
- 
+
  
  wire [11*2-1:0] blqI0_to_m_up  ;
  wire [11*2-1:0] blqI0_to_m_down;
@@ -123,10 +119,7 @@ module topfft_in_a_sat0
   assign in1_down = fftIn1_down;
   
   
-  assign fftOut0_up   =   out0_up;
-  assign fftOut0_down = out0_down;
-  assign fftOut1_up   =   out1_up;
-  assign fftOut1_down = out1_down;
+ 
     
   
 /////////////////////////////////  
@@ -339,12 +332,11 @@ assign   m_to_sat0_0_up = blqII0_to_m_up; ////expandir signo aqui
    
                   
 
-assign out0_up   =satout0_0_up;
-assign out0_down =satout0_1_down;
-assign out1_up   =satout1_0_up;
-assign out1_down =satout1_1_down;
 
-
+ assign fftOut0_up   =   satout0_0_up;
+ assign fftOut0_down = satout0_1_down;
+ assign fftOut1_up   =   satout1_0_up;
+ assign fftOut1_down = satout1_1_down;
 
 
 endmodule
