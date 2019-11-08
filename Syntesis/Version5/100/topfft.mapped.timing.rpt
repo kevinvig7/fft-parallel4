@@ -1,0 +1,335 @@
+Warning: Design 'topfft' has '14' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Fri Nov  8 15:53:19 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: u_topfft_sat1_a_sat2/control_Blq_BFVI_0/pulso_reg
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly_BFOut_up_reg_31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_topfft_sat1_a_sat2/control_Blq_BFVI_0/pulso_reg/CLK (DFFPOSX1)     0.00     0.00 #     0.00 r
+  u_topfft_sat1_a_sat2/control_Blq_BFVI_0/pulso_reg/Q (DFFPOSX1)     0.03     0.08     0.08 r
+  u_topfft_sat1_a_sat2/control_Blq_BFVI_0/clk_out (net)     5       0.00       0.08 r
+  u_topfft_sat1_a_sat2/control_Blq_BFVI_0/clk_out (contador_N1)     0.00       0.08 r
+  u_topfft_sat1_a_sat2/ctrl_Blq_BFVI (net)                          0.00       0.08 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/ctrl (Blq_ND01_ND11_Nbits32_1)     0.00      0.08 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/ctrl (net)                        0.00       0.08 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U644/Y (AND2X1)         0.65      0.45       0.53 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n1139 (net)    48                 0.00       0.53 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U43/Y (INVX1)           0.17      0.17       0.70 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n23 (net)     1                   0.00       0.70 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U41/Y (INVX1)           1.13      0.80       1.49 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n21 (net)    81                   0.00       1.49 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U647/Y (AOI22X1)        0.24      0.18       1.67 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n743 (net)     1                  0.00       1.67 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U357/Y (BUFX2)          0.08      0.09       1.76 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n186 (net)     4                  0.00       1.76 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1081/Y (OR2X1)         0.01      0.06       1.82 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n741 (net)     1                  0.00       1.82 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1082/Y (AOI22X1)       0.04      0.02       1.84 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n749 (net)     1                  0.00       1.84 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U409/Y (BUFX2)          0.03      0.05       1.89 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n238 (net)     4                  0.00       1.89 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1085/Y (OR2X1)         0.02      0.04       1.93 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n747 (net)     1                  0.00       1.93 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1086/Y (AOI22X1)       0.03      0.02       1.95 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n755 (net)     1                  0.00       1.95 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U360/Y (BUFX2)          0.02      0.04       1.99 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n189 (net)     4                  0.00       1.99 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U65/Y (OR2X1)           0.01      0.04       2.03 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n752 (net)     1                  0.00       2.03 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U412/Y (INVX1)          0.00      0.00       2.03 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n243 (net)     1                  0.00       2.03 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U194/Y (OR2X1)          0.02      0.04       2.07 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n241 (net)     1                  0.00       2.07 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U193/Y (INVX1)          0.01      0.02       2.09 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n76 (net)     1                   0.00       2.09 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1/Y (OR2X1)            0.01      0.05       2.14 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n760 (net)     1                  0.00       2.14 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U2/Y (INVX1)            0.00      0.00       2.13 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n1 (net)      1                   0.00       2.13 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U410/Y (BUFX2)          0.03      0.05       2.18 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n239 (net)     4                  0.00       2.18 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1091/Y (OR2X1)         0.02      0.04       2.22 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n758 (net)     1                  0.00       2.22 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1092/Y (AOI22X1)       0.03      0.02       2.24 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n766 (net)     1                  0.00       2.24 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U362/Y (BUFX2)          0.02      0.04       2.28 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n191 (net)     4                  0.00       2.28 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U64/Y (OR2X1)           0.01      0.04       2.32 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n763 (net)     1                  0.00       2.32 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U415/Y (INVX1)          0.00      0.00       2.32 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n248 (net)     1                  0.00       2.32 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U196/Y (OR2X1)          0.02      0.04       2.36 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n246 (net)     1                  0.00       2.36 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U195/Y (INVX1)          0.01      0.02       2.38 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n77 (net)     1                   0.00       2.38 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U3/Y (OR2X1)            0.01      0.05       2.42 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n771 (net)     1                  0.00       2.42 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U4/Y (INVX1)            0.00      0.00       2.42 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n2 (net)      1                   0.00       2.42 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U413/Y (BUFX2)          0.03      0.05       2.47 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n244 (net)     4                  0.00       2.47 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1097/Y (OR2X1)         0.02      0.04       2.51 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n769 (net)     1                  0.00       2.51 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1098/Y (AOI22X1)       0.03      0.02       2.53 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n777 (net)     1                  0.00       2.53 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U364/Y (BUFX2)          0.02      0.04       2.57 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n193 (net)     4                  0.00       2.57 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U63/Y (OR2X1)           0.01      0.04       2.61 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n774 (net)     1                  0.00       2.61 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U417/Y (INVX1)          0.00      0.00       2.61 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n252 (net)     1                  0.00       2.61 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U198/Y (OR2X1)          0.02      0.04       2.65 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n251 (net)     1                  0.00       2.65 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U197/Y (INVX1)          0.01      0.02       2.67 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n78 (net)     1                   0.00       2.67 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U5/Y (OR2X1)            0.01      0.05       2.71 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n782 (net)     1                  0.00       2.71 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U6/Y (INVX1)            0.00      0.00       2.71 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n3 (net)      1                   0.00       2.71 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U416/Y (BUFX2)          0.03      0.05       2.76 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n249 (net)     4                  0.00       2.76 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1103/Y (OR2X1)         0.02      0.04       2.80 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n780 (net)     1                  0.00       2.80 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1104/Y (AOI22X1)       0.03      0.02       2.82 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n788 (net)     1                  0.00       2.82 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U366/Y (BUFX2)          0.02      0.04       2.86 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n195 (net)     4                  0.00       2.86 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U62/Y (OR2X1)           0.01      0.04       2.90 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n785 (net)     1                  0.00       2.90 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U420/Y (INVX1)          0.00      0.00       2.90 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n257 (net)     1                  0.00       2.90 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U200/Y (OR2X1)          0.02      0.04       2.94 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n255 (net)     1                  0.00       2.94 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U199/Y (INVX1)          0.01      0.02       2.95 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n79 (net)     1                   0.00       2.95 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U7/Y (OR2X1)            0.01      0.05       3.00 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n793 (net)     1                  0.00       3.00 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U8/Y (INVX1)            0.00      0.00       3.00 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n4 (net)      1                   0.00       3.00 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U418/Y (BUFX2)          0.03      0.05       3.05 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n253 (net)     4                  0.00       3.05 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1109/Y (OR2X1)         0.02      0.04       3.09 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n791 (net)     1                  0.00       3.09 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1110/Y (AOI22X1)       0.03      0.02       3.10 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n799 (net)     1                  0.00       3.10 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U368/Y (BUFX2)          0.02      0.04       3.15 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n197 (net)     4                  0.00       3.15 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U61/Y (OR2X1)           0.01      0.04       3.19 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n796 (net)     1                  0.00       3.19 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U423/Y (INVX1)          0.00      0.00       3.19 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n262 (net)     1                  0.00       3.19 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U202/Y (OR2X1)          0.02      0.04       3.22 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n260 (net)     1                  0.00       3.22 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U201/Y (INVX1)          0.01      0.02       3.24 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n80 (net)     1                   0.00       3.24 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U9/Y (OR2X1)            0.01      0.05       3.29 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n804 (net)     1                  0.00       3.29 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U10/Y (INVX1)           0.00      0.00       3.29 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n5 (net)      1                   0.00       3.29 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U421/Y (BUFX2)          0.03      0.05       3.33 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n258 (net)     4                  0.00       3.33 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1115/Y (OR2X1)         0.02      0.04       3.38 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n802 (net)     1                  0.00       3.38 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1116/Y (AOI22X1)       0.03      0.02       3.39 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n810 (net)     1                  0.00       3.39 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U370/Y (BUFX2)          0.02      0.04       3.44 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n199 (net)     4                  0.00       3.44 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U60/Y (OR2X1)           0.01      0.04       3.48 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n807 (net)     1                  0.00       3.48 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U426/Y (INVX1)          0.00      0.00       3.48 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n267 (net)     1                  0.00       3.48 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U204/Y (OR2X1)          0.02      0.04       3.51 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n265 (net)     1                  0.00       3.51 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U203/Y (INVX1)          0.01      0.02       3.53 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n81 (net)     1                   0.00       3.53 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U11/Y (OR2X1)           0.01      0.05       3.58 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n815 (net)     1                  0.00       3.58 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U12/Y (INVX1)           0.00      0.00       3.58 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n6 (net)      1                   0.00       3.58 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U424/Y (BUFX2)          0.03      0.05       3.62 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n263 (net)     4                  0.00       3.62 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1121/Y (OR2X1)         0.02      0.04       3.66 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n813 (net)     1                  0.00       3.66 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1122/Y (AOI22X1)       0.03      0.02       3.68 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n821 (net)     1                  0.00       3.68 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U372/Y (BUFX2)          0.02      0.04       3.73 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n201 (net)     4                  0.00       3.73 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U59/Y (OR2X1)           0.01      0.04       3.77 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n818 (net)     1                  0.00       3.77 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U428/Y (INVX1)          0.00      0.00       3.77 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n271 (net)     1                  0.00       3.77 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U206/Y (OR2X1)          0.02      0.04       3.80 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n270 (net)     1                  0.00       3.80 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U205/Y (INVX1)          0.01      0.02       3.82 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n82 (net)     1                   0.00       3.82 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U13/Y (OR2X1)           0.01      0.05       3.87 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n826 (net)     1                  0.00       3.87 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U14/Y (INVX1)           0.00      0.00       3.87 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n7 (net)      1                   0.00       3.87 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U427/Y (BUFX2)          0.03      0.05       3.91 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n268 (net)     4                  0.00       3.91 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1127/Y (OR2X1)         0.02      0.04       3.95 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n824 (net)     1                  0.00       3.95 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1128/Y (AOI22X1)       0.03      0.02       3.97 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n832 (net)     1                  0.00       3.97 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U374/Y (BUFX2)          0.02      0.04       4.02 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n203 (net)     4                  0.00       4.02 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U58/Y (OR2X1)           0.01      0.04       4.05 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n829 (net)     1                  0.00       4.05 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U431/Y (INVX1)          0.00      0.00       4.06 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n276 (net)     1                  0.00       4.06 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U208/Y (OR2X1)          0.02      0.04       4.09 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n274 (net)     1                  0.00       4.09 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U207/Y (INVX1)          0.01      0.02       4.11 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n83 (net)     1                   0.00       4.11 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U15/Y (OR2X1)           0.01      0.05       4.16 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n837 (net)     1                  0.00       4.16 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U16/Y (INVX1)           0.00      0.00       4.16 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n8 (net)      1                   0.00       4.16 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U429/Y (BUFX2)          0.03      0.05       4.20 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n272 (net)     4                  0.00       4.20 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1133/Y (OR2X1)         0.02      0.04       4.24 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n835 (net)     1                  0.00       4.24 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1134/Y (AOI22X1)       0.03      0.02       4.26 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n843 (net)     1                  0.00       4.26 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U376/Y (BUFX2)          0.02      0.04       4.30 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n205 (net)     4                  0.00       4.30 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U57/Y (OR2X1)           0.01      0.04       4.34 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n840 (net)     1                  0.00       4.34 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U434/Y (INVX1)          0.00      0.00       4.34 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n281 (net)     1                  0.00       4.34 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U210/Y (OR2X1)          0.02      0.04       4.38 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n279 (net)     1                  0.00       4.38 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U209/Y (INVX1)          0.01      0.02       4.40 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n84 (net)     1                   0.00       4.40 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U17/Y (OR2X1)           0.01      0.05       4.45 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n848 (net)     1                  0.00       4.45 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U18/Y (INVX1)           0.00      0.00       4.44 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n9 (net)      1                   0.00       4.44 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U432/Y (BUFX2)          0.03      0.05       4.49 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n277 (net)     4                  0.00       4.49 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1139/Y (OR2X1)         0.02      0.04       4.53 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n846 (net)     1                  0.00       4.53 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1140/Y (AOI22X1)       0.03      0.02       4.55 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n854 (net)     1                  0.00       4.55 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U378/Y (BUFX2)          0.02      0.04       4.59 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n207 (net)     4                  0.00       4.59 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U56/Y (OR2X1)           0.01      0.04       4.63 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n851 (net)     1                  0.00       4.63 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U437/Y (INVX1)          0.00      0.00       4.63 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n286 (net)     1                  0.00       4.63 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U212/Y (OR2X1)          0.02      0.04       4.67 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n284 (net)     1                  0.00       4.67 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U211/Y (INVX1)          0.01      0.02       4.69 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n85 (net)     1                   0.00       4.69 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U19/Y (OR2X1)           0.01      0.05       4.73 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n859 (net)     1                  0.00       4.73 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U20/Y (INVX1)           0.00      0.00       4.73 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n10 (net)     1                   0.00       4.73 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U435/Y (BUFX2)          0.03      0.05       4.78 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n282 (net)     4                  0.00       4.78 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1145/Y (OR2X1)         0.02      0.04       4.82 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n857 (net)     1                  0.00       4.82 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1146/Y (AOI22X1)       0.03      0.02       4.84 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n865 (net)     1                  0.00       4.84 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U401/Y (BUFX2)          0.02      0.05       4.88 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n230 (net)     4                  0.00       4.88 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U80/Y (OR2X1)           0.01      0.04       4.93 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n862 (net)     1                  0.00       4.93 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1149/Y (AOI22X1)       0.04      0.02       4.95 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n870 (net)     1                  0.00       4.95 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U438/Y (BUFX2)          0.03      0.05       5.00 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n287 (net)     4                  0.00       5.00 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1152/Y (OR2X1)         0.02      0.04       5.04 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n868 (net)     1                  0.00       5.04 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1153/Y (AOI22X1)       0.03      0.02       5.06 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n876 (net)     1                  0.00       5.06 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U402/Y (BUFX2)          0.02      0.05       5.10 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n231 (net)     4                  0.00       5.10 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U79/Y (OR2X1)           0.01      0.04       5.15 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n873 (net)     1                  0.00       5.15 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1156/Y (AOI22X1)       0.04      0.02       5.17 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n881 (net)     1                  0.00       5.17 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U439/Y (BUFX2)          0.03      0.05       5.22 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n288 (net)     4                  0.00       5.22 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1159/Y (OR2X1)         0.02      0.04       5.26 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n879 (net)     1                  0.00       5.26 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1160/Y (AOI22X1)       0.03      0.02       5.28 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n887 (net)     1                  0.00       5.28 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U403/Y (BUFX2)          0.02      0.05       5.32 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n232 (net)     4                  0.00       5.32 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U78/Y (OR2X1)           0.01      0.04       5.37 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n884 (net)     1                  0.00       5.37 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1163/Y (AOI22X1)       0.04      0.02       5.39 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n892 (net)     1                  0.00       5.39 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U440/Y (BUFX2)          0.03      0.05       5.44 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n289 (net)     4                  0.00       5.44 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1166/Y (OR2X1)         0.02      0.04       5.48 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n890 (net)     1                  0.00       5.48 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1167/Y (AOI22X1)       0.03      0.02       5.50 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n898 (net)     1                  0.00       5.50 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U404/Y (BUFX2)          0.02      0.05       5.54 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n233 (net)     4                  0.00       5.54 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U77/Y (OR2X1)           0.01      0.04       5.58 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n895 (net)     1                  0.00       5.58 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1170/Y (AOI22X1)       0.04      0.02       5.61 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n903 (net)     1                  0.00       5.61 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U441/Y (BUFX2)          0.03      0.05       5.66 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n290 (net)     4                  0.00       5.66 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1173/Y (OR2X1)         0.02      0.04       5.70 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n901 (net)     1                  0.00       5.70 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1174/Y (AOI22X1)       0.03      0.02       5.72 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n907 (net)     1                  0.00       5.72 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U399/Y (BUFX2)          0.02      0.05       5.76 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n228 (net)     4                  0.00       5.76 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1175/Y (OAI21X1)       0.15      0.04       5.81 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/n904 (net)     1                  0.00       5.81 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U1176/Y (AOI21X1)       0.01      0.05       5.86 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly_N34 (net)     1         0.00       5.86 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly_BFOut_up_reg_31_/D (DFFPOSX1)     0.01     0.00     5.86 f
+  data arrival time                                                            5.86
+
+  clock CLK (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly_BFOut_up_reg_31_/CLK (DFFPOSX1)     0.00    10.00 r
+  library setup time                                               -0.06       9.94
+  data required time                                                           9.94
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           9.94
+  data arrival time                                                           -5.86
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  4.09
+
+
+1

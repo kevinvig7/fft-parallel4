@@ -1,0 +1,125 @@
+Warning: Design 'topfft' has '14' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Fri Nov  8 16:34:17 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: u_topfft_sat1_a_sat2_Blq_BFVI_1_Butterfly_BFOut_up_reg_33_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_topfft_sat1_a_sat2_fftOut1_up_reg_21_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_topfft_sat1_a_sat2_Blq_BFVI_1_Butterfly_BFOut_up_reg_33_/CLK (DFFPOSX1)     0.00     0.00 #     0.00 r
+  u_topfft_sat1_a_sat2_Blq_BFVI_1_Butterfly_BFOut_up_reg_33_/Q (DFFPOSX1)     0.06     0.13     0.13 f
+  u_topfft_sat1_a_sat2_blqVI_1_a_m_up[33] (net)    13               0.00       0.13 f
+  U24554/Y (INVX1)                                        0.12      0.11       0.24 r
+  n19956 (net)                                 12                   0.00       0.24 r
+  U24555/Y (OR2X1)                                        0.02      0.06       0.30 r
+  u_topfft_sat1_a_sat2_M5_2_DP_OP_11J9_122_5388_n1712 (net)     1     0.00     0.30 r
+  u_topfft_sat1_a_sat2_M5_2_DP_OP_11J9_122_5388_U1415/Y (MUX2X1)     0.07     0.06     0.36 r so 
+  u_topfft_sat1_a_sat2_M5_2_DP_OP_11J9_122_5388_n1948 (net)     1     0.00     0.36 r
+  U30307/YC (FAX1)                                        0.06      0.08       0.44 r
+  n27214 (net)                                  1                   0.00       0.44 r
+  U30408/YC (FAX1)                                        0.05      0.08       0.52 r
+  n27219 (net)                                  1                   0.00       0.52 r
+  U30410/YC (FAX1)                                        0.07      0.09       0.61 r
+  n27258 (net)                                  1                   0.00       0.61 r
+  U30422/YS (FAX1)                                        0.05      0.10       0.71 r
+  n27265 (net)                                  1                   0.00       0.71 r
+  U30425/YC (FAX1)                                        0.03      0.06       0.77 r
+  n27278 (net)                                  2                   0.00       0.77 r
+  U7957/Y (OR2X1)                                         0.02      0.05       0.82 r
+  n27268 (net)                                  1                   0.00       0.82 r
+  U11081/Y (INVX1)                                        0.01      0.02       0.84 f
+  n6872 (net)                                   1                   0.00       0.84 f
+  U9645/Y (OR2X1)                                         0.01      0.05       0.89 f
+  n27285 (net)                                  1                   0.00       0.89 f
+  U13740/Y (INVX1)                                        0.00      0.01       0.90 r
+  n9201 (net)                                   2                   0.00       0.90 r
+  U9664/Y (AND2X1)                                        0.03      0.04       0.94 r
+  n27288 (net)                                  1                   0.00       0.94 r
+  U11931/Y (INVX1)                                        0.01      0.02       0.96 f
+  n7849 (net)                                   1                   0.00       0.96 f
+  U30429/Y (OAI21X1)                                      0.05      0.05       1.01 r
+  n27521 (net)                                  2                   0.00       1.01 r
+  U6719/Y (AOI21X1)                                       0.01      0.03       1.04 f
+  n3378 (net)                                   1                   0.00       1.04 f
+  U11745/Y (BUFX2)                                        0.01      0.04       1.08 f
+  n7661 (net)                                   2                   0.00       1.08 f
+  U3672/Y (INVX1)                                         0.05      0.04       1.12 r
+  n27517 (net)                                  5                   0.00       1.12 r
+  U30453/Y (AOI21X1)                                      0.02      0.02       1.14 f
+  n27406 (net)                                  1                   0.00       1.14 f
+  U13621/Y (INVX1)                                        0.03      0.03       1.18 r
+  n9093 (net)                                   4                   0.00       1.18 r
+  U13622/Y (INVX1)                                        0.01      0.02       1.20 f
+  n9094 (net)                                   1                   0.00       1.20 f
+  U30471/Y (OAI21X1)                                      0.05      0.05       1.25 r
+  n27410 (net)                                  1                   0.00       1.25 r
+  U30472/Y (XNOR2X1)                                      0.03      0.04       1.29 f
+  n27457 (net)                                  3                   0.00       1.29 f
+  U30473/Y (NOR3X1)                                       0.05      0.03       1.32 r
+  n27411 (net)                                  1                   0.00       1.32 r
+  U30474/Y (INVX1)                                        0.01      0.03       1.34 f
+  n27418 (net)                                  1                   0.00       1.34 f
+  U30477/Y (NOR3X1)                                       0.05      0.04       1.39 r
+  n27419 (net)                                  1                   0.00       1.39 r
+  U30478/Y (NAND3X1)                                      0.02      0.02       1.40 f
+  n27433 (net)                                  1                   0.00       1.40 f
+  U15198/Y (BUFX2)                                        0.00      0.03       1.44 f
+  n10247 (net)                                  1                   0.00       1.44 f
+  U30484/Y (NOR3X1)                                       0.06      0.04       1.48 r
+  n27446 (net)                                  2                   0.00       1.48 r
+  U8651/Y (NOR3X1)                                        0.12      0.11       1.59 f
+  n27574 (net)                                 18                   0.00       1.59 f
+  U8650/Y (AND2X1)                                        0.01      0.06       1.65 f
+  n27576 (net)                                  1                   0.00       1.65 f
+  U11037/Y (INVX1)                                        0.00      0.00       1.65 r
+  n6827 (net)                                   1                   0.00       1.65 r
+  U8648/Y (AND2X2)                                        0.01      0.03       1.68 r
+  u_topfft_sat1_a_sat2_N119 (net)               1                   0.00       1.68 r
+  U10365/Y (INVX1)                                        0.01      0.01       1.69 f
+  n6237 (net)                                   1                   0.00       1.69 f
+  u_topfft_sat1_a_sat2_fftOut1_up_reg_21_/D (DFFPOSX1)     0.01     0.00       1.69 f
+  data arrival time                                                            1.69
+
+  clock CLK (rise edge)                                             1.75       1.75
+  clock network delay (ideal)                                       0.00       1.75
+  u_topfft_sat1_a_sat2_fftOut1_up_reg_21_/CLK (DFFPOSX1)            0.00       1.75 r
+  library setup time                                               -0.06       1.69
+  data required time                                                           1.69
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           1.69
+  data arrival time                                                           -1.69
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+1

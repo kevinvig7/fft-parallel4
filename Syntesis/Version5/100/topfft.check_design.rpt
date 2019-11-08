@@ -1,0 +1,90 @@
+Warning: Design 'topfft' has '14' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP2
+Date:        Fri Nov  8 15:49:25 2019
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     44
+    Multiply driven inputs (LINT-6)                                 3
+    Unconnected ports (LINT-28)                                    41
+
+Cells                                                              10
+    Cells do not drive (LINT-1)                                    10
+
+Tristate                                                           14
+    A tristate bus has a non tri-state driver (LINT-34)            14
+--------------------------------------------------------------------------------
+
+Warning: In design 'contador_N16', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'topD_1_N17', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'contador_N8', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'topD_1_N9', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'topD_1_N5', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'contador_N4', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'contador_N2', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'topD_1_N3', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'topD_1_N2', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'contador_N1', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'topfft_in_a_sat0_NBITS10_NBITScoeff11_N32', input port 'clk' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'topfft_sat0_a_sat1_NBITS15_NBITScoeff11_N32', input port 'clk' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'topfft_sat1_a_sat2_NBITS19_NBITScoeff11_N32', input port 'clk' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'sat_fxnum_NBITS_IN24_NBI_IN6_NBF_IN18_NBITS_OUT15_NBI_OUT3_NBF_OUT12', port 'sat_in[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN24_NBI_IN6_NBF_IN18_NBITS_OUT15_NBI_OUT3_NBF_OUT12', port 'sat_in[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN24_NBI_IN6_NBF_IN18_NBITS_OUT15_NBI_OUT3_NBF_OUT12', port 'sat_in[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN24_NBI_IN6_NBF_IN18_NBITS_OUT15_NBI_OUT3_NBF_OUT12', port 'sat_in[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN24_NBI_IN6_NBF_IN18_NBITS_OUT15_NBI_OUT3_NBF_OUT12', port 'sat_in[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN24_NBI_IN6_NBF_IN18_NBITS_OUT15_NBI_OUT3_NBF_OUT12', port 'sat_in[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN29_NBI_IN8_NBF_IN21_NBITS_OUT19_NBI_OUT5_NBF_OUT14', port 'sat_in[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN29_NBI_IN8_NBF_IN21_NBITS_OUT19_NBI_OUT5_NBF_OUT14', port 'sat_in[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN29_NBI_IN8_NBF_IN21_NBITS_OUT19_NBI_OUT5_NBF_OUT14', port 'sat_in[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN29_NBI_IN8_NBF_IN21_NBITS_OUT19_NBI_OUT5_NBF_OUT14', port 'sat_in[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN29_NBI_IN8_NBF_IN21_NBITS_OUT19_NBI_OUT5_NBF_OUT14', port 'sat_in[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN29_NBI_IN8_NBF_IN21_NBITS_OUT19_NBI_OUT5_NBF_OUT14', port 'sat_in[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN29_NBI_IN8_NBF_IN21_NBITS_OUT19_NBI_OUT5_NBF_OUT14', port 'sat_in[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN45_NBI_IN13_NBF_IN32_NBITS_OUT21_NBI_OUT6_NBF_OUT15', port 'sat_in[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'sat_fxnum_NBITS_IN22_NBI_IN7_NBF_IN15_NBITS_OUT10_NBI_OUT6_NBF_OUT4', port 'sat_in[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'topfft', three-state bus 'u_topfft_in_a_sat0/_3_net_' has non three-state driver 'u_topfft_in_a_sat0/I_4/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_in_a_sat0/_2_net_' has non three-state driver 'u_topfft_in_a_sat0/I_3/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat0_a_sat1/_5_net_' has non three-state driver 'u_topfft_sat0_a_sat1/I_6/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat0_a_sat1/_4_net_' has non three-state driver 'u_topfft_sat0_a_sat1/I_5/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat0_a_sat1/_3_net_' has non three-state driver 'u_topfft_sat0_a_sat1/I_4/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat0_a_sat1/_2_net_' has non three-state driver 'u_topfft_sat0_a_sat1/I_3/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat1_a_sat2/_11_net_' has non three-state driver 'u_topfft_sat1_a_sat2/I_13/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat1_a_sat2/_10_net_' has non three-state driver 'u_topfft_sat1_a_sat2/I_12/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat1_a_sat2/_9_net_' has non three-state driver 'u_topfft_sat1_a_sat2/I_11/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat1_a_sat2/_8_net_' has non three-state driver 'u_topfft_sat1_a_sat2/I_10/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat1_a_sat2/_5_net_' has non three-state driver 'u_topfft_sat1_a_sat2/I_6/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat1_a_sat2/_4_net_' has non three-state driver 'u_topfft_sat1_a_sat2/I_5/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat1_a_sat2/_3_net_' has non three-state driver 'u_topfft_sat1_a_sat2/I_4/Z'. (LINT-34)
+Warning: In design 'topfft', three-state bus 'u_topfft_sat1_a_sat2/_2_net_' has non three-state driver 'u_topfft_sat1_a_sat2/I_3/Z'. (LINT-34)
+1

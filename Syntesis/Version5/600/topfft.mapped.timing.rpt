@@ -1,0 +1,135 @@
+Warning: Design 'topfft' has '14' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Fri Nov  8 16:44:50 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: u_topfft_in_a_sat0_Blq_BFII_1/Butterfly_BFOut_down_reg_13_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_topfft_in_a_sat0_fftOut1_down_reg_14_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_topfft_in_a_sat0_Blq_BFII_1/Butterfly_BFOut_down_reg_13_/CLK (DFFPOSX1)     0.00     0.00 #     0.00 r
+  u_topfft_in_a_sat0_Blq_BFII_1/Butterfly_BFOut_down_reg_13_/Q (DFFPOSX1)     0.02     0.10     0.10 f
+  u_topfft_in_a_sat0_Blq_BFII_1/BlqOut_down[13] (net)     2         0.00       0.10 f
+  u_topfft_in_a_sat0_Blq_BFII_1/BlqOut_down[13] (Blq_ND016_ND116_Nbits11)     0.00     0.10 f
+  u_topfft_in_a_sat0_blqII1_to_m_down[13] (net)                     0.00       0.10 f
+  U18957/Y (INVX1)                                        0.00      0.01       0.11 r
+  n14205 (net)                                  2                   0.00       0.11 r
+  U4097/Y (INVX1)                                         0.10      0.07       0.18 f
+  n12689 (net)                                 11                   0.00       0.18 f
+  U5593/Y (AOI22X1)                                       0.05      0.07       0.25 r
+  n2400 (net)                                   1                   0.00       0.25 r
+  u_topfft_in_a_sat0_M1_2_DP_OP_12J9_125_1579_U596/Y (MUX2X1)     0.09     0.08     0.33 r so 
+  u_topfft_in_a_sat0_M1_2_DP_OP_12J9_125_1579_n747 (net)     1      0.00       0.33 r
+  U32326/YC (FAX1)                                        0.05      0.08       0.42 r
+  n30317 (net)                                  3                   0.00       0.42 r
+  U11518/Y (XNOR2X1)                                      0.05      0.05       0.47 r
+  n7470 (net)                                   1                   0.00       0.47 r
+  U11517/Y (XNOR2X1)                                      0.05      0.05       0.51 r
+  n30308 (net)                                  2                   0.00       0.51 r
+  U5592/Y (NAND2X1)                                       0.02      0.02       0.54 f
+  n1636 (net)                                   1                   0.00       0.54 f
+  U5501/Y (NAND2X1)                                       0.05      0.04       0.57 r
+  n1156 (net)                                   2                   0.00       0.57 r
+  U5500/Y (INVX1)                                         0.01      0.02       0.60 f
+  n30321 (net)                                  1                   0.00       0.60 f
+  U8917/Y (INVX1)                                         0.00      0.00       0.59 r
+  n6891 (net)                                   1                   0.00       0.59 r
+  U6327/Y (AND2X2)                                        0.01      0.03       0.63 r
+  n2623 (net)                                   1                   0.00       0.63 r
+  U5497/Y (INVX1)                                         0.01      0.01       0.64 f
+  n1155 (net)                                   1                   0.00       0.64 f
+  U5498/Y (NAND2X1)                                       0.03      0.01       0.65 r
+  n1154 (net)                                   1                   0.00       0.65 r
+  U5496/Y (INVX1)                                         0.01      0.02       0.67 f
+  n2098 (net)                                   1                   0.00       0.67 f
+  U5308/Y (OAI21X1)                                       0.07      0.06       0.73 r
+  n6387 (net)                                   2                   0.00       0.73 r
+  U10351/Y (OAI21X1)                                      0.01      0.03       0.76 f
+  n6386 (net)                                   1                   0.00       0.76 f
+  U5591/Y (NAND2X1)                                       0.06      0.03       0.79 r
+  n2593 (net)                                   1                   0.00       0.79 r
+  U32342/YC (FAX1)                                        0.05      0.07       0.87 r
+  n30401 (net)                                  1                   0.00       0.87 r
+  U32341/YC (FAX1)                                        0.06      0.08       0.94 r
+  n30396 (net)                                  3                   0.00       0.94 r
+  U10189/Y (OAI21X1)                                      0.01      0.03       0.97 f
+  n6532 (net)                                   2                   0.00       0.97 f
+  U4443/Y (AOI21X1)                                       0.06      0.05       1.02 r
+  n30382 (net)                                  1                   0.00       1.02 r
+  U32340/YC (FAX1)                                        0.05      0.08       1.10 r
+  n30377 (net)                                  3                   0.00       1.10 r
+  U5307/Y (NOR2X1)                                        0.00      0.02       1.13 f
+  n2103 (net)                                   1                   0.00       1.13 f
+  U4578/Y (OAI21X1)                                       0.07      0.06       1.18 r
+  n30350 (net)                                  1                   0.00       1.18 r
+  U32339/YC (FAX1)                                        0.05      0.08       1.26 r
+  n30339 (net)                                  1                   0.00       1.26 r
+  U32336/YC (FAX1)                                        0.04      0.07       1.33 r
+  n30338 (net)                                  2                   0.00       1.33 r
+  U4963/Y (AOI21X1)                                       0.03      0.04       1.38 f
+  n5025 (net)                                   3                   0.00       1.38 f
+  U4567/Y (XNOR2X1)                                       0.03      0.04       1.41 f
+  n30345 (net)                                  2                   0.00       1.41 f
+  U10569/Y (NOR3X1)                                       0.05      0.03       1.44 r
+  n6674 (net)                                   1                   0.00       1.44 r
+  U10568/Y (AND2X2)                                       0.01      0.04       1.47 r
+  n30349 (net)                                  2                   0.00       1.47 r
+  U5499/Y (NOR2X1)                                        0.00      0.01       1.49 f
+  n1911 (net)                                   1                   0.00       1.49 f
+  U10216/Y (AND2X2)                                       0.04      0.06       1.54 f
+  n6788 (net)                                  15                   0.00       1.54 f
+  U6703/Y (AND2X2)                                        0.00      0.04       1.59 f
+  n8307 (net)                                   1                   0.00       1.59 f
+  U6704/Y (INVX1)                                         0.00      0.00       1.58 r
+  n3044 (net)                                   1                   0.00       1.58 r
+  U6701/Y (INVX1)                                         0.01      0.01       1.60 f
+  n3042 (net)                                   1                   0.00       1.60 f
+  U6702/Y (INVX1)                                         0.00      0.00       1.60 r
+  n3043 (net)                                   1                   0.00       1.60 r
+  U32338/Y (OAI21X1)                                      0.00      0.01       1.60 f
+  u_topfft_in_a_sat0_N101 (net)                 1                   0.00       1.60 f
+  u_topfft_in_a_sat0_fftOut1_down_reg_14_/D (DFFPOSX1)     0.00     0.00       1.60 f
+  data arrival time                                                            1.60
+
+  clock CLK (rise edge)                                             1.66       1.66
+  clock network delay (ideal)                                       0.00       1.66
+  u_topfft_in_a_sat0_fftOut1_down_reg_14_/CLK (DFFPOSX1)            0.00       1.66 r
+  library setup time                                               -0.05       1.61
+  data required time                                                           1.61
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           1.61
+  data arrival time                                                           -1.60
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+1

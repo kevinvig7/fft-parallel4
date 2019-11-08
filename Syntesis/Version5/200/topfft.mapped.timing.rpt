@@ -1,0 +1,229 @@
+Warning: Design 'topfft' has '14' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Fri Nov  8 16:03:57 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly_BFOut_up_reg_33_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_topfft_sat1_a_sat2/fftOut0_down_reg_37_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly_BFOut_up_reg_33_/CLK (DFFPOSX1)     0.00     0.00 #     0.00 r
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/Butterfly_BFOut_up_reg_33_/Q (DFFPOSX1)     0.10     0.16     0.16 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/BlqOut_up[33] (net)    26         0.00       0.16 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/U129/Y (BUFX4)          0.06      0.09       0.25 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/BlqOut_down[33] (net)    25       0.00       0.25 f
+  u_topfft_sat1_a_sat2/Blq_BFVI_0/BlqOut_down[33] (Blq_ND01_ND11_Nbits32_1)     0.00     0.25 f
+  u_topfft_sat1_a_sat2/blqVI_0_a_m_down[33] (net)                   0.00       0.25 f
+  u_topfft_sat1_a_sat2/M5_1/muestra[33] (multip_NBITS33_NBITScoeff11_2)     0.00     0.25 f
+  u_topfft_sat1_a_sat2/M5_1/muestra[33] (net)                       0.00       0.25 f
+  u_topfft_sat1_a_sat2/M5_1/U761/Y (INVX1)                0.01      0.04       0.29 r
+  u_topfft_sat1_a_sat2/M5_1/n2123 (net)         3                   0.00       0.29 r
+  u_topfft_sat1_a_sat2/M5_1/U760/Y (AND2X1)               0.03      0.04       0.33 r
+  u_topfft_sat1_a_sat2/M5_1/n2014 (net)         1                   0.00       0.33 r
+  u_topfft_sat1_a_sat2/M5_1/U759/Y (INVX1)                0.02      0.02       0.36 f
+  u_topfft_sat1_a_sat2/M5_1/n1083 (net)         1                   0.00       0.36 f
+  u_topfft_sat1_a_sat2/M5_1/U2604/Y (MUX2X1)              0.11      0.09       0.45 r
+  u_topfft_sat1_a_sat2/M5_1/n3356 (net)         6                   0.00       0.45 r
+  u_topfft_sat1_a_sat2/M5_1/U3008/Y (AOI22X1)             0.30      0.04       0.49 f
+  u_topfft_sat1_a_sat2/M5_1/n2409 (net)         1                   0.00       0.49 f
+  u_topfft_sat1_a_sat2/M5_1/U1497/Y (BUFX2)               0.12      0.09       0.58 f
+  u_topfft_sat1_a_sat2/M5_1/n1221 (net)         1                   0.00       0.58 f
+  u_topfft_sat1_a_sat2/M5_1/U3009/Y (OAI21X1)             0.05      0.06       0.64 r
+  u_topfft_sat1_a_sat2/M5_1/n2411 (net)         2                   0.00       0.64 r
+  u_topfft_sat1_a_sat2/M5_1/U3010/Y (AOI21X1)             0.01      0.02       0.66 f
+  u_topfft_sat1_a_sat2/M5_1/n2410 (net)         1                   0.00       0.66 f
+  u_topfft_sat1_a_sat2/M5_1/U843/Y (BUFX2)                0.00      0.03       0.70 f
+  u_topfft_sat1_a_sat2/M5_1/n637 (net)          1                   0.00       0.70 f
+  u_topfft_sat1_a_sat2/M5_1/U3011/Y (MUX2X1)              0.07      0.06       0.75 r
+  u_topfft_sat1_a_sat2/M5_1/n2543 (net)         3                   0.00       0.75 r
+  u_topfft_sat1_a_sat2/M5_1/U2195/Y (OR2X1)               0.01      0.04       0.79 r
+  u_topfft_sat1_a_sat2/M5_1/n2549 (net)         1                   0.00       0.79 r
+  u_topfft_sat1_a_sat2/M5_1/U748/Y (INVX1)                0.03      0.03       0.82 f
+  u_topfft_sat1_a_sat2/M5_1/n1703 (net)         1                   0.00       0.82 f
+  u_topfft_sat1_a_sat2/M5_1/U3175/YC (FAX1)               0.03      0.08       0.90 f
+  u_topfft_sat1_a_sat2/M5_1/n2559 (net)         1                   0.00       0.90 f
+  u_topfft_sat1_a_sat2/M5_1/U3178/YC (FAX1)               0.03      0.09       0.99 f
+  u_topfft_sat1_a_sat2/M5_1/n2566 (net)         3                   0.00       0.99 f
+  u_topfft_sat1_a_sat2/M5_1/U3029/Y (OR2X1)               0.01      0.05       1.04 f
+  u_topfft_sat1_a_sat2/M5_1/n2567 (net)         2                   0.00       1.04 f
+  u_topfft_sat1_a_sat2/M5_1/U3030/Y (AOI22X1)             0.04      0.03       1.06 r
+  u_topfft_sat1_a_sat2/M5_1/n2575 (net)         1                   0.00       1.06 r
+  u_topfft_sat1_a_sat2/M5_1/U1406/Y (BUFX2)               0.03      0.05       1.11 r
+  u_topfft_sat1_a_sat2/M5_1/n1143 (net)         1                   0.00       1.11 r
+  u_topfft_sat1_a_sat2/M5_1/U3183/YC (FAX1)               0.03      0.06       1.17 r
+  u_topfft_sat1_a_sat2/M5_1/n2436 (net)         2                   0.00       1.17 r
+  u_topfft_sat1_a_sat2/M5_1/U1342/Y (AND2X1)              0.02      0.03       1.20 r
+  u_topfft_sat1_a_sat2/M5_1/n2581 (net)         1                   0.00       1.20 r
+  u_topfft_sat1_a_sat2/M5_1/U1341/Y (INVX1)               0.02      0.02       1.23 f
+  u_topfft_sat1_a_sat2/M5_1/n1106 (net)         2                   0.00       1.23 f
+  u_topfft_sat1_a_sat2/M5_1/U836/Y (AND2X1)               0.01      0.04       1.27 f
+  u_topfft_sat1_a_sat2/M5_1/n2437 (net)         1                   0.00       1.27 f
+  u_topfft_sat1_a_sat2/M5_1/U837/Y (INVX1)                0.00      0.00       1.27 r
+  u_topfft_sat1_a_sat2/M5_1/n631 (net)          1                   0.00       1.27 r
+  u_topfft_sat1_a_sat2/M5_1/U762/Y (AND2X1)               0.03      0.04       1.31 r
+  u_topfft_sat1_a_sat2/M5_1/n2590 (net)         1                   0.00       1.31 r
+  u_topfft_sat1_a_sat2/M5_1/U117/Y (INVX1)                0.04      0.04       1.35 f
+  u_topfft_sat1_a_sat2/M5_1/n1720 (net)         1                   0.00       1.35 f
+  u_topfft_sat1_a_sat2/M5_1/U3189/YC (FAX1)               0.03      0.09       1.45 f
+  u_topfft_sat1_a_sat2/M5_1/n2596 (net)         1                   0.00       1.45 f
+  u_topfft_sat1_a_sat2/M5_1/U3191/YC (FAX1)               0.03      0.09       1.53 f
+  u_topfft_sat1_a_sat2/M5_1/n2602 (net)         3                   0.00       1.53 f
+  u_topfft_sat1_a_sat2/M5_1/U3056/Y (AOI21X1)             0.03      0.03       1.57 r
+  u_topfft_sat1_a_sat2/M5_1/n2451 (net)         1                   0.00       1.57 r
+  u_topfft_sat1_a_sat2/M5_1/U842/Y (BUFX2)                0.01      0.03       1.60 r
+  u_topfft_sat1_a_sat2/M5_1/n636 (net)          1                   0.00       1.60 r
+  u_topfft_sat1_a_sat2/M5_1/U3057/Y (AOI21X1)             0.02      0.01       1.61 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_B_0_ (net)     1             0.00       1.61 f
+  u_topfft_sat1_a_sat2/M5_1/U2214/Y (BUFX2)               0.01      0.04       1.65 f
+  u_topfft_sat1_a_sat2/M5_1/n1719 (net)         1                   0.00       1.65 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_U23/YC (FAX1)      0.03      0.09       1.74 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_n22 (net)     1              0.00       1.74 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_U22/YC (FAX1)      0.03      0.08       1.82 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_n21 (net)     1              0.00       1.82 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_U21/YC (FAX1)      0.03      0.08       1.90 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_n20 (net)     1              0.00       1.90 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_U20/YC (FAX1)      0.03      0.08       1.98 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_n19 (net)     1              0.00       1.98 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_U19/YS (FAX1)      0.02      0.08       2.06 r    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_547_SUM_4_ (net)     2           0.00       2.06 r
+  u_topfft_sat1_a_sat2/M5_1/U811/Y (AND2X1)               0.03      0.04       2.10 r
+  u_topfft_sat1_a_sat2/M5_1/n2621 (net)         1                   0.00       2.10 r
+  u_topfft_sat1_a_sat2/M5_1/U846/Y (INVX1)                0.01      0.02       2.12 f
+  u_topfft_sat1_a_sat2/M5_1/n640 (net)          1                   0.00       2.12 f
+  u_topfft_sat1_a_sat2/M5_1/U3204/Y (AOI22X1)             0.04      0.03       2.15 r
+  u_topfft_sat1_a_sat2/M5_1/n2629 (net)         1                   0.00       2.15 r
+  u_topfft_sat1_a_sat2/M5_1/U1412/Y (BUFX2)               0.02      0.04       2.19 r
+  u_topfft_sat1_a_sat2/M5_1/n1149 (net)         2                   0.00       2.19 r
+  u_topfft_sat1_a_sat2/M5_1/U3206/Y (AOI22X1)             0.03      0.03       2.22 f
+  u_topfft_sat1_a_sat2/M5_1/n2625 (net)         1                   0.00       2.22 f
+  u_topfft_sat1_a_sat2/M5_1/U838/Y (BUFX2)                0.01      0.04       2.26 f
+  u_topfft_sat1_a_sat2/M5_1/n632 (net)          1                   0.00       2.26 f
+  u_topfft_sat1_a_sat2/M5_1/U3207/Y (OAI21X1)             0.04      0.02       2.28 r
+  u_topfft_sat1_a_sat2/M5_1/n2628 (net)         1                   0.00       2.28 r
+  u_topfft_sat1_a_sat2/M5_1/U3208/Y (OAI21X1)             0.03      0.03       2.31 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_B_0_ (net)     1             0.00       2.31 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U22/YC (FAX1)      0.03      0.09       2.40 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n21 (net)     1              0.00       2.40 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U21/YC (FAX1)      0.03      0.08       2.48 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n20 (net)     1              0.00       2.48 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U20/YC (FAX1)      0.03      0.08       2.56 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n19 (net)     1              0.00       2.56 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U19/YC (FAX1)      0.03      0.08       2.64 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n18 (net)     1              0.00       2.64 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U18/YC (FAX1)      0.03      0.08       2.73 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n17 (net)     1              0.00       2.73 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U17/YC (FAX1)      0.03      0.08       2.81 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n16 (net)     1              0.00       2.81 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U16/YC (FAX1)      0.03      0.08       2.89 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n15 (net)     1              0.00       2.89 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U15/YC (FAX1)      0.03      0.08       2.97 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n14 (net)     1              0.00       2.97 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U14/YC (FAX1)      0.03      0.08       3.05 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n13 (net)     1              0.00       3.05 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U13/YC (FAX1)      0.03      0.08       3.13 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n12 (net)     1              0.00       3.13 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U12/YC (FAX1)      0.03      0.08       3.21 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n11 (net)     1              0.00       3.21 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U11/YC (FAX1)      0.03      0.08       3.30 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n10 (net)     1              0.00       3.30 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U10/YC (FAX1)      0.03      0.08       3.38 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n9 (net)     1               0.00       3.38 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U9/YC (FAX1)       0.03      0.08       3.46 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n8 (net)     1               0.00       3.46 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U8/YC (FAX1)       0.03      0.08       3.54 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n7 (net)     1               0.00       3.54 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U7/YC (FAX1)       0.03      0.08       3.62 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n6 (net)     1               0.00       3.62 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U6/YC (FAX1)       0.03      0.08       3.70 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n5 (net)     1               0.00       3.70 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U5/YC (FAX1)       0.03      0.08       3.79 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n4 (net)     1               0.00       3.79 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U4/YC (FAX1)       0.03      0.08       3.87 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n3 (net)     1               0.00       3.87 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U3/YC (FAX1)       0.03      0.08       3.95 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n2 (net)     1               0.00       3.95 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_U2/YC (FAX1)       0.01      0.07       4.02 f    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_548_n1 (net)     1               0.00       4.02 f
+  u_topfft_sat1_a_sat2/M5_1/U3279/Y (INVX1)               0.02      0.03       4.05 r
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_A_29_ (net)     1            0.00       4.05 r
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_U6/YC (FAX1)       0.05      0.07       4.12 r    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_n5 (net)     1               0.00       4.12 r
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_U5/YC (FAX1)       0.05      0.07       4.19 r    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_n4 (net)     1               0.00       4.19 r
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_U4/YC (FAX1)       0.05      0.07       4.27 r    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_n3 (net)     1               0.00       4.27 r
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_U3/YC (FAX1)       0.05      0.07       4.34 r    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_n2 (net)     1               0.00       4.34 r
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_U2/YC (FAX1)       0.02      0.05       4.39 r    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_536_n1 (net)     1               0.00       4.39 r
+  u_topfft_sat1_a_sat2/M5_1/U783/Y (INVX1)                0.03      0.03       4.42 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_556_B_3_ (net)     1             0.00       4.42 f
+  u_topfft_sat1_a_sat2/M5_1/intadd_556_U2/YS (FAX1)       0.01      0.07       4.49 r    mo 
+  u_topfft_sat1_a_sat2/M5_1/intadd_556_SUM_3_ (net)     1           0.00       4.49 r
+  u_topfft_sat1_a_sat2/M5_1/U3295/Y (INVX1)               0.02      0.02       4.51 f
+  u_topfft_sat1_a_sat2/M5_1/result_88_ (net)     2                  0.00       4.51 f
+  u_topfft_sat1_a_sat2/M5_1/result_88_ (multip_NBITS33_NBITScoeff11_2)     0.00     4.51 f
+  u_topfft_sat1_a_sat2/m_a_sat2_0_down[88] (net)                    0.00       4.51 f
+  u_topfft_sat1_a_sat2/U719/Y (NAND3X1)                   0.03      0.04       4.55 r
+  u_topfft_sat1_a_sat2/n632 (net)               1                   0.00       4.55 r
+  u_topfft_sat1_a_sat2/U530/Y (BUFX2)                     0.01      0.04       4.59 r
+  u_topfft_sat1_a_sat2/n396 (net)               1                   0.00       4.59 r
+  u_topfft_sat1_a_sat2/U720/Y (NOR3X1)                    0.03      0.03       4.61 f
+  u_topfft_sat1_a_sat2/n633 (net)               1                   0.00       4.61 f
+  u_topfft_sat1_a_sat2/U721/Y (NAND3X1)                   0.03      0.03       4.64 r
+  u_topfft_sat1_a_sat2/n634 (net)               1                   0.00       4.64 r
+  u_topfft_sat1_a_sat2/U540/Y (BUFX2)                     0.01      0.04       4.68 r
+  u_topfft_sat1_a_sat2/n406 (net)               1                   0.00       4.68 r
+  u_topfft_sat1_a_sat2/U722/Y (NOR3X1)                    0.03      0.03       4.71 f
+  u_topfft_sat1_a_sat2/n641 (net)               2                   0.00       4.71 f
+  u_topfft_sat1_a_sat2/U34/Y (AND2X1)                     0.01      0.03       4.74 f
+  u_topfft_sat1_a_sat2/n660 (net)               1                   0.00       4.74 f
+  u_topfft_sat1_a_sat2/U33/Y (INVX1)                      0.19      0.14       4.88 r
+  u_topfft_sat1_a_sat2/n653 (net)              20                   0.00       4.88 r
+  u_topfft_sat1_a_sat2/U731/Y (OAI21X1)                   0.01      0.06       4.94 f
+  u_topfft_sat1_a_sat2/N93 (net)                1                   0.00       4.94 f
+  u_topfft_sat1_a_sat2/fftOut0_down_reg_37_/D (DFFPOSX1)     0.01     0.00     4.94 f
+  data arrival time                                                            4.94
+
+  clock CLK (rise edge)                                             5.00       5.00
+  clock network delay (ideal)                                       0.00       5.00
+  u_topfft_sat1_a_sat2/fftOut0_down_reg_37_/CLK (DFFPOSX1)          0.00       5.00 r
+  library setup time                                               -0.06       4.94
+  data required time                                                           4.94
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           4.94
+  data arrival time                                                           -4.94
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+1
