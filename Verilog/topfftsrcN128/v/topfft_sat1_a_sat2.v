@@ -45,8 +45,8 @@ wire coeffCMStage5_en,coeffCMStage6_en;
 
 //assign o_enable = coeffCMStage6_en ;
 
-wire coeffw4_0en,coeffw4_1en,coeffw4_2en,coeffw4_3en;
-wire coeffw5_0en,coeffw5_1en,coeffw5_2en,coeffw5_3en;
+reg coeffw4_0en,coeffw4_1en,coeffw4_2en,coeffw4_3en;
+reg coeffw5_0en,coeffw5_1en,coeffw5_2en,coeffw5_3en;
 
 wire ctrl_Blq_BFV,ctrl_Blq_BFVI;
       
@@ -109,7 +109,7 @@ wire ctrl_Blq_BFV,ctrl_Blq_BFVI;
      
  ///Enable de etapa
  topD_1
- #(2)
+ #(3)
     EnableCM_stage5
     (.Q(coeffCMStage5_en),
     .clk(clk),
@@ -147,13 +147,22 @@ Blq
        .rst(rst),
        .ctrl(ctrl_Blq_BFV)); 
 
-    
-assign coeffw4_0en=coeffCMStage5_en;
-assign coeffw4_1en=coeffCMStage5_en;
-assign coeffw4_2en=coeffCMStage5_en;
-assign coeffw4_3en=coeffCMStage5_en;
+
       
-      
+         
+always @(posedge clk) begin
+if(rst) begin
+coeffw4_0en=0;
+coeffw4_1en=0;
+coeffw4_2en=0;
+coeffw4_3en=0;
+ end else begin
+coeffw4_0en=coeffCMStage5_en;
+coeffw4_1en=coeffCMStage5_en;
+coeffw4_2en=coeffCMStage5_en;
+coeffw4_3en=coeffCMStage5_en;
+end 
+end
   
  
       
@@ -233,7 +242,7 @@ assign coeffw4_3en=coeffCMStage5_en;
    
         
  topD_1
- #(1)
+ #(2)
     EnableCM_stage6
     (.Q(coeffCMStage6_en),
     .clk(clk),
@@ -276,12 +285,23 @@ Blq
        .ctrl(ctrl_Blq_BFVI)); 
 
     
-assign coeffw5_0en=coeffCMStage6_en;
-assign coeffw5_1en=coeffCMStage6_en;
-assign coeffw5_2en=coeffCMStage6_en;
-assign coeffw5_3en=coeffCMStage6_en;
-           
+
       
+               
+always @(posedge clk) begin
+if(rst) begin
+coeffw5_0en=0;
+coeffw5_1en=0;
+coeffw5_2en=0;
+coeffw5_3en=0;
+ end else begin
+coeffw5_0en=coeffCMStage6_en;
+coeffw5_1en=coeffCMStage6_en;
+coeffw5_2en=coeffCMStage6_en;
+coeffw5_3en=coeffCMStage6_en;
+end 
+end
+  
       
       
     coeff_mem_5_0

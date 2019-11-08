@@ -169,16 +169,20 @@ topfft_in_a_sat0
 //   assign fftOut1_up   = sat0_a_blqIII_1_up;
 //   assign fftOut1_down = sat0_a_blqIII_1_down;
 
-
-   assign fftOut0_up   = sat1out_0_up;
-   assign fftOut0_down = sat1out_0_down;
-   assign fftOut1_up   = sat1out_1_up;
-   assign fftOut1_down = sat1out_1_down;
+//sat1
+//   assign fftOut0_up   = sat1out_0_up;
+//   assign fftOut0_down = sat1out_0_down;
+//   assign fftOut1_up   = sat1out_1_up;
+//   assign fftOut1_down = sat1out_1_down;
+ 
+//sat2
+  assign fftOut0_up   = sat2out_0_up;
+   assign fftOut0_down = sat2out_0_down;
+   assign fftOut1_up   = sat2out_1_up;
+   assign fftOut1_down = sat2out_1_down;
+ 
  
 
- 
- 
- 
 ///////////////////////////////      
     
 endmodule

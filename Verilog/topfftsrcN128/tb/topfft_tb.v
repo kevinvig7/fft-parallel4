@@ -43,7 +43,7 @@ integer scan_out3; // file handler
     
 parameter NBITS=10;
 parameter NBITScoeff=NBITS+1;
-parameter NBITS_out = 19;
+parameter NBITS_out = 21;
 parameter N=32;   
 
 
@@ -125,7 +125,7 @@ if (data_out == `NULL) begin
  #5 rst_tb  = 1'b0;
     rst_file=1'b1;
  
-#18 rst_file=1'b0; //para alinear archivo con salida y poder comparar 14 para sat0 18 sat1
+#24 rst_file=1'b0; //para alinear archivo con salida y poder comparar 14 para sat0 18 sat1 24 sat 2
 
  fftIn0_up   ={NBITS*2{1'b0}} ;
  fftIn0_down ={NBITS*2{1'b0}};
