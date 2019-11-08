@@ -159,6 +159,7 @@ always @(posedge clk) begin
              
              #50;
               
+
               $finish;
         end
  end

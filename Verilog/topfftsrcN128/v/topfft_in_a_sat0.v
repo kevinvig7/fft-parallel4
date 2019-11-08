@@ -50,11 +50,9 @@ module topfft_in_a_sat0
   
     
    
-  wire coeffw0_0en;
-  wire coeffw0_1en;
-  wire coeffw1_0en;
-  wire coeffw1_1en;
-  wire coeffw1_2en;
+
+  reg coeffw1_1en;
+  reg coeffw1_2en;
   
   wire ctrl_Blq_BFII,coeffCMStage2_en;
   
@@ -62,9 +60,6 @@ module topfft_in_a_sat0
  
   ///estos no van negados a la entrada de coeff porque el rst es negado
   
- assign coeffw0_0en=rst;
- assign coeffw0_1en=rst;
-
  /////////
  
  wire [NBITS*2-1:0]   in0_up;
@@ -123,11 +118,17 @@ wire [11*2-1:0] m_to_blqII1_down;
   assign in0_down = fftIn0_down;
   assign in1_up   =   fftIn1_up;
   assign in1_down = fftIn1_down;
+  wire coeffCMStage1_en;
   
-  
+// topD_1
+// #(2)
+//    EnableCM_stage1
+//    (.Q(coeffCMStage1_en),
+//    .clk(clk),
+//    .rst(rst));
  
     
-       contador
+ contador
  #(16) 
    control_twd1
         (.clk_out(twd1),
@@ -170,12 +171,27 @@ assign m_to_blqII1_down= blqI1_to_m_down; // Cable
  /// 22 bits termina etapa anterior   
 ////////////////////////////////////////////////////////////////////////////////    
 
+
+
+
  topD_1
  #(17)
     EnableCM_stage2
     (.Q(coeffCMStage2_en),
     .clk(clk),
     .rst(rst));
+
+
+
+
+//wire ctrltage2_en;
+// topD_1
+// #(16)
+//    EnableCtrl_stage2
+//    (.Q(ctrltage2_en),
+//    .clk(clk),
+//    .rst(rst));
+
 
 contador
  #(16) 
@@ -220,12 +236,20 @@ Blq
    
  /////////////////////////////////////////////////////////////////////
    
-
+always @(posedge clk) begin
+if(rst) begin
+coeffw1_1en=0;
+coeffw1_2en=0;
+ end else begin
+coeffw1_1en=coeffCMStage2_en;
+coeffw1_2en=coeffCMStage2_en;
+end 
+end
    
 
 
-assign coeffw1_1en=coeffCMStage2_en;
-assign coeffw1_2en=coeffCMStage2_en;
+//assign coeffw1_1en=coeffCMStage2_en;
+//assign coeffw1_2en=coeffCMStage2_en;
    
 
  
