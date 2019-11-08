@@ -70,15 +70,12 @@ module topfft_sat0_a_sat1
      wire [NBITScoeff*2-1:0] coefficientes2_2;
      wire [NBITScoeff*2-1:0] coefficientes2_3;
      
-     wire coeffw2_0en;
-     wire coeffw2_1en;
-     wire coeffw2_2en;
-     wire coeffw2_3en;
+     reg coeffw2_0en;
+     reg coeffw2_1en;
+     reg coeffw2_2en;
+     reg coeffw2_3en;
                     
-      wire     coeffw3_0en;
-      wire     coeffw3_1en;
-
-
+  
      
      wire [NBITScoeff*2-1:0] coefficientes3_0;
      wire [NBITScoeff*2-1:0] coefficientes3_1;
@@ -126,7 +123,7 @@ module topfft_sat0_a_sat1
      
  ///Enable de etapa
  topD_1
- #(8)
+ #(9)
     EnableCM_stage3
     (.Q(coeffCMStage3_en),
     .clk(clk),
@@ -167,10 +164,20 @@ Blq
 
 /////////////////Coeficientes
 
-assign coeffw2_0en=coeffCMStage3_en;
-assign coeffw2_1en=coeffCMStage3_en;
-assign coeffw2_2en=coeffCMStage3_en;
-assign coeffw2_3en=coeffCMStage3_en;
+   
+always @(posedge clk) begin
+if(rst) begin
+coeffw2_0en=0;
+coeffw2_1en=0;
+coeffw2_2en=0;
+coeffw2_3en=0;
+ end else begin
+coeffw2_0en=coeffCMStage3_en;
+coeffw2_1en=coeffCMStage3_en;
+coeffw2_2en=coeffCMStage3_en;
+coeffw2_3en=coeffCMStage3_en;
+end 
+end
    
           
    
@@ -209,6 +216,12 @@ assign coeffw2_3en=coeffCMStage3_en;
    
    
 /////////////////Productos full   
+
+   
+   
+   
+   
+   
    
   //producto 2_0
  multip
@@ -247,18 +260,12 @@ assign coeffw2_3en=coeffCMStage3_en;
         .coeff(coefficientes2_3));      
    
 
-      
-      
-/*   assign fftOut0_up   = m_a_blqIV_0_up;
-   assign fftOut0_down = m_a_blqIV_0_down;
-   assign fftOut1_up   = m_a_blqIV_1_up;
-   assign fftOut1_down = m_a_blqIV_1_down;
-    */
+
 ///////////////////////Stag4 
 /////////////////////////////////  
     ///Enable de etapa
  topD_1
- #(4)
+ #(5)
     EnableCM_stage4
     (.Q(coeffCMStage4_en),
     .clk(clk),
@@ -313,49 +320,19 @@ Blqj
 
 
 
-    /////////
-    
-    
-//assign coeffw3_0en=coeffCMStage4_en;
-//assign coeffw3_1en=coeffCMStage4_en;
 
-//     coeff_mem_3_0
-//      Mcoeff_3_0
-//     (.coeff_out(coefficientes3_0),
-//      .clk(clk),
-//      .rst(!coeffw3_0en));
-
-// coeff_mem_3_1
-//      Mcoeff_3_1
-//     (.coeff_out(coefficientes3_1),
-//      .clk(clk),
-//      .rst(!coeffw3_1en));
- ///////////////////////////////// 
    
   //cable 3_0 
 assign m_to_sat1_0_up= blqIV_a_m_0_up;  // Cable
 assign m_to_sat1_0_down = blqIV_a_m_0_down;// Cable
 
-////producto 3_1
-// multip_tdw
-// #(29,NBITScoeff)
-//       M0_0_tdw
-//       (.result(m_to_sat1_0_down),
-//        .muestra(blqIV_a_m_0_down),
-//        .coeff(coefficientes3_0));
+
       
     //cable 3_2      
 assign m_to_sat1_1_up= blqIV_a_m_1_up; // Cable
 assign m_to_sat1_1_down = blqIV_a_m_1_down; //cable
         
-//  //producto 3_3
-// multip_tdw
-// #(29,NBITScoeff)
-//       M0_1_tdw
-//       (.result(m_to_sat1_1_down),
-//        .muestra(blqIV_a_m_1_down),
-//        .coeff(coefficientes3_1));       
-    
+
 
 
 ///////////Saturador Sat1
