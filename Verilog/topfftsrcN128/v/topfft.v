@@ -157,10 +157,10 @@ topfft_in_a_sat0
 
 
 //sat 3 salida final
-//   assign fftOut0_up   = sat3out_0_up;
-//   assign fftOut0_down = sat3out_0_down;
-//   assign fftOut1_up   = sat3out_1_up;
-//   assign fftOut1_down = sat3out_1_down;
+   assign fftOut0_up   = sat3out_0_up;
+   assign fftOut0_down = sat3out_0_down;
+   assign fftOut1_up   = sat3out_1_up;
+   assign fftOut1_down = sat3out_1_down;
 
 
 //sat0
@@ -176,10 +176,10 @@ topfft_in_a_sat0
 //   assign fftOut1_down = sat1out_1_down;
  
 //sat2
-  assign fftOut0_up   = sat2out_0_up;
-   assign fftOut0_down = sat2out_0_down;
-   assign fftOut1_up   = sat2out_1_up;
-   assign fftOut1_down = sat2out_1_down;
+//  assign fftOut0_up   = sat2out_0_up;
+//   assign fftOut0_down = sat2out_0_down;
+//   assign fftOut1_up   = sat2out_1_up;
+//   assign fftOut1_down = sat2out_1_down;
  
  
 

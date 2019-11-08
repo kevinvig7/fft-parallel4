@@ -1130,7 +1130,7 @@ if (onEscritura)
     % Muestras de las Etapas
     % 79(clk)*4(etapas) = 316 valores almacenados
     % Especificar que "Etapa" se desea almacenar.
-    Etapa = Xs6;
+    Etapa = Xs7;
     % Este almacenamiento contendra los "Instantes" de la señal
     %Output128 = fopen ('ArchivosDatos/Output128.dat','wt');
     
