@@ -23,11 +23,13 @@
 
 module BFj
     #(parameter NBITS = 10 )
-    (output [(NBITS+1)*2-1:0]   BFOut_up,
-     output [(NBITS+1)*2-1:0] BFOut_down,
+    (output reg [(NBITS+1)*2-1:0]   BFOut_up,
+     output reg [(NBITS+1)*2-1:0] BFOut_down,
      input  [NBITS*2-1:0]        BFIn_up,
      input  [NBITS*2-1:0]      BFIn_down,
-     input  twd);
+     input  twd,
+     input rst,
+     input clk);
     
     
     //Separacion parte real e imaginaria 
@@ -79,12 +81,26 @@ end
 
 
 
-assign BFOut_up   =     {sumOut_up_r,sumOut_up_i};    
+//assign BFOut_up   =     {sumOut_up_r,sumOut_up_i};    
 
-assign BFOut_down = {sumOut_down_r,sumOut_down_i}; 
+//assign BFOut_down = {sumOut_down_r,sumOut_down_i}; 
 
       
-      
+ always @(posedge clk) begin
+ if (rst) begin
+BFOut_up   = {(NBITS+1)*2{1'b0}};    
+BFOut_down = {(NBITS+1)*2{1'b0}}; 
+ end else begin
+BFOut_up   =     {sumOut_up_r,sumOut_up_i};    
+BFOut_down = {sumOut_down_r,sumOut_down_i}; 
+
+end 
+end
+    
+    
+    
+    
+    
     
     
 endmodule

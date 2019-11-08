@@ -127,42 +127,6 @@ wire [11*2-1:0] m_to_blqII1_down;
   
  
     
-  
-///////////////////////////////////  
-// coeff_mem_0_0
-//      Mcoeff_0_0
-//     (.coeff_out(coefficientes0_0),
-//      .clk(clk),
-//      .rst(coeffw0_0en));
-
-// coeff_mem_0_1
-//      Mcoeff_0_1
-//     (.coeff_out(coefficientes0_1),
-//      .clk(clk),
-//      .rst(coeffw0_1en));
-// /////////////////////////////////      
- 
-       
-        
-
-////BFI I
-//   BF#(NBITS) 
-//        Butterfly0_0
-//            (.BFOut_up(blqI0_to_m_up),
-//             .BFOut_down(blqI0_to_m_down),
-//             .BFIn_up(in0_up),
-//             .BFIn_down(in0_down));
-
-
-//   BF#(NBITS) 
-//        Butterfly0_1
-//            (.BFOut_up(blqI1_to_m_up),
-//             .BFOut_down(blqI1_to_m_down),
-//             .BFIn_up(in1_up),
-//             .BFIn_down(in1_down));
-
-    //////////prueba 
-    
        contador
  #(16) 
    control_twd1
@@ -176,7 +140,9 @@ wire [11*2-1:0] m_to_blqII1_down;
              .BFOut_down(blqI0_to_m_down),
              .BFIn_up(in0_up),
              .BFIn_down(in0_down),
-             .twd(twd1));
+             .twd(twd1),
+             .rst(rst),
+             .clk(clk));
 
 
    BFj#(NBITS) 
@@ -185,40 +151,27 @@ wire [11*2-1:0] m_to_blqII1_down;
              .BFOut_down(blqI1_to_m_down),
              .BFIn_up(in1_up),
              .BFIn_down(in1_down),
-             .twd(twd1));
-    
+             .twd(twd1),
+                 .rst(rst),
+             .clk(clk));
+
 
     
    
 assign m_to_blqII0_up  = blqI0_to_m_up;  // Cable
 assign m_to_blqII1_up  = blqI0_to_m_down ;  // Cable
 
-////producto 0_0
-// multip_tdw
-// #(NBITS+1,NBITScoeff)
-//       M0_0_tdw
-//       (.result(m_to_blqII1_up),
-//        .muestra(blqI0_to_m_down),
-//        .coeff(coefficientes0_0));
         
 assign m_to_blqII0_down= blqI1_to_m_up; // Cable
 assign m_to_blqII1_down= blqI1_to_m_down; // Cable
         
-//  //producto 0_1
-// multip_tdw
-// #(NBITS+1,NBITScoeff)
-//       M0_1_tdw
-//       (.result(m_to_blqII1_down),
-//        .muestra(blqI1_to_m_down),
-//        .coeff(coefficientes0_1));       
-    
    
     
  /// 22 bits termina etapa anterior   
 ////////////////////////////////////////////////////////////////////////////////    
 
  topD_1
- #(16)
+ #(17)
     EnableCM_stage2
     (.Q(coeffCMStage2_en),
     .clk(clk),
@@ -270,21 +223,12 @@ Blq
 
    
 
-     
-//assign coeffw1_0en=coeffCMStage2_en;
+
 assign coeffw1_1en=coeffCMStage2_en;
 assign coeffw1_2en=coeffCMStage2_en;
    
 
-         
-   
-// coeff_mem_1_0   
-//      Mcoeff_1_0
-//     (.coeff_out(coefficientes1_0),
-//      .clk(clk),
-//      .rst(!coeffw1_0en));
-
-
+ 
       
  coeff_mem_1_1     
       Mcoeff_1_1
@@ -309,14 +253,6 @@ assign   m_to_sat0_0_up = blqII0_to_m_up;
 assign  m_to_sat0_1_down =  blqII0_to_m_down;
       
 
-////producto 1_0
-// multip_tdw
-// #(12,NBITScoeff)
-//       M1_0_tdw
-//       (.result(m_to_sat0_1_down),
-//        .muestra(blqII0_to_m_down),
-//        .coeff(coefficientes1_0));
-        
 
   //producto 1_1
  multip
@@ -347,17 +283,7 @@ assign  m_to_sat0_1_down =  blqII0_to_m_down;
      assign satout0_1_down[14:0]      ={m_to_sat0_1_down[11:0],3'b0};   
        
              
-       
-//       fixtop_sat
-//        #(.NBITS_IN(23),
-//          .NBI_IN(5),
-//          .NBF_IN(18),
-//          .NBITS_OUT(15),
-//          .NBI_OUT(3),
-//          .NBF_OUT(12))
-//        sat0_out0_down
-//         (.sat_out(satout0_1_down),
-//          .sat_in(m_to_sat0_1_down)); 
+
    
      fixtop_sat
         #(.NBITS_IN(24),
