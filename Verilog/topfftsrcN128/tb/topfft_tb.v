@@ -99,6 +99,14 @@ topfft#(
     
 
 
+
+
+
+
+
+
+
+
 initial begin
 
 data_in = $fopen("Input128.dat","r");  //lectura de entrada obtenida de Matlab

@@ -84,6 +84,14 @@ module topfft_in_a_sat0
  wire [11*2-1:0] blqI1_to_m_down;
  
  
+ wire [11*2-1:0] blqI0_to_m_upj  ;
+ wire [11*2-1:0] blqI0_to_m_downj;
+ wire [11*2-1:0] blqI1_to_m_upj  ;
+ wire [11*2-1:0] blqI1_to_m_downj;
+ 
+ wire  twd;
+
+ 
  //////////////////////
  wire [11*2-1:0] m_to_blqII0_up  ;
  
@@ -154,6 +162,33 @@ module topfft_in_a_sat0
              .BFOut_down(blqI1_to_m_down),
              .BFIn_up(in1_up),
              .BFIn_down(in1_down));
+
+    //////////prueba 
+    
+       contador
+ #(16) 
+   control_twd
+        (.clk_out(twd),
+         .clk(clk),
+         .rst(rst));   
+    
+   BFj#(NBITS) 
+        Butterflyj0_0
+            (.BFOut_up(blqI0_to_m_upj),
+             .BFOut_down(blqI0_to_m_downj),
+             .BFIn_up(in0_up),
+             .BFIn_down(in0_down),
+             .twd(twd));
+
+
+   BFj#(NBITS) 
+        Butterflyj0_1
+            (.BFOut_up(blqI1_to_m_upj),
+             .BFOut_down(blqI1_to_m_downj),
+             .BFIn_up(in1_up),
+             .BFIn_down(in1_down),
+             .twd(twd));
+    
 
     
    
