@@ -1,0 +1,64 @@
+Warning: Design 'topfft' has '14' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : topfft
+Version: O-2018.06-SP2
+Date   : Fri Nov  8 13:55:17 2019
+****************************************
+
+Library(s) Used:
+
+    gscl45nm (File: /home/tools/synopsys/tech_kits/FreePDK45/osu_soc/lib/files/gscl45nm.db)
+
+Number of ports:                         1571
+Number of nets:                         94523
+Number of cells:                        87311
+Number of combinational cells:          80220
+Number of sequential cells:              7076
+Number of macros/black boxes:               0
+Number of buf/inv:                      23823
+Number of references:                      35
+
+Combinational area:             233949.801414
+Buf/Inv area:                    36323.350042
+Noncombinational area:           56229.647552
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                290179.448967
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+                                         Estimated  Perc. of
+  Module               Implem.  Count         Area cell area
+  -------------------- -------  ----- ------------ ---------
+  DP_OP_11J10_122_1579     str      2    5765.3677      2.0%
+  DP_OP_11J11_122_5388     str      2   17472.4502      6.0%
+  DP_OP_11J11_124_2636     str      4   16172.1709      5.6%
+  DP_OP_11J13_122_5013     str      2   10877.9434      3.7%
+  DP_OP_12J10_123_1579     str      2    5804.3196      2.0%
+  DP_OP_12J11_123_5388     str      1    8716.7510      3.0%
+  DP_OP_12J11_125_2636     str      4   16193.2910      5.6%
+  DP_OP_12J13_123_5013     str      2   10886.3896      3.8%
+  DW01_add             apparch     10    1194.8379      0.4%
+  DW01_add              pparch     10    3231.1277      1.1%
+  DW01_inc             apparch     14    1452.4836      0.5%
+  DW01_sub             apparch     13    1661.3222      0.6%
+  DW01_sub              pparch     16    5227.0589      1.8%
+  DW_cmp               apparch      6     176.4258      0.1%
+  -------------------- -------  ----- ------------ ---------
+  DP_OP Subtotal:                  19   91888.6833     31.7%
+  Total:                           88  104831.9395     36.1%
+
+Subtotal of datapath(DP_OP) cell area:  91888.6833  31.7%  (estimated)
+Total synthetic cell area:              104831.9395  36.1%  (estimated)
+
+1
