@@ -247,11 +247,6 @@ end
 end
    
 
-
-//assign coeffw1_1en=coeffCMStage2_en;
-//assign coeffw1_2en=coeffCMStage2_en;
-   
-
  
       
  coeff_mem_1_1     
