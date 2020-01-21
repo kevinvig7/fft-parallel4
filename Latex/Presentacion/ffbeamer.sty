@@ -1,0 +1,135 @@
+\definecolor{lcd}{RGB}{0, 0, 210}
+\usecolortheme[named=lcd]{structure}
+     \useoutertheme{default}
+\useinnertheme{rectangles}
+\setbeamersize{text margin right=1cm,text margin left=0.5cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{footline}[centered page number]
+\setbeamercolor{item projected}{fg=white,bg=lcd}
+\setbeamercolor{subitem projected}{fg=white,bg=bg!25!black}
+\setbeamercolor{subsubitem projected}{fg=white,bg=bg!45!black}
+\setbeamercolor{itemize item}{fg=lcd}
+\setbeamercolor{itemize subitem}{fg=bg!25!black}
+\setbeamercolor{itemize subsubitem}{fg=bg!45!black}
+\setbeamercolor{block body}{bg=normal text.bg!90!black}
+\setbeamercolor{block title}{bg=lcd, fg=white}
+\setbeamercolor{frametitle}{fg=black,bg=white}
+
+\setbeamercolor{lcdsty}{fg=white,bg=lcd}
+
+\setbeamercolor{stylcd}{bg=white,fg=lcd}
+
+\newif\ifenglish
+\newcommand{\chooselanguage}[1]{%
+  \selectlanguage{#1}%
+  \iflanguage{english}{\englishtrue}{\englishfalse}}
+
+%%% Title Page %%%
+\setbeamertemplate{title page}{
+  \vspace{1cm}
+  \hbox{%
+  % Titulo de presentación (versión completa)
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3em,dp=3em]{frametitle}%
+     \centering \huge \textbf{\inserttitle} 
+  \end{beamercolorbox}  
+  }
+ % \begin{center}
+ %     \vspace{-1cm}
+% 	 \includegraphics[width=0.3\paperwidth]{logo_ff}
+%  \end{center}
+  \hbox{%
+  % Nombre de autor/es (versión completa)
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2em,dp=2em]{frametitle}%
+     \centering \Large \insertauthor 
+  \end{beamercolorbox}  
+  }
+  \hbox{%
+  % Lugar y fecha
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1em,dp=0em]{frametitle}%
+     \centering \large \insertdate 
+  \end{beamercolorbox}  
+  }
+
+}
+
+
+
+%%% Title %%%
+\setbeamertemplate{frametitle}
+{
+  \leavevmode
+  \vskip-5pt
+  % Logo de diapositiva
+    \hbox{%
+  \hspace*{-1pt} \vspace*{2em}  
+  
+  \begin{beamercolorbox}[wd=0.9\paperwidth,ht=2pt,dp=0cm]{lcdsty}%
+  \end{beamercolorbox}
+  }
+  
+  
+  %\hbox{%
+  %\hspace*{-10pt} \includegraphics[width=0.17\paperwidth]{logo_ff}\vspace*{2em}  
+  %\begin{beamercolorbox}[wd=0.75\paperwidth,ht=1pt,dp=0cm]{lcdsty}%
+  %\end{beamercolorbox}
+  %}
+  % Titulo de diapositiva
+  \vskip-25pt
+    \hbox{%
+      \begin{beamercolorbox}[wd=0.8\paperwidth,ht=1.8ex,dp=1ex]{frametitle}%
+     \raggedleft\hspace*{0.15\paperwidth}\vspace*{2em}\LARGE\textbf{\insertframetitle}
+  \end{beamercolorbox}
+  }
+  \vskip5pt
+    % SubTitulo de diapositiva
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.5ex,dp=1ex]{stylcd}%
+    \raggedleft\hspace*{0.15\paperwidth}\vspace*{2em}\Large\textit{\insertframesubtitle}
+  \end{beamercolorbox}
+  }
+
+  % Quitar marge para subir contenido de diapositiva
+  \vskip-70pt
+}
+
+%%% Title %%%
+\setbeamertemplate{framesubtitle}
+{
+  \leavevmode
+  % Subtitulo de diapositiva
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1ex]{frametitle}%
+    \raggedright\hspace*{0.5em}\vspace*{2em}\LARGE\textbf{\insertframetitle}
+  \end{beamercolorbox}
+  }
+  % Quitar marge para subir contenido de diapositiva
+  \vskip-15pt
+}
+
+%%% Footer %%%
+\setbeamertemplate{footline}{
+ \hbox{%
+     \ifenglish
+ 
+  \begin{beamercolorbox}[wd=0.8\paperwidth,ht=0.5cm,dp=0cm]{frametitle}%
+   %  \raggedright\hspace*{1.5em}\vspace*{0.7em}\tiny  Fundacion Fulgor Proprietary and Confidential
+ \;\;--\; \insertshorttitle 
+  \end{beamercolorbox}\hspace*{-0.08cm}  
+  
+      \else
+
+  \begin{beamercolorbox}[wd=0.8\paperwidth,ht=0.5cm,dp=0cm]{frametitle}%
+    % \raggedright\hspace*{1.5em}\vspace*{0.7em}\tiny  Confidencial - Propiedad de Fundación Fulgor
+ \;\;--\; \insertshorttitle 
+  \end{beamercolorbox}\hspace*{-0.08cm}  
+  
+       \fi
+
+  % Numeración de diapositivas
+  \begin{beamercolorbox}[wd=0.8\paperwidth,ht=0.5cm,dp=0cm]{frametitle}%
+   %  \raggedleft\hspace*{-4.5em}\vspace*{0.4em}\scriptsize \insertpagenumber\,/\,\insertpresentationendpage%
+  \end{beamercolorbox}\hspace*{0.28cm}  
+  }
+}
+
