@@ -1,0 +1,2 @@
+%% comprobador de transformaciones CSD
+

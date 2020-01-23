@@ -5,6 +5,8 @@
 \usepackage[english,spanish]{babel} 
 \usepackage[utf8]{inputenc}         % Este paquete permite poner acentos directamente y e.es
 \usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage[most]{tcolorbox}
 %\usepackage{ffbeamer}
 %\usepackage{beamerthemem}
 
@@ -64,20 +66,20 @@
 \frametitle{V1}	
 %\vspace*{-0.8cm}
 %%%%%%%%%%
-\begin{columns}[T] % align columns
-\begin{column}{.7\textwidth}
-\vspace*{-0.9cm}
- \begin{figure}[ht]
-    \centering
-  \includegraphics[height=0.72\paperheight]{image/V1_esquema_p.eps} \\
-    \end{figure}
 
+\begin{columns}[T] % align columns
+\hspace*{-0.6cm}
+\begin{column}{.7\textwidth}
+\vspace*{-0.7cm}
+\begin{figure}
+\tcbox[top=0pt,left=0pt,right=0pt,bottom=0pt,colframe=black,
+           colback=white]{  \includegraphics[height=0.72\paperheight]{image/V1_esquema_p.eps} }
+\end{figure}
 \end{column}%
 %%%%%%%%%%
 
 %%%%%%%%%%
 \begin{column}{.3\textwidth}
-
 
 \begin{itemize}
 \item
@@ -104,11 +106,13 @@
 %\vspace*{-0.8cm}
 %%%%%%%%%%
 \begin{columns}[T] % align columns
+\hspace*{-0.6cm}
 \begin{column}{.7\textwidth}
-\vspace*{-0.9cm}
+\vspace*{-0.7cm}
  \begin{figure}[ht]
-    \centering
-  \includegraphics[height=0.72\paperheight]{image/V2_esquema_p.eps} \\
+\tcbox[top=0pt,left=0pt,right=0pt,bottom=0pt,colframe=black,
+           colback=white]{
+  \includegraphics[height=0.72\paperheight]{image/V2_esquema_p.eps}}
     \end{figure}
 
 \end{column}%
@@ -142,12 +146,14 @@
 %\vspace*{-0.8cm}
 %%%%%%%%%%
 \begin{columns}[T] % align columns
+\hspace*{-0.6cm}
 \begin{column}{.7\textwidth}
-\vspace*{-0.8cm}
+\vspace*{-0.7cm}
 
  \begin{figure}[ht]
-    \centering
-  \includegraphics[height=0.66\paperheight]{image/V3_esquema_p.eps} \\
+\tcbox[top=0pt,left=0pt,right=0pt,bottom=0pt,colframe=black,
+           colback=white]{
+  \includegraphics[height=0.65\paperheight]{image/V3_esquema_p.eps} }
     \end{figure}
 
 \end{column}%
@@ -184,11 +190,13 @@
 %\vspace*{-0.8cm}
 %%%%%%%%%%
 \begin{columns}[T] % align columns
+\hspace*{-0.6cm}
 \begin{column}{.7\textwidth}
-\vspace*{-0.8cm}
+\vspace*{-0.7cm}
  \begin{figure}[ht]
-    \centering
-  \includegraphics[height=0.7\paperheight]{image/V4_esquema_p.eps} \\
+\tcbox[top=0pt,left=0pt,right=0pt,bottom=0pt,colframe=black,
+           colback=white]{
+  \includegraphics[height=0.68\paperheight]{image/V4_esquema_p.eps} }
     \end{figure}
 
 \end{column}%
@@ -223,11 +231,13 @@
 %\vspace*{-0.8cm}
 %%%%%%%%%%
 \begin{columns}[T] % align columns
+\hspace*{-0.6cm}
 \begin{column}{.7\textwidth}
-\vspace*{-0.8cm}
+\vspace*{-0.7cm}
  \begin{figure}[ht]
-    \centering
-  \includegraphics[height=0.7\paperheight]{image/V5_esquema_p.eps} \\
+\tcbox[top=0pt,left=0pt,right=0pt,bottom=0pt,colframe=black,
+           colback=white]{
+  \includegraphics[height=0.68\paperheight]{image/V5_esquema_p.eps}}
     \end{figure}
 
 \end{column}%
@@ -261,11 +271,13 @@
 %\vspace*{-0.8cm}
 %%%%%%%%%%
 \begin{columns}[T] % align columns
+\hspace*{-0.6cm}
 \begin{column}{.7\textwidth}
-\vspace*{-0.8cm}
+\vspace*{-0.7cm}
  \begin{figure}[ht]
-    \centering
-  \includegraphics[height=0.7\paperheight]{image/V5_esquema_p.eps} \\
+\tcbox[top=0pt,left=0pt,right=0pt,bottom=0pt,colframe=black,
+           colback=white]{
+  \includegraphics[height=0.68\paperheight]{image/V5_esquema_p.eps}}
     \end{figure}
 
 \end{column}%
