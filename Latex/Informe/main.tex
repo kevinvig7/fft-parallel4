@@ -83,7 +83,7 @@ In Fig. \ref{fig:flowgraph_16}  we can see the flow graph of a 16-point DIF FFT 
 
 \begin{figure}%[ht]
 \centering
-\includegraphics[width=\linewidth]{Diagramas/Butter16.png}
+\includegraphics[width=\linewidth]{Diagramas/Butter16.eps}
 \caption{Data Flow graph (DFG) of a radix-2 16-point DIF FFT.}
 \label{fig:dfg_16}
 \end{figure}
@@ -112,9 +112,9 @@ Consider folding of the the DFG in Fig. \ref{fig:dfg_16} with the folding sets:
 Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B=P_C=P_D=0$), the folding equations can be derived for all edges (see \ref{sec:appen:folding_eq}). For the folded system to be realizable, $D_F(U\to V)\geq0$ must hold for all the edges in the DFG. Retimming and/or pipeline can be applied to satisfy this property, if the DFG in Fig. \ref{fig:dfg_16} is pipelined/retimmed as shown in Fig. \ref{fig:dfg_16_ret} the system is realizable and the folded delays for the edges are given by \ref{sec:appen:folding_eq_ret}.
 
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
- \includegraphics[width=\linewidth]{Diagramas/Butter16_pipe.png}%
+ \includegraphics[width=\linewidth]{Diagramas/Butter16_pipe.eps}%
 \caption{Data Flow graph (DFG) of a radix-2 16-point DIF FFT with retimming and pipeline.}
 \label{fig:dfg_16_ret}
 \end{figure}
@@ -122,24 +122,24 @@ Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B
 We can see that the number of register required to implement the folding equations in \ref{sec:appen:folding_eq_ret} is 80. For minimize the number of registers we use the register minimization technique. 
 If we let the output of node A1 be $y_{(0)}$ and $y_{(8)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively. More information about this method can be found on \cite{pipeline_parhi_book}.
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
- \includegraphics[width=\linewidth]{Diagramas/tab-life-a.png}%
+ \includegraphics[width=\linewidth]{Diagramas/tab_life_a.eps}%
 \caption{Linear lifetime chart for the variables $y_{(0)}, y_{(1)},...,y_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-a}
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
- \includegraphics[width=0.7\linewidth]{Diagramas/tab-life-b.png}%
+ \includegraphics[width=0.7\linewidth]{Diagramas/tab_life_b.eps}%
 \caption{Linear lifetime chart for the variables $z_{(0)}, z_{(1)},...,z_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-b}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
- \includegraphics[width=0.8\linewidth]{Diagramas/tab-life-c.png}%
+ \includegraphics[width=0.8\linewidth]{Diagramas/tab_life_c.eps}%
 \caption{Linear lifetime chart for the variables $w_{(0)}, w_{(1)},...,w_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-c}
 \end{figure}
@@ -165,35 +165,35 @@ The different types of rotators used in Fig. \ref{fig:circ-folding-16} are shown
 
 
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
  \includegraphics[width=1\linewidth]{Diagramas/life_chart_a.png}%
 \caption{Register allocation table for the data represented in \ref{fig:tab-life-a}}
 \label{fig:tab-aloc-a}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
  \includegraphics[width=1\linewidth]{Diagramas/life_chart_b.png}%
 \caption{Register allocation table for the data represented in \ref{fig:tab-life-b}}
 \label{fig:tab-aloc-b}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
  \includegraphics[width=1\linewidth]{Diagramas/life_chart_c.png}%
 \caption{Register allocation table for the data represented in \ref{fig:tab-life-c}}
 \label{fig:tab-aloc-c}
 \end{figure}
 
-\begin{figure*}[ht]
+\begin{figure*}[ht!]
 \centering
  \includegraphics[width=0.85\linewidth]{Diagramas/folding-16.png}%
 \caption{Folding architecture for the computation of a radix-$2^3$ 16-point DIF complex FFT.}
 \label{fig:circ-folding-16}
 \end{figure*}
 
-\begin{figure}[h]
+\begin{figure}[ht!]
 \centering
  \includegraphics[width=0.85\linewidth]{Diagramas/rotators.png}%
 \caption{Symbols used for the different types of rotators}
@@ -210,9 +210,9 @@ We can deduce the folding architecture following the same method than used with 
 
 The architecture can be seen in Fig. \ref{fig:circ-folding-128}
 
-\begin{figure*}[h!]
+\begin{figure*}[ht!]
 \centering
- \includegraphics[width=0.95\linewidth]{Diagramas/folding-128.png}%
+ \includegraphics[width=0.95\linewidth]{Diagramas/folding-128.eps}%
 \caption{Folding architecture for the computation of a radix-$2^3$ 128-point DIF complex FFT.}
 \label{fig:circ-folding-128}
 \end{figure*}
@@ -388,7 +388,7 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=2\\
 
 \begin{figure*}[htbp]
 \centering
- \includegraphics[width=\linewidth]{Diagramas/bubble_delays_128.png}%
+ \includegraphics[width=\linewidth]{Diagramas/bubble_delays_128.eps}%
 \caption{Pipelined DFG of a 128-point DIF FFT as a preprocessing step for folding.}
 \label{fig:pipe_dfg_128}
 \end{figure*}
@@ -396,24 +396,16 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=2\\
 %\pagebreak
 
 
-\begin{landscape}
- \vspace*{\fill}
-\begin{figure}[!h]
+%\begin{landscape}
+% \vspace*{\fill}
+\begin{figure*}[ht!]
 \centering
- \includegraphics[width=\linewidth]{Diagramas/V5_esquema.eps} \\ %
-\hfill
-\hfill
-\hfill
-\hfill
-\hfill
+ \includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps} \\ %
 
- \includegraphics[width=\linewidth]{Diagramas/V5_esquema.eps}%
- %\includegraphics[width=1.5\textwidth]{Diagramas/V5_esquema.eps}%
-%\caption{Pipelined DFG of a 128-point DIF FFT as a preprocessing step for folding.}
 %\label{fig:pipe_dfg_128}
-\end{figure}
- \vspace*{\fill}
-\end{landscape}
+\end{figure*}
+ %\vspace*{\fill}
+%\end{landscape}
 
 %%%%%%%%%%%%%%
 % Bibliografia
