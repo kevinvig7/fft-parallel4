@@ -1,26 +1,35 @@
-\documentclass[a4paper, 10pt, conference]{ieeeconf}                                                              
+\documentclass[journal,comsoc]{IEEEtran}
+%\documentclass[conference]{IEEEtran}
+%\documentclass[conference]{ieeeconf}  
+%\documentclass[a4paper,10pt,conference]{ieeeconf}                                                              
 \IEEEoverridecommandlockouts                                                                                           
-\overrideIEEEmargins
-% command later in the file to balance the column lengths
-%\addtolength 
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\usepackage{xcolor}
-\usepackage[spanish,english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage{threeparttable}
-\usepackage{multirow}
-\usepackage{lscape}
-%\usepackage{subcaption}
-%\usepackage{float}
-%\usepackage{graphics} 		% for pdf, bitmapped graphics files
-%\usepackage{epsfig} 		% for postscript graphics files
-%\usepackage{mathptmx} 		% assumes new font selection scheme installed
-%\usepackage{times} 		% assumes new font selection scheme installed
-
+%\overrideIEEEmargins
+%% command later in the file to balance the column lengths
+%%\addtolength 
+\usepackage {cite}
+\usepackage {amsmath,amssymb,amsfonts}
+%\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools,latexsym} 
+\usepackage {algorithmic}
+\usepackage {graphicx}
+\usepackage	{textcomp}
+\usepackage	{xcolor}
+\usepackage	[spanish,english]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage	[utf8x]{inputenc}
+\usepackage	{threeparttable}
+\usepackage	{multirow}
+\usepackage {lscape}
+\usepackage {float}
+\usepackage	{caption}
+\usepackage	{subcaption}
+%\usepackage{graphics} 	% for pdf, bitmapped graphics files
+\usepackage {epsfig} 	% for postscript graphics files
+%\usepackage{mathptmx} 	% assumes new font selection scheme installed
+%\usepackage{times} 	% assumes new font selection scheme installed
+%\usepackage{stackrel}
+%\usepackage{lastpage}
+%\usepackage{subfigure}
+%\usepackage{hyperref}
 \def\BibTeX{
 {\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
@@ -32,10 +41,10 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
 %%%%%%%%
 \begin{document}
 \title{
-\huge \bf VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation
+\huge \bf VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$\mathbf{2^3}$ FFT Architecture via Folding Transformation
 }
 \author{
-James J. W. Kunst    	\\{\tt\small jjwk89@gmail.com}		\\
+James J. W. Kunst   \\{\tt\small jjwk89@gmail.com}		\\
 Kevin H. Viglianco	\\{\tt\small kevinvig7@gmail.com}	\\ 
 Daniel R. Garcia	\\{\tt\small dani6rg@gmail.com}		\\
 [0.5cm]
@@ -46,10 +55,11 @@ Autumn 2019\\
 Dr. Keshab K. Parhi	\\
 Dr. Ariel L. Pola	\\
 [0.5cm]
-Universidad Nacional de Córdoba - FCEFyN\\Av.Vélez Sársfield 1611, X5016GCA, C\'ordoba, Argentina\\
+Universidad Nacional de Córdoba - FCEFyN\\
+Av.Vélez Sársfield 1611, X5016GCA, C\'ordoba, Argentina\\
 [0.5cm]
 Fundación FULGOR\\
-Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN Córdoba, Argentina         
+Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina         
 }
 \maketitle
 
@@ -57,16 +67,36 @@ Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN Córdoba, Argentina
 %%%%%%%%%%
 % Abstract
 %%%%%%%%%%
-\begin{abstract} - \bf In this paper we present a develop and VLSI implementation of a 4-parallel pipelined architecture for the complex fast Fourier transform (CFFT) based on the radix-$\bf 2^3$ algorithm with 128 points using folding transformation and register minimization techniques. A comparison is drawn between the proposed designs and the original architecture.
+\begin{abstract} - \bf In this work we present a develop and VLSI implementation of a 4-parallel pipelined architecture for the complex fast Fourier transform (CFFT) based on the radix-$\bf 2^3$ algorithm with 128 points using folding transformation and register minimization techniques. In addition, we are going to generate different synthesis levels from the hardware language description (HDL) with the purpose of obtaining a suitable performance on speed and area. %A comparison is drawn between the proposed designs and the original architecture.
 \end{abstract}
 %%%%%%%%%
 % Seccion
 %%%%%%%%%
 \section{INTRODUCTION}
+The Fast Fourier Transform (FFT) is widely used in different applications' fields, particularly, it is used in algorithms that involves apply digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently, that is useful because in some applications is most convenient to work in frequency domain than time domain. Nowadays is common utilize the algorithm of FFT for real time applications and parallel-pipelined hardware architecture give us the opportunity to work at hight throughput rates.
+
+There are two main types of pipelined FFT architectures \cite{shousheng_he_designing_1998}. On the one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), theses methods take out samples from each butterflies stages and feed back to the registers or memories at the same stage. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC) where the main difference with the feedback architectures is that SDF transfer data samples from one stage to other stage serially, instead of that the MDC architecture transfer more than one sample per clock cycle and do not have feedback loops.
+
+This work focuses on the design of 4-parallel pipelined architecture radix-$2^3$ 128-points for Complex FFT-DIF (Decimation in frequency). First, we will obtain the equations that correspond to Bufterfly structure of \textit{radix}-$2^3$ FFT-DIF for 8 points. After that, we apply these idea to design a 2-parallel pipelined architecture radix-$2^3$ 16-points FFT via folding transformation and find the appropriates rotators (\textit{twiddles}) for each stage and clock cycle over the chain of butterflies on a feedforward architecture MDC. Second, we elaborate a float-point simulator which will process a summation of two cosine signals with different frequencies. Later, for the input and output of each stage of DFT, we quantized all operations such as adders and multipliers to get a fixed-point model. In this way, we can compare both models verifying the Signal to quantization noise ratio (SQNR) between fixed and float models.
+
+Furthermore, we take the fixed-point model to elaborate our Synthesizable Verilog code HDL and verify the DFT functionality in each stage of the architecture. In addition to this, we generates power-area-timing report with different optimizations such as varying pipelining levels and canonical signed digit (CSD).
 %%%%%%%%%
 % Seccion
 %%%%%%%%%
 \section{DESIGN OF FFT ARCHITECTURE VIA FOLDING}
+%T h e d evelop m en t o f com p utationally efficient algorithm s for the D F T is m ade pos­
+%sible if w e adopt a divide-and-conquer approach. T his approach is based on the
+%d ecom p osition o f an Af-point D F T in to su ccessively sm aller D F T s. T his basic ap­
+%proach leads to a fam ily o f com putationally efficient algorithm s k n ow n collectively
+%as FFT algorithm s.
+
+%A n o th e r im portant radix-2 FFT algorithm , called th e decim ation -in-freq u en cy
+%algorithm , is o b tain ed by using the divide-and-conquer approach described in S ec­
+%tion 6.1.2 w ith th e ch oice o f M = 2 and L = N f l . T his ch oice o f param eters
+%im plies a colu m n-w ise storage o f the input data seq u en ce. T o d erive the algo­
+%rithm, w e begin by splitting the D F T form ula in to tw o sum m ations, o n e o f which
+%in v o lv es the sum over the first N t 2 data p oin ts and th e secon d sum in volves the
+%last N I 2 data points.
 In this section, we illustrate the folding transformation method to derive a 16-point DIF FFT 4-parallel architecture as an example and then, using the same method, we extend it to 128-point architecture. To do this, we will use the architecture proposed in \cite{ayinala_pipelined_2012}.
 %%%%%%%%%%%%
 % Subseccion
@@ -74,20 +104,19 @@ In this section, we illustrate the folding transformation method to derive a 16-
 \subsection{4-Parallel radix-$2^3$ 16-Points}
 In Fig. \ref{fig:flowgraph_16}  we can see the flow graph of a 16-point DIF FFT radix-2. The graph is divided into four stages and each of them consist of a set of butterflies and multipliers. The twiddle factor in between the stages indicates a multiplication by $W^k_N$, where $W_N$ denotes the \textit{N}th root of unity, with its exponent evaluated modulo N. This can be represented as a DFG as shown in Fig. \ref{fig:dfg_16} where the nodes represents the butterfly computations of the radix-2 FFT algorithm. 
 
-\begin{figure}%[htbp]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Diagramas/fft16.png}%
 \caption{Flow graph of a radix-2 16-point DIF FFT.}
 \label{fig:flowgraph_16}
 \end{figure}
 
-\begin{figure}%[ht]
+\begin{figure}[htbp]%[ht]
 \centering
 \includegraphics[width=\linewidth]{Diagramas/Butter16.eps}
 \caption{Data Flow graph (DFG) of a radix-2 16-point DIF FFT.}
 \label{fig:dfg_16}
 \end{figure}
-
 
 The folding transformation is used on the DFG in to derive a pipelined architecture. To do this we need a folding set, which is an ordered set of operations executed by the same functional unit. Each folding set contains K entries, where K is called the folding factor. The operation in the \textit{j}th position within the folding set (where goes from 0 to K-1) is executed by the functional unit during the time partition. The term is called the folding order.
 
@@ -111,8 +140,7 @@ Consider folding of the the DFG in Fig. \ref{fig:dfg_16} with the folding sets:
 
 Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B=P_C=P_D=0$), the folding equations can be derived for all edges (see \ref{sec:appen:folding_eq}). For the folded system to be realizable, $D_F(U\to V)\geq0$ must hold for all the edges in the DFG. Retimming and/or pipeline can be applied to satisfy this property, if the DFG in Fig. \ref{fig:dfg_16} is pipelined/retimmed as shown in Fig. \ref{fig:dfg_16_ret} the system is realizable and the folded delays for the edges are given by \ref{sec:appen:folding_eq_ret}.
 
-
-\begin{figure}[ht!]
+\begin{figure}[htbp]%[ht!]
 \centering
  \includegraphics[width=\linewidth]{Diagramas/Butter16_pipe.eps}%
 \caption{Data Flow graph (DFG) of a radix-2 16-point DIF FFT with retimming and pipeline.}
@@ -122,28 +150,26 @@ Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B
 We can see that the number of register required to implement the folding equations in \ref{sec:appen:folding_eq_ret} is 80. For minimize the number of registers we use the register minimization technique. 
 If we let the output of node A1 be $y_{(0)}$ and $y_{(8)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively. More information about this method can be found on \cite{pipeline_parhi_book}.
 
-\begin{figure}[ht!]
+\begin{figure}[htbp]%[ht!]
 \centering
  \includegraphics[width=\linewidth]{Diagramas/tab_life_a.eps}%
 \caption{Linear lifetime chart for the variables $y_{(0)}, y_{(1)},...,y_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-a}
 \end{figure}
 
-
-\begin{figure}[ht!]
+\begin{figure}[htbp]%[ht!]
 \centering
  \includegraphics[width=0.7\linewidth]{Diagramas/tab_life_b.eps}%
 \caption{Linear lifetime chart for the variables $z_{(0)}, z_{(1)},...,z_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-b}
 \end{figure}
 
-\begin{figure}[ht!]
+\begin{figure}[htbp]%[ht!]
 \centering
  \includegraphics[width=0.8\linewidth]{Diagramas/tab_life_c.eps}%
 \caption{Linear lifetime chart for the variables $w_{(0)}, w_{(1)},...,w_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-c}
 \end{figure}
-
 
 The register allocation tables for each of lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} respectively, we can implement the same equations in \ref{sec:appen:folding_eq_ret} using 20 registers with register minimization techniques. The folded architecture in Fig. \ref{fig:circ-folding-16} is synthesized using the folding equations and the register allocation tables, the method can be found in \cite{pipeline_parhi_book}. 
 
@@ -163,37 +189,35 @@ The different types of rotators used in Fig. \ref{fig:circ-folding-16} are shown
 
 \end{itemize}
 
-
-
-\begin{figure}[ht!]
+\begin{figure}[htbp]%[ht!]
 \centering
  \includegraphics[width=1\linewidth]{Diagramas/life_chart_a.png}%
 \caption{Register allocation table for the data represented in \ref{fig:tab-life-a}}
 \label{fig:tab-aloc-a}
 \end{figure}
 
-\begin{figure}[ht!]
+\begin{figure}[htbp]%[ht!]
 \centering
  \includegraphics[width=1\linewidth]{Diagramas/life_chart_b.png}%
 \caption{Register allocation table for the data represented in \ref{fig:tab-life-b}}
 \label{fig:tab-aloc-b}
 \end{figure}
 
-\begin{figure}[ht!]
+\begin{figure}[htbp]%[ht!]
 \centering
  \includegraphics[width=1\linewidth]{Diagramas/life_chart_c.png}%
 \caption{Register allocation table for the data represented in \ref{fig:tab-life-c}}
 \label{fig:tab-aloc-c}
 \end{figure}
 
-\begin{figure*}[ht!]
+\begin{figure*}[htbp]%[ht!]
 \centering
  \includegraphics[width=0.85\linewidth]{Diagramas/folding-16.png}%
 \caption{Folding architecture for the computation of a radix-$2^3$ 16-point DIF complex FFT.}
 \label{fig:circ-folding-16}
 \end{figure*}
 
-\begin{figure}[ht!]
+\begin{figure}[htbp]%[ht!]
 \centering
  \includegraphics[width=0.85\linewidth]{Diagramas/rotators.png}%
 \caption{Symbols used for the different types of rotators}
@@ -204,13 +228,11 @@ The different types of rotators used in Fig. \ref{fig:circ-folding-16} are shown
 % Subseccion
 %%%%%%%%%%%%
 \subsection{4-Parallel radix-$2^3$ 128-Points}
-
 We can deduce the folding architecture following the same method than used with the 4-Parallel radix-$2^3$ 16-Points. The DFG and folding set used can be shown in Fig. \ref{fig:pipe_dfg_128} and Fig. \ref{tab:fold_set_128} in \ref{sec:appen:pipe_dfg_128} and \ref{sec:appen:folding_set_128}.
-
 
 The architecture can be seen in Fig. \ref{fig:circ-folding-128}
 
-\begin{figure*}[ht!]
+\begin{figure*}[htbp]%[ht!]
 \centering
  \includegraphics[width=0.95\linewidth]{Diagramas/folding-128.eps}%
 \caption{Folding architecture for the computation of a radix-$2^3$ 128-point DIF complex FFT.}
@@ -222,17 +244,13 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}
 % Seccion
 %%%%%%%%%
 \section{IMPLEMENTATION}
-
 %%%%%%%%%
 % Seccion
 %%%%%%%%%
 \section{CONCLUSION}
-% cito \cite{garrido_pipelined_2013}, \cite{parhi_synthesis_1992}
-
 %%%%%%%%%%
 % Apendice
 %%%%%%%%%%
-\newpage
 \section*{APPENDIX}
 %%%%%%%%%%%%
 % Subseccion
@@ -275,7 +293,6 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=-2\\
 % Subseccion
 %%%%%%%%%%%%
 \subsubsection{With retimming\label{sec:appen:folding_eq_ret}}
-
 \begin{small}
 \begin{align*}
 D_F(D0\to B0)&=2 &  D_F(D0\to B4)&=2\\
@@ -309,11 +326,8 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=2\\
 % Subseccion
 %%%%%%%%%%%%
 \subsection{Folding set used in 4-parallel  radix-$2^3$ 128-points\label{sec:appen:folding_set_128}}
-
-
-\begin{table*}
+\begin{table*}[htbp]
 \centering
-
 \begin{threeparttable}
 \centering
 \begin{tabular}{|c||cccccccccccccccc|}
@@ -381,35 +395,37 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=2\\
 \label{tab:fold_set_128}
 \end{table*}
 
+
 %%%%%%%%%%%%
 % Subseccion
 %%%%%%%%%%%%
 \subsection{Pipelined DFG of a 128-point DIF FFT\label{sec:appen:pipe_dfg_128}}
+%\begin{figure*}[htbp]
+%\centering
+% \includegraphics[width=\linewidth]{Diagramas/bubble_delays_128.eps}%
+%\caption{Pipelined DFG of a 128-point DIF FFT as a preprocessing step for folding.}
+%\label{fig:pipe_dfg_128}
+%\end{figure*}
 
-\begin{figure*}[htbp]
-\centering
- \includegraphics[width=\linewidth]{Diagramas/bubble_delays_128.eps}%
-\caption{Pipelined DFG of a 128-point DIF FFT as a preprocessing step for folding.}
-\label{fig:pipe_dfg_128}
-\end{figure*}
 
 %\pagebreak
 
 
 %\begin{landscape}
 % \vspace*{\fill}
-\begin{figure*}[ht!]
+\begin{figure*}[htbp]%[ht!]%ht!
 \centering
- \includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps} \\ %
-
+\includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps} \\ %
 %\label{fig:pipe_dfg_128}
 \end{figure*}
  %\vspace*{\fill}
 %\end{landscape}
 
+
 %%%%%%%%%%%%%%
 % Bibliografia
 %%%%%%%%%%%%%%
+\newpage
 \bibliographystyle{IEEEtran}
 \bibliography{referenciasFFT}
 %%%%%%%%
