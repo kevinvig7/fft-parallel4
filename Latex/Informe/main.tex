@@ -77,7 +77,7 @@ The Fast Fourier Transform (FFT) is widely used in different applications' field
 
 There are two main types of pipelined FFT architectures \cite{shousheng_he_designing_1998}. On the one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), theses methods take out samples from each butterflies stages and feed back to the registers or memories at the same stage. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC) where the main difference with the feedback architectures is that SDF transfer data samples from one stage to other stage serially, instead of that the MDC architecture transfer more than one sample per clock cycle and do not have feedback loops.
 
-This work focuses on the design of 4-parallel pipelined architecture radix-$2^3$ 128-points for Complex FFT-DIF (Decimation in frequency). First, we will obtain the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF for 8 points. After that, we apply these idea to design a 2-parallel pipelined architecture radix-$2^3$ 16-points FFT via folding transformation and find the appropriates rotators (\textit{twiddles}) for each stage and clock cycle over the chain of butterflies on a feedforward architecture MDC. Second, we elaborate a float-point simulator which will process a summation of two cosine signals with different frequencies. Later, for the input and output of each stage of DFT, we quantized all operations such as adders and multipliers to get a fixed-point model. In this way, we can compare both models verifying the Signal to quantization noise ratio (SQNR) between fixed and float models.
+We work focuses on the design of 4-parallel pipelined architecture radix-$2^3$ 128-points for Complex FFT-DIF (Decimation in frequency). First, we will obtain the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF for 8 points. After that, we apply these idea to design a 2-parallel pipelined architecture radix-$2^3$ 16-points FFT via folding transformation and find the appropriates rotators (\textit{twiddles}) for each stage and clock cycle over the chain of butterflies on a feedforward architecture MDC. Second, we elaborate a float-point simulator which will process a summation of two cosine signals with different frequencies. Later, for the input and output of each stage of DFT, we quantized all operations such as adders and multipliers to get a fixed-point model. In this way, we can compare both models verifying the Signal to quantization noise ratio (SQNR) between fixed and float models.
 
 Furthermore, we take the fixed-point model to elaborate our Synthesizable Verilog code HDL and verify the DFT functionality in each stage of the architecture. In addition to this, we generates power-area-timing report with different optimizations such as varying pipelining levels and canonical signed digit (CSD).
 %%%%%%%%%
@@ -129,6 +129,14 @@ In Fig. \ref{fig:flowgraph_16}  we can see the flow graph of a 16-point DIF FFT 
 \caption{Data Flow graph (DFG) of a radix-2 16-point DIF FFT.}
 \label{fig:dfg_16}
 \end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/128PuntosRadix8Conexion.pdf}
+	\caption{}
+	\label{fig:128puntosradix8conexion}
+\end{figure}
+
 
 The folding transformation is used on the DFG in to derive a pipelined architecture. To do this we need a folding set, which is an ordered set of operations executed by the same functional unit. Each folding set contains K entries, where K is called the folding factor. The operation in the \textit{j}th position within the folding set (where goes from 0 to K-1) is executed by the functional unit during the time partition. The term is called the folding order.
 
@@ -224,7 +232,7 @@ The different types of rotators used in Fig. \ref{fig:circ-folding-16} are shown
 
 \begin{figure*}[htbp]%[ht!]
 \centering
- \includegraphics[width=0.85\linewidth]{Diagramas/miSeccionFiguras/4Paralelo16pRadix8}%
+ \includegraphics[width=0.9\linewidth]{Diagramas/miSeccionFiguras/4Paralelo16pRadix8}%
 \caption{Folding architecture for the computation of a radix-$2^3$ 16-point DIF complex FFT.}
 \label{fig:circ-folding-16}
 \end{figure*}
@@ -246,7 +254,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}
 
 \begin{figure*}[htbp]%[ht!]
 \centering
- \includegraphics[width=0.95\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8}%
+ \includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8}%
 \caption{Folding architecture for the computation of a radix-$2^3$ 128-point DIF complex FFT.}
 \label{fig:circ-folding-128}
 \end{figure*}
@@ -259,7 +267,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}
 
 \begin{figure*}[htbp]
 	\centering
-	\includegraphics[width=0.95\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8Cuantizacion1}
+	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8Cuantizacion1}
 	\caption{}
 	\label{fig:4paralelo128pradix8cuantizacion1}
 \end{figure*}
@@ -267,7 +275,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}
 % \vspace*{\fill}
 \begin{figure*}[htbp]%[ht!]
 	\centering
-	\includegraphics[width=0.95\linewidth]{Diagramas/V5_esquema_p.eps} 
+	\includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps} 
 	%\label{fig:pipe_dfg_128}
 \end{figure*}
 %\vspace*{\fill}
@@ -429,12 +437,12 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=2\\
 % Subseccion
 %%%%%%%%%%%%
 \subsection{Pipelined DFG of a 128-point DIF FFT\label{sec:appen:pipe_dfg_128}}
-%\begin{figure*}[htbp]
-%\centering
-% \includegraphics[width=\linewidth]{Diagramas/bubble_delays_128.eps}%
-%\caption{Pipelined DFG of a 128-point DIF FFT as a preprocessing step for folding.}
-%\label{fig:pipe_dfg_128}
-%\end{figure*}
+\begin{figure*}[htbp]
+\centering
+ \includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/128puntosRadix8BurbujasPipelined_Kevin.pdf}
+\caption{Pipelined DFG of a 128-point DIF FFT as a preprocessing step for folding.}
+\label{fig:pipe_dfg_128}
+\end{figure*}
 
 
 
