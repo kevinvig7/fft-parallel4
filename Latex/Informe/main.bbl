@@ -30,6 +30,14 @@
   [Online]. Available: \url{http://ieeexplore.ieee.org/document/738077/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{proakis_digital_nodate}
+J.~G. Proakis and D.~G. Manolakis, ``{DIGITAL} {SIGNAL} {PROCESSING},'' p.
+  1033.
+
+\bibitem{jia_efficient_nodate}
+L.~Jia, Y.~Gao, and H.~Tenhunen, ``Efficient {VLSI} implementation of radix-8
+  {FFT} algorithm,'' p.~4.
+
 \bibitem{ayinala_pipelined_2012}
 \BIBentryALTinterwordspacing
 M.~Ayinala, M.~Brown, and K.~K. Parhi, ``\BIBforeignlanguage{en}{Pipelined
