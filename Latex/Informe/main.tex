@@ -424,12 +424,12 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 	\caption{Folding architecture for the computation of a radix-$2^3$ 128-point DIF complex FFT.}
 	\label{fig:circ-folding-128}
 \end{figure*}
-\begin{figure*}[t!]
-	\centering
-	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8Cuantizacion1}
-	\caption{Quantization for a 128-point 4-parallel pipelined complex FFT architecture}
-	\label{fig:4paralelo128pradix8cuantizacion1}
-\end{figure*}
+%\begin{figure*}[t!]
+%	\centering
+%	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8Cuantizacion1}
+%	\caption{Quantization for a 128-point 4-parallel pipelined complex FFT architecture}
+%	\label{fig:4paralelo128pradix8cuantizacion1}
+%\end{figure*}
 
 
 
@@ -437,40 +437,99 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 %% Seccion
 %%%%%%%%%%
 \section{IMPLEMENTATION}
-Test bench design: design test input as a mixture of sinusoids and find FFT using MATLAB/Python command. Then convert input and output to hexadecimal no-tations.
+In this section we are going to begin with the process of how accomplish the implementation of our 4-parallel architecture for the computation of 128-point \textit{radix}-$2^3$ DIF complex FFT.
+First, we wrote a \textit{MATLAB} simulator to validate the operation of our design and the design presented in \cite{garrido_pipelined_2013,garrido_feedforward_2018}. Therefore, we can have a reference architecture for compare the design that we deduce. After that, we take all these information to generate a Synthesizable \textit{Verilog} code with different levels of optimizations with a powerful tool like \textit{Synopsys} to get a final design integrated of Standard Cells at $@45nm$.
+%%%%%%%%%%%%%
+%% Subseccion
+%%%%%%%%%%%%%
+\subsection{Floating and Fixed point Simulator}
+\begin{figure*}[t!]
+	\centering
+	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8Cuantizacion1}
+	\caption{Quantization for a 128-point 4-parallel pipelined complex FFT architecture}
+	\label{fig:4paralelo128pradix8cuantizacion1}
+\end{figure*}
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.95\linewidth]{Diagramas/DftInputSignal}
+	\caption{Input signal $x[n]$ in time domain}
+	\label{fig:dftinputsignal}
+\end{figure}
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=\linewidth]{Diagramas/DftFixedPoint}
+	\caption{Output samples, absolute value vs frequency $|X[k]|$}
+	\label{fig:dftfixedpoint}
+\end{figure}
+The input signal Fig. \ref{fig:dftinputsignal} to our architecture will be a mixture of sinusoid signals with two frequency values, theses signal will be normalizing to the unity and in this way we can have a test bench design.
 \begin{align}\label{eq: inputSignal}
-	x'[n] &= cos(2\pi f_1 n T_s) + cos(2\pi f_2 n T_s) )  \\
-	 x[n] &= x'[n]/max\{x'[n]\} 						  \nonumber
+x'[n] &= cos(2\pi f_1 n T_s) + cos(2\pi f_2 n T_s)  \\
+x[n] &= x'[n]/max\{x'[n]\} 						\nonumber
 \end{align}
-where $f_1=100Hz$ and $f_2=1000Hz$
+where $f_1=100Hz$, $f_2=1000Hz$ and $T_s$ is the sampled period.
 
-Compute SQNR (Signal to Quantization Noise Ratio)
-
-Quantization noise is modeled as uniform random variable
+In each stage of the Fig. \ref{fig:4paralelo128pradix8cuantizacion1}, input samples that propagate stage by stage will be carefully quantized with the purpose of getting a high SQNR (Signal to Quantization Noise Ratio).
 \begin{equation*}%\label{eq:sqnr}
 SQNR_{dB} = 10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Signal_{FloatPoint} - Signal_{FixedPoint}\}}  \bigg)
 \end{equation*}
+SQNR represents computing the logarithmic relationship between float signal variance over error variance from an signal given.
 
-Input quantization Snr=56.9dB, s(10,9)
-Out signal from DFT is in function of Absolute value vs frequency
-Output quantization  SnrReal = 46.8dB, SnrImag= 47.3dB, s(22,15)
-twiddle quantization s(11,9)
+The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representation means a number signed (S) with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddles} factors and the architecture's output.
+
+Twiddles factor are quantized with a relation of $S(11,9)$ and the complex output signal $X[k]$ with $S(22,15)$. Output quantization for the real part is $46.8dB$ and for the imaginary part $47.3dB$. In general, a value of quantization close to $50dB$ is a good approximation. Out signal from our \textit{MATLAB} fixed-point model from the architecture in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} is given in Fig. \ref{fig:dftfixedpoint}, that represents a first approach in our calculation of a DFT without optimization.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\linewidth]{Diagramas/DftInputSignal}
-	\caption{}
-	\label{fig:dftinputsignal}
+	\includegraphics[width=0.45\linewidth]{Diagramas/miSeccionFiguras/Shift}
+	\caption{Circuit for data shuffling}
+	\label{fig:shift}
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\linewidth]{Diagramas/DftFixedPoint}
-	\caption{}
-	\label{fig:dftfixedpoint}
+	\includegraphics[width=0.65\linewidth]{Diagramas/miSeccionFiguras/ButterComplejo}
+	\caption{Complex butterfly }
+	\label{fig:buttercomplejo}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.65\linewidth]{Diagramas/miSeccionFiguras/SumMult}
+	\caption{Complex multiplier and complex adder}
+	\label{fig:summult}
 \end{figure}
 
+Texto
+\\
 
+texto
+\\
 
+texto
+%%%%%%%%%%%%%
+%% Subseccion
+%%%%%%%%%%%%%
+\subsection{Verilog (HDL) Model} 
+\begin{figure*}[t!]
+	\centering
+	\includegraphics[width=\linewidth]{Diagramas/V5_esquema_p}
+	\caption{RTL (Register transfer level) design for a 4-parallel \textit{radix}-$2^3$ 128-point DIF FFT with Optimization}
+	\label{fig:v5esquemap}
+\end{figure*}
 
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
