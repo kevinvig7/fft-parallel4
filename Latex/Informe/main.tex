@@ -437,20 +437,37 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 %% Seccion
 %%%%%%%%%%
 \section{IMPLEMENTATION}
-Texto
-\\
+Test bench design: design test input as a mixture of sinusoids and find FFT using MATLAB/Python command. Then convert input and output to hexadecimal no-tations.
+\begin{align}\label{eq: inputSignal}
+	x'[n] &= cos(2\pi f_1 n T_s) + cos(2\pi f_2 n T_s) )  \\
+	 x[n] &= x'[n]/max\{x'[n]\} 						  \nonumber
+\end{align}
+where $f_1=100Hz$ and $f_2=1000Hz$
 
-texto
-\\
+Compute SQNR (Signal to Quantization Noise Ratio)
 
-texto
-\\
+Quantization noise is modeled as uniform random variable
+\begin{equation*}%\label{eq:sqnr}
+SQNR_{dB} = 10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Signal_{FloatPoint} - Signal_{FixedPoint}\}}  \bigg)
+\end{equation*}
 
-texto
-%%\begin{figure*}[t!]%[ht!]
-%%	\centering
-%%	\includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps} 
-%%\end{figure*}
+Input quantization Snr=56.9dB, s(10,9)
+Out signal from DFT is in function of Absolute value vs frequency
+Output quantization  SnrReal = 46.8dB, SnrImag= 47.3dB, s(22,15)
+twiddle quantization s(11,9)
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.95\linewidth]{Diagramas/DftInputSignal}
+	\caption{}
+	\label{fig:dftinputsignal}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{Diagramas/DftFixedPoint}
+	\caption{}
+	\label{fig:dftfixedpoint}
+\end{figure}
+
 
 
 
