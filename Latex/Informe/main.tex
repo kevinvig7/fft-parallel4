@@ -79,7 +79,7 @@ There are two main types of pipelined FFT architectures \cite{shousheng_he_desig
 
 We work focuses on the design of 4-parallel pipelined architecture radix-$2^3$ 128-points for Complex FFT-DIF (Decimation in frequency). First, we will obtain the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF for 8 points. After that, we apply these idea to design a 2-parallel pipelined architecture radix-$2^3$ 16-points FFT via folding transformation and find the appropriates rotators (\textit{twiddle factors}) for each stage and clock cycle over the chain of butterflies on a feedforward architecture MDC. Second, we elaborate a float-point simulator which will process a summation of two cosine signals with different frequencies. Later, for the input and output of each stage of DFT, we quantized all operations such as adders and multipliers to get a fixed-point model. In this way, we can compare both models verifying the Signal to quantization noise ratio (SQNR) between fixed and float models.
 
-Furthermore, we take the fixed-point model to elaborate our Synthesizable Verilog code HDL and verify the DFT functionality in each stage of the architecture. In addition to this, we generates power-area-timing report with different optimizations such as varying pipelining levels and canonical signed digit (CSD).
+Furthermore, we take the fixed-point model to elaborate our Synthesizable Verilog code HDL and verify the DFT functionality in each stage of the architecture. In addition to this, we generates power-area-timing report with different optimizations such as varying pipelining levels and canonical signed digit (CSD) to get a work frequency of $500Mhz$.
 
 
 
@@ -102,7 +102,7 @@ The FFT based on Cooley-Tukey algorithm is most commonly used in order to comput
 
 The development of computationally efficient algorithms for DFT is posible if we adopt a \textit{Divide and Conquer} approach. This approach is based on the decomposition of an \textit{N} point DFT into successively smaller DFTs. In accordance with this, the DFT is calculated in series of $s=log_\rho N$ stages, where $\rho$ is the base of the \textit{radix}. In our work this factor is two because we need to design a radix-$2^3$ FFT and this kind of radix is built using as principal base \textit{radix-2}.
 
-There are two methods to design FFT algorithms \cite{proakis_digital_nodate}: 
+There are two methods to design FFT algorithms \cite{proakis_digital_nodate,oppenheim_tratamiento_2011}: 
 
 First, applying decimation in time (DIT), this results in a split of the \textit{N}-point data sequence $x[n]$ into two $N/2$-point data sequences. Thus, we can obtain two different functions by decimating $x[n]$ by a factor of 2. The decimation of the data sequence can be repeated again and again until the resulting sequences are reduced to one-point sequence. In each decomposition, the basic computing unit that processes the samples is called \textit{butterfly}.
 
@@ -438,7 +438,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 %%%%%%%%%%
 \section{IMPLEMENTATION}
 In this section we are going to begin with the process of how accomplish the implementation of our 4-parallel architecture for the computation of 128-point \textit{radix}-$2^3$ DIF complex FFT.
-First, we wrote a \textit{MATLAB} simulator to validate the operation of our design and the design presented in \cite{garrido_pipelined_2013,garrido_feedforward_2018}. Therefore, we can have a reference architecture for compare the design that we deduce. After that, we take all these information to generate a Synthesizable \textit{Verilog} code with different levels of optimizations with a powerful tool like \textit{Synopsys} to get a final design integrated of Standard Cells at $@45nm$.
+First, we wrote a \textit{MATLAB} simulator to validate the operation of our design and the design presented in \cite{garrido_pipelined_2013,garrido_feedforward_2018}. Therefore, we can have a reference architecture for compare the design that we deduce. After that, we take all these information to generate a Synthesizable \textit{Verilog} code with different levels of optimizations with a powerful tool like \textit{Synopsys} to get a final design integrated of Standard Cells $@45nm$.
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
@@ -474,7 +474,7 @@ SQNR_{dB} = 10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Sign
 \end{equation*}
 SQNR represents computing the logarithmic relationship between float signal variance over error variance from an signal given.
 
-The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representation means a number signed (S) with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddles} factors and the architecture's output.
+The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representation means a number signed (S) with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddle} factors and the architecture's output.
 
 Twiddles factor are quantized with a relation of $S(11,9)$ and the complex output signal $X[k]$ with $S(22,15)$. Output quantization for the real part is $46.8dB$ and for the imaginary part $47.3dB$. In general, a value of quantization close to $50dB$ is a good approximation. Out signal from our \textit{MATLAB} fixed-point model from the architecture in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} is given in Fig. \ref{fig:dftfixedpoint}, that represents a first approach in our calculation of a DFT without optimization.
 \begin{figure}[h!]

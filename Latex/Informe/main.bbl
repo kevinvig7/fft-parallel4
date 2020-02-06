@@ -34,6 +34,11 @@
 J.~G. Proakis and D.~G. Manolakis, ``{DIGITAL} {SIGNAL} {PROCESSING},'' p.
   1033.
 
+\bibitem{oppenheim_tratamiento_2011}
+A.~V. Oppenheim and R.~W. Schafer, \emph{Tratamiento de señales en tiempo
+  discreto, tercera edición}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson
+  Educación, {OCLC}: 843859190.
+
 \bibitem{jia_efficient_nodate}
 L.~Jia, Y.~Gao, and H.~Tenhunen, ``Efficient {VLSI} implementation of radix-8
   {FFT} algorithm,'' p.~4.
