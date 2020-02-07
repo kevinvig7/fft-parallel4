@@ -305,7 +305,7 @@ If we let the output of node A1 be $y_{(0)}$ and $y_{(8)}$, applying this succes
 \caption{Linear lifetime chart for the variables $w_{(0)}, w_{(1)},...,w_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-c}
 \end{figure}
-The register allocation tables for each of lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} respectively, we can implement the same equations in \ref{sec:appen:folding_eq_ret} using 20 registers with register minimization techniques. The folded architecture in Fig. \ref{fig:circ-folding-16} is synthesized using the folding equations and the register allocation tables, the method can be found in \cite{pipeline_parhi_book}. 
+The register allocation tables for each of lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} respectively, we can implement the same equations in \ref{eqn:ConRetiming} using 20 registers with register minimization techniques. The folded architecture in Fig. \ref{fig:circ-folding-16} is synthesized using the folding equations and the register allocation tables, the method can be found in \cite{pipeline_parhi_book}. 
 
 The inputs of each folding node are represented with a matrix where the values in the same column are data that flow in parallel and values in the same row
 flow through the same path in consecutive clock cycles. The first two rows represents the inputs of the superior BF and the others two represents the input of the inferior BF. 
