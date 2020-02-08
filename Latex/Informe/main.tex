@@ -215,11 +215,11 @@ D_F(U \to V) = Kw(e)-P_U+v-u
 
 where $P_U$ is the number of pipeline stages in the hardware unit which executes the node U.
 Consider folding of the the DFG in Fig. \ref{fig:16puntosradix8burbujas} with the folding sets:
-\begin{align*}
+\begin{align*}%\label{eq:foldingset_16}
 A&= \{ A0,A2,A4,A6 \}  & A'&= \{ A1,A3,A5,A7 \} \\
 B&=\{ B1,B3,B0,B2 \}   &B'&=\{ B5,B7,B4,B6 \} 	\\
 C&=\{ C2,C1,C3,C0 \}   &C'&=\{ C6,C5,C7,C4 \} 	\\ 
-D&=\{ D3,D0,D2,D1 \}   &D'&=\{ D7,D4,D6,D5 \}  %\label{eq:foldingset_16}
+D&=\{ D3,D0,D2,D1 \}   &D'&=\{ D7,D4,D6,D5 \}  
 \end{align*}
 Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B=P_C=P_D=0$), the folding equations can be derived for all edges. Thus, we can obtained from (\ref{eqn:fold_equation}) the expressions \textit{without apply retiming}.
 \begin{small}
@@ -305,7 +305,7 @@ If we let the output of node A1 be $y_{(0)}$ and $y_{(8)}$, applying this succes
 \caption{Linear lifetime chart for the variables $w_{(0)}, w_{(1)},...,w_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-c}
 \end{figure}
-The register allocation tables for each of lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} respectively, we can implement the same equations in \ref{eqn:ConRetiming} using 20 registers with register minimization techniques. The folded architecture in Fig. \ref{fig:circ-folding-16} is synthesized using the folding equations and the register allocation tables, the method can be found in \cite{pipeline_parhi_book}. 
+The register allocation tables for each of lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} respectively, we can implement the same equations in (\ref{eqn:ConRetiming}) using 20 registers with register minimization techniques. The folded architecture in Fig. \ref{fig:circ-folding-16} is synthesized using the folding equations and the register allocation tables, the method can be found in \cite{pipeline_parhi_book}. 
 
 The inputs of each folding node are represented with a matrix where the values in the same column are data that flow in parallel and values in the same row
 flow through the same path in consecutive clock cycles. The first two rows represents the inputs of the superior BF and the others two represents the input of the inferior BF. 
@@ -328,7 +328,7 @@ The same criteria is used for represent the constants of rotators, where each nu
 \caption{Register allocation table for the data represented in \ref{fig:tab-life-c}}
 \label{fig:tab-aloc-c}
 \end{figure}
-As we can see in \ref{fig:circ-folding-16}, we suppose that the inputs and output are not ordered, to order these variables extra logic are needed, using more registers and multiplexers.
+As we can see in Fig. \ref{fig:circ-folding-16}, we suppose that the inputs and output are not ordered, to order these variables extra logic are needed, using more registers and multiplexers.
 
 The different types of rotators used in Fig. \ref{fig:circ-folding-16} are shown in Fig. \ref{fig:rotators}, the description of each of them can be found below.
 \begin{itemize}
@@ -498,7 +498,7 @@ Twiddles factor are quantized with a relation of $S(11,9)$ and the complex outpu
 
 The combination between latencies (delays registers) and switches in all stages in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} is the equivalent circuit shows in Fig. \ref{fig:shift}, that is used to appropriately order samples in each butterflies input.
 
-Whole elements on the architecture such as multipliers and butterflies are complex as Fig. \ref{fig:buttercomplejo} and \ref{fig:summult}. On an implementation is essential divide the signal in its real and imaginary part with the purpose of process them independently. A \textit{general rotator} (complex multiplier) generate a real and imaginary component that is composed by a real multiplication an one addition, but a \textit{trivial rotator} only change the components of a complex signal. These relations are important at the moment of doing the quantization process to ensure an appropriate quantity of bits.
+Whole elements on the architecture such as multipliers and butterflies are complex as Fig. \ref{fig:buttercomplejo} and \ref{fig:summult}. On an implementation is essential divide the signal in its real and imaginary part with the purpose of process them independently. A \textit{general rotator} (full complex multiplier) generate a real and imaginary component that is composed by a real multiplication an one addition, but a \textit{trivial rotator} only change the components of a complex signal. These relations are important at the moment of doing the quantization process to ensure an appropriate quantity of bits.
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
