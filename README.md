@@ -1,5 +1,6 @@
 ## Actividades
 #### Trabajo Final curso VLSI
+- [x] Documentar
 
 - [ ] Ordenar los símbolos correspondientes a los multiplicadores en las figuras o aclararlo en el texto.
 
