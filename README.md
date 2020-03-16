@@ -2,7 +2,7 @@
 #### Trabajo Final curso VLSI
 - [x] Documentar
 
-- [ ] Ordenar los símbolos correspondientes a los multiplicadores en las figuras o aclararlo en el texto.
+- [x] Ordenar los símbolos correspondientes a los multiplicadores en las figuras o aclararlo en el texto.
 
 - [ ] Armar una tabla o diagrama de torta de 'Optimización' de la potencia, área, velocidad, cantidad y tipo de elementos lógicos (compuertas u otros) que emplea nustro diseño obtenido a partir de las Sintesis realizadas de las 5 versiones que fueron sintetizadas en Synopsis.
 
@@ -12,4 +12,3 @@
 
 - [ ] Completar la presentación del Beamer con los enunciados del problema y optimizaciones realizadas al diseño.
 
-- [ ] Corregir la redacción y gramática del Inglés.

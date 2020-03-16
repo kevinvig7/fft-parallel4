@@ -359,7 +359,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 \end{figure}
 \begin{figure*}[!t]
 	\centering
-	\includegraphics[width=0.85\linewidth]{Diagramas/miSeccionFiguras/4Paralelo16pRadix8}
+	\includegraphics[width=0.75\linewidth]{Diagramas/miSeccionFiguras/4Paralelo16pRadix8.pdf}
 	\caption{Folding architecture for the computation of a radix-$2^3$ 16-point DIF complex FFT.}
 	\label{fig:circ-folding-16}
 \end{figure*}
@@ -420,7 +420,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 \end{small}
 \begin{figure*}[!t]
 	\centering
-	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8}
+	\includegraphics[width=1.0\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8.pdf}
 	\caption{Folding architecture for the computation of a radix-$2^3$ 128-point DIF complex FFT.}
 	\label{fig:circ-folding-128}
 \end{figure*}
@@ -445,19 +445,19 @@ First, we wrote a \textit{MATLAB} simulator to validate the operation of our des
 \subsection{Floating and Fixed point Simulator}
 \begin{figure*}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8Cuantizacion1}
+	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8Cuantizacion1.pdf}
 	\caption{Quantization for a 128-point 4-parallel pipelined complex FFT architecture}
 	\label{fig:4paralelo128pradix8cuantizacion1}
 \end{figure*}
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.95\linewidth]{Diagramas/DftInputSignal.pdf}
+	\includegraphics[width=0.92\linewidth]{Diagramas/DftInputSignal.pdf}
 	\caption{Input signal $x[n]$ in time domain}
 	\label{fig:dftinputsignal}
 \end{figure}
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{Diagramas/DftFixedPoint.pdf}
+	\includegraphics[width=0.95\linewidth]{Diagramas/DftFixedPoint.pdf}
 	\caption{Output samples, absolute value vs frequency $|X[k]|$}
 	\label{fig:dftfixedpoint}
 \end{figure}
@@ -479,7 +479,7 @@ The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representat
 Twiddles factor are quantized with a relation of $S(11,9)$ and the complex output signal $X[k]$ with $S(22,15)$. Output quantization for the real part is $46.8dB$ and for the imaginary part $47.3dB$. In general, a value of quantization close to $50dB$ is a good approximation. Out signal from our \textit{MATLAB} fixed-point model from the architecture in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} the output signal is given in Fig. \ref{fig:dftfixedpoint}, that represents a first approach in our calculation of a DFT without optimization.
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.45\linewidth]{Diagramas/miSeccionFiguras/Shift.pdf}
+	\includegraphics[width=0.42\linewidth]{Diagramas/miSeccionFiguras/Shift.pdf}
 	\caption{Circuit for data shuffling}
 	\label{fig:shift}
 \end{figure}
