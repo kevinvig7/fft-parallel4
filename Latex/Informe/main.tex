@@ -44,9 +44,9 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
 \huge \bf VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$\mathbf{2^3}$ FFT Architecture via Folding Transformation
 }
 \author{
-James J. W. Kunst   \\{\tt\small jjwk89@gmail.com}		\\
-Kevin H. Viglianco	\\{\tt\small kevinvig7@gmail.com}	\\ 
-Daniel R. Garcia	\\{\tt\small dani6rg@gmail.com}		\\
+James J. W. Kunst   \\{\tt\small jjwk89@gmail.com}		
+Kevin H. Viglianco	\\{\tt\small kevinviglianco@gmail.com}	 
+Daniel R. Garcia	\\{\tt\small dani6rg@gmail.com}		
 [0.5cm]
 {\large \bf Digital Signal Processing in Very Large Scale Integration Systems}\\
 [0.5cm]
@@ -73,13 +73,15 @@ Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina
 % Seccion
 %%%%%%%%%
 \section{INTRODUCTION}
-The Fast Fourier Transform (FFT) is widely used in different applications' fields, particularly, it is used in algorithms that involves apply digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently, that is useful because in some applications is most convenient to work in frequency domain than time domain. Nowadays is common utilize the algorithm of FFT for real time applications and parallel-pipelined hardware architecture give us the opportunity to work at hight throughput rates.
+The Fast Fourier Transform (FFT) is widely used in different applications fields, particularly, it is used in algorithms that involves apply digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently, that is useful because in some applications is most convenient to work in frequency domain than time domain. Nowadays is common utilize the algorithm of FFT for real time applications and parallel-pipelined hardware architecture give us the opportunity to work at hight throughput rates.
 
 There are two main types of pipelined FFT architectures \cite{shousheng_he_designing_1998}. On the one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), theses methods take out samples from each butterflies stages and feed back to the registers or memories at the same stage. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC) where the main difference with the feedback architectures is that SDF transfer data samples from one stage to other stage serially, instead of that the MDC architecture transfer more than one sample per clock cycle and do not have feedback loops.
 
-We work focuses on the design of 4-parallel pipelined architecture radix-$2^3$ 128-points for Complex FFT-DIF (Decimation in frequency). First, we will obtain the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF for 8 points. After that, we apply these idea to design a 2-parallel pipelined architecture radix-$2^3$ 16-points FFT via folding transformation and find the appropriates rotators (\textit{twiddle factors}) for each stage and clock cycle over the chain of butterflies on a feedforward architecture MDC. Second, we elaborate a float-point simulator which will process a summation of two cosine signals with different frequencies. Later, for the input and output of each stage of DFT, we quantized all operations such as adders and multipliers to get a fixed-point model. In this way, we can compare both models verifying the Signal to quantization noise ratio (SQNR) between fixed and float models.
+This work focuses on the design of 4-parallel pipelined architecture radix-$2^3$ 128-points for Complex FFT-DIF (Decimation in frequency). First, we will obtain the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF for 8 points. After that, we apply these idea to design a 2-parallel pipelined architecture radix-$2^3$ 16-points FFT via folding transformation and find the appropriates (\textit{twiddle factors}) for each stage and clock cycle over the chain of butterflies on a feedforward architecture MDC. Finally we traslate this to a 128-points model. 
 
-Furthermore, we take the fixed-point model to elaborate our Synthesizable Verilog code HDL and verify the DFT functionality in each stage of the architecture. In addition to this, we generates power-area-timing report with different optimizations such as varying pipelining levels and canonical signed digit (CSD) to get a work frequency of $500Mhz$.
+Later we elaborate a float-point simulator in \textit{Matlab} of the 128-points model which will process a summation of two cosine signals with different frequencies. After that, for the input and output of each stage of DFT, we quantized all operations such as adders and multipliers to get a fixed-point model. In this way, we can compare both models verifying the Signal to quantization noise ratio (SQNR) between fixed and float models.
+
+Furthermore, we take the fixed-point model to elaborate a Synthesizable Verilog code HDL and verify the DFT functionality in each stage of the architecture. In addition to this, we generates power-area-timing report with different optimizations such as varying pipelining levels and canonical signed digit (CSD) to get a clock frequency of $500Mhz$.
 
 
 
@@ -90,7 +92,7 @@ Furthermore, we take the fixed-point model to elaborate our Synthesizable Verilo
 The \textit{N}-point DFT of an input sequence $x[n]$ is defined as:
 
 \begin{equation}
-	X[k] = \sum_{n=0}^{N-1} x[n] \cdot W_N^{nk}, \quad k=0,1,...,N-1
+	X[k] = \sum_{n=0}^{N-1} x[n] \dot W_N^{nk}, \quad k=0,1,...,N-1
 \end{equation}
 where $W_N^{nk} = e^{-j\frac{2\pi}{N} nk}$. 
 
@@ -118,7 +120,7 @@ In general, each butterfly involves one complex multiplication and two complex a
 
 In addition, the input samples in FFT algorithms DIF are organized in natural order but its output has not in order, in this case is necessary a circuit for reordering the output data. On the other hand, FFT algorithms DIT is all the  opposite, It has not its input in order and its output has a natural order.
 
-Fallowing the methodology presented in \cite{proakis_digital_nodate}, we can understand and apply the mathematical expressions of \textit{radix-}$2^3$ DIF explained in \cite{jia_efficient_nodate}. 
+Following the methodology presented in \cite{proakis_digital_nodate}, we can understand and apply the mathematical expressions of \textit{radix-}$2^3$ DIF explained in \cite{jia_efficient_nodate}. 
 
 These fundamental equations are:
 \begin{align}\label{eqn:radix}
@@ -198,15 +200,15 @@ With the DFT's previous decomposition we learned how to get whole the coefficien
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
-\section{DESIGN OF FFT ARCHITECTURE VIA FOLDING}
-In this section, we illustrate the folding transformation method to derive a 16-point DIF FFT 4-parallel architecture as an example and then, using the same method, we extend it to 128-point architecture. To do this, we will use the architecture proposed in \cite{ayinala_pipelined_2012}.
+\section{DESIGN OF FFT ARCHITECTURE VIA FOLDING TRANFORMATION}
+In this section, we illustrate the folding transformation method to derive a 16-point DIF FFT 4-parallel architecture as an example and then, using the same method, we extend it to 128-point architecture. To do this, we will use the architecture proposed in \cite{ayinala_pipelined_2012}, to do the folding transfomation and register minimization techiques we will use \cite{pipeline_parhi_book}.
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
 \subsection{4-Parallel radix-$2^3$ 16-Points}
 In Fig. \ref{fig:16puntosradix8conexion} we can see the flow graph of a 16-point DIF FFT radix-$2^3$ with main base radix-2. The graph is divided into four stages and each of them consist of a set of butterflies and multipliers. The twiddle factor in between the stages indicates a multiplication by $W^k_N$, where $W_N$ denotes the \textit{N}th root of unity, with its exponent evaluated modulo N. This can be represented as a DFG as shown in Fig. \ref{fig:16puntosradix8burbujas} where the nodes represents the butterfly computations of the radix-2 FFT algorithm. 
 
-The folding transformation is used on the DFG in to derive a pipelined architecture. To do this we need a folding set, which is an ordered set of operations executed by the same functional unit. Each folding set contains K entries, where K is called the folding factor. The operation in the \textit{j}th position within the folding set (where goes from 0 to K-1) is executed by the functional unit during the time partition. The term is called the folding order.
+The folding transformation is used on the DFG to derive a pipelined architecture. To do this we need a folding set, which is an ordered set of operations executed by the same functional unit. Each folding set contains K entries, where K is called the folding factor. The operation in the \textit{j}th position within the folding set (where goes from 0 to K-1) is executed by the functional unit during the time partition, this term is called the folding order.
 
 First we need to derive the folding equations, to do this consider an edge $e$ connecting the nodes \textit{U} and \textit{V} with $w(e)$ delays. Let the executions of the \textit{l}th iteration of the nodes \textit{U} and \textit{V} be scheduled at the time units $Kl+u$ and $Kl+v$ respectively, where $u$ and $v$ are the folding orders of the nodes \textit{U} and \textit{V}, respectively. The folding equation for the edge $e$ is:
 \begin{equation}\label{eqn:fold_equation}
@@ -214,6 +216,7 @@ D_F(U \to V) = Kw(e)-P_U+v-u
 \end{equation}
 
 where $P_U$ is the number of pipeline stages in the hardware unit which executes the node U.
+
 Consider folding of the the DFG in Fig. \ref{fig:16puntosradix8burbujas} with the folding sets:
 \begin{align*}%\label{eq:foldingset_16}
 A&= \{ A0,A2,A4,A6 \}  & A'&= \{ A1,A3,A5,A7 \} \\
@@ -221,6 +224,7 @@ B&=\{ B1,B3,B0,B2 \}   &B'&=\{ B5,B7,B4,B6 \} 	\\
 C&=\{ C2,C1,C3,C0 \}   &C'&=\{ C6,C5,C7,C4 \} 	\\ 
 D&=\{ D3,D0,D2,D1 \}   &D'&=\{ D7,D4,D6,D5 \}  
 \end{align*}
+
 Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B=P_C=P_D=0$), the folding equations can be derived for all edges. Thus, we can obtained from (\ref{eqn:fold_equation}) the expressions \textit{without apply retiming}.
 \begin{small}
 \begin{align*}
@@ -286,7 +290,7 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=2\nonumber
 \end{align}
 \end{small}
 We can see that the number of register required to implement the folding equations in (\ref{eqn:ConRetiming}) is 80. For minimize the number of registers we use the register minimization technique. 
-If we let the output of node A1 be $y_{(0)}$ and $y_{(8)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively. More information about this method can be found on \cite{pipeline_parhi_book}.
+If we let the output of node A0 be $y_{(0)}$ and $y_{(8)}$ and the output of the node A1 be $y_{(1)}$ and $y_{(9)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively. More information about this method can be found on \cite{pipeline_parhi_book}.
 \begin{figure}[t!]
 \centering
  \includegraphics[width=0.9\linewidth]{Diagramas/tab_life_a.eps}%
@@ -307,8 +311,7 @@ If we let the output of node A1 be $y_{(0)}$ and $y_{(8)}$, applying this succes
 \end{figure}
 The register allocation tables for each of lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} respectively, we can implement the same equations in (\ref{eqn:ConRetiming}) using 20 registers with register minimization techniques. The folded architecture in Fig. \ref{fig:circ-folding-16} is synthesized using the folding equations and the register allocation tables, the method can be found in \cite{pipeline_parhi_book}. 
 
-The inputs of each folding node are represented with a matrix where the values in the same column are data that flow in parallel and values in the same row
-flow through the same path in consecutive clock cycles. The first two rows represents the inputs of the superior BF and the others two represents the input of the inferior BF. 
+The inputs of each folding node are represented with a matrix where the values in the same column are data that flow in parallel and values in the same row flow through the same path in consecutive clock cycles. The first two rows represents the inputs of the superior BF and the others two represents the input of the inferior BF. 
 The same criteria is used for represent the constants of rotators, where each number $k$ of the matrix represent a multiplication by $W^k_N$.
 \begin{figure}[!t]
 \centering
@@ -328,12 +331,13 @@ The same criteria is used for represent the constants of rotators, where each nu
 \caption{Register allocation table for the data represented in \ref{fig:tab-life-c}}
 \label{fig:tab-aloc-c}
 \end{figure}
+
 As we can see in Fig. \ref{fig:circ-folding-16}, we suppose that the inputs and output are not ordered, to order these variables extra logic are needed, using more registers and multiplexers.
 
 The different types of rotators used in Fig. \ref{fig:circ-folding-16} are shown in Fig. \ref{fig:rotators}, the description of each of them can be found below.
 \begin{itemize}
 	\item Trivial rotator: They can be carried out by interchanging the real and imaginary components and/or changing the sign of the data.
-	\item Constant CSD rotator: They can be carried out by interchanging the real and imaginary components and/or a multiplication by a unique constant fractional number, in this case we will use a CSD multiplier to perform the area utilized.
+	\item Constant CSD rotator: They can be carried out by interchanging the real and imaginary components and a multiplication by a unique constant fractional number, in this case we will use a CSD multiplier to perform the area utilized.
 	\item General rotator: They can be carried out by interchanging the real and imaginary components and/or a multiplication by more than one constant fractional numbers, in this case we will use a general multiplier.
 \end{itemize}
 \begin{figure}[h!]
@@ -349,7 +353,7 @@ The different types of rotators used in Fig. \ref{fig:circ-folding-16} are shown
 %% Subseccion
 %%%%%%%%%%%%%
 \subsection{4-Parallel radix-$2^3$ 128-Points}
-We can deduce the folding architecture following the same method than used with the 4-Parallel radix-$2^3$ 16-Points. The DFG and folding set used can be shown in Fig. \ref{fig:pipe_dfg_128} and Table \ref{tab:fold_set_128}.
+We can deduce the folding architecture for 128 points following the same method than used with the 4-Parallel radix-$2^3$ 16-Points. The DFG and folding set used can be shown in Fig. \ref{fig:pipe_dfg_128} and Table \ref{tab:fold_set_128}.
 The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 \begin{figure}[t!]
 \centering
