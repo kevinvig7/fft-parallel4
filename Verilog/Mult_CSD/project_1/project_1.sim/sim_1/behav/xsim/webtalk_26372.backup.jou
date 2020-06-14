@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Jun 12 22:26:30 2020
+# Process ID: 26372
+# Current directory: /media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/Verilog/Mult_CSD/project_1/project_1.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/Verilog/Mult_CSD/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/CSD_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/Verilog/Mult_CSD/project_1/project_1.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/Verilog/Mult_CSD/project_1/project_1.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /media/kevinvig7/Elements/Documentos/CursoVLSI/TP_Final/Verilog/Mult_CSD/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/CSD_tb_behav/webtalk/xsim_webtalk.tcl -notrace

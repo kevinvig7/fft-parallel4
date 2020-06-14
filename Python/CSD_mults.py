@@ -50,8 +50,8 @@ NBI_coef = 2
 NBF_coef = 9
 NB_coef = NBI_coef + NBF_coef
 
-NBI_out = 5
-NBF_out = 18
+NBI_out = NBI_in + NBI_coef
+NBF_out = NBF_in + NBF_coef
 NB_out = NBI_out + NBF_out
 
 
@@ -63,7 +63,7 @@ W_6 = [np.cos((6*2*np.pi)/8),-np.sin((6*2*np.pi)/8)]
 W_7 = [np.cos((7*2*np.pi)/8),-np.sin((7*2*np.pi)/8)]
 
 
-x_in =  random.uniform(-1.0, 1.0)  # Genero muestra real
+x_in =  random.uniform(-2**(NBI_in-1),2**(NBI_in-1))  # Genero muestra real
 in_int = fx_to_ints(x_in,NB_in,NBF_in,'S','trunc','saturate')
 in_fx = fx_to_flt(x_in,NB_in,NBF_in,'S','trunc','saturate')
 
@@ -74,7 +74,7 @@ coef = W_3[0]
 coef_fx = fx_to_flt(coef,NB_coef,NBF_coef,'S','trunc','saturate')
 
 # Realizo multiplicacion CSD
-csd_res =  - in_int + ((in_int + ((((in_int + (in_int >> 2))>>2) + in_int)>>3))>>2)
+csd_res =   - in_int + (in_int >> 2) + (in_int >> 5) + (in_int >> 7) + (in_int >> 9)
 print "Producto CSD:",ints_to_fx(csd_res,NB_out,NBF_out,'S','trunc','saturate')
 
 # Realizo multiplicacion para comparar resultados
@@ -89,7 +89,7 @@ coef = W_1[0]
 coef_fx = fx_to_flt(coef,NB_coef,NBF_coef,'S','trunc','saturate')
 
 # Realizo multiplicacion CSD
-csd_res =  in_int - ((in_int + ((-((in_int + (in_int >> 2))>>2) + in_int)>>2))>>2)
+csd_res =  in_int - (in_int >> 2) - (in_int >> 4) + (in_int >> 6) + (in_int >> 8)
 print "Producto CSD:",ints_to_fx(csd_res,NB_out,NBF_out,'S','trunc','saturate')
 
 # Realizo multiplicacion para comparar resultados
