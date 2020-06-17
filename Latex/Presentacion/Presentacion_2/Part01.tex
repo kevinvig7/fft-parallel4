@@ -22,7 +22,7 @@
 	\end{block}
 	
 	\begin{block}{\centering}
-		\begin{itemize}
+		\begin{itemize}\justifying\footnotesize
 			\item Direct computation of the DFT is inefficient because it does not exploit the properties of:
 			\begin{enumerate}
 				\item Symmetry: $ W_N^{k+N/2} = -W_N^k$
@@ -38,7 +38,7 @@
   	\frametitle{\textbf{The Radix-$2^3$ FFT  Algorithm}}
 	\framesubtitle{\secname : \subsecname}
 	\begin{block}{\centering \textbf{\textit{Divide and Conquer} approach}}
-		\begin{itemize} %\justifying\footnotesize		
+		\begin{itemize} \justifying\footnotesize		
 			\item We can calculate the DFT in series of $s=log_\rho N$ stages, where $\rho$ is the base of the \textit{radix}. 
 			\item This is based on the decomposition of an N point DFT into successively smaller DFTs.
 			\item  In our case, the numeber of stages is:
@@ -49,7 +49,7 @@
 	\end{block}
 
 	\begin{block}{\centering \textbf{Methods to design FFT algorithms}}
-		\begin{enumerate}
+		\begin{enumerate} \justifying\footnotesize
 			\item \textbf{Decimation In Time (DIT):} Splitting successively data sequence $x[n]$ by a factor of 2. 					
 			\item \textbf{Decimation In Frcuency (DIF):} Splitting successively the data sequence $X[k]$ by a factor of 2. 
 		\end{enumerate}											
@@ -72,7 +72,7 @@
   	\frametitle{\textbf{The Radix-$2^3$ FFT  Algorithm}}
 	\framesubtitle{\secname : \subsecname}
 	\begin{block}{\centering \textbf{Order of samples in DIT and DIF}}
-		\begin{itemize}
+		\begin{itemize}\justifying\footnotesize
 			\item  The input samples in FFT algorithms DIF are organized in natural order but its output has not in order.
 			\item The opposite is for DIT.
 		\end{itemize}

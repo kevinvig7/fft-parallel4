@@ -21,7 +21,7 @@
 	\frametitle{\textbf{Introduction}}
 	\framesubtitle{\secname : \subsecname}
 	\begin{block}{\centering \textbf{Objetives}}
-		\begin{itemize} %\justifying\footnotesize
+		\begin{itemize} \justifying\footnotesize
   			\item Design and implement a 4-parallel pipelined architecture for the Complex Fast Fourier Transform (CFFT) based on the radix-$2^3$ algorithm with 128 points 	using folding transformation and register minimization techniques based on ... .
    			\item Frecuency of implementation: 500MHz. 
   			\item Optimization with CSD\footnote{Canonic Signed Digit} multipliers.
@@ -38,7 +38,7 @@
 	\frametitle{\textbf{Introduction}}
 	\framesubtitle{\secname : \subsecname}
 	\begin{block}{\centering \textbf{Workflow}}
-		\begin{enumerate}
+		\begin{enumerate} \justifying\footnotesize
 			\item Obtain the equations that correspond to Butterfly structure of radix-$2^3$ FFT for 8 points.
 			\item Apply this idea to design a 2-parallel pipelined architecture radix-$2^3$ 16-points FFT via folding transformation.
 			\item Traslate this to a 128-points model.
@@ -54,11 +54,11 @@
 	\frametitle{\textbf{Introduction}}
     \framesubtitle{\secname : \subsecname}
 	\begin{block}{\centering \textbf{Types of pipelined Radix-2 FFT architectures}}
-		\begin{enumerate} %\justifying\footnotesize
+		\begin{enumerate} \justifying\footnotesize
   			\item Feedfoward Multi-Path Delay Commutator (MDC).
   			\item Single-Path Delay Feedback architectures (SDF).
   		\end{enumerate}
-		\begin{itemize} %\justifying\footnotesize
+		\begin{itemize} \justifying\footnotesize
   			\item Both butterflies and multipliers are in 50\% utilization ... .
   			\item The SDF use registers more efficiently.
   			\item We will focus on the feedfoward MDC asrchitecture.
