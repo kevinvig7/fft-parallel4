@@ -187,3 +187,29 @@
 	\end{columns}
 \end{frame}
 
+\begin{frame}
+	\frametitle{\textbf{Design of FFT architecture via folding transformation}}
+	\framesubtitle{\secname : \subsecname}
+	\begin{block}{\centering \textbf{Folding architecture for radix-$2^3$ 16 points FFT}}
+		\begin{itemize}\justifying\footnotesize
+        	\item The values in the same column are data that flow in parallel and values in the same row flow through the same path in consecutive clock cycles. 
+			\item For the rotator matrix, each number $k$ of the matrix represent a multiplication by $W^k_N$.
+       	\end{itemize}
+	\end{block}
+		\vspace{-0.15cm}
+		\begin{figure}[h!] \centering
+		   	\includegraphics[width=0.875\paperwidth]{./image/folding-16.png}
+		\end{figure}  
+\end{frame}
+
+\begin{frame}
+	\frametitle{\textbf{Design of FFT architecture via folding transformation}}
+	\framesubtitle{\secname : \subsecname}
+	\vspace{-0.5cm}
+	%\begin{block}{\centering \textbf{Folding architecture for radix-$2^3$ 128 points FFT}}
+	%We can deduce the folding architecture for 128 points following the same method. 
+	%\end{block}
+		\begin{figure}[h!] \centering
+		   	\includegraphics[width=0.875\paperwidth]{./image/folding-128.png}
+		\end{figure}  	
+\end{frame}
