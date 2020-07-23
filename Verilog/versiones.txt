@@ -1,9 +1,8 @@
-version_1 -- primer  --diseño con muchas oartes sin optimizaar
-Version_1_enable_sinc -- version_1 con ahorro de un par de ciclos de clock sincronizando los pulsos de control entre etapas.
-Version_2 - optimizacion de memorias de coeficeints
-Version 3 --Salida de cuantizadores optimizadas 
-Version 4 --- Tdw optimizados 
-Version 5 Salida de BF registrados
+version_1: primer diseño con muchas oartes sin optimizaar
+Version_1_enable_sinc: version_1 con ahorro de un par de ciclos de clock sincronizando los pulsos de control entre etapas.
+Version_2: optimizacion de memorias de coeficeints
+Version_3: Salida de cuantizadores optimizadas 
+Version_4: Tdw optimizados 
+Version_5: Salida de BF registrados
 
-
-Faltaria vesion con CSD
+Version_6: Faltaria vesion con CSD
