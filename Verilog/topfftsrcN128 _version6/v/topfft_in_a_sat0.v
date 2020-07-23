@@ -249,11 +249,11 @@ end
 
  
       
- coeff_mem_1_1     
-      Mcoeff_1_1
-     (.coeff_out(coefficientes1_1),
-      .clk(clk),
-      .rst(!coeffw1_1en));
+// coeff_mem_1_1     
+//      Mcoeff_1_1
+//     (.coeff_out(coefficientes1_1),
+//      .clk(clk),
+//     .rst(!coeffw1_1en));
    
 
  coeff_mem_1_2     
@@ -273,14 +273,27 @@ assign  m_to_sat0_1_down =  blqII0_to_m_down;
       
 
 
-  //producto 1_1
- multip
+//producto 1_1
+// multip
+//#(12,NBITScoeff)
+//       M1_1
+//       (.result(m_to_sat1_0_up),
+//        .muestra(blqII1_to_m_up),
+//      .coeff(coefficientes1_1));      
+
+//////////////////////  
+//  wire [24*2-1:0] MsalidaCSD1;
+   
+ multipCSD1
  #(12,NBITScoeff)
-       M1_1
+       CSD_1
        (.result(m_to_sat1_0_up),
         .muestra(blqII1_to_m_up),
-        .coeff(coefficientes1_1));      
-  
+        .rst(!coeffw1_1en),
+        .clk(clk));//,
+ ////////////////  
+   
+   
    
      //producto 1_2
  multip
@@ -290,6 +303,15 @@ assign  m_to_sat0_1_down =  blqII0_to_m_down;
         .muestra(blqII1_to_m_down),
         .coeff(coefficientes1_2));      
         
+  wire [24*2-1:0] MsalidaCSD2;
+
+ multipCSD2
+ #(12,NBITScoeff)
+       CSD_2
+       (.result(MsalidaCSD2),
+        .muestra(blqII1_to_m_down),
+        .rst(!coeffw1_1en),
+        .clk(clk));//,  
    
    
    
