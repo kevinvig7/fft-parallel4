@@ -209,14 +209,14 @@ reg [11*2-1:0] coefficienteCSD;
 
 reg [11*2-1:0] coefficienteN;
 
-initial begin
+//initial begin
 
-muestraCSD = 'b111100010011110111010011; 
-coefficienteN = 22'b0010110101011010010101;
-coefficienteCSD=22'b0010110101011010010101;
+////muestraCSD = 'b111100010011110111010011; 
+////coefficienteN = 22'b0010110101011010010101;
+////coefficienteCSD=22'b0010110101011010010101;
 
 
-end
+//end
 
 //producto CSD preuba
 // multipCSD

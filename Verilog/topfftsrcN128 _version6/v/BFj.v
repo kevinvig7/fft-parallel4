@@ -59,8 +59,6 @@ assign q_down_i = BFIn_down[NBITS-1:0]; //Img
 
 //conectar los wire de salida del sumador 
 
-
-
 assign sumOut_up_r = $signed(q_up_r) + $signed(q_down_r);
 assign sumOut_up_i = $signed(q_up_i) + $signed(q_down_i);
 
@@ -85,6 +83,7 @@ end
 
 //assign BFOut_down = {sumOut_down_r,sumOut_down_i}; 
 
+////registo para mejorar tiempos
       
  always @(posedge clk) begin
  if (rst) begin

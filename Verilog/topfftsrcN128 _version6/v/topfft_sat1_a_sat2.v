@@ -167,11 +167,11 @@ end
  
       
       
-    coeff_mem_4_0
-      Mcoeff_4_0
-     (.coeff_out(coefficientes4_0),
-      .clk(clk),
-      .rst(!coeffw4_0en));     
+//    coeff_mem_4_0
+//      Mcoeff_4_0
+//     (.coeff_out(coefficientes4_0),
+//      .clk(clk),
+//      .rst(!coeffw4_0en));     
    
     coeff_mem_4_1
       Mcoeff_4_1
@@ -201,21 +201,48 @@ end
 /////////////////Productos full   
    
   //producto 4_0
- multip
+// multip
+// #(20,NBITScoeff)
+//       M4_0
+//       (.result(m_a_blqVI_0_up),
+//        .muestra(blqV_0_a_m_up),
+//        .coeff(coefficientes4_0));      
+ 
+// /////
+//  wire [32*2-1:0] MsalidaCSD_4_0;
+ 
+  multipCSD_4_0
  #(20,NBITScoeff)
-       M4_0
+       CSD_4_0
        (.result(m_a_blqVI_0_up),
         .muestra(blqV_0_a_m_up),
-        .coeff(coefficientes4_0));      
+        .rst(!coeffw4_0en),
+        .clk(clk));//,
+ 
+ /////
+ 
  
    
-     //producto 4_1
+//     //producto 4_1
  multip
  #(20,NBITScoeff)
        M4_1
        (.result(m_a_blqVI_0_down),
-        .muestra(blqV_0_a_m_down),
+       .muestra(blqV_0_a_m_down),
         .coeff(coefficientes4_1));      
+
+/////////
+ wire [32*2-1:0] MsalidaCSD_4_1;
+
+  multipCSD_4_1
+ #(20,NBITScoeff)
+       CSD_4_1
+       (.result(MsalidaCSD_4_1),
+        .muestra(blqV_0_a_m_down),
+        .rst(!coeffw4_1en),
+        .clk(clk));//,
+//////////
+
 
    
      //producto 4_2

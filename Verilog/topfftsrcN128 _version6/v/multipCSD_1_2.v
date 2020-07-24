@@ -1,4 +1,4 @@
-module multipCSD2
+module multipCSD_1_2
 #(parameter NBITS=12,
 parameter NBITScoeff=11,
 parameter NBITS_out=NBITS+NBITScoeff+1)
@@ -11,7 +11,7 @@ parameter NBITS_out=NBITS+NBITScoeff+1)
 
 
 
-
+ wire csd;
   wire signed [NBITS-1:0] mr;
   wire signed [NBITS-1:0] mi;
     
@@ -27,7 +27,7 @@ assign mi = muestra[NBITS-1:0];        //Img
     
 contador
  #(8) 
-   control_CSD2
+   control_CSD_1_2
         (.clk_out(csd),
          .clk(clk),
          .rst(rst)); 

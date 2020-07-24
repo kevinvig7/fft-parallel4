@@ -282,11 +282,11 @@ assign  m_to_sat0_1_down =  blqII0_to_m_down;
 //      .coeff(coefficientes1_1));      
 
 //////////////////////  
-//  wire [24*2-1:0] MsalidaCSD1;
+//  wire [24*2-1:0] MsalidaCSD_1_1;
    
- multipCSD1
+ multipCSD_1_1
  #(12,NBITScoeff)
-       CSD_1
+       CSD_1_1
        (.result(m_to_sat1_0_up),
         .muestra(blqII1_to_m_up),
         .rst(!coeffw1_1en),
@@ -303,11 +303,11 @@ assign  m_to_sat0_1_down =  blqII0_to_m_down;
 //        .muestra(blqII1_to_m_down),
 //        .coeff(coefficientes1_2));      
         
-//  wire [24*2-1:0] MsalidaCSD2;
+//  wire [24*2-1:0] MsalidaCSD_1_2;
 
- multipCSD2
+ multipCSD_1_2
  #(12,NBITScoeff)
-       CSD_2
+       CSD_1_2
        (.result(m_to_sat1_1_down),
         .muestra(blqII1_to_m_down),
         .rst(!coeffw1_1en),
