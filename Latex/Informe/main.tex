@@ -41,12 +41,25 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
 %%%%%%%%
 \begin{document}
 \title{
-\huge \bf VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$\mathbf{2^3}$ FFT Architecture via Folding Transformation
+\huge \bf VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$\mathbf{2^3}$ FFT Architecture via Folding Transformation\\
 }
 \author{
-James J. W. Kunst   {\tt\small jjwk89@gmail.com}\\
-Kevin H. Viglianco	{\tt\small kevinviglianco@gmail.com}\\	 
-Daniel R. Garcia	{\tt\small dani6rg@gmail.com}\\		
+\begin{minipage}{0.4\linewidth}
+	\raggedleft
+	James J. W. Kunst\\
+	Kevin H. Viglianco\\
+	Daniel R. Garcia
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+	\raggedright	
+	{\tt\small jjwk89@gmail.com}\\
+	{\tt\small kevinviglianco@gmail.com}\\	
+	{\tt\small dani6rg@gmail.com}			
+\end{minipage}			
+%James J. W. Kunst  {\tt\small jjwk89@gmail.com}\\
+%Kevin H. Viglianco	{\tt\small kevinviglianco@gmail.com}\\	 
+%Daniel R. Garcia	{\tt\small dani6rg@gmail.com}
+\\		
 [0.5cm]
 {\large \bf Digital Signal Processing in Very Large Scale Integration Systems}\\
 [0.5cm]
@@ -59,7 +72,7 @@ Universidad Nacional de Córdoba - FCEFyN\\
 Av.Vélez Sársfield 1611, X5016GCA, C\'ordoba, Argentina\\
 [0.5cm]
 Fundación FULGOR\\
-Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina         
+Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina%\\[0.5cm]        
 }
 \maketitle
 
@@ -123,6 +136,7 @@ In addition, the input samples in FFT algorithms DIF are organized in natural or
 Following the methodology presented in \cite{proakis_digital_nodate}, we can understand and apply the mathematical expressions of \textit{radix-}$2^3$ DIF explained in \cite{jia_efficient_nodate}. 
 
 These fundamental equations are:
+
 \begin{align}\label{eqn:radix}
 C_{8k+0} = \sum_{n=0}^{N/8-1} \bigg\{&[(x_n + x_{n+\frac{N}{2}}) + (x_{n+\frac{N}{4}} + x_{n+\frac{3N}{4}})] + 	   				    \\
 &[(x_{n+\frac{N}{8}} + x_{n+\frac{5N}{8}}) + (x_{n+\frac{3N}{8}} + x_{n+\frac{7N}{8}})] \bigg\} W_N^{0n} W_{N/8}^ {nk}     \nonumber\\
@@ -146,8 +160,9 @@ C_{8k+3} = \sum_{n=0}^{N/8-1} \bigg\{&[(x_n - x_{n+\frac{N}{2}}) +j (x_{n+\frac{
 &[(x_{n+\frac{N}{8}} - x_{n+\frac{5N}{8}}) +j (x_{n+\frac{3N}{8}} - x_{n+\frac{7N}{8}})] \bigg\} W_N^{3n} W_{N/8}^ {nk}    \nonumber\\
 %
 C_{8k+7} = \sum_{n=0}^{N/8-1} \bigg\{&[(x_n - x_{n+\frac{N}{2}}) +j (x_{n+\frac{N}{4}} + x_{n+\frac{3N}{4}})] - W_N^{3N/8} \nonumber\\
-&[(x_{n+\frac{N}{8}} - x_{n+\frac{5N}{8}}) +j (x_{n+\frac{3N}{8}} - x_{n+\frac{7N}{8}})] \bigg\} W_N^{7n} W_{N/8}^ {nk}    \nonumber 	
+&[(x_{n+\frac{N}{8}} - x_{n+\frac{5N}{8}}) +j (x_{n+\frac{3N}{8}} - x_{n+\frac{7N}{8}})] \bigg\} W_N^{7n} W_{N/8}^ {nk}    \nonumber	
 \end{align}
+
 In Fig. \ref{fig:8puntosradix8conexion} and Fig. \ref{fig:8puntosradix8burbujas} we represent the equivalent diagram of interconnections and data flows from the equations presented in (\ref{eqn:radix}).
 
 The use of higher value radices lead to different amount of rotators. If we compare the quantity of rotators of an architecture \textit{radix-}$2$ FFT with an architecture \textit{radix-}$2^k$ FFT, this last has less number of phase factors than use a \textit{radix-}$2$.
@@ -161,13 +176,13 @@ The use of higher value radices lead to different amount of rotators. If we comp
 \end{figure}
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.95\linewidth]{Diagramas/miSeccionFiguras/8PuntosRadix8Burbujas.pdf}
+	\includegraphics[width=0.97\linewidth]{Diagramas/miSeccionFiguras/8PuntosRadix8Burbujas.pdf}
 	\caption{Data flow graph (DFG) based in equations (\ref{eqn:radix}).}
 	\label{fig:8puntosradix8burbujas}
 \end{figure}
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Diagramas/miSeccionFiguras/BloquesDft.pdf}
+	\includegraphics[width=0.81\linewidth]{Diagramas/miSeccionFiguras/BloquesDft.pdf}
 	\caption{Decomposing a \textit{radix-}$2^3$ 128-point DFT	}
 	\label{fig:bloquesdft}
 \end{figure}
@@ -188,6 +203,7 @@ The next step to can calculate finally our 128 point DFT is to find the suitable
 \end{figure}
 
 With the DFT's previous decomposition we learned how to get whole the coefficients $C_{8k+i}$ that represent the samples in frequency $X[k]$ obtained from a combination of the different instances of $x[n]$. This method take us to apply step by step the equation (\ref{eqn:radix}) to our design and finally arrive to the definitive architecture, the Fig. \ref{fig:128puntosradix8conexion} shows us a \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage is building with 64 butterflies of radix-2 base.
+
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/128PuntosRadix8Conexion.pdf}
@@ -200,8 +216,9 @@ With the DFT's previous decomposition we learned how to get whole the coefficien
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
+\newpage
 \section{DESIGN OF FFT ARCHITECTURE VIA FOLDING TRANFORMATION}
-In this section, we illustrate the folding transformation method to derive a 16-point DIF FFT 4-parallel architecture as an example and then, using the same method, we extend it to 128-point architecture. To do this, we will use the architecture proposed in \cite{ayinala_pipelined_2012}, to do the folding transfomation and register minimization techiques we will use \cite{pipeline_parhi_book}.
+In this section, we illustrate the folding transformation method to derive a 16-point DIF FFT 4-parallel architecture as an example and then, using the same method, we extend it to 128-point architecture. To do this, we will use the architecture proposed in \cite{ayinala_pipelined_2012}, to do the folding transfomation and register minimization techiques we will use \cite{folding_parhi_book}.
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
@@ -290,7 +307,7 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=2\nonumber
 \end{align}
 \end{small}
 We can see that the number of registers required to implement the folding equations in (\ref{eqn:ConRetiming}) is 80. For minimize the number of registers we use the register minimization technique. 
-If we let the output of node A0 be $y_{(0)}$ and $y_{(8)}$ and the output of the node A1 be $y_{(1)}$ and $y_{(9)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively. More information about this method can be found on \cite{pipeline_parhi_book}.
+If we let the output of node A0 be $y_{(0)}$ and $y_{(8)}$ and the output of the node A1 be $y_{(1)}$ and $y_{(9)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively. More information about this method can be found on \cite{folding_parhi_book}.
 \begin{figure}[t!]
 \centering
  \includegraphics[width=0.9\linewidth]{Diagramas/tab_life_a.eps}
@@ -309,7 +326,7 @@ If we let the output of node A0 be $y_{(0)}$ and $y_{(8)}$ and the output of the
 \caption{Linear lifetime chart for the variables $w_{(0)}, w_{(1)},...,w_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-c}
 \end{figure}
-The register allocation tables for each of lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} respectively, we can implement the same equations in (\ref{eqn:ConRetiming}) using 20 registers with register minimization techniques. The folded architecture in Fig. \ref{fig:circ-folding-16} is synthesized using the folding equations and the register allocation tables, the method can be found in \cite{pipeline_parhi_book}. 
+The register allocation tables for each of lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} respectively, we can implement the same equations in (\ref{eqn:ConRetiming}) using 20 registers with register minimization techniques. The folded architecture in Fig. \ref{fig:circ-folding-16} is synthesized using the folding equations and the register allocation tables, the method can be found on \cite{folding_parhi_book}. 
 
 The inputs of each folding node are represented with a matrix where the values in the same column are data that flow in parallel and values in the same row flow through the same path in consecutive clock cycles. The first two rows represents the inputs of the superior BF and the others two represents the input of the inferior BF. 
 The same criteria is used for represent the constants of rotators, where each number $k$ of the matrix represent a multiplication by $W^k_N$.
@@ -476,7 +493,7 @@ In each stage of the Fig. \ref{fig:4paralelo128pradix8cuantizacion1}, input samp
 \begin{equation*}%\label{eq:sqnr}
 SQNR_{dB} = 10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Signal_{FloatPoint} - Signal_{FixedPoint}\}}  \bigg)
 \end{equation*}
-SQNR represents computing the logarithmic relationship between float signal variance over error variance from an signal given.
+SQNR computation represents the logarithmic relationship between float signal variance over error variance from an signal given.
 
 The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representation means a number signed (S) with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddle} factors and the architecture's output.
 
@@ -514,21 +531,276 @@ Whole elements on the architecture such as multipliers and butterflies are compl
 	\label{fig:v5esquemap}
 \end{figure*}
 
-Hello wold!
+Hello wold! 
 
 
 
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
-\section{RESULTS}
+\section{RESULTS AND COMPARISONS}
+Texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\\
+
+texto
+\begin{table}[t!]
+	\centering%\raggedleft%\flushright
+	\caption{Design instance 1. Timing-Area-Power Report at 500MHz}
+	\begin{tabular}{@{}lr@{}}
+		%\hline\hline
+		Point 						& Path(ns)\\
+		\hline\hline
+		data arrival time   		& 5.60\\ 
+		clock CLK (rise edge)  		& 2.00\\
+		clock network delay (ideal) & 2.00\\
+		library setup time			& 1.95\\
+		\hline
+		data required time			& 1.95\\
+		data arrival time           & -5.60\\
+		\hline
+		slack (VIOLATED)            & -3.65\\	
+		\hline
+	\end{tabular}
+
+	\begin{tabular}{@{}lr@{}}\\
+		Logical Elements\\
+		\hline\hline
+		Number of ports                         &1228\\
+		Number of nets                        &112376\\
+		Number of cells                       &102726\\
+		Number of combinational cells          &95310\\
+		Number of sequential cells              &7404\\
+		Number of macros/black boxes               &0\\
+		Number of buf/inv                      &27817\\
+		\hline
+		Combinational area             &291201.116637\\
+		Buf/Inv area                    &44892.767764\\
+		Noncombinational area           &58830.508095\\
+		\hline
+		Total cell area                &350031.624731\\	
+		\hline
+	\end{tabular}
+
+	\begin{tabular}{@{}lcccr@{}}\\
+		Power Group		 &Internal 	&Switching 	&Leakage		&Total Power\\
+		\hline\hline
+		io pad           &0.0000    &0.0000     &0.0000    		&0.0000\\
+		clock network    &34.8220   &603.2268   &1.4573e+06 	&639.6328\\
+		register         &54.2228   &0.2699     &4.0540e+05 	&54.8980\\  
+		sequential       &0.0000    &0.0000     &0.0000     	&0.0000\\  
+		combinational    &0.2884    &0.7304     &1.5016e+04 	&1.0337\\ 
+		\hline
+		Total            &89.333mW  &604.227mW  &1.877e+06nW	&695.564mW\\	
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Design instance 2. Timing-Area-Power Report at 500MHz}
+	\begin{tabular}{@{}lr@{}}
+		%\hline\hline
+		Point 						&Path(ns)\\
+		\hline\hline
+		data arrival time   		&2.71\\ 
+		clock CLK (rise edge)  		&2.00\\
+		clock network delay (ideal) &2.00\\
+		library setup time			&1.95\\
+		\hline
+		data required time			&1.95\\
+		data arrival time           &-2.71\\
+		\hline
+		slack (VIOLATED)            &-0.76\\	
+		\hline
+	\end{tabular}
+	
+	\begin{tabular}{@{}lr@{}}\\
+		Logical Elements\\
+		\hline\hline
+		Number of ports                &1826\\
+		Number of nets                 &114367\\
+		Number of cells                &104198\\
+		Number of combinational cells  &96271\\
+		Number of sequential cells     &7912\\
+		Number of macros/black boxes   &0\\
+		Number of buf/inv              &26770\\
+		\hline
+		Combinational area             &294733.068172\\
+		Buf/Inv area                   &41738.133324\\
+		Noncombinational area          &62955.185703\\
+		\hline
+		Total cell area                &357688.253875\\	
+		\hline
+	\end{tabular}
+	
+	\begin{tabular}{@{}lcccr@{}}\\
+		Power Group		 &Internal 	&Switching 	&Leakage		&Total Power\\
+		\hline\hline
+		io pad           &0.0000    &0.0000     &0.0000    		&0.0000\\
+		clock network    &36.5175   &603.3234   &1.3702e+06 	&641.2228\\
+		register         &57.8422   &0.2604     &4.3383e+05 	&58.5363\\  
+		sequential       &0.0000    &0.0000     &0.0000     	&0.0000\\  
+		combinational    &0.5748    &1.4180     &1.5702e+05 	&2.1498\\ 
+		\hline
+		Total            &94.934mW  &605.001mW  &1.961e+06nW	&701.908mW\\	
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[t!]
+	\centering
+	\caption{Design instance 3. Timing-Area-Power Report at 500MHz}
+	\begin{tabular}{@{}lr@{}}
+		%\hline\hline
+		Point 						&Path(ns)\\
+		\hline\hline
+		data arrival time   		&2.76\\ 
+		clock CLK (rise edge)  		&2.00\\
+		clock network delay (ideal) &2.00\\
+		library setup time			&1.95\\
+		\hline
+		data required time			&1.95\\
+		data arrival time           &-2.76\\
+		\hline
+		slack (VIOLATED)            &-0.81\\	
+		\hline
+	\end{tabular}
+	
+	\begin{tabular}{@{}lr@{}}\\
+		Logical Elements\\
+		\hline\hline
+		Number of ports                &1571\\
+		Number of nets                 &94523\\
+		Number of cells                &87311\\
+		Number of combinational cells  &80220\\
+		Number of sequential cells     &7076\\
+		Number of macros/black boxes   &0\\
+		Number of buf/inv              &23823\\
+		\hline
+		Combinational area             &233949.801414\\
+		Buf/Inv area                   &36323.350042\\
+		Noncombinational area          &56229.647552\\
+		\hline
+		Total cell area                &290179.448967\\	
+		\hline
+	\end{tabular}
+	
+	\begin{tabular}{@{}lcccr@{}}\\
+		Power Group		 &Internal 	&Switching 	&Leakage		&Total Power\\
+		\hline\hline
+		io pad           &0.0000    &0.0000     &0.0000    		&0.0000\\
+		clock network    &24.2875   &583.5885   &1.0269e+06 	&608.9492\\
+		register         &51.0349   &0.1728     &3.8748e+05 	&51.5952\\  
+		sequential       &0.0000    &0.0000     &0.0000     	&0.0000\\  
+		combinational    &0.9554    &1.1271     &1.8640e+05 	&2.2689\\ 
+		\hline
+		Total            &76.277mW  &584.888mW  &1.600e+06nW	&662.813mW\\	
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Design instance 4. Timing-Area-Power Report at 500MHz}	
+	\begin{tabular}{@{}lr@{}}
+		%\hline\hline
+		Point 						& Path(ns)\\
+		\hline\hline
+		data arrival time   		&1.94\\ 
+		clock CLK (rise edge)  		&2.00\\
+		clock network delay (ideal) &2.00\\
+		library setup time			&1.94\\
+		\hline
+		data required time			&1.94\\
+		data arrival time           &-1.94\\
+		\hline
+		slack (MET)                 &0.00\\	
+		\hline
+	\end{tabular}
+	
+	\begin{tabular}{@{}lr@{}}\\
+		Logical Elements\\
+		\hline\hline
+		Number of ports                &2315\\
+		Number of nets                 &75713\\
+		Number of cells                &66284\\
+		Number of combinational cells  &58017\\
+		Number of sequential cells     &8240\\
+		Number of macros/black boxes   &0\\
+		Number of buf/inv              &14789\\
+		\hline
+		Combinational area             &195877.841872\\
+		Buf/Inv area                   &24429.880240\\
+		Noncombinational area          &64463.046570\\
+		\hline
+		Total cell area                &260340.888442\\	
+		\hline
+	\end{tabular}
+
+	\begin{tabular}{@{}lcccr@{}}\\
+		Power Group		 &Internal 	&Switching 	&Leakage		&Total Power\\
+		\hline\hline
+		io pad           &0.0000    &0.0000     &0.0000    		&0.0000\\
+		clock network    &18.1655   &581.6307   &7.8320e+05 	&600.6672\\
+		register         &58.2275   &0.2873     &4.4422e+05 	&58.9591\\  
+		sequential       &0.0000    &0.0000     &0.0000     	&0.0000\\  
+		combinational    &0.7768    &0.9958     &1.5970e+05 	&1.9322\\ 
+		\hline
+		Total            &77.169mW  &582.913mW  &1.387e+06nW	&661.558mW\\	
+		\hline
+	\end{tabular}
+	%\newline
+	%\caption*{Design instance 4.}	
+\end{table}
 
 
 
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
-\section{CONCLUSION}
+\section{CONCLUSIONS}
 
 
 
