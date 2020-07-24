@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="69533334fs"></ZoomStartTime>
-      <ZoomEndTime time="102333335fs"></ZoomEndTime>
-      <Cursor1Time time="85000000fs"></Cursor1Time>
+      <ZoomStartTime time="182984350fs"></ZoomStartTime>
+      <ZoomEndTime time="215984351fs"></ZoomEndTime>
+      <Cursor1Time time="2750000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="246"></NameColumnWidth>
-      <ValueColumnWidth column_width="139"></ValueColumnWidth>
+      <ValueColumnWidth column_width="135"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="50" />
+   <WVObjectSize size="48" />
    <wvobject type="divider" fp_name="divider2769">
       <obj_property name="label">-----------------------</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -38,10 +38,6 @@
    </wvobject>
    <wvobject type="divider" fp_name="divider2769">
       <obj_property name="label">-----------------------</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">--------Viejo</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider2769">
@@ -75,7 +71,7 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">-----------------------</obj_property>
+      <obj_property name="label">CSD1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/dut/u_topfft_in_a_sat0/CSD_1/csd" type="logic">
@@ -93,20 +89,20 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">-----------------------</obj_property>
+      <obj_property name="label">CSD2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/coefficienteN" type="array">
-      <obj_property name="ElementShortName">coefficienteN[21:0]</obj_property>
-      <obj_property name="ObjectShortName">coefficienteN[21:0]</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/u_topfft_in_a_sat0/CSD_2/muestra" type="array">
+      <obj_property name="ElementShortName">muestra[23:0]</obj_property>
+      <obj_property name="ObjectShortName">muestra[23:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/muestraCSD" type="array">
-      <obj_property name="ElementShortName">muestraCSD[23:0]</obj_property>
-      <obj_property name="ObjectShortName">muestraCSD[23:0]</obj_property>
+   <wvobject fp_name="/topfft_tb/dut/u_topfft_in_a_sat0/CSD_2/result" type="array">
+      <obj_property name="ElementShortName">result[47:0]</obj_property>
+      <obj_property name="ObjectShortName">result[47:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/topfft_tb/MsalidaCSD" type="array">
-      <obj_property name="ElementShortName">MsalidaCSD[47:0]</obj_property>
-      <obj_property name="ObjectShortName">MsalidaCSD[47:0]</obj_property>
+   <wvobject type="divider" fp_name="divider2769">
+      <obj_property name="label">-----------------------</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider2769">
       <obj_property name="label">-----------------------</obj_property>
@@ -144,6 +140,22 @@
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider2769">
+      <obj_property name="label">-----------------------</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/u_topfft_in_a_sat0/o_enable" type="logic">
+      <obj_property name="ElementShortName">o_enable</obj_property>
+      <obj_property name="ObjectShortName">o_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/u_topfft_sat0_a_sat1/o_enable" type="logic">
+      <obj_property name="ElementShortName">o_enable</obj_property>
+      <obj_property name="ObjectShortName">o_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/topfft_tb/dut/u_topfft_sat1_a_sat2/o_enable" type="logic">
+      <obj_property name="ElementShortName">o_enable</obj_property>
+      <obj_property name="ObjectShortName">o_enable</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider2769">
       <obj_property name="label">Salida sat3 file</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
@@ -166,26 +178,6 @@
       <obj_property name="ElementShortName">file_fftOut1_down[19:0]</obj_property>
       <obj_property name="ObjectShortName">file_fftOut1_down[19:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">-----------------------</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/u_topfft_in_a_sat0/o_enable" type="logic">
-      <obj_property name="ElementShortName">o_enable</obj_property>
-      <obj_property name="ObjectShortName">o_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/u_topfft_sat0_a_sat1/o_enable" type="logic">
-      <obj_property name="ElementShortName">o_enable</obj_property>
-      <obj_property name="ObjectShortName">o_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/u_topfft_sat1_a_sat2/o_enable" type="logic">
-      <obj_property name="ElementShortName">o_enable</obj_property>
-      <obj_property name="ObjectShortName">o_enable</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">-----------------------</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider2769">
       <obj_property name="label">Salida sat3 verilog</obj_property>

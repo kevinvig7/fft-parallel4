@@ -62,18 +62,18 @@ end
 else begin
   
 //Coeff real
-pp_mr_cr[0]= mr<<<9;
-pp_mr_cr[1]=-mr<<<7;       
-pp_mr_cr[2]=-mr<<<5;
-pp_mr_cr[3]= mr<<<3;
-pp_mr_cr[4]= mr<<<1;
+pp_mr_cr[0]=-mr<<<9;
+pp_mr_cr[1]= mr<<<7;       
+pp_mr_cr[2]= mr<<<4;
+pp_mr_cr[3]= mr<<<2;
+pp_mr_cr[4]= mr<<<0;
 pp_mr_cr_t= pp_mr_cr[0]+pp_mr_cr[1]+pp_mr_cr[2]+pp_mr_cr[3]+pp_mr_cr[4];   
 
-pp_mi_cr[0]= mi<<<9;
-pp_mi_cr[1]=-mi<<<7;       
-pp_mi_cr[2]=-mi<<<5;
-pp_mi_cr[3]= mi<<<3;
-pp_mi_cr[4]= mi<<<1;
+pp_mi_cr[0]=-mi<<<9;
+pp_mi_cr[1]= mi<<<7;       
+pp_mi_cr[2]= mi<<<4;
+pp_mi_cr[3]= mi<<<2;
+pp_mi_cr[4]= mi<<<0;
 pp_mi_cr_t= pp_mi_cr[0]+pp_mi_cr[1]+pp_mi_cr[2]+pp_mi_cr[3]+pp_mi_cr[4];   
 
 //Coeff Imagiario
