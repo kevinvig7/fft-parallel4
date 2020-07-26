@@ -1,4 +1,4 @@
-module multipCSD_4_1
+module multipCSD_4_3
 #(parameter NBITS=12,
 parameter NBITScoeff=11,
 parameter NBITS_out=NBITS+NBITScoeff+1)
@@ -29,7 +29,7 @@ assign mi = muestra[NBITS-1:0];        //Img
     
 contador_int
  #(8) 
-   control_CSD_4_1
+   control_CSD_4_3
         (.num_ciclo(num_ciclo),
          .clk(clk),
          .rst(rst)); 
