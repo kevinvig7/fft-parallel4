@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="157775000fs"></ZoomStartTime>
-      <ZoomEndTime time="189125001fs"></ZoomEndTime>
-      <Cursor1Time time="163000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="313500001fs"></ZoomEndTime>
+      <Cursor1Time time="123000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="246"></NameColumnWidth>
       <ValueColumnWidth column_width="168"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="43" />
+   <WVObjectSize size="38" />
    <wvobject type="divider" fp_name="divider2769">
       <obj_property name="label">-----------------------</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -55,26 +55,6 @@
    <wvobject type="divider" fp_name="divider2769">
       <obj_property name="label">-----------------------</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">CSD_1_1</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">CSD_1_2</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">CSD_4_0</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider2769">
-      <obj_property name="label">CSD_4_1</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject fp_name="/topfft_tb/dut/u_topfft_sat1_a_sat2/CSD_4_1/muestra" type="array">
-      <obj_property name="ElementShortName">muestra[39:0]</obj_property>
-      <obj_property name="ObjectShortName">muestra[39:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/topfft_tb/dut/u_topfft_sat1_a_sat2/CSD_4_1/num_ciclo" type="array">
       <obj_property name="ElementShortName">num_ciclo[1:0]</obj_property>
