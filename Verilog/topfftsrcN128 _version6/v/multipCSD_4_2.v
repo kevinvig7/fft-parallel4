@@ -4,12 +4,11 @@ parameter NBITScoeff=11,
 parameter NBITS_out=NBITS+NBITScoeff+1)
  (output [NBITS_out*2-1:0] result,
   input  [NBITS*2-1:0] muestra,
-  input clk,
-  input rst);//,
+  input [1:0] csd_num_ciclo);//,,
   //input  [NBITScoeff*2-1:0] coeff);
 
 
- wire [1:0] num_ciclo;
+
  
   wire signed [NBITS-1:0] mr;
   wire signed [NBITS-1:0] mi;
@@ -24,12 +23,12 @@ assign mr = muestra[NBITS*2-1:NBITS]; //Real
 assign mi = muestra[NBITS-1:0];        //Img
     
     
-contador_int
- #(8) 
-   control_CSD_4_2
-        (.num_ciclo(num_ciclo),
-         .clk(clk),
-         .rst(rst)); 
+//contador_int
+// #(8) 
+//   control_CSD_4_2
+//        (.num_ciclo(num_ciclo),
+//         .clk(clk),
+//         .rst(rst)); 
         
 // CSD //////
 reg signed [NBITS*2-1:0] pp_mr_cr [0:4];
@@ -49,7 +48,7 @@ reg signed [NBITS*2-1:0] pp_mi_cr_t;
 
 always @ (*) begin
 
-if (num_ciclo<2'b11) begin
+if (csd_num_ciclo<2'b11) begin
 
 resultR = $signed({mr,{NBITScoeff-2{1'b0}}});          //Real
 resultI = $signed({mi,{NBITScoeff-2{1'b0}}});         //Img
