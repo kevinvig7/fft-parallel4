@@ -1,33 +1,34 @@
-module multipCSD
+module multipCSD_4_2
 #(parameter NBITS=12,
 parameter NBITScoeff=11,
 parameter NBITS_out=NBITS+NBITScoeff+1)
  (output [NBITS_out*2-1:0] result,
   input  [NBITS*2-1:0] muestra,
-  input  [NBITScoeff*2-1:0] coeff);
+  input [1:0] csd_num_ciclo);//,,
+  //input  [NBITScoeff*2-1:0] coeff);
 
 
 
+ 
   wire signed [NBITS-1:0] mr;
   wire signed [NBITS-1:0] mi;
     
   wire signed [NBITScoeff-1:0] cr;
   wire signed [NBITScoeff-1:0] ci;
     
-  wire signed [NBITS_out-1:0] resultR; //Real
-  wire signed [NBITS_out-1:0] resultI; //Img
+  reg signed [NBITS_out-1:0] resultR; //Real
+  reg signed [NBITS_out-1:0] resultI; //Img
     
 assign mr = muestra[NBITS*2-1:NBITS]; //Real
 assign mi = muestra[NBITS-1:0];        //Img
     
-assign cr = coeff[NBITScoeff*2-1:NBITScoeff]; //Real
-assign ci = coeff[NBITScoeff-1:0];        //Img
-        
-        
-        //NOrmal        
-//assign resultR = mr*cr-mi*ci;          //Real
-//assign resultI = mr*ci+mi*cr;         //Img
-
+    
+//contador_int
+// #(8) 
+//   control_CSD_4_2
+//        (.num_ciclo(num_ciclo),
+//         .clk(clk),
+//         .rst(rst)); 
         
 // CSD //////
 reg signed [NBITS*2-1:0] pp_mr_cr [0:4];
@@ -45,11 +46,19 @@ reg signed [NBITS*2-1:0] pp_mr_ci_t;
 reg signed [NBITS*2-1:0] pp_mi_cr [0:4];
 reg signed [NBITS*2-1:0] pp_mi_cr_t;
 
+always @ (*) begin
 
+if (csd_num_ciclo<2'b11) begin
 
+resultR = $signed({mr,{NBITScoeff-2{1'b0}}});          //Real
+resultI = $signed({mi,{NBITScoeff-2{1'b0}}});         //Img
 
-always @ (*)
-     begin
+//resultR = {mr,{NBITScoeff-2{1'b0}}};          //Real
+//resultI = {mi,{NBITScoeff-2{1'b0}}};         //Img
+
+end
+else begin
+  
 //Coeff real
 pp_mr_cr[0]= mr<<<9;
 pp_mr_cr[1]=-mr<<<7;       
@@ -64,6 +73,7 @@ pp_mi_cr[2]=-mi<<<5;
 pp_mi_cr[3]= mi<<<3;
 pp_mi_cr[4]= mi<<<1;
 pp_mi_cr_t= pp_mi_cr[0]+pp_mi_cr[1]+pp_mi_cr[2]+pp_mi_cr[3]+pp_mi_cr[4];   
+ 
 
 //Coeff Imagiario
 pp_mr_ci[0]=-mr<<<9;       
@@ -81,12 +91,14 @@ pp_mi_ci[3]= mi<<<2;
 pp_mi_ci[4]= mi<<<0;
 pp_mi_ci_t= pp_mi_ci[0]+pp_mi_ci[1]+pp_mi_ci[2]+pp_mi_ci[3]+pp_mi_ci[4];
 
+resultR = pp_mr_cr_t-pp_mi_ci_t;          //Real
+resultI = pp_mr_ci_t+pp_mi_cr_t;         //Img
+
     end    
-        
+ end      
   
 
-assign resultR = pp_mr_cr_t-pp_mi_ci_t;          //Real
-assign resultI = pp_mr_ci_t+pp_mi_cr_t;         //Img
+
 
     
 assign result[NBITS_out*2-1:NBITS_out] =resultR ;   //Real

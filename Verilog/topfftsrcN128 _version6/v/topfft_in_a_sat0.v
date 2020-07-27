@@ -42,17 +42,18 @@ module topfft_in_a_sat0
 
      
       
-  wire [NBITScoeff*2-1:0] coefficientes0_0;
-  wire [NBITScoeff*2-1:0] coefficientes0_1;
-  wire [NBITScoeff*2-1:0] coefficientes1_0;
-  wire [NBITScoeff*2-1:0] coefficientes1_1;
-  wire [NBITScoeff*2-1:0] coefficientes1_2;
+//  wire [NBITScoeff*2-1:0] coefficientes0_0;
+//  wire [NBITScoeff*2-1:0] coefficientes0_1;
+//  wire [NBITScoeff*2-1:0] coefficientes1_0;
+//  wire [NBITScoeff*2-1:0] coefficientes1_1;
+//  wire [NBITScoeff*2-1:0] coefficientes1_2;
   
     
    
+wire csd;
 
-  reg coeffw1_1en;
-  reg coeffw1_2en;
+  reg enable_csd;
+  //reg coeffw1_2en;
   
   wire ctrl_Blq_BFII,coeffCMStage2_en;
   
@@ -238,31 +239,13 @@ Blq
    
 always @(posedge clk) begin
 if(rst) begin
-coeffw1_1en=0;
-coeffw1_2en=0;
- end else begin
-coeffw1_1en=coeffCMStage2_en;
-coeffw1_2en=coeffCMStage2_en;
+enable_csd=0;
+end else begin
+enable_csd=coeffCMStage2_en;
 end 
 end
    
 
- 
-      
- coeff_mem_1_1     
-      Mcoeff_1_1
-     (.coeff_out(coefficientes1_1),
-      .clk(clk),
-      .rst(!coeffw1_1en));
-   
-
- coeff_mem_1_2     
-      Mcoeff_1_2
-     (.coeff_out(coefficientes1_2),
-      .clk(clk),
-      .rst(!coeffw1_1en));
-   
-   
    
    
    
@@ -273,23 +256,35 @@ assign  m_to_sat0_1_down =  blqII0_to_m_down;
       
 
 
-  //producto 1_1
- multip
+
+contador
+ #(8) 
+   control_CSD
+        (.clk_out(csd),
+         .clk(clk),
+         .rst(!enable_csd));
+
+
+//producto 1_1
+
+   
+ multipCSD_1_1
  #(12,NBITScoeff)
-       M1_1
+       CSD_1_1
        (.result(m_to_sat1_0_up),
         .muestra(blqII1_to_m_up),
-        .coeff(coefficientes1_1));      
-  
+        .csd(csd));//,
+ ////////////////  
    
-     //producto 1_2
- multip
+    
+//producto 1_2
+
+ multipCSD_1_2
  #(12,NBITScoeff)
-       M1_2
+       CSD_1_2
        (.result(m_to_sat1_1_down),
         .muestra(blqII1_to_m_down),
-        .coeff(coefficientes1_2));      
-        
+        .csd(csd));//,  
    
    
    

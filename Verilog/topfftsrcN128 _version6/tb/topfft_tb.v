@@ -152,13 +152,14 @@ always @(posedge clk) begin
              scan_in3 = $fscanf(data_in, "%b\n", fftIn1_down);
         end
              else begin
+               
              fftIn0_up  ={NBITS*2{1'bz}};
              fftIn0_down={NBITS*2{1'bz}};
              fftIn1_up  ={NBITS*2{1'bz}};
              fftIn1_down={NBITS*2{1'bz}};
              
-             #50;
-              
+          #30;
+           rst =1'b1; 
 
               $finish;
         end
@@ -201,44 +202,6 @@ assign comp_fftOut1_down= (fftOut1_down === file_fftOut1_down) ? 1'b1 : 1'b0;
 
 
 /////////////// Fin de comparador de salidas 
-
-
-wire [24*2-1:0] MsalidaCSD;
-reg [12*2-1:0] muestraCSD;
-reg [11*2-1:0] coefficienteCSD;
-
-reg [11*2-1:0] coefficienteN;
-
-initial begin
-
-muestraCSD = 'b111100010011110111010011; 
-
-coefficienteN = 22'b0010110101011010010101;
-
-
-coefficienteCSD=22'b0010110101011010010101;
-
-
-end
-
-//producto CSD preuba
- multipCSD
- #(12,11)
-       CSD_prueba
-       (.result(MsalidaCSD),
-        .muestra(muestraCSD),
-        .coeff(coefficienteN));      
-  
-
-
-
-
-
-
-
-
-
-
 
 
 

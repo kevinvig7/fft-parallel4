@@ -45,7 +45,10 @@ wire coeffCMStage5_en,coeffCMStage6_en;
 
 //assign o_enable = coeffCMStage6_en ;
 
-reg coeffw4_0en,coeffw4_1en,coeffw4_2en,coeffw4_3en;
+//reg coeffw4_0en,coeffw4_1en,coeffw4_2en,coeffw4_3en;
+reg enable_csd;
+wire [1:0] csd_num_ciclo;
+
 reg coeffw5_0en,coeffw5_1en,coeffw5_2en,coeffw5_3en;
 
 wire ctrl_Blq_BFV,ctrl_Blq_BFVI;
@@ -61,10 +64,10 @@ wire ctrl_Blq_BFV,ctrl_Blq_BFVI;
   wire [19*2-1:0] sat1_a_blqV_1_down;
   
   
-   wire [NBITScoeff*2-1:0] coefficientes4_0;
-   wire [NBITScoeff*2-1:0] coefficientes4_1;               
-   wire [NBITScoeff*2-1:0] coefficientes4_2;
-   wire [NBITScoeff*2-1:0] coefficientes4_3;
+//   wire [NBITScoeff*2-1:0] coefficientes4_0;
+//   wire [NBITScoeff*2-1:0] coefficientes4_1;               
+//   wire [NBITScoeff*2-1:0] coefficientes4_2;
+//   wire [NBITScoeff*2-1:0] coefficientes4_3;
    
    wire [NBITScoeff*2-1:0] coefficientes5_0;
    wire [NBITScoeff*2-1:0] coefficientes5_1;               
@@ -152,91 +155,60 @@ Blq
          
 always @(posedge clk) begin
 if(rst) begin
-coeffw4_0en=0;
-coeffw4_1en=0;
-coeffw4_2en=0;
-coeffw4_3en=0;
+enable_csd=0;
  end else begin
-coeffw4_0en=coeffCMStage5_en;
-coeffw4_1en=coeffCMStage5_en;
-coeffw4_2en=coeffCMStage5_en;
-coeffw4_3en=coeffCMStage5_en;
+enable_csd=coeffCMStage5_en;
 end 
 end
   
  
+contador_int
+ #(8) 
+   control_CSD
+        (.num_ciclo(csd_num_ciclo),
+         .clk(clk),
+         .rst(!enable_csd)); 
+        
       
       
-    coeff_mem_4_0
-      Mcoeff_4_0
-     (.coeff_out(coefficientes4_0),
-      .clk(clk),
-      .rst(!coeffw4_0en));     
-   
-    coeff_mem_4_1
-      Mcoeff_4_1
-     (.coeff_out(coefficientes4_1),
-      .clk(clk),
-      .rst(!coeffw4_1en));
-   
-   coeff_mem_4_2
-      Mcoeff_4_2
-     (.coeff_out(coefficientes4_2),
-      .clk(clk),
-      .rst(!coeffw4_2en));  
       
-    coeff_mem_4_3
-      Mcoeff_4_3
-     (.coeff_out(coefficientes4_3),
-      .clk(clk),
-      .rst(!coeffw4_3en));   
-   
-   
-   
-   
-   
-   
-   
-   
-/////////////////Productos full   
-   
-  //producto 4_0
- multip
+      
+/// producto 4_0
+ 
+  multipCSD_4_0
  #(20,NBITScoeff)
-       M4_0
+       CSD_4_0
        (.result(m_a_blqVI_0_up),
         .muestra(blqV_0_a_m_up),
-        .coeff(coefficientes4_0));      
+        .csd_num_ciclo(csd_num_ciclo));//,
  
-   
-     //producto 4_1
- multip
+/// producto 4_1
+
+  multipCSD_4_1
  #(20,NBITScoeff)
-       M4_1
+       CSD_4_1
        (.result(m_a_blqVI_0_down),
         .muestra(blqV_0_a_m_down),
-        .coeff(coefficientes4_1));      
+        .csd_num_ciclo(csd_num_ciclo));//,
+//////////
 
-   
-     //producto 4_2
- multip
+/// producto 4_2
+
+  multipCSD_4_2
  #(20,NBITScoeff)
-       M4_2
+       CSD_4_2
        (.result(m_a_blqVI_1_up),
         .muestra(blqV_1_a_m_up),
-        .coeff(coefficientes4_2));      
+        .csd_num_ciclo(csd_num_ciclo));//,
 
-             
+/// producto 4_3
 
-     //producto 4_3
- multip
+    multipCSD_4_3
  #(20,NBITScoeff)
-       M4_3
+       CSD_4_3
        (.result(m_a_blqVI_1_down),
         .muestra(blqV_1_a_m_down),
-        .coeff(coefficientes4_3));         
-      
-      
+        .csd_num_ciclo(csd_num_ciclo));//,    
       
    ///////////////////Blq VI
    

@@ -52,10 +52,10 @@ M.~Ayinala, M.~Brown, and K.~K. Parhi, ``\BIBforeignlanguage{en}{Pipelined
   [Online]. Available: \url{http://ieeexplore.ieee.org/document/5776727/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{pipeline_parhi_book}
+\bibitem{folding_parhi_book}
 K.~K. Parhi, \emph{{VLSI} {D}igital {S}ignal {P}rocessing {S}ystems. {D}esign
   and implementation}.\hskip 1em plus 0.5em minus 0.4em\relax {JOHN WILEY \&
-  SONS, INC}., 1999, pp. 157--163.
+  SONS, INC}., 1999, ch. Folding Transformation, pp. 151--163.
 
 \bibitem{garrido_pipelined_2013}
 \BIBentryALTinterwordspacing

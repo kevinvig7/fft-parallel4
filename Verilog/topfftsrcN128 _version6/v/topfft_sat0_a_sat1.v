@@ -191,20 +191,20 @@ end
       Mcoeff_2_1
      (.coeff_out(coefficientes2_1),
       .clk(clk),
-      .rst(!coeffw2_0en));     
+      .rst(!coeffw2_1en));     
    
    
    coeff_mem_2_2
       Mcoeff_2_2
      (.coeff_out(coefficientes2_2),
       .clk(clk),
-      .rst(!coeffw2_0en));     
+      .rst(!coeffw2_2en));     
    
    coeff_mem_2_3
       Mcoeff_2_3
      (.coeff_out(coefficientes2_3),
       .clk(clk),
-      .rst(!coeffw2_0en));
+      .rst(!coeffw2_3en));
    
 
   
