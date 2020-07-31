@@ -197,7 +197,7 @@ The next step to can calculate finally our 128 point DFT is to find the suitable
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/16PuntosRadix8Burbujas.pdf}
+	\includegraphics[width=\linewidth]{Diagramas/16points_dfg.png}
 	\caption{Data flow graph (DFG) for a \textit{radix-}$2^3$ 16-point DIF DFT}
 	\label{fig:16puntosradix8burbujas}
 \end{figure}
@@ -274,7 +274,7 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=-2
 For the folded system to be realizable, $D_F(U\to V)\geq0$ must hold for all the edges in the DFG. Retimming and/or pipeline can be applied to satisfy this property, if the DFG in Fig. \ref{fig:16puntosradix8burbujas} is pipelined/retimmed as shown in Fig. \ref{fig:dfg_16_ret} the system is realizable and the folded delays for the edges are given by the equations that represent a folding set \textit{with retiming}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\linewidth]{Diagramas/Butter16_pipe.eps}
+\includegraphics[width=\linewidth]{Diagramas/16points_dfg_ret.png}
 \caption{Data Flow graph (DFG) of a radix-2 16-point DIF FFT with retiming and pipeline.}
 \label{fig:dfg_16_ret}
 \end{figure}
@@ -380,7 +380,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 \end{figure}
 \begin{figure*}[!t]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Diagramas/miSeccionFiguras/4Paralelo16pRadix8.pdf}
+	\includegraphics[width=\linewidth]{Diagramas/folding-16.png}
 	\caption{Folding architecture for the computation of a radix-$2^3$ 16-point DIF complex FFT.}
 	\label{fig:circ-folding-16}
 \end{figure*}
@@ -441,7 +441,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 \end{small}
 \begin{figure*}[!t]
 	\centering
-	\includegraphics[width=0.95\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8.pdf}
+	\includegraphics[width=0.80\linewidth]{Diagramas/folding-128.png}
 	\caption{Folding architecture for the computation of a radix-$2^3$ 128-point DIF complex FFT.}
 	\label{fig:circ-folding-128}
 \end{figure*}
@@ -466,8 +466,8 @@ First, we wrote a \textit{MATLAB} simulator to validate the operation of our des
 \subsection{Floating and Fixed point Simulator}
 \begin{figure*}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/4Paralelo128pRadix8Cuantizacion1.pdf}
-	\caption{Quantization for a 128-point 4-parallel pipelined complex FFT architecture}
+	\includegraphics[width=0.90\linewidth]{Diagramas/folding-128-quant.png}
+	\caption{Quantization for a 128-point 4-parallel complex FFT architecture}
 	\label{fig:4paralelo128pradix8cuantizacion1}
 \end{figure*}
 \begin{figure}[t!]
@@ -526,7 +526,7 @@ Whole elements on the architecture such as multipliers and butterflies are compl
 \subsection{Verilog (HDL) Model} 
 \begin{figure*}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps}
+	\includegraphics[width=\linewidth]{Diagramas/folding-128-quant-pipe.png}
 	\caption{RTL (Register transfer level) design for a 4-parallel \textit{radix}-$2^3$ 128-point DIF FFT with Optimization}
 	\label{fig:v5esquemap}
 \end{figure*}
@@ -770,6 +770,7 @@ In contrast with the first instance of design, we found in the last case of impl
 %% Seccion
 %%%%%%%%%%
 \section{CONCLUSION}
+<<<<<<< HEAD
 \begin{figure*}[t!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{Diagramas/areaTiempoPowerArea}
@@ -779,9 +780,16 @@ In contrast with the first instance of design, we found in the last case of impl
 This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation. The Fourier Transform without folding technique processes 128 entry points of samples which are ordered but its output are disordered and it is necessary a reordering circuit. In the other hand a Fourier Transform with folding technique also needs a reordering circuit in the input.
 
 A folding technique can reduce the number of entry points from 128 to 4 points but that result in a large amount of registers and therefore we must apply a register minimization technique. In addition,	 the number of DFT points is related with the radix-base, we can write as \textit{radix}-$8$, this representation can be expressed as \textit{radix}-$2^3$ that means we can decompose in smaller radixes with main base-2, an advantage of using a hight radix is reduced the number of multipliers.
+=======
+This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation. The Fourier Transform without folding technique processes 128 entry points of samples which are ordered but its output are disordered and it is necessary a reordering circuit. In the other hand a Fourier Transform with folding technique also needs a reordering circuit in the input. This circuit present an aditional area and power consumption to be considered in the final design. 
 
-Our design has implemented a quantizer block which works with saturation and truncated, the round method was not used because we reached a high SQNR. Lastly a series of optimization were necessary to accomplish the required frequency, the DFT implementation without any optimization level got to work at 166MHz.
+The folding trasnformation applied reduce significatively (equal to the folded factor, i.e. 64 times) the number of functional units, and therefore the silicon area, at the expense of increasing the computation time by the same factor. Therefore is necesary to add pipieline cutsets and a carefull quantization in order to achieve the requiered sample period with an aceptable SNR.
 
+Folding technique, in this case, results in an architecture that uses a large number of register, to avoid this is necesary to apply a register minimization techinque and allocate data to these registers. The number of registers applying this method is reduced significatively, from  to . This results in a final design with less area and power consumption. %% Calcuar reduccion de registros
+>>>>>>> 9a479b3c606cd48052473657643cfd90ebb2076e
+
+
+<<<<<<< HEAD
 %\begin{figure}[h!]
 %	\centering
 %	\includegraphics[width=0.75\linewidth]{Diagramas/areaTiempo}
@@ -794,7 +802,11 @@ Our design has implemented a quantizer block which works with saturation and tru
 %	\caption{}
 %	\label{fig:powerArea}
 %\end{figure}
+=======
+The number of DFT points is related with the radix-base, we can write as \textit{radix}-$8$, this representation can be expressed as \textit{radix}-$2^3$ that means we can decompose in smaller radixes with main base-2, an advantage of using a hight radix is reduced the number of multipliers at expense of incerese the routing.
+>>>>>>> 9a479b3c606cd48052473657643cfd90ebb2076e
 
+Our design has implemented a quantizer block which works with saturation and truncated, the round method was not used because we reached a high SQNR. Lastly a series of optimization were necessary to accomplish the required frequency. The DFT implementation without any optimization level got to work at 166MHz, applying pipelines cutsets and quantization blocks, the final architecture is implementable at the requiered clock frecuency (500 MHz) at the cost of incrementing the numers of secuential cells. Finally, with the CSD multipliers, is possible to reduce the combinatinationals cells significatively. 
 
 
 %%%%%%%%%%%%%%
