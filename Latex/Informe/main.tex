@@ -709,7 +709,7 @@ In contrast with the first instance of design, we found in the last case of impl
 \end{table}
 
 \begin{table}[t!]
-	\vspace*{-0.7mm}
+	\vspace*{-1.1mm}%{-0.7mm}
 	\centering
 	\caption{Design instance 4. Timing-Area-Power Report at 500MHz}	
 	\label{tab:reporte5} 		
@@ -770,14 +770,30 @@ In contrast with the first instance of design, we found in the last case of impl
 %% Seccion
 %%%%%%%%%%
 \section{CONCLUSION}
+\begin{figure*}[t!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Diagramas/areaTiempoPowerArea}
+	\caption{Timing-Area-Power evolution.}
+	\label{fig:atp}
+\end{figure*}
 This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation. The Fourier Transform without folding technique processes 128 entry points of samples which are ordered but its output are disordered and it is necessary a reordering circuit. In the other hand a Fourier Transform with folding technique also needs a reordering circuit in the input.
 
-A folding technique can reduce the number of entry points from 128 to 4 points but that result in a large amount of registers and therefore we must apply a register minimization technique. 
-
-The number of DFT points is related with the radix-base, we can write as \textit{radix}-$8$, this representation can be expressed as \textit{radix}-$2^3$ that means we can decompose in smaller radixes with main base-2, an advantage of using a hight radix is reduced the number of multipliers.
+A folding technique can reduce the number of entry points from 128 to 4 points but that result in a large amount of registers and therefore we must apply a register minimization technique. In addition,	 the number of DFT points is related with the radix-base, we can write as \textit{radix}-$8$, this representation can be expressed as \textit{radix}-$2^3$ that means we can decompose in smaller radixes with main base-2, an advantage of using a hight radix is reduced the number of multipliers.
 
 Our design has implemented a quantizer block which works with saturation and truncated, the round method was not used because we reached a high SQNR. Lastly a series of optimization were necessary to accomplish the required frequency, the DFT implementation without any optimization level got to work at 166MHz.
 
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{Diagramas/areaTiempo}
+%	\caption{}
+%	\label{fig:areaTiempo}
+%\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{Diagramas/powerArea}
+%	\caption{}
+%	\label{fig:powerArea}
+%\end{figure}
 
 
 
