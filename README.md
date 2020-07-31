@@ -1,5 +1,11 @@
 ## Actividades
 #### Trabajo Final curso VLSI
+- [ ] En base a la devolución de Ariel, agregar o modificar las Secciones.
+
+- [ ] Justificar bajo que casos en factible utilizar el CSD en nuestras arquitectura y si esto produce algun cambio en las diferentes versiones del 'RTL'.
+
+- [x] Completar la presentación del Beamer con los enunciados del problema y optimizaciones realizadas al diseño.
+
 - [x] Documentar
 
 - [x] Ordenar los símbolos correspondientes a los multiplicadores en las figuras o aclararlo en el texto.
@@ -8,7 +14,4 @@
 
 - [x] Aclarar la ecuación (6) del documento correspondiente a la cantidad de registros utilizados 'Sin/Con Retiming' y a cual DFT se esta haciendo referencia. Explicar brevemente como se obtuvo el 'Folding Set' (Tabla del documento) para nuestras DFT128 puntos. 
 
-- [ ] Justificar bajo que casos en factible utilizar el CSD en nuestras arquitectura y si esto produce algun cambio en las diferentes versiones del 'RTL'.
-
-- [ ] Completar la presentación del Beamer con los enunciados del problema y optimizaciones realizadas al diseño.
 
