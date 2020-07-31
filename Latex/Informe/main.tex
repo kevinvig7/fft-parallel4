@@ -441,7 +441,7 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 \end{small}
 \begin{figure*}[!t]
 	\centering
-	\includegraphics[width=0.80\linewidth]{Diagramas/folding-128.png}
+	\includegraphics[width=0.75\linewidth]{Diagramas/folding-128.png}
 	\caption{Folding architecture for the computation of a radix-$2^3$ 128-point DIF complex FFT.}
 	\label{fig:circ-folding-128}
 \end{figure*}
@@ -709,7 +709,7 @@ In contrast with the first instance of design, we found in the last case of impl
 \end{table}
 
 \begin{table}[t!]
-	\vspace*{-0.7mm}
+	%\vspace*{-0.7mm}
 	\centering
 	\caption{Design instance 4. Timing-Area-Power Report at 500MHz}	
 	\label{tab:reporte5} 		
@@ -770,21 +770,27 @@ In contrast with the first instance of design, we found in the last case of impl
 %% Seccion
 %%%%%%%%%%
 \section{CONCLUSION}
-This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation. The Fourier Transform without folding technique processes 128 entry points of samples which are ordered but its output are disordered and it is necessary a reordering circuit. In the other hand a Fourier Transform with folding technique also needs a reordering circuit in the input. This circuit present an aditional area and power consumption to be considered in the final design. 
+\begin{figure*}[t!]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Diagramas/areaTiempoPowerArea}
+	\caption{Timing-Area-Power evolution.}
+	\label{fig:atp}
+\end{figure*}
+This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation. The Fourier Transform without folding technique processes 128 entry points of samples which are ordered but its output are disordered and it is necessary a reordering circuit. In the other hand a Fourier Transform with folding technique also needs a reordering circuit in the input. This circuit present an additional area and power consumption to be considered in the final design. 
 
-The folding trasnformation applied reduce significatively (equal to the folded factor, i.e. 64 times) the number of functional units, and therefore the silicon area, at the expense of increasing the computation time by the same factor. Therefore is necesary to add pipieline cutsets and a carefull quantization in order to achieve the requiered sample period with an aceptable SNR.
+The folding trasnformation applied reduce significatively (equal to the folded factor, i.e. 64 times) the number of functional units, and therefore the silicon area, at the expense of increasing the computation time by the same factor. Therefore is necessary to add pipieline cutsets and a carefull quantization in order to achieve the requiered sample period with an acceptable SNR.
 
-Folding technique, in this case, results in an architecture that uses a large number of register, to avoid this is necesary to apply a register minimization techinque and allocate data to these registers. The number of registers applying this method is reduced significatively, from  to . This results in a final design with less area and power consumption. %% Calcuar reduccion de registros
-
+Folding technique, in this case, results in an architecture that uses a large number of register, to avoid this is necessary to apply a register minimization technique and allocate data to these registers. The number of registers applying this method is reduced significatively, from  to . This results in a final design with less area and power consumption. %% Calcuar reduccion de registros
 
 The number of DFT points is related with the radix-base, we can write as \textit{radix}-$8$, this representation can be expressed as \textit{radix}-$2^3$ that means we can decompose in smaller radixes with main base-2, an advantage of using a hight radix is reduced the number of multipliers at expense of incerese the routing.
 
-Our design has implemented a quantizer block which works with saturation and truncated, the round method was not used because we reached a high SQNR. Lastly a series of optimization were necessary to accomplish the required frequency. The DFT implementation without any optimization level got to work at 166MHz, applying pipelines cutsets and quantization blocks, the final architecture is implementable at the requiered clock frecuency (500 MHz) at the cost of incrementing the numers of secuential cells. Finally, with the CSD multipliers, is possible to reduce the combinatinationals cells significatively. 
+Our design has implemented a quantizer block which works with saturation and truncated, the round method was not used because we reached a high SQNR. Lastly a series of optimization were necessary to accomplish the required frequency. The DFT implementation without any optimization level got to work at 166MHz, applying pipelines cutsets and quantization blocks, the final architecture is implementable at the requiered clock frequency (500 MHz) at the cost of incrementing the numbers of sequential cells. Finally, with the CSD multipliers, is possible to reduce the combinational cells significatively. 
 
 
 %%%%%%%%%%%%%%
 % Bibliografia
 %%%%%%%%%%%%%%
+\newpage
 \bibliographystyle{IEEEtran}
 \bibliography{referenciasFFT}
 %%%%%%%%
