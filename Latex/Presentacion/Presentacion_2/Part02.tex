@@ -127,7 +127,7 @@
 				\begin{itemize}\justifying\footnotesize
 					\item Is a procedure used to compute the minimun number of registers. \vfill
 					\item For example, the variable $y_1$ be live during time units $n \in \{1,2,3,4\}$.
-					\item The number of live variables $y_i$ during the time units $\{1,2,3,4,5\}$ is $\{4,8,8,8,4\}$. So the number of register for this stage is: \vfill
+					\item The number of live variables $y_i$ during the time units $\{1,2,3,4,5\}$ is $\{0,4,8,8,8,8\}$. So the number of register for this stage is: \vfill
 					\begin{equation*}
 						max\{4,8,8,8,4\} = 8
 					\end{equation*}
@@ -164,7 +164,7 @@
 			\begin{block}{\centering \textbf{Forward Register Allcation}}
 				\begin{itemize}\justifying\footnotesize
 		        	\item This dictates how the variables are assigned to the minimum numbers of registers. \vfill
-		        	\item If $R_i$ holds holds a variable in the current ctcle, then $R_{i+1}$ hold the same variable on the next cycle.
+		        	\item If $R_i$ holds holds a variable in the current cycle, then $R_{i+1}$ hold the same variable on the next cycle.
 		       	\end{itemize}
 			\end{block}
 			\vspace{-0.3cm}
@@ -208,12 +208,12 @@
 	\frametitle{\textbf{Design of FFT architecture via folding transformation}}
 	\framesubtitle{\secname : \subsecname}
 	%\vspace{-0.5cm}
-	\begin{block}{\centering }
+	\begin{block}{\centering \textbf{Folding architecture for radix-$2^3$ 128 points FFT}} \justifying\footnotesize
 	We can deduce the folding architecture for 128 points radix-$2^3$ following the same method. 
 	\end{block}	
 	\vspace{-0.15cm}
 		\begin{figure}[h!] \centering
-		   	\includegraphics[width=0.75\paperwidth]{./image/folding-128.png}
+		   	\includegraphics[width=0.70\paperwidth]{./image/folding-128.png}
 		   	\vspace{-0.15cm}
 		   	\caption{ \tiny Folding architecture for radix-$2^3$ 128 points FFT.}
 		\end{figure}  	
