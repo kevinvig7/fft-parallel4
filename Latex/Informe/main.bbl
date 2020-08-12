@@ -21,6 +21,17 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{freePdk}
+\BIBentryALTinterwordspacing
+R.~Thapa, S.~Ataei, and J.~E. Stine, ``\BIBforeignlanguage{en}{{WIP}.
+  {Open}-source standard cell characterization process flow on 45 nm
+  ({FreePDK45}), 0.18 µm, 0.25 µm, 0.35 µm and 0.5 µm},'' in
+  \emph{\BIBforeignlanguage{en}{2017 {IEEE} {International} {Conference} on
+  {Microelectronic} {Systems} {Education} ({MSE})}}.\hskip 1em plus 0.5em minus
+  0.4em\relax Lake Louise, AB, Canada: IEEE, May 2017, pp. 5--6. [Online].
+  Available: \url{http://ieeexplore.ieee.org/document/7945072/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{shousheng_he_designing_1998}
 \BIBentryALTinterwordspacing
 {Shousheng He} and M.~Torkelson, ``Designing pipeline {FFT} processor for
