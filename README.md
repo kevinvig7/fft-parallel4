@@ -1,8 +1,10 @@
 ## Actividades
 #### Trabajo Final curso VLSI
-- [ ] En base a la devolución de Ariel, agregar o modificar las Secciones.
+- [ ] Corregir la Redacción y gramática.
 
-- [ ] Justificar bajo que casos en factible utilizar el CSD en nuestras arquitectura y si esto produce algun cambio en las diferentes versiones del 'RTL'.
+- [x] En base a la devolución de Ariel, agregar o modificar las Secciones.
+
+- [x] Justificar bajo que casos en factible utilizar el CSD en nuestras arquitectura y si esto produce algun cambio en las diferentes versiones del 'RTL'.
 
 - [x] Completar la presentación del Beamer con los enunciados del problema y optimizaciones realizadas al diseño.
 
