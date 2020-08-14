@@ -85,4 +85,14 @@ M.~Garrido, S.-J. Huang, and S.-G. Chen, ``Feedforward {FFT} hardware
   [Online]. Available: \url{http://ieeexplore.ieee.org/document/8010853/}
 \BIBentrySTDinterwordspacing
 
+
+\bibitem{type_FFT_MIT}
+\BIBentryALTinterwordspacing
+Vladimir Stojanović, ``Fast Fourier Transform:
+VLSI Architectures'' , 973 Communication System Design – Spring 2006
+Massachusetts Institute of Technology, Lecture 10.
+\BIBentrySTDinterwordspacing
+
+
+
 \end{thebibliography}
