@@ -1,4 +1,4 @@
-Warning: Design 'topfft' has '14' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'topfft' has '15' unresolved references. For more detailed information, use the "link" command. (UID-341)
 Information: Updating design information... (UID-85)
 Warning: Design 'topfft' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
  
@@ -6,13 +6,13 @@ Warning: Design 'topfft' contains 1 high-fanout nets. A fanout number of 1000 wi
 Report : qor
 Design : topfft
 Version: O-2018.06-SP2
-Date   : Tue Aug 11 17:19:21 2020
+Date   : Sun Aug 16 12:43:20 2020
 ****************************************
 
 
   Timing Path Group 'CLK'
   -----------------------------------
-  Levels of Logic:              65.00
+  Levels of Logic:              38.00
   Critical Path Length:          1.94
   Critical Path Slack:           0.00
   Critical Path Clk Period:      2.00
@@ -26,39 +26,39 @@ Date   : Tue Aug 11 17:19:21 2020
 
   Cell Count
   -----------------------------------
-  Hierarchical Cell Count:         27
-  Hierarchical Port Count:       2153
-  Leaf Cell Count:              66111
-  Buf/Inv Cell Count:           14789
-  Buf Cell Count:                3670
-  Inv Cell Count:               11119
+  Hierarchical Cell Count:         23
+  Hierarchical Port Count:       2030
+  Leaf Cell Count:              48602
+  Buf/Inv Cell Count:            9158
+  Buf Cell Count:                1239
+  Inv Cell Count:                7919
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:     58031
-  Sequential Cell Count:         8080
+  Combinational Cell Count:     40566
+  Sequential Cell Count:         8036
   Macro Count:                      0
   -----------------------------------
 
 
   Area
   -----------------------------------
-  Combinational Area:   195877.841872
-  Noncombinational Area: 64463.046570
-  Buf/Inv Area:          24429.880240
-  Total Buffer Area:          8613.53
-  Total Inverter Area:       15816.35
+  Combinational Area:   134844.907554
+  Noncombinational Area: 64112.010178
+  Buf/Inv Area:          14112.789311
+  Total Buffer Area:          2907.78
+  Total Inverter Area:       11205.01
   Macro/Black Box Area:      0.000000
   Net Area:                  0.000000
   -----------------------------------
-  Cell Area:            260340.888442
-  Design Area:          260340.888442
+  Cell Area:            198956.917732
+  Design Area:          198956.917732
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:         73664
-  Nets With Violations:          5152
+  Total Number of Nets:         53962
+  Nets With Violations:          2174
   Max Trans Violations:             0
-  Max Cap Violations:            5152
+  Max Cap Violations:            2174
   -----------------------------------
 
 
@@ -66,12 +66,12 @@ Date   : Tue Aug 11 17:19:21 2020
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                    5.97
-  Logic Optimization:                 33.68
-  Mapping Optimization:              257.63
+  Resource Sharing:                    5.68
+  Logic Optimization:                 27.82
+  Mapping Optimization:              174.31
   -----------------------------------------
-  Overall Compile Time:              437.32
-  Overall Compile Wall Clock Time:   246.73
+  Overall Compile Time:              317.20
+  Overall Compile Wall Clock Time:   195.54
 
   --------------------------------------------------------------------
 

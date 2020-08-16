@@ -1,0 +1,52 @@
+\begin{table} 
+	\centering%\raggedleft%\flushright
+	\caption{Design instance 2. Timing-Area-Power Report at 500MHz}
+	\label{tab:reporte3} 		
+	\begin{tabular}{@{}lr@{}}
+		%\hline\hline
+		Point 						&Path(ns)\\
+		\hline\hline
+		data arrival time   		&2.71\\ 
+		clock CLK (rise edge)  		&2.00\\
+		clock network delay (ideal) &2.00\\
+		library setup time			&1.95\\
+		\hline
+		data required time			&1.95\\
+		data arrival time           &-2.71\\
+		\hline
+		slack (VIOLATED)            &-0.76\\	
+		\hline
+	\end{tabular}
+	
+	\begin{tabular}{@{}lr@{}}\\
+		Logical Elements\\
+		\hline\hline
+		Number of ports                &1826\\
+		Number of nets                 &114367\\
+		Number of cells                &104198\\
+		Number of combinational cells  &96271\\
+		Number of sequential cells     &7912\\
+		Number of macros/black boxes   &0\\
+		Number of buf/inv              &26770\\
+		\hline
+		Combinational area             &294733.068172\\
+		Buf/Inv area                   &41738.133324\\
+		Noncombinational area          &62955.185703\\
+		\hline
+		Total cell area                &357688.253875\\	
+		\hline
+	\end{tabular}
+	
+		\begin{tabular}{@{}lcccr@{}}\\
+		Power Group		 &Internal 	&Switching 	&Leakage		&Total Power\\
+		\hline\hline
+		io pad           &0.0000    &0.0000     &0.0000    		&0.0000\\
+		clock network    &36.5175   &603.3234   &1.3702e+06 	&641.2228\\
+		register         &57.8422   &0.2604     &4.3383e+05 	&58.5363\\  
+		sequential       &0.0000    &0.0000     &0.0000     	&0.0000\\  
+		combinational    &0.5748    &1.4180     &1.5702e+05 	&2.1498\\ 
+		\hline
+		Total            &94.934mW  &605.001mW  &1.961e+06nW	&701.908mW\\	
+		\hline
+	\end{tabular}
+\end{table}
