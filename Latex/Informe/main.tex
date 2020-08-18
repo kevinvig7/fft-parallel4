@@ -81,7 +81,7 @@ Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina%\\[0.5
 %%%%%%%%%%
 % Abstract
 %%%%%%%%%%
-\begin{abstract} - \bf This work describes the design and the VLSI implementation of a 4-parallel pipelined architecture for the complex fast Fourier transform (CFFT) based on the radix-$\bf 2^3$ algorithm with 128 points using folding transformation and register minimization techniques. In addition, different synthesis reports from the Hardware Description Language (HDL) using different optimization techniques were studied in order to obtaining a good performance on speed and area using an open-source FreePDK45 of 45 nm CMOS technology \cite{freePdk}.
+\begin{abstract} - \bf This work describes the design and the VLSI implementation of a 4-parallel pipelined architecture for the complex fast Fourier transform (CFFT) based on the radix-$\bf 2^3$ algorithm with 128 points using folding transformation and register minimization techniques. In addition, different synthesis reports from the Hardware Description Language (HDL) using different optimization techniques were studied in order to obtain good performance on speed and area using an open-source FreePDK45 of 45 nm CMOS technology \cite{freePdk}.
 \end{abstract}
 %%%%%%%%%
 % Seccion
@@ -93,10 +93,9 @@ Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina%\\[0.5
 
 The Fast Fourier Transform (FFT) is widely used in different applications fields, particularly in algorithms that involves applying digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently. Nowadays is common the use of FFT algorithm for real time applications and parallel-pipelined hardware architecture, this allows to achieve good performance with high throughput rates.
 
-There are two main types of pipelined FFT architectures  \cite{shousheng_he_designing_1998}. On one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), both methods transfer data samples between stages serially and use feedback loops. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC), transfers more than one sample pwe clock cycle and do not use feedback loops.
+There are two main types of pipelined FFT architectures  \cite{shousheng_he_designing_1998}. On one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), both methods transfer data samples between stages serially and use feedback loops. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC) transfers more than one sample per clock cycle and do not use feedback loops.
 
-
-This work focuses on the design of 4-parallel pipelined architecture radix-$2^3$ 128-points for Complex FFT-DIF (Decimation In Frequency). Section \ref{sec:equa}, describes the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF. In Section \ref{sec:16points}, the design of a 2-parallel pipelined architecture, radix-$2^3$ 16-points FFT via folding transformation is presented. In Section \ref{sec:imp128}, the previous design is translate to a 4-parallel, 128-points \textit{radix}-$2^3$ DIF complex FFT model, and a float-point simulator in \textit{Matlab} of the 128-points model is elaborated, to later be compared with a fixed-point model in order to obtain the best Signal to Quantization Noise Ratio (SQNR).
+This work focuses on the design of 4-parallel pipelined architecture \textit{radix}-$2^3$ 128-points for Complex FFT-DIF (Decimation In Frequency). Section \ref{sec:equa}, describes the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF. In Section \ref{sec:16points}, the design of a 2-parallel pipelined architecture, \textit{radix}-$2^3$ 16-points FFT via folding transformation is presented. In Section \ref{sec:imp128}, the previous design is translate to a 4-parallel, 128-points \textit{radix}-$2^3$ DIF complex FFT, and a float-point simulator in \textit{Matlab} is elaborated, to later be compared with a fixed-point model in order to obtain the best Signal to Quantization Noise Ratio (SQNR).
 In Section \ref{sec:results}, different power, area and timing reports with different optimizations such as varying pipelining levels, and the application of canonical signed digit (CSD) are compared to obtain the best performance with a clock frequency of $500MHz$. Finally in Section \ref{sec:conclusions} some conclusions and discussions are presented.  
 
 
@@ -121,7 +120,7 @@ The \textit{N}-point DFT of an input sequence $x[n]$ is defined as:
 \end{equation}
 where $W_N^{nk} = e^{-j\frac{2\pi}{N} nk}$. 
 
-The FFT based on Cooley-Tukey algorithm is most commonly used in order to compute the DFT efficiently, this allows to reduce the number of operations from \textit{O($N^2$)} for the DFT to \textit{O($Nlog_2N$)} for the FFT. Direct computation of the DFT is basically inefficient primarily because it does not exploit the symmetry and periodicity properties of the phase factor $W_N$, these two properties are:
+The FFT based on Cooley-Tukey algorithm is most commonly used to compute the DFT efficiently, this allows to reduce the number of operations from \textit{O($N^2$)} for the DFT to \textit{O($Nlog_2N$)}. Direct computation of the DFT is basically inefficient primarily because it does not exploit the symmetry and periodicity properties of the phase factor $W_N$, these two properties are:
 \begin{align}
 	&\text{Symmetry property: } W_N^{k+N/2} = -W_N^k	\\
 	&\text{Periodicity property: } W_N^{k+N} = W_N^k
@@ -129,13 +128,15 @@ The FFT based on Cooley-Tukey algorithm is most commonly used in order to comput
 
 The development of computationally efficient algorithms for DFT is possible if a \textit{Divide and Conquer} approach is adopted. This approach is based on the decomposition of an \textit{N} point DFT into successively smaller DFTs. In accordance with this, the DFT is calculated in series of $s=log_\rho N$ stages, where $\rho$ is the base of the \textit{radix}. In this work this factor is two, so the number of stages for 128 points is 7.
 
-There are two methods to design FFT algorithms \cite{proakis_digital_nodate,oppenheim_tratamiento_2011}: 
+According to \cite{proakis_digital_nodate,oppenheim_tratamiento_2011}, There are two methods to design FFT algorithms: 
+\paragraph{Decimation in time (DIT)}
+In this method the \textit{N}-point data sequence $x[n]$ is split into two $N/2$-point data sequences, thus, is possible to obtain two different functions by decimating $x[n]$ by a factor of 2. The decimation of the data sequence can be repeated again until the resulting sequences are reduced to one-point sequence. 
+\paragraph{Decimation in frequency (DIF)}
+This method is based on the divide-and-conquer technique, where the DFT formula is split into two summations, one of which involves the sum over the first $N/2$ data points and the second sum involves the last $N/2$ data points.
 
-First, applying decimation in time (DIT), this results in a split of the \textit{N}-point data sequence $x[n]$ into two $N/2$-point data sequences. Thus, is possible to obtain two different functions by decimating $x[n]$ by a factor of 2. The decimation of the data sequence can be repeated again and again until the resulting sequences are reduced to one-point sequence. In each decomposition, the basic computing unit that processes the samples is called \textit{butterfly}.
 
-Second, the decimation in frequency algorithm, is obtained by using the divide-and-conquer approach. Is possible to derive the algorithm by splitting de DFT formula into two summations, one of which involves the sum over the first $N/2$ data points and the second sum involves the last $N/2$ data points.
+In each decomposition, the basic computing unit that processes the samples is called \textit{butterfly}. In general, each butterfly involves one complex multiplication and two complex additions. The main difference between DIT and DIF is the instant in which the multiplication by $W_N^\phi$ is accomplished, the input samples can be multiplied before or after the split and the samples are later added inside the butterfly structure, as is depicted in Fig.\ref{fig:difdit}.
 
-In general, each butterfly involves one complex multiplication and two complex additions. The main difference that can be seen in Fig.\ref{fig:difdit} between DIT and DIF is the instant in which the multiplication by $W_N^\phi$ is accomplished, it means, the input samples can be multiplied before or after of split and add internally the samples inside the butterfly structure.
 
 \begin{figure} 
 	\centering
@@ -144,13 +145,13 @@ In general, each butterfly involves one complex multiplication and two complex a
 	\label{fig:difdit}
 \end{figure}
 
-In addition, the input samples in FFT algorithms DIF are organized in natural order but its output has not in order, in this case is necessary a circuit for reordering the output data. On the other hand, FFT algorithms DIT is all the  opposite, It has not its input in order and its output has a natural order.
+Another difference between the two methods are that the input samples in algorithms DIF are organized in natural order but its output are not in order, in which case a reordering circuit at the output is needed. On the other hand, the input sequence for DIT algorithms are not in order and its output are in natural order.
 
-Following the methodology presented in \cite{proakis_digital_nodate}, is possible to understand and apply the mathematical expressions of \textit{radix-}$2^3$ DIF explained in \cite{jia_efficient_nodate}. 
+According the methodology presented in \cite{proakis_digital_nodate}, it is possible to apply the mathematical expressions of \textit{radix-}$2^3$ DIF explained in \cite{jia_efficient_nodate}. 
 
-These fundamental equations are:
+These fundamental equations are in :
 
-%%Ecuacioes RADIX
+%%Ecuaciones RADIX
 \begingroup
 \allowdisplaybreaks
 \begin{small}
@@ -159,50 +160,51 @@ These fundamental equations are:
 \endgroup
 
 
-In Fig. \ref{fig:8ponits_df} and Fig. \ref{fig:8ponits_dfg} is shown the equivalent diagram of interconnections and data flows from the equations presented in (\ref{eqn:radix}).
+Fig. \ref{fig:8ponits_df} and Fig. \ref{fig:8ponits_dfg} show the equivalent diagram of interconnections and data flows from the equations presented in (\ref{eqn:radix}).
 
-The use of higher value radices lead to different amount of rotators. If we compare the quantity of rotators of an architecture \textit{radix-}$2$ FFT with an architecture \textit{radix-}$2^k$ FFT, this last has less number of phase factors.
-\\
+%The use of higher value radices lead to different amount of rotators. If we compare the quantity of rotators of an architecture \textit{radix-}$2$ FFT with an architecture \textit{radix-}$2^k$ FFT, this last has less number of phase factors.
 
-\begin{figure} 
+\begin{figure}[ht] 
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/8PuntosRadix8Conexion.pdf}
 	\caption{Structure of interconnection for \textit{radix-}$2^3$ DIF DFT.}
 	\label{fig:8ponits_df}
 \end{figure}
 
-\begin{figure} 
+\begin{figure} [ht]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/8PuntosRadix8Burbujas.pdf}
 	\caption{Data flow graph (DFG) based in equations (\ref{eqn:radix}).}
 	\label{fig:8ponits_dfg}
 \end{figure}
 
-\begin{figure} 
+\subsection{16 points DFT}
+The next step is to find the suitable rotator factors for the 16 point DFT, the equations in (\ref{eqn:radix}) are essential for this design and where evaluated to get $C_{8k+i} = \sum_{n=0}^{16/8-1} \{ \cdot \}, $ for $k=0,1$. The structure for the 16 point DFT is described in Fig. \ref{fig:16points_df} and Fig. \ref{fig:16points_dfg}. 
+
+\begin{figure} [ht]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/16PuntosRadix8Conexion.pdf}
 	\caption{Flow graph of a \textit{radix-}$2^3$ 16-point DIF DFT}
 	\label{fig:16points_df}
 \end{figure}
 
-\begin{figure} 
+\begin{figure} [ht]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/16PuntosRadix8Burbujas.pdf}
 	\caption{Data flow graph (DFG) for a \textit{radix-}$2^3$ 16-point DIF DFT}
 	\label{fig:16points_dfg}
 \end{figure}
 
-\begin{figure} 
+\subsection{128 points DFT}
+With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies obtain together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. With this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involve three stages of butterflies to finally arrive to a set of eight 16 point DFTs. In Fig. \ref{fig:128ponits_conn} the 
+
+\begin{figure} [ht]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/BloquesDft.pdf}
 	\caption{Decomposing a \textit{radix-}$2^3$ 128-point DFT.}
 	\label{fig:128_block_descomp}
 \end{figure}
 
-
-The next step is to find the suitable rotator factors for the 16 point DFT, the use of the of equations in (\ref{eqn:radix}) are essential for this design and them are evaluated to get $C_{8k+i} = \sum_{n=0}^{16/8-1} \{ \cdot \}, $ for $k=0,1$. The structure for the 16 point DFT is described in Fig. \ref{fig:16points_df} and Fig. \ref{fig:16points_dfg}. 
-
-With these first approaches is possible to apply the divide and conquer strategy by decomposition of a 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$. In this way a sequence in chain of butterflies is obtained with its corresponding rotation factor and the correct index of the samples in witch them must be added or multiplied. With this technique is possible to do a subdivision of butterflies stages, in Fig. \ref{fig:128_block_descomp} can be seen that the 128 point DFT goes through a processes that involve three stages of butterflies to arrive finally to a set of eight DFT where each of one is a 16 point DFT.
 
 
 %
