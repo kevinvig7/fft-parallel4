@@ -4,7 +4,7 @@ Report : clock_gating
         -nosplit
 Design : topfft
 Version: O-2018.06-SP2
-Date   : Tue Aug 11 17:19:25 2020
+Date   : Sun Aug 16 12:43:23 2020
 ****************************************
 
 
@@ -15,9 +15,9 @@ Date   : Tue Aug 11 17:19:25 2020
           |                                       |                  |
           |    Number of Gated registers          |     0 (0.00%)    |
           |                                       |                  |
-          |    Number of Ungated registers        |  8080 (100.00%)  |
+          |    Number of Ungated registers        |  8036 (100.00%)  |
           |                                       |                  |
-          |    Total number of registers          |     8080         |
+          |    Total number of registers          |     8036         |
           ------------------------------------------------------------
 
 

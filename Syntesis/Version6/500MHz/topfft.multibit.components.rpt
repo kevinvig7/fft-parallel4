@@ -1,10 +1,10 @@
-Warning: Design 'topfft' has '14' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'topfft' has '15' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : multibit
 Design : topfft
 Version: O-2018.06-SP2
-Date   : Tue Aug 11 17:15:06 2020
+Date   : Sun Aug 16 12:39:59 2020
 ****************************************
 
 Attributes:
@@ -17425,6 +17425,59 @@ Total 23 cells                                         0.00   23
 Multibit Component : count_reg
 Cell                    Reference      Library         Area   Width  Attributes
 --------------------------------------------------------------------------------
+u_topfft_in_a_sat0/control_CSD/count_reg[22]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[21]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[20]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[19]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[18]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[17]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[16]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[15]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[14]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[13]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[12]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[11]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[10]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[9]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[8]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[7]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[6]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[5]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[4]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[3]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[2]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[1]
+                        **SEQGEN**                     0.00   1      n, u
+u_topfft_in_a_sat0/control_CSD/count_reg[0]
+                        **SEQGEN**                     0.00   1      n, u
+--------------------------------------------------------------------------------
+Total 23 cells                                         0.00   23
+
+
+Multibit Component : count_reg
+Cell                    Reference      Library         Area   Width  Attributes
+--------------------------------------------------------------------------------
 u_topfft_in_a_sat0/control_twd2/count_reg[22]
                         **SEQGEN**                     0.00   1      n, u
 u_topfft_in_a_sat0/control_twd2/count_reg[21]
@@ -18786,5 +18839,5 @@ u_topfft_in_a_sat0/fftOut1_up_reg[0]
 Total 30 cells                                         0.00   30
 
 
-Total 247 Multibit Components
+Total 248 Multibit Components
 1
