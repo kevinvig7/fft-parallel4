@@ -66,7 +66,7 @@ Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina%\\[0.5
 %%%%%%%%%
 % Seccion
 %%%%%%%%%
-\section{Introduccion}
+\section{Introduction}
 \IEEEPARstart{T}{he} Fast Fourier Transform (FFT) is widely used in different applications fields, particularly in algorithms that involves applying digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently. Nowadays is common the use of FFT algorithm for real time applications and parallel-pipelined hardware architecture, this allows to achieve good performance with high throughput rates.
 
 There are two main types of pipelined FFT architectures  \cite{shousheng_he_designing_1998}. On one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), both methods transfer data samples between stages serially and use feedback loops. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC) transfers more than one sample per clock cycle and do not use feedback loops.
@@ -414,7 +414,7 @@ where $f_1=100Hz$, $f_2=1000Hz$ and $T_s$ is the sampled period.
 In each stage of the Fig. \ref{fig:4paralelo128pradix8cuantizacion1}, input samples that propagate stage by stage will be carefully quantized with the purpose of getting a high SQNR (Signal to Quantization Noise Ratio).
 \begin{small}
 \begin{equation*}%\label{eq:sqnr}
-SQNR_{dB} = 10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Signal_{FloatPoint} - Signal_{FixedPoint}\}}  \bigg)
+	SQNR_{dB} = 10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Signal_{FloatPoint} - Signal_{FixedPoint}\}}  \bigg)
 \end{equation*}
 \end{small}
 SQNR computation represents the logarithmic relationship between float signal variance over error variance from an signal given.
@@ -482,7 +482,7 @@ In contrast with the first instance of design, we found in the last case of impl
 
 \begin{figure*} 
 	\centering
-	\includegraphics[width=0.85\linewidth]{Diagramas/areaTiempoPowerArea}
+	\includegraphics[width=0.85\linewidth]{Diagramas/areaTiempoPower}
 	\caption{Timing-Area-Power evolution.}
 	\label{fig:atp}
 \end{figure*}
