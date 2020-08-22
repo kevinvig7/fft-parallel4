@@ -21,25 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{freePdk}
-\BIBentryALTinterwordspacing
-R.~Thapa, S.~Ataei, and J.~E. Stine, ``\BIBforeignlanguage{en}{{WIP}.
-  {Open}-source standard cell characterization process flow on 45 nm
-  ({FreePDK45}), 0.18 µm, 0.25 µm, 0.35 µm and 0.5 µm},'' in
-  \emph{\BIBforeignlanguage{en}{2017 {IEEE} {International} {Conference} on
-  {Microelectronic} {Systems} {Education} ({MSE})}}.\hskip 1em plus 0.5em minus
-  0.4em\relax Lake Louise, AB, Canada: IEEE, May 2017, pp. 5--6. [Online].
-  Available: \url{http://ieeexplore.ieee.org/document/7945072/}
-\BIBentrySTDinterwordspacing
-
 \bibitem{shousheng_he_designing_1998}
-\BIBentryALTinterwordspacing
 {Shousheng He} and M.~Torkelson, ``Designing pipeline {FFT} processor for
   {OFDM} (de)modulation,'' in \emph{1998 {URSI} International Symposium on
   Signals, Systems, and Electronics. Conference Proceedings (Cat.
   No.98EX167)}.\hskip 1em plus 0.5em minus 0.4em\relax {IEEE}, pp. 257--262.
-  [Online]. Available: \url{http://ieeexplore.ieee.org/document/738077/}
-\BIBentrySTDinterwordspacing
 
 \bibitem{proakis_digital_nodate}
 J.~G. Proakis and D.~G. Manolakis, ``{DIGITAL} {SIGNAL} {PROCESSING},'' p.
@@ -55,13 +41,10 @@ L.~Jia, Y.~Gao, and H.~Tenhunen, ``Efficient {VLSI} implementation of radix-8
   {FFT} algorithm,'' p.~4.
 
 \bibitem{ayinala_pipelined_2012}
-\BIBentryALTinterwordspacing
 M.~Ayinala, M.~Brown, and K.~K. Parhi, ``\BIBforeignlanguage{en}{Pipelined
   {Parallel} {FFT} {Architectures} via {Folding} {Transformation}},''
   \emph{\BIBforeignlanguage{en}{IEEE Transactions on Very Large Scale
   Integration (VLSI) Systems}}, vol.~20, no.~6, pp. 1068--1081, Jun. 2012.
-  [Online]. Available: \url{http://ieeexplore.ieee.org/document/5776727/}
-\BIBentrySTDinterwordspacing
 
 \bibitem{folding_parhi_book}
 K.~K. Parhi, \emph{{VLSI} {D}igital {S}ignal {P}rocessing {S}ystems. {D}esign
@@ -69,30 +52,22 @@ K.~K. Parhi, \emph{{VLSI} {D}igital {S}ignal {P}rocessing {S}ystems. {D}esign
   SONS, INC}., 1999, ch. Folding Transformation, pp. 151--163.
 
 \bibitem{garrido_pipelined_2013}
-\BIBentryALTinterwordspacing
 M.~Garrido, J.~Grajal, M.~A. Sanchez, and O.~Gustafsson,
   ``\BIBforeignlanguage{en}{Pipelined {Radix}-\$2{\textasciicircum}\{k\}\$
   {Feedforward} {FFT} {Architectures}},'' \emph{\BIBforeignlanguage{en}{IEEE
   Transactions on Very Large Scale Integration (VLSI) Systems}}, vol.~21,
-  no.~1, pp. 23--32, Jan. 2013. [Online]. Available:
-  \url{http://ieeexplore.ieee.org/document/6118316/}
-\BIBentrySTDinterwordspacing
+  no.~1, pp. 23--32, Jan. 2013.
 
 \bibitem{garrido_feedforward_2018}
-\BIBentryALTinterwordspacing
 M.~Garrido, S.-J. Huang, and S.-G. Chen, ``Feedforward {FFT} hardware
   architectures based on rotator allocation,'' vol.~65, no.~2, pp. 581--592.
-  [Online]. Available: \url{http://ieeexplore.ieee.org/document/8010853/}
-\BIBentrySTDinterwordspacing
 
-
-\bibitem{type_FFT_MIT}
-\BIBentryALTinterwordspacing
-Vladimir Stojanović, ``Fast Fourier Transform:
-VLSI Architectures'' , 973 Communication System Design – Spring 2006
-Massachusetts Institute of Technology, Lecture 10.
-\BIBentrySTDinterwordspacing
-
-
+\bibitem{freePdk}
+R.~Thapa, S.~Ataei, and J.~E. Stine, ``\BIBforeignlanguage{en}{{WIP}.
+  {Open}-source standard cell characterization process flow on 45 nm
+  ({FreePDK45}), 0.18 µm, 0.25 µm, 0.35 µm and 0.5 µm},'' in
+  \emph{\BIBforeignlanguage{en}{2017 {IEEE} {International} {Conference} on
+  {Microelectronic} {Systems} {Education} ({MSE})}}.\hskip 1em plus 0.5em minus
+  0.4em\relax Lake Louise, AB, Canada: IEEE, May 2017, pp. 5--6.
 
 \end{thebibliography}

@@ -1,40 +1,18 @@
 \documentclass[journal,comsoc]{IEEEtran}
-%\documentclass[conference]{IEEEtran}
-%\documentclass[conference]{ieeeconf}  
-%\documentclass[a4paper,10pt,conference]{ieeeconf}                                                              
-\IEEEoverridecommandlockouts                                                                                           
-%\overrideIEEEmargins
-%% command later in the file to balance the column lengths
-%%\addtolength 
-\usepackage {cite}
-\usepackage {amsmath,amssymb,amsfonts}
-%\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools,latexsym} 
-\usepackage {algorithmic}
-\usepackage {graphicx}
-\usepackage	{textcomp}
-\usepackage	{xcolor}
-\usepackage	[spanish,english]{babel}
-%\usepackage[T1]{fontenc}
-\usepackage	[utf8x]{inputenc}
-\usepackage	{threeparttable}
-\usepackage	{multirow}
-\usepackage {lscape}
-\usepackage {float}
-\usepackage	[font=small]{caption}
-%\usepackage	{subcaption}
-%\usepackage{graphics} 	% for pdf, bitmapped graphics files
-\usepackage {epsfig} 	% for postscript graphics files
-%\usepackage{mathptmx} 	% assumes new font selection scheme installed
-%\usepackage{times} 	% assumes new font selection scheme installed
-%\usepackage{stackrel}
-%\usepackage{lastpage}
-\usepackage{subfigure}
-\usepackage{placeins}
-%\usepackage{hyperref}
-\def\BibTeX{
-{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
-}
+\usepackage   {cite}
+\usepackage   {amsmath,amssymb,amsfonts}
+\usepackage   {algorithmic}
+\usepackage   {graphicx}
+\usepackage	  {textcomp}
+\usepackage	  {xcolor}
+\usepackage	  [spanish,english]{babel}
+\usepackage	  [utf8x]{inputenc}
+\usepackage	  {threeparttable}
+\usepackage	  {multirow}
+\usepackage   {lscape}
+\usepackage   {float}
+\usepackage	  [font=small]{caption}
+	
 	
 	
 %%%%%%%%
@@ -57,9 +35,6 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
 	{\tt\small kevinviglianco@gmail.com}\\	
 	{\tt\small dani6rg@gmail.com}			
 \end{minipage}			
-%James J. W. Kunst  {\tt\small jjwk89@gmail.com}\\
-%Kevin H. Viglianco	{\tt\small kevinviglianco@gmail.com}\\	 
-%Daniel R. Garcia	{\tt\small dani6rg@gmail.com}
 \\		
 [0.5cm]
 {\large \bf Digital Signal Processing in Very Large Scale Integration Systems}\\
@@ -78,40 +53,38 @@ Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina%\\[0.5
 \maketitle
 
 
+
 %%%%%%%%%%
 % Abstract
 %%%%%%%%%%
-\begin{abstract} - \bf This work describes the design and the VLSI implementation of a 4-parallel pipelined architecture for the complex fast Fourier transform (CFFT) based on the radix-$\bf 2^3$ algorithm with 128 points using folding transformation and register minimization techniques. In addition, different synthesis reports from the Hardware Description Language (HDL) using different optimization techniques were studied in order to obtain good performance on speed and area using an open-source FreePDK45 of 45 nm CMOS technology \cite{freePdk}.
+\begin{abstract}
+\bf This work describes the design and the VLSI implementation of a 4-parallel pipelined architecture for the complex fast Fourier transform (CFFT) based on the radix-$\bf 2^3$ algorithm with 128 points using folding transformation and register minimization techniques. In addition, different synthesis reports from the Hardware Description Language (HDL) using different optimization techniques were studied in order to obtain good performance on speed and area using an open-source FreePDK45 of 45 nm CMOS technology.
 \end{abstract}
+
+
+
 %%%%%%%%%
 % Seccion
 %%%%%%%%%
-
-
-
 \section{Introduccion}
-
-The Fast Fourier Transform (FFT) is widely used in different applications fields, particularly in algorithms that involves applying digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently. Nowadays is common the use of FFT algorithm for real time applications and parallel-pipelined hardware architecture, this allows to achieve good performance with high throughput rates.
+\IEEEPARstart{T}{he} Fast Fourier Transform (FFT) is widely used in different applications fields, particularly in algorithms that involves applying digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently. Nowadays is common the use of FFT algorithm for real time applications and parallel-pipelined hardware architecture, this allows to achieve good performance with high throughput rates.
 
 There are two main types of pipelined FFT architectures  \cite{shousheng_he_designing_1998}. On one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), both methods transfer data samples between stages serially and use feedback loops. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC) transfers more than one sample per clock cycle and do not use feedback loops.
 
 This work focuses on the design of 4-parallel pipelined architecture \textit{radix}-$2^3$ 128-points for Complex FFT-DIF (Decimation In Frequency). Section \ref{sec:equa}, describes the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF. In Section \ref{sec:16points}, the design of a 2-parallel pipelined architecture, \textit{radix}-$2^3$ 16-points FFT via folding transformation is presented. In Section \ref{sec:imp128}, the previous design is translate to a 4-parallel, 128-points \textit{radix}-$2^3$ DIF complex FFT, and a float-point simulator in \textit{Matlab} is elaborated, to later be compared with a fixed-point model in order to obtain the best Signal to Quantization Noise Ratio (SQNR).
 In Section \ref{sec:results}, different power, area and timing reports with different optimizations such as varying pipelining levels, and the application of canonical signed digit (CSD) are compared to obtain the best performance with a clock frequency of $500MHz$. Finally in Section \ref{sec:conclusions} some conclusions and discussions are presented.  
-
-
-\begin{figure*} 
+\begin{figure} 
 	\centering
-	\includegraphics[width=0.5\linewidth]{Diagramas/types_FFT.png}
+	\includegraphics[width=\linewidth]{Diagramas/types_FFT.png}
 	\caption{Types of pipelined FFT archicectures for 16 points \cite{type_FFT_MIT}.}
 	\label{fig:types_fft}
-\end{figure*}
+\end{figure}
 
 
 
 %%%%%%%%%
 % Seccion
 %%%%%%%%%
- 
 \section{Radix-$2^3$ FFT algorithm} \label{sec:equa}
 The \textit{N}-point DFT of an input sequence $x[n]$ is defined as:
 
@@ -134,9 +107,7 @@ In this method the \textit{N}-point data sequence $x[n]$ is split into two $N/2$
 \paragraph{Decimation in frequency (DIF)}
 This method is based on the divide-and-conquer technique, where the DFT formula is split into two summations, one of which involves the sum over the first $N/2$ data points and the second sum involves the last $N/2$ data points.
 
-
 In each decomposition, the basic computing unit that processes the samples is called \textit{butterfly}. In general, each butterfly involves one complex multiplication and two complex additions. The main difference between DIT and DIF is the instant in which the multiplication by $W_N^\phi$ is accomplished, the input samples can be multiplied before or after the split and the samples are later added inside the butterfly structure, as is depicted in Fig.\ref{fig:difdit}.
-
 
 \begin{figure} 
 	\centering
@@ -150,7 +121,6 @@ Another difference between the two methods are that the input samples in algorit
 According the methodology presented in \cite{proakis_digital_nodate}, it is possible to apply the mathematical expressions of \textit{radix-}$2^3$ DIF explained in \cite{jia_efficient_nodate}. 
 
 These fundamental equations are in :
-
 %%Ecuaciones RADIX
 \begingroup
 \allowdisplaybreaks
@@ -171,7 +141,7 @@ Fig. \ref{fig:8ponits_df} and Fig. \ref{fig:8ponits_dfg} show the equivalent dia
 	\label{fig:8ponits_df}
 \end{figure}
 
-\begin{figure} [ht]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/8PuntosRadix8Burbujas.pdf}
 	\caption{Data flow graph (DFG) based in equations (\ref{eqn:radix}).}
@@ -181,14 +151,14 @@ Fig. \ref{fig:8ponits_df} and Fig. \ref{fig:8ponits_dfg} show the equivalent dia
 \subsection{16 points DFT}
 The next step is to find the suitable rotator factors for the 16 point DFT, the equations in (\ref{eqn:radix}) are essential for this design and where evaluated to get $C_{8k+i} = \sum_{n=0}^{16/8-1} \{ \cdot \}, $ for $k=0,1$. The structure for the 16 point DFT is described in Fig. \ref{fig:16points_df} and Fig. \ref{fig:16points_dfg}. 
 
-\begin{figure} [ht]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/16PuntosRadix8Conexion.pdf}
 	\caption{Flow graph of a \textit{radix-}$2^3$ 16-point DIF DFT}
 	\label{fig:16points_df}
 \end{figure}
 
-\begin{figure} [ht]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/16PuntosRadix8Burbujas.pdf}
 	\caption{Data flow graph (DFG) for a \textit{radix-}$2^3$ 16-point DIF DFT}
@@ -198,14 +168,12 @@ The next step is to find the suitable rotator factors for the 16 point DFT, the 
 \subsection{128 points DFT}
 With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies obtain together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. With this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involve three stages of butterflies to finally arrive to a set of eight 16 point DFTs. In Fig. \ref{fig:128ponits_conn} the 
 
-\begin{figure} [ht]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/BloquesDft.pdf}
 	\caption{Decomposing a \textit{radix-}$2^3$ 128-point DFT.}
 	\label{fig:128_block_descomp}
 \end{figure}
-
-
 
 %
 %With the DFT's previous decomposition is possible to get whole the coefficients $C_{8k+i}$ that represent the samples in frequency $X[k]$ obtained from a combination of the different instances of $x[n]$. This method take us to apply step by step the equation (\ref{eqn:radix}) to our design and finally arrive to the definitive architecture, the Fig. \ref{fig:128ponits_conn} shows us a \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage is building with 64 butterflies of radix-2 base.
@@ -222,9 +190,10 @@ With these first approaches is possible the application of the divide and conque
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
- 
 \section{Design of a FFT architecture via folding transformation} \label{sec:16points}
 In this section, we illustrate the folding transformation method to derive a 16-point DIF FFT 4-parallel architecture as an example and then, using the same method, we extend it to 128-point architecture. To do this, we will use the architecture proposed in \cite{ayinala_pipelined_2012}, to do the folding transfomation and register minimization techiques we will use \cite{folding_parhi_book}.
+
+
 
 %%%%%%%%%%%%%
 %% Subseccion
@@ -314,46 +283,46 @@ The same criteria is used for represent the constants of rotators, where each nu
 
 
 \begin{table*}  
-    \centering
-    \resizebox{0.85\linewidth}{!}{%			
-    \begin{tabular}{c||c|c||c|c||c|c}
-        \multirow{2}{*}{\#Cycle} & \multicolumn{2}{c||}{Stage 1} & \multicolumn{2}{c||}{Stage 2} & \multicolumn{2}{c}{Stage 3} \\  \cline{2-7}   
-                           &  Dataflow                         &   Control              &  Dataflow                         &   Control               &  Dataflow                         &   Control    \\ \hline  \hline
-        \multirow{2}{*}{0}  &  $y0 \to R3$                      &  \multirow{2}{*}{0}    &         $z0 \to R2$              &  \multirow{2}{*}{0}     &  $w0 \to R3 $     &  \multirow{2}{*}{0}     \\    
-                            &        $y8 \to R7$                &                        &         $z8 \to R4$              &                         &  $w8 \to R7 $     &                      \\ \hline
-        \multirow{2}{*}{1}  &   $y2 \to R3$                     &  \multirow{2}{*}{0}    &  $(z2,z10) \to i/p$              &  \multirow{2}{*}{1}    &  $w4 \to R3$                     &  \multirow{2}{*}{0}        \\  
-                            &   $y10 \to R7$                    &                        &  $R1 \to R2, \,R3 \to R4 $        &                         &  $w12 \to R7$                      &                       
-       \\ \hline
-        \multirow{2}{*}{2}  &  $(y4,y12,R4) \to i/p$              &  \multirow{2}{*}{1}    &  $z1 \to R2, \, z9 \to R4$     &  \multirow{2}{*}{0}    &  $(w1,w9,R4) \to i/p$                      &  \multirow{2}{*}{1}       \\ 
-                            &   $R2 \to R3, \, R6 \to R7$       &                        &  $R1 \to i/p, \, R3 \to i/p$     &                        &  $R2 \to R3, \, R6 \to R7$                     &                         
-        \\ \hline  
-        \multirow{2}{*}{3}  &  $(y6,y14,R4) \to i/p$         &  \multirow{2}{*}{1}    &   $(z3,z11) \to i/p$                &  \multirow{2}{*}{1}   &  $(w5,s9,R4) \to i/p$                    &  \multirow{2}{*}{1}         \\       
-                            &   $R2 \to R3, \, R6 \to R7$     &                        & $R1 \to R2, \,R3 \to R4 $           &                       &  $R2 \to R3, \, R6 \to R7$                     &                             \\ \hline 
-        \multirow{2}{*}{4}  &  \multirow{2}{*}{$(R2,R4) \to i/p$} & \multirow{2}{*}{0} & \multirow{2}{*}{$R1 \to i/p, \, R3 \to i/p$} &  \multirow{2}{*}{0}     &  \multirow{2}{*}{$(R2,R4) \to i/p$}                      &  \multirow{2}{*}{0}         \\  
-                            &                                   &                        &                                   &                        &                 &                             \\ \hline
-        \multirow{2}{*}{5}  & \multirow{2}{*}{$(R2,R4) \to i/p$} &  \multirow{2}{*}{0}    & \multirow{2}{*}{$R1 \to R2, \,R3 \to R4$}  &  \multirow{2}{*}{1}    &  \multirow{2}{*}{$(R2,R4) \to i/p$}     &  \multirow{2}{*}{0}        \\
-                            &                                  &                        &                                     &                           &                        &                             \\ \hline    
-    \end{tabular}}
-    \caption{Dataflow and mux control for each stage based on registers showed in Figure \ref{fig:folding16_stage1} and
-    \ref{fig:folding16_stage2}.}
-        \label{tab:folding16_mux}
-    \end{table*}
+\centering
+\resizebox{0.85\linewidth}{!}{%			
+\begin{tabular}{c||c|c||c|c||c|c}
+    \multirow{2}{*}{\#Cycle} & \multicolumn{2}{c||}{Stage 1} & \multicolumn{2}{c||}{Stage 2} & \multicolumn{2}{c}{Stage 3} \\  \cline{2-7}   
+                       &  Dataflow                         &   Control              &  Dataflow                         &   Control               &  Dataflow                         &   Control    \\ \hline  \hline
+    \multirow{2}{*}{0}  &  $y0 \to R3$                      &  \multirow{2}{*}{0}    &         $z0 \to R2$              &  \multirow{2}{*}{0}     &  $w0 \to R3 $     &  \multirow{2}{*}{0}     \\    
+                        &        $y8 \to R7$                &                        &         $z8 \to R4$              &                         &  $w8 \to R7 $     &                      \\ \hline
+    \multirow{2}{*}{1}  &   $y2 \to R3$                     &  \multirow{2}{*}{0}    &  $(z2,z10) \to i/p$              &  \multirow{2}{*}{1}    &  $w4 \to R3$                     &  \multirow{2}{*}{0}        \\  
+                        &   $y10 \to R7$                    &                        &  $R1 \to R2, \,R3 \to R4 $        &                         &  $w12 \to R7$                      &                       
+   \\ \hline
+    \multirow{2}{*}{2}  &  $(y4,y12,R4) \to i/p$              &  \multirow{2}{*}{1}    &  $z1 \to R2, \, z9 \to R4$     &  \multirow{2}{*}{0}    &  $(w1,w9,R4) \to i/p$                      &  \multirow{2}{*}{1}       \\ 
+                        &   $R2 \to R3, \, R6 \to R7$       &                        &  $R1 \to i/p, \, R3 \to i/p$     &                        &  $R2 \to R3, \, R6 \to R7$                     &                         
+    \\ \hline  
+    \multirow{2}{*}{3}  &  $(y6,y14,R4) \to i/p$         &  \multirow{2}{*}{1}    &   $(z3,z11) \to i/p$                &  \multirow{2}{*}{1}   &  $(w5,s9,R4) \to i/p$                    &  \multirow{2}{*}{1}         \\       
+                        &   $R2 \to R3, \, R6 \to R7$     &                        & $R1 \to R2, \,R3 \to R4 $           &                       &  $R2 \to R3, \, R6 \to R7$                     &                             \\ \hline 
+    \multirow{2}{*}{4}  &  \multirow{2}{*}{$(R2,R4) \to i/p$} & \multirow{2}{*}{0} & \multirow{2}{*}{$R1 \to i/p, \, R3 \to i/p$} &  \multirow{2}{*}{0}     &  \multirow{2}{*}{$(R2,R4) \to i/p$}                      &  \multirow{2}{*}{0}         \\  
+                        &                                   &                        &                                   &                        &                 &                             \\ \hline
+    \multirow{2}{*}{5}  & \multirow{2}{*}{$(R2,R4) \to i/p$} &  \multirow{2}{*}{0}    & \multirow{2}{*}{$R1 \to R2, \,R3 \to R4$}  &  \multirow{2}{*}{1}    &  \multirow{2}{*}{$(R2,R4) \to i/p$}     &  \multirow{2}{*}{0}        \\
+                        &                                  &                        &                                     &                           &                        &                             \\ \hline    
+\end{tabular}}
+\caption{Dataflow and mux control for each stage based on registers showed in Figure \ref{fig:folding16_stage1} and
+\ref{fig:folding16_stage2}.}
+    \label{tab:folding16_mux}
+\end{table*}
 
 
-    \begin{figure} 
-        \centering
-        \includegraphics[width=0.85\linewidth]{Diagramas/folding_stage1.png}
-        \caption{Registers names used in Fig. \ref{fig:tab-aloc-a} for stage 1.}
-        \label{fig:folding16_stage1}
-    \end{figure}
-    %
+\begin{figure} 
     \centering
-    \begin{figure} 
-        \centering
-        \includegraphics[width= 0.85\linewidth]{Diagramas/folding_stage2.png}
-        \caption{Registers names used in Fig. \ref{fig:tab-aloc-b} for stage 2.}
-        \label{fig:folding16_stage2}
-    \end{figure}
+    \includegraphics[width=0.85\linewidth]{Diagramas/folding_stage1.png}
+    \caption{Registers names used in Fig. \ref{fig:tab-aloc-a} for stage 1.}
+    \label{fig:folding16_stage1}
+\end{figure}
+%
+
+\begin{figure} 
+    \centering
+    \includegraphics[width= 0.85\linewidth]{Diagramas/folding_stage2.png}
+    \caption{Registers names used in Fig. \ref{fig:tab-aloc-b} for stage 2.}
+    \label{fig:folding16_stage2}
+\end{figure}
         
 
 
@@ -387,7 +356,7 @@ The different types of rotators used in Fig. \ref{ fig:folding_16_arch} are show
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
-\section{4-Parallel radix-$2^3$ 128-Points}   \label{sec:imp128}
+\section{4-Parallel radix-$2^3$ 128-Points}\label{sec:imp128}
 We can deduce the folding architecture for 128 points following the same method than used with the 4-Parallel radix-$2^3$ 16-Points. The DFG and folding set used can be shown in Fig. \ref{fig:pipe_dfg_128} and Table \ref{tab:fold_set_128}.
 The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 
@@ -408,10 +377,9 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
- 
 \subsection{Implementation of a 128-point FFT}
 In this section we are going to begin with the process of how accomplish the implementation of our 4-parallel architecture for the computation of 128-point \textit{radix}-$2^3$ DIF complex FFT.
-First, we wrote a \textit{MATLAB} simulator to validate the operation of our design and the design presented in \cite{garrido_pipelined_2013,garrido_feedforward_2018}. Therefore, we can have a reference architecture for compare the design that we deduce. After that, we take all these information to generate a Synthesizable \textit{Verilog} code with different levels of optimizations with a powerful tool like \textit{Synopsys} to get a final design integrated of Standard Cells $@45nm$.
+First, we wrote a \textit{MATLAB} simulator to validate the operation of our design and the design presented in \cite{garrido_pipelined_2013,garrido_feedforward_2018}. Therefore, we can have a reference architecture for compare the design that we deduce. After that, we take all these information to generate a Synthesizable \textit{Verilog} code with different levels of optimizations with a powerful tool like \textit{Synopsys} to get a final design integrated of Standard Cells at 45nm \cite{freePdk}.
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
@@ -422,7 +390,6 @@ First, we wrote a \textit{MATLAB} simulator to validate the operation of our des
 	\caption{Quantization for a 128-point 4-parallel complex FFT architecture}
 	\label{fig:4paralelo128pradix8cuantizacion1}
 \end{figure*}
-
 
 \begin{figure} 
 	\centering
@@ -445,9 +412,11 @@ x[n] &= x'[n]/max\{x'[n]\} 						\nonumber
 where $f_1=100Hz$, $f_2=1000Hz$ and $T_s$ is the sampled period.
 
 In each stage of the Fig. \ref{fig:4paralelo128pradix8cuantizacion1}, input samples that propagate stage by stage will be carefully quantized with the purpose of getting a high SQNR (Signal to Quantization Noise Ratio).
+\begin{small}
 \begin{equation*}%\label{eq:sqnr}
 SQNR_{dB} = 10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Signal_{FloatPoint} - Signal_{FixedPoint}\}}  \bigg)
 \end{equation*}
+\end{small}
 SQNR computation represents the logarithmic relationship between float signal variance over error variance from an signal given.
 
 The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representation means a number signed (S) with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddle} factors and the architecture's output.
@@ -476,17 +445,13 @@ Twiddles factor are quantized with a relation of $S(11,9)$ and the complex outpu
 The combination between latencies (delays registers) and switches in all stages in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} is the equivalent circuit shows in Fig. \ref{fig:shift}, that is used to appropriately order samples in each butterflies input.
 
 Whole elements on the architecture such as multipliers and butterflies are complex as Fig. \ref{fig:buttercomplejo} and \ref{fig:summult}. On an implementation is essential divide the signal in its real and imaginary part with the purpose of process them independently. A \textit{general rotator} (full complex multiplier) generate a real and imaginary component that is composed by a real multiplication an one addition, but a \textit{trivial rotator} only change the components of a complex signal. These relations are important at the moment of doing the quantization process to ensure an appropriate quantity of bits.
+
+
+
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
 \subsection{Verilog (HDL) Model} 
-%\begin{figure*} 
-%	\centering
-%	\includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps}
-%	\caption{RTL (Register transfer level) design for a 4-parallel \textit{radix}-$2^3$ 128-point DIF FFT with Optimization}
-%	\label{fig:v5esquemap}
-%\end{figure*}
-
 In this subsection we are going to talk about the different design instances to model the DFT in hardware. 
 We made four design implementations with the purpose of have a global view of optimization levels to achieve the requested \textit{Timing} at a working frequency of 500MHz obtained from the synthesis processes.
 
@@ -497,11 +462,11 @@ In the second place with the goal of minimize the \textit{critical path} in our 
 In the fourth level of optimization showed in Fig. \ref{fig:v5esquemap}, we place inside each butterfly blocks an internal pipelined to improve the required timing. Lastly, the full multipliers from stage two and five are modified to efficiently work with constant coefficients, these new multipliers are \textit{CSD} because the twiddle factors in these stages are always $-je^{-j\frac{\pi}{4}}$ and $e^{-j\frac{\pi}{4}}$.
 
 
+
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
- 
-\section{Results}  \label{sec:results}
+\section{Results}\label{sec:results}
 All designs were implemented with different levels of optimization to accomplish the desired working frequency. The design instances were synthesized by Synopsys tool in order to build an interconnection of Standard Cells to get and generate a complete set of \textit{timing-area-power report} showed in Table \ref{tab:reporte2}, \ref{tab:reporte5} and  \ref{tab:reporte6}. According to the first results, data arrival time is greater than minimum period established 2ns and we can detected that there is a time Violated, with this first approach we decide make a set of optimizations to folding architecture as a pipelined cutset between stages of DFT. In this way as we can see in Table \ref{tab:reporte5}, we reduced power, area and timing. 
 
 In contrast with the first instance of design, we found in the last case of implementation a slack of time equal to zero, that means the clock period satisfy the time constraint at 500MHz.
@@ -515,46 +480,20 @@ In contrast with the first instance of design, we found in the last case of impl
 %% Tercera version con pipe, saturacion y CSD 
 \input{tex/reporte6.tex}	
 
-
-
-
-\begin{figure} 
+\begin{figure*} 
 	\centering
-<<<<<<< HEAD
-	\includegraphics[width=\linewidth]{Diagramas/report_area.pdf}
-	\caption{Power-Area report from Tables .}
-	\label{fig:poer_area_rep}
-\end{figure}
-
-
-\begin{figure} 
-	\centering
-	\includegraphics[width=\linewidth]{Diagramas/report_time.pdf}
-	\caption{Timing-Area report from Tables .}
-	\label{fig:poer_area_rep}
-\end{figure}
-
-This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation. The Fourier Transform without 
-||||||| merged common ancestors
-	\includegraphics[width=0.85\linewidth]{Diagramas/areaTiempoPowerArea}
-	\caption{Timing-Area-Power evolution.}
-	\label{fig:atp}
-\end{figure*}
-This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation. The Fourier Transform without 
-=======
 	\includegraphics[width=0.85\linewidth]{Diagramas/areaTiempoPowerArea}
 	\caption{Timing-Area-Power evolution.}
 	\label{fig:atp}
 \end{figure*}
 
->>>>>>> 18b879db1496ca0b5867543bf8be00291b98b56f
+
 
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
 %\FloatBarrier
- 
-\section{Conclusions} \label{sec:conclusions}
+\section{Conclusions}\label{sec:conclusions}
 This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parallel radix-$2^3$ FFT Architecture via Folding Transformation. The Fourier Transform without folding technique processes 128 entry points of samples which are ordered but its output are disordered and it is necessary a reordering circuit. In the other hand a Fourier Transform with folding technique also needs a reordering circuit in the input. This circuit present an additional area and power consumption to be considered in the final design. 
 
 The folding transformation applied reduce significatively (equal to the folded factor, i.e. 64 times) the number of functional units, and therefore the silicon area, at the expense of increasing the computation time by the same factor. Therefore is necessary to add pipeline cutsets and a careful quantization in order to achieve the required sample period with an acceptable SNR.
