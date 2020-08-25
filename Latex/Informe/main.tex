@@ -82,12 +82,12 @@ There are two main types of pipelined FFT architectures  \cite{shousheng_he_desi
 This work focuses on the design of 4-parallel pipelined architecture \textit{radix}-$2^3$ 128-points for Complex FFT-DIF (Decimation In Frequency). Section \ref{sec:equa}, describes the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF. In Section \ref{sec:16points}, the design of a 2-parallel pipelined architecture, \textit{radix}-$2^3$ 16-points FFT via folding transformation is presented. In Section \ref{sec:imp128}, the previous design is translate to a 4-parallel, 128-points \textit{radix}-$2^3$ DIF complex FFT, and a float-point simulator in \textit{Matlab} is elaborated, to later be compared with a fixed-point model in order to obtain the best Signal to Quantization Noise Ratio (SQNR).
 In Section \ref{sec:results}, different power, area and timing reports with different optimizations such as varying pipelining levels, and the application of canonical signed digit (CSD) are compared to obtain the best performance with a clock frequency of $500MHz$. Finally in Section \ref{sec:conclusions} some conclusions and discussions are presented.  
 
-\begin{figure} 
+\begin{figure*} 
 	\centering
 	\includegraphics[width=0.8\linewidth]{Diagramas/types_FFT.png}
 	\caption{Types of pipelined FFT archicectures for 16 points \cite{type_FFT_MIT}.}
 	\label{fig:types_fft}
-\end{figure}
+\end{figure*}
 
 The first step is obtain the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF for 8 points. After that, a 2-parallel pipelined architecture radix-$2^3$ 16-points FFT via folding transformation is deduced with the appropriates \textit{twiddle factors} for each stage and clock cycle over the chain of butterflies on a feedforward architecture MDC. Finally this architecture is translated to a 128-points model. 
 
@@ -183,7 +183,7 @@ The use of higher value radices lead to different amount of rotators. If we comp
 \end{figure}
 
 
-\begin{figure} [ht]
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/8PuntosRadix8Burbujas.pdf}
 	\caption{Data flow graph (DFG) based in equations (\ref{eqn:radix}).}
@@ -202,7 +202,7 @@ The next step is find the suitable rotator factors for the 16 point DFT, the use
 
 With these first approaches, is possible to applying the divide and conquer strategy by decomposition of a 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$. In this way a sequence in chain of butterflies is obtained with its corresponding rotation factor and the correct index of the samples in witch them must be added or multiplied. With this technique is possible to do a subdivision of butterflies stages, in Fig. \ref{fig:128_block_descomp} can be seen that the 128 point DFT goes through a processes that involve three stages of butterflies to arrive finally to a set of eight DFT where each of one is a 16 point DFT.
 
-\begin{figure}[ht]
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/16PuntosRadix8Conexion.pdf}
 	\caption{Flow graph of a \textit{radix-}$2^3$ 16-point DIF DFT}
@@ -210,7 +210,7 @@ With these first approaches, is possible to applying the divide and conquer stra
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/16PuntosRadix8Burbujas.pdf}
 	\caption{Data flow graph (DFG) for a \textit{radix-}$2^3$ 16-point DIF DFT}
@@ -220,7 +220,7 @@ With these first approaches, is possible to applying the divide and conquer stra
 \subsection{128 points DFT}
 With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies obtain together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. With this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involve three stages of butterflies to finally arrive to a set of eight 16 point DFTs. In Fig. \ref{fig:128ponits_conn} the 
 
-\begin{figure}[ht]
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/BloquesDft.pdf}
 	\caption{Decomposing a \textit{radix-}$2^3$ 128-point DFT.}
@@ -261,11 +261,11 @@ D_F(U \to V) = Kw(e)-P_U+v-u
 where $P_U$ is the number of pipeline stages in the hardware unit which executes the node U.
 
 Consider folding of the the DFG in Fig. \ref{fig:16points_dfg} with the folding sets:
-\begin{align} \label{eq:foldingset_16}
-A&= \{ A0,A2,A4,A6 \}  & A'&= \{ A1,A3,A5,A7 \} \nonumber \\
+\begin{align} 
+A&= \{ A0,A2,A4,A6 \}  & A'&= \{ A1,A3,A5,A7 \} \label{eq:foldingset_16} \\
 B&=\{ B1,B3,B0,B2 \}   &B'&=\{ B5,B7,B4,B6 \} 	\nonumber \\
 C&=\{ C2,C1,C3,C0 \}   &C'&=\{ C6,C5,C7,C4 \} 	\nonumber \\ 
-D&=\{ D3,D0,D2,D1 \}   &D'&=\{ D7,D4,D6,D5 \}  
+D&=\{ D3,D0,D2,D1 \}   &D'&=\{ D7,D4,D6,D5 \}  \nonumber
 \end{align}
 
 Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B=P_C=P_D=0$), the folding equations can be derived for all edges. Thus, we can obtained from (\ref{eqn:fold_equation}) the expressions \textit{without apply retiming}.
@@ -336,19 +336,20 @@ D_F(F7\to D6)&=0 &  D_F(F7\to D7)&=2\nonumber
 \end{small}
 We can see that the number of registers required to implement the folding equations in (\ref{eqn:ConRetiming}) is 80. For minimize the number of registers we use the register minimization technique. 
 If we let the output of node $A0$ be $y_{(0)}$ and $y_{(8)}$ and the output of the node A1 be $y_{(1)}$ and $y_{(9)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively, therefore the number of registers is reduced from 80 to 20. More information about this method can be found on \cite{folding_parhi_book}.
-\begin{figure}[t!]
+
+\begin{figure}
 \centering
  \includegraphics[width=\linewidth]{Diagramas/life_chart_a.png}
 \caption{Linear lifetime chart for the variables $y_{(0)}, y_{(1)},...,y_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-a}
 \end{figure}
-\begin{figure}[t!]
+\begin{figure}
 \centering
  \includegraphics[width=\linewidth]{Diagramas/life_chart_b.png}
 \caption{Linear lifetime chart for the variables $z_{(0)}, z_{(1)},...,z_{(15)}$ for a 16-point FFT architecture.}
 \label{fig:tab-life-b}
 \end{figure}
-\begin{figure}[t!]
+\begin{figure}
 \centering
  \includegraphics[width=\linewidth]{Diagramas/life_chart_c.png}
 \caption{Linear lifetime chart for the variables $w_{(0)}, w_{(1)},...,w_{(15)}$ for a 16-point FFT architecture.}
@@ -454,7 +455,7 @@ The different types of rotators used in Fig. \ref{fig:folding_16_arch} are shown
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
-<<<<<<< HEAD
+
 \section{4-Parallel radix-$2^3$ 128-Points}   \label{sec:imp128}
 Based on Figure \ref{fig:128ponits_dfg} and assigning the name of nodes similar to Fig. \ref{fig:16points_dfg}, i.e. for the first stage $A0,A1,..,A63$, for second stage $B0,B1,..,B63$ and so on, is possible to obtain a folding set similar to \eqref{eq:foldingset_16} as shown in Table \ref{tab:fold_set_128}. After that, is necessary to obtain the folding equations for 128-ponits and apply the same procedure used with the 4-Parallel radix-$2^3$ 16-Points. The final architecture can be seen in Fig. \ref{fig:folding_128}.
 
