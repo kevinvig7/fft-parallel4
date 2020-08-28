@@ -96,7 +96,7 @@ The Fast Fourier Transform (FFT) is widely used in different applications fields
 There are two main types of pipelined FFT architectures  \cite{shousheng_he_designing_1998}. On one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), both methods transfer data samples between stages serially and use feedback loops. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC) transfers more than one sample per clock cycle and do not use feedback loops.
 
 This work focuses on the design of 4-parallel pipelined architecture \textit{radix}-$2^3$ 128-points for Complex FFT-DIF (Decimation In Frequency). Section \ref{sec:equa}, describes the equations that correspond to Butterfly structure of \textit{radix}-$2^3$ FFT-DIF. In Section \ref{sec:16points}, the design of a 2-parallel pipelined architecture, \textit{radix}-$2^3$ 16-points FFT via folding transformation is presented. In Section \ref{sec:imp128}, the previous design is translate to a 4-parallel, 128-points \textit{radix}-$2^3$ DIF complex FFT, and a float-point simulator in \textit{Matlab} is elaborated, to later be compared with a fixed-point model in order to obtain the best Signal to Quantization Noise Ratio (SQNR).
-In Section \ref{sec:results}, different power, area and timing reports with different optimizations such as varying pipelining levels, and the application of canonical signed digit (CSD) are compared to obtain the best performance with a clock frequency of $500MHz$. Finally in Section \ref{sec:conclusions} some conclusions and discussions are presented.  
+In Section \ref{sec:results}, different power, area and timing reports with different optimizations such as varying pipelining levels, and the application of canonical signed digit (CSD) are compared to obtain the best performance with a clock frequency of $500MHz$. Finally in Section \ref{sec:conclusions}, some conclusions and discussions are presented.  
 
 
 \begin{figure*} 
@@ -120,36 +120,36 @@ The \textit{N}-point DFT of an input sequence $x[n]$ is defined as:
 \end{equation}
 where $W_N^{nk} = e^{-j\frac{2\pi}{N} nk}$. 
 
-The FFT based on Cooley-Tukey algorithm is most commonly used to compute the DFT efficiently, this allows to reduce the number of operations from \textit{O($N^2$)} for the DFT to \textit{O($Nlog_2N$)}. Direct computation of the DFT is basically inefficient primarily because it does not exploit the symmetry and periodicity properties of the phase factor $W_N$, these two properties are:
+The FFT based on Cooley-Tukey algorithm is most commonly used to compute the DFT efficiently, this allows to reduce the number of operations from \textit{O($N^2$)} to \textit{O($Nlog_2N$)}. Direct computation of the DFT is basically inefficient, primarily because it does not exploit the symmetry and periodicity properties of the phase factor $W_N$, these two properties are:
 \begin{align}
 	&\text{Symmetry property: } W_N^{k+N/2} = -W_N^k	\\
 	&\text{Periodicity property: } W_N^{k+N} = W_N^k
 \end{align}
 
-The development of computationally efficient algorithms for DFT is possible if a \textit{Divide and Conquer} approach is adopted. This approach is based on the decomposition of an \textit{N} point DFT into successively smaller DFTs. In accordance with this, the DFT is calculated in series of $s=log_\rho N$ stages, where $\rho$ is the base of the \textit{radix}. In this work this factor is two, so the number of stages for 128 points is 7.
+The development of computationally efficient algorithms for DFT is possible if a \textit{Divide and Conquer} approach is adopted. This approach is based on the decomposition of an \textit{N} point DFT into successively smaller DFTs, this means that the DFT is calculated as a series of $s=log_\rho N$ stages, where $\rho$ is the base of the \textit{radix}, e.g., in this work this factor is two, so the number of stages for 128 points is 7.
 
 According to \cite{proakis_digital_nodate,oppenheim_tratamiento_2011}, There are two methods to design FFT algorithms: 
 \paragraph{Decimation in time (DIT)}
-In this method the \textit{N}-point data sequence $x[n]$ is split into two $N/2$-point data sequences, thus, is possible to obtain two different functions by decimating $x[n]$ by a factor of 2. The decimation of the data sequence can be repeated again until the resulting sequences are reduced to one-point sequence. 
+In this method the \textit{N}-point data sequence $x[n]$ is split into two $N/2$-point data sequences, thus, is possible to obtain two different functions by decimating $x[n]$ by a factor of 2. The decimation of the data sequence can be repeated again, until the resulting sequences are reduced to one-point sequence. 
 \paragraph{Decimation in frequency (DIF)}
 This method is based on the divide-and-conquer technique, where the DFT formula is split into two summations, one of which involves the sum over the first $N/2$ data points and the second sum involves the last $N/2$ data points.
 
 
-In each decomposition, the basic computing unit that processes the samples is called \textit{butterfly}. In general, each butterfly involves one complex multiplication and two complex additions. The main difference between DIT and DIF is the instant in which the multiplication by $W_N^\phi$ is accomplished, the input samples can be multiplied before or after the split and the samples are later added inside the butterfly structure, as is depicted in Fig.\ref{fig:difdit}.
+In each decomposition, the basic computing unit that processes the samples is called \textit{butterfly}. In general, each butterfly involves one complex multiplication and two complex additions. The main difference between DIT and DIF is the instant in which the multiplication by $W_N^\phi$ is computed, the input samples can be multiplied before or after the butterfly structure, as is depicted in Fig.\ref{fig:difdit}.
 
 
-\begin{figure} 
+
+
+\begin{figure} [ht!]
 	\centering
 	\includegraphics[width=0.65\linewidth]{Diagramas/miSeccionFiguras/DifDit.pdf}
 	\caption{Basic butterflies computation in the decimation in time and frequency.}
 	\label{fig:difdit}
 \end{figure}
 
-Another difference between the two methods are that the input samples in algorithms DIF are organized in natural order but its output are not in order, in which case a reordering circuit at the output is needed. On the other hand, the input sequence for DIT algorithms are not in order and its output are in natural order.
+Another difference between the two methods is that the input samples in DIF algorithms are organized in natural order but the output are not in order, in which case a reordering circuit at the output is needed, in contrast with the DIT algorithms where the input sequence are not in order but the output is in natural order.
 
-According the methodology presented in \cite{proakis_digital_nodate}, it is possible to apply the mathematical expressions of \textit{radix-}$2^3$ DIF explained in \cite{jia_efficient_nodate}. 
-
-These fundamental equations are in :
+According to the methodology presented in \cite{proakis_digital_nodate}, it is possible to apply the mathematical expressions of \textit{radix-}$2^3$ DIF as is explain in \cite{jia_efficient_nodate}. These fundamental equations are describe in equation (\ref{eqn:radix}):
 
 %%Ecuaciones RADIX
 \begingroup
@@ -179,7 +179,7 @@ Fig. \ref{fig:8ponits_df} and Fig. \ref{fig:8ponits_dfg} show the equivalent dia
 \end{figure}
 
 \subsection{16 points DFT}
-The next step is to find the suitable rotator factors for the 16 point DFT, the equations in (\ref{eqn:radix}) are essential for this design and where evaluated to get $C_{8k+i} = \sum_{n=0}^{16/8-1} \{ \cdot \}, $ for $k=0,1$. The structure for the 16 point DFT is described in Fig. \ref{fig:16points_df} and Fig. \ref{fig:16points_dfg}. 
+The next step is to find the suitable rotator factors for the 16 point DFT, the equations in (\ref{eqn:radix}) are essential for this design and they were evaluated to get $C_{8k+i} = \sum_{n=0}^{16/8-1} \{ \cdot \}, $ for $k=0,1$. The structure for the 16 point DFT is described in Fig. \ref{fig:16points_df} and Fig. \ref{fig:16points_dfg}. 
 
 \begin{figure} [ht]
 	\centering
@@ -196,7 +196,7 @@ The next step is to find the suitable rotator factors for the 16 point DFT, the 
 \end{figure}
 
 \subsection{128 points DFT}
-With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies obtain together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. With this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involve three stages of butterflies to finally arrive to a set of eight 16 point DFTs. In Fig. \ref{fig:128ponits_conn} the 
+With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies is obtained together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. Using this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involve three stages of butterflies, to finally arrive to a set of eight 16 point DFTs. Finally, Fig. \ref{fig:128ponits_conn} shows the complete architecture for the  \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage is contains 64 butterflies of radix-2 base.
 
 \begin{figure} [ht]
 	\centering
@@ -223,18 +223,23 @@ With these first approaches is possible the application of the divide and conque
 %% Seccion
 %%%%%%%%%%
  
+
+
 \section{Design of a FFT architecture via folding transformation} \label{sec:16points}
-In this section, we illustrate the folding transformation method to derive a 16-point DIF FFT 4-parallel architecture as an example and then, using the same method, we extend it to 128-point architecture. To do this, we will use the architecture proposed in \cite{ayinala_pipelined_2012}, to do the folding transfomation and register minimization techiques we will use \cite{folding_parhi_book}.
+In this section, the architecture proposed in \cite{ayinala_pipelined_2012} together with the folding transformation and register minimization techique described in \cite{folding_parhi_book} is used to obtain a 16-point DIF FFT 4-parallel architecture, then, the same method is extended  to achieve a 128-point DIF FFT 4-parallel architecture.
+
+
+
 
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
 \subsection{4-Parallel radix-$2^3$ 16-Points}
-In Fig. \ref{fig:16points_df} we can see the flow graph of a 16-point DIF FFT radix-$2^3$ with main base radix-2. The graph is divided into four stages and each of them consist of a set of butterflies and multipliers. The twiddle factor in between the stages indicates a multiplication by $W^k_N$, where $W_N$ denotes the \textit{N}th root of unity, with its exponent evaluated modulo N. This can be represented as a DFG as shown in Fig. \ref{fig:16points_dfg} where the nodes represents the butterfly computations of the radix-2 FFT algorithm. 
+The flow graph of a 16-point DIF FFT radix-$2^3$ with main base radix-2 is shown in Fig. \ref{fig:16points_df}. The graph is divided into four stages, each of them consist of a set of butterflies and multipliers. The twiddle factor between the stages indicates a multiplication by $W^k_N$, where $W_N$ denotes the \textit{N}th root of unity, with its exponent evaluated modulo N. This can be represented as a DFG as shown in Fig. \ref{fig:16points_dfg}, where the nodes represents the butterfly computations of the radix-2 FFT algorithm. 
 
-The folding transformation is used on the DFG to derive a pipelined architecture. To do this we need a folding set, which is an ordered set of operations executed by the same functional unit. Each folding set contains K entries, where K is called the folding factor. The operation in the \textit{j}th position within the folding set (where goes from $0$ to $K-1$) is executed by the functional unit during the time partition, this term is called the folding order.
+The folding transformation is used on the DFG to derive a pipelined architecture, to do this a folding set is needed. A folding set is an ordered set of operations executed by the same functional unit, each folding set contains K entries, where K is called the folding factor. The operation in the \textit{j}th position within the folding set (where goes from $0$ to $K-1$) is executed by the functional unit during the time partition, this term is called the folding order.
 
-First we need to derive the folding equations, to do this consider an edge $e$ connecting the nodes \textit{U} and \textit{V} with $w(e)$ delays. Let the executions of the \textit{l}th iteration of the nodes \textit{U} and \textit{V} be scheduled at the time units $Kl+u$ and $Kl+v$ respectively, where $u$ and $v$ are the folding orders of the nodes \textit{U} and \textit{V}, respectively. The folding equation for the edge $e$ is:
+In order to derive the folding equations a node graph is needed, where an edge $e$ is consider to connect the nodes \textit{U} and \textit{V} with $w(e)$ delays. Let the executions of the \textit{l}th iteration of the nodes \textit{U} and \textit{V} be scheduled at the time units $Kl+u$ and $Kl+v$ respectively, where $u$ and $v$ are the folding orders of the nodes \textit{U} and \textit{V}, respectively. The folding equation for the edge $e$ is:
 \begin{equation}\label{eqn:fold_equation}
 D_F(U \to V) = Kw(e)-P_U+v-u
 \end{equation}
@@ -249,7 +254,9 @@ C&=\{ C2,C1,C3,C0 \}   &C'&=\{ C6,C5,C7,C4 \} 	\\
 D&=\{ D3,D0,D2,D1 \}   &D'&=\{ D7,D4,D6,D5 \}  
 \end{align*}
 
-Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B=P_C=P_D=0$), the folding equations can be derived for all edges. Thus, we can obtained from (\ref{eqn:fold_equation}) the expressions \textit{without apply retiming}.
+Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B=P_C=P_D=0$), the folding equations can be derived for all edges,
+thus, the expression \textit{without retiming} can be obtained from (\ref{eqn:fold_equation}) 
+
 %%% Ecuaciones de folding sin pipe
 \begin{small}
 \input{tex/eq_folding.tex}
@@ -267,7 +274,7 @@ For the folded system to be realizable, $D_F(U\to V)\geq0$ must hold for all the
 \input{tex/eq_folding_pipe.tex}
 \end{small}
 
-We can see that the number of registers required to implement the folding equations in (\ref{eqn:ConRetiming}) is 80. For minimize the number of registers we use the register minimization technique. 
+The number of registers required to implement the folding equations in (\ref{eqn:ConRetiming}) is 80, in order to minimize the number of registers  the register minimization technique is needed. 
 If we let the output of node $A0$ be $y_{(0)}$ and $y_{(8)}$ and the output of the node A1 be $y_{(1)}$ and $y_{(9)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively, therefore the number of registers is reduced from 80 to 20. More information about this method can be found on \cite{folding_parhi_book}.
 \begin{figure}[t!]
 \centering
@@ -347,7 +354,7 @@ The same criteria is used for represent the constants of rotators, where each nu
         \label{fig:folding16_stage1}
     \end{figure}
     %
-    \centering
+  
     \begin{figure} 
         \centering
         \includegraphics[width= 0.85\linewidth]{Diagramas/folding_stage2.png}
@@ -520,7 +527,7 @@ In contrast with the first instance of design, we found in the last case of impl
 
 \begin{figure*} 
 	\centering
-	\includegraphics[width=0.85\linewidth]{Diagramas/areaTiempoPowerArea}
+	\includegraphics[width=0.85\linewidth]{Diagramas/areaTiempoPower.pdf}
 	\caption{Timing-Area-Power evolution.}
 	\label{fig:atp}
 \end{figure*}
