@@ -120,12 +120,13 @@ The \textit{N}-point DFT of an input sequence $x[n]$ is defined as:
 \end{equation}
 where $W_N^{nk} = e^{-j\frac{2\pi}{N} nk}$. 
 
-The FFT based on Cooley-Tukey algorithm is most commonly used to compute the DFT efficiently, this allows to reduce the number of operations from \textit{O($N^2$)} to \textit{O($Nlog_2N$)}. Direct computation of the DFT is basically inefficient, primarily because it does not exploit the symmetry and periodicity properties of the phase factor $W_N$, these two properties are:
+Direct computation of the DFT is basically inefficient, primarily because it does not exploit the symmetry and periodicity properties of the phase factor $W_N$, these two properties are:
 \begin{align}
 	&\text{Symmetry property: } W_N^{k+N/2} = -W_N^k	\\
 	&\text{Periodicity property: } W_N^{k+N} = W_N^k
 \end{align}
 
+The FFT design based on Cooley-Tukey algorithm is most commonly used to compute the DFT efficiently, this allows to reduce the number of operations from \textit{O($N^2$)} to \textit{O($Nlog_2N$)}. 
 The development of computationally efficient algorithms for DFT is possible if a \textit{Divide and Conquer} approach is adopted. This approach is based on the decomposition of an \textit{N} point DFT into successively smaller DFTs, this means that the DFT is calculated as a series of $s=log_\rho N$ stages, where $\rho$ is the base of the \textit{radix}, e.g., in this work this factor is two, so the number of stages for 128 points is 7.
 
 According to \cite{proakis_digital_nodate,oppenheim_tratamiento_2011}, There are two methods to design FFT algorithms: 
@@ -196,7 +197,7 @@ The next step is to find the suitable rotator factors for the 16 point DFT, the 
 \end{figure}
 
 \subsection{128 points DFT}
-With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies is obtained together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. Using this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involve three stages of butterflies, to finally arrive to a set of eight 16 point DFTs. Finally, Fig. \ref{fig:128ponits_conn} shows the complete architecture for the  \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage is contains 64 butterflies of radix-2 base.
+With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies is obtained together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. Using this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involves three stages of butterflies to finally arrive to a set of eight 16 point DFTs. Finally, Fig. \ref{fig:128ponits_conn} shows the complete architecture for the  \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage  contains 64 butterflies of radix-2 base.
 
 \begin{figure} [ht]
 	\centering
@@ -246,7 +247,7 @@ D_F(U \to V) = Kw(e)-P_U+v-u
 
 where $P_U$ is the number of pipeline stages in the hardware unit which executes the node U.
 
-Consider folding of the the DFG in Fig. \ref{fig:16points_dfg} with the folding sets:
+Considering the folding of the DFG in Fig. \ref{fig:16points_dfg} with the folding sets:
 \begin{align*}%\label{eq:foldingset_16}
 A&= \{ A0,A2,A4,A6 \}  & A'&= \{ A1,A3,A5,A7 \} \\
 B&=\{ B1,B3,B0,B2 \}   &B'&=\{ B5,B7,B4,B6 \} 	\\
@@ -255,7 +256,7 @@ D&=\{ D3,D0,D2,D1 \}   &D'&=\{ D7,D4,D6,D5 \}
 \end{align*}
 
 Assuming that the butterfly operations do not have any pipeline stages ($P_A=P_B=P_C=P_D=0$), the folding equations can be derived for all edges,
-thus, the expression \textit{without retiming} can be obtained from (\ref{eqn:fold_equation}) 
+thus, the expression \textit{without retiming} can be obtained from (\ref{eqn:fold_equation}).
 
 %%% Ecuaciones de folding sin pipe
 \begin{small}
@@ -274,8 +275,9 @@ For the folded system to be realizable, $D_F(U\to V)\geq0$ must hold for all the
 \input{tex/eq_folding_pipe.tex}
 \end{small}
 
-The number of registers required to implement the folding equations in (\ref{eqn:ConRetiming}) is 80, in order to minimize the number of registers  the register minimization technique is needed. 
-If we let the output of node $A0$ be $y_{(0)}$ and $y_{(8)}$ and the output of the node A1 be $y_{(1)}$ and $y_{(9)}$, applying this successively with the rest of the nodes A we can obtain the linear life time chart for this stage in Fig. \ref{fig:tab-life-a}. Applying this criteria to the rest of the stages we can obtain the life time chart \ref{fig:tab-life-b} and \ref{fig:tab-life-c} for the outputs of the nodes B and C respectively, we can see that the numbers of maximum registers in each stage are 8, 4 and 8 respectively, therefore the number of registers is reduced from 80 to 20. More information about this method can be found on \cite{folding_parhi_book}.
+The number of registers required to implement the folding equations in (\ref{eqn:ConRetiming}) is 80, in order to minimize the number of registers  the register minimization technique is needed. To apply this technique lets consider
+the output of node $A0$ to be $y_{(0)}$ and $y_{(8)}$, and the output of the node A1 to be $y_{(1)}$ and $y_{(9)}$, applying this successively with the rest of the nodes A a linear life time chart for this stage is obtain as is shown in Fig.\ref{fig:tab-life-a}. Applying this criteria to the rest of the stages the life time chart for nodes B and C are obtained as is shown in Fig.\ref{fig:tab-life-b} and Fig.\ref{fig:tab-life-c}  respectively. The resulting maximum number of registers for each stage are 8, 4 and 8 respectively, therefore the total number of registers is reduced from 80 to 20. More information about this method can be found on \cite{folding_parhi_book}.
+
 \begin{figure}[t!]
 \centering
  \includegraphics[width=\linewidth]{Diagramas/life_chart_a.png}
@@ -295,10 +297,10 @@ If we let the output of node $A0$ be $y_{(0)}$ and $y_{(8)}$ and the output of t
 \label{fig:tab-life-c}
 \end{figure}
 
-The register allocation tables for the lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} for stage 1, 2 and 3 respectively. In the Fig. \ref{fig:folding16_stage1} and \ref{fig:folding16_stage2} is shown the designations of registers for the stage 1 and 2 respectively used in the allocation tables, the designation for stage 3 are similar for stage 1. The folded architecture in Fig. \ref{ fig:folding_16_arch} is synthesized using the folding equations and the register allocation tables. The dataflow for each stage can be see in Tab. \ref{tab:folding16_mux}, the control signal for stage 1 and 2 can be implemented by dividing the clock signal to 4 and 2 respectively, for stage 3 the control signal is the same that the stage 1.
+The register allocation tables for the lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} for stage A, B and C respectively. Fig.\ref{fig:folding16_stage1} and  Fig.\ref{fig:folding16_stage2} show the designations of registers for the stage A and B respectively used in the allocation tables, the designation for stage C are similar to stage A. The folded architecture in Fig.\ref{fig:folding_16_arch} is synthesized using the folding equations and the register allocation tables. The dataflow for each stage can be seen in Tab. \ref{tab:folding16_mux}, the control signal for stage A and B can be implemented by dividing the clock signal to 4 and 2 respectively, for stage C the control signal is the same that the stage A. 
+Note that in Fig. \ref{fig:folding_16_arch} the inputs and output are not ordered, to order these variables an extra logic is needed, this imply using more registers and multiplexers.
 
-The inputs of each folding node are represented with a matrix where the values in the same column are data that flow in parallel and values in the same row flow through the same path in consecutive clock cycles. The first two rows represents the inputs of the superior BF and the others two represents the input of the inferior BF. 
-The same criteria is used for represent the constants of rotators, where each number $k$ of the matrix represent a multiplication by $W^k_N$.
+The inputs for each folding node are represented in a matrix where the values in the same column is the data that flow in parallel, and values in the same row correspond to the data that flow through the same path in consecutive clock cycles. The first two rows represent the inputs of the superior BF and the others two represents the input of the inferior BF. The same criteria is used for represent the rotators constants, where each number $k$ of the matrix represent a multiplication by $W^k_N$.
 
 \begin{figure} 
 \centering
@@ -319,32 +321,8 @@ The same criteria is used for represent the constants of rotators, where each nu
 \label{fig:tab-aloc-c}
 \end{figure}
 
-
-\begin{table*}  
-    \centering
-    \resizebox{0.85\linewidth}{!}{%			
-    \begin{tabular}{c||c|c||c|c||c|c}
-        \multirow{2}{*}{\#Cycle} & \multicolumn{2}{c||}{Stage 1} & \multicolumn{2}{c||}{Stage 2} & \multicolumn{2}{c}{Stage 3} \\  \cline{2-7}   
-                           &  Dataflow                         &   Control              &  Dataflow                         &   Control               &  Dataflow                         &   Control    \\ \hline  \hline
-        \multirow{2}{*}{0}  &  $y0 \to R3$                      &  \multirow{2}{*}{0}    &         $z0 \to R2$              &  \multirow{2}{*}{0}     &  $w0 \to R3 $     &  \multirow{2}{*}{0}     \\    
-                            &        $y8 \to R7$                &                        &         $z8 \to R4$              &                         &  $w8 \to R7 $     &                      \\ \hline
-        \multirow{2}{*}{1}  &   $y2 \to R3$                     &  \multirow{2}{*}{0}    &  $(z2,z10) \to i/p$              &  \multirow{2}{*}{1}    &  $w4 \to R3$                     &  \multirow{2}{*}{0}        \\  
-                            &   $y10 \to R7$                    &                        &  $R1 \to R2, \,R3 \to R4 $        &                         &  $w12 \to R7$                      &                       
-       \\ \hline
-        \multirow{2}{*}{2}  &  $(y4,y12,R4) \to i/p$              &  \multirow{2}{*}{1}    &  $z1 \to R2, \, z9 \to R4$     &  \multirow{2}{*}{0}    &  $(w1,w9,R4) \to i/p$                      &  \multirow{2}{*}{1}       \\ 
-                            &   $R2 \to R3, \, R6 \to R7$       &                        &  $R1 \to i/p, \, R3 \to i/p$     &                        &  $R2 \to R3, \, R6 \to R7$                     &                         
-        \\ \hline  
-        \multirow{2}{*}{3}  &  $(y6,y14,R4) \to i/p$         &  \multirow{2}{*}{1}    &   $(z3,z11) \to i/p$                &  \multirow{2}{*}{1}   &  $(w5,s9,R4) \to i/p$                    &  \multirow{2}{*}{1}         \\       
-                            &   $R2 \to R3, \, R6 \to R7$     &                        & $R1 \to R2, \,R3 \to R4 $           &                       &  $R2 \to R3, \, R6 \to R7$                     &                             \\ \hline 
-        \multirow{2}{*}{4}  &  \multirow{2}{*}{$(R2,R4) \to i/p$} & \multirow{2}{*}{0} & \multirow{2}{*}{$R1 \to i/p, \, R3 \to i/p$} &  \multirow{2}{*}{0}     &  \multirow{2}{*}{$(R2,R4) \to i/p$}                      &  \multirow{2}{*}{0}         \\  
-                            &                                   &                        &                                   &                        &                 &                             \\ \hline
-        \multirow{2}{*}{5}  & \multirow{2}{*}{$(R2,R4) \to i/p$} &  \multirow{2}{*}{0}    & \multirow{2}{*}{$R1 \to R2, \,R3 \to R4$}  &  \multirow{2}{*}{1}    &  \multirow{2}{*}{$(R2,R4) \to i/p$}     &  \multirow{2}{*}{0}        \\
-                            &                                  &                        &                                     &                           &                        &                             \\ \hline    
-    \end{tabular}}
-    \caption{Dataflow and mux control for each stage based on registers showed in Figure \ref{fig:folding16_stage1} and
-    \ref{fig:folding16_stage2}.}
-        \label{tab:folding16_mux}
-    \end{table*}
+%Tabla MUX foldin 16
+\input{tex/folding16_mux.tex}
 
 
     \begin{figure} 
@@ -363,14 +341,10 @@ The same criteria is used for represent the constants of rotators, where each nu
     \end{figure}
         
 
-
-
-As we can see in Fig. \ref{ fig:folding_16_arch}, we suppose that the inputs and output are not ordered, to order these variables extra logic are needed, using more registers and multiplexers.
-
-The different types of rotators used in Fig. \ref{ fig:folding_16_arch} are shown in Fig. \ref{fig:rotators}, the description of each of them can be found below.
+The different types of rotators used in Fig. \ref{fig:folding_16_arch} are shown in Fig. \ref{fig:rotators}, the description of each are:
 \begin{itemize}
 	\item Trivial rotator: They can be carried out by interchanging the real and imaginary components and/or changing the sign of the data.
-	\item Constant CSD rotator: They can be carried out by interchanging the real and imaginary components and a multiplication by a unique constant fractional number, in this case we will use a CSD multiplier to perform the area utilized.
+	\item Constant CSD rotator: They can be carried out by interchanging the real and imaginary components and a multiplication by a unique constant fractional number, in this case we will use a CSD multiplier to reduce the area utilized.
 	\item General rotator: They can be carried out by interchanging the real and imaginary components and/or a multiplication by more than one constant fractional numbers, in this case we will use a general multiplier.
 \end{itemize}
 
@@ -395,13 +369,21 @@ The different types of rotators used in Fig. \ref{ fig:folding_16_arch} are show
 %% Subseccion
 %%%%%%%%%%%%%
 \section{4-Parallel radix-$2^3$ 128-Points}   \label{sec:imp128}
-We can deduce the folding architecture for 128 points following the same method than used with the 4-Parallel radix-$2^3$ 16-Points. The DFG and folding set used can be shown in Fig. \ref{fig:pipe_dfg_128} and Table \ref{tab:fold_set_128}.
-The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
-
+The previously described method can be used in the design of a 4-Parallel radix-$2^3$ 128-Points architecture. The DFG and folding sets are shown in Fig. \ref{fig:pipe_dfg_128} and Table \ref{tab:fold_set_128}, and in Fig. \ref{fig:folding_128} the architecture is shown.
+ 
 %% Tabla de folding
 \begin{small}
 \input{tex/folding128.tex}
 \end{small}
+
+
+\begin{figure} 
+	\centering
+	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/128puntosRadix8BurbujasPipelined_Kevin.pdf}
+	\caption{DFG of a radix-$2^3$ 128-point DIF complex FFT.}
+	\label{fig:pipe_dfg_128}
+\end{figure}
+
 
 \begin{figure*} 
 	\centering
@@ -417,8 +399,10 @@ The architecture can be seen in Fig. \ref{fig:circ-folding-128}.
 %%%%%%%%%%
  
 \subsection{Implementation of a 128-point FFT}
-In this section we are going to begin with the process of how accomplish the implementation of our 4-parallel architecture for the computation of 128-point \textit{radix}-$2^3$ DIF complex FFT.
-First, we wrote a \textit{MATLAB} simulator to validate the operation of our design and the design presented in \cite{garrido_pipelined_2013,garrido_feedforward_2018}. Therefore, we can have a reference architecture for compare the design that we deduce. After that, we take all these information to generate a Synthesizable \textit{Verilog} code with different levels of optimizations with a powerful tool like \textit{Synopsys} to get a final design integrated of Standard Cells $@45nm$.
+In this implementation of the 4-parallel architecture for the computation of 128-point \textit{radix}-$2^3$ DIF complex FFT is described.
+
+%%Aqui me quede 24/09/2020 3 am
+First, we wrote a \textit{MATLAB} simulator to validate the operation of our design and the design presented in\cite{garrido_pipelined_2013,garrido_feedforward_2018}. Therefore, we can have a reference architecture for compare the design that we deduce. After that, we take all these information to generate a Synthesizable \textit{Verilog} code with different levels of optimizations with a powerful tool like \textit{Synopsys} to get a final design integrated of Standard Cells $@45nm$.
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%

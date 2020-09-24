@@ -1,0 +1,26 @@
+
+\begin{table*}  
+    \centering
+    \resizebox{0.85\linewidth}{!}{%			
+    \begin{tabular}{c||c|c||c|c||c|c}
+        \multirow{2}{*}{\#Cycle} & \multicolumn{2}{c||}{Stage 1} & \multicolumn{2}{c||}{Stage 2} & \multicolumn{2}{c}{Stage 3} \\  \cline{2-7}   
+                           &  Dataflow                         &   Control              &  Dataflow                         &   Control               &  Dataflow                         &   Control    \\ \hline  \hline
+        \multirow{2}{*}{0}  &  $y0 \to R3$                      &  \multirow{2}{*}{0}    &         $z0 \to R2$              &  \multirow{2}{*}{0}     &  $w0 \to R3 $     &  \multirow{2}{*}{0}     \\    
+                            &        $y8 \to R7$                &                        &         $z8 \to R4$              &                         &  $w8 \to R7 $     &                      \\ \hline
+        \multirow{2}{*}{1}  &   $y2 \to R3$                     &  \multirow{2}{*}{0}    &  $(z2,z10) \to i/p$              &  \multirow{2}{*}{1}    &  $w4 \to R3$                     &  \multirow{2}{*}{0}        \\  
+                            &   $y10 \to R7$                    &                        &  $R1 \to R2, \,R3 \to R4 $        &                         &  $w12 \to R7$                      &                       
+       \\ \hline
+        \multirow{2}{*}{2}  &  $(y4,y12,R4) \to i/p$              &  \multirow{2}{*}{1}    &  $z1 \to R2, \, z9 \to R4$     &  \multirow{2}{*}{0}    &  $(w1,w9,R4) \to i/p$                      &  \multirow{2}{*}{1}       \\ 
+                            &   $R2 \to R3, \, R6 \to R7$       &                        &  $R1 \to i/p, \, R3 \to i/p$     &                        &  $R2 \to R3, \, R6 \to R7$                     &                         
+        \\ \hline  
+        \multirow{2}{*}{3}  &  $(y6,y14,R4) \to i/p$         &  \multirow{2}{*}{1}    &   $(z3,z11) \to i/p$                &  \multirow{2}{*}{1}   &  $(w5,s9,R4) \to i/p$                    &  \multirow{2}{*}{1}         \\       
+                            &   $R2 \to R3, \, R6 \to R7$     &                        & $R1 \to R2, \,R3 \to R4 $           &                       &  $R2 \to R3, \, R6 \to R7$                     &                             \\ \hline 
+        \multirow{2}{*}{4}  &  \multirow{2}{*}{$(R2,R4) \to i/p$} & \multirow{2}{*}{0} & \multirow{2}{*}{$R1 \to i/p, \, R3 \to i/p$} &  \multirow{2}{*}{0}     &  \multirow{2}{*}{$(R2,R4) \to i/p$}                      &  \multirow{2}{*}{0}         \\  
+                            &                                   &                        &                                   &                        &                 &                             \\ \hline
+        \multirow{2}{*}{5}  & \multirow{2}{*}{$(R2,R4) \to i/p$} &  \multirow{2}{*}{0}    & \multirow{2}{*}{$R1 \to R2, \,R3 \to R4$}  &  \multirow{2}{*}{1}    &  \multirow{2}{*}{$(R2,R4) \to i/p$}     &  \multirow{2}{*}{0}        \\
+                            &                                  &                        &                                     &                           &                        &                             \\ \hline    
+    \end{tabular}}
+    \caption{Dataflow and mux control for each stage based on registers showed in Figure \ref{fig:folding16_stage1} and
+    \ref{fig:folding16_stage2}.}
+        \label{tab:folding16_mux}
+    \end{table*}
