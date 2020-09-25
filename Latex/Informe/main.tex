@@ -30,6 +30,7 @@
 %\usepackage{lastpage}
 \usepackage{subfigure}
 \usepackage{placeins}
+\usepackage{mathtools}
 %\usepackage{hyperref}
 \def\BibTeX{
 {\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -197,7 +198,7 @@ The next step is to find the suitable rotator factors for the 16 point DFT, the 
 \end{figure}
 
 \subsection{128 points DFT}
-With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies is obtained together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. Using this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involves three stages of butterflies to finally arrive to a set of eight 16 point DFTs. Finally, Fig. \ref{fig:128ponits_conn} shows the complete architecture for the  \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage  contains 64 butterflies of radix-2 base.
+With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies is obtained together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. Using this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involves three stages of butterflies to finally arrive to a set of eight 16 point DFTs. Finally, Fig. \ref{fig:128points_conn} shows the complete architecture for the  \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage  contains 64 butterflies of radix-2 base.
 
 \begin{figure} [ht]
 	\centering
@@ -215,7 +216,7 @@ With these first approaches is possible the application of the divide and conque
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/128PuntosRadix8Conexion.pdf}
 	\caption{Flow graph of a \textit{radix-}$2^3$ 128-point DIF DFT}
-	\label{fig:128ponits_conn}
+	\label{fig:128points_conn}
 \end{figure}
 
 
@@ -399,14 +400,16 @@ The previously described method can be used in the design of a 4-Parallel radix-
 %%%%%%%%%%
  
 \subsection{Implementation of a 128-point FFT}
-In this implementation of the 4-parallel architecture for the computation of 128-point \textit{radix}-$2^3$ DIF complex FFT is described.
+In this section the implementation of the 4-parallel architecture for the computation of 128-point \textit{radix}-$2^3$ DIF complex FFT is described.
 
 %%Aqui me quede 24/09/2020 3 am
-First, we wrote a \textit{MATLAB} simulator to validate the operation of our design and the design presented in\cite{garrido_pipelined_2013,garrido_feedforward_2018}. Therefore, we can have a reference architecture for compare the design that we deduce. After that, we take all these information to generate a Synthesizable \textit{Verilog} code with different levels of optimizations with a powerful tool like \textit{Synopsys} to get a final design integrated of Standard Cells $@45nm$.
+
+In order to compare and validate the operation of the design presented in this work and the design presented in \cite{garrido_pipelined_2013,garrido_feedforward_2018} a \textit{MATLAB} simulator has been elaborated to later write  a Synthesizable \textit{Verilog} code with different levels of optimizations using a powerful tool like \textit{Synopsys} to get a final design in $@45nm$ Standard Cells.
+
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
-\subsection{Floating and Fixed point Simulator}
+\subsection{Floating and Fixed point Simulator description}
 \begin{figure*} 
 	\centering
 	\includegraphics[width=0.95\linewidth]{Diagramas/folding-128-quant-pipe.png}
@@ -428,22 +431,32 @@ First, we wrote a \textit{MATLAB} simulator to validate the operation of our des
 	\caption{Output samples, absolute value vs frequency $|X[k]|$}
 	\label{fig:dftfixedpoint}
 \end{figure}
-The input signal Fig. \ref{fig:dftinputsignal} to our architecture will be a mixture of sinusoid signals with two frequency values, theses signal will be normalizing to the unity and in this way we can have a test bench design.
-\begin{align}\label{eq: inputSignal}
-x'[n] &= cos(2\pi f_1 n T_s) + cos(2\pi f_2 n T_s)  \\
-x[n] &= x'[n]/max\{x'[n]\} 						\nonumber
+
+The input signal to the design is shown in Fig. \ref{fig:dftinputsignal}, the signal  will be a mixture of two sinusoid signals with different frequency and normalized amplitude as is describe in equations \ref{eq:inputSignal1} and \ref{eq:inputSignal2}, where $f_1=100Hz$, $f_2=1000Hz$ and $T_s$ is the sampled period.
+\begin{align}
+x'[n] &= cos(2\pi f_1 n T_s) + cos(2\pi f_2 n T_s)\label{eq:inputSignal1}  \\
+x[n] &= x'[n]/max\{x'[n]\} \label{eq:inputSignal2}						
 \end{align}
-where $f_1=100Hz$, $f_2=1000Hz$ and $T_s$ is the sampled period.
 
-In each stage of the Fig. \ref{fig:4paralelo128pradix8cuantizacion1}, input samples that propagate stage by stage will be carefully quantized with the purpose of getting a high SQNR (Signal to Quantization Noise Ratio).
-\begin{equation*}%\label{eq:sqnr}
-SQNR_{dB} = 10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Signal_{FloatPoint} - Signal_{FixedPoint}\}}  \bigg)
-\end{equation*}
-SQNR computation represents the logarithmic relationship between float signal variance over error variance from an signal given.
 
-The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representation means a number signed (S) with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddle} factors and the architecture's output.
+In each stage of the Fig. \ref{fig:4paralelo128pradix8cuantizacion1}, input samples that propagate  through the stages will be carefully quantized with the purpose of getting a high SQNR (Signal to Quantization Noise Ratio).
 
-Twiddles factor are quantized with a relation of $S(11,9)$ and the complex output signal $X[k]$ with $S(22,15)$. Output quantization for the real part is $46.8dB$ and for the imaginary part $47.3dB$. In general, a value of quantization close to $50dB$ is a good approximation. Out signal from our \textit{MATLAB} fixed-point model from the architecture in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} the output signal is given in Fig. \ref{fig:dftfixedpoint}, that represents a first approach in our calculation of a DFT without optimization.
+\begin{equation}\label{eq:sqnr}
+  \begin{multlined}
+SQNR_{dB} =\\
+10log_{10} \bigg(  \frac{  Var\{Signal_{FloatPoint}\}  }{  Var\{Signal_{FloatPoint} - Signal_{FixedPoint}\}}  \bigg)
+ \end{multlined}
+\end{equation}
+
+
+SQNR computation represents the logarithmic relationship between float signal variance over error variance from an given signal.
+
+The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representation means a signed (S) number with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddle} factors and the design output.
+
+Twiddles factor are quantized with a relation of $S(11,9)$ and the complex output signal $X[k]$ with $S(22,15)$, output quantization for the real part is $46.8dB$ and for the imaginary part $47.3dB$. In general, a value of quantization close to $50dB$ is a good approximation.
+
+
+The \textit{MATLAB} fixed-point model is shown in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} and  Fig.\ref{fig:dftfixedpoint} shows the output signal in the frequency domain.
 
 \begin{figure} 
 	\centering
@@ -464,9 +477,18 @@ Twiddles factor are quantized with a relation of $S(11,9)$ and the complex outpu
 	\label{fig:summult}
 \end{figure}
 
-The combination between latencies (delays registers) and switches in all stages in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} is the equivalent circuit shows in Fig. \ref{fig:shift}, that is used to appropriately order samples in each butterflies input.
+The equivalent circuit of the combination of latencies (delays registers) and switches placed between the stages in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} are represented in Fig. \ref{fig:shift}. This circuits are used to appropriately order samples in each butterflies input.
 
-Whole elements on the architecture such as multipliers and butterflies are complex as Fig. \ref{fig:buttercomplejo} and \ref{fig:summult}. On an implementation is essential divide the signal in its real and imaginary part with the purpose of process them independently. A \textit{general rotator} (full complex multiplier) generate a real and imaginary component that is composed by a real multiplication an one addition, but a \textit{trivial rotator} only change the components of a complex signal. These relations are important at the moment of doing the quantization process to ensure an appropriate quantity of bits.
+The combination of latencies (delays registers) and switches placed between the stages in Fig. \ref{fig:4paralelo128pradix8cuantizacion1} are used to appropriately order samples in each butterflies input and its equivalent circuit is represented in Fig. \ref{fig:shift}.
+
+The different elements such as multipliers and butterflies process complex numbers as is shown in Fig. \ref{fig:buttercomplejo} and \ref{fig:summult}, this means that
+is essential to divide the signal in its real and imaginary part with the purpose of process them independently.
+
+A \textit{general rotator} (full complex multiplier) computes two multiplications and one addition for the real and imaginary part, as is describe in \ref{fig:summult}, but in case of a \textit{trivial rotator} (multiplication by  \textit{i}), there are no multiplications of additions, it only swap the numbers and change the sign if is necessary, as is shown in Fig .These relations allows to achieve a good design optimization and are important at the moment of calculating the quantization process to ensure an appropriate quantity of bits.
+
+
+
+%%% aqui me quede 25/9/2020 13:111
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
