@@ -82,7 +82,7 @@ Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina%\\[0.5
 %%%%%%%%%%
 % Abstract
 %%%%%%%%%%
-\begin{abstract} - \bf This work describes the design and the VLSI implementation of a 4-parallel pipelined architecture for the complex fast Fourier transform (CFFT) based on the radix-$\bf 2^3$ algorithm with 128 points using folding transformation and register minimization techniques. In addition, different synthesis reports from the Hardware Description Language (HDL) using different optimization techniques were studied in order to obtain good performance on speed and area using an open-source FreePDK45 of 45 nm CMOS technology \cite{freePdk}.
+\begin{abstract} - \bf This work describes the design and the VLSI implementation of a 4-parallel pipelined architecture for the complex fast Fourier transform (CFFT) based on the radix-$\bf 2^3$ algorithm with 128 points using folding transformation and register minimization techniques. In addition, different synthesis reports from the Hardware Description Language (HDL) using different optimization techniques were studied in order to obtain good performance on speed and area with a clock frequency of 500$MHz$ using an open-source FreePDK45 of 45 nm CMOS technology \cite{freePdk}.
 \end{abstract}
 %%%%%%%%%
 % Seccion
@@ -92,7 +92,7 @@ Ernesto Romagosa 518, Colinas V. Sarsfield, X5016GQN, Córdoba, Argentina%\\[0.5
 
 \section{Introduccion}
 
-The Fast Fourier Transform (FFT) is widely used in different applications fields, particularly in algorithms that involves applying digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently. Nowadays is common the use of FFT algorithm for real time applications and parallel-pipelined hardware architecture, this allows to achieve good performance with high throughput rates.
+The Fast Fourier Transform (FFT) is widely used in different applications fields, particularly in algorithms that involves applying digital signal processing, e.g., calculate the Discrete Fourier Transform (DFT) efficiently. Nowadays is common to use parallel-pipelined architecture in FFT algorithms for real time applications, this allows to achieve good performance with high throughput rates.
 
 There are two main types of pipelined FFT architectures  \cite{shousheng_he_designing_1998}. On one hand, feedback architectures (FB) which can be divided into Single-path Delay Feedback (SDF) and Multi-path Delay Feedback (MDF), both methods transfer data samples between stages serially and use feedback loops. On the other hand, feedforward architectures such as Multi-Path Delay Commutator (MDC) transfers more than one sample per clock cycle and do not use feedback loops.
 
@@ -198,7 +198,7 @@ The next step is to find the suitable rotator factors for the 16 point DFT, the 
 \end{figure}
 
 \subsection{128 points DFT}
-With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies is obtained together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. Using this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involves three stages of butterflies to finally arrive to a set of eight 16 point DFTs. Finally, Fig. \ref{fig:128points_conn} shows the complete architecture for the  \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage  contains 64 butterflies of radix-2 base.
+With these first approaches is possible the application of the divide and conquer strategy by decomposing the 128-point DFT and calculating each coefficient $C_{8k+i} = \sum_{n=0}^{128/8-1} \{ \cdot \}, $ for $k=0,1,...,(128/8)-1$, this way a  chain sequence of butterflies is obtained together with its corresponding rotation factor and the correct index of the samples in which they must be added or multiplied. Using this technique is possible to do a subdivision of butterflies stages, as is shown in Fig. \ref{fig:128_block_descomp}, the decomposition of the 128 point DFT involves three stages of butterflies resulting in a set of eight 16 point DFTs. Finally, Fig. \ref{fig:128points_conn} shows the complete architecture for the  \textit{radix-}$2^3$ 128-point DIF DFT with a total of seven stages where each stage  contains 64 butterflies of radix-2 base.
 
 \begin{figure} [ht]
 	\centering
@@ -240,7 +240,6 @@ In this section, the architecture proposed in \cite{ayinala_pipelined_2012} toge
 The flow graph of a 16-point DIF FFT radix-$2^3$ with main base radix-2 is shown in Fig. \ref{fig:16points_df}. The graph is divided into four stages, each of them consist of a set of butterflies and multipliers. The twiddle factor between the stages indicates a multiplication by $W^k_N$, where $W_N$ denotes the \textit{N}th root of unity, with its exponent evaluated modulo N. This can be represented as a DFG as shown in Fig. \ref{fig:16points_dfg}, where the nodes represents the butterfly computations of the radix-2 FFT algorithm. 
 
 The folding transformation is used on the DFG to derive a pipelined architecture, to do this a folding set is needed. A folding set is an ordered set of operations executed by the same functional unit, each folding set contains K entries, where K is called the folding factor. The operation in the \textit{j}th position within the folding set (where goes from $0$ to $K-1$) is executed by the functional unit during the time partition, this term is called the folding order.
-
 In order to derive the folding equations a node graph is needed, where an edge $e$ is consider to connect the nodes \textit{U} and \textit{V} with $w(e)$ delays. Let the executions of the \textit{l}th iteration of the nodes \textit{U} and \textit{V} be scheduled at the time units $Kl+u$ and $Kl+v$ respectively, where $u$ and $v$ are the folding orders of the nodes \textit{U} and \textit{V}, respectively. The folding equation for the edge $e$ is:
 \begin{equation}\label{eqn:fold_equation}
 D_F(U \to V) = Kw(e)-P_U+v-u
@@ -277,7 +276,7 @@ For the folded system to be realizable, $D_F(U\to V)\geq0$ must hold for all the
 \end{small}
 
 The number of registers required to implement the folding equations in (\ref{eqn:ConRetiming}) is 80, in order to minimize the number of registers  the register minimization technique is needed. To apply this technique lets consider
-the output of node $A0$ to be $y_{(0)}$ and $y_{(8)}$, and the output of the node A1 to be $y_{(1)}$ and $y_{(9)}$, applying this successively with the rest of the nodes A a linear life time chart for this stage is obtain as is shown in Fig.\ref{fig:tab-life-a}. Applying this criteria to the rest of the stages the life time chart for nodes B and C are obtained as is shown in Fig.\ref{fig:tab-life-b} and Fig.\ref{fig:tab-life-c}  respectively. The resulting maximum number of registers for each stage are 8, 4 and 8 respectively, therefore the total number of registers is reduced from 80 to 20. More information about this method can be found on \cite{folding_parhi_book}.
+the output of node $A0$ to be $y_{(0)}$ and $y_{(8)}$, and the output of the node A1 to be $y_{(1)}$ and $y_{(9)}$, applying this method successively with the rest of the nodes A a linear life time chart for this stage is obtain as is shown in Fig.\ref{fig:tab-life-a}. Applying this criteria to the rest of the stages the life time chart for nodes B and C are obtained as is shown in Fig.\ref{fig:tab-life-b} and Fig.\ref{fig:tab-life-c}  respectively. The resulting maximum number of registers for each stage are 8, 4 and 8 respectively, therefore the total number of registers is reduced from 80 to 20. More information about this method can be found on \cite{folding_parhi_book}.
 
 \begin{figure}[t!]
 \centering
@@ -301,7 +300,7 @@ the output of node $A0$ to be $y_{(0)}$ and $y_{(8)}$, and the output of the nod
 The register allocation tables for the lifetime charts are shown in Fig. \ref{fig:tab-aloc-a}, \ref{fig:tab-aloc-b} and \ref{fig:tab-aloc-c} for stage A, B and C respectively. Fig.\ref{fig:folding16_stage1} and  Fig.\ref{fig:folding16_stage2} show the designations of registers for the stage A and B respectively used in the allocation tables, the designation for stage C are similar to stage A. The folded architecture in Fig.\ref{fig:folding_16_arch} is synthesized using the folding equations and the register allocation tables. The dataflow for each stage can be seen in Tab. \ref{tab:folding16_mux}, the control signal for stage A and B can be implemented by dividing the clock signal to 4 and 2 respectively, for stage C the control signal is the same that the stage A. 
 Note that in Fig. \ref{fig:folding_16_arch} the inputs and output are not ordered, to order these variables an extra logic is needed, this imply using more registers and multiplexers.
 
-The inputs for each folding node are represented in a matrix where the values in the same column is the data that flow in parallel, and values in the same row correspond to the data that flow through the same path in consecutive clock cycles. The first two rows represent the inputs of the superior BF and the others two represents the input of the inferior BF. The same criteria is used for represent the rotators constants, where each number $k$ of the matrix represent a multiplication by $W^k_N$.
+The inputs for each folding node are represented in a matrix where the values in the same column is the data that flows in parallel, and values in the same row correspond to the data that flows through the same path in consecutive clock cycles. The first two rows represent the inputs of the superior BF and the others two represents the input of the inferior BF. The same criteria is used for represent the rotators constants, where each number $k$ of the matrix represent a multiplication by $W^k_N$.
 
 \begin{figure} 
 \centering
@@ -370,8 +369,9 @@ The different types of rotators used in Fig. \ref{fig:folding_16_arch} are shown
 %% Subseccion
 %%%%%%%%%%%%%
 \section{4-Parallel radix-$2^3$ 128-Points}   \label{sec:imp128}
-The previously described method can be used in the design of a 4-Parallel radix-$2^3$ 128-Points architecture. The DFG and folding sets are shown in Fig. \ref{fig:pipe_dfg_128} and Table \ref{tab:fold_set_128}, and in Fig. \ref{fig:folding_128} the architecture is shown.
- 
+The previously described method can be used in the design of a 4-Parallel radix-$2^3$ 128-Points architecture. 
+The pipelined/retimmed  DFG for this design is shown in Fig. \ref{fig:pipe_dfg_128}, the folding sets are listed in Table \ref{tab:fold_set_128}, and in Fig.\ref{fig:folding_128}  the folded architecture is shown.
+
 %% Tabla de folding
 \begin{small}
 \input{tex/folding128.tex}
@@ -381,7 +381,7 @@ The previously described method can be used in the design of a 4-Parallel radix-
 \begin{figure} 
 	\centering
 	\includegraphics[width=\linewidth]{Diagramas/miSeccionFiguras/128puntosRadix8BurbujasPipelined_Kevin.pdf}
-	\caption{DFG of a radix-$2^3$ 128-point DIF complex FFT.}
+	\caption{Pipelined/retimmed DFG of a radix-$2^3$ 128-point DIF complex FFT.}
 	\label{fig:pipe_dfg_128}
 \end{figure}
 
@@ -402,9 +402,10 @@ The previously described method can be used in the design of a 4-Parallel radix-
 \subsection{Implementation of a 128-point FFT}
 In this section the implementation of the 4-parallel architecture for the computation of 128-point \textit{radix}-$2^3$ DIF complex FFT is described.
 
-%%Aqui me quede 24/09/2020 3 am
 
-In order to compare and validate the operation of the design presented in this work and the design presented in \cite{garrido_pipelined_2013,garrido_feedforward_2018} a \textit{MATLAB} simulator has been elaborated to later write  a Synthesizable \textit{Verilog} code with different levels of optimizations using a powerful tool like \textit{Synopsys} to get a final design in $@45nm$ Standard Cells.
+%\cite{garrido_pipelined_2013,garrido_feedforward_2018}
+
+In order to compare and validate the operation of the design presented in this work a \textit{MATLAB} simulator has been elaborated to later write  a Synthesizable \textit{Verilog} code with different levels of optimizations using a powerful tool like \textit{Synopsys} to get a final design in $@45nm$ Standard Cells.
 
 %%%%%%%%%%%%%
 %% Subseccion
@@ -451,7 +452,7 @@ SQNR_{dB} =\\
 
 SQNR computation represents the logarithmic relationship between float signal variance over error variance from an given signal.
 
-The input signal $x[n]$ is quantized with a value of $S(10,9)$, that representation means a signed (S) number with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddle} factors and the design output.
+The input signal $x[n]$ is quantized with a value of $S(10,9)$, this representation means a signed (S) number with $10$ total bits and $9$ fractional bits. The value calculated of SQNR for the input is $56.9dB$. Following the same steps, we can compute the SQNR for the \textit{twiddle} factors and the design output.
 
 Twiddles factor are quantized with a relation of $S(11,9)$ and the complex output signal $X[k]$ with $S(22,15)$, output quantization for the real part is $46.8dB$ and for the imaginary part $47.3dB$. In general, a value of quantization close to $50dB$ is a good approximation.
 
@@ -488,11 +489,10 @@ A \textit{general rotator} (full complex multiplier) computes two multiplication
 
 
 
-%%% aqui me quede 25/9/2020 13:111
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
-\subsection{Verilog (HDL) Model} 
+\subsection{Verilog (HDL) Model and optimizations} 
 %\begin{figure*} 
 %	\centering
 %	\includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps}
@@ -500,29 +500,37 @@ A \textit{general rotator} (full complex multiplier) computes two multiplication
 %	\label{fig:v5esquemap}
 %\end{figure*}
 
-In this subsection we are going to talk about the different design instances to model the DFT in hardware. 
-We made four design implementations with the purpose of have a global view of optimization levels to achieve the requested \textit{Timing} at a working frequency of 500MHz obtained from the synthesis processes.
+In this subsection the different design instances to model the DFT in hardware will be described.
+With the purpose to have a global view of the optimization levels to achieve the requested \textit{Timing}, four design with a working frequency of 500$MHz$ have been implemented. 
 
-In the first instance of design was made from the base design showed in Fig. \ref{fig:4paralelo128pradix8cuantizacion1}, this hardware model has butterflies modules that work in combination with multipliers and each multiplier has associated a memory block that contains twiddle factors. In this first approach all multipliers are \textit{full}, each stage has a control module that enable and disable the inversion of the switching block, this control signal is also sent to the multipliers to work synchronously with the switching. To avoid the bit growth generated by the addition and multiplication, a quantization block is necessary, the quantizer consisted of saturation and truncate operations.
 
-In the second place with the goal of minimize the \textit{critical path} in our design, we add \textit{pipelined} registers after quantization blocks. In the third case of implementation incorporate \textit{trivial} multipliers, imaginary multiplication by -$1j$, with this kind of operation we can reduce the size of the binary word. 
+%We made four design implementations with the purpose of have a global view of optimization levels to achieve the requested \textit{Timing} at a working frequency of 500MHz obtained from the synthesis processes.
 
-In the fourth level of optimization showed in Fig. \ref{fig:v5esquemap}, we place inside each butterfly blocks an internal pipelined to improve the required timing. Lastly, the full multipliers from stage two and five are modified to efficiently work with constant coefficients, these new multipliers are \textit{CSD} because the twiddle factors in these stages are always $-je^{-j\frac{\pi}{4}}$ and $e^{-j\frac{\pi}{4}}$.
+The first design was made from the base design showed in Fig. \ref{fig:4paralelo128pradix8cuantizacion1}, this hardware model has butterflies modules that work in combination with multipliers and each multiplier has associated a memory block that contains the twiddle factors. In this first approach all multipliers are \textit{full}, each stage has a control module that enables the inversion of the switching block, this control signal is also sent to the multipliers in order to work synchronously with the switching. To avoid the bit growth generated by the addition and multiplication, a quantization block is necessary, the quantizer consist of  saturation and truncate operations. 
+In order to minimize the \textit{critical path}, a second design with \textit{pipelined} registers after the quantization blocks was implemented.
+In the third case of optimization the \textit{trivial} multipliers (multiplication by $-1j$) were implemented, this significantly reduced the size of the binary word.
+In the fourth level of optimization showed in Fig. \ref{fig:v5esquemap}, we place inside each butterfly blocks an internal pipelined to improve the required timing, and finally, the full multipliers from stage two and five are modified to work efficiently with constant coefficients, these new multipliers are \textit{CSD} because the twiddle factors in these stages are always $-je^{-j\frac{\pi}{4}}$ and $e^{-j\frac{\pi}{4}}$.
+In the fourth level of optimization showed in Fig. \ref{fig:v5esquemap}, 
+a internal pipelined to each butterfly block was added in order to reduce the critical path, and finally the full multipliers from stage two and five were modified to work efficiently with constant coefficients, these new multipliers are \textit{CSD} because the twiddle factors in these stages are always $-je^{-j\frac{\pi}{4}}$ and $e^{-j\frac{\pi}{4}}$.
+
 
 
 %%%%%%%%%%
 %% Seccion
 %%%%%%%%%%
- 
+%%%%%%%%%%%%%%%%% Aqui quede 29/9/2020 19:27 
+
 \section{Results}  \label{sec:results}
-All designs were implemented with different levels of optimization to accomplish the desired working frequency. The design instances were synthesized by Synopsys tool in order to build an interconnection of Standard Cells to get and generate a complete set of \textit{timing-area-power report} showed in Table \ref{tab:reporte2}, \ref{tab:reporte5} and  \ref{tab:reporte6}. According to the first results, data arrival time is greater than minimum period established 2ns and we can detected that there is a time Violated, with this first approach we decide make a set of optimizations to folding architecture as a pipelined cutset between stages of DFT. In this way as we can see in Table \ref{tab:reporte5}, we reduced power, area and timing. 
+The design instances were synthesized by Synopsys tool in order to build an interconnection of Standard Cells and generate a complete set of \textit{timing-area-power report} showed in Table \ref{tab:reporte2}, \ref{tab:reporte4}, \ref{tab:reporte5} and  \ref{tab:reporte6}.
+
+According to the first results showed in  Table \ref{tab:reporte2}, data arrival time is greater than minimum period established ($1/500Mhz=2ns$) and a time violation is detected, with this first approach we decide make a set of optimizations to folding architecture as a pipelined cutset between stages of DFT. In this way as we can see in Table \ref{tab:reporte5}, we reduced power, area and timing. 
 
 In contrast with the first instance of design, we found in the last case of implementation a slack of time equal to zero, that means the clock period satisfy the time constraint at 500MHz.
 
 %% primera version sin pipe y sin saturation, no llega a 500MHz
 \input{tex/reporte2.tex}
 %\input{tex/reporte3.tex}
-%\input{tex/reporte4.tex}
+\input{tex/reporte4.tex}
 %% Segunda version con pipe y saturation, llega a 500MHz y consume menos con menos area
 \input{tex/reporte5.tex}
 %% Tercera version con pipe, saturacion y CSD 
