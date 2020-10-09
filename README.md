@@ -1,6 +1,6 @@
 ## Actividades
 #### Trabajo Final curso VLSI
-- [ ] Corregir la Redacción y gramática.
+- [x] Corregir la Redacción y gramática.
 
 - [x] En base a la devolución de Ariel, agregar o modificar las Secciones.
 

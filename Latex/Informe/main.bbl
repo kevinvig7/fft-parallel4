@@ -27,6 +27,11 @@
   Signals, Systems, and Electronics. Conference Proceedings (Cat.
   No.98EX167)}.\hskip 1em plus 0.5em minus 0.4em\relax {IEEE}, pp. 257--262.
 
+\bibitem{type_FFT_MIT}
+V.~Stojanovic, ``{F}ast {F}ourier {T}ransform:{VLSI} {A}rchitectures,''
+  \emph{6.973 Communication System Design – Spring 2006 Massachusetts
+  Institute of Technology}, pp. 3--4, 2006.
+
 \bibitem{proakis_digital_nodate}
 J.~G. Proakis and D.~G. Manolakis, ``{DIGITAL} {SIGNAL} {PROCESSING},'' p.
   1033.
@@ -50,17 +55,6 @@ M.~Ayinala, M.~Brown, and K.~K. Parhi, ``\BIBforeignlanguage{en}{Pipelined
 K.~K. Parhi, \emph{{VLSI} {D}igital {S}ignal {P}rocessing {S}ystems. {D}esign
   and implementation}.\hskip 1em plus 0.5em minus 0.4em\relax {JOHN WILEY \&
   SONS, INC}., 1999, ch. Folding Transformation, pp. 151--163.
-
-\bibitem{garrido_pipelined_2013}
-M.~Garrido, J.~Grajal, M.~A. Sanchez, and O.~Gustafsson,
-  ``\BIBforeignlanguage{en}{Pipelined {Radix}-\$2{\textasciicircum}\{k\}\$
-  {Feedforward} {FFT} {Architectures}},'' \emph{\BIBforeignlanguage{en}{IEEE
-  Transactions on Very Large Scale Integration (VLSI) Systems}}, vol.~21,
-  no.~1, pp. 23--32, Jan. 2013.
-
-\bibitem{garrido_feedforward_2018}
-M.~Garrido, S.-J. Huang, and S.-G. Chen, ``Feedforward {FFT} hardware
-  architectures based on rotator allocation,'' vol.~65, no.~2, pp. 581--592.
 
 \bibitem{freePdk}
 R.~Thapa, S.~Ataei, and J.~E. Stine, ``\BIBforeignlanguage{en}{{WIP}.
