@@ -102,7 +102,7 @@ In Section \ref{sec:results}, different power, area and timing reports with diff
 
 \begin{figure} 
 	\centering
-	\includegraphics[width=0.9\linewidth]{Diagramas/types_FFT.png}
+	\includegraphics[width=1\linewidth]{Diagramas/types_FFT.png}
 	\caption{Types of pipelined FFT archicectures for 16 points \cite{type_FFT_MIT}.}
 	\label{fig:types_fft}
 \end{figure}
@@ -327,7 +327,7 @@ The inputs for each folding node are represented in a matrix where the values in
 
     \begin{figure} 
         \centering
-        \includegraphics[width=0.85\linewidth]{Diagramas/folding_stage1.png}
+        \includegraphics[width=0.8\linewidth]{Diagramas/folding_stage1.png}
         \caption{Registers names used in Fig. \ref{fig:tab-aloc-a} for stage 1.}
         \label{fig:folding16_stage1}
     \end{figure}
@@ -335,7 +335,7 @@ The inputs for each folding node are represented in a matrix where the values in
   
     \begin{figure} 
         \centering
-        \includegraphics[width= 0.85\linewidth]{Diagramas/folding_stage2.png}
+        \includegraphics[width= 0.8\linewidth]{Diagramas/folding_stage2.png}
         \caption{Registers names used in Fig. \ref{fig:tab-aloc-b} for stage 2.}
         \label{fig:folding16_stage2}
     \end{figure}
@@ -407,7 +407,7 @@ In order to compare and validate the operation of the design presented in this w
 \subsection{Floating and Fixed point Simulator description}
 
 
-\begin{figure}[ht!] 
+\begin{figure}%[ht!] 
 	\centering
 	\includegraphics[width=0.92\linewidth]{Diagramas/DftInputSignal.pdf}
 	\caption{Input signal $x[n]$ in time domain}
@@ -480,7 +480,7 @@ A \textit{general rotator} (full complex multiplier) computes two multiplication
 %%%%%%%%%%%%%
 %% Subseccion
 %%%%%%%%%%%%%
-\section{Verilog (HDL) Model ,optimizations and results} 
+\section{Verilog (HDL) Model ,optimizations and results}  \label{sec:results}
 %\begin{figure*} 
 %	\centering
 %	\includegraphics[width=\linewidth]{Diagramas/V5_esquema_p.eps}
@@ -538,16 +538,16 @@ This work has presented a VLSI Implementation of a Pipelined 128 points 4-Parall
  %% Calcular reduccion de registros
 The folding transformation applied reduced significantly (equal to the folded factor, i.e. 64 times) the number of functional units, and therefore the silicon area at the expense of increasing the computation time by the same factor.
 %, therefore is necessary to add pipeline cutsets and in order to achieve the required sample period.
-Folding technique resulted in an architecture that uses a large number of registers, however by applying a register minimization technique the number of register were significantly reduced from ... to...  resulting in a final design with less area and power consumption. As for the fixed point implementation, a high SQNR of 46.8dB and 47.3dB for the real and the imaginary part respectably was able to achieve by using saturation and truncation blocks. 
-Lastly a series of optimization were necessary to accomplish the required working frequency. The DFT implementation without any optimization level got to work at 166MHz. Applying a series of pipelines cutsets in quantization and the butterflies blocks the final architecture is implementable at the required clock frequency (500 MHz) at the cost of incrementing the numbers of sequential cells. Finally, by using CSD multipliers a significantly reduction in combinational cells was possible resulting in a even more reduction in the total power consumption.
-
+Folding technique resulted in an architecture that uses a large number of registers, however by applying a register minimization technique the number of register were significantly reduced from .... to 188 resulting in a final design with less area and power consumption. As for the fixed point implementation, a high SQNR of 46.8dB and 47.3dB for the real and the imaginary part respectably was able to achieve by using saturation and truncation blocks. 
+Lastly a series of optimization were necessary to accomplish the required working frequency. The DFT implementation without any optimization level got to work at 166MHz. Applying a series of pipelines cutsets in the quantization and butterflies blocks the final architecture is implementable at the required clock frequency (500 MHz) at the cost of incrementing the numbers of sequential cells. Finally, by using CSD multipliers a significantly reduction in combinational cells was possible resulting in a even more reduction in the total power consumption. 
+The  implementations evolution is summarize in a bar chart in Fig. \ref{fig:atp}, where the last implementation (Imp 5) achieves the require critical path to address the requested \textit{data arrival time} (Slack equals to 0 ns), and also the lowest area and power consumption is obtain.
+As a final commentary, is worth to notice that in order to use this implementation in a real time application a reordering circuit at the input and the output of the system needs to be include, this circuit present an additional area and power consumption to be considered in the final design. 
 
 
 
 % The Fourier Transform without folding technique processes 128 entry points of samples which are ordered but its output are disordered and it is necessary a reordering circuit. 
-Fourier Transform with folding technique needs a reordering circuit at the input. This circuit present an additional area and power consumption to be considered in the final design. 
+%Fourier Transform with folding technique needs a reordering circuit at the input. 
 
-However, in order to use this implementation in a real time application a reordering circuit at the output and 
 
 %nombrar tabla
 
@@ -582,11 +582,12 @@ However, in order to use this implementation in a real time application a reorde
 	\label{fig:atp}
 \end{figure*}
 
-
+%\pagebreak
 
 %%%%%%%%%%%%%%
 % Bibliografia
 %%%%%%%%%%%%%%
+\newpage
 \bibliographystyle{IEEEtran}
 \bibliography{referenciasFFT}
 %%%%%%%%
